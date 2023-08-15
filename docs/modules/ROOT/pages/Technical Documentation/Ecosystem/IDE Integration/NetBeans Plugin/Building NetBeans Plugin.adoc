@@ -1,5 +1,6 @@
 [[building-netbeans-ide-plugin]]
 = Building Payara Tools NetBeans IDE Plugin
+:ordinal: 3
 
 As Apache NetBeans IDE provides out-of-the-box support for Payara Platform, the source code for the NetBeans IDE Plugin is contained within the https://github.com/apache/netbeans[NetBeans Code Repository.]
 
