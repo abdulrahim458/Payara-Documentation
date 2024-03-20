@@ -275,10 +275,11 @@
 *** xref:Technical Documentation/Ecosystem/Miscellaneous/JAX-RS Extension.adoc[JAX-RS Extension]
 * Dependencies
 ** xref:Technical Documentation/Dependencies/Overview.adoc[Overview]
+** xref:Technical Documentation/Dependencies/Jakarta EE Dependencies.adoc[Jakarta EE Dependencies]
+** xref:Technical Documentation/Dependencies/Platform Internals.adoc[Platform Internals]
 ** xref:Technical Documentation/Dependencies/matchesSet-Mapped.json[matchesSet-Mapped.json]
 ** xref:Technical Documentation/Dependencies/matchesSet.json[matchesSet.json]
 ** xref:Technical Documentation/Dependencies/noMatchesSet-Mapped.json[noMatchesSet-Mapped.json]
-** xref:Technical Documentation/Dependencies/noMatchesSet.json[noMatchesSet.json]
 
 include::partial$release-notes.adoc[Release Notes]
 
