@@ -543,30 +543,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>2.0.0</version>
 </dependency>
 ----
-[[cdi-api-fragment]]
-==== *cdi-api-fragment*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.web</groupId>
-    <artifactId>cdi-api-fragment</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
-[[cdi-api-fragment]]
-==== *cdi-api-fragment*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.web</groupId>
-    <artifactId>cdi-api-fragment</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
 [[soteria.spi.bean.decorator.weld]]
 ==== *soteria.spi.bean.decorator.weld*
 **Version**: 3.0.1.payara-p1
@@ -577,6 +553,30 @@ This section details all dependencies linked to Jakarta EE specifications.
     <groupId>org.glassfish.soteria</groupId>
     <artifactId>soteria.spi.bean.decorator.weld</artifactId>
     <version>3.0.1.payara-p1</version>
+</dependency>
+----
+[[cdi-api-fragment]]
+==== *cdi-api-fragment*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.web</groupId>
+    <artifactId>cdi-api-fragment</artifactId>
+    <version>6.0.0</version>
+</dependency>
+----
+[[cdi-api-fragment]]
+==== *cdi-api-fragment*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.web</groupId>
+    <artifactId>cdi-api-fragment</artifactId>
+    <version>6.0.0</version>
 </dependency>
 ----
 [[gf-weld-connector]]
@@ -825,18 +825,6 @@ This section details all dependencies linked to Jakarta EE specifications.
 [[dependencyinjection]]
 === `dependencyinjection`
 
-[[jakarta.enterprise.cdi-api]]
-==== *jakarta.enterprise.cdi-api*
-**Version**: 4.0.1
-
-[source,xml]
-----
-<dependency>
-    <groupId>jakarta.enterprise</groupId>
-    <artifactId>jakarta.enterprise.cdi-api</artifactId>
-    <version>4.0.1</version>
-</dependency>
-----
 [[asadmin-audit]]
 ==== *asadmin-audit*
 **Version**: 6.0.0
@@ -871,6 +859,18 @@ This section details all dependencies linked to Jakarta EE specifications.
     <groupId>org.glassfish.jersey.media</groupId>
     <artifactId>jersey-media-json-jackson</artifactId>
     <version>3.1.0.payara-p1</version>
+</dependency>
+----
+[[jakarta.enterprise.cdi-api]]
+==== *jakarta.enterprise.cdi-api*
+**Version**: 4.0.1
+
+[source,xml]
+----
+<dependency>
+    <groupId>jakarta.enterprise</groupId>
+    <artifactId>jakarta.enterprise.cdi-api</artifactId>
+    <version>4.0.1</version>
 </dependency>
 ----
 [[gf-jms-injection]]
@@ -957,18 +957,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>3.1.0.payara-p1</version>
 </dependency>
 ----
-[[cdi-api-fragment]]
-==== *cdi-api-fragment*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.web</groupId>
-    <artifactId>cdi-api-fragment</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
 [[soteria.spi.bean.decorator.weld]]
 ==== *soteria.spi.bean.decorator.weld*
 **Version**: 3.0.1.payara-p1
@@ -991,6 +979,18 @@ This section details all dependencies linked to Jakarta EE specifications.
     <groupId>org.glassfish.jersey.media</groupId>
     <artifactId>jersey-media-moxy</artifactId>
     <version>3.1.0.payara-p1</version>
+</dependency>
+----
+[[cdi-api-fragment]]
+==== *cdi-api-fragment*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.web</groupId>
+    <artifactId>cdi-api-fragment</artifactId>
+    <version>6.0.0</version>
 </dependency>
 ----
 [[jersey-media-json-processing]]
@@ -1434,18 +1434,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>6.0.0</version>
 </dependency>
 ----
-[[cmp-support-sqlstore]]
-==== *cmp-support-sqlstore*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
-    <artifactId>cmp-support-sqlstore</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
 [[cmp-generator-database]]
 ==== *cmp-generator-database*
 **Version**: 6.0.0
@@ -1458,18 +1446,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>6.0.0</version>
 </dependency>
 ----
-[[entitybean-container]]
-==== *entitybean-container*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.persistence</groupId>
-    <artifactId>entitybean-container</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
 [[cmp-model]]
 ==== *cmp-model*
 **Version**: 6.0.0
@@ -1479,6 +1455,30 @@ This section details all dependencies linked to Jakarta EE specifications.
 <dependency>
     <groupId>fish.payara.server.internal.persistence.cmp</groupId>
     <artifactId>cmp-model</artifactId>
+    <version>6.0.0</version>
+</dependency>
+----
+[[cmp-support-sqlstore]]
+==== *cmp-support-sqlstore*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
+    <artifactId>cmp-support-sqlstore</artifactId>
+    <version>6.0.0</version>
+</dependency>
+----
+[[entitybean-container]]
+==== *entitybean-container*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.persistence</groupId>
+    <artifactId>entitybean-container</artifactId>
     <version>6.0.0</version>
 </dependency>
 ----
@@ -1662,18 +1662,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>6.0.0</version>
 </dependency>
 ----
-[[ejb-internal-api]]
-==== *ejb-internal-api*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.core.ejb</groupId>
-    <artifactId>ejb-internal-api</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
 [[ejb-container]]
 ==== *ejb-container*
 **Version**: 6.0.0
@@ -1686,6 +1674,42 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>6.0.0</version>
 </dependency>
 ----
+[[cmp-ejb-mapping]]
+==== *cmp-ejb-mapping*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
+    <artifactId>cmp-ejb-mapping</artifactId>
+    <version>6.0.0</version>
+</dependency>
+----
+[[cmp-ejb-mapping]]
+==== *cmp-ejb-mapping*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
+    <artifactId>cmp-ejb-mapping</artifactId>
+    <version>6.0.0</version>
+</dependency>
+----
+[[ejb-internal-api]]
+==== *ejb-internal-api*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.core.ejb</groupId>
+    <artifactId>ejb-internal-api</artifactId>
+    <version>6.0.0</version>
+</dependency>
+----
 [[cmp-enhancer]]
 ==== *cmp-enhancer*
 **Version**: 6.0.0
@@ -1695,30 +1719,6 @@ This section details all dependencies linked to Jakarta EE specifications.
 <dependency>
     <groupId>fish.payara.server.internal.persistence.cmp</groupId>
     <artifactId>cmp-enhancer</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
-[[cmp-ejb-mapping]]
-==== *cmp-ejb-mapping*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
-    <artifactId>cmp-ejb-mapping</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
-[[cmp-ejb-mapping]]
-==== *cmp-ejb-mapping*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
-    <artifactId>cmp-ejb-mapping</artifactId>
     <version>6.0.0</version>
 </dependency>
 ----
@@ -2469,6 +2469,54 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>6.0.0</version>
 </dependency>
 ----
+[[org.eclipse.persistence.jpa.modelgen.processor]]
+==== *org.eclipse.persistence.jpa.modelgen.processor*
+**Version**: 4.0.0-m3.payara-p2
+
+[source,xml]
+----
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+    <version>4.0.0-m3.payara-p2</version>
+</dependency>
+----
+[[org.eclipse.persistence.jpa.modelgen.processor]]
+==== *org.eclipse.persistence.jpa.modelgen.processor*
+**Version**: 4.0.0-m3.payara-p2
+
+[source,xml]
+----
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+    <version>4.0.0-m3.payara-p2</version>
+</dependency>
+----
+[[org.eclipse.persistence.asm]]
+==== *org.eclipse.persistence.asm*
+**Version**: 9.3.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>org.eclipse.persistence.asm</artifactId>
+    <version>9.3.0</version>
+</dependency>
+----
+[[org.eclipse.persistence.asm]]
+==== *org.eclipse.persistence.asm*
+**Version**: 9.3.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>org.eclipse.persistence.asm</artifactId>
+    <version>9.3.0</version>
+</dependency>
+----
 [[org.eclipse.persistence.moxy]]
 ==== *org.eclipse.persistence.moxy*
 **Version**: 4.0.0-m3.payara-p2
@@ -2479,54 +2527,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <groupId>org.eclipse.persistence</groupId>
     <artifactId>org.eclipse.persistence.moxy</artifactId>
     <version>4.0.0-m3.payara-p2</version>
-</dependency>
-----
-[[org.eclipse.persistence.jpa.modelgen.processor]]
-==== *org.eclipse.persistence.jpa.modelgen.processor*
-**Version**: 4.0.0-m3.payara-p2
-
-[source,xml]
-----
-<dependency>
-    <groupId>org.eclipse.persistence</groupId>
-    <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-    <version>4.0.0-m3.payara-p2</version>
-</dependency>
-----
-[[org.eclipse.persistence.jpa.modelgen.processor]]
-==== *org.eclipse.persistence.jpa.modelgen.processor*
-**Version**: 4.0.0-m3.payara-p2
-
-[source,xml]
-----
-<dependency>
-    <groupId>org.eclipse.persistence</groupId>
-    <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-    <version>4.0.0-m3.payara-p2</version>
-</dependency>
-----
-[[org.eclipse.persistence.asm]]
-==== *org.eclipse.persistence.asm*
-**Version**: 9.3.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>org.eclipse.persistence</groupId>
-    <artifactId>org.eclipse.persistence.asm</artifactId>
-    <version>9.3.0</version>
-</dependency>
-----
-[[org.eclipse.persistence.asm]]
-==== *org.eclipse.persistence.asm*
-**Version**: 9.3.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>org.eclipse.persistence</groupId>
-    <artifactId>org.eclipse.persistence.asm</artifactId>
-    <version>9.3.0</version>
 </dependency>
 ----
 [[org.eclipse.persistence.jpa.jpql]]
@@ -2565,18 +2565,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>6.0.0</version>
 </dependency>
 ----
-[[cmp-support-sqlstore]]
-==== *cmp-support-sqlstore*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
-    <artifactId>cmp-support-sqlstore</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
 [[cmp-generator-database]]
 ==== *cmp-generator-database*
 **Version**: 6.0.0
@@ -2586,6 +2574,30 @@ This section details all dependencies linked to Jakarta EE specifications.
 <dependency>
     <groupId>fish.payara.server.internal.persistence.cmp</groupId>
     <artifactId>cmp-generator-database</artifactId>
+    <version>6.0.0</version>
+</dependency>
+----
+[[cmp-model]]
+==== *cmp-model*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
+    <artifactId>cmp-model</artifactId>
+    <version>6.0.0</version>
+</dependency>
+----
+[[cmp-support-sqlstore]]
+==== *cmp-support-sqlstore*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
+    <artifactId>cmp-support-sqlstore</artifactId>
     <version>6.0.0</version>
 </dependency>
 ----
@@ -2611,18 +2623,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <groupId>org.eclipse.persistence</groupId>
     <artifactId>org.eclipse.persistence.core</artifactId>
     <version>4.0.0-m3.payara-p2</version>
-</dependency>
-----
-[[cmp-model]]
-==== *cmp-model*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
-    <artifactId>cmp-model</artifactId>
-    <version>6.0.0</version>
 </dependency>
 ----
 [[org.eclipse.persistence.oracle]]
@@ -2721,18 +2721,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>6.0.0</version>
 </dependency>
 ----
-[[cmp-enhancer]]
-==== *cmp-enhancer*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
-    <artifactId>cmp-enhancer</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
 [[jakarta.persistence-api]]
 ==== *jakarta.persistence-api*
 **Version**: 3.1.0
@@ -2754,6 +2742,18 @@ This section details all dependencies linked to Jakarta EE specifications.
 <dependency>
     <groupId>fish.payara.server.internal.persistence.cmp</groupId>
     <artifactId>cmp-ejb-mapping</artifactId>
+    <version>6.0.0</version>
+</dependency>
+----
+[[cmp-enhancer]]
+==== *cmp-enhancer*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.persistence.cmp</groupId>
+    <artifactId>cmp-enhancer</artifactId>
     <version>6.0.0</version>
 </dependency>
 ----
@@ -3504,18 +3504,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>3.0.0</version>
 </dependency>
 ----
-[[tyrus-container-servlet]]
-==== *tyrus-container-servlet*
-**Version**: 2.1.0.payara-p1
-
-[source,xml]
-----
-<dependency>
-    <groupId>org.glassfish.tyrus</groupId>
-    <artifactId>tyrus-container-servlet</artifactId>
-    <version>2.1.0.payara-p1</version>
-</dependency>
-----
 [[httpspi-servlet]]
 ==== *httpspi-servlet*
 **Version**: 4.0.0
@@ -3538,6 +3526,18 @@ This section details all dependencies linked to Jakarta EE specifications.
     <groupId>com.sun.xml.ws</groupId>
     <artifactId>servlet</artifactId>
     <version>4.0.0</version>
+</dependency>
+----
+[[tyrus-container-servlet]]
+==== *tyrus-container-servlet*
+**Version**: 2.1.0.payara-p1
+
+[source,xml]
+----
+<dependency>
+    <groupId>org.glassfish.tyrus</groupId>
+    <artifactId>tyrus-container-servlet</artifactId>
+    <version>2.1.0.payara-p1</version>
 </dependency>
 ----
 [[jersey-cdi1x-servlet]]
@@ -4509,18 +4509,6 @@ This section details all dependencies linked to Jakarta EE specifications.
     <version>4.0.0</version>
 </dependency>
 ----
-[[webservices.security]]
-==== *webservices.security*
-**Version**: 6.0.0
-
-[source,xml]
-----
-<dependency>
-    <groupId>fish.payara.server.internal.security</groupId>
-    <artifactId>webservices.security</artifactId>
-    <version>6.0.0</version>
-</dependency>
-----
 [[jaxb-core]]
 ==== *jaxb-core*
 **Version**: 4.0.1
@@ -4699,6 +4687,18 @@ This section details all dependencies linked to Jakarta EE specifications.
     <groupId>com.sun.xml.bind</groupId>
     <artifactId>jaxb-osgi</artifactId>
     <version>4.0.1</version>
+</dependency>
+----
+[[webservices.security]]
+==== *webservices.security*
+**Version**: 6.0.0
+
+[source,xml]
+----
+<dependency>
+    <groupId>fish.payara.server.internal.security</groupId>
+    <artifactId>webservices.security</artifactId>
+    <version>6.0.0</version>
 </dependency>
 ----
 [[webservices-extra-jdk-packages]]
