@@ -23,12 +23,12 @@ This notifier's extension is installed by default on Payara Server Enterprise.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are retrieving the settings of the MS Teams notifier. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -53,9 +53,9 @@ true     WARNING  https://outlook.office.com/webhook/xyz
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

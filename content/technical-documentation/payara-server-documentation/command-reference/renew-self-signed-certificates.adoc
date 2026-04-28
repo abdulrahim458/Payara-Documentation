@@ -28,10 +28,10 @@ These certificates are then placed in the key and trust stores of the target ins
 [[options]]
 == Options
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are renewing its self-signed certificates. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -39,24 +39,24 @@ cluster_name;;
 Applies to every server instance in the cluster.
 instance_name;;
 Applies to a specified sever instance.
-`--reload`::
+*`--reload`*:
 Whether the HTTP listeners should be reloaded. Defaults to `false`
-`--listener`::
+*`--listener`*:
 The name of the HTTP or IIOP listener to add the certificate to.
-`--domainname`::
+*`--domainname`*:
 The name of the domain where the target instance exists.
 +
 Defaults to `domain1` or the existing domain if only one exists.
-`--domainDir`::
+*`--domainDir`*:
 The path to the directory containing the target domain.
 +
 Defaults to
 `as-install/glassfish/domains`
-`--node`::
+*`--node`*:
 The name of the node where the target instance exists.
 +
 Defaults to `localhost-$domainname`
-`--nodeDir`::
+*`--nodeDir`*:
 The path to the directory containing the target node.
 +
 Defaults to `as-install/glassfish/nodes`
@@ -74,9 +74,9 @@ asadmin renew-self-signed-certificates
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

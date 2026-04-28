@@ -59,11 +59,11 @@ You can configure Payara Server through the Admin Console or through the Asadmin
 
 You can deploy the connector with the admin console;
 
-image:cloud-connectors/admin-console.png[Admin Console]
+image:cloud-connectors/admin-console.png[alt="Admin Console",width=600px]
 
 Then configure the `Connector Classloading Policy` to `Global` in `{config} > Connector Service > Connector Classloading Policy`.
 
-image:cloud-connectors/classloading-configuration.png[Classloading Config]
+image:cloud-connectors/classloading-configuration.png[alt="Classloading Config",width=600px]
 
 This allows the classes from the cloud connector to be globally available in the server.
 

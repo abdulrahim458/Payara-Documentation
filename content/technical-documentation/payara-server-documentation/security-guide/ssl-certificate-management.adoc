@@ -4,8 +4,8 @@
 
 As a reminder, Payara Server uses the following PKCS12 keystore files to manage SSL/TLS certificates required for secure communications:
 
-`keystore.p12`:: Java Keystore formatted file containing the Cryptographic keys, like the private keys associated with the certificates.
-`cacerts.p12`:: Java Keystore formatted file used as Trust Store file holding the X.509 certificates.
+*`keystore.p12`*: Java Keystore formatted file containing the Cryptographic keys, like the private keys associated with the certificates.
+*`cacerts.p12`*: Java Keystore formatted file used as Trust Store file holding the X.509 certificates.
 
 These keystores are protected with the Master Password of your domain.
 
@@ -24,7 +24,7 @@ You can generate a self-signed certificate using the xref:Technical Documentatio
 asadmin generate-self-signed-certificate --dn "CN=test.payara.fish,IP=127.0.0.1" mydomain_certificate
 ----
 
-*Alternatively*::
+**Alternatively**:
 You can find the detailed steps of adding a self-signed certificate into Payara Server for testing purposes using `keytool` and `openssl` link:https://blog.payara.fish/securing-payara-server-with-custom-ssl-certificate[here].
 
 The private key can be stored in various formats. We assume that the key is in a format which can be read by the Java key tool program, such as PKCS12.
@@ -64,11 +64,11 @@ From the Admin Console, open the instance details page (e.g. on the navigation b
 
 From here, Click on the _Add_ button of the keystore table (highlighted):
 
-image:certificate-management/CertificateManagementAddButton.png[Certificate Management Add Button]
+image:certificate-management/CertificateManagementAddButton.png[alt="Certificate Management Add Button",width=600px]
 
 You can then enter the alias name and the path to the certificate bundle:
 
-image:certificate-management/CertificateManagementAddKeystoreEntry.png[Add Keystore Entry]
+image:certificate-management/CertificateManagementAddKeystoreEntry.png[alt="Add Keystore Entry",width=600px]
 
 [[import-keystore-via-keytool]]
 ==== Using the `keytool` command
@@ -100,11 +100,11 @@ asadmin add-to-truststore --file mycert.crt mydomain_certificate
 
 You can also follow the same steps as done for adding the bundle to the keystore via the admin console, though selecting the *Add* button of the truststore table
 
-image:certificate-management/CertificateManagementAddButton2.png[Certificate Management Add Button]
+image:certificate-management/CertificateManagementAddButton2.png[alt="Certificate Management Add Button",width=600px]
 
 And then specifying the `mycert.crt` file.
 
-image:certificate-management/CertificateManagementAddTruststoreEntry.png[Add Truststore Entry]
+image:certificate-management/CertificateManagementAddTruststoreEntry.png[alt="Add Truststore Entry",width=600px]
 
 [[via-keytool-command-2]]
 ==== Using the `keytool` command
@@ -161,7 +161,7 @@ To configure the additional keystore locations in the admin console, head to the
 
 You can add the new JVM property and the relative paths to your keystores or truststores here.
 
-image:docs::ssl/add-additional-keystores-admin-console.png[Configure Additional keystores and truststores in Admin Console]
+image:docs::ssl/add-additional-keystores-admin-console.png[alt="Configure Additional keystores and truststores in Admin Console",width=600px]
 
 [[via-asadmin-cli]]
 === Using Asadmin CLI
@@ -217,4 +217,4 @@ You can also remove individual or groups of certificates using the admin console
 
 Select the desired certificates from the keystore *or* truststore entries table (not both), and click on the _Delete_ button:
 
-image:certificate-management/CertificateManagementDeleteButton.png[Certificate Management Delete Button]
+image:certificate-management/CertificateManagementDeleteButton.png[alt="Certificate Management Delete Button",width=600px]

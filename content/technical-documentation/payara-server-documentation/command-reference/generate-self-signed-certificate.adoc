@@ -34,10 +34,10 @@ In the case however where there is not an entry with the same alias in the key s
 [[options]]
 == Options
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are generating the certificate. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -45,40 +45,40 @@ cluster_name;;
 Applies to every server instance in the cluster.
 instance_name;;
 Applies to a specified sever instance.
-`--reload`::
+*`--reload`*:
 Whether the HTTP listeners should be reloaded. Defaults to `false`
-`--listener`::
+*`--listener`*:
 The name of the HTTP or IIOP listener to add the certificate to.
-`--domainname`::
+*`--domainname`*:
 The name of the domain where the target instance exists.
 +
 Defaults to `domain1` or the existing domain if only one exists.
-`--domainDir`::
+*`--domainDir`*:
 The path to the directory containing the target domain.
 +
 Defaults to
 `as-install/glassfish/domains`
-`--node`::
+*`--node`*:
 The name of the node where the target instance exists.
 +
 Defaults to `localhost-$domainname`
-`--nodeDir`::
+*`--nodeDir`*:
 The path to the directory containing the target node.
 +
 Defaults to `as-install/glassfish/nodes`
 
-`--distinguishedName`::
-`--dn`::
+*`--distinguishedName`*:
+*`--dn`*:
 The distinguished name (DN) to use when generating the certificate.
 
-`--alternativeNames`::
-`--altnames`::
+*`--alternativeNames`*:
+*`--altnames`*:
 The semicolon (`;`) separated list of additional Subject Alternative Names to add to the generated certificate.
 
 [[operands]]
 == Operands
 
-alias::
+*alias*:
 The alias name to use when generating the certificate and storing it in the keystore and truststores.
 
 [[examples]]
@@ -94,9 +94,9 @@ asadmin generate-self-signed-certificate --dn "CN=test.payara.fish,IP=192.168.1.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

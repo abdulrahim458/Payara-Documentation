@@ -104,7 +104,7 @@ Here are several examples of where you can use variable references:
 [[examples-annotation]]
 === Within an annotation
 
-[source,java]
+[source, java]
 ----
 @DataSourceDefinition(name="java:global/ExampleDataSource",
       className="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource",
@@ -134,9 +134,9 @@ Here are several examples of where you can use variable references:
 [[examples-multi]]
 === Multiple variable references combined in a single value withing the `domain.xml`
 
-[source,xml]
+[source, xml]
 ----
-<domain log-root="${com.sun.aas.instanceRoot}/${ENV=STAGE_NAME}/logs">
+<domain log-root="${com.sun.aas.instanceRoot}/${ENV=STAGE_NAME}/logs" />
 ----
 
 [[examples-boot]]

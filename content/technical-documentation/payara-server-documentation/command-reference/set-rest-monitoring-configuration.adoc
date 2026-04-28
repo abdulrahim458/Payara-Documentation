@@ -25,12 +25,12 @@ This command can be used to configure the settings of the REST Monitoring subsys
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are configuring the REST monitoring service. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -38,13 +38,13 @@ cluster_name;;
 Applies to every server instance in the cluster.
 instance_name;;
 Applies to a specified server instance.
-`--enabled`::
+*`--enabled`*:
 Defaults to `false`. Enables or disables the REST monitoring service
-`--securityEnabled`::
+*`--securityEnabled`*:
 Defaults to `false`. Whether to secure access to the REST Monitoring application is enabled.
-`--contextRoot`::
+*`--contextRoot`*:
 Defaults to `/rest-monitoring`. The context root of the REST Monitoring application.
-`--applicationName`::
+*`--applicationName`*:
 Defaults to `__restmonitoring`. The name of the REST Monitoring application.
 
 [[examples]]
@@ -60,9 +60,9 @@ asadmin set-rest-monitoring-configuration --enabled=true --contextRoot /rest-mon
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

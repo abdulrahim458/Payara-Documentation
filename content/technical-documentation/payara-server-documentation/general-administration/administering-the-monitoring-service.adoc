@@ -2572,7 +2572,7 @@ asadmin set-amx-enabled --enabled true --dynamic true --target server
 [[using-web-admin-console]]
 ==== Boot AMX Using the Admin Console
 
-image:jmx-monitoring-service/enable_amx.png[Enable AMX]
+image:jmx-monitoring-service/enable_amx.png[alt="Enable AMX",width=600px]
 
 [[configure-jmx-monitoring]]
 === Configure JMX Monitoring

@@ -44,12 +44,12 @@ NOTE: The data collected is stored in a ZIP file in your user home directory, th
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:docs::Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which data is collected. Valid values are: +
 deployment_group_name;;
 Applies to every server instance in the specified deployment group.
@@ -57,38 +57,38 @@ cluster_name;;
 Applies to every server instance in the specified cluster.
 instance_name;;
 Applies to a specific sever instance.
-`--domainDir`::
+*`--domainDir`*:
 The path to the directory containing the target domain.
 +
 Defaults to
 `as-install/glassfish/domains`
-`--nodeDir`::
+*`--nodeDir`*:
 The path to the directory containing the target node.
 +
 Defaults to `as-install/glassfish/nodes`
-`--dir`::
+*`--dir`*:
 The directory path where the ZIP file will be stored. Defaults to `$+{user.home}+`
-`--domainXml`::
+*`--domainXml`*:
 Whether to collect the `domain.xml` configuration file. Defaults to `true`.
-`--serverLog`::
+*`--serverLog`*:
 Whether to collect server logs. Defaults to `true`
-`--accessLog`::
+*`--accessLog`*:
 Whether to collect access logs. Defaults to `true`
-`--notificationLog`::
+*`--notificationLog`*:
 Whether to collect notification logs. Defaults to `true`
-`--heapDump`::
+*`--heapDump`*:
 Whether to collect a heap dump. Defaults to `true`
-`--threadDump`::
+*`--threadDump`*:
 Whether to collect a thread dump. Defaults to `true`
-`--jvmReport`::
+*`--jvmReport`*:
 Whether to collect the JVM report. Defaults to `true`
-`--obfuscate`::
+*`--obfuscate`*:
 Whether to obfuscate data in `domain.xml`. Defaults to `true`
 
 [[operands]]
 == Operands
 
-domainName::
+*domainName*:
 The name of the domain that will be scanned.
 +
 Defaults to `domain1`.
@@ -145,9 +145,9 @@ Command collect-diagnostics executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

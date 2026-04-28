@@ -31,12 +31,12 @@ This notifier's extension is installed by default on Payara Server Enterprise.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are configuring the SNMP notifier. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -44,23 +44,23 @@ cluster_name;;
 Applies to every server instance in the cluster.
 instance_name;;
 Applies to a specified sever instance.
-`--enabled`::
+*`--enabled`*:
 Defaults to `false`. Enables or disables the log notifier
-`--dynamic`::
+*`--dynamic`*:
 Defaults to `false`. When set to `true`, applies the changes without a server restart.
 +
 Otherwise, a restart is required.
-`--filter`::
+*`--filter`*:
 Defaults to `WARNING`. The notifier only responds to events at or above this level. (INFO, WARNING, SEVERE)
-`--hostName`::
+*`--hostName`*:
 Defines the hostname of the SNMP server.
-`--snmpPort`::
+*`--snmpPort`*:
 Defaults to `162`. Defines the port number of the SNMP server.
-`--version`::
+*`--version`*:
 Defines the version of the SNMP protocol. Will be set to a default value if not set by the user.
-`--community`::
+*`--community`*:
 The community string used in the SNMP query. Will be set to a default value if not set by the user.
-`--oid`::
+*`--oid`*:
 The Object ID used in the SNMP query. Will be set to a default value if not set by the user.
 
 [[examples]]
@@ -76,9 +76,9 @@ asadmin set-snmp-notifier-configuration --enabled=true --dynamic=true --hostname
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*
