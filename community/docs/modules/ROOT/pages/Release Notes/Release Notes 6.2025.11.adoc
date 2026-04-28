@@ -1,0 +1,40 @@
+= Release notes - Payara Platform Community 6.2025.11
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/7718[FISH-10151]] Add `--no-validation` flag for setting up JDBC Connection
+
+== Bug Fixes
+* [https://github.com/payara/Payara/pull/7701[FISH-8542]] Fixed Prime Faces Autocomplete in composite components breaking Select Event when upgrading from Payara 4.x to Payara 6
+
+* [https://github.com/payara/Payara/pull/7748[FISH-10833]] Fixed redeploying applications to deployment groups breaking virtual servers when used as Default Module
+
+* [https://github.com/payara/Payara/pull/7710[FISH-11683]] Fixed undeploying older versions breaking routing to active versions in Payara versioned deployment (HTTP 503)
+
+* [https://github.com/payara/Payara/pull/7753[FISH-11911]] Fixed "Could not find an implementation of ClassAnalyzer with name CdiInjecteeSkippingClassAnalyzer" error under high load
+
+* [https://github.com/payara/Payara/pull/7712[FISH-12153]] Fixed OpenAPI generation failing when bean validation is used without PathParam annotation
+
+== Component Upgrades
+* [https://github.com/payara/Payara/pull/7689[FISH-12230]] Upgrade `asm.version` from 9.8 to 9.9
+
+* [https://github.com/payara/Payara/pull/7695[FISH-12246]] Upgrade `org.eclipse.persistence:org.eclipse.persistence.asm` from 9.8.0 to 9.9.0
+
+* [https://github.com/payara/Payara/pull/7706[FISH-12290]] Upgrade `org.apache.bcel:bcel` from 6.10.0 to 6.11.0
+
+* [https://github.com/payara/Payara/pull/7709[FISH-12291]] Upgrade `io.projectreactor:reactor-core` from 3.7.11 to 3.7.12
+
+* [https://github.com/payara/Payara/pull/7737[FISH-12436]] Upgrade Docker JDK to 11.0.29
+
+* [https://github.com/payara/Payara/pull/7737[FISH-12437]] Upgrade Docker JDK to 17.0.17
+
+* [https://github.com/payara/Payara/pull/7737[FISH-12438]] Upgrade Docker JDK to 21.0.9
+
+* [https://github.com/payara/Payara/pull/7739[FISH-12440]] Upgrade HK2 to 3.1.1

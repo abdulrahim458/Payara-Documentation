@@ -1,0 +1,39 @@
+= Release notes - Payara Platform Community 6.2025.9
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/7607[FISH-11918]] [Community Contribution - https://github.com/mkarg[Mkarg]] Reduce logging level for "Clustered CDI Event bus initialized"
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/7587[FISH-10821]] Fix Alternative Document Roots property in `payara-web.xml` not working under Payara Micro
+
+* [https://github.com/payara/Payara/pull/7576[FISH-11585]] Fix Resource Adapter not loading in time for JTS automatic recovery
+
+== Component Upgrades
+
+* [https://github.com/payara/Payara/pull/7548[FISH-11685]] Upgrade `jline.version` from 3.30.2 to 3.30.5
+
+* [https://github.com/payara/Payara/pull/7574[FISH-11788]] Upgrade `org.eclipse.angus:angus-mail` from 2.0.3 to 2.0.4
+
+* [https://github.com/payara/Payara/pull/7579[FISH-11810]] Upgrade `net.minidev:json-smart` from 2.5.2 to 2.6.0
+
+* [https://github.com/payara/Payara/pull/7578[FISH-11811]] Upgrade `net.minidev:accessors-smart` from 2.5.2 to 2.6.0
+
+* [https://github.com/payara/Payara/pull/7595[FISH-11850]] Upgrade `io.projectreactor:reactor-core` from 3.7.8 to 3.7.9
+
+*  [https://github.com/payara/Payara/pull/7582[FISH-11815]] [https://github.com/payara/Payara/pull/7599[FISH-11871]] Upgrade `com.nimbusds:nimbus-jose-jwt` from 10.4 to 10.4.2
+
+* [https://github.com/payara/Payara/pull/7598[FISH-11873]] Upgrade `org.jetbrains.kotlin:kotlin-stdlib` from 2.2.0 to 2.2.10
+
+* [https://github.com/payara/Payara/pull/7611[FISH-11922]] Upgrade Docker JDK to 11.0.28
+
+* [https://github.com/payara/Payara/pull/7611[FISH-11923]] Upgrade Docker JDK to 17.0.16
+
+* [https://github.com/payara/Payara/pull/7611[FISH-11924]] Upgrade Docker JDK to 21.0.8

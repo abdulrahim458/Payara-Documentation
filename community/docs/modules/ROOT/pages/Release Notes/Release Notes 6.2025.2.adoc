@@ -1,0 +1,39 @@
+= Release notes - Payara Platform Community 6.2025.2
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/7173[FISH-8859]] Implement Docker Images Graceful Shutdown Support
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/7163[FISH-8646]] Fix deployment failure of Spring Boot 3 apps on Payara Server 6 due to `java.lang.IllegalStateException: CDI not available`
+
+* [https://github.com/payara/Payara/pull/7032[FISH-10049]] [Community Contribution - https://github.com/lprimak[lprimak]] Fix EAR application deployment failures caused by CDI issues
+
+
+== Component Upgrades
+
+
+* [https://github.com/payara/Payara/pull/7182[FISH-8459]] Upgrade Grizzly to 4.0.2
+
+* [https://github.com/payara/Payara/pull/7154[FISH-10410]] Payara: Bump `net.java.dev.jna:jna` from 5.15.0 to 5.16.0
+
+* [https://github.com/payara/Payara/pull/7157[FISH-10432]] Payara: Bump `io.projectreactor:reactor-core` from 3.7.1 to 3.7.2
+
+* [https://github.com/payara/Payara/pull/7171[FISH-10467]] Upgrade Docker JDK to 11.0.26
+
+* [https://github.com/payara/Payara/pull/7171[FISH-10468]] Upgrade Docker JDK to 17.0.14
+
+* [https://github.com/payara/Payara/pull/7171[FISH-10469]] Upgrade Docker JDK to 21.0.6
+
+* [https://github.com/payara/Payara/pull/7168[FISH-10474]] Payara: Bump `org.jetbrains.kotlin:kotlin-stdlib` from 2.1.0 to 2.1.10
+
+* [https://github.com/payara/Payara/pull/7177[FISH-10496]] Payara: Bump `jline.version` from 3.28.0 to 3.29.0
+
+* [https://github.com/payara/Payara/pull/7180[FISH-10523]] Payara: Bump `org.apache.felix:org.apache.felix.webconsole` from 5.0.8 to 5.0.10

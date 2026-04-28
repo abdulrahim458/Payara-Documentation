@@ -1,0 +1,57 @@
+= Release notes - Payara Platform Community 6.2025.6
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/7097[FISH-10286]] [Community Contribution - https://github.com/lprimak[lprimak]] Use `<domain_dir>/lib/warlibs` to Enable Fast Deployments
+
+* [https://github.com/payara/Payara/pull/7329[FISH-11046]] [Community Contribution - https://github.com/hsuk04[hsuk04]] Change createTempDir to use Java nio Files package
+
+* [https://github.com/payara/Payara/pull/7330[FISH-11183]] [Community Contribution - https://github.com/lprimak[lprimak]] Add JDK 24 Compatibility
+
+* [https://github.com/payara/Payara/pull/7403[FISH-11054]] Add support for MicroProfile OpenAPI 3.1 Bean Validation
+
+* [https://github.com/payara/Payara/pull/7374[FISH-11197]] [Community Contribution - https://github.com/pzygielo[pzygielo]] Align Cluster Deprecation Message With Product Versions
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/7413[FISH-8795]] Fix `java.lang.NullPointerException` caused by redeployment of an application that modifies the OpenAPI document
+
+* [https://github.com/payara/Payara/pull/7032[FISH-10049]] [Community Contribution - https://github.com/lprimak[lprimak]] Fix EAR Application Deployment with CDI Failure
+
+* [https://github.com/payara/Payara/pull/7212[FISH-10615]] [Community Contribution - https://github.com/lprimak[lprimak]] Fix CDI and EAR Deployment Bugs
+
+* [https://github.com/payara/Payara/pull/7347[FISH-10996]] Fix Aggregate Javadoc Generation
+
+* [https://github.com/payara/Payara/pull/7332[FISH-11029]] Fix IMQ and IMQJMX Versions
+
+* [https://github.com/payara/Payara/pull/7375[FISH-11113]] Remove Expired `baltimorecybertrustca [jdk]`, `baltimorecodesigningca`, `baltimorecybertrustroot`, `baltimorecybertrustca`, and `cert_5_baltimore_cybertrust_root5` Certificates
+
+* [https://github.com/payara/Payara/pull/7404[FISH-11223]] [Community Contribution - https://github.com/pzygielo[pzygielo]] Fix `Cannot find the resource bundle for the name com.sun.logging.enterprise.system.container.ejb for class org.glassfish.ejb.persistent.timer.TimerState` Error
+
+== Component Upgrades
+
+* [https://github.com/payara/Payara/pull/7302[FISH-10991]] Upgrade `org.glassfish.exousia:exousia` from 2.1.2 to 2.1.3
+
+* [https://github.com/payara/Payara/pull/7313[FISH-11004]] Upgrade `commons-io:commons-io` from 2.18.0 to 2.19.0
+
+* [https://github.com/payara/Payara/pull/7327[FISH-11026]] Upgrade `com.fasterxml.jackson:jackson-bom` from 2.18.3 to 2.19.0
+
+* [https://github.com/payara/Payara/pull/7349[FISH-11062]] Upgrade `com.nimbusds:nimbus-jose-jwt` from 10.0.2 to 10.3
+
+* [https://github.com/payara/Payara/pull/7370[FISH-11093]] Upgrade `io.projectreactor:reactor-core` from 3.7.4 to 3.7.6
+
+* [https://github.com/payara/Payara/pull/7373[FISH-11096]] Upgrade `jline.version` from 3.29.0 to 3.30.0
+
+* [https://github.com/payara/Payara/pull/7386[FISH-11165]] Upgrade `payara-arquillian-container.version` from 3.0 to 3.1
+
+* [https://github.com/payara/Payara/pull/7388[FISH-11178]] Upgrade `org.jetbrains.kotlin:kotlin-stdlib` from 2.1.20 to 2.1.21
+
+* [https://github.com/payara/Payara/pull/7397[FISH-11192]] Upgrade `jakarta.servlet.jsp:jakarta.servlet.jsp-api` from 3.1.0 to 3.1.1
+
+* [https://github.com/payara/Payara/pull/7396[FISH-11193]] Upgrade `org.eclipse.microprofile.openapi:microprofile-openapi-api` from 3.1.1 to 3.1.2

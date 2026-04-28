@@ -1,0 +1,33 @@
+= Release notes - Payara Platform Enterprise 6.33.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+* [FISH-11210] Add support to use cached remote public keys retain on error mechanism as fallback for MicroProfile JWT
+
+* [FISH-12474] Domain Upgrade Tool Support for New License File Locations
+
+* [FISH-12483] Sync Asadmin Help Doc Improvements
+
+* [FISH-12539] [Community Contribution - https://github.com/lprimak[lprimak]] Trim Whitespace in `DataSourceDefinition` Properties
+
+* [FISH-11668] Tech preview of Azul CRIU/CRaC Support for Payara Micro
+
+== Security Fixes
+* [FISH-12431] CVE-2020-36843: Upgrade `net-i2p-crypto-eddsa` to 0.3.1
+
+== Bug Fixes
+* [FISH-7667] Fix File Upload Memory Leak
+
+* [FISH-11023] Fix App Client Failing to Run on Payara Server Using Java 11+
+
+* [FISH-11389] Fix Monitoring Certain Database Metrics Showing Wrong Output
+
+== Component Upgrades
+* [FISH-12403] Upgrade `org.jetbrains.kotlin:kotlin-stdlib` from 2.2.20 to 2.2.21
+
+* [FISH-12470] Upgrade `com.fasterxml.jackson:jackson-bom` from 2.20.0 to 2.20.1

@@ -1,0 +1,49 @@
+= Release notes - Payara Platform Enterprise 6.28.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [FISH-6961] Improve JDBC Connection using Trino Driver
+
+== Bug Fixes
+
+* [FISH-10947] Fix Memory leak when using Jakarta CDI `@Dependent` instances.
+
+* [FISH-11055] Fix `UnproxyableResolutionException` error in a Payara Micro Clustered environment
+
+* [FISH-11208] Fix JVM View Switching in Admin UI
+
+* [FISH-11423] [Community Contribution - https://github.com/pzygielo[pzygielo]] Fix `DependOn` Typo
+
+== Component Upgrades
+
+* [FISH-6868] Upgrade `Weld` to 5.1.6.Final
+
+* [FISH-11226] Upgrade `org.apache.felix:org.apache.felix.webconsole` from 5.0.10 to 5.0.12
+
+* [FISH-11231] Upgrade `org.jboss.classfilewriter:jboss-classfilewriter` from 1.3.0.Final.payara-p1 to 1.3.1.Final
+
+* [FISH-11274] Upgrade `Mojarra` to 4.0.11
+
+* [FISH-11291] Upgrade `org.apache.santuario:xmlsec` from 4.0.0 to 4.0.4
+
+* [FISH-11348] Upgrade `io.projectreactor:reactor-core` from 3.7.6 to 3.7.7
+
+* [FISH-11349] Upgrade `org.eclipse.microprofile.metrics:microprofile-metrics-api` from 5.1.0.payara-p1 to 5.1.2
+
+* [FISH-11414] Upgrade `jline.version` from 3.30.0 to 3.30.2
+
+* [FISH-11417] Upgrade `fish.payara.transformer:fish.payara.transformer.payara` from 0.2.13 to 0.2.14
+
+* [FISH-11420] Upgrade `jaxb-impl.version` from 4.0.2 to 4.0.5
+
+* [FISH-11550] Upgrade `org.jetbrains.kotlin:kotlin-stdlib` from 2.1.21 to 2.2.0
+
+* [FISH-11551] Upgrade `com.fasterxml.jackson:jackson-bom` from 2.19.0 to 2.19.1
+
+* [FISH-11552] Upgrade `com.nimbusds:nimbus-jose-jwt` from 10.3 to 10.3.1

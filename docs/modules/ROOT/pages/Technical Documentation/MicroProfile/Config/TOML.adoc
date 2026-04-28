@@ -1,0 +1,75 @@
+= TOML Config Source
+
+The TOML Config Source takes configuration properties from a TOML configuration file.
+
+[[configuration]]
+== Configuration in Payara Server
+
+You can configure TOML Config Source either via the admin console or the _asadmin_ utility.
+
+You'll need the path of the TOML configuration file and the maximum recursion depth.
+
+
+[[from-admin-console]]
+=== From the Admin Console
+
+To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `TOML`.
+
+image:microprofile/config/toml/admin-console-example.png[Payara Server Administration Console configuration route]
+
+From here you can enter the path to the TOML configuration file and set the maximum recursion depth.
+
+You can also decide whether to apply these changes dynamically or on the next server restart. If the config source is enabled or disabled dynamically it will take effect across the server immediately.
+
+[[from-command-line]]
+=== From the Command Line
+
+To configure the TOML Config Source from the command line, use these commands:
+
+* xref:Technical Documentation/Payara Server Documentation/Command Reference/set-toml-config-source-configuration.adoc#set-toml-config-source-configuration[`set-toml-config-source-configuration`]
+
+* xref:Technical Documentation/Payara Server Documentation/Command Reference/get-toml-config-source-configuration.adoc#get-toml-config-source-configuration[`get-toml-config-source-configuration`]
+
+[[usage]]
+== Usage
+
+Provided that all of the above sections are configured correctly, the properties can be injected into any applicable MicroProfile Config injection point as with any other Config Source. They can also be fetched using the asadmin utility.
+
+To prevent `StackOverFlowException` issues, the `depth` parameter limits the recursion depth when reading properties from the TOML file. If the maximum recursion depth is reached, further properties will not be read.
+
+[[toml-examples]]
+=== Examples
+
+.Example TOML file
+[source, toml]
+----
+title = "TOML Example"
+
+[owner]
+name = "Tom Preston-Werner"
+dob = 1979-05-27T07:32:00-08:00
+
+[database]
+enabled = true
+ports = [ 8000, 8001, 8002 ]
+----
+
+.Retrieving properties programmatically
+[source, java]
+----
+Config config = ConfigProvider.getConfig();
+String ownerName = config.getValue("owner.name", String.class);
+----
+
+.Inject configuration properties
+[source, java]
+----
+@Inject
+@ConfigProperty(name="database.ports[0]")
+private Optional<Integer> databasePort;
+----
+
+[[see-also]]
+== See Also
+
+* link:https://toml.io/en/[TOML Documentation]

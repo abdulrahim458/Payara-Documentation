@@ -1,0 +1,23 @@
+= Release notes - Payara Platform Community 6.2025.5
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/7326[FISH-9527]] Add capability to move master password file to a user defined location
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/7317[FISH-10713]] Fix `jakarta.servlet.request.X509Certificate` request attribute yielding NULL on Payara 6.
+
+* [https://github.com/payara/Payara/pull/7297[FISH-10876]] Fix custom error page configs not working for Payara Micro
+
+== Component Upgrades
+
+* [https://github.com/payara/Payara/pull/7304[FISH-10894]] Upgrade `ASM` from 9.7.1 to 9.8
+
+* [https://github.com/payara/Payara/pull/7302[FISH-10993]] Upgrade `Exousia` from 2.1.2 to 2.1.3

@@ -1,0 +1,37 @@
+= Release notes - Payara Platform Community 6.2025.3
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/7187[FISH-9957]] Add option to change the default context-root on Payara Micro
+
+* [https://github.com/payara/Payara/pull/7230[FISH-10526]] Improve CORBA code to prevent deadlock from pooled threads
+
+== Security Fixes
+
+* [https://github.com/payara/Payara/pull/7216[FISH-10521]] Escape HTTP Characters in REST Interface To Prevent XSS Attacks
+
+* [https://github.com/payara/Payara/pull/7240[FISH-10576]] Update JSON Smart to 2.5.2 in Security Connectors
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/7199[FISH-8545]] Fix payara-web.xml to change the SameSite cookie attribute
+
+* [https://github.com/payara/Payara/pull/7245[FISH-10738]] Fix EAR CDI Application Deployment Failures
+
+== Component Upgrades
+
+* [https://github.com/payara/Payara/pull/7189[FISH-10560]] Bump `io.projectreactor:reactor-core` from 3.7.2 to 3.7.3
+
+* [https://github.com/payara/Payara/pull/7190[FISH-10564]] Bump `net.minidev:json-smart` from 2.5.1 to 2.5.2
+
+* [https://github.com/payara/Payara/pull/7200[FISH-10565]] Bump `net.minidev:accessors-smart` from 2.5.1 to 2.5.2
+
+* [https://github.com/payara/Payara/pull/7191[FISH-10583]] Bump `org.yaml:snakeyaml` from 2.3 to 2.4
+
+* [https://github.com/payara/Payara/pull/7227[FISH-10667]] Bump `com.fasterxml.jackson:jackson-bom` from 2.18.2 to 2.18.3

@@ -1,0 +1,67 @@
+= Release notes - Payara Platform Community 6.2024.9
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.0
+
+
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/6884[FISH-9451]] Remove Unnecessary Shim
+
+== Security Fixes
+
+
+* [https://github.com/payara/Payara/pull/6889[FISH-9112]] REST Interface Link Redirection via Host parameter
+
+* [https://github.com/payara/Payara/pull/6906[FISH-9197]] Sensitive information exposure when the org.glassfish.admingui LOGGER is set to FINEST level
+
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/6906[FISH-6579]] GUI breaks and asadmin command gives "remote failure error..." while modifying TLS Settings for admin-listener and http-listener-1 on Payara Server
+
+* [https://github.com/payara/Payara/pull/6869[FISH-9111]] Required dependency of jackson-dataformat-xml is missing in micro and web
+
+* [https://github.com/payara/Payara/pull/6848[FISH-9171]] [Community Contribution - https://github.com/lprimak[lprimak]] Prevent Deployment Failures from Causing an Undeployment Failure and Leaks
+
+* [https://github.com/payara/Payara/pull/6913[FISH-9186]] Alternate Document Root not working on DFSN on Windows Server 2019
+
+* [https://github.com/payara/Payara/pull/6880[FISH-9222]] [Community Contribution - https://github.com/lprimak[lprimak] Disable Monitoring Collection Before Server Shuts Down
+
+* [https://github.com/payara/Payara/pull/6903[FISH-9456]] Fix `Cannot find the resource bundle for the name com.sun.logging.enterprise.system.container.ejb`
+
+* [https://github.com/payara/Payara/pull/6901[FISH-9502]] Application reference is getting deployed to the untargeted instance during domain restart
+
+
+
+== Component Upgrades
+
+
+* [https://github.com/payara/Payara/pull/6905[FISH-8142]] Upgrade Mojarra to 4.0.7
+
+* [https://github.com/payara/Payara/pull/6855/[FISH-9204]] Upgrade Apache BCEL to 6.10.0
+
+* [https://github.com/payara/Payara/pull/6886[FISH-9449]] Upgrade JSTL API to 3.0.1
+
+* [https://github.com/payara/Payara/pull/6892[FISH-9464]] Upgrade Angus Activation to 1.1.0
+
+* [https://github.com/payara/Payara/pull/6898[FISH-9481]] Bump io.projectreactor:reactor-core from 3.6.8 to 3.6.9
+
+* [https://github.com/payara/Payara/pull/6896[FISH-9483]] Bump org.eclipse:yasson from 3.0.3 to 3.0.4
+
+* [https://github.com/payara/Payara/pull/6911[FISH-9529]] Bump org.apache.felix:org.apache.felix.webconsole from 5.0.2 to 5.0.6
+
+* [https://github.com/payara/Payara/pull/6907[FISH-9537]] Bump org.jetbrains.kotlin:kotlin-stdlib from 2.0.0 to 2.0.20
+
+* [https://github.com/payara/Payara/pull/6917[FISH-9579]] Upgrade Docker JDK to 21.0.4
+
+* [https://github.com/payara/Payara/pull/6917[FISH-9580]] Upgrade Docker JDK to 11.0.24
+
+* [https://github.com/payara/Payara/pull/6917[FISH-9582]] Upgrade Docker JDK to 17.0.12
+
+
+

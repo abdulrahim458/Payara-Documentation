@@ -1,0 +1,58 @@
+[[release-notes]]
+= Release notes
+
+Detailed information about features and fixes in every release.
+
+[[all-release-notes]]
+== All Release Notes
+
+*2026*
+
+* 2026 April - xref:Release Notes/Release Notes 6.37.0.adoc[Payara Enterprise 6.37.0]
+* 2026 March - xref:Release Notes/Release Notes 6.36.0.adoc[Payara Enterprise 6.36.0]
+* 2026 February - xref:Release Notes/Release Notes 6.35.0.adoc[Payara Enterprise 6.35.0]
+* 2026 January - xref:Release Notes/Release Notes 6.34.0.adoc[Payara Enterprise 6.34.0]
+
+
+*2025*
+
+* 2025 December - xref:Release Notes/Release Notes 6.33.0.adoc[Payara Enterprise 6.33.0]
+* 2025 November - xref:Release Notes/Release Notes 6.32.0.adoc[Payara Enterprise 6.32.0]
+* 2025 October - xref:Release Notes/Release Notes 6.31.0.adoc[Payara Enterprise 6.31.0]
+* 2025 September - xref:Release Notes/Release Notes 6.30.0.adoc[Payara Enterprise 6.30.0]
+* 2025 August - xref:Release Notes/Release Notes 6.29.0.adoc[Payara Enterprise 6.29.0]
+* 2025 July - xref:Release Notes/Release Notes 6.28.0.adoc[Payara Enterprise 6.28.0]
+* 2025 June - xref:Release Notes/Release Notes 6.27.0.adoc[Payara Enterprise 6.27.0]
+* 2025 May - xref:Release Notes/Release Notes 6.26.0.adoc[Payara Enterprise 6.26.0]
+* 2025 April - xref:Release Notes/Release Notes 6.25.0.adoc[Payara Enterprise 6.25.0]
+* 2025 March - xref:Release Notes/Release Notes 6.24.0.adoc[Payara Enterprise 6.24.0]
+* 2025 February - xref:Release Notes/Release Notes 6.23.0.adoc[Payara Enterprise 6.23.0]
+* 2025 January - xref:Release Notes/Release Notes 6.22.0.adoc[Payara Enterprise 6.22.0]
+
+*2024*
+
+* 2024 December - xref:Release Notes/Release Notes 6.21.0.adoc[Payara Enterprise 6.21.0]
+* 2024 November - xref:Release Notes/Release Notes 6.20.0.adoc[Payara Enterprise 6.20.0]
+* 2024 October - xref:Release Notes/Release Notes 6.19.0.adoc[Payara Enterprise 6.19.0]
+* 2024 September - xref:Release Notes/Release Notes 6.18.0.adoc[Payara Enterprise 6.18.0]
+* 2024 August - xref:Release Notes/Release Notes 6.17.0.adoc[Payara Enterprise 6.17.0]
+* 2024 July - xref:Release Notes/Release Notes 6.16.0.adoc[Payara Enterprise 6.16.0]
+* 2024 June - xref:Release Notes/Release Notes 6.15.0.adoc[Payara Enterprise 6.15.0]
+* 2024 May - xref:Release Notes/Release Notes 6.14.0.adoc[Payara Enterprise 6.14.0]
+* 2024 April - xref:Release Notes/Release Notes 6.13.0.adoc[Payara Enterprise 6.13.0]
+* 2024 March - xref:Release Notes/Release Notes 6.12.0.adoc[Payara Enterprise 6.12.0]
+* 2024 February - xref:Release Notes/Release Notes 6.11.0.adoc[Payara Enterprise 6.11.0]
+* 2024 January - xref:Release Notes/Release Notes 6.10.0.adoc[Payara Enterprise 6.10.0]
+
+*2023*
+
+* 2023 December - xref:Release Notes/Release Notes 6.9.0.adoc[Payara Enterprise 6.9.0]
+* 2023 November - xref:Release Notes/Release Notes 6.8.0.adoc[Payara Enterprise 6.8.0]
+* 2023 October - xref:Release Notes/Release Notes 6.7.0.adoc[Payara Enterprise 6.7.0]
+* 2023 September - xref:Release Notes/Release Notes 6.6.0.adoc[Payara Enterprise 6.6.0]
+* 2023 August - xref:Release Notes/Release Notes 6.5.0.adoc[Payara Enterprise 6.5.0]
+* 2023 July - xref:Release Notes/Release Notes 6.4.0.adoc[Payara Enterprise 6.4.0]
+* 2023 June - xref:Release Notes/Release Notes 6.3.0.adoc[Payara Enterprise 6.3.0]
+* 2023 May - xref:Release Notes/Release Notes 6.2.0.adoc[Payara Enterprise 6.2.0]
+* 2023 April - xref:Release Notes/Release Notes 6.1.0.adoc[Payara Enterprise 6.1.0]
+* 2023 March - xref:Release Notes/Release Notes 6.0.0.adoc[Payara Enterprise 6.0.0]

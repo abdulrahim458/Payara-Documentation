@@ -1,0 +1,73 @@
+[[set-toml-config-source-configuration]]
+= set-toml-config-source-configuration
+
+Configures the toml configuration source.
+
+[[synopsis]]
+== Synopsis
+
+[source,shell]
+----
+asadmin [asadmin-options] set-toml-config-source-configuration [--help]
+[--path=<path>]
+[--depth=<depth>]
+[--dynamic={true|false}]
+[--enabled={true|false}]
+[--target=<target[default:server]>]
+----
+
+[[description]]
+== Description
+
+The `set-toml-config-source-configuration` provides configuration options to set the properties required by toml config source to read the values from the configured file.
+
+[[options]]
+== Options
+
+asadmin-options::
+  Options for the `asadmin` utility. For information about these options, see the xref:Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+`--help`::
+`-?`::
+  Displays the help text for the subcommand.
+`--path`::
+Absolute path of the TOML file or relative path to the current domain.
+`--depth`::
+Maximum recursion depth for nested tables/arrays.
+`--dynamic`::
+Configure the config source dynamically, which will not require a restart.
+`--enabled`::
+Enables or disables the config source.
+`--target`::
+Specifies the target where the configuration source resides. +
+Valid values are as follows: +
+`server`;;
+Specifies the DAS (default).
+instance-name;;
+Specifies a Payara Server instance.
+cluster-name;;
+Specifies a cluster.
+
+[[examples]]
+== Example
+
+*Example 1 Configuring the toml Config Source.*
+
+This example configures the toml config source.
+
+[source,shell]
+----
+asadmin set-toml-config-source-configuration --path /Users/payara/config.toml --depth 5 --enabled true --dynamic true
+----
+
+[[exit-status]]
+== Exit Status
+
+0::
+  subcommand executed successfully
+1::
+  error in executing the subcommand
+
+*See Also*
+
+* xref:Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:Technical Documentation/Payara Server Documentation/Command Reference/get-toml-config-source-configuration.adoc#get-toml-config-source-configuration[`get-toml-config-source-configuration`]

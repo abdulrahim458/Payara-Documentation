@@ -1,0 +1,25 @@
+= Payara Platform Documentation Repository
+
+Official technical documentation repository of the Payara Platform. All documentation material is written in Asciidoc format.
+
+This documentation repository is structured in conformance to https://docs.antora.org/antora/3.1/[Antora version 3.1 format].
+
+This repository is used to generate all the HTML pages that are published for the following sites:
+
+* link:https://docs.payara.fish/community/[Payara Community Edition Documentation]
+* link:https://docs.payara.fish/enterprise/[Payara Enterprise Edition Documentation]
+
+These sites are generated using the configuration in the link:https://github.com/payara/Payara-Documentation-Config[Payara Documentation's Antora Configuration Repository].
+
+The general layout of this repository is a composition of the following Antora-style components:
+
+`docs`:: Base component that contains the documentation of feature sets that apply to all editions of the Payara Platform.
+`community`:: Specialized component that contains documentation content for Community Edition specifics
+`enterprise`:: Specialized component that contains documentation content for Enterprise Edition specifics
+
+== Branches
+
+All branches of this repository correspond to official releases of:
+
+* Payara Community Edition **6.2022.1** and superior releases.
+* Payara Enterprise Edition **6.0.0** and superior releases.

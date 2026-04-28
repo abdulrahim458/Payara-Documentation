@@ -1,0 +1,51 @@
+= Release notes - Payara Platform Enterprise 6.16.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [FISH-8342] Support YAML format for Hazelcast Configuration file
+
+* [FISH-8855] Auto Name Deployment Group
+
+== Bug Fixes
+
+* [FISH-6472] [Community Contribution - https://github.com/myresd[myresd]] Fix Exception When Datasource Isolationlevel `TRANSACTION_READ_UNCOMMITTED` is Used
+
+* [FISH-8334] [Data Grid] Can't start 2nd instance on the node when Auto Increment Port is disabled.
+
+* [FISH-8399] Symbolic links do not work when allowLinking property is set to true
+
+* [FISH-8437] Fix asadmin --help command fails
+
+* [FISH-8672] [Community Contribution - https://github.com/lprimak[lprimak]] Fix Class Loader Leaks
+
+* [FISH-8728] [Community Contribution - https://github.com/pzygielo[pzygielo]] Allow Host in JDWP Agent Address
+
+* [FISH-8736] Fix Incomplete deployment of the war file with webservices
+
+* [FISH-8794] Fix Data grid members not showing in Admin Console of Payara Server running on Docker
+
+* [FISH-8811] [Community Contribution - https://github.com/lprimak[lprimak]] Properly Clean Up ContainerBackgroundSessionProcessor Threads after Application is Undeployed
+
+* [FISH-8953] Fix Incorrect Unprocessed Change Showing for Hazelcast Encryption Settings
+
+== Component Upgrades
+
+* [FISH-8856] Upgrade Jakarta XML WS API to 4.0.2
+
+* [FISH-8860] Upgrade Kotlin Stdlib to 2.0.0
+
+* [FISH-8861] Upgrade Exousia to 2.1.2
+
+* [FISH-8871] Upgrade Felix SCR to 2.2.12
+
+* [FISH-8872] Upgrade Arquillian Connectors to 3.0
+
+* [FISH-8934] Upgrade Angus Mail to 1.1.0
+
+* [FISH-8954] Upgrade EclipseLink ASM to 9.7

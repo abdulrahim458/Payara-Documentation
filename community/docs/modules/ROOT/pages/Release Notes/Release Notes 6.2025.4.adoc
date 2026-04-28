@@ -1,0 +1,29 @@
+= Release notes - Payara Platform Community 6.2025.4
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/7251[FISH-8950]] Customize Logs that are sent to Remote Syslog Server
+
+* [https://github.com/payara/Payara/pull/7271[FISH-9749]] Add Connection Pool Property To Disable The Verification Of Client Info Properties When Pooling Is False
+
+== Component Upgrades
+
+* [https://github.com/payara/Payara/pull/7272[FISH-8933]] Upgrade Tyrus to 2.1.5
+
+* [https://github.com/payara/Payara/pull/7217[FISH-10640]] Upgrade `com.nimbusds:nimbus-jose-jwt` from 9.47 to 10.0.2
+
+* [https://github.com/payara/Payara/pull/7232[FISH-10685]] Upgrade `org.glassfish.external:management-api` from 3.2.3.payara-p1 to 3.3.0.payara-p1
+
+* [https://github.com/payara/Payara/pull/7249[FISH-10760]] Upgrade `io.projectreactor:reactor-core` from 3.7.3 to 3.7.4
+
+* [https://github.com/payara/Payara/pull/7259[FISH-10788]] Upgrade `net.java.dev.jna:jna` from 5.16.0 to 5.17.0
+
+* [https://github.com/payara/Payara/pull/7264[FISH-10845]] Upgrade `org.jetbrains.kotlin:kotlin-stdlib` from 2.1.10 to 2.1.20
+
+* [https://github.com/payara/Payara/pull/7281[FISH-10899]] Upgrade Jersey to 3.1.10

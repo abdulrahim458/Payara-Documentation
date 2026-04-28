@@ -1,0 +1,114 @@
+= Eclipse MicroProfile Fault Tolerance API
+
+The Payara Platform {page-version} provides MicroProfile Fault Tolerance {mpFaultToleranceVersion}
+
+== Background
+
+The Fault Tolerance API was created to help separate execution logic from execution. The execution can be configured with a number of fault tolerance policies.
+
+{mpFaultToleranceSpecUrl}[The complete specification] can be found on the Eclipse MicroProfile website.
+
+Breaking changes introduced in MicroProfile Fault Tolerance {mpFaultToleranceVersion} are listed in the official specification under {mpFaultToleranceSpecUrl}#_incompatible_changes[Incompatible Changes]
+
+[[additions-to-spec]]
+== Additions to the Fault Tolerance Spec
+
+In addition to the functionality https://github.com/eclipse/microprofile-fault-tolerance/blob/master/spec/src/main/asciidoc/microprofile-fault-tolerance-spec.asciidoc[detailed in the specification document], Payara Platform has implemented additional features like:
+
+[[configurable-executor-services]]
+=== Configurable Executor Services
+
+On Payara Server, the managed and scheduled managed executor pool used to generate threads for the service can be configured via the `set-fault-tolerance-configuration` Asadmin command.
+
+The executor service is used to execute methods annotated with `@Asynchronous`, whereas the scheduled executor service is used by the `CircuitBreaker` and `Timeout` interceptors for their timeout operations (scheduling the circuit breaker to be set to half open, and just timing out respectively).
+
+[[alternative-asynchronous]]
+=== Alternative @Asynchronous Annotations
+
+The Payara Platform configuration property `MP_Fault_Tolerance_Alternative_Asynchronous_Annotations` can be used to specify a comma separated list of fully qualified class names of those annotations that should have the same effect as the `@Asynchronous` defined in the Fault Tolerance specification.
+
+These annotations do not have to be interceptor bindings.
+
+For example:
+
+----
+MP_Fault_Tolerance_Alternative_Asynchronous_Annotations=jakarta.ejb.Asynchronous
+----
+
+[[annotation-priority]]
+=== Annotation Priority
+
+As per the Fault Tolerance specification, interactions between annotations are handled effectively nesting computation in the following way (skipping handling for annotations not present):
+
+. `Asynchronous`
+. `Fallback`
+. `Retry`
+. `CircuitBreaker`
+. `Timeout`
+. `Bulkhead`
+. (calling annotated method; might be wrapped by other interceptors)
+
+As specified the interceptor priority can be changed using the property `mp.fault.tolerance.interceptor.priority` affecting all annotations including alternative ones.
+
+[[fault-tolerance-configuration]]
+== Fault Tolerance Configuration
+
+On Payara Server the Fault Tolerance service can be configured by using the Admin Console or Asadmin CLI commands.
+
+[[using-the-admin-console]]
+=== Using the Admin Console
+
+To configure the Fault Tolerance in the Admin Console, go to Configuration -> [instance-configuration (like `server-config`)] -> MicroProfile -> Fault Tolerance:
+
+image:microprofile/fault-tolerance.png[Set Fault Tolerance Configuration]
+
+[[using-asadmin-commands]]
+=== Using Asadmin Commands
+
+Use the following commands to modify the configuration settings of the MicroProfile Fault Tolerance service:
+
+* xref:Technical Documentation/Payara Server Documentation/Command Reference/set-fault-tolerance-configuration.adoc#set-fault-tolerance-configuration[`set-fault-tolerance-configuration`]
+
+* xref:Technical Documentation/Payara Server Documentation/Command Reference/get-fault-tolerance-configuration.adoc#get-fault-tolerance-configuration[`get-fault-tolerance-configuration`]
+
+[[microprofile-upgrade]]
+== Upgrading from Eclipse MicroProfile 3.x to 4.x
+
+MicroProfile 4.0 brings with it a number of changes to MicroProfile Fault Tolerance. There are two incompatible changes with the previous version of MicroProfile Fault Tolerance.
+
+[[names-and-scopes-changed]]
+=== Metric Names and Scopes Changed
+
+The metrics added automatically by MicroProfile Fault Tolerance have been updated to take advantage of support for metric tags which were added to MicroProfile Metrics in version 2.0. As a result, some information which was previously contained in the metric name is now instead included in tags.
+
+In addition, metrics have moved from the `application` scope to the `base` scope for consistency with other MicroProfile specifications. Note that this means:
+
+* Metrics are now exported under `/metrics` and `/metrics/base`, instead of `/metrics` and `/metrics/application` as in previous versions.
+* In the JSON format, when metrics are retrieved from `/metrics` they appear in the base object rather than the application object.
+* In the OpenMetrics format, the names are prefixed with `base_` instead of `application_`.
+
+There unfortunately is not a workaround for this change, users must simply ensure that any dashboard or application making use of these metrics must be updated to look at the new locations.
+
+[[names-and-scopes-changed-example]]
+==== Example
+
+Old format:
+[source,Shell]
+----
+application:ft.<name>.timeout.callsTimedOut.total
+----
+
+New format:
+[source,Shell]
+----
+base:ft.timeout.calls.total{method="<name>", timedOut="true"}
+----
+
+[[lifecycle-specified]]
+=== Lifecycle of CircuitBreakers and Bulkheads Specified
+
+In previous versions of MicroProfile Fault Tolerance, the lifecycle of `CircuitBreaker` and `Bulkhead`  annotations was not specified. These fault tolerance strategies hold state between invocations, so their lifecycle is important for correct functioning.
+
+`CircuitBreaker` and `Bulkhead` are now treated as singletons identified by the annotated bean class and the guarded method. This means that if a `RequestScoped` bean has a method annotated with `CircuitBreaker` and/or `Bulkhead`, all invocations of that method will share the same `CircuitBreaker` and/or `Bulkhead` state, even though each request will have a different instance of the annotated bean.
+
+There is unfortunately no workaround for this change in behaviour.

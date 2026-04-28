@@ -1,0 +1,62 @@
+[[micro-crac-support]]
+= Payara Micro CRaC Support
+
+CAUTION: This feature is in Tech Preview, and not recommended for use in production environments.
+
+Payara {pageSiteEditionCapitalised} Micro supports creating and restoring from checkpoints using link:https://docs.azul.com/crac/[Azul's Zulu JDK Coordinated Restore at Checkpoint (CRaC)].
+Coordinated Restore at Checkpoint (CRaC) is a JDK project that allows you to start Java programs with a shorter time to first transaction, combined with less time and resources to achieve full code speed.
+CRaC effectively takes a snapshot of the Java process (checkpoint) when it is fully warmed up, then uses that snapshot to launch any number of JVMs from this captured state.
+
+Payara {pageSiteEditionCapitalised} Micro specifically supports creating checkpoints during the boot of an instance.
+Creation and restoration of custom checkpoints during the active runtime of a Payara {pageSiteEditionCapitalised} Micro instance is not currently supported.
+
+[[micro-crac-requirements]]
+== Requirements
+
+* A CRaC JDK: The standard Zulu JDK provided by Azul does not contain the CRaC extension; you have to download those JDKs specifically marked as https://www.azul.com/downloads/?package=jdk-crac#zulu[CRaC JDKs].
+* Linux OS: CRaC only currently works specifically in Linux. Native macOS or Windows are not supported.
+* If using the default 'criu' CRaC engine then you will typically need to run Payara Micro with root permissions due to how the link:https://criu.org/Main_Page[CRIU] backend works. It is highly recommended that you use the 'warp' engine instead to avoid this requirement.
+
+[[micro-crac-usage]]
+== Usage
+
+Checkpointing will only occur when using a CRaC JDK and using the `--warmup` option.
+
+As a minimum, you must also specify the `-XX:CRaCCheckpointTo` JVM option to create a checkpoint.
+It is highly recommended that you use the 'warp' engine by specifying `-XX:CRaCEngine=warp` on both your checkpoint and restore commands.
+
+The `--rootdir` option should also be specified to not unpack Payara {pageSiteEditionCapitalised} Micro to a temporary directory which may be cleared away.
+
+`java -XX:CRaCCheckpointTo=/opt/checkpoint -XX:CRaCEngine=warp payara-micro.jar --warmup --rootdir /opt/micro myapp.war`
+
+TIP: Ensure the directories specified by `-XX:CRaCCheckpointTo` and `--rootdir` are both empty to prevent pollution by any previous runs
+
+Payara {pageSiteEditionCapitalised} Micro will exit once the checkpoint has been created.
+To restore from the generated checkpoint, invoke `java` again like so:
+
+`java -XX:CRaCEngine=warp -XX:CRaCRestoreFrom=/opt/checkpoint`
+
+TIP: You cannot mix-and-match CRaC engines e.g. checkpoint with 'warp' and restore with 'criu'. Ensure you use the same engine for both; the restoring Java process won't "remember" which engine you used to checkpoint.
+
+The full array of CRaC JVM options can be found in the Azul documentation: link:https://docs.azul.com/crac/usage/vm-options[CRaC JDK VM Options]
+
+[[micro-crac-checkpoint-timing]]
+=== Checkpoint Timing
+
+Payara {pageSiteEditionCapitalised} Micro supports creating a checkpoint at one of two places during instance initialisation, controlled by the `-Dfish.payara.crac.checkpointAfterDeployment` system property.
+
+When set to `false` (default), a checkpoint will be created after the initial bootstrap and pre-boot configuration. Application deployment, post-boot, and post-deploy configuration will occur after restoration.
+When set to `true`, a checkpoint will be created after all applications have been deployed and post-boot configuration files have been applied. Post-deploy configuration files will be applied after restoration.
+
+You may only create a checkpoint at one of these timings, not both.
+
+NOTE: While checkpointing after application deployment will speed up the "ready time" of the instance upon restoration,
+the nature and content of any deployed applications may lead to checkpoint or restoration errors if resources not managed by Payara {pageSiteEditionCapitalised} Micro
+lack link:https://docs.azul.com/crac/usage/guidelines#using-crac-in-your-application[CRaC instrumentation].
+
+[[micro-crac-docker]]
+=== Docker
+
+CRaC may be utilised in Docker by creating a custom Docker image. The default Payara {pageSiteEditionCapitalised} Micro image does not utilise a CRaC JDK and so cannot be used.
+
+See xref:Technical Documentation/Payara Micro Documentation/Payara Micro Docker Image.adoc#custom-crac-image[Payara Micro Docker Image] for details.

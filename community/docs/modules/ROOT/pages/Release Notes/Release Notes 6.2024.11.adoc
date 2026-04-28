@@ -1,0 +1,63 @@
+= Release notes - Payara Platform Community 6.2024.11
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/6784[FISH-8855]] Auto Name Deployment Group
+
+* [https://github.com/payara/Payara/pull/6988[FISH-9198]] Support for TOML MicroProfile Config Sources
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/7036[FISH-8103]] Fix asadmin undeploy command to work as expected
+
+* [https://github.com/payara/Payara/pull/6970[FISH-8522]] Fix MicroProfile /metrics endpoint contains multiple HELP lines for the same metric name
+
+* [https://github.com/payara/Payara/pull/6956[FISH-9748]] [Community Contribution - https://github.com/lprimak[lprimak]] Fix High Availability Session Race Condition
+
+* [https://github.com/payara/Payara/pull/6977[FISH-9803]] [Community Contribution - https://github.com/adLuk[adLuk]] NullPointerExceptiPrevent endless loop whan FacesServlet is mapped to /
+
+
+== Component Upgrades
+
+
+* [https://github.com/payara/Notifiers/pull/73[FISH-7165]] Upgrade JXMPP in XMPP Notifier to 1.0.3
+
+* [https://github.com/payara/Notifiers/pull/73[FISH-7166]] Upgrade Smack XMPP Notifier to 4.4.8
+
+* [[FISH-7167]] Upgrade MiniDNS in XMPP Notifier to 1.0.5
+
+* [https://github.com/payara/Payara/pull/7029[FISH-9157]] Upgrade Jakarta Mail API to 2.1.3
+
+* [https://github.com/payara/Payara/pull/7029[FISH-9777]] Payara: Bump org.eclipse.angus:angus-mail from 1.1.0 to 2.0.0
+
+* [https://github.com/payara/Payara/pull/6989[FISH-9820]] Payara: Bump com.nimbusds:nimbus-jose-jwt from 9.40 to 9.41.2
+
+* [https://github.com/payara/Payara/pull/6994[FISH-9877]] Upgrade JBoss Logging to 3.6.1.Final
+
+* [https://github.com/payara/Payara/pull/6996[FISH-9879]] Bump org.apache.felix:org.apache.felix.webconsole from 5.0.6 to 5.0.8
+
+* [https://github.com/payara/Payara/pull/7004[FISH-9951]] Bump asm.version from 9.7 to 9.7.1
+
+* [https://github.com/payara/Payara/pull/7009[FISH-9955]] Bump com.fasterxml.jackson:jackson-bom from 2.17.2 to 2.18.0
+
+* [https://github.com/payara/Payara/pull/7019[FISH-9978]] Payara: Bump org.jetbrains.kotlin:kotlin-stdlib from 2.0.20 to 2.0.21
+
+* [https://github.com/payara/Payara/pull/7047[FISH-9992]] Update Mojarra to 4.0.9
+
+* [https://github.com/payara/Payara/pull/7039[FISH-10016]] Upgrade SNMP4J to 3.8.2
+
+* [https://github.com/payara/Payara/pull/7051[FISH-10071]] Payara-Enterprise: Bump com.fasterxml.jackson:jackson-bom from 2.18.0 to 2.18.1
+
+* [https://github.com/payara/Payara/pull/7045[FISH-10086]] Upgrade Docker JDK to 21.0.5
+
+* [https://github.com/payara/Payara/pull/7045[FISH-10087]] Upgrade Docker JDK to 17.0.13
+
+* [https://github.com/payara/Payara/pull/7045[FISH-10088]] Upgrade Docker JDK to 11.0.25

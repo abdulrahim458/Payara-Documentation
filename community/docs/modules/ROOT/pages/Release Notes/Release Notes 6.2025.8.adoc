@@ -1,0 +1,41 @@
+= Release notes - Payara Platform Community 6.2025.8
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Security Fixes
+
+* [https://github.com/payara/Payara/pull/7528[FISH-11415]] Fix Request Smuggling in Grizzly due to Improper handling of the `chunked` transfer-coding
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/7529[FISH-11465]] Fix Missing Properties That Causes Existing Realms To Only Display Name and No Properties
+
+* [https://github.com/payara/Payara/pull/7526[FISH-11618]] [Community Contribution - https://github.com/lprimak[Lprimak]] Fix NPE When Using Database Transaction with `EntityListener` using CDI in a `@Asynchronous` Process
+
+== Component Upgrades
+
+* [https://github.com/payara/Payara/pull/7527[FISH-9460]]  Upgrade woodstox-core to 7.1.1
+
+* [https://github.com/payara/Payara/pull/7527[FISH-10142]] Upgrade `Metro` to 4.0.4
+
+* [https://github.com/payara/Payara/pull/7508[FISH-10878]] Upgrade `Hazelcast` to 5.3.8 and Backport CP Fixes
+
+* [https://github.com/payara/Payara/pull/7536[FISH-11630]] Upgrade `Docker JDK` to 11.0.27
+
+* [https://github.com/payara/Payara/pull/7536[FISH-11632]] Upgrade `Docker JDK` to 17.0.15
+
+* [https://github.com/payara/Payara/pull/7536[FISH-11633]] Upgrade `Docker JDK` to 21.0.7
+
+* [https://github.com/payara/Payara/pull/7547[FISH-11686]] Upgrade `io.projectreactor:reactor-core` from 3.7.7 to 3.7.8
+
+* [https://github.com/payara/Payara/pull/7553[FISH-11701]] Upgrade `com.nimbusds:nimbus-jose-jwt` from 10.3.1 to 10.4
+
+* [https://github.com/payara/Payara/pull/7552[FISH-11702]] Upgrade `com.fasterxml.jackson:jackson-bom` from 2.19.1 to 2.19.2
+
+* [https://github.com/payara/Payara/pull/7557[FISH-11716]] Upgrade `commons-io:commons-io` from 2.19.0 to 2.20.0
+
+* [https://github.com/payara/Payara/pull/7560[FISH-11724]] Upgrade `commons-codec:commons-codec` from 1.18.0 to 1.19.0

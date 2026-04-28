@@ -1,0 +1,23 @@
+[[documentation-overview]]
+= Documentation Overview
+
+This page provides some general information about the Payara Platform Community Edition.
+
+[[release-strategy]]
+== Release Strategy
+
+The Payara Platform Community Edition project is released frequently (every 4 to 8 weeks on average). Each release incorporates new features, fixes, and enhancements from multiple sources.
+
+[[versioning-scheme]]
+== Versioning Scheme
+
+The format for a Payara Server Community version is **Major Version Number . Year . Release Number**
+
+Major Version Number::
+The Major Version of the Payara Platform product. There is currently no set cadence for this version change.
+
+**Year**::
+The year that release was made available. This will increment annually
+
+Release Number::
+The release number of the current year. The release number will reset to `1` when the year number is incremented.

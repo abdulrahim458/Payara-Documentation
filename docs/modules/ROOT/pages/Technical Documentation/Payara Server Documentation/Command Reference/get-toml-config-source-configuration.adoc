@@ -1,0 +1,62 @@
+[[get-toml-config-source-configuration]]
+= get-toml-config-source-configuration
+
+Gets the settings of the TOML configuration source.
+
+[[synopsis]]
+== Synopsis
+
+[source,shell]
+----
+asadmin [asadmin-options] get-toml-config-source-configuration [--help] [--target=server]
+----
+
+[[description]]
+== Description
+
+The `get-toml-config-source-configuration` retrieves the current configuration for the TOML Config Source
+
+[[options]]
+== Options
+
+asadmin-options::
+  Options for the `asadmin` utility. For information about these options, see the xref:Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+`--help`::
+`-?`::
+  Displays the help text for the subcommand.
+`--target`::
+Specifies the target where the configuration source resides. +
+Valid values are as follows: +
+`server`;;
+Specifies the DAS (default).
+instance-name;;
+Specifies a Payara Server instance.
+cluster-name;;
+Specifies a cluster.
+
+[[examples]]
+== Example
+
+*Example 1 Retrieving the toml Config Source configurations.*
+
+This example gets the configuration of the toml config source.
+
+[source,shell]
+----
+asadmin get-toml-config-source-configuration
+Enabled  Path                               Depth
+true     /Users/payara/workspace/test.TOML  5
+----
+
+[[exit-status]]
+== Exit Status
+
+0::
+  subcommand executed successfully
+1::
+  error in executing the subcommand
+
+*See Also*
+
+* xref:Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:Technical Documentation/Payara Server Documentation/Command Reference/set-toml-config-source-configuration.adoc#set-toml-config-source-configuration[`set-toml-config-source-configuration`]

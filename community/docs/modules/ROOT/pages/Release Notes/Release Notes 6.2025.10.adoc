@@ -1,0 +1,66 @@
+= Release notes - Payara Platform Community 6.2025.10
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/7654[FISH-12132]] Add `warlibs` Support to the `deploy-remote-archive` Command
+
+* [https://github.com/payara/Payara/pull/7662[FISH-12205]] [Community Contribution - https://github.com/lprimak[LPrimaK]] Add Cache Time To Live to Application Deployment Properties
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/7631[FISH-9654]] Fixed saving batch settings for Payara Server instances creating duplicate domain.xml lines that prevented startup
+
+* [https://github.com/payara/Payara/pull/7634[FISH-11174]] Fixed Admin interface slow response when managing degraded server instances
+
+* [https://github.com/payara/Payara/pull/7590[FISH-11289]] Fixed deserialization breaking with `FAIL_ON_TRAILING_TOKENS` in Payara 5.69+
+
+* [https://github.com/payara/Payara/pull/7627[FISH-11590]] Fixed JNDI lookups failing for local JavaMail sessions
+
+* [https://github.com/payara/Payara/pull/7670[FISH-11967]] Fixed Phone Home generating duplicate IDs
+
+== Component Upgrades
+
+* [https://github.com/payara/Payara/pull/7590[FISH-11827]] Upgrade `jersey.version` from `3.1.10.payara-p1` to 3.1.11
+
+* [https://github.com/payara/Payara/pull/7621[FISH-11947]] Upgrade `EclipseLink` to 4.0.7
+
+* [https://github.com/payara/Payara/pull/7635[FISH-11959]] Upgrade `jakarta.mail:jakarta.mail-api` from 2.1.3 to 2.1.5
+
+* [https://github.com/payara/Payara/pull/7620[FISH-11969]] Upgrade `org.apache.felix:org.apache.felix.webconsole` from 5.0.12 to 5.0.14
+
+* [https://github.com/payara/Payara/pull/7625[FISH-12038]] Upgrade `com.fasterxml.jackson:jackson-bom` from 2.19.2 to 2.20.0
+
+* [https://github.com/payara/Payara/pull/7629[FISH-12047]] Upgrade `org.yaml:snakeyaml` from 2.4 to 2.5
+
+* [https://github.com/payara/Payara/pull/7633[FISH-12060]] Upgrade `org.apache.felix:org.apache.felix.scr` from 2.2.12 to 2.2.14
+
+* [https://github.com/payara/Payara/pull/7632[FISH-12062]] Upgrade `com.nimbusds:nimbus-jose-jwt` from 10.4.2 to 10.5
+
+* [https://github.com/payara/Payara/pull/7639[FISH-12086]] Upgrade `io.projectreactor:reactor-core` from 3.7.9 to 3.7.11
+
+* [https://github.com/payara/Payara/pull/7642[FISH-12097]] Upgrade `jline.version` from 3.30.5 to 3.30.6
+
+* [https://github.com/payara/Payara/pull/7641[FISH-12098]] Upgrade `org.jetbrains.kotlin:kotlin-stdlib` from 2.2.10 to 2.2.20
+
+* [https://github.com/payara/Payara/pull/7643[FISH-12101]] Upgrade `jakarta.activation:jakarta.activation-api` from 2.1.3 to 2.1.4
+
+* [https://github.com/payara/Payara/pull/7647[FISH-12103]] Upgrade `jakarta.xml.bind:jakarta.xml.bind-api` from 4.0.2 to 4.0.4
+
+* [https://github.com/payara/Payara/pull/7661[FISH-12144]] Upgrade `net.java.dev.jna:jna` from 5.17.0 to 5.18.0
+
+* [https://github.com/payara/Payara/pull/7659[FISH-12146]] Upgrade `org.apache.felix:org.apache.felix.webconsole` from 5.0.14 to 5.0.18
+
+* [https://github.com/payara/Payara/pull/7658[FISH-12147]] Upgrade `jaxb-impl.version` from 4.0.5 to 4.0.6
+
+* [https://github.com/payara/Payara/pull/7665[FISH-12172]] Upgrade `org.eclipse.angus:angus-mail` from 2.0.4 to 2.0.5
+
+* [https://github.com/payara/Payara/pull/7664[FISH-12173]] Upgrade `com.fasterxml:classmate` from 1.7.0 to 1.7.1
+
+* [https://github.com/payara/Payara/pull/7674[FISH-12196]] Upgrade `net.java.dev.jna:jna` from 5.18.0 to 5.18.1

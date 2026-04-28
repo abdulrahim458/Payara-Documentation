@@ -1,0 +1,51 @@
+= Release notes - Payara Platform Community 6.2024.7
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [https://github.com/payara/Payara/pull/6796[FISH-8342]] Support YAML format for Hazelcast Configuration file
+
+* [https://github.com/payara/Payara/pull/6784[FISH-8855]] Add Auto Name option to Admin UI while creating a new deployment group
+
+== Bug Fixes
+
+* [https://github.com/payara/Payara/pull/6544[FISH-6472]] [Community Contribution - https://github.com/myresd[myresd]] Fix Exception When Datasource Isolationlevel `TRANSACTION_READ_UNCOMMITTED` is Used
+
+* [https://github.com/payara/Payara/pull/6754[FISH-8334]] [Data Grid] Can't start 2nd instance on the node when Auto Increment Port is disabled.
+
+* [https://github.com/payara/Payara/pull/6775[FISH-8399]] Symbolic links do not work when allowLinking property is set to true
+
+* [https://github.com/payara/Payara/pull/6753[FISH-8437]] Fix asadmin --help command failure
+
+* [https://github.com/payara/Payara/pull/6677[FISH-8672]] [Community Contribution - https://github.com/lprimak[lprimak]] Fix Class Loader Leaks
+
+* [https://github.com/payara/Payara/pull/6724[FISH-8728]] [Community Contribution - https://github.com/pzygielo[pzygielo]] Allow Host in JDWP Agent Address
+
+* [https://github.com/payara/Payara/pull/6786[FISH-8736]] Fix Incomplete deployment of the war file with webservices
+
+* [https://github.com/payara/Payara/pull/6804[FISH-8794]] Fix Data grid members not showing in Admin Console of Payara Server running on Docker
+
+* [https://github.com/payara/Payara/pull/6749[FISH-8811]] [Community Contribution - https://github.com/lprimak[lprimak]] Properly Clean Up ContainerBackgroundSessionProcessor Threads after Application is Undeployed
+
+* [https://github.com/payara/Payara/pull/6802[FISH-8953]] Fix Incorrect Unprocessed Change Showing for Hazelcast Encryption Settings
+
+== Component Upgrades
+
+* [https://github.com/payara/Payara/pull/6755[FISH-8856]] Upgrade Jakarta XML WS API to 4.0.2
+
+* [https://github.com/payara/Payara/pull/6762[FISH-8860]] Upgrade Kotlin Stdlib to 2.0.0
+
+* [https://github.com/payara/Payara/pull/6760[FISH-8861]] Upgrade Exousia to 2.1.2
+
+* [https://github.com/payara/Payara/pull/6768[FISH-8871]] Upgrade Felix SCR to 2.2.12
+
+* [https://github.com/payara/Payara/pull/6801[FISH-8872]] Upgrade Arquillian Connectors to 3.0
+
+* [https://github.com/payara/Payara/pull/6788[FISH-8934]] Upgrade Angus Mail to 1.1.0
+
+* [https://github.com/payara/Payara/pull/6803[FISH-8954]] Upgrade EclipseLink ASM to 9.7
