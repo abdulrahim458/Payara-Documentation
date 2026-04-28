@@ -16,6 +16,8 @@ The Enterprise Edition downloads can be found in the _Payara Enterprise_ reposit
 
 Payara Server began life in 2014, derived from GlassFish 4.1. Since then, Payara Server has been refined with bug fixes, enhanced with new features, and has grown a strong community following. The documentation here will be updated with all the significant changes made with each new release.
 
+Since December 2025, https://www.azul.com/company/payara-acquisition/[Payara is part of the Azul products^]: **_The combination of Azul and Payara addresses some of the most pressing challenges enterprises face today: accelerating application modernization, achieving cloud-native agility, and reducing dependencies on proprietary platforms_**.
+
 [[tech-documentation-structure]]
 == Technical Documentation Structure
 
