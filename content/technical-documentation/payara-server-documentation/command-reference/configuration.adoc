@@ -30,4 +30,4 @@ To list the structure of all or part of the configuration, use the `list` subcom
 * xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`],
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/dotted-names.adoc#dotted-names[`dotted-names`]
-* xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-tasks[Configuration Tasks] in the Payara Server General Administration section
+* xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-tasks[Configuration Tasks] in the Payara Server General Administration section

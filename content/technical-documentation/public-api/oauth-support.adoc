@@ -127,7 +127,7 @@ The client secret can be input directly, or for added security it can be aliased
 
 * xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases]
 * xref:technical-documentation/payara-server-documentation/general-administration/configuration-variables-reference.adoc[Environment Variables / System Properties]
-* xref:technical-documentation/microprofile/config/overview.adoc[Config API]
+* xref:technical-documentation/microprofile/config/index.adoc[Config API]
 
 [[see-also]]
 == See Also

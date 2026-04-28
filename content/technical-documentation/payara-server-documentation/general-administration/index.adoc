@@ -11,7 +11,7 @@ Your key tasks include configuring resources and services, managing Payara Serve
 
 After installation, you might need to perform some immediate configuration tasks to make your installation function as intended.
 
-If configuration defaults have been accepted, some features are enabled and some not. For an overview of initial configuration tasks for Payara Server services and resources, see xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#initial-configuration-tasks[Initial Configuration Tasks].
+If configuration defaults have been accepted, some features are enabled and some not. For an overview of initial configuration tasks for Payara Server services and resources, see xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#initial-configuration-tasks[Initial Configuration Tasks].
 
 In addition, you might want to reset default passwords, change names or locations of files, and so on.
 

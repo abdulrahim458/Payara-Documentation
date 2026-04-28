@@ -45,13 +45,13 @@ If the component is already deployed or already exists, you can forcefully redep
 
 You can see the enabled or disabled status of an application or module by using the xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc[`show-component-status`] subcommand.
 
-For information about how the application or module name is derived, see xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#naming-standards[Naming Standards].
+For information about how the application or module name is derived, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#naming-standards[Naming Standards].
 
 Use the `--altdd` or `--runtimealtdd` options of the `deploy` (and `redeploy`) subcommand to deploy an application or module using a top-level alternate deployment descriptor. The `--altdd` option specifies a top-level alternate Jakarta EE standard deployment descriptor.
 
 The `--runtimealtdd` option specifies a top-level alternate Payara Server runtime deployment descriptor. See xref:example-using-alt-dd[this example] for more information.
 
-For more information about deployment descriptors associated with Payara Server, see xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#deployment-descriptors-and-annotations[Deployment Descriptors and Annotations].
+For more information about deployment descriptors associated with Payara Server, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#deployment-descriptors-and-annotations[Deployment Descriptors and Annotations].
 
 You can also specify the deployment order of an application by using the `--deploymentorder` option of the `deploy` (and `redeploy`) subcommand.
 This is useful for applications that must be loaded in a certain order at server startup. Applications with lower deployment order numbers are loaded first. See xref:example-deployment-order[this example] for more information.
@@ -891,7 +891,7 @@ If you then create additional virtual servers and want to assign existing web ap
 +
 This option is not supported and  ignored in a clustered environment. See xref:#example-retain-http-session[this example].
 +
-For information about HTTP session persistence, see the xref:technical-documentation/payara-server-documentation/high-availability/overview.adoc[Payara Server High Availability section].
+For information about HTTP session persistence, see the xref:technical-documentation/payara-server-documentation/high-availability/index.adoc[Payara Server High Availability section].
 
 * *JSP Precompilation*. You can precompile JSP files during deployment by checking the appropriate box in the Administration Console, or by using the `--precompilejsp` option of the `deploy` subcommand.
 +
@@ -1098,7 +1098,7 @@ For more detailed information about creating application clients, see
 
 If the __context-root__ or __module-id__ is not specified during deployment, the name of the EAR or JAR file without the `.ear` or `.jar` extension is used. For an application, the relative path to the application client JAR file is also included. If the application or module is not in EAR or JAR file format, a __context-root__ or __module-id__ is generated.
 
-For details about naming, see xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#naming-standards[Naming Standards].
+For details about naming, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#naming-standards[Naming Standards].
 
 *Before You Begin* +
 This task applies if you want to use the `appclient` script to run the application client on a system other than where the server runs.

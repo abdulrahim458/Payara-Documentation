@@ -80,7 +80,7 @@ The property values should be in the format referenced here: xref:technical-docu
 |180
 |Reads configuration properties from various Cloud provider secret stores.
 +
-You can find out more about our supported cloud config sources here: xref:technical-documentation/microprofile/config/cloud/overview.adoc[Cloud Config Sources]
+You can find out more about our supported cloud config sources here: xref:technical-documentation/microprofile/config/cloud/index.adoc[Cloud Config Sources]
 
 |`jdbc`
 |190

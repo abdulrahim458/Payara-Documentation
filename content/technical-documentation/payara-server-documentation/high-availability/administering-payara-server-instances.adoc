@@ -775,7 +775,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 *Next Steps*
 
-After starting an instance, you can deploy applications to the instance. For more information, see the xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc[Payara Server Application Deployment section].
+After starting an instance, you can deploy applications to the instance. For more information, see the xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc[Payara Server Application Deployment section].
 
 [[to-stop-an-individual-instance-locally]]
 === To Stop an Individual Instance Locally
@@ -1226,7 +1226,7 @@ Configuration data for a Payara Server instance is stored as follows:
 
 The configuration data in these locations must be synchronized. The cache is synchronized in the following circumstances:
 
-* Whenever an `asadmin` subcommand is run. For more information, see xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#impact-of-configuration-changes[Impact of Configuration Changes]" in Payara Server General Administration section.
+* Whenever an `asadmin` subcommand is run. For more information, see xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#impact-of-configuration-changes[Impact of Configuration Changes]" in Payara Server General Administration section.
 * When a user uses the administration tools to start or restart an instance.
 
 [[default-synchronization-for-files-and-directories]]

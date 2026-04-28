@@ -17,7 +17,7 @@ This is the first version of the connector that is based on https://docs.aws.ama
 [[v1-usage]]
 === Usage
 
-The `amazon-sqs-rar-0.8.0.rar` JCA adapter has to be deployed as shown in the xref:/technical-documentation/ecosystem/connector-suites/cloud-connectors/overview.adoc#Installing-a-connector[Installing a connector section] of the Cloud Connectors overview.
+The `amazon-sqs-rar-0.8.0.rar` JCA adapter has to be deployed as shown in the xref:/technical-documentation/ecosystem/connector-suites/cloud-connectors/index.adoc#Installing-a-connector[Installing a connector section] of the Cloud Connectors overview.
 
 Additionally, to use the connector API add the following Maven dependencies to your application's project:
 
@@ -52,7 +52,7 @@ IMPORTANT: If you have selected to use SQS Connector 2.1.0, replace all occurunc
 [[v2-usage]]
 === Usage
 
-The `amazon-sqs-rar-2.1.0.rar` JCA adapter can be downloaded from https://mvnrepository.com/artifact/fish.payara.cloud.connectors.amazonsqs/amazon-sqs-rar/2.1.0[Maven Central], and has to be deployed as shown in the xref:/technical-documentation/ecosystem/connector-suites/cloud-connectors/overview.adoc#Installing-a-connector[Installing a connector section] of the Cloud Connectors overview.
+The `amazon-sqs-rar-2.1.0.rar` JCA adapter can be downloaded from https://mvnrepository.com/artifact/fish.payara.cloud.connectors.amazonsqs/amazon-sqs-rar/2.1.0[Maven Central], and has to be deployed as shown in the xref:/technical-documentation/ecosystem/connector-suites/cloud-connectors/index.adoc#Installing-a-connector[Installing a connector section] of the Cloud Connectors overview.
 
 Additionally, to use the connector API add the following Maven dependencies to your application's project:
 

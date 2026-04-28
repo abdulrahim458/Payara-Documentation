@@ -315,7 +315,7 @@ public class ObserverBean{
 }
 ----
 
-IMPORTANT: For an application to use the `Inbound` annotation and `EventbusMessage` class, it will have to define the xref:/technical-documentation/public-api/overview.adoc[Payara Public API] as a project dependency.
+IMPORTANT: For an application to use the `Inbound` annotation and `EventbusMessage` class, it will have to define the xref:/technical-documentation/public-api/index.adoc[Payara Public API] as a project dependency.
 
 [[monitoring-notification-configuration]]
 == Monitoring Service Notifiers Configuration

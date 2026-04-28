@@ -43,7 +43,7 @@ This subcommand is supported in remote mode only.
 
 *component_name*:
   name of the component to be enabled. +
-  The name can include an optional version identifier, which follows the name and is separated from the name by a colon (`:`). The version identifier must begin with a letter or number. It can contain alphanumeric characters plus underscore (`_`), dash (`-`), and period (`.`) characters. For more information about module and application versions, see "xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#module-and-application-versions[Module and Application Versions]" in Payara Server Application Deployment section. +
+  The name can include an optional version identifier, which follows the name and is separated from the name by a colon (`:`). The version identifier must begin with a letter or number. It can contain alphanumeric characters plus underscore (`_`), dash (`-`), and period (`.`) characters. For more information about module and application versions, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#module-and-application-versions[Module and Application Versions]" in Payara Server Application Deployment section. +
   At most one version of a module or application can be enabled on a server instance. All other versions are disabled. Enabling one version automatically disables all others.
 
 [[examples]]
@@ -73,6 +73,6 @@ Command enable executed successfully
 * xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`],
 * xref:technical-documentation/payara-server-documentation/command-reference/disable.adoc#disable[`disable`],
 * xref:technical-documentation/payara-server-documentation/command-reference/undeploy.adoc#undeploy[`undeploy`]
-* xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc[Payara Server Application Deployment section]
+* xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc[Payara Server Application Deployment section]
 
 

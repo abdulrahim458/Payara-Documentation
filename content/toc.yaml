@@ -3,9 +3,10 @@ title: Payara Enterprise Documentation
 sections:
   - title: General Info
     sections:
-      - file: general-info/overview
+      - file: general-info/index
       - file: general-info/supported-platforms
       - file: general-info/jakarta-ee-8-support
+
   - title: Technical Documentation
     sections:
       - title: Payara Server Documentation

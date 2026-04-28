@@ -322,7 +322,7 @@ To update a destination, use the `set` subcommand for the admin object resource.
 . Create a JMS resource by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-jms-resource.adoc[`create-jms-resource`] command. +
 Information about the properties for the subcommand is included in this help page.
 . If needed, restart the server. +
-Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 [[example-17-5-creating-a-jms-connection-factory]]
 ==== *Example 17-5 Creating a JMS Connection Factory*
@@ -425,7 +425,7 @@ Because a physical destination is actually a Message Queue object rather than a 
 
 . Ensure that the server is running. Remote `asadmin` subcommands require a running server.
 . Create a JMS physical destination by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-jmsdest.adoc[`create-jmsdest`] subcommand. Information about the properties for the subcommand is included in this help page.
-. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 
 [[example-17-10-creating-a-jms-physical-destination]]
@@ -465,7 +465,7 @@ Use the `flush-jmsdest` subcommand in remote `asadmin` mode to purge the message
 
 . Ensure that the server is running. Remote `asadmin` subcommands require a running server.
 . Purge messages from the JMS physical destination by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/flush-jmsdest.adoc[`flush-jmsdest`] subcommand.
-. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see  xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see  xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 ==== *Example 17-12 Flushing Messages From a JMS Physical Destination*
 [source,shell]

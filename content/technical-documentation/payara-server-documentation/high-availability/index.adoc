@@ -41,7 +41,7 @@ Both HTTP sessions and stateful session beans (SFSBs) have session state data.
 
 Preserving session state across server failures can be important to end users. If the Payara Server instance hosting the user session experiences a failure, the session state can be recovered, and the session can continue without loss of information. High availability is implemented in Payara Server by means of in-memory session replication on Payara Server instances running in a cluster.
 
-For more information about in-memory session replication in Payara Server, see xref:technical-documentation/payara-server-documentation/high-availability/overview.adoc#how-payara-server-provides-high-availability[How Payara Server Provides High Availability].
+For more information about in-memory session replication in Payara Server, see xref:technical-documentation/payara-server-documentation/high-availability/index.adoc#how-payara-server-provides-high-availability[How Payara Server Provides High Availability].
 For detailed instructions on configuring high availability session persistence,
 see xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#configuring-high-availability-session-persistence-and-failover[Configuring High Availability Session Persistence and Failover].
 
@@ -80,8 +80,8 @@ For more information on RMI-IIOP load balancing and failover, see xref:technical
 
 Payara Server provides high availability through the following subcomponents and features:
 
-* xref:technical-documentation/payara-server-documentation/high-availability/overview.adoc#storage-for-session-state-data[Storage for Session State Data]
-* xref:technical-documentation/payara-server-documentation/high-availability/overview.adoc#highly-available-clusters[Highly Available Clusters]
+* xref:technical-documentation/payara-server-documentation/high-availability/index.adoc#storage-for-session-state-data[Storage for Session State Data]
+* xref:technical-documentation/payara-server-documentation/high-availability/index.adoc#highly-available-clusters[Highly Available Clusters]
 
 [[storage-for-session-state-data]]
 === Storage for Session State Data
@@ -193,7 +193,7 @@ To avoid issues in restoring a persistent data store, consider using a RAID or S
 [[see-also]]
 == See Also
 
-For information about planning a high-availability deployment, including assessing hardware requirements, planning network configuration, and selecting a topology, see the xref:technical-documentation/payara-server-documentation/deployment-planning/overview.adoc[Payara Server Deployment Planning section]. This manual also provides a high-level introduction to concepts such as:
+For information about planning a high-availability deployment, including assessing hardware requirements, planning network configuration, and selecting a topology, see the xref:technical-documentation/payara-server-documentation/deployment-planning/index.adoc[Payara Server Deployment Planning section]. This manual also provides a high-level introduction to concepts such as:
 
 * Payara Server components such as node agents, domains, clusters and deployment groups
 * IIOP load balancing in a cluster or deployment group

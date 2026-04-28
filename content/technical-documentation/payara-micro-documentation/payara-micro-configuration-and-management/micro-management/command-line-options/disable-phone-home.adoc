@@ -15,4 +15,4 @@ java -jar payara-micro.jar --disablephonehome
 
 == See Also
 
-* xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#phone-home[Phone Home in Payara Server]
+* xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#phone-home[Phone Home in Payara Server]

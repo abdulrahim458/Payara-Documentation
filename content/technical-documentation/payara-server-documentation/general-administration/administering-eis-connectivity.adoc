@@ -59,7 +59,7 @@ Use the `create-connector-connection-pool` subcommand in remote mode to create a
 
 Multiple connector resources can specify a single connection pool.
 
-Creating a connector connection pool is a dynamic event and does not require server restart. However, there are some parameters that do require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
+Creating a connector connection pool is a dynamic event and does not require server restart. However, there are some parameters that do require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
 
 Before creating the connector connection pool, the connector must be installed.
 
@@ -67,7 +67,7 @@ Before creating the connector connection pool, the connector must be installed.
 
 . Create the connector connection pool by using the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-connection-pool.adoc[`create-connector-connection-pool`] subcommand. Information about properties for the subcommand is included in this help page.
 
-. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 . You can verify that a connection pool is usable by using the `ping-connection-pool` subcommand. For instructions, see xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#to-contact-ping-a-connection-pool[To Contact (Ping) a Connection Pool].
 
@@ -131,7 +131,7 @@ asadmin> set domain.resources.connector-connection-pool
 .conectionpoolname.validate-atmost-once-period-in-seconds=3
 ----
 
-. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 [[to-delete-a-connector-connection-pool]]
 === To Delete a Connector Connection Pool
@@ -163,7 +163,7 @@ A connector resource provides an application or module with the means of connect
 
 Use the `create-connector-resource` subcommand in remote mode to register a new connector resource with its JNDI name.
 
-Creating a connector resource is a dynamic event and does not require server restart. However, there are some parameters that do require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
+Creating a connector resource is a dynamic event and does not require server restart. However, there are some parameters that do require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
 
 Before creating a connector resource, you must first create a connector connection pool. For instructions, see xref:technical-documentation/payara-server-documentation/general-administration/administering-eis-connectivity.adoc#to-create-a-connector-connection-pool[To Create a Connector Connection Pool].
 
@@ -171,7 +171,7 @@ Before creating a connector resource, you must first create a connector connecti
 
 . Create the connector resource by using the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-resource.adoc[`create-connector-resource`] subcommand. Information about properties for the subcommand is included in this help page.
 
-. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 .Example 12-4 Creating a Connector Resource
 [source,shell]
@@ -220,7 +220,7 @@ asadmin> get domain.resources.connector-resource.jms/qConnFactory
 asadmin> set domain.resources.connector-resource.jms/qConnFactory.enabled=true
 ----
 
-. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 [[to-delete-a-connector-resource]]
 === To Delete a Connector Resource
@@ -343,7 +343,7 @@ For this subcommand to succeed, you must have first created a connector connecti
 
 . Create a connector security map by using the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-security-map.adoc[`create-connector-security-map`] subcommand. Information about the options for the subcommand is included in this help page.
 
-. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If
+. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If
 your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 .Example 12-10 Creating a Connector Security Map
@@ -406,7 +406,7 @@ Remote subcommands require a running server.
 . Modify a security map for a specific connector connection pool by using the xref:technical-documentation/payara-server-documentation/command-reference/update-connector-security-map.adoc[`update-connector-security-map`] subcommand.
 
 . If needed, restart the server.
-Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see  xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see  xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 .Example 12-14 Updating a Connector Security Map
 [source,shell]
@@ -454,7 +454,7 @@ Before creating a connector work security map, you must first create a connector
 
 . Create the connector work security map by using the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-work-security-map.adoc[`create-connector-work-security-map`] subcommand. Information about properties for the subcommand is included in this help page.
 
-. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 .Example 12-16 Creating Connector Work Security Maps
 [source,shell]
@@ -546,7 +546,7 @@ The resource adapter must be deployed before running this subcommand (`jmsrar.ra
 
 . Create an administered object by using the xref:technical-documentation/payara-server-documentation/command-reference/create-admin-object.adoc[`create-admin-object`] subcommand. Information about properties for the subcommand is included in this help page.
 
-. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If
+. If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If
 your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 .Example 12-20 Creating an Administered Object
@@ -597,7 +597,7 @@ asadmin> get domain.resources.admin-object-resource.jms/samplequeue.*
 asadmin> set domain.resources.admin-object-resource.jms/samplequeue.enabled=false
 ----
 
-. If needed, restart the server. Some properties require server restart. See see xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If
+. If needed, restart the server. Some properties require server restart. See see xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If
 your server needs to be restarted, see see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 [[to-delete-an-administered-object]]

@@ -47,7 +47,7 @@ The client container enables the application clients to use the Java Naming and 
 [[application-client-annotation]]
 === Application Client Annotation
 
-Annotation is supported for the main class and the optional callback handler class in application clients. For more information, see "xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#deployment-descriptors-and-annotations[Deployment Descriptors and Annotations]" in the Payara Server Application Deployment section.
+Annotation is supported for the main class and the optional callback handler class in application clients. For more information, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#deployment-descriptors-and-annotations[Deployment Descriptors and Annotations]" in the Payara Server Application Deployment section.
 
 [[java-web-start]]
 === Java Web Start
@@ -235,7 +235,7 @@ If the context-root, `appclient-module-id`, or `application-id` is not specified
 If the application client module or application is not in JAR or EAR file format, an `appclient-module-id` or `application-id` is generated.
 
 Regardless of how the context-root or id is determined, it is written to the server log when you deploy the application.
-For details about naming, see "xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#naming-standards[Naming Standards]" in the Payara Server Application Deployment section.
+For details about naming, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#naming-standards[Naming Standards]" in the Payara Server Application Deployment section.
 
 To set a different URL for an application client, use the `context-root` sub-element of the `java-web-start-access` element in the `glassfish-application-client.xml` file. This overrides the `appclient-module-id` or `application-id`.
 
@@ -922,7 +922,7 @@ corbaname:host1:port1,host2:port2,.../NameService#ejb/jndi-name
 
 . Deploy the EJB component to be accessed.
 +
-For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#about-deployment-tools[About Deployment Tools]" in the Payara Server Application Deployment section.
+For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in the Payara Server Application Deployment section.
 
 . Copy the `as-install/lib/gf-client.jar` file to the client machine and include it in the classpath on the client side.
 +
@@ -1012,7 +1012,7 @@ corbaname:host1:port1,host2:port2,.../NameService#ejb/jndi-name
 +
 For more information about naming and lookups, see xref:technical-documentation/application-development/using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context].
 
-. Deploy the EJB component to be accessed. For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#about-deployment-tools[About Deployment Tools]" in the Application Deployment section.
+. Deploy the EJB component to be accessed. For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in the Application Deployment section.
 
 . To access EJB components that are residing in a remote system, set the following system properties for the Java Virtual Machine startup options:
 +
@@ -1025,7 +1025,7 @@ Here `ORBhost` is the Application Server hostname and `ORBport` is the ORB port 
 
 .  Deploy the module.
 +
-For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#about-deployment-tools[About Deployment Tools]" in Payara Server Application Deployment section.
+For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in Payara Server Application Deployment section.
 
 [[to-access-a-jms-resource-from-a-stand-alone-client]]
 === To access a JMS resource from a stand-alone client

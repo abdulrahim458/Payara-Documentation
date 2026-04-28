@@ -126,7 +126,7 @@ public class Component{
 }
 ----
 
-IMPORTANT: This annotation is part of the xref:technical-documentation/public-api/overview.adoc[Payara Platform Public API]
+IMPORTANT: This annotation is part of the xref:technical-documentation/public-api/index.adoc[Payara Platform Public API]
 
 If you only want to set the name of the cache but don't want to depend on the `@NamedCache`, you can use the `@CacheDefaults` annotation on the bean class instead:
 

@@ -148,7 +148,7 @@ One connection pool is needed for each database, possibly more depending on the 
 * Data source class name
 * Required properties, such as the database name (URL), username, and password
 
-Creating a JDBC connection pool is a dynamic event and does not require server restart. However, there are some parameters that do require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
+Creating a JDBC connection pool is a dynamic event and does not require server restart. However, there are some parameters that do require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
 
 *Before You Begin*
 
@@ -159,7 +159,7 @@ Remote subcommands require a running server.
 . Create the JDBC connection pool by using the
 xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`] subcommand.
 . If needed, restart the server. Some parameters require server restart. See
-xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
+xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
 
 //TODO - Needs to be updated with H2 examples
 
@@ -310,7 +310,7 @@ For example: `asadmin set resources.jdbc-connection-pool.H2Pool.steady-pool-size
 . If needed, restart the server.
 
 Some parameters require server restart. See +
-xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
+xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
 
 
 [[connection-pool-sizing]]

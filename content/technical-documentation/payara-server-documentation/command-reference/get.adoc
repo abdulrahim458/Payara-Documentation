@@ -154,6 +154,6 @@ Command get executed successfully.
 * xref:technical-documentation/payara-server-documentation/command-reference/list.adoc#list[`list`],
 * xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`]
 * xref:technical-documentation/payara-server-documentation/command-reference/dotted-names.adoc#dotted-names[`dotted-names`]
-* xref:technical-documentation/payara-server-documentation/general-administration/overview.adoc[Payara Server General Administration section]
+* xref:technical-documentation/payara-server-documentation/general-administration/index.adoc[Payara Server General Administration section]
 
 

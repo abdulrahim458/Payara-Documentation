@@ -42,7 +42,7 @@ MicroProfile OpenAPI specifies several ways of configuring the data in the produ
 [[sources-config]]
 === Configuration Properties
 
-The OpenAPI document generation process can be configured through the xref:technical-documentation/microprofile/config/overview.adoc[Config API]. The following are the standard configuration properties as presented by the specification:
+The OpenAPI document generation process can be configured through the xref:technical-documentation/microprofile/config/index.adoc[Config API]. The following are the standard configuration properties as presented by the specification:
 
 |===
 | Property key | Description

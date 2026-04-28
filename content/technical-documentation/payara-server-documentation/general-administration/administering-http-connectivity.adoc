@@ -11,7 +11,7 @@ Instructions for accomplishing the tasks in this chapter by using the Administra
 
 The HTTP service provides functionality for deploying web applications and for making deployed web applications accessible by Internet clients, either in a single application server instance or in a cluster of multiple server instances. HTTP services are provided by two kinds of related objects: listeners and virtual servers.
 
-For more information about clusters, see the xref:technical-documentation/payara-server-documentation/high-availability/overview.adoc[Payara Server High Availability section].
+For more information about clusters, see the xref:technical-documentation/payara-server-documentation/high-availability/index.adoc[Payara Server High Availability section].
 
 [[about-http-network-listeners]]
 === About HTTP Network Listeners
@@ -941,7 +941,7 @@ When you first install Payara Server, a default virtual server is created. You c
 
 Web applications and Jakarta EE applications containing web components (web modules) can be assigned to virtual servers during deployment. A web module can be assigned to more than one virtual server, and a virtual server can have more than one web module assigned to it. If you deploy a web application and don't specify any assigned virtual servers, the web application is assigned to all currently defined virtual servers.
 
-If you then create additional virtual servers and want to assign existing web applications to them, you must redeploy the web applications. For more information about deployment, see the xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc[Payara Server Application Deployment section].
+If you then create additional virtual servers and want to assign existing web applications to them, you must redeploy the web applications. For more information about deployment, see the xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc[Payara Server Application Deployment section].
 
 You can define virtual server properties using the `asadmin set` command. For example:
 

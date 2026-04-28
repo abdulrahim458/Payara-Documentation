@@ -20,7 +20,7 @@ To do this, use the following GAV coordinates:
 </dependency>
 ----
 
-IMPORTANT: The xref:/technical-documentation/public-api/overview.adoc[Public API] dependency must be also added to the project's POM when developing applications that use proprietary features (`@Clustered` or `@NamedCache` for example).
+IMPORTANT: The xref:/technical-documentation/public-api/index.adoc[Public API] dependency must be also added to the project's POM when developing applications that use proprietary features (`@Clustered` or `@NamedCache` for example).
 
 [[run-payara-micro-using-the-maven-plugin]]
 == Run Payara Micro using the Maven Plugin

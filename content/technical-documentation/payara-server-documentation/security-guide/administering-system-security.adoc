@@ -921,7 +921,7 @@ To delete a password alias, go to the *Password Aliases page*, tick the checkbox
 [[using-password-alias-microprofile]]
 === MicroProfile Config support
 
-Password aliases can also be accessed using MicroProfile Config, as detailed xref:/technical-documentation/microprofile/config/overview.adoc[here].
+Password aliases can also be accessed using MicroProfile Config, as detailed xref:/technical-documentation/microprofile/config/index.adoc[here].
 
 [[administering-audit-modules]]
 == Administering Audit Modules
@@ -1265,7 +1265,7 @@ As you can see on the XML excerpt, more JACC providers can be defined (by defaul
 
 With a custom JACC provide per server, applications deployed to a single server can't have their own custom authorization contracts. In this case, having a custom JACC Provider per application makes more sense by using the `fish.payara.jacc.JaccConfigurationFactory` API.
 
-IMPORTANT: To access this API, you will need to add a dependency to the xref:technical-documentation/public-api/overview.adoc[Payara Public API] first.
+IMPORTANT: To access this API, you will need to add a dependency to the xref:technical-documentation/public-api/index.adoc[Payara Public API] first.
 
 In the example below, when an application is deployed, a custom JACC provider is registered programmatically using the `JaccConfigurationFactory (consisting of a JACC `PolicyConfigurationFactory` and `Policy` implementation objects) in the `contextInitialized` method of `ServletContextListener`.
 
