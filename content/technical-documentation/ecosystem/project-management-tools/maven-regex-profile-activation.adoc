@@ -24,8 +24,8 @@ You can find the latest artifact version https://mvnrepository.com/artifact/fish
 
 This extension is now active in your build, and you can activate profiles using a regex string beginning and ending with a `/`.
 
-[source,XML]
 .Example usage of Maven Regex Profile Activation in a `pom.xml` file
+[source,xml]
 ----
 <profile>
     <id>test-profile</id>

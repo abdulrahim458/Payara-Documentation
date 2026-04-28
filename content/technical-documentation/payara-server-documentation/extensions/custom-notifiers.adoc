@@ -264,6 +264,7 @@ The Asadmin Commands are required so your custom notifier can be configured and 
 
 You can choose the name of those commands, but the recommended naming scheme is the following:
 
+[source,text]
 ----
 get-<notifierName>-notifier-configuration
 set-<notifierName>-notifier-configuration

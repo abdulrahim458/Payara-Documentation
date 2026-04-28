@@ -65,6 +65,7 @@ The application tag whose Jakarta Batch jobs will be purged from the repository.
 +
 The application's tag is structured like this:
 +
+[source,text]
 ----
 <Configuration Identifier>:<Application Name>__/<Application Name>
 ----

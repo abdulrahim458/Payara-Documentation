@@ -89,6 +89,7 @@ The following span names will be created for this request for different Span Con
 
 When the export endpoint is not available in default setting the following error message is logged by logger `io.opentelemetry.exported.internal.grpc.OkHttpGrpcExporter`:
 
+[source,text]
 ----
 Failed to export spans. The request could not be executed. Full error message: Failed to connect to `localhost/127.0.0.1:4317`
 ----

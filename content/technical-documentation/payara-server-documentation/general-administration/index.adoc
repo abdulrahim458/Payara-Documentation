@@ -625,6 +625,7 @@ The phone home service is enabled by default when starting a Payara Server. The 
 [source, shell]
 ----
 asadmin> enable-phone-home
+[source,text]
 ----
 See xref:technical-documentation/payara-server-documentation/command-reference/enable-phone-home.adoc#enable-phone-home[`enable-phone-home`]
 
@@ -640,6 +641,7 @@ Run this asadmin command and then restart the server to disable PhoneHome
 [source, shell]
 ----
 asadmin> disable-phone-home
+[source,text]
 ----
 See  xref:technical-documentation/payara-server-documentation/command-reference/disable-phone-home.adoc#disable-phone-home[`disable-phone-home`]
 
@@ -655,6 +657,7 @@ See  xref:technical-documentation/payara-server-documentation/command-reference/
 [source, shell]
 ----
 asadmin> list-phone-home
+[source,text]
 ----
 See xref:technical-documentation/payara-server-documentation/command-reference/list-phone-home.adoc#list-phone-home[`list-phone-home`]
 

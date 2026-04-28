@@ -21,8 +21,9 @@ Keep in mind the following:
 
 IMPORTANT: It is recommended to specify the tag name of the Docker image that you plan to use, to guarantee that the correct Payara Enterprise version is used on your environment for guaranteed long-term stability
 
-[source, shell, subs=attributes+]
+
 .Using a specific version
+[source, shell, subs=attributes+]
 ----
 docker run -p 8080:8080 nexus.payara.fish:5000/payara/micro:{page-version}
 ----
@@ -193,14 +194,16 @@ NOTE: To deploy an application using the default context root (`/`), set its val
 
 Here are some basic examples:
 
-[source, shell, subs=attributes+]
+
 .One application deployed, uses the `myRoot` context root
+[source, shell, subs=attributes+]
 ----
 docker run -p 8080:8080 -v ~/payara-micro/applications:/opt/payara/deployments nexus.payara.fish:5000/payara/micro:{page-version} --deploymentDir /opt/payara/deployments --contextroot myRoot
 ----
 
-[source, shell, subs=attributes+]
+
 .First application in the directory uses the `/` context root
+[source, shell, subs=attributes+]
 ----
 docker run -p 8080:8080 \
  -v ~/payara-micro/applications:/opt/payara/deployments nexus.payara.fish:5000/payara/micro:{page-version} --deploy /opt/payara/deployments/myapplication.war --contextroot ROOT

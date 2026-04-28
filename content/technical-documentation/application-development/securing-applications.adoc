@@ -745,6 +745,7 @@ The following table describes these message security provider properties.
 |
 Specifies the location of the message security configuration file. To point to a configuration file in the `domain-dir/config` directory, use the system property like this:
 
+[source,text]
 ----
 ${com.sun.aas.instanceRoot}/config/wss-server-config-1.0.xml
 ----
@@ -1792,6 +1793,7 @@ When you return `true` as the method result, the processing of the request conti
 
 This class is loaded through the Java ServiceLoader mechanism. Make sure you have the following file. `META-INF/services/fish.payara.security.client.ClientCertificateValidator` containing the fully qualified name of your implementation.
 
+[source,text]
 ----
 com.company.certificate.MyCertificateValidator
 ----

@@ -410,35 +410,40 @@ ScatteredArchive(String name, ScatteredArchive.Type type)
 If the entire module is organized under the topDir, this is the only
 method necessary. The `topDir` argument can be null if other methods specify the
 remaining parts of the module.
-a|[source,java]
+a|
+[source,java]
 ----
 ScatteredArchive(String name, ScatteredArchive.Type type, File topDir)
 ----
 |None
 
 |Adds a directory to the classes classpath
-a|[source,java]
+a|
+[source,java]
 ----
 addClassPath(File path)
 ----
 |None
 
 |Adds a metadata locator
-a|[source,java]
+a|
+[source,java]
 ----
 addMetaData(File path)
 ----
 |None
 
 |Adds and names a metadata locator
-a|[source,java]
+a|
+[source,java]
 ----
 addMetaData(File path, String name)
 ----
 |None
 
 |Gets the deployable URI for this scattered archive
-a|[source,java]
+a|
+[source,java]
 ----
 toURI()
 ----
@@ -500,56 +505,64 @@ The methods of this class for setting the scattered enterprise archive configura
 |===
 |Purpose |Method |Default Value
 |Creates and names a scattered enterprise archive
-a|[source,java]
+a|
+[source,java]
 ----
 ScatteredEnterpriseArchive(String name)
 ----
 |None
 
 |Adds a module or library
-a|[source,java]
+a|
+[source,java]
 ----
 addArchive(File archive)
 ----
 |None
 
 |Adds a module or library
-a|[source,java]
+a|
+[source,java]
 ----
 addArchive(File archive, String name)
 ----
 |None
 
 |Adds a module or library
-a|[source,java]
+a|
+[source,java]
 ----
 addArchive(URI URI)
 ----
 |None
 
 |Adds a module or library
-a|[source,java]
+a|
+[source,java]
 ----
 addArchive(URI URI, String name)
 ----
 |None
 
 |Adds a metadata locator
-a|[source,java]
+a|
+[source,java]
 ----
 addMetaData(File path)
 ----
 |None
 
 |Adds and names a metadata locator
-a|[source,java]
+a|
+[source,java]
 ----
 addMetaData(File path, String name)
 ----
 |None
 
 |Gets the deployable URI for this scattered archive
-a|[source,java]
+a|
+[source,java]
 ----
 toURI()
 ----

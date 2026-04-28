@@ -19,12 +19,14 @@ The configuration hierarchy is loosely based on the domain's schema document, an
 
 The following format is used for configuration dotted names:
 
+[source,text]
 ----
 config-name.config-element-name.primary-key.attribute-name | instance-name.config-element-name.primary-key.attribute-name
 ----
 
 The following format is used for resource dotted names:
 
+[source,text]
 ----
 server-name.resource-name.primary-key.attribute-name | domain.resources.resource-name.primary-key.attribute-name
 ----

@@ -155,8 +155,8 @@ Here's an example `arquillian.xml` file. It configures `adminPort` with a static
 
 It will configure the `adminPassword` as a value of a system property `my.admin.password`, which you can specify for example in the maven `surefire` plugin using the `systemPropertyVariables` option or on the command line like `mvn -Dmy.admin.password=mypassword test`.
 
-[source, xml]
 .Example `arquillian.xml` file
+[source,xml]
 ----
 <?xml version="1.0"?>
 <arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -176,8 +176,8 @@ If you want to configure more containers, you can switch between them by setting
 
 This is how you can do it with the maven `surefire` plugin (`my.admin.password` system property is used to set the `adminPassword` property in `arquillian.xml`):
 
-[source, xml]
 .Example - Surefire plugin configuration in the project's POM file
+[source,xml]
 ----
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
@@ -199,8 +199,8 @@ You can configure your Maven project to automatically download and install the P
 
 To set up this installation, you can use the link:https://maven.apache.org/plugins/maven-dependency-plugin/usage.html[Maven Dependency Plugin] (specifically the `unpack` goal) as follows:
 
-[source,XML]
 .Example - Dependency plugin configuration in the project's POM file
+[source,xml]
 ----
 <plugins>
     <plugin>

@@ -639,6 +639,7 @@ Obtaining the token is specific to the OAuth provider and the application. The u
 
 The obtained access token is passed with every request to the resource service by adding it into the `Authorization` HTTP header:
 
+[source,text]
 ----
 Authorization: Bearer access__token
 ----

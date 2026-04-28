@@ -2628,6 +2628,7 @@ If the web server is listening at `http://localhost:8080`, the following `endpoi
 
 results in the following target endpoint address:
 
+[source,text]
 ----
 http://localhost:8080/StockQuoteService/StockQuotePort
 ----

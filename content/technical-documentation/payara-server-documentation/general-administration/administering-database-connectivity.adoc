@@ -1305,12 +1305,14 @@ see xref:technical-documentation/payara-server-documentation/general-administrat
 
 When you want to retrieve the information through the JMX channel, you can find the information in the following MBean:
 
+[source,text]
 ----
 amx:pp=/mon/server-mon[server],type=jdbcra-mon,name=resources/<pool-name>
 ----
 
 When using the Rest monitoring interface, you can access the following URL
 
+[source,text]
 ----
 http://localhost:4848/monitoring/domain/server/resources/<pool-name>
 ----

@@ -22,8 +22,8 @@ Keep in mind the following:
 
 IMPORTANT: It is recommended to specify the tag of the correct Payara Enterprise version that will be used on your production environment for guaranteed long-term stability
 
-[source, shell, subs=attributes+]
 .Using a specific version
+[source, shell, subs=attributes+]
 ----
 docker run -p 8080:8080 nexus.payara.fish:5000/payara/server-full:{page-version}
 ----

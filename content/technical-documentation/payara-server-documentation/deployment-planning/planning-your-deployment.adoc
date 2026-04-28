@@ -121,6 +121,7 @@ Consider the following example:
 
 The calculation for the number of requests per second is:
 
+[source,text]
 ----
 r = 2800 / (1+3) = 700
 ----

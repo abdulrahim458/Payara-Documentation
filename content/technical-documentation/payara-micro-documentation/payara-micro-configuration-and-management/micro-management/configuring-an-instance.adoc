@@ -75,6 +75,7 @@ default configuration, including the `domain.xml` file.
 
 If specifying multiple options at once, the following precedence is followed:
 
+[source,text]
 ----
 rootDir < domainConfig < autoBindHttp | autoBindSsl < port | sslPort
 ----
@@ -196,6 +197,7 @@ When creating an Uber JAR, the context root of the packaged application will
  the `test.war` that was packaged into the `test2.jar` on port *9080* would be
  accessible on the following path:
 
+[source,text]
 --------------------------
 http://localhost:9080/test
 --------------------------
@@ -217,6 +219,7 @@ java -jar test3.jar
 
 The application will now be accessible on:
 
+[source,text]
 ----------------------
 http://localhost:9080/
 ----------------------
@@ -257,6 +260,7 @@ total 784K
 
 And then, generate the Uber JAR using the modified root directory:
 
+[source,text]
 ----
 java -jar payara-micro.jar --rootDir /tmp/micro-dir/ --outputUberJar custom-micro.jar
 ----

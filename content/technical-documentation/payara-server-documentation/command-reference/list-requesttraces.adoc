@@ -152,6 +152,7 @@ asadmin> list-requesttraces --historictraces false
 
 Will give an output similar to the following:
 
+[source,text]
 ----
 Occurring Time            Elapsed Time  Traced Message
 2018-03-15T12:36:07.391Z  169           {"traceSpans":[

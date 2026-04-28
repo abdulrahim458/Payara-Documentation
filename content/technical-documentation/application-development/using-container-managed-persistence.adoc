@@ -443,6 +443,7 @@ If no value is specified, a connection is made to the resource specified by the 
 |none
 |Specifies field-specific column attributes in `property` sub-elements. Each property name is of the following format:
 
+[source,text]
 ----
 bean-name`.`field-name`.`attribute
 ----

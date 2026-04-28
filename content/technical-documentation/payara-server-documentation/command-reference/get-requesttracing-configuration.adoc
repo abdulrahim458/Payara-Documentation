@@ -37,6 +37,7 @@ asadmin> get-requesttracing-configuration
 
 Will give an output similar to the following:
 
+[source,text]
 ----
 Request Tracing Service Enabled?: true
 Request Tracing Service Sample Rate: 1.0

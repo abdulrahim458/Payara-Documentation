@@ -97,8 +97,8 @@ To configure the options using Arquillian container properties, you need to use 
 
 Here's an example `arquillian.xml` file. It configures `randomHttpPort` and `autoBindHttp` options.
 
-[source,XML]
 .Example `arquillian.xml` file
+[source,xml]
 ----
 <?xml version="1.0"?>
 <arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -116,8 +116,8 @@ Here's an example `arquillian.xml` file. It configures `randomHttpPort` and `aut
 
 You can configure the options also using system properties. Here's an example configuration if you run your tests using the maven `surefire` plugin:
 
-[source, xml]
 .Example - Surefire plugin configuration in the project's POM file
+[source,xml]
 ----
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>

@@ -1135,6 +1135,7 @@ In Metro it applies only to inactive sequences.
 
 When multiple vendor deployment descriptors are present in the same module (including deployment descriptors of the original *Eclipse GlassFish* and of the old *Sun Application Server*), the descriptors are processed with the following precedence order in default mode:
 
+[source,text]
 ----
 WebLogic Server > Payara Platform > Eclipse GlassFish Server > Sun Application Server
 ----
@@ -1148,6 +1149,7 @@ This system property controls the precedence between original GlassFish Server a
 
 When the `gfdd.over.wlsdd` property is set to true, the descriptors are processed in this order:
 
+[source,text]
 ----
 Payara Platform > GlassFish Server > WebLogic Server > Sun Application Server
 ----
@@ -1157,6 +1159,7 @@ Payara Platform > GlassFish Server > WebLogic Server > Sun Application Server
 
 When the `ignore.wlsdd` property is set to true, the WebLogic Server deployment descriptors will be completely ignored and other descriptors will be processed in the following order:
 
+[source,text]
 ----
 GlassFish Server > Payara Platform > Sun Application Server
 ----

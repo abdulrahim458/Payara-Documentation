@@ -28,6 +28,7 @@ This means that any rollback is as simple as stopping the server, updating a sym
 
 If you choose not to use symbolic links, the asadmin `start-domain` command has a `--domaindir` option which allows you to specify the location of a domain directory. So you could have a directory structure like the following:
 
+[source,text]
 ----
 /opt/payara/5.35.0/payara5/...
 /opt/payara/5.38.0/payara5/...

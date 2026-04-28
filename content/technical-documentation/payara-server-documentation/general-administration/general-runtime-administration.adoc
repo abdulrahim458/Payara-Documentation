@@ -272,6 +272,7 @@ set AS_ADMIN_DISABLE_EVENT_EXPANSION=false
 +
 . Check that the variable has been correctly set:
 +
+[source,text]
 ----
 echo %AS_ADMIN_DISABLE_EVENT_EXPANSION%
 ----

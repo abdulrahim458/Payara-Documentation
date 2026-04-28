@@ -702,6 +702,7 @@ a| Whether HSTS is enabled. When enabled, the server will respond to requests wi
 
 The header takes the following form:
 
+[source,text]
 ----
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 ----

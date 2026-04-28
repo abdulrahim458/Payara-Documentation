@@ -35,6 +35,7 @@ NOTE: The data collected is stored in a ZIP file in your user home directory, th
 
 The resulting compressed ZIP file will have a directory structure similar to the following:
 
+[source,text]
 ----
 deploymentGroup1
 ├── instance1

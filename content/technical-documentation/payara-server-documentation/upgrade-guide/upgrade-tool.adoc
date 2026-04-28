@@ -262,6 +262,7 @@ Below are the known combinations causing issues:
 |=======================================================================
 ¦Existing ¦Upgrade ¦Result
 ¦6.2.0 ¦6.4.0 a¦
+[source,text]
 ----
 [#|2025-05-23T11:29:03.431+0000|SEVERE|Payara 6.4.0|com.hazelcast.security|_ThreadID=38;_ThreadName=hz.wonderful_booth.generic-operation.thread-0;_TimeMillis=1747999743431;_LevelValue=1000;|  [192.168.122.185]:4900 [development] [5.3.1] Reason of failure for node join: Joining node's version 5.3.1 is not compatible with cluster version 5.2 (Rolling Member Upgrades are only supported in Hazelcast Enterprise)|#]
 ----
@@ -269,6 +270,7 @@ Below are the known combinations causing issues:
 ¦6.5.0 ¦6.6.0 ¦No issues
 
 ¦6.6.0 ¦6.7.0 a¦
+[source,text]
 ----
 
 [#|2025-05-23T12:10:17.764+0000|SEVERE|Payara 6.7.0|com.hazelcast.cluster|_ThreadID=39;_ThreadName=hz.determined_hypatia.generic-operation.thread-0;_TimeMillis=1748002217764;_LevelValue=1000;|  [192.168.122.185]:4900 [development] [5.3.1] Node could not join cluster. A Configuration mismatch was detected: Incompatible partition groups! expected: HOST_AWARE, found: SPI Node is going to shutdown now!|#]
@@ -277,6 +279,7 @@ Below are the known combinations causing issues:
 ¦6.7.0 ¦6.14.0 ¦No issues
 
 ¦6.14.0 ¦6.15.0 a¦
+[source,text]
 ----
 [2025-05-27T16:57:32.642+0000] [Payara 6.15.0] [WARNING] [AS-WEB-HA-00005] [jakarta.enterprise.web.ha] [tid: _ThreadID=102 _ThreadName=http-thread-pool::jk-connector(1)] [timeMillis: 1748365052642] [levelValue: 900] [[  Exception occurred in getSession java.io.InvalidClassException: org.apache.catalina.session.StandardSession; local class incompatible: stream classdesc serialVersionUID = 6938105823843700069, local class serialVersionUID = 5466268327832997659
 ----

@@ -201,6 +201,7 @@ asadmin deploy --skipdsfailure /home/mark/clusterjsp-1.1.war
 *`--additionalRepositories`*:
 This option is used to instruct the command additional Maven2 remote repositories on top of Maven Central that the command can use to look for the artifact when a set of GAV coordinates are used in the operand. The value this option takes is a comma-separated string of all remote repositories URLs, like this:
 +
+[source,text]
 ----
 https://nexus.payara.fish/payara-artifacts,https://google.co.uk
 ----

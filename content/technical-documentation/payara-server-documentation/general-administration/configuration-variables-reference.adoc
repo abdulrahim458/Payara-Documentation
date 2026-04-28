@@ -9,9 +9,10 @@ This section outlines how to reference different variable type sources in the co
 
 Variable references to system properties start with `${`, followed by the name of the variable, and end with `}`. An example of a variable reference that refers to a `java.home` system property is:
 
-------------
+[source,text]
+----
 ${java.home}
-------------
+----
 
 Values of system properties can be specified by:
 
@@ -27,10 +28,11 @@ When custom properties are specified, their value can also contain other variabl
 
 Environment variable references are used like system property references, but contain an extra `ENV` qualifier and equals sign before the variable name. An example of a reference to an environment variable `HOME` then looks like:
 
-------------------------------
+[source,text]
+----
 ${ENV=HOME}
 ${ENV=MAYBE_AVAILABLE:default}
-------------------------------
+----
 
 Environment variables need to be specified in the environment before a Payara instance is started. By adding a colon after the variable name, you may append a default value if the variable has not been set.
 
@@ -53,10 +55,11 @@ admin-password="${ALIAS=cluster-password}"
 
 MicroProfile Configuration variable references can be used exactly like an environment variable reference, but using the `MPCONFIG` qualifier. An example of a reference to a MicroProfile Configuration variable called `foo` would look like:
 
------------------------
+[source,text]
+----
 ${MPCONFIG=foo}
 ${MPCONFIG=bar:default}
------------------------
+----
 
 MicroProfile Configuration variables must be declared in one of the Payara Platform xref:/technical-documentation/microprofile/config/index.adoc#config-sources[supported configuration sources].
 

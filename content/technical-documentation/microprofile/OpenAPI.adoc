@@ -97,6 +97,7 @@ In addition to the standard properties, the following properties have been added
 
 The OASModelReader interface can be implemented by an application developer. It must then be declared as a Config API variable in the form:
 
+[source,text]
 ----
 mp.openapi.model.reader=fish.payara.examples.OASModelReaderImpl
 ----
@@ -110,6 +111,7 @@ This class will be called at the beginning of the OpenAPI document generation, a
 
 The OASFilter interface can be implemented by an application developer. It must then be declared as a Config API variable in the form:
 
+[source,text]
 ----
 mp.openapi.filter=fish.payara.examples.OASFilterImpl
 ----
