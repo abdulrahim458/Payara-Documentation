@@ -1,0 +1,35 @@
+[[maven-support]]
+= Maven Support
+:ordinal: 1
+
+This section describes Apache Maven support for Payara Micro.
+
+[[artifacts-in-maven-central]]
+== Maven Central Artifacts
+
+Payara Micro is available in Maven Central, allowing you to include it as a dependency in your project's POM. This allows you to easily add the required Payara Micro classes and methods to your application to use Payara Micro programmatically.
+
+To do this, use the following GAV coordinates:
+
+[source, xml, subs=attributes+]
+----
+<dependency>
+    <groupId>fish.payara.extras</groupId>
+    <artifactId>payara-micro</artifactId>
+    <version>{page-version}</version>
+</dependency>
+----
+
+IMPORTANT: The xref:/technical-documentation/public-api/overview.adoc[Public API] dependency must be also added to the project's POM when developing applications that use proprietary features (`@Clustered` or `@NamedCache` for example).
+
+[[run-payara-micro-using-the-maven-plugin]]
+== Run Payara Micro using the Maven Plugin
+
+There is a maven plugin built specifically for use with Payara Micro. It has goals to `bundle` the application into an Uber JAR, `start` and `stop` Payara Micro. This plugin is xref:technical-documentation/ecosystem/project-management-tools/maven-plugin.adoc[fully documented in the Ecosystem section].
+
+[[run-payara-micro-using-netbeans]]
+== Run Payara Micro using the NetBeans IDE
+
+There is a Payara Platform tools plugin built for the Apache NetBeans IDE, specifically designed for Payara Micro to create and manage application actions (e.g., run, reload, and debug).
+
+This plugin is fully documented in the xref:/technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/payara-micro.adoc[Payara Micro Apache NetBeans IDE] integration.

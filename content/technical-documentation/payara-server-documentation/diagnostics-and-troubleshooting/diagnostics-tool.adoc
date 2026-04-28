@@ -89,7 +89,7 @@ Command collect-diagnostics executed successfully.
 [[nodas-collection]]
 == Collect Diagnostics with an unavailable DAS
 
-Diagnostics can be collected directly from a running instance in case its corresponding DAS it's not available by specifying the admin port of the target instance (see xref:docs::technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#options[Asadmin Options]), like this:
+Diagnostics can be collected directly from a running instance in case its corresponding DAS it's not available by specifying the admin port of the target instance (see xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#options[Asadmin Options]), like this:
 
 [source, shell]
 ----

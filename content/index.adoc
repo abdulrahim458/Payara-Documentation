@@ -19,17 +19,11 @@ Payara Server began life in 2014, derived from GlassFish 4.1. Since then, Payara
 [[tech-documentation-structure]]
 == Technical Documentation Structure
 
-xref:docs::technical-documentation/payara-server-documentation/index.adoc[Payara Server Documentation]::
+* xref:technical-documentation/payara-server-documentation/index.adoc[Payara Server Documentation]:
 The documentation of the Payara Server distribution. Provides information about configuring and administering Payara Server, as well as how to deploy applications and how to use provided resources in deployed applications.
-xref:docs::technical-documentation/payara-micro-documentation/index.adoc[Payara Micro Documentation]::
-The documentation of the Payara Micro distribution, which is a single file runtime capable of running applications from the command line. Payara Micro is designed to run applications in cloud and containerized environments a well as in embedded and IoT devices. It provides most of the functionality of Payara Server, adding some specific features for flexible deployments and ease of use.
-xref:docs::technical-documentation/payara-embedded-documentation/index.adoc[Payara Embedded Documentation]::
-The documentation of the Payara Server Embedded distribution, which can be used to embed a Payara Server runtime in a standard Java application. The embedded distribution is best used on integration testing environments.
-xref:docs::technical-documentation/application-development/index.adoc[Application Development]::
-Documentation on good practices and specific use cases of how to use the Jakarta EE APIs to develop applications that can run effectively on the Payara Platform.
-xref:docs::technical-documentation/public-api/index.adoc[Public API]::
-Documentation on how to use proprietary software components from the Payara Platform Public API
-xref:docs::technical-documentation/microprofile/index.adoc[MicroProfile]::
-Documentation on specific details and proprietary features of the implementation of the Eclipse MicroProfile APIs on the Payara Platform.
-xref:docs::technical-documentation/ecosystem/index.adoc[Ecosystem]::
-Documentation on all Ecosystem tools and plugins available to the Payara Platform to simplify various aspects of application development, deployment and runtime management.
+* xref:technical-documentation/payara-micro-documentation/index.adoc[Payara Micro Documentation]: The documentation of the Payara Micro distribution, which is a single file runtime capable of running applications from the command line. Payara Micro is designed to run applications in cloud and containerized environments a well as in embedded and IoT devices. It provides most of the functionality of Payara Server, adding some specific features for flexible deployments and ease of use.
+* xref:technical-documentation/payara-embedded-documentation/index.adoc[Payara Embedded Documentation]: The documentation of the Payara Server Embedded distribution, which can be used to embed a Payara Server runtime in a standard Java application. The embedded distribution is best used on integration testing environments.
+* xref:technical-documentation/application-development/index.adoc[Application Development]: Documentation on good practices and specific use cases of how to use the Jakarta EE APIs to develop applications that can run effectively on the Payara Platform.
+* xref:technical-documentation/public-api/index.adoc[Public API]: Documentation on how to use proprietary software components from the Payara Platform Public API
+* xref:technical-documentation/microprofile/index.adoc[MicroProfile]: Documentation on specific details and proprietary features of the implementation of the Eclipse MicroProfile APIs on the Payara Platform.
+* xref:technical-documentation/ecosystem/index.adoc[Ecosystem]: Documentation on all Ecosystem tools and plugins available to the Payara Platform to simplify various aspects of application development, deployment and runtime management.

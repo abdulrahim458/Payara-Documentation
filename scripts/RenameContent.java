@@ -17,6 +17,8 @@
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.DirectoryNotEmptyException;
+import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -251,7 +253,20 @@ public class RenameContent {
             Files.move(from, tmp);
             Files.move(tmp, to);
         } else {
-            Files.move(from, to);
+            try {
+                Files.move(from, to);
+            } catch (FileAlreadyExistsException | DirectoryNotEmptyException e) {
+                deleteRecursively(to);
+                Files.move(from, to);
+            }
+        }
+    }
+
+    static void deleteRecursively(Path path) throws IOException {
+        try (Stream<Path> s = Files.walk(path)) {
+            s.sorted(Comparator.reverseOrder()).forEach(p -> {
+                try { Files.delete(p); } catch (IOException e) { throw new RuntimeException(e); }
+            });
         }
     }
 
