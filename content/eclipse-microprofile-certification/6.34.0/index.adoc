@@ -5,5 +5,5 @@ As proof of compatibility, the output of the MicroProfile TCK Test Suite tests a
 
 The following distributions of Payara 6.34.0 are certified, with results for each listed below:
 
-* xref:eclipse-microprofile-certification/6.34.0/Server TCK Results.adoc[Payara Server 6.34.0]
-* xref:eclipse-microprofile-certification/6.34.0/Server Web TCK Results.adoc[Payara Server 6.34.0 - Web Profile]
+* xref:eclipse-microprofile-certification/6.34.0/server-tck-results.adoc[Payara Server 6.34.0]
+* xref:eclipse-microprofile-certification/6.34.0/server-web-tck-results.adoc[Payara Server 6.34.0 - Web Profile]

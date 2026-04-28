@@ -97,7 +97,7 @@ Payara will be open to negotiating any disputes and reconsider our position on p
 [[security-advisories]]
 == Security Advisories
 
-All security reports, that correspond to either fixes to vulnerabilities that affect the Payara Platform directly or vulnerabilities to its third-party dependencies are catalogued under the xref:Security/Security Fix List.adoc[Security Advisories] page.
+All security reports, that correspond to either fixes to vulnerabilities that affect the Payara Platform directly or vulnerabilities to its third-party dependencies are catalogued under the xref:security/security-fix-list.adoc[Security Advisories] page.
 
 Each vulnerability entry will contain:
 

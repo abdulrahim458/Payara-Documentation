@@ -1,5 +1,5 @@
 .Appendix
 * Schemas
-** xref:Appendix/Schemas/index.adoc[Overview]
+** xref:appendix/schemas/index.adoc[Overview]
 ** link:{payaraResourcesDtd}[DTD for payara-resources.xml]
 ** link:{payaraWebDtd}[DTD for payara-web.xml]

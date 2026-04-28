@@ -3,1035 +3,1031 @@ title: Payara Enterprise Documentation
 sections:
   - title: General Info
     sections:
-      - file: General Info/Overview
-      - file: General Info/Supported Platforms
-      - file: General Info/Jakarta EE 8 Support
-
+      - file: general-info/overview
+      - file: general-info/supported-platforms
+      - file: general-info/jakarta-ee-8-support
   - title: Technical Documentation
     sections:
       - title: Payara Server Documentation
         sections:
-          - file: Technical Documentation/Payara Server Documentation/index
+          - file: technical-documentation/payara-server-documentation/index
           - title: General Administration
             sections:
-              - file: Technical Documentation/Payara Server Documentation/General Administration/index
-              - file: Technical Documentation/Payara Server Documentation/General Administration/General Runtime Administration
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Using REST Interfaces for Server Administration
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering Domains
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the Java Virtual Machine
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administration Console Features
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering Thread Pools
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the Logging Service
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the Monitoring Service
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the HealthCheck Service
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the Request Tracing Service
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the Notification Service
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Extended Notification Service Details
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering Lifecycle Modules
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering Batch Jobs
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering Database Connectivity
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering EIS Connectivity
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering HTTP Connectivity
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering Concurrent Resources
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the ORB
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the Jakarta Mail Service
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the Java Message Service
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering the JNDI Service
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering Transactions
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Administering Web Applications
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Configuration Variables Reference
-              - file: Technical Documentation/Payara Server Documentation/General Administration/Subcommands for the Asadmin CLI
-              - file: Technical Documentation/Payara Server Documentation/General Administration/MBeans Inventory
+              - file: technical-documentation/payara-server-documentation/general-administration/index
+              - file: technical-documentation/payara-server-documentation/general-administration/general-runtime-administration
+              - file: technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-domains
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-java-virtual-machine
+              - file: technical-documentation/payara-server-documentation/general-administration/administration-console-features
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-thread-pools
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-healthcheck-service
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-request-tracing-service
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service
+              - file: technical-documentation/payara-server-documentation/general-administration/extended-notification-service-details
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-lifecycle-modules
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-batch-jobs
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-eis-connectivity
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-http-connectivity
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-concurrent-resources
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-orb
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-jakarta-mail-service
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-the-jndi-service
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-transactions
+              - file: technical-documentation/payara-server-documentation/general-administration/administering-web-applications
+              - file: technical-documentation/payara-server-documentation/general-administration/configuration-variables-reference
+              - file: technical-documentation/payara-server-documentation/general-administration/subcommands-for-the-asadmin-cli
+              - file: technical-documentation/payara-server-documentation/general-administration/mbeans-inventory
           - title: Deployment Planning
             sections:
-              - file: Technical Documentation/Payara Server Documentation/Deployment Planning/index
-              - file: Technical Documentation/Payara Server Documentation/Deployment Planning/Product Concepts
-              - file: Technical Documentation/Payara Server Documentation/Deployment Planning/Planning your Deployment
-              - file: Technical Documentation/Payara Server Documentation/Deployment Planning/Checklist for Deployment
+              - file: technical-documentation/payara-server-documentation/deployment-planning/index
+              - file: technical-documentation/payara-server-documentation/deployment-planning/product-concepts
+              - file: technical-documentation/payara-server-documentation/deployment-planning/planning-your-deployment
+              - file: technical-documentation/payara-server-documentation/deployment-planning/checklist-for-deployment
           - title: Application Deployment
             sections:
-              - file: Technical Documentation/Payara Server Documentation/Application Deployment/index
-              - file: Technical Documentation/Payara Server Documentation/Application Deployment/Deploying Applications
-              - file: Technical Documentation/Payara Server Documentation/Application Deployment/The Deployment Subcommands
-              - file: Technical Documentation/Payara Server Documentation/Application Deployment/Deployment Descriptor Files
-              - file: Technical Documentation/Payara Server Documentation/Application Deployment/Elements of Deployment Descriptors
+              - file: technical-documentation/payara-server-documentation/application-deployment/index
+              - file: technical-documentation/payara-server-documentation/application-deployment/deploying-applications
+              - file: technical-documentation/payara-server-documentation/application-deployment/the-deployment-subcommands
+              - file: technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files
+              - file: technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors
           - title: High Availability
             sections:
-              - file: Technical Documentation/Payara Server Documentation/High Availability/index
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Enabling Centralized Administration of Server Instances
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Administering Payara Server Nodes
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Administering Payara Server Clusters
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Administering Deployment Groups
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Administering the Domain Data Grid
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Administering Payara Server Instances
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Administering Named Configurations
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Configuring HTTP Load Balancing
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Configuring HA Session Persistence and Failover
-              - file: Technical Documentation/Payara Server Documentation/High Availability/Configuring JMS High Availability
-              - file: Technical Documentation/Payara Server Documentation/High Availability/RMI IIOP Load Balancing and Failover
+              - file: technical-documentation/payara-server-documentation/high-availability/index
+              - file: technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances
+              - file: technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes
+              - file: technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters
+              - file: technical-documentation/payara-server-documentation/high-availability/administering-deployment-groups
+              - file: technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid
+              - file: technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances
+              - file: technical-documentation/payara-server-documentation/high-availability/administering-named-configurations
+              - file: technical-documentation/payara-server-documentation/high-availability/configuring-http-load-balancing
+              - file: technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover
+              - file: technical-documentation/payara-server-documentation/high-availability/configuring-jms-high-availability
+              - file: technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover
           - title: Security Guide
             sections:
-              - file: Technical Documentation/Payara Server Documentation/Security Guide/index
-              - file: Technical Documentation/Payara Server Documentation/Security Guide/Administering System Security
-              - file: Technical Documentation/Payara Server Documentation/Security Guide/Administering User Security
-              - file: Technical Documentation/Payara Server Documentation/Security Guide/Administering Message Security
-              - file: Technical Documentation/Payara Server Documentation/Security Guide/Security in High-Availability Environments
-              - file: Technical Documentation/Payara Server Documentation/Security Guide/Managing Administrative Security
-              - file: Technical Documentation/Payara Server Documentation/Security Guide/Running in a Secure Environment
-              - file: Technical Documentation/Payara Server Documentation/Security Guide/SSL Certificate Management
-              - file: Technical Documentation/Payara Server Documentation/Security Guide/Printing Certificate Data
+              - file: technical-documentation/payara-server-documentation/security-guide/index
+              - file: technical-documentation/payara-server-documentation/security-guide/administering-system-security
+              - file: technical-documentation/payara-server-documentation/security-guide/administering-user-security
+              - file: technical-documentation/payara-server-documentation/security-guide/administering-message-security
+              - file: technical-documentation/payara-server-documentation/security-guide/security-in-high-availability-environments
+              - file: technical-documentation/payara-server-documentation/security-guide/managing-administrative-security
+              - file: technical-documentation/payara-server-documentation/security-guide/running-in-a-secure-environment
+              - file: technical-documentation/payara-server-documentation/security-guide/ssl-certificate-management
+              - file: technical-documentation/payara-server-documentation/security-guide/printing-certificate-data
           - title: Command Reference
             sections:
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/index
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/Domain
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/Instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/Configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/Dotted Names
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/Deployment Group
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/Application
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/Auto Naming
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/Logging
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/Security
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/add-instance-to-deployment-group
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/add-library
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/add-resources
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/add-to-keystore
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/add-to-truststore
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/appclient
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/apply-http-lb-changes
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/asadmin-recorder-enabled
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/asadmin
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/attach
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/backup-domain
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/capture-schema
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/change-admin-password
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/change-master-broker
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/change-master-password
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/clean-jbatch-repository
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/clear-cache
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/collect-diagnostics
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/collect-log-files
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/configure-jms-cluster
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/configure-lb-weight
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/configure-ldap-for-admin
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/configure-managed-jobs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/copy-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-admin-object
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-application-ref
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-audit-module
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-auth-realm
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-cluster
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-connector-connection-pool
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-connector-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-connector-security-map
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-connector-work-security-map
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-context-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-custom-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-deployment-group
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-domain
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-file-user
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-http-health-checker
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-http-lb-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-http-lb-ref
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-http-lb
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-http-listener
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-http-redirect
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-http
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-iiop-listener
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-jacc-provider
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-javamail-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-jdbc-connection-pool
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-jdbc-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-jms-host
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-jms-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-jmsdest
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-jndi-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-jvm-option
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-jvm-options
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-lifecycle-module
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-local-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-managed-executor-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-managed-scheduled-executor-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-managed-thread-factory
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-message-security-provider
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-module-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-network-listener
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-node-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-node-dcom
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-node-docker
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-node-ssh
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-password-alias
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-profiler
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-protocol-filter
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-protocol-finder
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-protocol
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-resource-adapter-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-resource-ref
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-ssl
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-system-properties
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-system-property
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-threadpool
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-transport
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/create-virtual-server
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/debug-asadmin
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-admin-object
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-application-ref
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-audit-module
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-auth-realm
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-cluster
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-config-property
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-connector-connection-pool
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-connector-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-connector-security-map
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-connector-work-security-map
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-context-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-custom-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-deployment-group
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-domain
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-file-user
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-http-health-checker
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-http-lb-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-http-lb-ref
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-http-lb
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-http-listener
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-http-redirect
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-http
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-iiop-listener
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-jacc-provider
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-javamail-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-jdbc-connection-pool
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-jdbc-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-jms-host
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-jms-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-jmsdest
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-jndi-resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-jvm-options
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-lifecycle-module
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-local-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-managed-executor-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-managed-scheduled-executor-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-managed-thread-factory
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-message-security-provider
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-module-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-network-listener
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-node-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-node-dcom
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-node-docker
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-node-ssh
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-password-alias
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-profiler
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-protocol-filter
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-protocol-finder
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-protocol
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-resource-adapter-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-resource-ref
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-ssl
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-system-property
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-threadpool
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-transport
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/delete-virtual-server
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/deploy-remote-archive
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/deploy
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/deploydir
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/disable-asadmin-recorder
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/disable-http-lb-application
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/disable-http-lb-server
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/disable-monitoring
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/disable-phone-home
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/disable-secure-admin-internal-user
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/disable-secure-admin-principal
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/disable-secure-admin
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/disable
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/enable-asadmin-recorder
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/enable-http-lb-application
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/enable-http-lb-server
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/enable-monitoring
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/enable-phone-home
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/enable-secure-admin-internal-user
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/enable-secure-admin-principal
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/enable-secure-admin
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/enable
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/export-http-lb-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/export-sync-bundle
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/export
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/flush-connection-pool
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/flush-jmsdest
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/freeze-transaction-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/generate-bash-autocomplete
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/generate-csr
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/generate-encryption-key
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/generate-jvm-report
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/generate-self-signed-certificate
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-active-module-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-admin-audit-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-asadmin-recorder-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-aws-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-azure-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-cdieventbus-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-client-stubs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-config-dir
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-config-ordinal
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-config-property
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-datadog-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-discord-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-dynamodb-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-ejb-invoker-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-email-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-environment-warning-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-eventbus-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-fault-tolerance-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-gcp-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-hashicorp-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-hazelcast-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-health
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-healthcheck-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-jdbc-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-jms-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-jmx-monitoring-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-ldap-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-log-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-metrics-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-microprofile-healthcheck-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-monitoring-level
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-monitoring-service-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-newrelic-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-notification-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-openapi-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-requesttracing-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-rest-monitoring-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-slack-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-snmp-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-teams-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-toml-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get-xmpp-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/get
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/healthcheck-configure-service-threshold
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/healthcheck-configure-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/healthcheck-configure
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/healthcheck-hoggingthreads-configure
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/healthcheck-list-services
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/healthcheck-service-configure-checker-with-thresholds
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/healthcheck-stuckthreads-configure
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/import-sync-bundle
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/install-node-dcom
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/install-node-ssh
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/install-node
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/jms-ping
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-admin-objects
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-application-refs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-applications
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-audit-modules
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-auth-realms
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-backups
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-batch-job-executions
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-batch-job-steps
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-batch-jobs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-batch-runtime-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-cache-keys
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-caches
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-clusters
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-commands
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-components
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-configs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-connector-connection-pools
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-connector-resources
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-connector-security-maps
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-connector-work-security-maps
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-containers
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-context-services
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-custom-resources
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-deployment-groups
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-domains
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-file-groups
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-file-users
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-hazelcast-cluster-members
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-hazelcast-members
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-healthcheck-services
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-http-lb-configs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-http-lbs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-http-listeners
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-iiop-listeners
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-instances
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jacc-providers
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-javamail-resources
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jdbc-connection-pools
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jdbc-resources
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jms-hosts
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jms-resources
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jmsdest
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jndi-entries
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jndi-resources
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jobs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-jvm-options
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-keystore-entries
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-libraries
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-lifecycle-modules
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-log-attributes
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-log-levels
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-loggers
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-managed-executor-services
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-managed-scheduled-executor-services
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-managed-thread-factories
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-message-security-providers
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-modules
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-network-listeners
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-nodes-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-nodes-dcom
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-nodes-ssh
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-nodes
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-notifiers
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-password-aliases
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-persistence-types
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-phone-home
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-protocol-filters
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-protocol-finders
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-protocols
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-requesttraces
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-resource-adapter-configs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-resource-refs
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-rest-endpoints
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-secure-admin-internal-users
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-secure-admin-principals
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-sub-components
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-supported-cipher-suites
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-system-properties
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-threadpools
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-timers
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-transports
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-truststore-entries
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-virtual-servers
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-web-context-param
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list-web-env-entry
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/list
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/login
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/migrate-timers
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/monitor
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/monitoring
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/multimode
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/notification-configure
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/osgi-shell
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/osgi
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/package-appclient
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/ping-connection-pool
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/ping-node-dcom
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/ping-node-ssh
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/print-certificate
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/purge-jbatch-repository
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/recover-transactions
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/redeploy
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/remove-expired-certificates
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/remove-from-keystore
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/remove-from-truststore
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/remove-instance-from-deployment-group
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/remove-library
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/renew-self-signed-certificates
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/resource
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restart-cluster
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restart-deployment-group
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restart-domain
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restart-domains
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restart-hazelcast
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restart-http-listeners
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restart-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restart-local-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restart-monitoring
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/restore-domain
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/rollback-transaction
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/rotate-log
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-admin-audit-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-amx-enabled
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-asadmin-recorder-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-aws-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-azure-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-batch-runtime-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-cdieventbus-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-config-cache
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-config-dir
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-config-ordinal
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-config-property
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-datadog-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-discord-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-dynamodb-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-ejb-invoker-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-email-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-environment-warning-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-eventbus-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-fault-tolerance-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-gcp-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-hashicorp-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-hazelcast-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-healthcheck-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-healthcheck-service-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-jdbc-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-jms-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-jmx-monitoring-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-ldap-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-log-attributes
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-log-file-format
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-log-levels
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-log-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-metrics-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-microprofile-healthcheck-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-monitoring-level
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-monitoring-service-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-network-listener-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-newrelic-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-notification-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-openapi-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-requesttracing-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-rest-monitoring-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-slack-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-snmp-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-teams-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-toml-config-source-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-web-context-param
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-web-env-entry
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set-xmpp-notifier-configuration
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/set
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/setup-local-dcom
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/setup-ssh
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/show-component-status
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/start-cluster
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/start-database
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/start-deployment-group
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/start-domain
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/start-domains
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/start-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/start-local-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/stop-all-domains
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/stop-cluster
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/stop-database
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/stop-deployment-group
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/stop-domain
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/stop-domains
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/stop-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/stop-local-instance
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/undeploy
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/unfreeze-transaction-service
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/uninstall-node-dcom
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/uninstall-node-ssh
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/uninstall-node
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/unset-web-context-param
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/unset-web-env-entry
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/unset
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/update-connector-security-map
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/update-connector-work-security-map
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/update-file-user
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/update-node-config
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/update-node-dcom
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/update-node-docker
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/update-node-ssh
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/update-password-alias
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/uptime
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/validate-dcom
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/validate-multicast
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/verify-domain-xml
-              - file: Technical Documentation/Payara Server Documentation/Command Reference/version
+              - file: technical-documentation/payara-server-documentation/command-reference/index
+              - file: technical-documentation/payara-server-documentation/command-reference/domain
+              - file: technical-documentation/payara-server-documentation/command-reference/instance
+              - file: technical-documentation/payara-server-documentation/command-reference/configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/dotted-names
+              - file: technical-documentation/payara-server-documentation/command-reference/deployment-group
+              - file: technical-documentation/payara-server-documentation/command-reference/application
+              - file: technical-documentation/payara-server-documentation/command-reference/auto-naming
+              - file: technical-documentation/payara-server-documentation/command-reference/logging
+              - file: technical-documentation/payara-server-documentation/command-reference/security
+              - file: technical-documentation/payara-server-documentation/command-reference/add-instance-to-deployment-group
+              - file: technical-documentation/payara-server-documentation/command-reference/add-library
+              - file: technical-documentation/payara-server-documentation/command-reference/add-resources
+              - file: technical-documentation/payara-server-documentation/command-reference/add-to-keystore
+              - file: technical-documentation/payara-server-documentation/command-reference/add-to-truststore
+              - file: technical-documentation/payara-server-documentation/command-reference/appclient
+              - file: technical-documentation/payara-server-documentation/command-reference/apply-http-lb-changes
+              - file: technical-documentation/payara-server-documentation/command-reference/asadmin-recorder-enabled
+              - file: technical-documentation/payara-server-documentation/command-reference/asadmin
+              - file: technical-documentation/payara-server-documentation/command-reference/attach
+              - file: technical-documentation/payara-server-documentation/command-reference/backup-domain
+              - file: technical-documentation/payara-server-documentation/command-reference/capture-schema
+              - file: technical-documentation/payara-server-documentation/command-reference/change-admin-password
+              - file: technical-documentation/payara-server-documentation/command-reference/change-master-broker
+              - file: technical-documentation/payara-server-documentation/command-reference/change-master-password
+              - file: technical-documentation/payara-server-documentation/command-reference/clean-jbatch-repository
+              - file: technical-documentation/payara-server-documentation/command-reference/clear-cache
+              - file: technical-documentation/payara-server-documentation/command-reference/collect-diagnostics
+              - file: technical-documentation/payara-server-documentation/command-reference/collect-log-files
+              - file: technical-documentation/payara-server-documentation/command-reference/configure-jms-cluster
+              - file: technical-documentation/payara-server-documentation/command-reference/configure-lb-weight
+              - file: technical-documentation/payara-server-documentation/command-reference/configure-ldap-for-admin
+              - file: technical-documentation/payara-server-documentation/command-reference/configure-managed-jobs
+              - file: technical-documentation/payara-server-documentation/command-reference/copy-config
+              - file: technical-documentation/payara-server-documentation/command-reference/create-admin-object
+              - file: technical-documentation/payara-server-documentation/command-reference/create-application-ref
+              - file: technical-documentation/payara-server-documentation/command-reference/create-audit-module
+              - file: technical-documentation/payara-server-documentation/command-reference/create-auth-realm
+              - file: technical-documentation/payara-server-documentation/command-reference/create-cluster
+              - file: technical-documentation/payara-server-documentation/command-reference/create-connector-connection-pool
+              - file: technical-documentation/payara-server-documentation/command-reference/create-connector-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/create-connector-security-map
+              - file: technical-documentation/payara-server-documentation/command-reference/create-connector-work-security-map
+              - file: technical-documentation/payara-server-documentation/command-reference/create-context-service
+              - file: technical-documentation/payara-server-documentation/command-reference/create-custom-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/create-deployment-group
+              - file: technical-documentation/payara-server-documentation/command-reference/create-domain
+              - file: technical-documentation/payara-server-documentation/command-reference/create-file-user
+              - file: technical-documentation/payara-server-documentation/command-reference/create-http-health-checker
+              - file: technical-documentation/payara-server-documentation/command-reference/create-http-lb-config
+              - file: technical-documentation/payara-server-documentation/command-reference/create-http-lb-ref
+              - file: technical-documentation/payara-server-documentation/command-reference/create-http-lb
+              - file: technical-documentation/payara-server-documentation/command-reference/create-http-listener
+              - file: technical-documentation/payara-server-documentation/command-reference/create-http-redirect
+              - file: technical-documentation/payara-server-documentation/command-reference/create-http
+              - file: technical-documentation/payara-server-documentation/command-reference/create-iiop-listener
+              - file: technical-documentation/payara-server-documentation/command-reference/create-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/create-jacc-provider
+              - file: technical-documentation/payara-server-documentation/command-reference/create-javamail-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool
+              - file: technical-documentation/payara-server-documentation/command-reference/create-jdbc-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/create-jms-host
+              - file: technical-documentation/payara-server-documentation/command-reference/create-jms-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/create-jmsdest
+              - file: technical-documentation/payara-server-documentation/command-reference/create-jndi-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/create-jvm-option
+              - file: technical-documentation/payara-server-documentation/command-reference/create-jvm-options
+              - file: technical-documentation/payara-server-documentation/command-reference/create-lifecycle-module
+              - file: technical-documentation/payara-server-documentation/command-reference/create-local-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/create-managed-executor-service
+              - file: technical-documentation/payara-server-documentation/command-reference/create-managed-scheduled-executor-service
+              - file: technical-documentation/payara-server-documentation/command-reference/create-managed-thread-factory
+              - file: technical-documentation/payara-server-documentation/command-reference/create-message-security-provider
+              - file: technical-documentation/payara-server-documentation/command-reference/create-module-config
+              - file: technical-documentation/payara-server-documentation/command-reference/create-network-listener
+              - file: technical-documentation/payara-server-documentation/command-reference/create-node-config
+              - file: technical-documentation/payara-server-documentation/command-reference/create-node-dcom
+              - file: technical-documentation/payara-server-documentation/command-reference/create-node-docker
+              - file: technical-documentation/payara-server-documentation/command-reference/create-node-ssh
+              - file: technical-documentation/payara-server-documentation/command-reference/create-password-alias
+              - file: technical-documentation/payara-server-documentation/command-reference/create-profiler
+              - file: technical-documentation/payara-server-documentation/command-reference/create-protocol-filter
+              - file: technical-documentation/payara-server-documentation/command-reference/create-protocol-finder
+              - file: technical-documentation/payara-server-documentation/command-reference/create-protocol
+              - file: technical-documentation/payara-server-documentation/command-reference/create-resource-adapter-config
+              - file: technical-documentation/payara-server-documentation/command-reference/create-resource-ref
+              - file: technical-documentation/payara-server-documentation/command-reference/create-service
+              - file: technical-documentation/payara-server-documentation/command-reference/create-ssl
+              - file: technical-documentation/payara-server-documentation/command-reference/create-system-properties
+              - file: technical-documentation/payara-server-documentation/command-reference/create-system-property
+              - file: technical-documentation/payara-server-documentation/command-reference/create-threadpool
+              - file: technical-documentation/payara-server-documentation/command-reference/create-transport
+              - file: technical-documentation/payara-server-documentation/command-reference/create-virtual-server
+              - file: technical-documentation/payara-server-documentation/command-reference/debug-asadmin
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-admin-object
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-application-ref
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-audit-module
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-auth-realm
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-cluster
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-config-property
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-config
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-connector-connection-pool
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-connector-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-connector-security-map
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-connector-work-security-map
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-context-service
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-custom-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-deployment-group
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-domain
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-file-user
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-health-checker
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-lb-config
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-lb-ref
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-lb
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-listener
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-redirect
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-http
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-iiop-listener
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-jacc-provider
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-javamail-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-jdbc-connection-pool
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-jdbc-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-jms-host
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-jms-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-jmsdest
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-jndi-resource
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-jvm-options
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-lifecycle-module
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-local-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-managed-executor-service
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-managed-scheduled-executor-service
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-managed-thread-factory
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-message-security-provider
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-module-config
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-network-listener
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-node-config
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-node-dcom
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-node-docker
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-node-ssh
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-password-alias
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-profiler
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-protocol-filter
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-protocol-finder
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-protocol
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-resource-adapter-config
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-resource-ref
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-service
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-ssl
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-system-property
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-threadpool
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-transport
+              - file: technical-documentation/payara-server-documentation/command-reference/delete-virtual-server
+              - file: technical-documentation/payara-server-documentation/command-reference/deploy-remote-archive
+              - file: technical-documentation/payara-server-documentation/command-reference/deploy
+              - file: technical-documentation/payara-server-documentation/command-reference/deploydir
+              - file: technical-documentation/payara-server-documentation/command-reference/disable-asadmin-recorder
+              - file: technical-documentation/payara-server-documentation/command-reference/disable-http-lb-application
+              - file: technical-documentation/payara-server-documentation/command-reference/disable-http-lb-server
+              - file: technical-documentation/payara-server-documentation/command-reference/disable-monitoring
+              - file: technical-documentation/payara-server-documentation/command-reference/disable-phone-home
+              - file: technical-documentation/payara-server-documentation/command-reference/disable-secure-admin-internal-user
+              - file: technical-documentation/payara-server-documentation/command-reference/disable-secure-admin-principal
+              - file: technical-documentation/payara-server-documentation/command-reference/disable-secure-admin
+              - file: technical-documentation/payara-server-documentation/command-reference/disable
+              - file: technical-documentation/payara-server-documentation/command-reference/enable-asadmin-recorder
+              - file: technical-documentation/payara-server-documentation/command-reference/enable-http-lb-application
+              - file: technical-documentation/payara-server-documentation/command-reference/enable-http-lb-server
+              - file: technical-documentation/payara-server-documentation/command-reference/enable-monitoring
+              - file: technical-documentation/payara-server-documentation/command-reference/enable-phone-home
+              - file: technical-documentation/payara-server-documentation/command-reference/enable-secure-admin-internal-user
+              - file: technical-documentation/payara-server-documentation/command-reference/enable-secure-admin-principal
+              - file: technical-documentation/payara-server-documentation/command-reference/enable-secure-admin
+              - file: technical-documentation/payara-server-documentation/command-reference/enable
+              - file: technical-documentation/payara-server-documentation/command-reference/export-http-lb-config
+              - file: technical-documentation/payara-server-documentation/command-reference/export-sync-bundle
+              - file: technical-documentation/payara-server-documentation/command-reference/export
+              - file: technical-documentation/payara-server-documentation/command-reference/flush-connection-pool
+              - file: technical-documentation/payara-server-documentation/command-reference/flush-jmsdest
+              - file: technical-documentation/payara-server-documentation/command-reference/freeze-transaction-service
+              - file: technical-documentation/payara-server-documentation/command-reference/generate-bash-autocomplete
+              - file: technical-documentation/payara-server-documentation/command-reference/generate-csr
+              - file: technical-documentation/payara-server-documentation/command-reference/generate-encryption-key
+              - file: technical-documentation/payara-server-documentation/command-reference/generate-jvm-report
+              - file: technical-documentation/payara-server-documentation/command-reference/generate-self-signed-certificate
+              - file: technical-documentation/payara-server-documentation/command-reference/get-active-module-config
+              - file: technical-documentation/payara-server-documentation/command-reference/get-admin-audit-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-asadmin-recorder-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-aws-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-azure-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-cdieventbus-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-client-stubs
+              - file: technical-documentation/payara-server-documentation/command-reference/get-config-dir
+              - file: technical-documentation/payara-server-documentation/command-reference/get-config-ordinal
+              - file: technical-documentation/payara-server-documentation/command-reference/get-config-property
+              - file: technical-documentation/payara-server-documentation/command-reference/get-datadog-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-discord-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-dynamodb-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-ejb-invoker-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-email-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-environment-warning-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-eventbus-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-fault-tolerance-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-gcp-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-hashicorp-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-hazelcast-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-health
+              - file: technical-documentation/payara-server-documentation/command-reference/get-healthcheck-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-jdbc-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-jms-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-jmx-monitoring-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-ldap-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-log-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-metrics-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-microprofile-healthcheck-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-monitoring-level
+              - file: technical-documentation/payara-server-documentation/command-reference/get-monitoring-service-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-newrelic-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-notification-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-openapi-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-requesttracing-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-rest-monitoring-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-slack-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-snmp-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-teams-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-toml-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get-xmpp-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/get
+              - file: technical-documentation/payara-server-documentation/command-reference/healthcheck-configure-service-threshold
+              - file: technical-documentation/payara-server-documentation/command-reference/healthcheck-configure-service
+              - file: technical-documentation/payara-server-documentation/command-reference/healthcheck-configure
+              - file: technical-documentation/payara-server-documentation/command-reference/healthcheck-hoggingthreads-configure
+              - file: technical-documentation/payara-server-documentation/command-reference/healthcheck-list-services
+              - file: technical-documentation/payara-server-documentation/command-reference/healthcheck-service-configure-checker-with-thresholds
+              - file: technical-documentation/payara-server-documentation/command-reference/healthcheck-stuckthreads-configure
+              - file: technical-documentation/payara-server-documentation/command-reference/import-sync-bundle
+              - file: technical-documentation/payara-server-documentation/command-reference/install-node-dcom
+              - file: technical-documentation/payara-server-documentation/command-reference/install-node-ssh
+              - file: technical-documentation/payara-server-documentation/command-reference/install-node
+              - file: technical-documentation/payara-server-documentation/command-reference/jms-ping
+              - file: technical-documentation/payara-server-documentation/command-reference/list-admin-objects
+              - file: technical-documentation/payara-server-documentation/command-reference/list-application-refs
+              - file: technical-documentation/payara-server-documentation/command-reference/list-applications
+              - file: technical-documentation/payara-server-documentation/command-reference/list-audit-modules
+              - file: technical-documentation/payara-server-documentation/command-reference/list-auth-realms
+              - file: technical-documentation/payara-server-documentation/command-reference/list-backups
+              - file: technical-documentation/payara-server-documentation/command-reference/list-batch-job-executions
+              - file: technical-documentation/payara-server-documentation/command-reference/list-batch-job-steps
+              - file: technical-documentation/payara-server-documentation/command-reference/list-batch-jobs
+              - file: technical-documentation/payara-server-documentation/command-reference/list-batch-runtime-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/list-cache-keys
+              - file: technical-documentation/payara-server-documentation/command-reference/list-caches
+              - file: technical-documentation/payara-server-documentation/command-reference/list-clusters
+              - file: technical-documentation/payara-server-documentation/command-reference/list-commands
+              - file: technical-documentation/payara-server-documentation/command-reference/list-components
+              - file: technical-documentation/payara-server-documentation/command-reference/list-configs
+              - file: technical-documentation/payara-server-documentation/command-reference/list-connector-connection-pools
+              - file: technical-documentation/payara-server-documentation/command-reference/list-connector-resources
+              - file: technical-documentation/payara-server-documentation/command-reference/list-connector-security-maps
+              - file: technical-documentation/payara-server-documentation/command-reference/list-connector-work-security-maps
+              - file: technical-documentation/payara-server-documentation/command-reference/list-containers
+              - file: technical-documentation/payara-server-documentation/command-reference/list-context-services
+              - file: technical-documentation/payara-server-documentation/command-reference/list-custom-resources
+              - file: technical-documentation/payara-server-documentation/command-reference/list-deployment-groups
+              - file: technical-documentation/payara-server-documentation/command-reference/list-domains
+              - file: technical-documentation/payara-server-documentation/command-reference/list-file-groups
+              - file: technical-documentation/payara-server-documentation/command-reference/list-file-users
+              - file: technical-documentation/payara-server-documentation/command-reference/list-hazelcast-cluster-members
+              - file: technical-documentation/payara-server-documentation/command-reference/list-hazelcast-members
+              - file: technical-documentation/payara-server-documentation/command-reference/list-healthcheck-services
+              - file: technical-documentation/payara-server-documentation/command-reference/list-http-lb-configs
+              - file: technical-documentation/payara-server-documentation/command-reference/list-http-lbs
+              - file: technical-documentation/payara-server-documentation/command-reference/list-http-listeners
+              - file: technical-documentation/payara-server-documentation/command-reference/list-iiop-listeners
+              - file: technical-documentation/payara-server-documentation/command-reference/list-instances
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jacc-providers
+              - file: technical-documentation/payara-server-documentation/command-reference/list-javamail-resources
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jdbc-connection-pools
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jdbc-resources
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jms-hosts
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jms-resources
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jmsdest
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jndi-entries
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jndi-resources
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jobs
+              - file: technical-documentation/payara-server-documentation/command-reference/list-jvm-options
+              - file: technical-documentation/payara-server-documentation/command-reference/list-keystore-entries
+              - file: technical-documentation/payara-server-documentation/command-reference/list-libraries
+              - file: technical-documentation/payara-server-documentation/command-reference/list-lifecycle-modules
+              - file: technical-documentation/payara-server-documentation/command-reference/list-log-attributes
+              - file: technical-documentation/payara-server-documentation/command-reference/list-log-levels
+              - file: technical-documentation/payara-server-documentation/command-reference/list-loggers
+              - file: technical-documentation/payara-server-documentation/command-reference/list-managed-executor-services
+              - file: technical-documentation/payara-server-documentation/command-reference/list-managed-scheduled-executor-services
+              - file: technical-documentation/payara-server-documentation/command-reference/list-managed-thread-factories
+              - file: technical-documentation/payara-server-documentation/command-reference/list-message-security-providers
+              - file: technical-documentation/payara-server-documentation/command-reference/list-modules
+              - file: technical-documentation/payara-server-documentation/command-reference/list-network-listeners
+              - file: technical-documentation/payara-server-documentation/command-reference/list-nodes-config
+              - file: technical-documentation/payara-server-documentation/command-reference/list-nodes-dcom
+              - file: technical-documentation/payara-server-documentation/command-reference/list-nodes-ssh
+              - file: technical-documentation/payara-server-documentation/command-reference/list-nodes
+              - file: technical-documentation/payara-server-documentation/command-reference/list-notifiers
+              - file: technical-documentation/payara-server-documentation/command-reference/list-password-aliases
+              - file: technical-documentation/payara-server-documentation/command-reference/list-persistence-types
+              - file: technical-documentation/payara-server-documentation/command-reference/list-phone-home
+              - file: technical-documentation/payara-server-documentation/command-reference/list-protocol-filters
+              - file: technical-documentation/payara-server-documentation/command-reference/list-protocol-finders
+              - file: technical-documentation/payara-server-documentation/command-reference/list-protocols
+              - file: technical-documentation/payara-server-documentation/command-reference/list-requesttraces
+              - file: technical-documentation/payara-server-documentation/command-reference/list-resource-adapter-configs
+              - file: technical-documentation/payara-server-documentation/command-reference/list-resource-refs
+              - file: technical-documentation/payara-server-documentation/command-reference/list-rest-endpoints
+              - file: technical-documentation/payara-server-documentation/command-reference/list-secure-admin-internal-users
+              - file: technical-documentation/payara-server-documentation/command-reference/list-secure-admin-principals
+              - file: technical-documentation/payara-server-documentation/command-reference/list-sub-components
+              - file: technical-documentation/payara-server-documentation/command-reference/list-supported-cipher-suites
+              - file: technical-documentation/payara-server-documentation/command-reference/list-system-properties
+              - file: technical-documentation/payara-server-documentation/command-reference/list-threadpools
+              - file: technical-documentation/payara-server-documentation/command-reference/list-timers
+              - file: technical-documentation/payara-server-documentation/command-reference/list-transports
+              - file: technical-documentation/payara-server-documentation/command-reference/list-truststore-entries
+              - file: technical-documentation/payara-server-documentation/command-reference/list-virtual-servers
+              - file: technical-documentation/payara-server-documentation/command-reference/list-web-context-param
+              - file: technical-documentation/payara-server-documentation/command-reference/list-web-env-entry
+              - file: technical-documentation/payara-server-documentation/command-reference/list
+              - file: technical-documentation/payara-server-documentation/command-reference/login
+              - file: technical-documentation/payara-server-documentation/command-reference/migrate-timers
+              - file: technical-documentation/payara-server-documentation/command-reference/monitor
+              - file: technical-documentation/payara-server-documentation/command-reference/monitoring
+              - file: technical-documentation/payara-server-documentation/command-reference/multimode
+              - file: technical-documentation/payara-server-documentation/command-reference/notification-configure
+              - file: technical-documentation/payara-server-documentation/command-reference/osgi-shell
+              - file: technical-documentation/payara-server-documentation/command-reference/osgi
+              - file: technical-documentation/payara-server-documentation/command-reference/package-appclient
+              - file: technical-documentation/payara-server-documentation/command-reference/ping-connection-pool
+              - file: technical-documentation/payara-server-documentation/command-reference/ping-node-dcom
+              - file: technical-documentation/payara-server-documentation/command-reference/ping-node-ssh
+              - file: technical-documentation/payara-server-documentation/command-reference/print-certificate
+              - file: technical-documentation/payara-server-documentation/command-reference/purge-jbatch-repository
+              - file: technical-documentation/payara-server-documentation/command-reference/recover-transactions
+              - file: technical-documentation/payara-server-documentation/command-reference/redeploy
+              - file: technical-documentation/payara-server-documentation/command-reference/remove-expired-certificates
+              - file: technical-documentation/payara-server-documentation/command-reference/remove-from-keystore
+              - file: technical-documentation/payara-server-documentation/command-reference/remove-from-truststore
+              - file: technical-documentation/payara-server-documentation/command-reference/remove-instance-from-deployment-group
+              - file: technical-documentation/payara-server-documentation/command-reference/remove-library
+              - file: technical-documentation/payara-server-documentation/command-reference/renew-self-signed-certificates
+              - file: technical-documentation/payara-server-documentation/command-reference/resource
+              - file: technical-documentation/payara-server-documentation/command-reference/restart-cluster
+              - file: technical-documentation/payara-server-documentation/command-reference/restart-deployment-group
+              - file: technical-documentation/payara-server-documentation/command-reference/restart-domain
+              - file: technical-documentation/payara-server-documentation/command-reference/restart-domains
+              - file: technical-documentation/payara-server-documentation/command-reference/restart-hazelcast
+              - file: technical-documentation/payara-server-documentation/command-reference/restart-http-listeners
+              - file: technical-documentation/payara-server-documentation/command-reference/restart-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/restart-local-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/restart-monitoring
+              - file: technical-documentation/payara-server-documentation/command-reference/restore-domain
+              - file: technical-documentation/payara-server-documentation/command-reference/rollback-transaction
+              - file: technical-documentation/payara-server-documentation/command-reference/rotate-log
+              - file: technical-documentation/payara-server-documentation/command-reference/set-admin-audit-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-amx-enabled
+              - file: technical-documentation/payara-server-documentation/command-reference/set-asadmin-recorder-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-aws-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-azure-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-batch-runtime-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-cdieventbus-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-config-cache
+              - file: technical-documentation/payara-server-documentation/command-reference/set-config-dir
+              - file: technical-documentation/payara-server-documentation/command-reference/set-config-ordinal
+              - file: technical-documentation/payara-server-documentation/command-reference/set-config-property
+              - file: technical-documentation/payara-server-documentation/command-reference/set-datadog-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-discord-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-dynamodb-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-ejb-invoker-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-email-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-environment-warning-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-eventbus-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-fault-tolerance-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-gcp-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-hashicorp-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-healthcheck-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-healthcheck-service-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-jdbc-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-jms-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-jmx-monitoring-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-ldap-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-log-attributes
+              - file: technical-documentation/payara-server-documentation/command-reference/set-log-file-format
+              - file: technical-documentation/payara-server-documentation/command-reference/set-log-levels
+              - file: technical-documentation/payara-server-documentation/command-reference/set-log-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-metrics-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-microprofile-healthcheck-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-monitoring-level
+              - file: technical-documentation/payara-server-documentation/command-reference/set-monitoring-service-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-network-listener-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-newrelic-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-notification-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-openapi-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-requesttracing-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-rest-monitoring-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-slack-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-snmp-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-teams-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-toml-config-source-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set-web-context-param
+              - file: technical-documentation/payara-server-documentation/command-reference/set-web-env-entry
+              - file: technical-documentation/payara-server-documentation/command-reference/set-xmpp-notifier-configuration
+              - file: technical-documentation/payara-server-documentation/command-reference/set
+              - file: technical-documentation/payara-server-documentation/command-reference/setup-local-dcom
+              - file: technical-documentation/payara-server-documentation/command-reference/setup-ssh
+              - file: technical-documentation/payara-server-documentation/command-reference/show-component-status
+              - file: technical-documentation/payara-server-documentation/command-reference/start-cluster
+              - file: technical-documentation/payara-server-documentation/command-reference/start-database
+              - file: technical-documentation/payara-server-documentation/command-reference/start-deployment-group
+              - file: technical-documentation/payara-server-documentation/command-reference/start-domain
+              - file: technical-documentation/payara-server-documentation/command-reference/start-domains
+              - file: technical-documentation/payara-server-documentation/command-reference/start-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/start-local-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/stop-all-domains
+              - file: technical-documentation/payara-server-documentation/command-reference/stop-cluster
+              - file: technical-documentation/payara-server-documentation/command-reference/stop-database
+              - file: technical-documentation/payara-server-documentation/command-reference/stop-deployment-group
+              - file: technical-documentation/payara-server-documentation/command-reference/stop-domain
+              - file: technical-documentation/payara-server-documentation/command-reference/stop-domains
+              - file: technical-documentation/payara-server-documentation/command-reference/stop-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/stop-local-instance
+              - file: technical-documentation/payara-server-documentation/command-reference/undeploy
+              - file: technical-documentation/payara-server-documentation/command-reference/unfreeze-transaction-service
+              - file: technical-documentation/payara-server-documentation/command-reference/uninstall-node-dcom
+              - file: technical-documentation/payara-server-documentation/command-reference/uninstall-node-ssh
+              - file: technical-documentation/payara-server-documentation/command-reference/uninstall-node
+              - file: technical-documentation/payara-server-documentation/command-reference/unset-web-context-param
+              - file: technical-documentation/payara-server-documentation/command-reference/unset-web-env-entry
+              - file: technical-documentation/payara-server-documentation/command-reference/unset
+              - file: technical-documentation/payara-server-documentation/command-reference/update-connector-security-map
+              - file: technical-documentation/payara-server-documentation/command-reference/update-connector-work-security-map
+              - file: technical-documentation/payara-server-documentation/command-reference/update-file-user
+              - file: technical-documentation/payara-server-documentation/command-reference/update-node-config
+              - file: technical-documentation/payara-server-documentation/command-reference/update-node-dcom
+              - file: technical-documentation/payara-server-documentation/command-reference/update-node-docker
+              - file: technical-documentation/payara-server-documentation/command-reference/update-node-ssh
+              - file: technical-documentation/payara-server-documentation/command-reference/update-password-alias
+              - file: technical-documentation/payara-server-documentation/command-reference/uptime
+              - file: technical-documentation/payara-server-documentation/command-reference/validate-dcom
+              - file: technical-documentation/payara-server-documentation/command-reference/validate-multicast
+              - file: technical-documentation/payara-server-documentation/command-reference/verify-domain-xml
+              - file: technical-documentation/payara-server-documentation/command-reference/version
           - title: Extensions
             sections:
-              - file: Technical Documentation/Payara Server Documentation/Extensions/index
-              - file: Technical Documentation/Payara Server Documentation/Extensions/Custom Notifiers
+              - file: technical-documentation/payara-server-documentation/extensions/index
+              - file: technical-documentation/payara-server-documentation/extensions/custom-notifiers
               - title: gRPC Support
                 sections:
-                  - file: Technical Documentation/Payara Server Documentation/Extensions/gRPC Support/index
-                  - file: Technical Documentation/Payara Server Documentation/Extensions/gRPC Support/Installation
-                  - file: Technical Documentation/Payara Server Documentation/Extensions/gRPC Support/Usage
-          - file: Technical Documentation/Payara Server Documentation/Payara Server Docker Image
-          - file: Technical Documentation/Payara Server Documentation/Payara InSight
+                  - file: technical-documentation/payara-server-documentation/extensions/grpc-support/index
+                  - file: technical-documentation/payara-server-documentation/extensions/grpc-support/installation
+                  - file: technical-documentation/payara-server-documentation/extensions/grpc-support/usage
+          - file: technical-documentation/payara-server-documentation/payara-server-docker-image
+          - file: technical-documentation/payara-server-documentation/payara-insight
           - title: Diagnostics and Troubleshooting
             sections:
-              - file: Technical Documentation/Payara Server Documentation/Diagnostics and Troubleshooting/Diagnostics Tool
+              - file: technical-documentation/payara-server-documentation/diagnostics-and-troubleshooting/diagnostics-tool
           - title: Upgrade Guide
             sections:
-              - file: Technical Documentation/Payara Server Documentation/Upgrade Guide/index
-              - file: Technical Documentation/Payara Server Documentation/Upgrade Guide/Upgrade Tool
-              - file: Technical Documentation/Payara Server Documentation/Upgrade Guide/Backup and Restore Method
-              - file: Technical Documentation/Payara Server Documentation/Upgrade Guide/Domain and Node Directories Method
+              - file: technical-documentation/payara-server-documentation/upgrade-guide/index
+              - file: technical-documentation/payara-server-documentation/upgrade-guide/upgrade-tool
+              - file: technical-documentation/payara-server-documentation/upgrade-guide/backup-and-restore-method
+              - file: technical-documentation/payara-server-documentation/upgrade-guide/domain-and-node-directories-method
       - title: Payara Micro Documentation
         sections:
-          - file: Technical Documentation/Payara Micro Documentation/index
-          - file: Technical Documentation/Payara Micro Documentation/Maven Support
+          - file: technical-documentation/payara-micro-documentation/index
+          - file: technical-documentation/payara-micro-documentation/maven-support
           - title: Payara Micro Configuration and Management
             sections:
               - title: Micro Management
                 sections:
                   - title: Stopping and Starting Instances
                     sections:
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Stopping and Starting Instances/Starting Instance
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Stopping and Starting Instances/Stopping Instance
-                  - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Configuring An Instance
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/stopping-and-starting-instances/starting-instance
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/stopping-and-starting-instances/stopping-instance
+                  - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/configuring-an-instance
                   - title: Deploying Applications
                     sections:
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Deploying Applications/Deploy Applications
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Deploying Applications/Deploy Applications Programmatically
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/deploying-applications/deploy-applications
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/deploying-applications/deploy-applications-programmatically
                   - title: Jar Structure and Configuration
                     sections:
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Jar Structure and Configuration/Payara Micro Jar Structure
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Jar Structure and Configuration/Adding Jars
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Jar Structure and Configuration/Root Directory
-                  - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Clustering
-                  - file: "Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/HTTP(S) Auto-Binding"
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/jar-structure-and-configuration/payara-micro-jar-structure
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/jar-structure-and-configuration/adding-jars
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/jar-structure-and-configuration/root-directory
+                  - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/clustering
+                  - file: "technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/http-s-auto-binding"
                   - title: Command Line Options
                     sections:
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Command Line Options/Command Line Options
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Command Line Options/Disable Phone Home
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/command-line-options/command-line-options
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/command-line-options/disable-phone-home
                   - title: Asadmin Commands
                     sections:
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Asadmin Commands/Pre and Post Boot Commands
-                      - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/Asadmin Commands/Send Asadmin Commands from Admin Console
-                  - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Micro Management/CRaC/CRaC Support
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/asadmin-commands/pre-and-post-boot-commands
+                      - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/asadmin-commands/send-asadmin-commands-from-admin-console
+                  - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/crac/crac-support
               - title: Database Management
                 sections:
-                  - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Database Management/Log JDBC Calls
-                  - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Database Management/SQL Trace Listeners
-                  - file: Technical Documentation/Payara Micro Documentation/Payara Micro Configuration and Management/Database Management/Slow SQL Logger
+                  - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/database-management/log-jdbc-calls
+                  - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/database-management/sql-trace-listeners
+                  - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/database-management/slow-sql-logger
           - title: Logging and Monitoring
             sections:
               - title: Logging
                 sections:
-                  - file: Technical Documentation/Payara Micro Documentation/Logging and Monitoring/Logging/Logging to File
-                  - file: Technical Documentation/Payara Micro Documentation/Logging and Monitoring/Logging/Config Access Log
-              - file: Technical Documentation/Payara Micro Documentation/Logging and Monitoring/Request Tracing
+                  - file: technical-documentation/payara-micro-documentation/logging-and-monitoring/logging/logging-to-file
+                  - file: technical-documentation/payara-micro-documentation/logging-and-monitoring/logging/config-access-log
+              - file: technical-documentation/payara-micro-documentation/logging-and-monitoring/request-tracing
           - title: API
             sections:
-              - file: Technical Documentation/Payara Micro Documentation/API/JCache in Payara Micro
+              - file: technical-documentation/payara-micro-documentation/api/jcache-in-payara-micro
               - title: Payara Micro API
                 sections:
-                  - file: Technical Documentation/Payara Micro Documentation/API/Payara Micro API/index
-                  - file: Technical Documentation/Payara Micro Documentation/API/Payara Micro API/Using the Payara Micro API
+                  - file: technical-documentation/payara-micro-documentation/api/payara-micro-api/index
+                  - file: technical-documentation/payara-micro-documentation/api/payara-micro-api/using-the-payara-micro-api
           - title: Extensions
             sections:
-              - file: Technical Documentation/Payara Micro Documentation/Extensions/JCA Support
-              - file: Technical Documentation/Payara Micro Documentation/Extensions/Persistent EJB Timers
-              - file: Technical Documentation/Payara Micro Documentation/Extensions/Remote CDI Events
-              - file: Technical Documentation/Payara Micro Documentation/Extensions/Running Callable Objects
-          - file: Technical Documentation/Payara Micro Documentation/Payara Micro Docker Image
+              - file: technical-documentation/payara-micro-documentation/extensions/jca-support
+              - file: technical-documentation/payara-micro-documentation/extensions/persistent-ejb-timers
+              - file: technical-documentation/payara-micro-documentation/extensions/remote-cdi-events
+              - file: technical-documentation/payara-micro-documentation/extensions/running-callable-objects
+          - file: technical-documentation/payara-micro-documentation/payara-micro-docker-image
       - title: Payara Embedded Documentation
         sections:
-          - file: Technical Documentation/Payara Embedded Documentation/index
-          - file: Technical Documentation/Payara Embedded Documentation/Payara Server Embedded Guide
+          - file: technical-documentation/payara-embedded-documentation/index
+          - file: technical-documentation/payara-embedded-documentation/payara-server-embedded-guide
       - title: Application Development
         sections:
-          - file: Technical Documentation/Application Development/index
-          - file: Technical Documentation/Application Development/Class Loaders
-          - file: Technical Documentation/Application Development/Debugging Applications
-          - file: Technical Documentation/Application Development/Securing Applications
-          - file: Technical Documentation/Application Development/Developing CDI Components
-          - file: Technical Documentation/Application Development/Developing SOAP Webservices
-          - file: Technical Documentation/Application Development/Configuring the Java Persistence Provider
-          - file: Technical Documentation/Application Development/Developing Web Applications
-          - file: Technical Documentation/Application Development/Using Jakarta Faces Technology
-          - file: Technical Documentation/Application Development/Using Jakarta MVC
-          - file: Technical Documentation/Application Development/Using Jakarta Enterprise Beans Technology
-          - file: Technical Documentation/Application Development/Using Lite Remote EJB Technology
-          - file: Technical Documentation/Application Development/Using Container Managed Persistence
-          - file: Technical Documentation/Application Development/Developing Java Clients
-          - file: Technical Documentation/Application Development/Developing Connectors
-          - file: Technical Documentation/Application Development/Developing Lifecycle Listeners
-          - file: Technical Documentation/Application Development/Developing OSGi-enabled Applications
-          - file: Technical Documentation/Application Development/Using the JDBC API for Database Access
-          - file: Technical Documentation/Application Development/Using the Transaction Service
-          - file: Technical Documentation/Application Development/Using the Java Naming and Directory Interface
-          - file: Technical Documentation/Application Development/Using Jakarta Messaging
-          - file: Technical Documentation/Application Development/Using Jakarta Mail
-          - file: Technical Documentation/Application Development/Using the Data Grid in your Applications
-          - file: Technical Documentation/Application Development/Using the JCache API
-          - file: Technical Documentation/Application Development/Using Request Tracing in Applications
-          - file: Technical Documentation/Application Development/Tracing APIs Compatibility
+          - file: technical-documentation/application-development/index
+          - file: technical-documentation/application-development/class-loaders
+          - file: technical-documentation/application-development/debugging-applications
+          - file: technical-documentation/application-development/securing-applications
+          - file: technical-documentation/application-development/developing-cdi-components
+          - file: technical-documentation/application-development/developing-soap-webservices
+          - file: technical-documentation/application-development/configuring-the-java-persistence-provider
+          - file: technical-documentation/application-development/developing-web-applications
+          - file: technical-documentation/application-development/using-jakarta-faces-technology
+          - file: technical-documentation/application-development/using-jakarta-mvc
+          - file: technical-documentation/application-development/using-jakarta-enterprise-beans-technology
+          - file: technical-documentation/application-development/using-lite-remote-ejb-technology
+          - file: technical-documentation/application-development/using-container-managed-persistence
+          - file: technical-documentation/application-development/developing-java-clients
+          - file: technical-documentation/application-development/developing-connectors
+          - file: technical-documentation/application-development/developing-lifecycle-listeners
+          - file: technical-documentation/application-development/developing-osgi-enabled-applications
+          - file: technical-documentation/application-development/using-the-jdbc-api-for-database-access
+          - file: technical-documentation/application-development/using-the-transaction-service
+          - file: technical-documentation/application-development/using-the-java-naming-and-directory-interface
+          - file: technical-documentation/application-development/using-jakarta-messaging
+          - file: technical-documentation/application-development/using-jakarta-mail
+          - file: technical-documentation/application-development/using-the-data-grid-in-your-applications
+          - file: technical-documentation/application-development/using-the-jcache-api
+          - file: technical-documentation/application-development/using-request-tracing-in-applications
+          - file: technical-documentation/application-development/tracing-apis-compatibility
       - title: Public API
         sections:
-          - file: Technical Documentation/Public API/index
-          - file: Technical Documentation/Public API/CDI Events
-          - file: Technical Documentation/Public API/Clustered Singleton
-          - file: Technical Documentation/Public API/OAuth Support
-          - file: Technical Documentation/Public API/OpenID Connect Support
-          - file: Technical Documentation/Public API/Roles Permitted
-          - file: Technical Documentation/Public API/Security Extensions
-          - file: Technical Documentation/Public API/Yubikey Support
+          - file: technical-documentation/public-api/index
+          - file: technical-documentation/public-api/cdi-events
+          - file: technical-documentation/public-api/clustered-singleton
+          - file: technical-documentation/public-api/oauth-support
+          - file: technical-documentation/public-api/openid-connect-support
+          - file: technical-documentation/public-api/roles-permitted
+          - file: technical-documentation/public-api/security-extensions
+          - file: technical-documentation/public-api/yubikey-support
       - title: MicroProfile
         sections:
-          - file: Technical Documentation/MicroProfile/index
+          - file: technical-documentation/microprofile/index
           - title: Config
             sections:
-              - file: Technical Documentation/MicroProfile/Config/index
+              - file: technical-documentation/microprofile/config/index
               - title: Cloud
                 sections:
-                  - file: Technical Documentation/MicroProfile/Config/Cloud/index
-                  - file: Technical Documentation/MicroProfile/Config/Cloud/AWS
-                  - file: Technical Documentation/MicroProfile/Config/Cloud/Azure
-                  - file: Technical Documentation/MicroProfile/Config/Cloud/DynamoDB
-                  - file: Technical Documentation/MicroProfile/Config/Cloud/GCP
-                  - file: Technical Documentation/MicroProfile/Config/Cloud/Hashicorp
-              - file: Technical Documentation/MicroProfile/Config/Directory
-              - file: Technical Documentation/MicroProfile/Config/JDBC
-              - file: Technical Documentation/MicroProfile/Config/LDAP
-              - file: Technical Documentation/MicroProfile/Config/TOML
-          - file: Technical Documentation/MicroProfile/Fault Tolerance
-          - file: Technical Documentation/MicroProfile/HealthCheck
-          - file: Technical Documentation/MicroProfile/JWT
+                  - file: technical-documentation/microprofile/config/cloud/index
+                  - file: technical-documentation/microprofile/config/cloud/aws
+                  - file: technical-documentation/microprofile/config/cloud/azure
+                  - file: technical-documentation/microprofile/config/cloud/dynamodb
+                  - file: technical-documentation/microprofile/config/cloud/gcp
+                  - file: technical-documentation/microprofile/config/cloud/hashicorp
+              - file: technical-documentation/microprofile/config/directory
+              - file: technical-documentation/microprofile/config/jdbc
+              - file: technical-documentation/microprofile/config/ldap
+              - file: technical-documentation/microprofile/config/toml
+          - file: technical-documentation/microprofile/fault-tolerance
+          - file: technical-documentation/microprofile/healthcheck
+          - file: technical-documentation/microprofile/jwt
           - title: Metrics
             sections:
-              - file: Technical Documentation/MicroProfile/Metrics/Metrics Configuration
-              - file: Technical Documentation/MicroProfile/Metrics/Metrics Rest Endpoint
-              - file: Technical Documentation/MicroProfile/Metrics/Vendor Metrics
-          - file: Technical Documentation/MicroProfile/OpenAPI
-          - file: Technical Documentation/MicroProfile/OpenTelemetry and OpenTracing
-          - file: Technical Documentation/MicroProfile/OpenTracing
-          - file: Technical Documentation/MicroProfile/Rest Client
-          - file: Technical Documentation/MicroProfile/Telemetry
+              - file: technical-documentation/microprofile/metrics/metrics-configuration
+              - file: technical-documentation/microprofile/metrics/metrics-rest-endpoint
+              - file: technical-documentation/microprofile/metrics/vendor-metrics
+          - file: technical-documentation/microprofile/openapi
+          - file: technical-documentation/microprofile/opentelemetry-and-opentracing
+          - file: technical-documentation/microprofile/opentracing
+          - file: technical-documentation/microprofile/rest-client
+          - file: technical-documentation/microprofile/telemetry
       - title: Ecosystem
         sections:
-          - file: Technical Documentation/Ecosystem/index
+          - file: technical-documentation/ecosystem/index
           - title: Project Management Tools
             sections:
-              - file: Technical Documentation/Ecosystem/Project Management Tools/Maven Bom
+              - file: technical-documentation/ecosystem/project-management-tools/maven-bom
               - title: Maven Plugin
                 sections:
-                  - file: Technical Documentation/Ecosystem/Project Management Tools/Maven Plugin/index
-                  - file: Technical Documentation/Ecosystem/Project Management Tools/Maven Plugin/Payara Server Maven Plugin
-                  - file: Technical Documentation/Ecosystem/Project Management Tools/Maven Plugin/Payara Micro Maven Plugin
-              - file: Technical Documentation/Ecosystem/Project Management Tools/Maven Archetype
-              - file: Technical Documentation/Ecosystem/Project Management Tools/Gradle Plugin
-              - file: Technical Documentation/Ecosystem/Project Management Tools/Maven Regex Profile Activation
-              - file: Technical Documentation/Ecosystem/Project Management Tools/Payara Starter
+                  - file: technical-documentation/ecosystem/project-management-tools/maven-plugin/index
+                  - file: technical-documentation/ecosystem/project-management-tools/maven-plugin/payara-server-maven-plugin
+                  - file: technical-documentation/ecosystem/project-management-tools/maven-plugin/payara-micro-maven-plugin
+              - file: technical-documentation/ecosystem/project-management-tools/maven-archetype
+              - file: technical-documentation/ecosystem/project-management-tools/gradle-plugin
+              - file: technical-documentation/ecosystem/project-management-tools/maven-regex-profile-activation
+              - file: technical-documentation/ecosystem/project-management-tools/payara-starter
           - title: IDE Integration
             sections:
               - title: Eclipse Plugin
                 sections:
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Eclipse Plugin/index
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Eclipse Plugin/Payara Server
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Eclipse Plugin/Payara Micro
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Eclipse Plugin/Building Eclipse Plugin
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Eclipse Plugin/Transform to Jakarta-EE10
+                  - file: technical-documentation/ecosystem/ide-integration/eclipse-plugin/index
+                  - file: technical-documentation/ecosystem/ide-integration/eclipse-plugin/payara-server
+                  - file: technical-documentation/ecosystem/ide-integration/eclipse-plugin/payara-micro
+                  - file: technical-documentation/ecosystem/ide-integration/eclipse-plugin/building-eclipse-plugin
+                  - file: technical-documentation/ecosystem/ide-integration/eclipse-plugin/transform-to-jakarta-ee10
               - title: IntelliJ Plugin
                 sections:
-                  - file: Technical Documentation/Ecosystem/IDE Integration/IntelliJ Plugin/index
-                  - file: Technical Documentation/Ecosystem/IDE Integration/IntelliJ Plugin/Payara Server
-                  - file: Technical Documentation/Ecosystem/IDE Integration/IntelliJ Plugin/Payara Micro
-                  - file: Technical Documentation/Ecosystem/IDE Integration/IntelliJ Plugin/Building IntelliJ Plugin
-                  - file: Technical Documentation/Ecosystem/IDE Integration/IntelliJ Plugin/Transform to Jakarta-EE10
+                  - file: technical-documentation/ecosystem/ide-integration/intellij-plugin/index
+                  - file: technical-documentation/ecosystem/ide-integration/intellij-plugin/payara-server
+                  - file: technical-documentation/ecosystem/ide-integration/intellij-plugin/payara-micro
+                  - file: technical-documentation/ecosystem/ide-integration/intellij-plugin/building-intellij-plugin
+                  - file: technical-documentation/ecosystem/ide-integration/intellij-plugin/transform-to-jakarta-ee10
               - title: Apache NetBeans IDE
                 sections:
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Apache NetBeans IDE/index
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Apache NetBeans IDE/Payara Server
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Apache NetBeans IDE/Payara Micro
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Apache NetBeans IDE/Building Apache NetBeans IDE
-                  - file: Technical Documentation/Ecosystem/IDE Integration/Apache NetBeans IDE/Transform to Jakarta-EE10
+                  - file: technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/index
+                  - file: technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/payara-server
+                  - file: technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/payara-micro
+                  - file: technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/building-apache-netbeans-ide
+                  - file: technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/transform-to-jakarta-ee10
               - title: VSCode Extension
                 sections:
-                  - file: Technical Documentation/Ecosystem/IDE Integration/VSCode Extension/index
-                  - file: Technical Documentation/Ecosystem/IDE Integration/VSCode Extension/Payara Server
-                  - file: Technical Documentation/Ecosystem/IDE Integration/VSCode Extension/Payara Micro
-                  - file: Technical Documentation/Ecosystem/IDE Integration/VSCode Extension/Building VSCode Extension
-                  - file: Technical Documentation/Ecosystem/IDE Integration/VSCode Extension/Transform to Jakarta-EE10
-              - file: Technical Documentation/Ecosystem/IDE Integration/Hot Deploy and Auto Deploy
+                  - file: technical-documentation/ecosystem/ide-integration/vscode-extension/index
+                  - file: technical-documentation/ecosystem/ide-integration/vscode-extension/payara-server
+                  - file: technical-documentation/ecosystem/ide-integration/vscode-extension/payara-micro
+                  - file: technical-documentation/ecosystem/ide-integration/vscode-extension/building-vscode-extension
+                  - file: technical-documentation/ecosystem/ide-integration/vscode-extension/transform-to-jakarta-ee10
+              - file: technical-documentation/ecosystem/ide-integration/hot-deploy-and-auto-deploy
           - title: Connector Suites
             sections:
               - title: Arquillian Containers
                 sections:
-                  - file: Technical Documentation/Ecosystem/Connector Suites/Arquillian Containers/index
-                  - file: Technical Documentation/Ecosystem/Connector Suites/Arquillian Containers/Payara Server Embedded
-                  - file: Technical Documentation/Ecosystem/Connector Suites/Arquillian Containers/Payara Server Managed
-                  - file: Technical Documentation/Ecosystem/Connector Suites/Arquillian Containers/Payara Server Remote
-                  - file: Technical Documentation/Ecosystem/Connector Suites/Arquillian Containers/Payara Micro Managed
+                  - file: technical-documentation/ecosystem/connector-suites/arquillian-containers/index
+                  - file: technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-embedded
+                  - file: technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-managed
+                  - file: technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-remote
+                  - file: technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-micro-managed
               - title: Cloud Connectors
                 sections:
-                  - file: Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/index
+                  - file: technical-documentation/ecosystem/connector-suites/cloud-connectors/index
                   - title: Amazon SQS
                     sections:
-                      - file: Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Amazon SQS/index
-                      - file: Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Amazon SQS/Versioning
-                      - file: Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Amazon SQS/SSO Integration
-                      - file: Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Amazon SQS/STS Integration
-                      - file: Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Amazon SQS/Queue Management
-                  - file: Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Apache Kafka
-                  - file: Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Azure SB
-                  - file: Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/MQTT
-              - file: Technical Documentation/Ecosystem/Connector Suites/Security Connectors
-          - file: Technical Documentation/Ecosystem/Jakarta EE Upgrade Advisor
+                      - file: technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/index
+                      - file: technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/versioning
+                      - file: technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/sso-integration
+                      - file: technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/sts-integration
+                      - file: technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/queue-management
+                  - file: technical-documentation/ecosystem/connector-suites/cloud-connectors/apache-kafka
+                  - file: technical-documentation/ecosystem/connector-suites/cloud-connectors/azure-sb
+                  - file: technical-documentation/ecosystem/connector-suites/cloud-connectors/mqtt
+              - file: technical-documentation/ecosystem/connector-suites/security-connectors
+          - file: technical-documentation/ecosystem/jakarta-ee-upgrade-advisor
           - title: Miscellaneous
             sections:
-              - file: Technical Documentation/Ecosystem/Miscellaneous/JAX-RS Extension
-
+              - file: technical-documentation/ecosystem/miscellaneous/jax-rs-extension
   - title: Release Notes
     sections:
-      - file: Release Notes/index
-      - file: Release Notes/Release Notes 6.37.0
-      - file: Release Notes/Release Notes 6.36.0
-      - file: Release Notes/Release Notes 6.35.0
-      - file: Release Notes/Release Notes 6.34.0
-      - file: Release Notes/Release Notes 6.33.0
-      - file: Release Notes/Release Notes 6.32.0
-      - file: Release Notes/Release Notes 6.31.0
-      - file: Release Notes/Release Notes 6.30.0
-      - file: Release Notes/Release Notes 6.29.0
-      - file: Release Notes/Release Notes 6.28.0
-      - file: Release Notes/Release Notes 6.27.0
-      - file: Release Notes/Release Notes 6.26.0
-      - file: Release Notes/Release Notes 6.25.0
-      - file: Release Notes/Release Notes 6.24.0
-      - file: Release Notes/Release Notes 6.23.0
-      - file: Release Notes/Release Notes 6.22.0
-      - file: Release Notes/Release Notes 6.21.0
-      - file: Release Notes/Release Notes 6.20.0
-      - file: Release Notes/Release Notes 6.19.0
-      - file: Release Notes/Release Notes 6.18.0
-      - file: Release Notes/Release Notes 6.17.0
-      - file: Release Notes/Release Notes 6.16.0
-      - file: Release Notes/Release Notes 6.15.0
-      - file: Release Notes/Release Notes 6.14.0
-      - file: Release Notes/Release Notes 6.13.0
-      - file: Release Notes/Release Notes 6.12.0
-      - file: Release Notes/Release Notes 6.11.0
-      - file: Release Notes/Release Notes 6.10.0
-      - file: Release Notes/Release Notes 6.9.0
-      - file: Release Notes/Release Notes 6.8.0
-      - file: Release Notes/Release Notes 6.7.0
-      - file: Release Notes/Release Notes 6.6.0
-      - file: Release Notes/Release Notes 6.5.0
-      - file: Release Notes/Release Notes 6.4.0
-      - file: Release Notes/Release Notes 6.3.0
-      - file: Release Notes/Release Notes 6.2.0
-      - file: Release Notes/Release Notes 6.1.0
-      - file: Release Notes/Release Notes 6.0.0
-
+      - file: release-notes/index
+      - file: release-notes/release-notes-6.37.0
+      - file: release-notes/release-notes-6.36.0
+      - file: release-notes/release-notes-6.35.0
+      - file: release-notes/release-notes-6.34.0
+      - file: release-notes/release-notes-6.33.0
+      - file: release-notes/release-notes-6.32.0
+      - file: release-notes/release-notes-6.31.0
+      - file: release-notes/release-notes-6.30.0
+      - file: release-notes/release-notes-6.29.0
+      - file: release-notes/release-notes-6.28.0
+      - file: release-notes/release-notes-6.27.0
+      - file: release-notes/release-notes-6.26.0
+      - file: release-notes/release-notes-6.25.0
+      - file: release-notes/release-notes-6.24.0
+      - file: release-notes/release-notes-6.23.0
+      - file: release-notes/release-notes-6.22.0
+      - file: release-notes/release-notes-6.21.0
+      - file: release-notes/release-notes-6.20.0
+      - file: release-notes/release-notes-6.19.0
+      - file: release-notes/release-notes-6.18.0
+      - file: release-notes/release-notes-6.17.0
+      - file: release-notes/release-notes-6.16.0
+      - file: release-notes/release-notes-6.15.0
+      - file: release-notes/release-notes-6.14.0
+      - file: release-notes/release-notes-6.13.0
+      - file: release-notes/release-notes-6.12.0
+      - file: release-notes/release-notes-6.11.0
+      - file: release-notes/release-notes-6.10.0
+      - file: release-notes/release-notes-6.9.0
+      - file: release-notes/release-notes-6.8.0
+      - file: release-notes/release-notes-6.7.0
+      - file: release-notes/release-notes-6.6.0
+      - file: release-notes/release-notes-6.5.0
+      - file: release-notes/release-notes-6.4.0
+      - file: release-notes/release-notes-6.3.0
+      - file: release-notes/release-notes-6.2.0
+      - file: release-notes/release-notes-6.1.0
+      - file: release-notes/release-notes-6.0.0
   - title: Jakarta EE Certification
     sections:
-      - file: Jakarta EE Certification/index
+      - file: jakarta-ee-certification/index
       - title: 6.37.0
         sections:
-          - file: "Jakarta EE Certification/6.37.0/6.37.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.37.0/6.37.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.37.0/6.37.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.37.0/6.37.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.37.0/6.37.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.37.0/6.37.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.37.0/6.37.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.37.0/6.37.0-web-profile-core-tck-results"
       - title: 6.36.0
         sections:
-          - file: "Jakarta EE Certification/6.36.0/6.36.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.36.0/6.36.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.36.0/6.36.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.36.0/6.36.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.36.0/6.36.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.36.0/6.36.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.36.0/6.36.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.36.0/6.36.0-web-profile-core-tck-results"
       - title: 6.35.0
         sections:
-          - file: "Jakarta EE Certification/6.35.0/6.35.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.35.0/6.35.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.35.0/6.35.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.35.0/6.35.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.35.0/6.35.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.35.0/6.35.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.35.0/6.35.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.35.0/6.35.0-web-profile-core-tck-results"
       - title: 6.34.0
         sections:
-          - file: "Jakarta EE Certification/6.34.0/6.34.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.34.0/6.34.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.34.0/6.34.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.34.0/6.34.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.34.0/6.34.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.34.0/6.34.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.34.0/6.34.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.34.0/6.34.0-web-profile-core-tck-results"
       - title: 6.33.0
         sections:
-          - file: "Jakarta EE Certification/6.33.0/6.33.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.33.0/6.33.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.33.0/6.33.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.33.0/6.33.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.33.0/6.33.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.33.0/6.33.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.33.0/6.33.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.33.0/6.33.0-web-profile-core-tck-results"
       - title: 6.32.0
         sections:
-          - file: "Jakarta EE Certification/6.32.0/6.32.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.32.0/6.32.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.32.0/6.32.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.32.0/6.32.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.32.0/6.32.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.32.0/6.32.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.32.0/6.32.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.32.0/6.32.0-web-profile-core-tck-results"
       - title: 6.31.0
         sections:
-          - file: "Jakarta EE Certification/6.31.0/6.31.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.31.0/6.31.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.31.0/6.31.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.31.0/6.31.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.31.0/6.31.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.31.0/6.31.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.31.0/6.31.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.31.0/6.31.0-web-profile-core-tck-results"
       - title: 6.30.0
         sections:
-          - file: "Jakarta EE Certification/6.30.0/6.30.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.30.0/6.30.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.30.0/6.30.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.30.0/6.30.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.30.0/6.30.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.30.0/6.30.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.30.0/6.30.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.30.0/6.30.0-web-profile-core-tck-results"
       - title: 6.29.0
         sections:
-          - file: "Jakarta EE Certification/6.29.0/6.29.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.29.0/6.29.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.29.0/6.29.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.29.0/6.29.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.29.0/6.29.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.29.0/6.29.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.29.0/6.29.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.29.0/6.29.0-web-profile-core-tck-results"
       - title: 6.28.0
         sections:
-          - file: "Jakarta EE Certification/6.28.0/6.28.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.28.0/6.28.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.28.0/6.28.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.28.0/6.28.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.28.0/6.28.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.28.0/6.28.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.28.0/6.28.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.28.0/6.28.0-web-profile-core-tck-results"
       - title: 6.27.0
         sections:
-          - file: "Jakarta EE Certification/6.27.0/6.27.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.27.0/6.27.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.27.0/6.27.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.27.0/6.27.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.27.0/6.27.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.27.0/6.27.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.27.0/6.27.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.27.0/6.27.0-web-profile-core-tck-results"
       - title: 6.26.0
         sections:
-          - file: "Jakarta EE Certification/6.26.0/6.26.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.26.0/6.26.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.26.0/6.26.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.26.0/6.26.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.26.0/6.26.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.26.0/6.26.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.26.0/6.26.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.26.0/6.26.0-web-profile-core-tck-results"
       - title: 6.25.0
         sections:
-          - file: "Jakarta EE Certification/6.25.0/6.25.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.25.0/6.25.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.25.0/6.25.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.25.0/6.25.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.25.0/6.25.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.25.0/6.25.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.25.0/6.25.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.25.0/6.25.0-web-profile-core-tck-results"
       - title: 6.24.0
         sections:
-          - file: "Jakarta EE Certification/6.24.0/6.24.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.24.0/6.24.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.24.0/6.24.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.24.0/6.24.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.24.0/6.24.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.24.0/6.24.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.24.0/6.24.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.24.0/6.24.0-web-profile-core-tck-results"
       - title: 6.23.0
         sections:
-          - file: "Jakarta EE Certification/6.23.0/6.23.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.23.0/6.23.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.23.0/6.23.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.23.0/6.23.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.23.0/6.23.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.23.0/6.23.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.23.0/6.23.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.23.0/6.23.0-web-profile-core-tck-results"
       - title: 6.22.0
         sections:
-          - file: "Jakarta EE Certification/6.22.0/6.22.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.22.0/6.22.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.22.0/6.22.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.22.0/6.22.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.22.0/6.22.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.22.0/6.22.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.22.0/6.22.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.22.0/6.22.0-web-profile-core-tck-results"
       - title: 6.21.0
         sections:
-          - file: "Jakarta EE Certification/6.21.0/6.21.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.21.0/6.21.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.21.0/6.21.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.21.0/6.21.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.21.0/6.21.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.21.0/6.21.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.21.0/6.21.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.21.0/6.21.0-web-profile-core-tck-results"
       - title: 6.20.0
         sections:
-          - file: "Jakarta EE Certification/6.20.0/6.20.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.20.0/6.20.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.20.0/6.20.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.20.0/6.20.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.20.0/6.20.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.20.0/6.20.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.20.0/6.20.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.20.0/6.20.0-web-profile-core-tck-results"
       - title: 6.19.0
         sections:
-          - file: "Jakarta EE Certification/6.19.0/6.19.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.19.0/6.19.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.19.0/6.19.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.19.0/6.19.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.19.0/6.19.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.19.0/6.19.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.19.0/6.19.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.19.0/6.19.0-web-profile-core-tck-results"
       - title: 6.18.0
         sections:
-          - file: "Jakarta EE Certification/6.18.0/6.18.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.18.0/6.18.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.18.0/6.18.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.18.0/6.18.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.18.0/6.18.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.18.0/6.18.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.18.0/6.18.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.18.0/6.18.0-web-profile-core-tck-results"
       - title: 6.17.0
         sections:
-          - file: "Jakarta EE Certification/6.17.0/6.17.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.17.0/6.17.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.17.0/6.17.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.17.0/6.17.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.17.0/6.17.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.17.0/6.17.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.17.0/6.17.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.17.0/6.17.0-web-profile-core-tck-results"
       - title: 6.16.0
         sections:
-          - file: "Jakarta EE Certification/6.16.0/6.16.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.16.0/6.16.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.16.0/6.16.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.16.0/6.16.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.16.0/6.16.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.16.0/6.16.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.16.0/6.16.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.16.0/6.16.0-web-profile-core-tck-results"
       - title: 6.15.0
         sections:
-          - file: "Jakarta EE Certification/6.15.0/6.15.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.15.0/6.15.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.15.0/6.15.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.15.0/6.15.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.15.0/6.15.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.15.0/6.15.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.15.0/6.15.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.15.0/6.15.0-web-profile-core-tck-results"
       - title: 6.14.0
         sections:
-          - file: "Jakarta EE Certification/6.14.0/6.14.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.14.0/6.14.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.14.0/6.14.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.14.0/6.14.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.14.0/6.14.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.14.0/6.14.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.14.0/6.14.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.14.0/6.14.0-web-profile-core-tck-results"
       - title: 6.13.0
         sections:
-          - file: "Jakarta EE Certification/6.13.0/6.13.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.13.0/6.13.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.13.0/6.13.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.13.0/6.13.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.13.0/6.13.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.13.0/6.13.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.13.0/6.13.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.13.0/6.13.0-web-profile-core-tck-results"
       - title: 6.12.0
         sections:
-          - file: "Jakarta EE Certification/6.12.0/6.12.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.12.0/6.12.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.12.0/6.12.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.12.0/6.12.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.12.0/6.12.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.12.0/6.12.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.12.0/6.12.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.12.0/6.12.0-web-profile-core-tck-results"
       - title: 6.11.0
         sections:
-          - file: "Jakarta EE Certification/6.11.0/6.11.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.11.0/6.11.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.11.0/6.11.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.11.0/6.11.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.11.0/6.11.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.11.0/6.11.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.11.0/6.11.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.11.0/6.11.0-web-profile-core-tck-results"
       - title: 6.10.0
         sections:
-          - file: "Jakarta EE Certification/6.10.0/6.10.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.10.0/6.10.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.10.0/6.10.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.10.0/6.10.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.10.0/6.10.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.10.0/6.10.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.10.0/6.10.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.10.0/6.10.0-web-profile-core-tck-results"
       - title: 6.9.0
         sections:
-          - file: "Jakarta EE Certification/6.9.0/6.9.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.9.0/6.9.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.9.0/6.9.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.9.0/6.9.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.9.0/6.9.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.9.0/6.9.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.9.0/6.9.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.9.0/6.9.0-web-profile-core-tck-results"
       - title: 6.8.0
         sections:
-          - file: "Jakarta EE Certification/6.8.0/6.8.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.8.0/6.8.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.8.0/6.8.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.8.0/6.8.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.8.0/6.8.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.8.0/6.8.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.8.0/6.8.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.8.0/6.8.0-web-profile-core-tck-results"
       - title: 6.7.0
         sections:
-          - file: "Jakarta EE Certification/6.7.0/6.7.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.7.0/6.7.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.7.0/6.7.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.7.0/6.7.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.7.0/6.7.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.7.0/6.7.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.7.0/6.7.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.7.0/6.7.0-web-profile-core-tck-results"
       - title: 6.6.0
         sections:
-          - file: "Jakarta EE Certification/6.6.0/6.6.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.6.0/6.6.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.6.0/6.6.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.6.0/6.6.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.6.0/6.6.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.6.0/6.6.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.6.0/6.6.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.6.0/6.6.0-web-profile-core-tck-results"
       - title: 6.5.0
         sections:
-          - file: "Jakarta EE Certification/6.5.0/6.5.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.5.0/6.5.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.5.0/6.5.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.5.0/6.5.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.5.0/6.5.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.5.0/6.5.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.5.0/6.5.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.5.0/6.5.0-web-profile-core-tck-results"
       - title: 6.4.0
         sections:
-          - file: "Jakarta EE Certification/6.4.0/6.4.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.4.0/6.4.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.4.0/6.4.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.4.0/6.4.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.4.0/6.4.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.4.0/6.4.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.4.0/6.4.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.4.0/6.4.0-web-profile-core-tck-results"
       - title: 6.3.0
         sections:
-          - file: "Jakarta EE Certification/6.3.0/6.3.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.3.0/6.3.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.3.0/6.3.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.3.0/6.3.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.3.0/6.3.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.3.0/6.3.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.3.0/6.3.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.3.0/6.3.0-web-profile-core-tck-results"
       - title: 6.2.0
         sections:
-          - file: "Jakarta EE Certification/6.2.0/6.2.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.2.0/6.2.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.2.0/6.2.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.2.0/6.2.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.2.0/6.2.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.2.0/6.2.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.2.0/6.2.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.2.0/6.2.0-web-profile-core-tck-results"
       - title: 6.1.0
         sections:
-          - file: "Jakarta EE Certification/6.1.0/6.1.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.1.0/6.1.0 (Web Profile) Web TCK Results"
-          - file: "Jakarta EE Certification/6.1.0/6.1.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.1.0/6.1.0 (Web Profile) Core TCK Results"
+          - file: "jakarta-ee-certification/6.1.0/6.1.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.1.0/6.1.0-web-profile-web-tck-results"
+          - file: "jakarta-ee-certification/6.1.0/6.1.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.1.0/6.1.0-web-profile-core-tck-results"
       - title: 6.0.0
         sections:
-          - file: "Jakarta EE Certification/6.0.0/6.0.0 Platform TCK Results"
-          - file: "Jakarta EE Certification/6.0.0/6.0.0 Web TCK Results"
-          - file: "Jakarta EE Certification/6.0.0/6.0.0 Core TCK Results"
-          - file: "Jakarta EE Certification/6.0.0/6.0.0 (Web Profile) Core TCK Results"
-
+          - file: "jakarta-ee-certification/6.0.0/6.0.0-platform-tck-results"
+          - file: "jakarta-ee-certification/6.0.0/6.0.0-web-tck-results"
+          - file: "jakarta-ee-certification/6.0.0/6.0.0-core-tck-results"
+          - file: "jakarta-ee-certification/6.0.0/6.0.0-web-profile-core-tck-results"
   - title: Eclipse MicroProfile Certification
     sections:
       - file: eclipse-microprofile-certification/index
@@ -1114,12 +1110,10 @@ sections:
 
   - title: Security
     sections:
-      - file: Security/index
-      - file: Security/Security Fix List
-
+      - file: security/index
+      - file: security/security-fix-list
   - title: Appendix
     sections:
       - title: Schemas
         sections:
-          - file: Appendix/Schemas/index
-
+          - file: appendix/schemas/index
