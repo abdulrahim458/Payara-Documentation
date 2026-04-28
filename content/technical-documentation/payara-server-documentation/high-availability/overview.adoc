@@ -52,14 +52,14 @@ Payara Server supports the Java Message Service (JMS) API and JMS messaging thro
 
 The JMS service makes JMS messaging highly available as follows:
 
-Message Queue Broker Clusters::
+*Message Queue Broker Clusters*:
 By default, when a Payara Server cluster is created, the JMS service automatically configures a Message Queue broker cluster to provide JMS messaging services, with one clustered broker assigned to each cluster instance. This automatically created broker cluster is configurable to take advantage of the two types of broker clusters, conventional and enhanced, supported by Message Queue.
 +
 Additionally, Message Queue broker clusters created and managed using Message Queue itself can be used as external, or remote, JMS hosts. Using external broker clusters provides additional deployment options, such as deploying Message Queue brokers on different hosts from the Payara instances they service, or deploying different numbers of Message Queue brokers and Payara instances.
 +
 For more information about Message Queue clustering, see xref:technical-documentation/payara-server-documentation/high-availability/configuring-jms-high-availability.adoc#using-message-queue-broker-clusters-with-payara-server[Using Message Queue Broker Clusters With Payara Server].
 
-Connection Failover::
+*Connection Failover*:
 The use of Message Queue broker clusters allows connection failover in the event of a broker failure. If the primary JMS host (Message Queue broker) in use by a Payara Server instance fails, connections to the failed JMS host will automatically fail over to another host in the JMS host list, allowing messaging operations to continue and maintaining JMS messaging semantics.
 +
 For more information about JMS connection failover, see xref:technical-documentation/payara-server-documentation/high-availability/configuring-jms-high-availability.adoc#connection-failover[Connection Failover].
@@ -162,9 +162,9 @@ When a Message Queue broker becomes unavailable, the method you use to restore t
 
 Additionally, the urgency of restoring an unavailable broker to operation depends on the type of the broker:
 
-Standalone Broker:: When a standalone broker becomes unavailable, both service availability and data availability are interrupted. Restore the broker to operation as soon as possible to restore availability.
-Broker in a Conventional Cluster:: When a broker in a conventional cluster becomes unavailable, service availability continues to be provided by the other brokers in the cluster. However, data availability of the persistent data stored by the unavailable broker is interrupted. Restore the broker to operation to restore availability of its persistent data.
-Broker in an Enhanced Cluster:: When a broker in an enhanced cluster becomes unavailable, service availability and data availability continue to be provided by the other brokers in the cluster. Restore the broker to operation to return the cluster to its previous capacity.
+*Standalone Broker*: When a standalone broker becomes unavailable, both service availability and data availability are interrupted. Restore the broker to operation as soon as possible to restore availability.
+*Broker in a Conventional Cluster*: When a broker in a conventional cluster becomes unavailable, service availability continues to be provided by the other brokers in the cluster. However, data availability of the persistent data stored by the unavailable broker is interrupted. Restore the broker to operation to restore availability of its persistent data.
+*Broker in an Enhanced Cluster*: When a broker in an enhanced cluster becomes unavailable, service availability and data availability continue to be provided by the other brokers in the cluster. Restore the broker to operation to return the cluster to its previous capacity.
 
 [[recovering-from-power-failure-and-failures-other-than-disk-storage]]
 ==== Recovering From Power Failure and Failures Other Than Disk Storage

@@ -56,18 +56,18 @@ Clusters are deprecated and will be removed in Payara 7.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--config`::
+*`--config`*:
   Specifies the named configuration that the cluster references. The configuration must exist and must not be named `default-config` or
   `server-config`. Specifying the `--config` option creates a shared cluster. If this option is omitted, a standalone cluster is created.
 
-`--systemproperties`::
+*`--systemproperties`*:
   Defines system properties for the configuration that is created for the cluster. These properties override the property values in the
   `default-config` configuration. The following properties are available: +
   `ASADMIN_LISTENER_PORT`;;
@@ -104,7 +104,7 @@ asadmin-options::
     http://felix.apache.org/site/apache-felix-remote-shell.html[Apache  Felix Remote Shell] (http://felix.apache.org/site/apache-felix-remote-shell.html).
     This shell uses the Felix shell service to interact with the OSGi module management subsystem. Valid values are 1-65535. On UNIX, creating sockets that listen on ports
     1-1024 requires superuser privileges.
-`--properties`::
+*`--properties`*:
   Defines properties for the cluster. The following properties are available:
 
 `GMS_DISCOVERY_URI_LIST`;;
@@ -167,7 +167,7 @@ The default is 4, which ensures that messages are successfully broadcast to all 
 
   `GMS_TCPSTARTPORT`;;
     The lowest port number in the range from which GMS selects a free port if the `GMS_LISTENER_PORT-`cluster-name system property is not set. The default is 9090.
-`--gmsenabled`::
+*`--gmsenabled`*:
   Specifies whether GMS is enabled for the cluster.
 +
 Possible values are as follows: +
@@ -178,13 +178,13 @@ When GMS is enabled for a cluster, GMS is started in each server instance in the
   `false`;;
     GMS is disabled for the cluster.
 
-`--multicastaddress`::
+*`--multicastaddress`*:
   The address on which GMS listens for group events. This option must specify a multicast address in the range 224.0.0.0 through 239.255.255.255. The default is 228.9.XX.YY, where XX and YY are automatically generated independent values between 0 and 255.
 
-`--multicastport`::
+*`--multicastport`*:
   The port number of communication port on which GMS listens for group events. This option must specify a valid port number in the range 2048-49151. The default is an automatically generated value in this range.
 
-`--bindaddress`::
+*`--bindaddress`*:
   The Internet Protocol (IP) address of the network interface to which GMS binds. This option must specify the IP address of a local network interface. The default is all public network interface addresses.
 +
 On a multihome machine, this option configures the network interface that is used for the GMS. A multihome machine possesses two or more
@@ -195,34 +195,34 @@ To specify an address that is valid for all Payara Server instances in the clust
 +
 For example, use the `create-system-properties` subcommand to create the system property `GMS-BIND-INTERFACE-ADDRESS-` cluster-name. Then set the `--bindaddress` option of this subcommand to `${GMS-BIND-INTERFACE-ADDRESS-` cluster-name `}` to specify the system property. Finally, for each instance in the cluster, set the `GMS-BIND-INTERFACE-ADDRESS-` cluster-name system property to the required network interface address on the instance's machine.
 
-`--hosts`::
+*`--hosts`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
-`--haagentport`::
+*`--haagentport`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
-`--haadminpassword`::
+*`--haadminpassword`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
-`--haadminpasswordfile`::
+*`--haadminpasswordfile`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
-`--devicesize`::
+*`--devicesize`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
-`--haproperty`::
+*`--haproperty`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
-`--autohadb`::
+*`--autohadb`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
-`--portbase`::
+*`--portbase`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
 [[operands]]
 == Operands
 
-cluster-name::
+*cluster-name*:
   The name of the cluster.
 +
 The name must meet the following requirements:
@@ -311,9 +311,9 @@ Command create-cluster executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 See Also

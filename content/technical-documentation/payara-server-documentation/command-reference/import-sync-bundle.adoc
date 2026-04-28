@@ -40,22 +40,22 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--instance`::
+*`--instance`*:
   The instance for which configuration data is being imported. The instance must already exist in the DAS configuration. The archive file from which the data is being imported must contain data for the specified instance.
-`--nodedir`::
+*`--nodedir`*:
   The directory that contains the instance's node directory. The instance's files are stored in the instance's node directory. The default is as-install`/nodes`.
-`--node`::
+*`--node`*:
   The node on which the instance resides. If this option is omitted, the subcommand determines the node from the DAS configuration in the archive file.
 
 [[operands]]
 == Operands
 
-file-name::
+*file-name*:
   The name of the file, including the path, that contains the archive file to import. This operand is required.
 
 [[examples]]
@@ -77,9 +77,9 @@ Command import-sync-bundle executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

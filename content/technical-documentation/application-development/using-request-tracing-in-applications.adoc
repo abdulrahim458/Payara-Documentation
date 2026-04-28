@@ -36,8 +36,8 @@ The `@Traced` annotation can be placed on CDI Bean methods to automatically trac
 
 The `@Traced` annotation accepts two optional parameters:
 
-`operationName`:: defines the operation name of the span. If left blank it will default to the canonical method signature.
-`value`:: a boolean true or false to determine if the method should be traced. Defaults to true.
+*`operationName`*: defines the operation name of the span. If left blank it will default to the canonical method signature.
+*`value`*: a boolean true or false to determine if the method should be traced. Defaults to true.
 
 [source, java]
 ----

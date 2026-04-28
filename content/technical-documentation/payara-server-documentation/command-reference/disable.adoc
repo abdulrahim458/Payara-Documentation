@@ -22,12 +22,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   This option specifies the target on which you are disabling the component. Valid values are: +
   `server`;;
     Disables the component on the default server instance `server` and is the default value.
@@ -41,7 +41,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-component_name::
+*component_name*:
   name of the component to be disabled. +
   The name can include an optional version identifier, which follows the name and is separated from the name by a colon (`:`). The version identifier must begin with a letter or number. It can contain alphanumeric characters plus underscore (`_`), dash (`-`), and period (`.`) characters. To disable multiple versions, you can use an asterisk (`*`) as a wildcard character. For more information about module and application versions, see "xref:technical-documentation/payara-server-documentation/application-deployment/overview.adoc#module-and-application-versions[Module and Application Versions]" in Payara Server Application Deployment section.
 
@@ -61,9 +61,9 @@ Command disable executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

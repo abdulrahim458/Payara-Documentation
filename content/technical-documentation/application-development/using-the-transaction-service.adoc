@@ -138,19 +138,19 @@ The EJB specification's transaction guidelines are designed to give the containe
 
 There are three commit-time options:
 
-*Option A*:: The container caches a ready instance between transactions. The container ensures that the instance has exclusive access to the state of the object in persistent storage.
+**Option A**: The container caches a ready instance between transactions. The container ensures that the instance has exclusive access to the state of the object in persistent storage.
 +
 In this case, the container does not have to synchronize the instance's state from the persistent storage at the beginning of the next transaction.
 +
 IMPORTANT: Commit option A is not supported in Payara Platform's EJB implementation.
 
-*Option B*:: The container caches a ready instance between transactions, but the container does not ensure that the instance has exclusive access to the state of the object in persistent storage.
+**Option B**: The container caches a ready instance between transactions, but the container does not ensure that the instance has exclusive access to the state of the object in persistent storage.
 +
 NOTE: This is the default commit option set in the Payara Platform.
 +
 In this case, the container must synchronize the instance's state by invoking the `ejbLoad` lifecycle method from persistent storage at the beginning of the next transaction.
 
-*Option C*:: The container does not cache a ready instance between transactions, but instead returns the instance to the pool of available instances after a transaction has completed.
+**Option C**: The container does not cache a ready instance between transactions, but instead returns the instance to the pool of available instances after a transaction has completed.
 +
 The life cycle for every business method invocation under commit option C looks like this.
 +

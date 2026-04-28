@@ -26,16 +26,16 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
 [[operands]]
 == Operands
 
-variable-list::
+*variable-list*:
   A space-separated list of the environment variables to remove.
 
 [[examples]]
@@ -68,9 +68,9 @@ Command unset executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

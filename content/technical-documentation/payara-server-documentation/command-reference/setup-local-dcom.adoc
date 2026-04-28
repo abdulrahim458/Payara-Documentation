@@ -37,21 +37,21 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--verbose`::
-`-v`::
+*`--verbose`*:
+*`-v`*:
   Specifies whether the subcommand displays information about the operations that are performed to set up DCOM on the host. +
   Possible values are as follows: +
   `false`;;
     No information about the operations that are performed to set up DCOM is displayed (default).
   `true`;;
     The subcommand displays information about the operations that are performed to set up DCOM on the host.
-`--force`::
-`-f`::
+*`--force`*:
+*`-f`*:
   Specifies whether the subcommand prompts you to confirm that you want to update the Windows registry. +
   Possible values are as follows: +
   `false`;;
@@ -91,9 +91,9 @@ Command setup-local-dcom executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

@@ -223,7 +223,7 @@ NOTE: Only the options that are required to complete this task are provided in t
 asadmin> create-password-alias alias-name
 ----
 +
-alias-name::
+*alias-name*:
   Your choice of name for the alias that you are creating. The `create-password-alias` subcommand prompts you to type the password for which you are creating an alias.
 
 .  In response to the prompt, type the Windows user's password.
@@ -236,7 +236,7 @@ The `create-password-alias` subcommand prompts you to type the password again.
 ----
 AS_ADMIN_WINDOWSPASSWORD=${ALIAS=alias-name}
 ----
-alias-name:: The alias name that you specified in Step *2*.
+*alias-name*: The alias name that you specified in Step *2*.
 +
 NOTE: When you create a `DCOM` node, pass this file as the `--passwordfile` option of the `asadmin` utility. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-a-dcom-node[To Create a `DCOM` Node].
 
@@ -303,9 +303,9 @@ For information about all the options for configuring the node, see the xref:ROO
 C:\>asadmin --passwordfile filename validate-dcom host-name
 ----
 +
-filename::
+*filename*:
   The name of the file that contains the alias for the Windows user's password.
-host-name::
+*host-name*:
   The name of the host to which you are testing the connection over DCOM.
 
 [[example-2-2]]
@@ -393,8 +393,8 @@ The SSH Server Daemon `sshd` locates a user's home directory from the configurat
 
 Each user on a Windows host where SSH is set up potentially has two home directories:
 
-Windows home directory:: Payara Server commands, which are run in a Windows command window, use the Windows home directory.
-SSH home directory:: SSH commands, which are run in a shell such as `bash` or `ksh`, use the SSH home directory.
+*Windows home directory*: Payara Server commands, which are run in a Windows command window, use the Windows home directory.
+*SSH home directory*: SSH commands, which are run in a shell such as `bash` or `ksh`, use the SSH home directory.
 
 If these home directories are different, Payara Server and SSH each locate a user's `.ssh` directory in different directories.
 To simplify the setup of SSH, configure each user's home directory for SSH and Windows to be the same directory. A disadvantage of this approach is that the SSH home directory has spaces in its path name. Spaces in path names are cumbersome in the UNIX environment.
@@ -423,7 +423,7 @@ A Cygwin terminal is started.
 ----
 $ passwd user-name
 ----
-user-name::
+*user-name*:
   The username for your account.
 .. Type a password.
 +
@@ -526,7 +526,7 @@ A disadvantage of this approach is that the SSH home directory has spaces in its
 ----
 $ userinfo user-name
 ----
-user-name:: The username for the user whose home directory you are setting, for example `Administrator`.
+*user-name*: The username for the user whose home directory you are setting, for example `Administrator`.
 
 . If the settings do not match, update setting of each MKS Toolkit field to match its corresponding Windows environment variable.
 +
@@ -539,11 +539,11 @@ To update the settings, run the following command in an MKS Toolkit shell:
 $ userinfo -u -fHomeDirDrive:"drive" -fHomeDir:"path" user-name
 ----
 +
-drive::
+*drive*:
   The drive identifier of the disk drive on which the user's Windows home directory resides, for example, `C:`.
-path::
+*path*:
   The path to the user's Windows home directory, for example, `\Documents and Settings\Administrator`.
-user-name::
+*user-name*:
   The username for the user whose home directory you are setting, for example `Administrator`.
 +
 NOTE: Do not set the `HOME` environment variable explicitly. If the Home Directory and Home Directory Drive are set correctly, the `HOME` environment variable specifies the correct path by default.
@@ -554,7 +554,7 @@ NOTE: Do not set the `HOME` environment variable explicitly. If the Home Directo
 ----
 $ userinfo user-name
 ----
-user-name::
+*user-name*:
   The username for the user whose home directory you are setting, for example `Administrator`.
 . Log out of the host and log in to the host again.
 . Confirm that the home directories are the same as explained in Step *1*.
@@ -731,9 +731,9 @@ If you cannot use SSH to contact the host, troubleshoot the SSH setup before set
 ----
 $ ssh -l user-name host-name
 ----
-user-name::
+*user-name*:
   The username for the SSH user's account on the host.
-host-name::
+*host-name*:
   The host name of the host that you are logging in to.
 . In response to the prompt, type your password.
 +
@@ -815,9 +815,9 @@ NOTE: Only the options that are required to complete this task are provided in t
 asadmin> setup-ssh [--sshuser sshuser] host-list
 ----
 +
-sshuser::
+*sshuser*:
 The SSH user for which you are generating the SSH key pair. If you are running the subcommand as the SSH user, you may omit this option.
-host-list::
+*host-list*:
 A space-separated list of the names of the hosts where the SSH public key is to be distributed.
 +
 After generating the SSH key pair, the subcommand uses SSH to log in to each host in host-list as the SSH user to distribute the public key. Each time a password is required to log in to a host, you are prompted for the SSH user's password.
@@ -900,7 +900,7 @@ Use the SSH utility http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1
 ----
 $ ssh-keygen -t type
 ----
-type::
+*type*:
   The algorithm that is to be used for the key and which must be `rsa`, `dsa`, or `rsa1`.
 +
 The `ssh-keygen` utility prompts you for a file in which to save the key.
@@ -918,7 +918,7 @@ Use the xref:ROOT:technical-documentation/payara-server-documentation/command-re
 ----
 $ asadmin setup-ssh --generatekey=false host-list
 ----
-host-list::
+*host-list*:
 A space-separated list of the names of the hosts where the SSH public key is to be distributed.
 +
 The subcommand uses SSH to log in to each host in host-list as the SSH user to distribute the public key. Each time a passphrase or a password is required to log in to a host, you are prompted for the passphrase or the SSH user's password.
@@ -937,7 +937,7 @@ Remote subcommands require a running server.
 $ asadmin create-password-alias alias-name
 ----
 +
-alias-name::
+*alias-name*:
   Your choice of name for the alias that you are creating.
 +
 The `create-password-alias` subcommand prompts you to type the passphrase for which you are creating an alias.
@@ -1033,7 +1033,7 @@ NOTE: Only the options that are required to complete this task are provided in t
 asadmin> create-password-alias alias-name
 ----
 
-alias-name::
+*alias-name*:
   Your choice of name for the alias that you are creating.
 +
 The `create-password-alias` subcommand prompts you to type the password
@@ -1049,7 +1049,7 @@ The `create-password-alias` subcommand prompts you to type the password again.
 ----
 AS_ADMIN_SSHPASSWORD=${ALIAS=alias-name}
 ----
-alias-name::
+*alias-name*:
   The alias name that you specified in Step *2*.
 +
 NOTE: When you create an `SSH` node, pass this file as the `--passwordfile` option of the `asadmin` utility. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node].
@@ -1110,7 +1110,7 @@ NOTE: Only the options that are required to complete this task are provided in t
 ----
 asadmin> install-node-dcom host-list
 ----
-host-list::
+*host-list*:
   A space-separated list of the names of the hosts where you are copying the installation of Payara Server software.
 
 * If SSH is set up for communication between the hosts, run the `install-node-ssh` subcommand.
@@ -1121,7 +1121,7 @@ NOTE: Only the options that are required to complete this task are provided in t
 ----
 asadmin> install-node-ssh host-list
 ----
-host-list::
+*host-list*:
   A space-separated list of the names of the hosts where you are copying the installation of Payara Server software.
 
 The following example copies the Payara Server software on the host where the subcommand is run to the default location on the DCOM-enabled hosts `wpmdl1.example.com` and `wpmdl2.example.com`.
@@ -1222,7 +1222,7 @@ NOTE: Only the options that are required to complete this task are provided in t
 ----
 asadmin> uninstall-node-dcom host-list
 ----
-host-list::
+*host-list*:
   A space-separated list of the names of the hosts from which you are removing Payara Server software.
 
 * If SSH is set up for communication between the hosts, run the `uninstall-node-ssh` subcommand.
@@ -1233,7 +1233,7 @@ NOTE: Only the options that are required to complete this task are provided in t
 ----
 asadmin> uninstall-node-ssh host-list
 ----
-host-list::
+*host-list*:
   A space-separated list of the names of the hosts from which you are removing Payara Server software.
 
 The following example removes Payara Server software on the DCOM-enabled hosts `wpmdl1.example.com` and `wpmdl2.example.com` from the default location.

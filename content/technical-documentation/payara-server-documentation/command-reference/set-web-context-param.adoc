@@ -32,17 +32,17 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--name`::
+*`--name`*:
   The name of the servlet context-initialization parameter that is to be set.
-`--value`::
+*`--value`*:
   The value to which the servlet context-initialization parameter is to be set. +
   Either the `--value` option or the `--ignoredescriptoritem` option must be set.
-`--ignoredescriptoritem`::
+*`--ignoredescriptoritem`*:
   Specifies whether the servlet context-initialization parameter is ignored if it is set in the application's deployment descriptor. When
   a parameter is ignored, the application behaves as if the parameter had never been set in the application's deployment descriptor. The
   behavior of an application in this situation depends on the application. +
@@ -57,18 +57,18 @@ NOTE: Do not use the `--ignoredescriptoritem` option to unset a servlet context-
 the `set-web-context-param` subcommand. Instead, use the xref:technical-documentation/payara-server-documentation/command-reference/unset-web-context-param.adoc#unset-web-context-param[`unset-web-context-param`]
 subcommand for this purpose.
 
-`--description`::
+*`--description`*:
   An optional textual description of the context parameter that is being set.
 
 [[operands]]
 == Operands
 
-application-name::
+*application-name*:
   The name of the application. This name can be obtained from the
   Administration Console or by using the xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`]
   subcommand. +
   The application must already be deployed. Otherwise, an error occurs.
-module::
+*module*:
   The relative path to the module within the application's enterprise archive (EAR) file. The path to the module is specified in the
   `module` element of the application's `application.xml` file. +
   module is required only if the servlet context-initialization parameter applies to a web module of a Jakarta EE application. If
@@ -117,9 +117,9 @@ Command set-web-context-param executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

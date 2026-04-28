@@ -462,10 +462,10 @@ Support for this syntax comes from the automated Java Web Start support in Payar
 
 Payara Server recognizes these types of content in the JNLP file:
 
-Owned:: Payara Server owns the content and ignores any custom
+*Owned*: Payara Server owns the content and ignores any custom
 content
-Merged:: Automatically generated content and custom content are merged
-Defaulted:: Custom content is used if present, otherwise default content is provided
+*Merged*: Automatically generated content and custom content are merged
+*Defaulted*: Custom content is used if present, otherwise default content is provided
 
 You can compose a complete JNLP file and package it with the application client. Payara Server then combines it with its automatically generated JNLP file.
 

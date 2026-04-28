@@ -32,12 +32,12 @@ This application is shown in all overviews that show deployed applications that 
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 Specifies the target for which to configure the `ejb-invoker` endpoint. Valid values are as follows: +
 `server`;;
 Configures the EJB invoker endpoint for the default server instance `server` and is the default value.
@@ -47,33 +47,33 @@ deployment-group-name;;
 Configures the EJB invoker endpoint for every server instance in the deployment group.
 instance-name;;
 Configures the EJB invoker endpoint for a particular server instance.
-`--enabled`::
+*`--enabled`*:
 Enables or disables the `ejb-invoker` application.
 +
 Defaults to `true`
-`--securityenabled`::
+*`--securityenabled`*:
 Whether secure access to the `ejb-invoker` endpoint is enabled or not.
 +
 Defaults to `false`
-`--roles`::
+*`--roles`*:
 If defined, the endpoint will be configured to be authorised for users that belong to the list of the roles specified (in comma-separated format).
-`--endpoint`::
+*`--endpoint`*:
 The context root used to expose the `ejb-invoker` application endpoint.
 +
 Defaults to `ejb-invoker`
-`--authmoduleclass`::
+*`--authmoduleclass`*:
 Defines the full qualified class name implementing a `jakarta.security.auth.message.module.ServerAuthModule` subclass.
 +
 If defined and `securityenabled` is set to `true`, the HttpServlet Message security provider is created and `ejb-invoker` application secured with the configured authentication module.
-`--authmodule`::
+*`--authmodule`*:
 Defines the existing message security provider ID.
 +
 If defined and `securityenabled` is set to `true`, the `ejb-invoker application` will be secured with it.
---realmname`::
+*--realmname`*:
 Defines the registered realm name.
 +
 If defined and `securityenabled` it set to `true`, the `ejb-invoker` application will be secured with the corresponding realm that will be used for authentication.
---`authtype`::
+*--`authtype`*:
 If defined, the endpoint will be assigned to a list of *virtual servers* specified as a comma-separated list of names.
 +
 Otherwise, the endpoint will be assigned to all virtual servers available.
@@ -91,9 +91,9 @@ asadmin> set-ejb-invoker-configuration --enabled=true
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

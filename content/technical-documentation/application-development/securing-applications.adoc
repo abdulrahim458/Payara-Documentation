@@ -1053,13 +1053,13 @@ IMPORTANT: The single sign-on feature utilizes HTTP cookies to transmit a token 
 
 To configure single sign-on, set the following configuration properties for a *virtual server*:
 
-`sso-enabled`:: If `false`, single sign-on is disabled for this virtual server, and users must authenticate separately to every application on the virtual server. The default value is `false`.
+*`sso-enabled`*: If `false`, single sign-on is disabled for this virtual server, and users must authenticate separately to every application on the virtual server. The default value is `false`.
 
-`sso-max-inactive-seconds`:: Specifies the time after which a user's single sign-on record becomes eligible for purging if no client activity is received. Since single sign-on applies across several applications on the same virtual server, access to any of the applications keeps the single sign-on record active. The default value is _5 minutes_ (`300` seconds).
+*`sso-max-inactive-seconds`*: Specifies the time after which a user's single sign-on record becomes eligible for purging if no client activity is received. Since single sign-on applies across several applications on the same virtual server, access to any of the applications keeps the single sign-on record active. The default value is _5 minutes_ (`300` seconds).
 +
 CAUTION: Higher values provide longer single sign-on persistence for the users at the expense of more memory use on the server.
 
-`sso-reap-interval-seconds`:: Specifies the interval between purges of expired single sign-on records. The default value is `60`.
+*`sso-reap-interval-seconds`*: Specifies the interval between purges of expired single sign-on records. The default value is `60`.
 
 Here are example `asadmin set` commands on a virtual server named `vsrv1` using the default values mentioned above:
 
@@ -1075,8 +1075,8 @@ asadmin set server-config.http-service.virtual-server.vsrv1.property.sso-reap-in
 
 Jakarta Security defines several authentication-related plugin SPIs, such as the `HttpAuthenticationMechanism` and `IdentityStore` interfaces:
 
-`HttpAuthenticationMechanism`:: An interface for modules that authenticate callers to a web application. An application can supply its own `HttpAuthenticationMechanism`, or use one of the default implementations provided by the container.
-`IdentityStore`:: This interface defines methods for validating a caller's credentials (such as username and password) and returning group membership information. An application can provide its own `IdentityStore`, or use the builtin LDAP or Database stores.
+*`HttpAuthenticationMechanism`*: An interface for modules that authenticate callers to a web application. An application can supply its own `HttpAuthenticationMechanism`, or use one of the default implementations provided by the container.
+*`IdentityStore`*: This interface defines methods for validating a caller's credentials (such as username and password) and returning group membership information. An application can provide its own `IdentityStore`, or use the builtin LDAP or Database stores.
 
 In addition to these authentication plugin SPIs, the Jakarta Security specification defines the `SecurityContext` API for use by application code to query and interact with the current security context.
 
@@ -1103,10 +1103,10 @@ TIP: Jakarta Security also supports the use of Jakarta Expression Language in th
 
 An application packages its own `HttpAuthenticationMechanism` by including in a bean archive that is a part of the application. Alternatively, it may select and configure one of the built-in mechanisms using the corresponding annotation, as listed below:
 
-`BasicAuthenticationMechanismDefinition` :: Implements HTTP BASIC authentication that conforms to the behavior of the servlet container when BASIC <auth-method> is declared in the `web.xml` deployment descriptor.
-`FormAuthenticationMechanismDefinition`:: Implements HTTP FORM authentication that conforms to the behavior of the servlet container when the FORM <auth-method> is declared in the `web.xml` deployment descriptor.
-`CustomFormAuthenticationMechanismDefinition`:: Implements a modified version of HTTP FORM authentication in which custom handling replaces the POST action to the `j_security_check` servlet.
-`OpenIdAuthenticationMechanismDefinition`:: Implements an OpenID Connect authentication workflow using the metadata configured in the annotation attributes.
+*`BasicAuthenticationMechanismDefinition`*: Implements HTTP BASIC authentication that conforms to the behavior of the servlet container when BASIC <auth-method> is declared in the `web.xml` deployment descriptor.
+*`FormAuthenticationMechanismDefinition`*: Implements HTTP FORM authentication that conforms to the behavior of the servlet container when the FORM <auth-method> is declared in the `web.xml` deployment descriptor.
+*`CustomFormAuthenticationMechanismDefinition`*: Implements a modified version of HTTP FORM authentication in which custom handling replaces the POST action to the `j_security_check` servlet.
+*`OpenIdAuthenticationMechanismDefinition`*: Implements an OpenID Connect authentication workflow using the metadata configured in the annotation attributes.
 
 All built-in authentication mechanisms need to be authenticated using an identity store. The `IdentityStore` interface, included in the Jakarta Security API, defines an SPI for interacting with identity stores, which are repositories (like databases or naming directories) containing user account information.
 
@@ -1116,8 +1116,8 @@ TIP: The `RememberMeIdentityStore` interface, which is a variation on the `Ident
 
 There are two built-in implementations of `IdentityStore`:
 
-`LdapIdentityStoreDefinition`:: Used to configure an LDAP naming directory as the identity store of an application.
-`DatabaseIdentityStoreDefinition`:: Used to configure a set of relational database tables as the identity store.
+*`LdapIdentityStoreDefinition`*: Used to configure an LDAP naming directory as the identity store of an application.
+*`DatabaseIdentityStoreDefinition`*: Used to configure a set of relational database tables as the identity store.
 
 The following snippet shows the usage of the `DatabaseIdentityStoreDefinition` annotation, which makes it available as a CDI bean.
 
@@ -1323,15 +1323,15 @@ A key step in adding an authentication mechanism to a compatible server-side mes
 
 A SAM implements the `jakarta.security.auth.message.module.ServerAuthModule` interface as defined by the specification. A SAM is invoked indirectly by the message processing runtime at the `validateRequest` and `secureResponse` interaction points. A SAM must implement the five methods of the `ServerAuthModule` interface:
 
-`getSupportedMessageTypes`:: Returns an array of `Class` objects where each element defines a message type supported by the SAM.
+*`getSupportedMessageTypes`*: Returns an array of `Class` objects where each element defines a message type supported by the SAM.
 +
 NOTE: For a SAM to be compatible with the Servlet Container Profile, the returned array must include the `HttpServletRequest.class` and `HttpServletResponse.class` objects.
 
-`initialize(MessagePolicy requestPolicy, MessagePolicy responsePolicy, CallbackHandler cbh, Map options)`:: The container calls this method to provide the SAM with configuration values and with a `CallbackHandler`.
+*`initialize(MessagePolicy requestPolicy, MessagePolicy responsePolicy, CallbackHandler cbh, Map options)`*: The container calls this method to provide the SAM with configuration values and with a `CallbackHandler`.
 +
 The configuration values are returned in the policy arguments and in the options `Map`. The SAM uses `CallbackHandler` to access services, such as password validation, provided by the container.
 
-`AuthStatus validateRequest(MessageInfo messageInfo, Subject clientSubject, Subject serviceSubject)`:: The container calls this method to process each `HttpServletRequest` received. The request and its associated `HttpServletResponse` are passed by the container to the SAM in the `messageInfo` argument. The SAM processes the request and may establish  the response to be returned by the container.
+*`AuthStatus validateRequest(MessageInfo messageInfo, Subject clientSubject, Subject serviceSubject)`*: The container calls this method to process each `HttpServletRequest` received. The request and its associated `HttpServletResponse` are passed by the container to the SAM in the `messageInfo` argument. The SAM processes the request and may establish  the response to be returned by the container.
 +
 The SAM uses the provided `Subject` arguments to convey its authentication results. The SAM returns different status values to control the container's invocation processing. The status values and the circumstances under which they are returned are as follows:
 
@@ -1345,9 +1345,9 @@ The SAM uses the provided `Subject` arguments to convey its authentication resul
 +
 The `validateRequest` method may also throw an `AuthException` to indicate that the message processing by the SAM failed without establishing a failure response message in `messageInfo`.
 
-`secureResponse(MessageInfo messageInfo, Subject serviceSubject)`:: The container calls this method before sending a response, resulting from an application invocation, to the client. The response is passed to the SAM in the `messageInfo` argument. In most cases, this method should just return the `SEND_SUCCESS` status.
+*`secureResponse(MessageInfo messageInfo, Subject serviceSubject)`*: The container calls this method before sending a response, resulting from an application invocation, to the client. The response is passed to the SAM in the `messageInfo` argument. In most cases, this method should just return the `SEND_SUCCESS` status.
 
-`cleanSubject(MessageInfo messageInfo, Subject subject)`:: This method removes the mechanism-specific principals, credentials, or both from the subject. This method is not currently called by the container. A legitimate implementation could remove all the principals from the argument subject.
+*`cleanSubject(MessageInfo messageInfo, Subject subject)`*: This method removes the mechanism-specific principals, credentials, or both from the subject. This method is not currently called by the container. A legitimate implementation could remove all the principals from the argument subject.
 
 [[sample-server-authentication-module]]
 === Sample Server Authentication Module

@@ -29,12 +29,12 @@ This command can be used to configure the behaviour of the JMS notifier in Payar
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are configuring the JMS notifier. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -42,29 +42,29 @@ cluster_name;;
 Applies to every server instance in the cluster.
 instance_name;;
 Applies to a specified sever instance.
-`--enabled`::
+*`--enabled`*:
 Defaults to `false`. Enables or disables the notifier
-`--dynamic`::
+*`--dynamic`*:
 Defaults to `false`. When set to `true`, applies the changes without a server restart.
 +
 Otherwise, a restart is required.
-`--filter`::
+*`--filter`*:
 Defaults to `WARNING`. The notifier only responds to events at or above this level. (INFO, WARNING, SEVERE)
-`--contextFactoryClass`::
+*`--contextFactoryClass`*:
 Defines the naming context factory class used to provision the JMS resources required to send the notification events.
 +
 NOTE: The referenced class name should point to a valid implementation of `javax.naming.spi.InitialContextFactory` and should be located in the server's classpath.
 +
 TIP: In most cases, using the default context factory class (`com.sun.enterprise.naming.SerialInitContextFactory`) is enough.
-`--connectionFactoryName`::
+*`--connectionFactoryName`*:
 Defines the JNDI name of an existing JMS connection factory which will be used to send the notification messages.
-`--queueName`::
+*`--queueName`*:
 Defines the physical name of an existing JMS queue destination used to send the messages to.
-`--url`::
+*`--url`*:
 Defines the URL of a JMS broker server that will handle the sending and reception of the notification message.
-`--userName`::
+*`--userName`*:
 Defines the user that will authentication to the JMS broker server (if required).
-`--password`::
+*`--password`*:
 Defines the password credential of the user that will authentication to the JMS broker server (if required).
 
 [[examples]]
@@ -82,9 +82,9 @@ asadmin set-jms-notifier-configuration --dynamic=true --enabled=true --contextFa
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

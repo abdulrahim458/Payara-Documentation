@@ -22,17 +22,17 @@ The `set-config-ordinal` sets the ordinal value for the given config source. Whe
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
 
-`--ordinal`::
+*`--ordinal`*:
 The value of the ordinal to set. This must be a number greater than `1`.
 +
 A lower number ordinal means lower order of precedence.
-`--source`::
+*`--source`*:
 The value of the source to change. Must be one of:
 * `domain`
 * `config`
@@ -40,7 +40,7 @@ The value of the source to change. Must be one of:
 * `application`
 * `module`
 * `cluster`.
-`--target`::
+*`--target`*:
 Specifies the target where the configuration source resides. +
 Valid values are as follows: +
 `server`;;
@@ -65,9 +65,9 @@ asadmin set-config-ordinal --ordinal=600 --source=application
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -54,22 +54,22 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--windowsuser`::
-`-w`::
+*`--windowsuser`*:
+*`-w`*:
   The user on the remote host that is to run the process for connecting to that host through DCOM. The default is the user that is running the DAS process.
-`--windowsdomain`::
-`-d`::
+*`--windowsdomain`*:
+*`-d`*:
   The name of the Windows domain that contains the user that the `--windowsuser` option specifies. The default is the name of the host on which the subcommand is run.
-`--remotetestdir`::
+*`--remotetestdir`*:
   Specifies the folder on the remote host in which the subcommand creates the `delete_me.bat` file. The user that the `--windowsuser`
   option specifies must have write access to this folder. Otherwise an error occurs. The default is `C:\`
-`--verbose`::
-`-v`::
+*`--verbose`*:
+*`-v`*:
   Specifies whether the subcommand displays information about the operations that are performed to test the connection to the remote host. +
   Possible values are as follows: +
   `false`;;
@@ -81,7 +81,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-host-name::
+*host-name*:
   The name of the host to which to test the connection over DCOM.
 
 [[examples]]
@@ -134,9 +134,9 @@ Command validate-dcom executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

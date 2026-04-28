@@ -27,23 +27,23 @@ This subcommand is supported in local mode and remote mode.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these
   options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--localonly`::
+*`--localonly`*:
   If this option is set to true, only local commands are listed. Default is false. +
   If this option is set to true, the `--remoteonly` option must be set to false. Otherwise, an error occurs.
-`--remoteonly`::
+*`--remoteonly`*:
   If this option is set to true, only remote commands are listed. Default is false. +
   If this option is set to true, the `--localonly` option must be set to false. Otherwise, an error occurs.
 
 [[operands]]
 == Operands
 
-pattern-list::
+*pattern-list*:
   A space-separated list of text strings on which to filter the list of
   subcommands. Only the subcommands that contain any one of the specified text strings is listed.
 
@@ -175,9 +175,9 @@ delete-audit-module                     list-message-security-providers
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

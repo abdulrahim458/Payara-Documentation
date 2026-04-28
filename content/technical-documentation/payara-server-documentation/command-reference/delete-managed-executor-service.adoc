@@ -23,12 +23,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 Specifies the target from which you are deleting the resource. Valid targets are:
 +
 `server`;;
@@ -43,7 +43,7 @@ Deletes the resource from the specified server instance.
 [[operands]]
 == Operands
 
-managed_executor_service_name::
+*managed_executor_service_name*:
 The JNDI name of the resource to be deleted.
 
 [[examples]]
@@ -63,9 +63,9 @@ Command delete-managed-executor-service executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 command executed successfully
-1::
+*1*:
 error in executing the command
 
 *See Also*

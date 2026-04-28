@@ -22,12 +22,12 @@ This subcommand is supported in remote mote only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   This is the name of the targets for which the administered object is to be deleted. Valid values are: +
 
 NOTE: Resources are always created for a domain as a whole but are only active for targets for which a `<resource-ref>` has been created using
@@ -46,7 +46,7 @@ specified `--target`, and does not delete the resource from the domain as a whol
 [[operands]]
 == Operands
 
-jndi_name::
+*jndi_name*:
   JNDI name of the administered object to be deleted.
 
 [[examples]]
@@ -65,9 +65,9 @@ Command delete-admin-object executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

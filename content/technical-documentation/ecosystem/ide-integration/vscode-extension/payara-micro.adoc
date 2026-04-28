@@ -11,18 +11,18 @@ The extension also allows you to use the Hot Deploy and AutoDeploy features for 
 . Open the command pallet using `Ctrl + Shift + P`.
 . Search *Generate a Payara Micro project* and select the available option:
 +
-image::vscode-extension/payara-micro/create-new-project.png[Generate Payara Micro Application]
+*image*: vscode-extension/payara-micro/create-new-project.png[Generate Payara Micro Application]
 
 . Enter the `groupId`, `artifactId` and `version` to setup the project
 
 . Select the Payara Micro version and the destination folder, where the project will be generated:
 
 +
-image::vscode-extension/payara-micro/create-new-project-set-version.png[Select Payara Micro version]
+*image*: vscode-extension/payara-micro/create-new-project-set-version.png[Select Payara Micro version]
 
 . VS Code creates the new project from the Payara Micro Maven archetype. You may add the generated project to the current workspace or open in the new window:
 +
-image::vscode-extension/payara-micro/add-to-current-workspace.png[Application created]
+*image*: vscode-extension/payara-micro/add-to-current-workspace.png[Application created]
 
 [[run-micro-project]]
 == Run Payara Micro Application
@@ -31,11 +31,11 @@ To run the Payara Micro application from the VS Code IDE, go to the explorer sid
 
 After starting the Micro instance, you can view the server logs in the _OUTPUT_ window:
 
-image::vscode-extension/payara-micro/new-project-running.png[Application running]
+*image*: vscode-extension/payara-micro/new-project-running.png[Application running]
 
 To redeploy the application, right-click on the listed Payara Micro instance and select *Reload*.
 
-image::vscode-extension/payara-micro/project-redeploy.png[Application redeploy]
+*image*: vscode-extension/payara-micro/project-redeploy.png[Application redeploy]
 
 [[see-also]]
 == See Also

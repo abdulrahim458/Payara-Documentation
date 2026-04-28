@@ -30,20 +30,20 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--long`::
+*`--long`*:
   If `true`, displays whether each module or application listed is enabled. The default is `false`.
-`--resources`::
+*`--resources`*:
   Lists the application-scoped resources for each application. If the `--subcomponents` option is also used, lists the application-scoped
   resources for each component within the application.
-`--subcomponents`::
+*`--subcomponents`*:
   Lists the subcomponents of each application. The subcomponents listed depend on the application type. For example, for a Jakarta EE application
   (EAR file), modules are listed. For a web application, servlets and JSP pages are listed. For an EJB module, EJB subcomponents are listed.
-`--type`::
+*`--type`*:
   Specifies the type of the applications that are to be listed. The options are as follows: +
   * `application`
   * `appclient`
@@ -56,7 +56,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-`--target`::
+*`--target`*:
   This is the name of the target upon which the subcommand operates. The valid values are as follows: +
   `server`;;
     Lists the applications for the default server instance `server` and is the default value.
@@ -82,9 +82,9 @@ Command list-applications executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

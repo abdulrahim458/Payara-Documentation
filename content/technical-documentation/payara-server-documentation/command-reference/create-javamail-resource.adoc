@@ -26,12 +26,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   This option specifies the target for which you are creating the JavaMail session resource. Valid values are: +
   `server`;;
     Creates the resource for the default server instance. This is the default value.
@@ -41,33 +41,33 @@ asadmin-options::
     Creates the resource for every server instance in the cluster.
   instance_name;;
     Creates the resource for a particular server instance.
-`--mailhost`::
+*`--mailhost`*:
   The DNS name of the default mail server. The connect methods of the Store and Transport objects use this value if a protocol-specific host property is not supplied. The name must be resolvable to an actual host name.
-`--mailuser`::
+*`--mailuser`*:
   The name of the mail account user provided when connecting to a mail server. The connect methods of the Store and Transport objects use this value if a protocol-specific username property is not supplied.
-`--fromaddress`::
+*`--fromaddress`*:
   The email address of the default user, in the form username`@`host`.`domain.
-`--storeprotocol`::
+*`--storeprotocol`*:
   The mail server store protocol. The default is `imap`. Change this value only if you have reconfigured the Payara Server's mail provider to use a non-default store protocol.
-`--storeprotocolclass`::
+*`--storeprotocolclass`*:
   The mail server store protocol class name. The default is `org.eclipse.angus.mail.imap.IMAPStore`. Change this value only if you have reconfigured the Payara Server's mail provider to use a nondefault store protocol.
-`--transprotocol`::
+*`--transprotocol`*:
   The mail server transport protocol. The default is `smtp`. Change this value only if you have reconfigured the Payara Server's mail provider to use a nondefault transport protocol.
-`--transprotocolclass`::
+*`--transprotocolclass`*:
   The mail server transport protocol class name. The default is `org.eclipse.angus.mail.smtp.SMTPTransport`. Change this value only if you have reconfigured the Payara Server's mail provider to use a nondefault transport protocol.
-`--debug`::
+*`--debug`*:
   If set to true, the server starts up in debug mode for this resource. If the JavaMail log level is set to `FINE` or `FINER`, the debugging output will be generated and will be included in the server log file. The default value is false.
-`--enabled`::
+*`--enabled`*:
   If set to true, the resource is enabled at runtime. The default value is true.
-`--description`::
+*`--description`*:
   Text providing some details of the JavaMail resource.
-`--property`::
+*`--property`*:
   Optional attribute name/value pairs for configuring the JavaMail resource. The Payara Server-specific `mail-` prefix is converted to the standard mail prefix. The JavaMail API documentation lists the properties you might want to set.
 
 [[operands]]
 == Operands
 
-jndi-name::
+*jndi-name*:
   The JNDI name of the JavaMail resource to be created. It is a recommended practice to use the naming subcontext prefix `mail/` for JavaMail resources.
 
 [[examples]]
@@ -87,9 +87,9 @@ Command create-javamail-resource executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

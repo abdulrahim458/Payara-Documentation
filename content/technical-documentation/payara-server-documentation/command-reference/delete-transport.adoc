@@ -21,12 +21,12 @@ The `delete-transport` subcommand removes the specified transport. This subcomma
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Deletes the transport only from the specified target. Valid values are as follows: +
   `server`;;
     Deletes the transport from the default server instance. This is the default value.
@@ -40,7 +40,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-transport-name::
+*transport-name*:
   The name of the transport to be deleted.
 
 [[examples]]
@@ -59,9 +59,9 @@ Command delete-transport executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

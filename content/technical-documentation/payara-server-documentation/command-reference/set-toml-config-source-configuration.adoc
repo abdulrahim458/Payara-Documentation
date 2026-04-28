@@ -24,20 +24,20 @@ The `set-toml-config-source-configuration` provides configuration options to set
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--path`::
+*`--path`*:
 Absolute path of the TOML file or relative path to the current domain.
-`--depth`::
+*`--depth`*:
 Maximum recursion depth for nested tables/arrays.
-`--dynamic`::
+*`--dynamic`*:
 Configure the config source dynamically, which will not require a restart.
-`--enabled`::
+*`--enabled`*:
 Enables or disables the config source.
-`--target`::
+*`--target`*:
 Specifies the target where the configuration source resides. +
 Valid values are as follows: +
 `server`;;
@@ -62,9 +62,9 @@ asadmin set-toml-config-source-configuration --path /Users/payara/config.toml --
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

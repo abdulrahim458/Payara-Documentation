@@ -13,9 +13,9 @@ OSGi applications can make use of core as well as enterprise OSGi features. Paya
 
 OSGi applications are deployed as one or more OSGi bundles, and the Payara Server deployment and administration infrastructure enables you to deploy and manage your OSGi bundles. This chapter classifies OSGi bundles into two categories based on the features they use:
 
-Plain OSGi Application Bundles:: Bundles that do not contain any Jakarta EE components. See xref:#developing-plain-osgi-bundles[Developing Plain OSGi Bundles].
+*Plain OSGi Application Bundles*: Bundles that do not contain any Jakarta EE components. See xref:#developing-plain-osgi-bundles[Developing Plain OSGi Bundles].
 
-Hybrid Application Bundles:: Bundles that are an OSGi bundle as wells as a Jakarta EE module. At runtime, such modules have both an OSGi bundle context and a Jakarta EE context. Payara Server supports the following hybrid application bundles:
+*Hybrid Application Bundles*: Bundles that are an OSGi bundle as wells as a Jakarta EE module. At runtime, such modules have both an OSGi bundle context and a Jakarta EE context. Payara Server supports the following hybrid application bundles:
 * Web Application Bundles (or WABs) , see xref:#developing-web-application-bundles[Developing Web Application Bundles].
 * EJB Application Bundles, see xref:#developing-ejb-application-bundles[Developing EJB Application Bundles].
 

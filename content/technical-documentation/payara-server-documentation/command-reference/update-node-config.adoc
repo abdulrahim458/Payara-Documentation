@@ -32,23 +32,23 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--nodehost`::
+*`--nodehost`*:
   The name of the host that the node is to represent after the node is updated.
-`--installdir`::
+*`--installdir`*:
   The full path to the parent of the base installation directory of the Payara Server software on the host, for example, `/export/payara6`.
-`--nodedir`::
+*`--nodedir`*:
   The path to the directory that is to contain Payara Server instances that are created on the node. If a relative path is
   specified, the path is relative to the as-install directory, where as-install is the base installation directory of the Payara Server software on the host.
 
 [[operands]]
 == Operands
 
-node-name::
+*node-name*:
   The name of the node to update. The node must exist. Otherwise, an error occurs.
 
 [[examples]]
@@ -67,9 +67,9 @@ Command update-node-config executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

@@ -34,14 +34,14 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
 
-`--verbose`::
+*`--verbose`*:
 Specifies whether additional status information is displayed when the cluster is started.
 +
 Valid values are as follows:
@@ -51,22 +51,22 @@ Displays the command to start each instance in the cluster and whether the attem
 `false`;;
 Displays no additional status information (default).
 
-`--rolling`::
+*`--rolling`*:
 Performs a rolling restart which each instance restarted in turn. The default value is `true`.
 
-`--delay`::
+*`--delay`*:
 Delay in (ms) between each instance restart in a rolling restart. The default value is `0`.
 
-`--instanceTimeout`::
+*`--instanceTimeout`*:
 Specify a timeout value of instances. The default value is `600`.
 
-`--timeout`::
+*`--timeout`*:
 Specify a timeout value of the command. The default value is `600`.
 
 [[operands]]
 == Operands
 
-cluster-name::
+*cluster-name*:
   The name of the cluster to restart.
 
 [[examples]]
@@ -85,9 +85,9 @@ Command restart-cluster executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

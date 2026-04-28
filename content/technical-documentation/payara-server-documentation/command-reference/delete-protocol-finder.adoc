@@ -22,14 +22,14 @@ The `delete-protocol-finder` subcommand removes the specified protocol finder. T
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--protocol-name`::
+*`--protocol-name`*:
   The name of the associated protocol.
-`--target`::
+*`--target`*:
   Deletes the protocol finder only from the specified target. Valid values are as follows: +
   `server`;;
     Deletes the protocol finder from the default server instance. This is the default value.
@@ -43,15 +43,15 @@ asadmin-options::
 [[operands]]
 == Operands
 
-protocol-finder-name::
+*protocol-finder-name*:
   The name of the protocol finder to be deleted.
 
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

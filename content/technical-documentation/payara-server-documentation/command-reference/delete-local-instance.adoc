@@ -40,20 +40,20 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--nodedir`::
+*`--nodedir`*:
   Specifies the directory that contains the instance's node directory. The instance's files are stored in the instance's node directory. The default is as-install`/nodes`.
-`--node`::
+*`--node`*:
   Specifies the node on which the instance resides. This option may be omitted only if the directory that the `--nodedir` option specifies contains only one node directory. Otherwise, this option is required.
 
 [[operands]]
 == Operands
 
-instance-name::
+*instance-name*:
   The name of the instance to delete. This operand may be omitted if only one instance resides on the specified node. Otherwise, this operand is required.
 
 [[examples]]
@@ -73,9 +73,9 @@ Command delete-local-instance executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

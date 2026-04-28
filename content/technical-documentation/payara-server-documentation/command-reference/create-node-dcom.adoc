@@ -42,43 +42,43 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--nodehost`::
+*`--nodehost`*:
   The name of the host that the node represents. The name of the host must be specified. Otherwise, an error occurs.
-`--installdir`::
+*`--installdir`*:
   The full path to the parent of the base installation directory of the Payara Server software on the host, for example, `C:\payara5`.
   The default is the parent of the default base installation directory
   of the Payara Server software for the DAS. This default is useful only if Payara Server is installed in the same location on all hosts.
-`--nodedir`::
+*`--nodedir`*:
   The path to the directory that is to contain Payara Server instances that are created on the node. The default is
   as-install`\nodes`, where as-install is the base installation directory of the Payara Server software on the host. If a relative path is specified, the path is relative to the as-install directory.
-`--windowsuser`::
-`-w`::
+*`--windowsuser`*:
+*`-w`*:
   The user on this node's host that is to run the process for connecting to the host through DCOM. The default is the user that is running the
   DAS process. If the `--nodehost` option is set to `localhost-domain`, the `--windowsuser` option is ignored
-`--windowsdomain`::
-`-d`::
+*`--windowsdomain`*:
+*`-d`*:
   The name of the Windows domain that contains the user that the `--windowsuser` option specifies. The default is the name of the host
   on which the subcommand is run.
-`--force`::
+*`--force`*:
   Specifies whether the node is created in the DAS configuration even if validation of the node's parameters fails. To validate a node's
   parameters, the DAS must be able to contact the node's host through DCOM. Possible values are as follows: +
   `false`;;
     The node is not created if validation of the node's parameters fails (default).
   `true`;;
     The node is created even if validation of the node's parameters fails.
-`--install`::
+*`--install`*:
   Specifies whether the subcommand shall install the Payara Server software on the host that the node represents. +
   Possible values are as follows: +
   `false`;;
     The subcommand shall not install the Payara Server software on the host (default).
   `true`;;
     The subcommand shall install the Payara Server software on the host.
-`--archive`::
+*`--archive`*:
   The absolute path to the archive file of the Payara Server software that is to be installed. If this option is omitted and the
   `--install` is `true`, the subcommand creates a ZIP archive of the Payara Server software from the installation where this subcommand
   is run. The archive does not contain the `domains` directory or the `nodes` directory.
@@ -86,7 +86,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-node-name::
+*node-name*:
   The name of the node. +
   The name must meet the following requirements: +
   * The name may contain only ASCII characters.
@@ -144,9 +144,9 @@ Command create-node-dcom executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

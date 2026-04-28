@@ -31,16 +31,16 @@ The Load Balancer distributes the workload among multiple Payara Server instance
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
 [[operands]]
 == Operands
 
-lb-name::
+*lb-name*:
   The name of the load balancer to which changes are applied. The load balancer must already exist. You can create it with the `create-http-lb` subcommand.
 
 [[examples]]
@@ -59,9 +59,9 @@ Command apply-http-lb-changes executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

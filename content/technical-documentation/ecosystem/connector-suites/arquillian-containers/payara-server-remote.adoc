@@ -89,11 +89,11 @@ a| The deployment target of the applications involved in the test.
 
 Valid values of the target are:
 
-`server`:: Deploys the component to the default Admin Server instance (on your DAS server). This is the default value if the property is omitted.
+*`server`*: Deploys the component to the default Admin Server instance (on your DAS server). This is the default value if the property is omitted.
 
-`instance_name`:: Deploys the component to the specified stand-alone server instance, which may be on the same hosts or can be on a different one as the DAS server.
+*`instance_name`*: Deploys the component to the specified stand-alone server instance, which may be on the same hosts or can be on a different one as the DAS server.
 
-`deployment_group_name`:: Deploys the component to every server instance in the specified deployment group. They can be on the same or on several other hosts as the DAS server.
+*`deployment_group_name`*: Deploys the component to every server instance in the specified deployment group. They can be on the same or on several other hosts as the DAS server.
 
 The domain name as a target is not a reasonable deployment scenario in case of testing.
 

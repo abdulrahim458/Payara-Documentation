@@ -13,7 +13,7 @@ Payara Server instances form the basis of an application deployment. An instance
 
 Each Payara Server instance is one of the following types of instance:
 
-Standalone Instance::
+*Standalone Instance*:
 A standalone instance does not share its configuration with any other instances or clusters. A standalone instance is created if either of the following conditions is met:
 +
 * No configuration or cluster is specified in the command to create the instance.
@@ -23,17 +23,17 @@ When no configuration or cluster is specified, a copy of the `default-config` co
 +
 The name of this configuration is `instance-name-config`, where instance-name represents the name of an un-clustered server instance.
 
-Shared instance::
+*Shared instance*:
 A shared instance shares its configuration with other instances or clusters. A shared instance is created if a configuration that is referenced by other instances or clusters is specified in the command to create the instance.
 
-Clustered instance::
+*Clustered instance*:
 A clustered instance inherits its configuration from the cluster to which the instance belongs and shares its configuration with other instances in the cluster.
 +
 A clustered instance is created if a cluster is specified in the command to create the instance.
 +
 Any instance that is not part of a cluster is considered an un-clustered server instance. Therefore, standalone instances and shared instances are un-clustered server instances.
 
-Docker instance::
+*Docker instance*:
 A Docker instance denotes an instance that is running within a Docker container and offers flexibility, portability, and scalability for deploying Payara Server applications in containerized environments.
 
 [[administering-payara-server-instances-centrally]]
@@ -91,13 +91,13 @@ If the instance is to reference an existing configuration, specify a configurati
 asadmin> create-instance --node node-name [--config configuration-name] instance-name
 ----
 +
-node-name::
+*node-name*:
 The node on which the instance is to reside.
-configuration-name::
+*configuration-name*:
 The name of the existing named configuration that the instance will reference.
 +
 If you do not require the instance to reference an existing configuration, omit this option. A copy of the `default-config` configuration is created for the instance. The name of this configuration is instance-name`-config`, where instance-name is the name of the server instance.
-instance-name::
+*instance-name*:
 Your choice of name for the instance that you are creating.
 
 * If you are creating a shared instance, specify the configuration that the instance will share with other clusters or instances.
@@ -107,11 +107,11 @@ Your choice of name for the instance that you are creating.
 asadmin> create-instance --node node-name --config configuration-name instance-name
 ----
 +
-node-name::
+*node-name*:
   The node on which the instance is to reside.
-configuration-name::
+*configuration-name*:
   The name of the existing named configuration that the instance will reference.
-instance-name::
+*instance-name*:
   Your choice of name for the instance that you are creating.
 
 * If you are creating a clustered instance, specify the cluster to which the instance will belong.
@@ -123,13 +123,13 @@ If the instance is managed by GMS and resides on a node that represents a multi-
 asadmin> create-instance --cluster cluster-name --node node-name [--systemproperties GMS-BIND-INTERFACE-ADDRESS-cluster-name=bind-address]instance-name
 ----
 +
-cluster-name::
+*cluster-name*:
   The name of the cluster to which you are adding the instance.
-node-name::
+*node-name*:
   The node on which the instance is to reside.
-bind-address::
+*bind-address*:
   The IP address of the network interface to which GMS binds. Specify this option only if the instance is managed by GMS and resides on a node that represents a multi-home host.
-instance-name::
+*instance-name*:
   Your choice of name for the instance that you are creating.
 
 The following example adds the instance `pmd-i1` to the cluster `pmdclust` in the domain `domain1`. The instance resides on the node `sj01`, which represents the host `sj01.example.com`.
@@ -231,7 +231,7 @@ Ensure that the instance that you are deleting is not running. For information a
 asadmin> list-instances instance-name
 ----
 +
-instance-name::
+*instance-name*:
   The name of the instance that you are deleting.
 
 . Run the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc[`delete-instance`] subcommand.
@@ -241,7 +241,7 @@ instance-name::
 asadmin> delete-instance instance-name
 ----
 +
-instance-name::
+*instance-name*:
   The name of the instance that you are deleting.
 
 The following example confirms that the instance `pmd-i1` is not running and deletes the instance.
@@ -290,7 +290,7 @@ If any of these prerequisites is not met, start the cluster by starting each ins
 asadmin> start-cluster cluster-name
 ----
 +
-cluster-name::
+*cluster-name*:
   The name of the cluster that you are starting.
 
 The following example starts the cluster `pmdcluster`.
@@ -323,7 +323,7 @@ Stopping a cluster stops all running instances in the cluster.
 asadmin> stop-cluster cluster-name
 ----
 +
-cluster-name::
+*cluster-name*:
   The name of the cluster that you are stopping.
 
 The following example stops the cluster `pmdcluster`.
@@ -367,7 +367,7 @@ asadmin> start-instance instance-name
 
 NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for controlling the behavior of the instance, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-instance.adoc[`start-instance`] help page.
 
-instance-name::
+*instance-name*:
   The name of the instance that you are starting.
 
 The following example starts the instance `pmd-i2`, which resides on the node `sj02`. This node represents the host `sj02.example.com`.
@@ -442,7 +442,7 @@ instance as explained in xref:technical-documentation/payara-server-documentatio
 asadmin> restart-instance instance-name
 ----
 +
-instance-name::
+*instance-name*:
   The name of the instance that you are restarting.
 
 The following example restarts the instance `pmd-i2`.
@@ -511,11 +511,11 @@ If the instance is to reference an existing configuration, specify a configurati
 asadmin --host das-host [--port admin-port] create-local-instance [--node node-name] [--config configuration-name] instance-name
 ----
 +
-das-host::
+*das-host*:
 The name of the host where the DAS is running.
-admin-port::
+*admin-port*:
 The HTTP or HTTPS port on which the DAS listens for administration requests. If the DAS listens on the default port for administration requests, you may omit this option.
-node-name::
+*node-name*:
 The node on which the instance is to reside.
 +
 If you are creating the instance on a host for which fewer than two nodes are defined, you may omit this option.
@@ -523,13 +523,13 @@ If you are creating the instance on a host for which fewer than two nodes are de
 If no nodes are defined for the host, Payara Server creates a CONFIG node for you. The name of the node is the unqualified name of the host.
 +
 If one node is defined for the host, the instance is created on that node.
-configuration-name::
+*configuration-name*:
 The name of the existing named configuration that the instance will reference.
 +
 If you do not require the instance to reference an existing configuration, omit this option.
 +
 A copy of the `default-config` configuration is created for the instance. The name of this configuration is `<instance-name>-config`, where instance-name is the name of the server instance.
-instance-name::
+*instance-name*:
   Your choice of name for the instance that you are creating.
 
 * If you are creating a shared instance, specify the configuration that the instance will share with other clusters or instances.
@@ -539,11 +539,11 @@ instance-name::
 asadmin --host das-host [--port admin-port] create-local-instance [--node node-name] --config configuration-name instance-name
 ----
 +
-das-host::
+*das-host*:
 The name of the host where the DAS is running.
-admin-port::
+*admin-port*:
 The HTTP or HTTPS port on which the DAS listens for administration requests. If the DAS listens on the default port for administration requests, you may omit this option.
-node-name::
+*node-name*:
 The node on which the instance is to reside.
 +
 If you are creating the instance on a host for which fewer than two nodes are defined, you may omit this option.
@@ -551,9 +551,9 @@ If you are creating the instance on a host for which fewer than two nodes are de
 If no nodes are defined for the host, Payara Server creates a `CONFIG` node for you. The name of the node is the unqualified name of the host.
 +
 If one node is defined for the host, the instance is created on that node.
-configuration-name::
+*configuration-name*:
   The name of the existing named configuration that the instance will reference.
-instance-name::
+*instance-name*:
   Your choice of name for the instance that you are creating.
 * If you are creating a clustered instance, specify the cluster to which the instance will belong.
 +
@@ -564,15 +564,15 @@ If the instance is managed by GMS and resides on a node that represents a multi-
 $ asadmin --host das-host [--port admin-port] create-local-instance --cluster cluster-name [--node node-name] [--systemproperties GMS-BIND-INTERFACE-ADDRESS-cluster-name=bind-address] instance-name
 ----
 +
-das-host::
+*das-host*:
 The name of the host where the DAS is running.
-admin-port::
+*admin-port*:
 The HTTP or HTTPS port on which the DAS listens for administration requests.
 +
 TIP: If the DAS listens on the default port for administration requests, you may omit this option.
-cluster-name::
+*cluster-name*:
 The name of the cluster to which you are adding the instance.
-node-name::
+*node-name*:
 The node on which the instance is to reside.
 +
 If you are creating the instance on a host for which fewer than two nodes are defined, you may omit this option.
@@ -580,9 +580,9 @@ If you are creating the instance on a host for which fewer than two nodes are de
 If no nodes are defined for the host, Payara Server creates a `CONFIG` node for you. The name of the node is the unqualified name of the host.
 +
 If one node is defined for the host, the instance is created on that node.
-bind-address::
+*bind-address*:
 The IP address of the network interface to which GMS binds. Specify this option only if the instance is managed by GMS and resides on a node that represents a multi-home host.
-instance-name::
+*instance-name*:
 Your choice of name for the instance that you are creating.
 
 This example adds the instance `kui-i1` to the cluster `kuicluster` locally. The `CONFIG` node `xk01` is created automatically to represent the host `xk01.example.com`, on which this example is run.
@@ -688,11 +688,11 @@ information about how to stop an instance, see the following sections:
 ----
 > asadmin --host das-host [--port admin-port] list-instances instance-name
 ----
-das-host::
+*das-host*:
 The name of the host where the DAS is running.
-admin-port::
+*admin-port*:
 The HTTP or HTTPS port on which the DAS listens for administration requests. If the DAS listens on the default port for administration requests, you may omit this option.
-instance-name::
+*instance-name*:
 The name of the instance that you are deleting.
 . Run the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc[`delete-local-instance`] subcommand.
 +
@@ -700,13 +700,13 @@ The name of the instance that you are deleting.
 ----
 > asadmin --host das-host [--port admin-port] delete-local-instance [--node node-name]instance-name
 ----
-das-host::
+*das-host*:
 The name of the host where the DAS is running.
-admin-port::
+*admin-port*:
 The HTTP or HTTPS port on which the DAS listens for administration requests. If the DAS listens on the default port for administration requests, you may omit this option.
-node-name::
+*node-name*:
 The node on which the instance resides. If only one node is defined for the Payara Server installation that you are running on the node's host, you may omit this option.
-instance-name::
+*instance-name*:
 The name of the instance that you are deleting.
 
 This example confirms that the instance `yml-i1` is not running and deletes the instance.
@@ -749,9 +749,9 @@ $ asadmin start-local-instance [--node node-name] instance-name
 NOTE: Only the options that are required to complete this task are provided in this step. +
 For information about all the options for controlling the behavior of the instance, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc[`start-local-instance`] help page.
 
-node-name::
+*node-name*:
 The node on which the instance resides. If only one node is defined for the Payara Server installation that you are running on the node's host, you may omit this option.
-instance-name::
+*instance-name*:
 The name of the instance that you are starting.
 
 This example starts the instance `yml-i1` locally. The instance resides on the node `sj01`.
@@ -791,9 +791,9 @@ When an instance is stopped, the instance stops accepting new requests and waits
 ----
 $ asadmin stop-local-instance [--node node-name]instance-name
 ----
-node-name::
+*node-name*:
 The node on which the instance resides. If only one node is defined for the Payara Server installation that you are running on the node's host, you may omit this option.
-instance-name::
+*instance-name*:
 The name of the instance that you are stopping.
 
 This example stops the instance `yml-i1` locally. The instance resides on the node `sj01`.
@@ -833,9 +833,9 @@ instance as explained in xref:technical-documentation/payara-server-documentatio
 ----
 $ asadmin restart-local-instance [--node node-name]instance-name
 ----
-node-name::
+*node-name*:
   The node on which the instance resides. If only one node is defined for the Payara Server installation that you are running on the node's host, you may omit this option.
-instance-name::
+*instance-name*:
   The name of the instance that you are restarting.
 
 This example restarts the instance `yml-i1` locally. The instance resides on the node `sj01`.
@@ -1238,7 +1238,7 @@ On the DAS, the files and directories of an instance are stored in the `domain-d
 
 The default synchronization behavior for the files and directories of an instance is as follows:
 
-`applications`::
+*`applications`*:
 This directory contains a subdirectory for each application that is deployed to the instance.
 +
 By default, only a change to an application's top-level directory within the application directory causes the DAS to synchronize that application's directory.
@@ -1249,7 +1249,7 @@ If a file below a top-level subdirectory is changed without a change to a file i
 +
 If an application is deployed and un-deployed, full synchronization is not necessary to update the instance with the change.
 
-`config`::
+*`config`*:
 This directory contains configuration files for the entire domain.
 +
 By default, the DAS resynchronizes files that have been modified since the last resynchronization only if the `domain.xml` file in this directory has been modified.
@@ -1260,12 +1260,12 @@ If you require any additional configuration files to be resynchronized, you must
 +
 For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-resynchronize-additional-configuration-files[To Resynchronize Additional Configuration Files].
 
-`config/config-name`::
+*`config/config-name`*:
 This directory contains files that are to be shared by all instances that reference the named configuration config-name. A config-name directory exists for each named configuration in the configuration of the DAS.
 +
 Because the `config-name` directory contains the subdirectories `lib` and `docroot`, this directory might be very large. Therefore, by default, only a change to a file or a top-level subdirectory of config-name causes the DAS to resynchronize the config-name directory.
 
-`config/domain.xml`::
+*`config/domain.xml`*:
 This file contains the DAS configuration for the domain to which the instance belongs.
 +
 By default, the DAS resynchronizes this file if it has been modified since the last resynchronization.
@@ -1273,7 +1273,7 @@ By default, the DAS resynchronizes this file if it has been modified since the l
 NOTE: A change to the `config/domain.xml` file is required to cause the DAS to resynchronize an instance's files. +
 If the `config/domain.xml` file has not changed since the last resynchronization, none of the instance's files is resynchronized, even if some of these files are out of date in the cache.
 
-`docroot`::
+*`docroot`*:
 This directory is the HTTP document root directory. By default, all instances in a domain use the same document root directory.
 +
 To enable instances to use a different document root directory, a virtual server must be created in which the `docroot` property is set.
@@ -1287,15 +1287,15 @@ When the DAS resynchronizes the `docroot` directory, all modified files and subd
 +
 If a file below a top-level subdirectory is changed without a change to a file in the top-level subdirectory, full synchronization is required.
 
-`generated`::
+*`generated`*:
 This directory contains generated files for Jakarta EE applications and modules, for example, EJB stubs, compiled JSP classes, and security policy files.
 +
 WARNING: Do not modify the contents of this directory.
 +
 This directory is resynchronized when the `applications` directory is resynchronized. Therefore, only directories for applications that are deployed to the instance are resynchronized.
 
-`lib`::
-`lib/classes`::
+*`lib`*:
+*`lib/classes`*:
 These directories contain common Jakarta EE class files or JAR archives and ZIP archives for use by applications that are deployed to the entire domain. Typically, these directories contain common JDBC drivers and other utility libraries that are shared by all applications in the domain.
 +
 The contents of these directories are loaded by the common class loader. For more information, see "xref:technical-documentation/application-development/class-loaders.adoc[Using the Common Class Loader]" in the Payara Server Application Development section.
@@ -1306,10 +1306,10 @@ The class loader loads the contents of these directories in the following order:
 . `lib/*.jar`
 . `lib/*.zip`
 
-`lib/applibs`::
+*`lib/applibs`*:
 This directory contains application-specific Jakarta class files or JAR archives and ZIP archives for use by applications that are deployed to the entire domain.
 
-`lib/ext`::
+*`lib/ext`*:
 This directory contains optional packages in JAR archives and ZIP archives for use by applications that are deployed to the entire domain.
 +
 In past versions, these archive files are loaded by using Jakarta extension mechanism. Since Java 11+, as extension library support has been removed, these libraries will be automatically added as classpath elements.
@@ -1331,7 +1331,7 @@ NOTE: Resynchronization of an instance is only required if the instance is stopp
 > asadmin list-instances instance-name
 ----
 +
-instance-name::
+*instance-name*:
   The name of the instance that you are resynchronizing with the DAS.
 +
 If the instance is stopped, the `list-instances` subcommand indicates that the instance is not running.
@@ -1416,9 +1416,9 @@ cluster or standalone instance.
 |`domain-dir/config/<config-name>/lib/ext`
 |=======================================================================
 
-domain-dir::
+*domain-dir*:
   The directory in which the domain's configuration is stored.
-config-name::
+*config-name*:
   For a standalone instance: the named configuration that the instance references. +
   For a clustered instance: the named configuration that the cluster to which the instance belongs references.
 
@@ -1446,7 +1446,7 @@ Configuration files in the `domain-dir/config` directory that are resynchronized
 If you create a custom configuration file for an instance or a cluster, the custom file is resynchronized only for the instance or cluster. You'll have to update any JVM options that reference this configuration file in the domain configuration settings.
 
 . Place the custom configuration file in the `domain-dir/config/config-name` directory.
-config-name:: The named configuration that the instance references.
+*config-name*: The named configuration that the instance references.
 . If the instance locates the file through an option of the Jakarta EE application launcher, update the option.
 .  Delete the JVM option in case of a customized config file location.
 +
@@ -1454,11 +1454,11 @@ config-name:: The named configuration that the instance references.
 ----
 asadmin> delete-jvm-options --target instance-name option-name=current-value
 ----
-instance-name::
+*instance-name*:
   The name of the instance for which the custom configuration file is created.
-option-name::
+*option-name*:
   The name of the option for locating the file.
-current-value::
+*current-value*:
   The current value of the option for locating the file.
 
 . Re-create the JVM option that you deleted in the previous step.
@@ -1467,11 +1467,11 @@ current-value::
 ----
 asadmin> create-jvm-options --target instance-name option-name=new-value
 ----
-instance-name::
+*instance-name*:
   The name of the instance for which the custom configuration file is created.
-option-name::
+*option-name*:
   The name of the option for locating the file.
-new-value::
+*new-value*:
   The new value of the option for locating the file.
 
 This example updates the option for locating the `server.policy` file to specify a custom file location for the instance `pmd`.
@@ -1594,7 +1594,7 @@ How to export the data depends on the host from where you run the `export-sync-b
 ----
 asadmin> export-sync-bundle --target target
 ----
-target::
+*target*:
 The cluster or standalone instance for which to export configuration data.
 +
 Do not specify a clustered instance. If you specify a clustered instance, an error occurs. To export configuration data for a clustered instance, specify the name of the cluster of which the instance is a member, not the instance.
@@ -1608,11 +1608,11 @@ The file is created on the DAS host.
 > asadmin --host das-host [--port admin-port] export-sync-bundle [--retrieve=true] --target target
 ----
 +
-das-host::
+*das-host*:
 The name of the host where the DAS is running.
-admin-port::
+*admin-port*:
 The HTTP or HTTPS port on which the DAS listens for administration requests. If the DAS listens on the default port for administration requests, you may omit this option.
-target::
+*target*:
 The cluster or standalone instance for which to export configuration data.
 +
 Do not specify a clustered instance. If you specify a clustered instance, an error occurs. To export configuration data for a clustered instance, specify the name of the cluster of which the instance is a member, not the instance.
@@ -1630,11 +1630,11 @@ NOTE: Only the options that are required to complete this task are provided in t
 > asadmin import-sync-bundle [--node node-name] --instance instance-name archive-file
 ----
 +
-node-name::
+*node-name*:
 The node on which the instance resides. If you omit this option, the subcommand determines the node from the DAS configuration in the archive file.
-instance-name::
+*instance-name*:
 The name of the instance that you are resynchronizing.
-archive-file::
+*archive-file*:
 The name of the file, including the path, that contains the archive file to import.
 
 This example resynchronizes the clustered instance `yml-i1` and the DAS offline. The instance is a member of the cluster `ymlcluster`. The archive file that contains the instance's configuration data is created on the host where the instance resides.

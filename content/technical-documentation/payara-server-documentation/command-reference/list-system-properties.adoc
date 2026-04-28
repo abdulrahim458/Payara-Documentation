@@ -24,16 +24,16 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
 [[operands]]
 == Operands
 
-target::
+*target*:
   This restricts the listing to system properties for a specific target. Valid values are: +
   domain;;
     Lists the system properties defined for the domain.
@@ -62,9 +62,9 @@ Command list-system-properties executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

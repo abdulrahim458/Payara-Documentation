@@ -16,13 +16,13 @@ Before you deploy Payara Server and your Jakarta EE applications into a producti
 
 To better understand your security needs, ask yourself the following questions:
 
-Which resources am I protecting?::
+*Which resources am I protecting?*:
 
 Many resources in the production environment can be protected, including information in databases accessed by Payara Server and the availability, performance, applications, and the integrity of the website.
 +
 Consider the resources you want to protect when deciding the level of security you must provide.
 
-From whom am I protecting the resources?::
+*From whom am I protecting the resources?*:
 
 For most websites, resources must be protected from everyone on the Internet. But should the website be protected from the employees on an intranet in your enterprise infrastructure?
 +
@@ -34,7 +34,7 @@ Should the system administrators be able to access all data?
 +
 You might consider giving access to highly confidential data or strategic resources to only a few well trusted system administrators. Perhaps it would be best to disallow system administrators access to the data or resources.
 
-What will happen if the protections on strategic resources fail?::
+*What will happen if the protections on strategic resources fail?*:
 
 In some cases, a fault in your security scheme is easily detected and considered nothing more than an inconvenience. In other cases, a fault might cause great damage to companies or individual clients that use the website.
 +

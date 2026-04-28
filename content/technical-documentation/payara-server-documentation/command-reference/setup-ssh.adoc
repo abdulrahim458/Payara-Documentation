@@ -70,17 +70,17 @@ If public key authentication is already set up on a host, the subcommand informs
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--sshport`::
+*`--sshport`*:
   The port to use for SSH connections to the host where SSH is being set up. The default is 22.
-`--sshuser`::
+*`--sshuser`*:
   The SSH user on the remote host that is to run the process for setting up SSH on that host. The default is the user that is running this
   subcommand. To ensure that the DAS can read this user's SSH private key file, specify the user that is running the DAS process.
-`--sshkeyfile`::
+*`--sshkeyfile`*:
   The absolute path to the SSH private key file for user that the `--sshuser` option specifies. This file is used for authentication to
   the `sshd` daemon on the host. +
   The user that is running this subcommand must be able to reach the path to the key file and read the key file. +
@@ -89,7 +89,7 @@ asadmin-options::
   . `id_rsa`
   . `id_dsa`
   . `identity`
-`--sshpublickeyfile`::
+*`--sshpublickeyfile`*:
   The absolute path to the SSH public key file for user that the `--sshuser` option specifies. The content of the public key file is
   appended to the user's `.ssh/authorized_keys` file on each host where SSH is being set up. If the `.ssh/authorized_keys` file does not exist
   on a host, the subcommand creates the file. +
@@ -99,7 +99,7 @@ asadmin-options::
   . `id_rsa.pub`
   . `id_dsa.pub`
   . `identity.pub`
-`--generatekey`::
+*`--generatekey`*:
   Specifies whether the subcommand generates the SSH key files without prompting the user. +
   Possible values are as follows: +
   `true`;;
@@ -115,7 +115,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-host-list::
+*host-list*:
   A space-separated list of the names of the hosts where an SSH key is to be set up.
 
 [[examples]]
@@ -157,9 +157,9 @@ Command setup-ssh executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

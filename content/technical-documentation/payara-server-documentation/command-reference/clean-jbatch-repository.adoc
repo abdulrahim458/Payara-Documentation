@@ -22,18 +22,18 @@ The `clean-jbatch-repository` subcommand will remove the history of all job reco
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--status`::
+*`--status`*:
 The status of batch jobs executions to which delete the records of. Valid values are as follows: +
 `COMPLETED`;;
 Only job executions that successfully completed will be deleted.
 `ALL`;;
 All job executions will be deleted, regardless of status.
-`--days`::
+*`--days`*:
 The number of days previous that the end time of the job execution must be to get deleted.
 +
 Defaults to `1` day
@@ -41,7 +41,7 @@ Defaults to `1` day
 [[operands]]
 == Operands
 
-job_name::
+*job_name*:
 The name of the Jakarta Batch job that will be cleared in the repository.
 
 [[examples]]
@@ -57,9 +57,9 @@ asadmin > clean-jbatch-repository --status=ALL --days=7 testjob
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

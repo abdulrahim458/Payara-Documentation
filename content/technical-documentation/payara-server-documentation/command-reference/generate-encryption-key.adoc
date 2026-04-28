@@ -25,22 +25,22 @@ For more information on the Data Grid mechanism, see xref:technical-documentatio
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--dontCheckIfRunning`::
+*`--dontCheckIfRunning`*:
 Determines whether to check if the targeted domain is running or not.
 +
 The default value is `false`.
-`--domaindir`::
+*`--domaindir`*:
 The path to the directory containing the target domain. The default domain directory is `as-install/domains`.
 
 [[operands]]
 == Operands
 
-domain-name::
+*domain-name*:
 The name of the domain to target. The default is `domain1`.
 
 [[examples]]
@@ -60,9 +60,9 @@ Command generate-encryption-key executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

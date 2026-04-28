@@ -24,15 +24,15 @@ NOTE: The domains will be started assuming default values for all options you wo
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--timeout`::
+*`--timeout`*:
 Specifies how long to take for the domains to start in seconds. If starting the domains takes longer than this amount then this command will fail.
 +
 The default value is `600`.
 
-`--domainTimeout`::
+*`--domainTimeout`*:
 Specifies how long to take for each domain to start in seconds. If starting the domains takes longer than this amount then this command will fail.
 +
 The default value is `600`.
@@ -40,7 +40,7 @@ The default value is `600`.
 [[operands]]
 == Operands
 
-domain-names::
+*domain-names*:
 The list of unique names of the domains you want to start.
 
 [[examples]]
@@ -71,9 +71,9 @@ Command start-domains executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

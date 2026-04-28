@@ -191,18 +191,18 @@ To obtain a listing of available `asadmin` subcommands, use the xref:technical-d
 [[options]]
 == Options
 
-`--host`::
-`-H`:: The machine name where the DAS is running. The default value is `localhost`.
-`--port`::
-`-p`:: The HTTP port or HTTPS port for administration. This port is the port in the URL that you specify in your web browser to manage the domain. For example, in the URL `http://localhost:4949`, the port is 4949.
+*`--host`*:
+*`-H`*: The machine name where the DAS is running. The default value is `localhost`.
+*`--port`*:
+*`-p`*: The HTTP port or HTTPS port for administration. This port is the port in the URL that you specify in your web browser to manage the domain. For example, in the URL `http://localhost:4949`, the port is 4949.
 +
 The default port number for administration is 4848.
-`--user`::
-`-u`:: The username of the authorized administrative user of the DAS.
+*`--user`*:
+*`-u`*: The username of the authorized administrative user of the DAS.
 +
 If you have authenticated to a domain by using the `asadmin login` command, you need not specify the `--user` option for subsequent operations on the domain.
-`--passwordfile`::
-`-W`:: Specifies the name, including the full path, of a file that contains password entries in a specific format.
+*`--passwordfile`*:
+*`-W`*: Specifies the name, including the full path, of a file that contains password entries in a specific format.
 +
 CAUTION: Any password file created to pass as an argument by using the `--passwordfile` option should be protected with file system permissions. Additionally, any password file being used for a transient purpose, such as setting up SSH among nodes, should be deleted after it has served its purpose.
 +
@@ -255,14 +255,14 @@ For security reasons, a password that is specified as an environment variable is
 The master password is not propagated on the command line or an  environment variable, but can be specified in the file that the `--passwordfile` option specifies.
 +
 The default value for `AS_ADMIN_MASTERPASSWORD` is `changeit`.
-`--terse`::
-`-t`::
+*`--terse`*:
+*`-t`*:
 If true, output data is very concise and in a format that is optimized for use in scripts instead of for reading by humans. Typically, descriptive text and detailed
   status messages are also omitted from the output data.
 +
 Default is `false`.
-`--extraterse`::
-`-T`::
+*`--extraterse`*:
+*`-T`*:
 +
 NOTE: Currently, this option only works with the `create-instance` and `create-local-instance` commands.
 +
@@ -273,22 +273,22 @@ See xref:technical-documentation/payara-server-documentation/high-availability/a
 IMPORTANT: The `extraterse` option implicitly enables the `terse` option - this is true for *all* commands (not just `create-instance` and `create-local-instance`).
 +
 Defaults to `false`.
-`--secure`::
-`-s`::
+*`--secure`*:
+*`-s`*:
 If set to `true`, uses SSL/TLS to communicate with the DAS.
 +
 The default is `false`.
-`--echo`::
-`-e`:: If set to `true`, the command-line statement is echoed on the standard output. The default is `false`.
-`--interactive`::
-`-I`::
+*`--echo`*:
+*`-e`*: If set to `true`, the command-line statement is echoed on the standard output. The default is `false`.
+*`--interactive`*:
+*`-I`*:
 If set to `true`, only the required options are prompted.
 +
 The default depends on how the `asadmin` utility is run:
 +
 * If the `asadmin` utility is run from a console window, the default is `true`.
 * If the `asadmin` utility is run without a console window, for example, from within a script, the default is `false`.
-`--detach`::
+*`--detach`*:
 If set to `true`, the specified `asadmin` subcommand is detached and executed in the background in detach mode. The default value is `false`.
 +
 The `--detach` option is useful for long-running subcommands and enables you to execute several independent subcommands from one console or script.
@@ -299,15 +299,15 @@ Job IDs are assigned to subcommands that are started using `asadmin --detach`. Y
 
 //TODO - Link relevant commands that may benefit from using the autoname feature.
 
-`--autoname`::
-`-a`::
+*`--autoname`*:
+*`-a`*:
 If `true`, this option allows the specified `asadmin` subcommand that accept `String` names as their primary parameter (the parameter that you don’t have to specify, e.g. the `instancename` parameter for the `create-instance` command) to generate a name.
 +
 Specifically for the `create-instance` and `create-local-instance` commands, the `autoname` option can also be used to automatically resolve any name conflicts. See xref:technical-documentation/payara-server-documentation/command-reference/auto-naming.adoc#auto-naming[`auto-naming`] for more information.
 +
 Default to `false`.
-`--help`::
-`-?`:: Displays the help text for the `asadmin` utility.
+*`--help`*:
+*`-?`*: Displays the help text for the `asadmin` utility.
 
 [[examples]]
 == Examples

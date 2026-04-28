@@ -96,37 +96,37 @@ This section maps the common configuration tasks to the command-line procedures 
 
 The following resources and services frequently require configuration immediately after installation:
 
-System Properties::
+*System Properties*:
   See xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#administering-system-properties[Administering System Properties].
-Domains::
+*Domains*:
   The initial `domain1` is created during installation. Additional configuration tasks might include such tasks as configuring additional domains or setting up automatic restart. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#administering-domains[Administering Domains].
-JVM::
+*JVM*:
   The initial tasks for configuring the JVM include creating JVM options and profilers.
-Logging::
+*Logging*:
   By default, logging is enabled, so basic logging works without additional configuration. However, you might want to change log levels, property values, or the location of log files. See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#administering-the-logging-service[Administering the Logging Service].
-Monitoring::
+*Monitoring*:
   By default, the monitoring service is enabled. However, monitoring for the individual modules is not enabled, so your first monitoring task is to enable monitoring for the modules that you want to monitor. See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service].
-Life Cycle Modules::
+*Life Cycle Modules*:
   See xref:technical-documentation/payara-server-documentation/general-administration/administering-lifecycle-modules.adoc#administering-life-cycle-modules[Administering Life Cycle Modules].
-Security::
+*Security*:
   * System Security. Initial configuration tasks might include setting up passwords, audit modules, and certificates. See "xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-system-security[Administering System Security]" in the Payara Server Security Guide.
   * User Security. Initial configuration tasks might include creating authentication realms and file users. See "xref:technical-documentation/payara-server-documentation/security-guide/administering-user-security.adoc#administering-user-security[Administering User Security]" in the Payara Server Security Guide.
   * Message Security. Initial configuration tasks might include configuring a Java Cryptography Extension (JCE) provider, enabling default and non-default security providers, and configuring message protection policies. See "xref:technical-documentation/payara-server-documentation/security-guide/administering-message-security.adoc#administering-message-security[Administering Message Security]" in the Payara Server Security Guide.
-Database Connectivity::
+*Database Connectivity*:
   The initial tasks involved in configuring Payara Server to connect to an external database include creating a Java Database Connectivity (JDBC) connection pool, creating a JDBC resource, and integrating a JDBC driver. See xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#administering-database-connectivity[Administering Database Connectivity].
-EIS Connectivity::
+*EIS Connectivity*:
   The initial tasks involved in configuring Payara Server to connect to an enterprise information system (EIS) include creating a connector connection pool, creating a connector resource, editing a resource adapter configuration, creating a connector security map, creating a connector work security map, and creating an administered object (if needed).
   See xref:technical-documentation/payara-server-documentation/general-administration/administering-eis-connectivity.adoc#administering-eis-connectivity[Administering EIS Connectivity].
-Internet Connectivity::
+*Internet Connectivity*:
   The initial tasks involved in making deployed web applications accessible by internet clients include creating HTTP network listeners and virtual servers, and configuring the HTTP listeners for SSL (if needed). See xref:technical-documentation/payara-server-documentation/general-administration/administering-http-connectivity.adoc#administering-http-connectivity[Administering Internet Connectivity].
-Object Request Broker (ORB)::
+*Object Request Broker (ORB)*:
   An initial configuration task might involve creating an IIOP listener. See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-orb.adoc#administering-the-object-request-broker-orb[Administering the Object Request Broker (ORB)].
-JavaMail Service::
+*JavaMail Service*:
   An initial configuration task might involve creating a JavaMail
   resource. See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-jakarta-mail-service.adoc#administering-the-javamail-service[Administering the JavaMail Service].
-Java Message Service (JMS)::
+*Java Message Service (JMS)*:
   Initial configuration tasks might include creating a physical destination, creating connection factories or destination resources, creating a JMS host (if the default JMS host is not adequate), adjusting connection pool settings (if needed), and configuring resource adapters for JMS. See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-the-java-message-service-jms[Administering the Java Message Service (JMS)].
-JNDI Service::
+*JNDI Service*:
   An initial configuration task might involve creating a JNDI resource.
   See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-jndi-service.adoc#administering-the-java-naming-and-directory-interface-jndi-service[Administering the Java Naming and Directory Interface (JNDI) Service].
 

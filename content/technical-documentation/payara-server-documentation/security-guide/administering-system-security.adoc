@@ -31,22 +31,22 @@ Within its deployment descriptors, an application can specify the type of authen
 
 Payara Server supports specifying the following types of authentication in deployment descriptors:
 
-BASIC::
+*BASIC*:
 Uses the standard `Basic` Authentication Scheme as described in RFC2617. The communication protocol is HTTP (secure transport is optional).
 +
 There is no encryption of user credentials unless using secure transport.
 +
 This type is not  considered to be a secure method of user authentication unless used in conjunction with an encrypted communications channel, such as that provided by SSL/TLS.
 
-FORM::
+*FORM*:
 The application provides its own custom login and error webpages. The communication protocol is HTTP (secure transport is optional).
 +
 There is no encryption of user credentials unless using secure transport.
 
-CLIENT-CERT::
+*CLIENT-CERT*:
 The server authenticates the client using a public key certificate.The communication protocol is HTTPS (secure transport required).
 
-DIGEST::
+*DIGEST*:
 The server authenticates a user based on a username and a password. Unlike `BASIC` authentication, the plaintext password is never sent over the network, although a hash of the password combined with other parameters is sent.
 +
 While `Digest` Authentication is more secure than `Basic` Authentication, usernames and passwords are not strongly protected, and the use of secure transport is heavily recommended.
@@ -396,11 +396,11 @@ Each certificate in the chain (after the first) thus authenticates the public ke
 
 During Payara Server installation, a self-signed certificate is generated in Java Secure Socket Extension (JSSE) format suitable for internal testing. By default, Payara Server stores its certificate information in certificate databases in the `domain-dir/config` directory:
 
-Keystore file::
+*Keystore file*:
   The `keystore.jks` file contains the certificate, including its private key. The keystore file is protected with a password. +
   Each keystore entry has a unique alias. After installation, the Payara Server keystore has a single entry with an alias of `s1as` that corresponds to the self-signed certificate and its key.
 
-Truststore file::
+*Truststore file*:
   The `cacerts.p12` file contains trusted certificates, including public keys for other entities. For a trusted certificate, the server has confirmed that the public key in the certificate belongs to the certificate's owner. These trusted certificates generally include those of recognized CAs.
 
 [[secure-sockets-layer]]
@@ -441,15 +441,15 @@ Payara Server provides the `AppservCertificateLoginModule` class to allow develo
 
 The convenience methods include the following:
 
-`getAppName()`::
+*`getAppName()`*:
   Returns the name of the application to be authenticated. This may be useful when a single `LoginModule` has to handle multiple applications that use certificates.
-`getCerts()`::
+*`getCerts()`*:
   Returns the certificate chain as an array of `java.security.cert.X509Certificate` certificates.
-`getX500Principal()`::
+*`getX500Principal()`*:
   Returns the distinguished (`DN`) principal from the first certificate in the chain.
-`getSubject()`::
+*`getSubject()`*:
   Returns the subject that is being authenticated.
-`commitUserAuthentication(final String[] groups)`::
+*`commitUserAuthentication(final String[] groups)`*:
   This method sets the authentication status to success if the groups parameter is non-null.
 +
 WARNING: This method is called after the authentication has succeeded. If the authentication failed, do not call this method.
@@ -877,11 +877,11 @@ Command update-password-alias executed successfully
 
 To use a password alias, navigate to any configuration view where you would have previously entered a password in plaintext format:
 
-image::password-aliases/password-aliases-unused.png[Password in plain text]
+*image*: password-aliases/password-aliases-unused.png[Password in plain text]
 
 In place of the password, you can enter an alias which corresponds to the password in the form: `${ALIAS=<password-alias-name>}`:
 
-image::password-aliases/password-aliases-using.png[Placeholder for Password Alias]
+*image*: password-aliases/password-aliases-using.png[Placeholder for Password Alias]
 
 [[managing-passwords-admin-console]]
 === Managing Password Aliases through the Admin Console
@@ -893,29 +893,29 @@ Here are instructions on managing password aliases through the web administratio
 
 . To create a new password alias for the domain, select *Domain* on the page tree, then select the *Password Aliases* tab and click the *New* button:
 +
-image::password-aliases/password-aliases-new.png[Create new password alias]
+*image*: password-aliases/password-aliases-new.png[Create new password alias]
 
 . On the next page, enter the name of the alias, and the password, twice:
 +
-image::password-aliases/password-aliases-creation.png[Password alias creation]
+*image*: password-aliases/password-aliases-creation.png[Password alias creation]
 
 . Finally, press the *OK* button to create your new alias:
 +
-image::password-aliases/password-aliases-created.png[Password alias created]
+*image*: password-aliases/password-aliases-created.png[Password alias created]
 
 [[modifying-password-alias]]
 ==== Modifying a password alias
 
 To modify an existing password alias, select it on the *Password Aliases* page. On the *Edit Password Alias* page you are able to change the entered password.
 
-image::password-aliases/password-aliases-modifying.png[Modifying password alias]
+*image*: password-aliases/password-aliases-modifying.png[Modifying password alias]
 
 [[deleting-password-alias]]
 ==== Deleting a password alias
 
 To delete a password alias, go to the *Password Aliases page*, tick the checkbox of the password alias you wish to delete and then press the *Delete* button:
 
-image::password-aliases/password-aliases-deleting.png[Deleting password alias]
+*image*: password-aliases/password-aliases-deleting.png[Deleting password alias]
 
 
 [[using-password-alias-microprofile]]

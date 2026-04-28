@@ -28,14 +28,14 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--restype`::
+*`--restype`*:
   The JMS resource type, which can be `jakarta.jms.Topic`, `jakarta.jms.Queue`, `jakarta.jms.ConnectionFactory`, `jakarta.jms.TopicConnectionFactory`, or `jakarta.jms.QueueConnectionFactory`.
-`--target`::
+*`--target`*:
   Creates the JMS resource only for the specified target. Valid values are as follows: +
 
 NOTE: The resource is always created for the domain as a whole, but the`<resource-ref>` element for the resource is only created for the specified `--target`. This means that although the resource is defined at the domain level, it is only active at the specified `--target`.
@@ -48,11 +48,11 @@ NOTE: The resource is always created for the domain as a whole, but the`<resourc
     Creates the JMS resource for every server instance in the specified cluster.
   instance-name;;
     Creates the JMS resource for the specified server instance.
-`--enabled`::
+*`--enabled`*:
   If set to true (the default), the resource is enabled at runtime.
-`--description`::
+*`--description`*:
   Text providing details about the JMS resource.
-`--property`::
+*`--property`*:
   Optional attribute name/value pairs for configuring the JMS resource. You can specify the following properties for a connection factory resource: +
   `ClientId`;;
     A client ID for a connection factory that will be used by a durable subscriber.
@@ -78,13 +78,13 @@ NOTE: The resource is always created for the domain as a whole, but the`<resourc
     The name of the physical destination to which the resource will refer. The physical destination is created automatically when you run an application that uses the destination resource. You can also create a physical destination with the `create-jmsdest` subcommand. If you do not specify this property, the JMS service creates a physical destination with the same name as the destination resource (replacing any forward slash in the JNDI name with an underscore).
   `Description`;;
     A description of the physical destination.
-`--force`::
+*`--force`*:
   Specifies whether the subcommand overwrites the existing JMS resource of the same name. The default value is `false`.
 
 [[operands]]
 == Operands
 
-jndi_name::
+*jndi_name*:
   The JNDI name of the JMS resource to be created.
 
 [[examples]]
@@ -118,9 +118,9 @@ Command create-jms-resource executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

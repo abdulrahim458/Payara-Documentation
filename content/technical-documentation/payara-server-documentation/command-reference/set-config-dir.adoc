@@ -25,18 +25,18 @@ The `set-config-dir` sets the directory to be used for the directory config sour
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--directory`::
+*`--directory`*:
 Full path to the directory containing configuration files.
 +
 Leaf directory name cannot start with a dot. Defaults to `secrets`.
 
-`--target`::
+*`--target`*:
 Specifies the target where the configuration source resides. +
 Valid values are as follows: +
 `server`;;
@@ -63,9 +63,9 @@ asadmin set-config-dir --directory=/home/payara/secrets --target=myAppCluster
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

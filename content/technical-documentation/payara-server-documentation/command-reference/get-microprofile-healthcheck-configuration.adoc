@@ -20,13 +20,13 @@ The `get-microprofile-healthcheck-configuration` returns the current configurati
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--target`::
+*`--target`*:
 Specifies the target of this command. +
 Valid values are as follows: +
 `server`;;
@@ -57,9 +57,9 @@ Command get-microprofile-healthcheck-configuration executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

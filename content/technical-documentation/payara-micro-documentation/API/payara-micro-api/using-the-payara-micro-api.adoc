@@ -5,10 +5,10 @@ It is possible to execute administration commands programmatically using the xre
 
 There are two overloaded forms that can be used:
 
-`*run(String command, String... args )*`::
+*`*run(String command, String... args )*`*:
 This method executes the specified _asadmin_ command on all instances in the runtime's cluster. It returns a `Map<InstanceDescriptor, Future<ClusterCommandResult>>`, which can be used to inspect the results of the execution on each instance the command was executed.
 
-`*run(Collection<InstanceDescriptor> members, String command, String... args )*`::
+*`*run(Collection<InstanceDescriptor> members, String command, String... args )*`*:
 This method executes the specified _asadmin_ command on all instances contained in the `Collection` supplied. As with the previous method, it returns a `Map<InstanceDescriptor, Future<ClusterCommandResult>>`, which can be used to inspect the results of the command execution.
 
 NOTE: For both methods, it's recommended to use the `getClusteredPayaras()` method exposed by the `PayaraMicroRuntime` class to retrieve a list of all the instances in the cluster and determine which command executions should be filtered.

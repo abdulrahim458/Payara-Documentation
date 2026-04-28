@@ -37,26 +37,26 @@ If the application client is a stand-alone module or the only client in an EAR f
 [[options]]
 == Options
 
-jvm-options::
+*jvm-options*:
   optional; you can set JVM options for the client application. These can be any valid `java` command options except `-client` or `-jar`. JVM options can be intermixed with other `appclient` command options as long as both types of options appear before the class-selector.
-client_application_classfile::
+*client_application_classfile*:
   optional; the file system pathname of the client application `.class` file. A relative pathname must be relative to the current directory. This class file must contain the `main()` method to be invoked by the Application Client Container. +
   If you use client_application_classfile and the class is dependent on other user classes, you must also set the classpath. You can either use the `-classpath` JVM option in the `appclient` command or set the `CLASSPATH` environment variable. For more information about setting a classpath, see Setting the Class Path, Oracle Solaris Version (`http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/classpath.html`) or Setting the Class Path, Windows Version (`http://docs.oracle.com/javase/6/docs/technotes/tools/windows/classpath.html`).
-`-client`::
+*`-client`*:
   optional; the name and location for the client JAR file.
-`-mainclass`::
+*`-mainclass`*:
   optional; the full classname of the main client application as specified in the `Main-Class` entry in the `MANIFEST.MF` file. Used for a multiple client applications. By default, uses the class specified in the `client jar`. For example, `com.example.test.AppClient`.
-`-name`::
+*`-name`*:
   optional; the display name for the client application. Used for multiple client applications. By default, the display name is specified in the client jar `application-client.xml` file which is identified by the `display-name` attribute.
-`-xml`::
+*`-xml`*:
   optional if using the default domain, instance, and name (`sun-acc.xml`), otherwise it is required; identifies the name and location of the client configuration XML file. If not specified, defaults to the `sun-acc.xml` file in the domain-dir`/config` directory.
-`-textauth`::
+*`-textauth`*:
   optional; used to specify using text format authentication when authentication is needed.
-`-targetserver`::
+*`-targetserver`*:
   optional; a comma-separated list of one or more server specifications for ORB endpoints. Each server specification must include at least the host. Optionally, a server specification can include the port as well. If the port is omitted from a server specification, the default value, `3700`, is used for that host.
-`-user`::
+*`-user`*:
   optional; the application user who is authorized to have access to particular guarded components in the application, such as EJB components.
-`-passwordfile`::
+*`-passwordfile`*:
   optional; specifies the name, including the full path, of a file that contains the password for application clients in the following format: +
 [source,shell]
 ----
@@ -69,14 +69,14 @@ CAUTION: Avoid specifying a password interactively at the command prompt. Such a
 running processes and the commands to start them, such as `ps`.
 
   For security reasons, a password that is specified as an environment variable is not read by the `appclient` utility.
-class-selector::
+*class-selector*:
   required; you must specify the client application class using one of the following class selectors. +
   `-jar` jar-file;;
     the name and location of the client JAR file. The application client JAR file is specified and created during deployment by the `asadmin deploy` command. If specified, the `-classpath` setting is ignored in deference to the `Class-Path` setting in the client JAR file's manifest.
   class-name;;
     the fully qualified name of the application client's main class. The Application Client Container invokes the `main` method of this class to start the client. For example, `com.example.test.AppClient`. +
     If you use class-name as the class selector, you must also set the classpath. You can either use the `-classpath` JVM option in the `appclient` command or set the `CLASSPATH` environment variable. For   more information about setting a classpath, see Setting the Class Path, Oracle Solaris Version (`http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/classpath.html`) or Setting the Class Path, Windows Version (`http://docs.oracle.com/javase/6/docs/technotes/tools/windows/classpath.html`).
-application-options::
+*application-options*:
   optional; you can set client application arguments.
 
 [[examples]]

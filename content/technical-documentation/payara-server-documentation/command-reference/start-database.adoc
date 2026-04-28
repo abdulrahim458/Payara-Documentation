@@ -38,24 +38,24 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these
   options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--jvmoptions`::
+*`--jvmoptions`*:
 A space-separated list of command-line options that are passed to the Java application launcher when the database is started. By default, no options are passed.
 +
 The format of an option depends on whether the option has a name and a value or only a name:
 
 * If the option has a name and a value, the format is option-name=value.
 * If the option has only a name, the format is option-name. For example, `-Xmx512m`.
-`--dbhost`::
+*`--dbhost`*:
   The host name or IP address of the H2 database server process. The default is the IP address 0.0.0.0, which denotes all network interfaces on the host where you run the `start-database` subcommand.
-`--dbport`::
+*`--dbport`*:
   The port number where the H2 database server listens for client connections. This port must be available for the listen socket, otherwise the database server will not start.
-`--dbhome`::
+*`--dbhome`*:
   The absolute path to the directory where the database files and the `h2.log` file are created. If the `--dbhome` option is not specified, the `start-database` subcommand determines where to create these files as follows:
   * If the current working directory contains a file that is named `h2.log`, the `start-database` subcommand creates the files in the
   current working directory.
@@ -98,9 +98,9 @@ Log redirected to /opt/payara/glassfish/databases/h2.log.
 
 The exit status applies to errors in executing the `asadmin` utility.For information on database errors, see the `h2.log` file. This file is located in the directory you specify by using the `--dbhome` option when you run the `start-database` subcommand. If you did not specify `--dbhome`, the value of `H2_INSTALL` defaults to `as-install/h2`.
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 == See Also

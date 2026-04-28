@@ -22,12 +22,12 @@ The `stop-domains` subcommand can be used to stop the specified list of domains 
 [[options]]
 == Options
 
-`--timeout`::
+*`--timeout`*:
 Specifies how long to take for the domains to stop in seconds. If stopping the domains takes longer than this amount then this command will fail.
 +
 The default value is `600`.
 
-`--domainTimeout`::
+*`--domainTimeout`*:
 Specifies how long to take each domain to stop in seconds. If stopping the domain takes longer than this amount then this command will fail.
 +
 The default value is `600`.
@@ -35,7 +35,7 @@ The default value is `600`.
 [[operands]]
 == Operands
 
-domain-names::
+*domain-names*:
   The names of the domains you want to stop.
 
 [[examples]]
@@ -61,9 +61,9 @@ Command stop-domains executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -27,23 +27,23 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
 
-`--verbose`::
-`-v`::
+*`--verbose`*:
+*`-v`*:
 Whether to start the instances in verbose mode. Defaults to `false`.
 
-`--timeout`::
+*`--timeout`*:
 Specifies how long to take for the instances to start in seconds. If starting the instances takes longer than this amount then this command will fail.
 +
 The default value is `600`.
 
-`--instanceTimeout`::
+*`--instanceTimeout`*:
 Specifies how long to take for each instance to start in seconds. If starting the instances takes longer than this amount then this command will fail.
 +
 The default value is `600`.
@@ -51,7 +51,7 @@ The default value is `600`.
 [[operands]]
 == Operands
 
-name::
+*name*:
 The name of the deployment group. If there are no deployment groups that match the name the command will exit with an error.
 
 [[examples]]
@@ -82,9 +82,9 @@ Command start-deployment-group executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 command executed successfully
-1::
+*1*:
 error in executing the command
 
 See Also

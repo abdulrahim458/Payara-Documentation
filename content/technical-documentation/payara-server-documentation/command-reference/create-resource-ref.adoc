@@ -30,12 +30,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target for which you are creating the resource reference. Valid targets are as follows: +
   `server`;;
     Creates the resource reference for the default server instance. This is the default target.
@@ -43,14 +43,14 @@ asadmin-options::
     Creates the resource reference for every server instance in the cluster.
   instance_name;;
     Creates the resource reference for the named unclustered server instance.
-`--enabled`::
+*`--enabled`*:
   Indicates whether the resource should be enabled. This value will take
   effect only if the resource is enabled at the global level. The default is `true`.
 
 [[operands]]
 == Operands
 
-reference_name::
+*reference_name*:
   The name or JNDI name of the resource.
 
 [[examples]]
@@ -70,9 +70,9 @@ Command create-resource-ref executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

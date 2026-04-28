@@ -31,22 +31,22 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   This is the name of the target on which the command operates. The valid targets are config, instance, cluster, or server. By default, the target is the server.
-`--groups`::
+*`--groups`*:
   This is the group associated with this file user.
-`--authrealmname`::
+*`--authrealmname`*:
   The name of the realm in which the new user is created. If you do not specify this option, the user is created in the "file" realm.
 
 [[operands]]
 == Operands
 
-user_name::
+*user_name*:
   This is the name of file user to be created.
 
 [[examples]]
@@ -67,9 +67,9 @@ Command create-file-user executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

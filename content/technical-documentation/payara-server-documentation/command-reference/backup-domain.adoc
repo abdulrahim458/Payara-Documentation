@@ -27,20 +27,20 @@ To complete the command, however, *the domain must be stopped first*. This will 
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these   options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--long`::
-`-l`::
+*`--long`*:
+*`-l`*:
   Displays detailed information about the backup operation.
 +
 The default value is `false`.
 
-`--description`::
+*`--description`*:
   Specifies a description to store in the backup file. The description is displayed as part of the information about a backup file.
 +
 The default value has this form:
@@ -49,12 +49,12 @@ The default value has this form:
 ----
 domain-name_YYYY_MM_DD_backup-number
 ----
-`--domaindir`::
+*`--domaindir`*:
   Specifies the domain root directory, the parent directory of the   domain to back up.
 +
 The default value is `as-install/domains`.
 
-`--backupdir`::
+*`--backupdir`*:
   Specifies the directory under which the backup file is to be stored.
 +
 The default value is `as-install/domains/domain-dir/backups`. If the domain is not in the default location, the location is `domain-dir/backups`.
@@ -62,7 +62,7 @@ The default value is `as-install/domains/domain-dir/backups`. If the domain is n
 [[operands]]
 == Operands
 
-domain-name::
+*domain-name*:
 Specifies the name of the domain to be backed up.
 +
 This operand is optional if only one domain exists in the Payara Server installation.
@@ -70,9 +70,9 @@ This operand is optional if only one domain exists in the Payara Server installa
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

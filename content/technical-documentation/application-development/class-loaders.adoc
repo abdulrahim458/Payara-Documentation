@@ -109,9 +109,9 @@ The delegation hierarchy can also be tweaked using the xref:#enhanced-classloadi
 
 Access to components within applications and modules installed on the server occurs within the context of isolated class loader universes, each of which has its own _Applib_ and _Archive_ classloaders.
 
-Application Universe:: Each application has its own class loader universe, which loads the classes in all the modules in the application.
+*Application Universe*: Each application has its own class loader universe, which loads the classes in all the modules in the application.
 
-Individually Deployed Module Universe:: Each individually deployed EJB JAR or web WAR has its own class loader universe, which loads the classes in the module.
+*Individually Deployed Module Universe*: Each individually deployed EJB JAR or web WAR has its own class loader universe, which loads the classes in the module.
 
 A resource such as a file that is accessed by a Jakarta EE application component must be in one of the following locations:
 
@@ -138,12 +138,12 @@ To install a library into a server domain, use the asadmin xref:technical-docume
 
 This command accepts the `--type` argument, which accepts the following options:
 
-`common`:: The library is installed as a common library into the `lib` directory in the Payara Server domain
-`ext`:: The library is installed as an "extension" library into the `lib/ext` directory in the Payara Server domain
-`app`:: the library is installed as an application library into the `lib/applibs` directory in the Payara Server domain
-ifeval::["{page-site-edition}" == "community"]
-`war`:: the library is installed as a WAR library into the `lib/warlibs` directory in the Payara Server domain
-endif::[]
+*`common`*: The library is installed as a common library into the `lib` directory in the Payara Server domain
+*`ext`*: The library is installed as an "extension" library into the `lib/ext` directory in the Payara Server domain
+*`app`*: the library is installed as an application library into the `lib/applibs` directory in the Payara Server domain
+*ifeval*: ["{page-site-edition}" == "community"]
+*`war`*: the library is installed as a WAR library into the `lib/warlibs` directory in the Payara Server domain
+*endif*: []
 
 [[common-libraries]]
 ==== Common Libraries
@@ -197,7 +197,7 @@ If multiple applications or modules refer to the same libraries, classes in thos
 NOTE: If you see an access control error message when you try to use a library, you may need to grant permission to the library in the
 `server.policy` file. For more information, see xref:technical-documentation/application-development/securing-applications.adoc#changing-permissions-for-an-application[Changing Permissions for an Application].
 
-ifeval::["{page-site-edition}" == "community"]
+*ifeval*: ["{page-site-edition}" == "community"]
 
 [[War-libraries]]
 ==== WAR Libraries
@@ -207,7 +207,7 @@ Unlike common and application libraries (stored in `domain_dir/lib` and `domain_
 
 These libraries are only used by applications that are deployed with the `warlibs` property set to `true`. See the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[deploy] command documentation for additional information.
 
-endif::[]
+*endif*: []
 
 [[packaging-the-client-jar-for-one-application-in-another-application]]
 === Packaging the Client JAR for One Application in Another Application

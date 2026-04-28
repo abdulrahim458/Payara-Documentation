@@ -33,12 +33,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target on which to enabling monitoring. Valid values are as follows: +
   `server`;;
     Enables monitoring for the default server instance `server` and is the default value.
@@ -48,15 +48,15 @@ asadmin-options::
     Enables monitoring for every server instance in the cluster.
   instance-name;;
     Enables monitoring for a particular server instance.
-`--mbean`::
+*`--mbean`*:
   Enables Mbean monitoring. Default value is false.
-`--dtrace`::
+*`--dtrace`*:
   Only usable if the DTrace Monitoring module is present. Enables Oracle Solaris DTrace monitoring. Default value is false.
-`--modules`::
+*`--modules`*:
   Enables specified module or modules by indicating monitoring level. Valid levels are OFF, HIGH, LOW. If level is not specified, the default setting is HIGH. Multiple modules are separated by : (colon). Monitorable modules include `connector-connection-pool`, `connector-service`, `ejb-container`, `http-service`, `jdbc-connection-pool`, `jersey`, `jpa`, `jms-service`, `jvm`, `security`, `thread-pool`, `transaction-service`, `web-container`, and `web-services-container`. Additional modules can be listed by using the `get` subcommand.
-`--pid`::
+*`--pid`*:
   Specifies the Payara Server JVM process identifier (PID). When monitoring is enabled, the `btrace-agent` is attached, based on the specified PID. Need to specify only in exceptional cases when the system cannot determine the PID. In this situation, the subcommand prompts for the PID of the corresponding Payara Server process.
-`--options`::
+*`--options`*:
   Sets the following `btrace-agent` options: +
   `debug`;;
     Enables debugging for BTrace. Default value is false.
@@ -97,9 +97,9 @@ Command enable-monitoring executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -23,22 +23,22 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--cascade`::
+*`--cascade`*:
   If set to `true`, deletes all the connection pools and connector resources associated with the resource adapter being undeployed. If
   set to `false`, the undeploy fails if any pools and resources are still associated with the resource adapter. Then, either those pools
   and resources must be deleted explicitly, or the option must be set to `true`. If the option is set to `false`, and if there are no pools and
   resources still associated with the resource adapter, the resource adapter is undeployed. This option is applicable to connectors
   (resource adapters) and applications. Default value is false.
-`--droptables`::
+*`--droptables`*:
   If set to true, drops the tables that the application created by using CMP beans during deployment. If set to false, tables are not dropped.
   If not specified, the value of the `drop-tables-at-deploy` entry in the `cmp-resource` element of the `glassfish-ejb-jar.xml` file
   determines whether or not tables are dropped. Default value is true.
-`--target`::
+*`--target`*:
   Specifies the target from which you are undeploying. Valid values are: +
   `server`;;
     Undeploys the component from the default server instance `server` and is the default value.
@@ -52,7 +52,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-name::
+*name*:
   Name of the deployed component. +
   The name can include an optional version identifier, which follows the name and is separated from the name by a colon (`:`). The version
   identifier must begin with a letter or number. It can contain alphanumeric characters plus underscore (`_`), dash (`-`), and period
@@ -96,9 +96,9 @@ Command undeploy executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

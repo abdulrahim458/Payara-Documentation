@@ -6,9 +6,9 @@ Payara Micro supports an auto-binding feature for its HTTP and HTTPS port, allow
 
 This feature is controlled through these three options:
 
-`--autoBindHttp`:: Enables auto-bind functionality for the HTTP port
-`--autoBindSsl`:: Enables auto-bind functionality for the HTTPS port
-`--autoBindRange`:: Sets the range for the auto-bind feature
+*`--autoBindHttp`*: Enables auto-bind functionality for the HTTP port
+*`--autoBindSsl`*: Enables auto-bind functionality for the HTTPS port
+*`--autoBindRange`*: Sets the range for the auto-bind feature
 
 When auto-binding is enabled, Payara Micro will attempt to connect to the port specified with the `--port` or `--sslPort` option (or, if these options are not specified, to port *8080* and *8181* respectively), and if that port is busy, it will instead try to bind on the next port up, repeating this process until it finds a free port, or the `--autoBindRange` limiter is reached.
 

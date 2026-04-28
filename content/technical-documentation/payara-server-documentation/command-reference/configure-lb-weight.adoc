@@ -30,18 +30,18 @@ Use the weight to vary the load going to different instances in the cluster. For
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--cluster`::
+*`--cluster`*:
   The name of the cluster.
 
 [[operands]]
 == Operands
 
-instance-name=weight::
+*instance-name=weight*:
   The name of the instance and the weight you are assigning it. The weight must be an integer. The pairs of instances and weights are
   separated by colons. For example `instance1=1:instance2=4` means that for every five requests, one goes to instance1 and four go to instance2. A weight of 1 is the default.
 
@@ -62,9 +62,9 @@ Command configure-lb-weight executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

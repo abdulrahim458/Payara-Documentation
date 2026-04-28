@@ -13,9 +13,9 @@ Instructions for accomplishing the task in this chapter by using the Administrat
 
 To support JMS messaging, the JMS Service provides the following administrative objects:
 
-JMS Service Configuration::
+*JMS Service Configuration*:
   The JMS service configuration is part of the overall configuration for a Payara standalone instance or cluster. It specifies how the JMS Service is to create and maintain connections with JMS Hosts.
-JMS Hosts::
+*JMS Hosts*:
   JMS hosts are the message servers that host destinations, store   messages, and interact with applications to send and receive messages across connections.
   In Message Queue, JMS hosts are called brokers. +
   The JMS service supports these types of JMS hosts: +
@@ -23,11 +23,11 @@ JMS Hosts::
   * Local type, in which the JMS host runs separately on the same host as the Payara instance; its configuration and lifecycle are managed by the JMS service
   * Remote type, in which the JMS host represents a Message Queue broker or broker cluster that is external to the JMS service; its operation is managed using Message Queue administrative tools +
   For more information about JMS host types, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#about-jms-host-types[About JMS Host Types].
-JMS Connection Factory Resources::
+*JMS Connection Factory Resources*:
   JMS connection factory resources house the information that applications use to connect to a JMS provider. For each JMS connection factory, the JMS service automatically maintains a Payara connector resource and a Payara connector connection pool in order to support connection pooling and fail-over.
-JMS Destination Resources::
+*JMS Destination Resources*:
   JMS destination resources house the information that applications use to specify the target destination of messages they produce and the source destination of messages they consume. For each JMS destination resource, the JMS service automatically maintains a Payara administered object.
-JMS Physical Destinations::
+*JMS Physical Destinations*:
   JMS physical destinations provide a means to create and manage JMS destinations administratively instead of having them created dynamically when needed by an application. While dynamic creation of destinations is often sufficient during application development, administratively created physical destinations are more suitable for production environments.
 
 [[jms-service-high-availability]]
@@ -51,31 +51,31 @@ set configs.config.config-name.jms-service.attribute-name=attribute-value
 
 The attributes you can set are:
 
-`type`::
+*`type`*:
   The JMS host type the service is to use. Available choices are
   `EMBEDDED`, `LOCAL` and `REMOTE`. See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#about-jms-host-types[About JMS Host Types] for more information.
-`init-timeout-in-seconds`::
+*`init-timeout-in-seconds`*:
   The number of seconds Payara Server waits for the JMS service to start before aborting the startup.
-`start-args`::
+*`start-args`*:
   A list of arguments the JMS service passes to Embedded and Local type JMS hosts on startup.
-`default-jms-host`::
+*`default-jms-host`*:
   The name of the default JMS host.
-`reconnect-enabled`::
+*`reconnect-enabled`*:
   When set to `true`, the JMS service attempts to reconnect to a JMS host (or one of the JMS hosts in the AddressList) when a connection is lost.
-`reconnect-attempts`::
+*`reconnect-attempts`*:
   The number of attempts to connect (or reconnect) for each JMS host in the AddressList before the JMS service tries the next address in the list. A value of -1 indicates that the number of reconnect attempts is unlimited (the JMS service attempts to connect to the first address until it succeeds).
-`reconnect-interval-in-seconds`::
+*`reconnect-interval-in-seconds`*:
   The number of seconds between reconnect attempts. This interval applies for attempts on each JMS host in the AddressList and for successive addresses in the list. If it is too short, this time interval does not give a JMS host time to recover. If it is too long, the reconnect might represent an unacceptable delay.
-`addresslist-behavior`::
+*`addresslist-behavior`*:
   The order of connection attempts. Available choices are: +
   `random`;;
     Select a JMS host from the AddressList randomly. If there are many clients attempting a connection using the same connection factory, specify `random` to prevent them from all being connected to the same JMS host.
   `priority`;;
     Always try to connect to the first JMS host in the AddressList and use another one only if the first one is not available.
-`addresslist-iterations`::
+*`addresslist-iterations`*:
   The number of times the JMS service iterates through the AddressList in an effort to establish (or reestablish) a connection. A value of -1 indicates that the number of attempts is unlimited.
-`mq-scheme`::
-`mq-service`::
+*`mq-scheme`*:
+*`mq-service`*:
   The Message Queue address scheme name and connection service name to use for the AddressList if a non-default scheme or service is to be used.
 
 NOTE: After making changes to the JMS service configuration, Payara Server instances that use the configuration must be restarted in order for the changes to be propagated.
@@ -108,12 +108,12 @@ For information about administering JMS hosts that are servicing Payara clusters
 
 The JMS service uses Message Queue (MQ) brokers as JMS hosts, integrating them in three ways:
 
-Embedded Type::
+*Embedded Type*:
   When the JMS service configuration's `type` attribute is `EMBEDDED`, the MQ broker is co-located in the same JVM as the Payara server instance it services. The JMS service starts it in-process and manages its configuration and lifecycle. For this type, the JMS service uses lazy initialization to start the broker when the first JMS operation is requested instead of immediately when the Payara instance is started. If necessary, you can force startup of the broker by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/jms-ping.adoc[`jms-ping`] command. Additionally, if the Payara instance is a standalone instance (not a clustered instance), JMS operations use a Message Queue feature called direct mode to bypass the networking stack, leading to performance optimization.
 
-Local Type::
+*Local Type*:
   When the JMS service configuration's `type` attribute is `LOCAL`, the JMS service starts the MQ broker specified in the configuration as the default JMS host in a separate process on the same host as the Payara server instance. The JMS service manages its configuration and lifecycle. For this type, the JMS service starts the broker immediately when the Payara instance is started. The JMS service provides the Message Queue broker an additional port to start the RMI registry. This port number is equal to the broker's JMS port plus 100. For example, if the JMS port number is 37676, then the additional port's number will be 37776. Additionally, the `start-args` property of the JMS service configuration can be used to specify Message Queue broker startup options.
-Remote Type::
+*Remote Type*:
   When the JMS service configuration's `type` attribute is `REMOTE`, the JMS service uses the information defined by the default JMS host to communicate with an MQ broker or broker cluster that has been configured and started using Message Queue tools. Ongoing administration and tuning of the broker or broker cluster are also performed using Message Queue tools.
 
 [[configuring-embedded-and-local-jms-hosts]]
@@ -152,18 +152,18 @@ The default JMS service configuration includes a JMS host, `default_JMS_host`. F
 ----
 asadmin> create-jms-host --mqhost hostName --mqport portNumber --mquser adminUser --mqpassword adminPassword --target glassfishTarget --property mqBrokerPropList --force trueFalse jms-host-name
 ----
-`--mqhost`::
+*`--mqhost`*:
   The host name of the Message Queue broker.
-`--mqport`::
+*`--mqport`*:
   The port number of the Message Queue broker.
-`--mquser`::
+*`--mquser`*:
   The username of the administrative user of the Message Queue broker.
-`--mqpassword`::
+*`--mqpassword`*:
   The password of the administrative user of the Message Queue broker.
-`--target`::
+*`--target`*:
   The Payara Server object for which the JMS host is being created.
   For details, see link:../reference-manual/create-jms-host.html#GSRFM00039[`create-jms-host`].
-`--property`::
+*`--property`*:
   A list of one or more Message Queue broker properties to configure the broker. The list is colon-separated (`:`) and has the form:
 +
 [source,text]
@@ -174,9 +174,9 @@ prop1Name=prop1Value:prop2Name=prop2Value:...
 
 NOTE: You can also set broker properties in the JMS service configuration. If you set the same broker property in both the JMS host and the JMS service configuration, the value specified in the JMS host is used.
 
-`--force`::
+*`--force`*:
   Specifies whether the subcommand overwrites the existing JMS host of the same name. The default value is `false`.
-jms-host-name::
+*jms-host-name*:
   The unique name of the JMS host.
 
 [[example-17-1-creating-a-jms-host]]
@@ -231,16 +231,16 @@ asadmin> set configs.config.config-name.jms-service.jmshost.
 jms-host-name.attribute-name=attribute-value
 ----
 
-The attributes you can set are:::
-`host`::
+*The attributes you can set are*: :
+*`host`*:
   The host name of the Message Queue broker.
-`port`::
+*`port`*:
   The port number of the Message Queue broker.
-`admin-user-name`::
+*`admin-user-name`*:
   The username of the administrative user of the Message Queue broker.
-`admin-password`::
+*`admin-password`*:
   The password of the administrative user of the Message Queue broker.
-`property.`broker-property-name::
+*`property.`broker-property-name*:
   A Message Queue broker property. The property and the value assigned to it are used to configure the Message Queue broker.
 +
   If the broker property name includes dots, preface the dots with two backslashes (`\\`); for example, to include the `imq.system.max_count` property, specify `imq\\.system\\.max_count` in the `set` subcommand.
@@ -499,9 +499,9 @@ As mentioned earlier, Message Queue, through the built-in `jmsra` resource adapt
 
 The topics in this section describe these situations.
 
-Restarting an Embedded or Local Broker That Has Failed::
+*Restarting an Embedded or Local Broker That Has Failed*:
   Because the JMS service, not Message Queue, manages the lifecycle of brokers acting as Embedded and Local JMS hosts, do not use the `imqbrokerd` Message Queue utility to start such a broker that has failed. Instead, restart the Payara instance that the broker is servicing.
-Changing the Admin User Password for an Embedded or Local Broker::
+*Changing the Admin User Password for an Embedded or Local Broker*:
   Follow these steps to change the `admin` user password for an Embedded or Local broker: +
   . Make sure the broker is running.
   . Use the `imqusermgr` Message Queue utility to change the password of the `admin` user.
@@ -510,7 +510,7 @@ Changing the Admin User Password for an Embedded or Local Broker::
   When changing the password for the brokers in a broker cluster, first   perform steps 1 and 2 on each broker. Then, perform step 3.
   Finally, perform step 4 on each broker. Using SSL to Connect to an Oracle Internet Directory (OID) or Oracle
 
-Virtual Directory (OVD) User Respository::
+*Virtual Directory (OVD) User Respository*:
   When using SSL to connect to an OID or OVD user repository, you must set the `imq.user_repository.ldap.ssl.socketfactory` Message Queue broker property to `com.sun.enterprise.security.auth.realm.ldap.CustomSocketFactory`.
 
 [[troubleshooting-the-jms-service]]

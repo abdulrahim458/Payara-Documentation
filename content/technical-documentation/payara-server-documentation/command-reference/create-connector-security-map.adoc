@@ -35,29 +35,29 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--poolname`::
+*`--poolname`*:
   Specifies the name of the connector connection pool to which the security map belongs.
-`--principals`::
+*`--principals`*:
   Specifies a list of backend EIS principals. More than one principal can be specified using a comma-separated list. Use either the
   `--principals` or `--usergroups` options, but not both in the same command.
-`--usergroups`::
+*`--usergroups`*:
   Specifies a list of backend EIS user group. More than one user groups can be specified using a comma separated list. Use either the
   `--principals` or `--usergroups` options, but not both in the same command.
-`--mappedusername`::
+*`--mappedusername`*:
   Specifies the EIS username.
-`--target`::
+*`--target`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does
   not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
 [[operands]]
 == Operands
 
-mapname::
+*mapname*:
   The name of the security map to be created.
 
 [[examples]]
@@ -77,9 +77,9 @@ Command create-connector-security-map executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

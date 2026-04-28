@@ -26,29 +26,29 @@ The `set-metrics-configuration` provides a way to set the configuration of the m
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--enabled`::
+*`--enabled`*:
 Defaults to `true`. Enables or disables the Metrics service.
 
-`--securityEnabled`::
+*`--securityEnabled`*:
 Defaults to `false`. Specifies whether secure access to the metrics endpoint is enabled or disabled.
 
-`--roles`::
+*`--roles`*:
 Defaults to `microprofile`. If defined, the endpoint will be assigned to a list of the role specified as a comma-separated.
 
-`--dynamic`::
+*`--dynamic`*:
 Defaults to `true`. If set to `true`, applies the changes instantly without a restart.
 +
 Otherwise, a restart is required.
 
-`--endpoint`::
+*`--endpoint`*:
 Defaults to `metrics`. Specifies the context root used to expose the metrics endpoint.
 
-`--target`::
+*`--target`*:
 Specifies the target for its respective configuration. +
 Valid values are as follows: +
 `server`;;
@@ -60,7 +60,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-`--virtualservers`::
+*`--virtualservers`*:
 If defined, the endpoint will be assigned to a list of virtual servers specified as a comma-separated list of names.
 +
 Otherwise, the endpoint will be assigned to all virtual servers available.
@@ -81,9 +81,9 @@ asadmin set-metrics-configuration --enabled=true --securityEnabled=true --dynami
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

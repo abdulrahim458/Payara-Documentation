@@ -33,12 +33,12 @@ This command is supported in remote mode only.
 
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target from which you are deleting the message security provider. Valid values are +
   `server`;;
     Deletes the message security provider from the default server instance `server` and is the default value
@@ -48,13 +48,13 @@ asadmin-options::
     Deletes the message security provider from every server instance in the cluster.
   instance_name;;
     Deletes the message security provider from a particular sever instance.
-`--layer`::
+*`--layer`*:
   The message-layer from which the provider has to be deleted. The default value is `HttpServlet`.
 
 [[operands]]
 == Operands
 
-provider_name::
+*provider_name*:
   The name of the provider used to reference the `provider-config` element.
 
 [[examples]]
@@ -73,9 +73,9 @@ asadmin> delete-message-security-provider
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

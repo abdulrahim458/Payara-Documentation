@@ -29,29 +29,29 @@ Enabling the service again will not cause a documents to be built for any curren
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--enabled`::
+*`--enabled`*:
 Whether the service should be enabled/disabled. Defaults to `true`.
 
-`--corsHeaders`::
+*`--corsHeaders`*:
 Defaults to `false`. Whether CORS protection headers (e.g. `Access-Control-Allow-Origin=*`) should be added to OpenAPI endpoint responses.
 
-`--securityEnabled`::
+*`--securityEnabled`*:
 Defaults to `false`. Whether to secure access to the OpenAPI endpoint is enabled.
 
-`--roles`::
+*`--roles`*:
 Defaults to `microprofile`.
 +
 If defined, the endpoint will be assigned to a list of the role specified as a comma-separated.
 
-`--endpoint`::
+*`--endpoint`*:
 Defaults to `openapi`. The context root used to expose the OpenAPI endpoint.
 
-`--target`::
+*`--target`*:
 Specifies the target of this command. +
 Valid values are as follows: +
 `server`;;
@@ -63,7 +63,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-`--virtualservers`::
+*`--virtualservers`*:
 If defined, the `/openapi` endpoint will be assigned to the list of virtual servers specified as a comma-separated list of names.
 +
 Otherwise, the endpoint will be assigned to all virtual servers available.
@@ -83,9 +83,9 @@ asadmin set-openapi-configuration --enabled=true --corsHeaders=true --securityEn
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

@@ -20,12 +20,12 @@ This command can be used to retrieves the current settings of the Event Bus noti
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are retrieving the settings of the Event Bus notifier. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -52,9 +52,9 @@ Command get-eventbus-notifier-configuration executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

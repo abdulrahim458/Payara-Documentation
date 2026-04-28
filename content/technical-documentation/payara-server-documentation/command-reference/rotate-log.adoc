@@ -23,18 +23,18 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   The server, cluster, or server instance for which logs will be rotated. If this option is omitted, logs are rotated for the default server.
 
 [[operands]]
 == Operands
 
-target::
+*target*:
   Valid values are: +
   * server_name - Default target is `server`. If no target is specified then logs are rotated for the server.
   * cluster_name - The name of a target cluster.
@@ -56,9 +56,9 @@ Command rotate-log executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -32,20 +32,20 @@ This command is supported in remote mode only.
 
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--policyproviderclass`::
+*`--policyproviderclass`*:
   Specifies the fully qualified class name for the `javax.security.jacc.policy.provider` that implements the `java.security.Policy`.
-`--policyconfigfactoryclass`::
+*`--policyconfigfactoryclass`*:
   Specifies the fully qualified class name for the `javax.security.jacc.PolicyConfigurationFactory.provider` that implements the provider-specific `javax.security.jacc.PolicyConfigurationFactory`.
-`--property`::
+*`--property`*:
   Optional attribute name/value pairs for configuring the JACC provider. The following properties are available: +
   `repository`;;
     The directory containing the JACC policy file. For the `default` Payara JACC provider, the default directory is `${com.sun.aas.instanceRoot}/generated/policy`. This property is not defined by default for the `simple` Payara JACC provider.
-`--target`::
+*`--target`*:
   Specifies the target for which you are creating the JACC provider. The following values are valid: +
   `server`;;
     Creates the JACC provider on the default server instance. This is the default value.
@@ -59,7 +59,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-jacc-provider-name::
+*jacc-provider-name*:
   The name of the provider used to reference the `jacc-provider` element in `domain.xml`.
 
 [[examples]]
@@ -82,9 +82,9 @@ Command create-jacc-provider executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

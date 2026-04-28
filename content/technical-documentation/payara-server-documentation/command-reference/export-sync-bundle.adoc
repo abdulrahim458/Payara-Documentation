@@ -46,14 +46,14 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   The cluster or standalone instance for which to export configuration data. The `--target` option is required. This option must not specify a clustered Payara Server instance. If this option specifies a clustered instance, an error occurs. To export configuration data for a clustered instance, specify the name of the cluster of which the instance is a member, not the instance.
-`--retrieve`::
+*`--retrieve`*:
   Specifies whether the archive file is downloaded from the DAS host to the host where the subcommand is run. +
   Possible values are as follows: +
   `true`;;
@@ -64,7 +64,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-file-name::
+*file-name*:
   The file name and location of the archive file to which to export the data. +
   The default depends on the setting of the `--retrieve` option: +
   * If `--retrieve` is `false`, the default is `sync/`target`-sync-bundle.zip` in the current domain directory.
@@ -96,9 +96,9 @@ Command export-sync-bundle executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

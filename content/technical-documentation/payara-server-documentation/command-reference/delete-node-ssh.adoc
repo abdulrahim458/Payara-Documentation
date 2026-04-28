@@ -32,19 +32,19 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--uninstall`::
+*`--uninstall`*:
   Specifies whether the Payara Server software is uninstalled from host that the node represents. +
   Possible values are as follows: +
   `false`;;
     The Payara Server software is not uninstalled from the host (default).
   `true`;;
     The Payara Server software is uninstalled from the host. By default, if any node except the predefined node `localhost-` domain resides on any host from which Payara Server software is being uninstalled, the subcommand fails. To uninstall the Payara Server software from a host on which user-defined nodes reside, set the `--force` option to `true`. If the `--force` option is `true`, the subcommand removes the entire content of the parent of the base installation directory.
-`--force`::
+*`--force`*:
   If `--uninstall` is true, specifies whether the subcommand uninstalls the Payara Server software from a host even if a user-defined node resides on the host. Possible values are as follows: +
   `false`;;
     If a user-defined node resides on a host, the software is not uninstalled and the subcommand fails (default). +
@@ -56,7 +56,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-node-name::
+*node-name*:
   The name of the node to delete. The node must be enabled for communication over SSH. Otherwise, an error occurs.
 
 [[examples]]
@@ -77,9 +77,9 @@ Command delete-node-ssh executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

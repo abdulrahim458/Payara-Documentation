@@ -23,15 +23,15 @@ filter. This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these
   options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--protocol-name`::
+*`--protocol-name`*:
   The name of the associated protocol.
-`--target`::
+*`--target`*:
   Deletes the protocol filter only from the specified target. Valid
   values are as follows: +
   `server`;;
@@ -49,7 +49,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-protocol-filter-name::
+*protocol-filter-name*:
   The name of the protocol filter to be deleted.
 
 [[examples]]
@@ -68,9 +68,9 @@ Command delete-protocol-filter executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

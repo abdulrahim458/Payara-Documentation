@@ -20,12 +20,12 @@ Returns the current configuration options for the `ejb-invoker` application on t
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 Specifies the target for which retrieve the EJB invoker endpoint's configuration. Valid values are as follows: +
 `server`;;
 Retrieves the configuration for the EJB invoker endpoint configured for the default server instance `server` and is the default value.
@@ -49,9 +49,9 @@ asadmin> get-ejb-invoker-configuration --target test-dg
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

@@ -24,12 +24,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   The server instance or cluster for which log levels will be set. Valid values are: +
   * `server` - The default server instance. If no target is specified then log levels are set for the default server instance.
   * cluster-name - The name of a cluster.
@@ -38,9 +38,9 @@ asadmin-options::
 [[operands]]
 == Operands
 
-logger-name::
+*logger-name*:
   The name of the logger. The `list-log-levels` subcommand can be used to list the names of the current loggers.
-logger-level::
+*logger-level*:
   The level to set for the logger. Log level values are `SEVERE`, `WARNING`, `INFO`, `CONFIG`, `FINE`, `FINER`, and `FINEST`. The default setting is `INFO`.
 
 [[examples]]
@@ -70,9 +70,9 @@ Command set-log-level executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

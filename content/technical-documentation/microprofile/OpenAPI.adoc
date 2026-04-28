@@ -154,7 +154,7 @@ public class AppResource{
 }
 ----
 
-Here's an example of how the OpenAPI document of a sample application would look like::
+*Here's an example of how the OpenAPI document of a sample application would look like*:
 [source, yml]
 ----
 openapi: 3.0.0
@@ -191,7 +191,7 @@ When more than one application is deployed, a merge is done in the OpenAPI docum
 
 NOTE: The `endpoints` attribute is an proprietary Payara Platform extension and it's not portable.
 
-The following example shows an OpenAPI document generated when 2 different applications are deployed::
+*The following example shows an OpenAPI document generated when 2 different applications are deployed*:
 [source, yml]
 ----
 openapi: 3.0.0

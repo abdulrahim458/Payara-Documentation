@@ -35,44 +35,44 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--enabled`::
+*`--enabled`*:
 Determines whether the resource is enabled at runtime.
 +
 The default value is `true`.
-`--contextinfoenabled`::
+*`--contextinfoenabled`*:
 Determines whether container contexts are propagated to threads. If set to `true`, the contexts specified in the `--contextinfo` option are propagated. If set to `false`, no contexts are propagated and the `--contextinfo` option is ignored.
 +
 The default value is `true`.
-`--contextinfo`::
+*`--contextinfo`*:
 Specifies individual container contexts to propagate to threads. Valid values are Classloader, JNDI, Security, and WorkArea. Values are specified in a comma-separated list and are case-insensitive.
 +
 All contexts are propagated by default.
-`--threadpriority`::
+*`--threadpriority`*:
 Specifies the priority to assign to created threads. The default value is 5.
-`--longrunningtasks`::
+*`--longrunningtasks`*:
 Specifies whether the resource should be used for long-running tasks. The default value is `false`. If set to `true`, long-running tasks are not reported as stuck.
-`--hungafterseconds`::
+*`--hungafterseconds`*:
 Specifies the number of seconds that a task can execute before it is considered unresponsive. The default value is 0, which means that tasks are never considered unresponsive.
-`--corepoolsize`::
+*`--corepoolsize`*:
 Specifies the number of threads to keep in a thread pool, even if they are idle. The default value is 0, which means that a thread is created when the first task is scheduled.
-`--keepaliveseconds`::
+*`--keepaliveseconds`*:
 Specifies the number of seconds that threads can remain idle when the number of threads is greater than `corepoolsize`.
 +
 The default value is 60.
-`--threadlifetimeseconds`::
+*`--threadlifetimeseconds`*:
 Specifies the number of seconds that threads can remain in a thread pool before being purged, regardless of whether the number of threads is greater than `corepoolsize` or whether the threads are idle.
 +
 The default value is 0, which means that threads are never purged.
-`--description`::
+*`--description`*:
 Descriptive details about the resource.
-`--property`::
+*`--property`*:
 Optional attribute name/value pairs for configuring the resource. Payara Server does not define any additional properties for this resource. Moreover, this resource does not currently use any additional properties.
-`--target`::
+*`--target`*:
 Specifies the target for which you are creating the resource. Valid targets are:
 +
 `server`;;
@@ -88,7 +88,7 @@ Creates the resource for the specified server instance.
 [[operands]]
 == Operands
 
-jndi_name::
+*jndi_name*:
 The JNDI name of this resource.
 
 [[examples]]
@@ -108,9 +108,9 @@ Command create-managed-scheduled-executor-service executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

@@ -38,24 +38,24 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--nodehost`::
+*`--nodehost`*:
   The name of the host that the node represents. If this option is omitted, no host is specified for the node.
-`--installdir`::
+*`--installdir`*:
   The full path to the parent of the base installation directory of the Payara Server software on the host, for example,
   `/export/payara5/`. If this option is omitted, no parent of the base installation directory of the Payara Server software is specified for the node.
-`--nodedir`::
+*`--nodedir`*:
   The path to the directory that is to contain Payara Server instances that are created on the node. If a relative path is specified, the path is relative to the as-install directory.
   If this option is omitted, no directory for instances is specified for the node.
 
 [[operands]]
 == Operands
 
-node-name::
+*node-name*:
   The name of the node. +
   The name must meet the following requirements: +
   * The name may contain only ASCII characters.
@@ -87,9 +87,9 @@ Command create-node-config executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

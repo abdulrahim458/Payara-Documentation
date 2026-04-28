@@ -24,12 +24,12 @@ The `list-batch-job-steps` subcommand lists steps for a specific batch job execu
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target for which to list batch job steps. Valid values are as follows: +
   `server`;;
     Lists steps for the default server instance `server` and is the default value.
@@ -37,11 +37,11 @@ asadmin-options::
     Lists steps for every server instance in the cluster.
   instance-name;;
     Lists steps for a particular server instance.
-`--long`::
-`-l`::
+*`--long`*:
+*`-l`*:
   Displays detailed information about batch job steps. The default value is `false`.
-`--output`::
-`-o`::
+*`--output`*:
+*`-o`*:
   Displays specific details about batch job steps. Use a comma-separated list to specify the details to display and their order. The values are
   case-insensitive. A subset of all possible headings is displayed by default. +
   Possible values are as follows: +
@@ -62,14 +62,14 @@ asadmin-options::
     Displays metrics for the step.
   `value`;;
     Displays a value for each step metric. The value represents the number of items read, written, committed, and so on.
-`--header`::
-`-h`::
+*`--header`*:
+*`-h`*:
   Specifies whether column headings are displayed when the `--long` option is used. The default value is `true`. To suppress the headings, set the `--header` option to `false`.
 
 [[operands]]
 == Operands
 
-execution_id::
+*execution_id*:
   The ID of the execution for which to list batch job steps and details.
 
 [[examples]]
@@ -100,9 +100,9 @@ Command list-batch-job-steps executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

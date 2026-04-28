@@ -32,27 +32,27 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--clustertype`::
+*`--clustertype`*:
   The type of Message Queue cluster to configure. The value `conventional` specifies a conventional cluster, and the value `enhanced` specifies an enhanced, high-availability cluster. +
   The default value is `conventional`. +
   If `enhanced` is specified, the `configstoretype` and `messagestoretype` options are ignored.
-`--configstoretype`::
+*`--configstoretype`*:
   The type of data store for configuration data in a conventional cluster. The value `masterbroker` specifies the use of a master broker
   to store and manage the configuration data. The value `shareddb` specifies the use of a shared database to store the configuration data. +
   The default value is `masterbroker`. +
   This option is ignored if `clustertype` is set to `enhanced`.
-`--messagestoretype`::
+*`--messagestoretype`*:
   The type of data store for message data in brokers in a conventional cluster. The value `file` specifies a file store. The value `jdbc` specifies a JDBC store. +
   The default value is `file`. +
   This option is ignored if `clustertype` is set to `enhanced`.
-`--dbvendor` ::
-`--dbuser`::
-`--dburl`::
+*`--dbvendor`*:
+*`--dbuser`*:
+*`--dburl`*:
   The database vendor, user, and access url of the JDBC database to use in any of these situations: +
   * When `clustertype` is set to `enhanced`
   * When `configstoretype` is set to `shareddb`
@@ -62,7 +62,7 @@ NOTE: To specify the password of the JDBC database user, use the
 `--passwordfile` utility option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] command after adding the
 entry `AS_ADMIN_JMSDBPASSWORD` to the password file.
 
-`--property`::
+*`--property`*:
   A list of additional database-vendor-specific properties to configure the JDBC database for use by the Message Queue cluster.
   Specify properties as a colon (`:`) separated list of property names and values in the form:
 +
@@ -74,7 +74,7 @@ prop1name=prop1value:prop2name=prop2value
 [[operands]]
 == Operands
 
-cluster-name::
+*cluster-name*:
   The name of the Payara Server cluster for which the Message Queue cluster is to provide JMS services. +
   Because Payara Server uses the cluster name to uniquely identify database tables the Message Queue cluster might require, the length of
   the name is restricted in the following situations: +
@@ -84,9 +84,9 @@ cluster-name::
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

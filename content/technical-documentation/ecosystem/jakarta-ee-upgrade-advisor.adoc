@@ -54,9 +54,9 @@ The issues reported by the advisor's summary output will follow this structure, 
 . On the first line:
 .. A standard message with the `[Message Type] [Line of code] [Expression]` format.
 +
-Message Type:: This can be either `INFO`, `WARNING` or `ERROR`
-Line of Code:: Indicates the location of this occurrence in the code.
-Expression::
+*Message Type*: This can be either `INFO`, `WARNING` or `ERROR`
+*Line of Code*: Indicates the location of this occurrence in the code.
+*Expression*:
 The Java code expression or statement that triggered the occurrence of the advisory.
 +
 For example:

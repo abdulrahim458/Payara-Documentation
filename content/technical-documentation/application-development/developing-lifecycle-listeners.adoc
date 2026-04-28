@@ -46,10 +46,10 @@ A sample implementation of the LifecycleListener interface is the `LifecycleList
 
 The `com.sun.appserv.server.LifecycleEvent` class defines a server life cycle event. The following methods are associated with the event:
 
-`public java.lang.Object.getData()`::
+*`public java.lang.Object.getData()`*:
 This method returns an instance of `java.util.Properties` that contains the configuration properties defined for the lifecycle module.
 
-`public int getEventType()`::
+*`public int getEventType()`*:
 This method returns the type of the last event, one of:
 * `INIT_EVENT`
 * `STARTUP_EVENT`
@@ -57,7 +57,7 @@ This method returns the type of the last event, one of:
 * `SHUTDOWN_EVENT`
 * `TERMINATION_EVENT`
 
-`public com.sun.appserv.server.LifecycleEventContext.getLifecycleEventContext()`:: This method returns the lifecycle event context.
+*`public com.sun.appserv.server.LifecycleEventContext.getLifecycleEventContext()`*: This method returns the lifecycle event context.
 
 NOTE: A `LifecycleEvent` instance is passed to the `LifecycleListener.handleEvent` method.
 
@@ -68,16 +68,16 @@ The `com.sun.appserv.server.LifecycleEventContext` interface exposes runtime inf
 
 The lifecycle event context is created when the `LifecycleEvent` class is instantiated at server initialization. The `LifecycleEventContext` interface defines these methods:
 
-`public java.lang.String[].getCmdLineArgs()`::
+*`public java.lang.String[].getCmdLineArgs()`*:
 This method returns the server startup command-line arguments.
 
-`public java.lang.String.getInstallRoot()`::
+*`public java.lang.String.getInstallRoot()`*:
 This method returns the server installation root directory.
 
-`public java.lang.String.getInstanceName()`::
+*`public java.lang.String.getInstanceName()`*:
 This method returns the server instance name.
 
-`public javax.naming.InitialContext.getInitialContext()`::
+*`public javax.naming.InitialContext.getInitialContext()`*:
 This method returns the initial JNDI naming context. The naming environment for lifecycle modules is installed after the `STARTUP_EVENT`. A lifecycle module can look up any resource by its `jndi-name` attribute after the `READY_EVENT`.
 
 If a lifecycle module needs to look up resources, it can do so after the `READY_EVENT`. It can use the `getInitialContext` method to get the initial context to which all the resources are bound.

@@ -34,38 +34,38 @@ The `create-transport` subcommand creates a transport for a network listener. Th
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--acceptorthreads`::
+*`--acceptorthreads`*:
   The number of acceptor threads for the transport. The recommended value is the number of processors in the machine. The default value is `1`.
-`--buffersizebytes`::
+*`--buffersizebytes`*:
   The size, in bytes, of the buffer to be provided for input streams created by the network listener that references this transport. The default value is `8192`.
-`--bytebuffertype`::
+*`--bytebuffertype`*:
   The type of the buffer to be provided for input streams created by a network-listener. Allowed values are `HEAP` and `DIRECT`. The default value is `HEAP`.
-`--classname`::
+*`--classname`*:
   The fully qualified name of the Java class that implements the transport. The default is `org.glassfish.grizzly.TCPSelectorHandler`.
-`--displayconfiguration`::
+*`--displayconfiguration`*:
   If `true`, flushes the internal network configuration to the server log. Useful for debugging, but reduces performance. The default is `false`.
-`--enablesnoop`::
+*`--enablesnoop`*:
   If `true`, writes request/response information to the server log. Useful for debugging, but reduces performance. The default is `false`.
-`--idlekeytimeoutseconds`::
+*`--idlekeytimeoutseconds`*:
   The idle key timeout. The default is `30` seconds.
-`--maxconnectionscount`::
+*`--maxconnectionscount`*:
   The maximum number of connections for the network listener that references this transport. A value of `-1` specifies no limit. The default value is `4096`.
-`--readtimeoutmillis`::
+*`--readtimeoutmillis`*:
   The amount of time the server waits during the header and body parsing phase. The default is `30000` milliseconds, or 30 seconds.
-`--writetimeoutmillis`::
+*`--writetimeoutmillis`*:
   The amount of time the server waits before considering the remote client disconnected when writing the response. The default is `30000` milliseconds, or 30 seconds.
-`--selectionkeyhandler`::
+*`--selectionkeyhandler`*:
   The name of the selection key handler associated with this transport. There is no default.
-`--selectorpolltimeoutmillis`::
+*`--selectorpolltimeoutmillis`*:
   The number of milliseconds a NIO Selector blocks waiting for events (user requests). The default value is `1000` milliseconds.
-`--tcpnodelay`::
+*`--tcpnodelay`*:
   If `true`, the default, enables `TCP_NODELAY` (also called Nagle's algorithm). The default is `false`.
-`--target`::
+*`--target`*:
   Creates the transport only on the specified target. Valid values are as follows: +
   `server`;;
     Creates the transport on the default server instance. This is the default value.
@@ -79,7 +79,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-transport-name::
+*transport-name*:
   The name of the transport.
 
 [[examples]]
@@ -98,9 +98,9 @@ Command create-transport executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

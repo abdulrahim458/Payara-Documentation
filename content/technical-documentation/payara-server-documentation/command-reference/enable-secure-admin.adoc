@@ -29,14 +29,14 @@ Alternatively, you can use the `enable-secure-admin-internal-user` subcommand to
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the link:Technical Documentation/Payara Server Documentation/Command Reference/asadmin#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--adminalias`::
+*`--adminalias`*:
   The alias that refers to the SSL/TLS certificate on the DAS. This alias is used by the DAS to identify itself to instances. The default value is `s1as`.
-`--instancealias`::
+*`--instancealias`*:
   The alias that refers to the SSL/TLS certificate on the instances. This alias is used by the instances to identify themselves to the DAS. The default value is `glassfish-instance`.
 
 [[examples]]
@@ -58,9 +58,9 @@ Command enable-secure-admin executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

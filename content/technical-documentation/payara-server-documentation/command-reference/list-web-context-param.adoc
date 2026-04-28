@@ -36,23 +36,23 @@ For each parameter, the following information is displayed:
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--name`::
+*`--name`*:
   The name of the servlet context-initialization parameter that is to be listed. If this option is omitted, all parameters of the application
   that have previously been set are listed.
 
 [[operands]]
 == Operands
 
-application-name::
+*application-name*:
   The name of the application. This name can be obtained from the Administration Console or by using the
   xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`] subcommand. +
   The application must already be deployed. Otherwise, an error occurs.
-module::
+*module*:
   The relative path to the module within the application's enterprise archive (EAR) file. The path to the module is specified in the
   `module` element of the application's `application.xml` file. +
   module is required only if the servlet context-initialization parameter applies to a web module of a Jakarta EE application. If
@@ -90,9 +90,9 @@ Command list-web-context-param executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

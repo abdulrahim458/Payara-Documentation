@@ -9,13 +9,13 @@ Full, up-to-date build instructions for the Apache NetBeans IDE can be read on t
 == Prerequisites
 Before building the Apache NetBeans IDE and subsequently the Payara Platform Tools for Apache NetBeans IDE, you will need to configure your local environment. Subsequent builds will not require these steps.
 
-Clone the Apache NetBeans Repository::
+*Clone the Apache NetBeans Repository*:
 You must first clone the repository where the plugin source code is stored. https://github.com/apache/netbeans[Apache NetBeans Code Repository]
 
-Install Apache Ant::
+*Install Apache Ant*:
 Apache Ant is the build tool for the Apache NetBeans IDE and must be configured locally. https://ant.apache.org/manual/install.html[Install Apache Ant]
 
-JDK 11::
+*JDK 11*:
 JDK 11 is required to build and run Apache NetBeans
 
 IMPORTANT: If you are building Apache NetBeans on Windows. `Program Files` must be replaced with `PROGRA~1` and `Program Files (x86)` must be replaced with `PROGRA~2` in your `ANT_HOME` environment variable.

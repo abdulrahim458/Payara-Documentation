@@ -26,17 +26,17 @@ This means that you can run asadmin commands by typing asadmin in a terminal, an
 [[options]]
 == Options
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--force`::
+*`--force`*:
 Whether to overwrite a script file if one already exists. The default value is `false`.
 
-`--file`::
+*`--file`*:
 The path for the resulting file. The default value is `as-install/bin/bash_autocomplete`.
 
-`--localCommands`::
+*`--localCommands`*:
 This option will include local asadmin commands.
 +
 The default value is `false`.
@@ -60,7 +60,7 @@ Command generate-bash-autocomplete executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand

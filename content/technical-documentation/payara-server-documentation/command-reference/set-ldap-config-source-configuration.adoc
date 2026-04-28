@@ -32,51 +32,51 @@ The `set-ldap-config-source-configuration` provides a way to configure the Micro
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--enabled`::
+*`--enabled`*:
 Defaults to `false`. Enables or disables the config source
-`--dynamic`::
+*`--dynamic`*:
 Defaults to `false`. If set to true, applies the changes instantly without a restart. Otherwise, a restart is required.
 
-`--url`::
+*`--url`*:
 URL where the LDAP server can be reached
 
-`--authType`::
+*`--authType`*:
 Defaults to `none`. Type of the Authentication method used during the connection with the LDAP server.
 +
 The MicroProfile LDAP config source supports simple and none auth type. If simple auth type is selected then Bind DN and Bind DN Password are mandatory. If none auth type is selected then *Search Base* and *Search Filter* are mandatory otherwise optional.
 +
 If *Search Base* and *Search Filter* are not defined then data fetched from direct binding.
 
-`--startTLSEnabled`::
+*`--startTLSEnabled`*:
 Defaults to `false`. Secure the LDAP server connection using LDAP over TLS (STARTTLS) protocol
 
-`--bindDN`::
+*`--bindDN`*:
 Distinguished name for the application that will be used to access the LDAP server
 
-`--bindDNPassword`::
+*`--bindDNPassword`*:
 Password for the application defined by the Bind DN member. In place of the password, you can enter an alias which corresponds to the password in the form: ${ALIAS=<password-alias-name>}
 
-`--searchBase`::
+*`--searchBase`*:
 Overrides 'Base DN' and causing the search to be used instead of direct binding
 
-`--searchFilter`::
+*`--searchFilter`*:
 Search filter to find values starting from the 'Search Base DN' with the scope specified by 'Search Scope'.
 
-`--searchScope`::
+*`--searchScope`*:
 Search scope determines the depth of the search in the LDAP tree
 
-`--connectionTimeout`::
+*`--connectionTimeout`*:
 The timeout for connecting to the LDAP server in milliseconds. The value should be greater than zero. If this value is not specified or less than one, then wait for the response until it is received.
 
-`--readTimeout`::
+*`--readTimeout`*:
 The timeout for fetching the results from the LDAP server in milliseconds. The value should be greater than zero. If this value is not specified or less than one, then wait for the response until it is received.
 
-`--target`::
+*`--target`*:
 Specifies the target where the configuration source resides. +
 Valid values are as follows: +
 `server`;;
@@ -101,9 +101,9 @@ asadmin set-ldap-config-source-configuration --enabled=true --dynamic=true --url
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

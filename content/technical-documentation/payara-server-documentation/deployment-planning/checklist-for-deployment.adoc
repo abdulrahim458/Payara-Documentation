@@ -73,9 +73,9 @@ a|
 
 |Configuring time-outs in Payara Server
 a|
-`max-wait-time-millis`:: Wait time to get a connection from the pool before throwing an exception. Default is 6s. Consider changing this value for highly loaded systems where the size of the data being persisted is greater than 50 KB.
-`cache-idle-timeout-in-seconds`:: Time an EJB is allowed to be idle in the cache before it gets passivated. Applies only to entity beans and stateful session beans.
-`removal-timeout-in-seconds`:: Time that an EJB remains passivated (idle in the backup store). Default value is 60 minutes. Adjust this value based on the need for SFSB failover.
+*`max-wait-time-millis`*: Wait time to get a connection from the pool before throwing an exception. Default is 6s. Consider changing this value for highly loaded systems where the size of the data being persisted is greater than 50 KB.
+*`cache-idle-timeout-in-seconds`*: Time an EJB is allowed to be idle in the cache before it gets passivated. Applies only to entity beans and stateful session beans.
+*`removal-timeout-in-seconds`*: Time that an EJB remains passivated (idle in the backup store). Default value is 60 minutes. Adjust this value based on the need for SFSB failover.
 
 //TODO - Garbage Collection advice out of date, depends on JVM in use
 |Tune VM Garbage Collection (GC)

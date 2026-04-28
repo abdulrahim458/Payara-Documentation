@@ -123,9 +123,9 @@ The following is a list of the proprietary JVM Options available for configurati
 [[configfileencoding-option]]
 ==== Config File Encoding
 
-*Property*:: `fish.payara.configFileEncoding`
-*Aim*:: Sets the domain.xml parser character encoding. The domain will fail to start if you are using characters not covered by UTF-8 in your configuration without this property configured.
-*Acceptable Values*:: Any JDK supported file encoding charset
+**Property**: `fish.payara.configFileEncoding`
+**Aim**: Sets the domain.xml parser character encoding. The domain will fail to start if you are using characters not covered by UTF-8 in your configuration without this property configured.
+**Acceptable Values**: Any JDK supported file encoding charset
 
 [[configuring-jdk-versions-jvm-options]]
 === Configuring JDK Versions for JVM Options
@@ -146,7 +146,7 @@ NOTE: If no minimum and/or maximum JDK versions are set for a particular JVM opt
 
 To configure the JDK versions for JVM options in the admin console, head to the *Configurations -> <instance configuration> -> JVM Settings* and on the *JVM Options* tab specify the versions in the table:
 
-image::jvm-options/configure-jdk-versions-admin-console.png[Configure JDK versions for JVM options in Admin console]
+*image*: jvm-options/configure-jdk-versions-admin-console.png[Configure JDK versions for JVM options in Admin console]
 
 NOTE: You can omit either the minimum or maximum versions by leaving the fields blank.
 

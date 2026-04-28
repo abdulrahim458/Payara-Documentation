@@ -23,7 +23,7 @@ The following discussion provides a brief overview of Message Queue broker clust
 
 Message Queue supports two clustering models both of which provide a scalable message service, but with each providing a different level of message service availability:
 
-Conventional broker clusters:: A conventional broker cluster provides for service availability. When a broker fails, clients connected to the failed broker reconnect to another broker in the cluster.
+*Conventional broker clusters*: A conventional broker cluster provides for service availability. When a broker fails, clients connected to the failed broker reconnect to another broker in the cluster.
 +
 However, messages and state information stored in the failed broker cannot be recovered until the failed broker is brought back online.
 +
@@ -39,7 +39,7 @@ This is the simplest broker cluster to configure, and is the type of broker clus
 +
 Thus, brokers can access cluster configuration information whether any other brokers in the  cluster are running or not.
 
-Enhanced broker clusters:: An enhanced broker cluster provides for data availability in addition to service availability. When a broker fails, another broker takes over the pending work of the failed broker.
+*Enhanced broker clusters*: An enhanced broker cluster provides for data availability in addition to service availability. When a broker fails, another broker takes over the pending work of the failed broker.
 +
 The failover broker has access to the failed broker's messages and state information. Clients connected to the failed broker reconnect to the failover broker.
 +
@@ -68,14 +68,14 @@ The JMS service manages the lifecycle of `Embedded` and `Local` JMS hosts, and t
 
 The JMS service supports the following types of Message Queue broker clusters with Payara Server clusters, based on the JMS host type:
 
-`Embedded`::
+*`Embedded`*:
 * Conventional broker cluster with master broker (default)
 * Conventional broker cluster of peer brokers
-`Local`::
+*`Local`*:
 * Conventional broker cluster with master broker (default)
 * Conventional broker cluster of peer brokers
 * Enhanced broker cluster
-`Remote`::
+*`Remote`*:
 * Conventional broker cluster with master broker.
 +
 Brokers can differ in number from Payara Server instances and can be located on other hosts
@@ -249,11 +249,11 @@ Clients automatically fail over to the appropriate broker. The _Reconnect_, _Add
 
 For more information on connection failover, including how failover on conventional clusters differs from failover on enhanced clusters, see the *Automatic Reconnection* in the OpenMQ Administration Guide.
 
-Reconnect::
+*Reconnect*:
 Applies only to conventional clusters. Enables reconnection and connection failover.
 +
 When *disabled*, the Java Message Service does not attempt to reconnect if a connection fails.
-Reconnect Interval::
+*Reconnect Interval*:
 Specifies the number of seconds between reconnection attempts.
 +
 If it is too short, this time interval does not give a broker time to
@@ -262,11 +262,11 @@ If it is too short, this time interval does not give a broker time to
 If it is too long, the wait time might represent an unacceptable delay.
 +
 The default value is `5` seconds.
-Reconnect Attempts::
+*Reconnect Attempts*:
 Specifies the number of attempts to connect (or reconnect) to a particular JMS host before trying another host in the JMS host list. The host list is also known as the _Address List_.
 +
 TIP: Hosts are chosen from the address list either in order or randomly, depending on the setting of Address List Behavior.
-Address List Behavior::
+*Address List Behavior*:
 For conventional clusters, this field specifies how the Java Message Service selects which JMS host in the JMS hosts list to initially connect to, and if the broker fails, how the Java Message Service selects which JMS host in the JMS hosts list to fail over to.
 +
 For enhanced clusters, this field specifies how the Java Message Service selects which JMS host in the JMS hosts list to initially connect to.
@@ -281,7 +281,7 @@ Thus, having `Priority` as the default _Address List Behavior_ ensures that an a
 +
 TIP: If there are many clients attempting a connection using the same connection factory, use the `Random` setting to prevent them from all attempting to create their initial connection to the same JMS host.
 
-Address List Iterations::
+*Address List Iterations*:
 For conventional clusters, this field specifies the number of times the Java Message Service iterates through the JMS hosts list in an effort to establish its initial connection.
 +
 If the broker fails, this field specifies the number of times the Java Message Service iterates through the JMS hosts list in an effort to fail over to another broker.

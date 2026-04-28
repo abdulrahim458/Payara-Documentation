@@ -46,24 +46,24 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--installdir`::
+*`--installdir`*:
   The absolute path to the parent of the base installation directory where the Payara Server software is installed on each host, for example, `C:\payara6`. +
   The user that is running this subcommand must have write access to the specified directory. Otherwise, an error occurs. +
   The specified directory must contain the installation of the Payara Server software on the host. Otherwise, an error occurs. +
   The default is the parent of the base installation directory of the Payara Server software on the host where this subcommand is run.
-`--windowsuser`::
-`-w`::
+*`--windowsuser`*:
+*`-w`*:
   The user on this node's host that is to run the process for connecting to the host through DCOM. The default is the user that is running the DAS process.
-`--windowsdomain`::
-`-d`::
+*`--windowsdomain`*:
+*`-d`*:
   The name of the Windows domain that contains the user that the `--windowsuser` option specifies. The default is the name of the host
   on which the subcommand is run.
-`--force`::
+*`--force`*:
   Specifies whether the subcommand uninstalls the Payara Server software from a host even if a user-defined node resides on the host.
   Possible values are as follows: +
   `false`;;
@@ -77,7 +77,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-host-list::
+*host-list*:
   A space-separated list of the names of the hosts from which the Payara Server software is to be uninstalled.
 
 [[examples]]
@@ -108,9 +108,9 @@ Command uninstall-node-dcom executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

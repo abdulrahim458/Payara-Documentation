@@ -28,32 +28,32 @@ To apply changes to the load balancer without manually copying the configuration
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--config`::
+*`--config`*:
   Specifies which load balancer configuration to export. +
   Specify either a load balancer configuration or a load balancer. Specifying both results in an error.
-`--lbname`::
+*`--lbname`*:
   Specifies the load balancer to export. +
   Specify either a load balancer configuration or a load balancer. Specifying both results in an error.
-`--retrievefile`::
+*`--retrievefile`*:
   If set to `true`, retrieves the `loadbalancer.xml` file from the remote machine. The default is `false`.
-`--target`::
+*`--target`*:
   Specifies the target to which the load balancer configuration will be exported. If a target is not specified, the load balancer configuration is exported to the location specified with file_name.
 
 [[operands]]
 == Operands
 
-file_name::
+*file_name*:
   Specifies the file name and location of the exported configuration. +
   * If you specify a directory (relative or absolute) but not a file name, the file named `loadbalancer.xml.`load_balancer_config_name is created in the specified directory. On Microsoft Windows systems the path must be in quotes.
   * If you specify a file name in a relative or absolute path, the file is created with the name you specify in the directory you specify.
   * If you specify a file name but do not specify a directory, the file is created with that name in the current working directory.
   * If you do not specify this operand, the default value is a file named `loadbalancer.xml.`load_balancer_config_name created in the domain-dir`/generated` directory.
-target::
+*target*:
   Specifies the target to which the configuration will be exported. +
   Valid values are: +
   * cluster_name - Specifies a cluster and its server instances.
@@ -85,9 +85,9 @@ Command export-http-lb-config executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

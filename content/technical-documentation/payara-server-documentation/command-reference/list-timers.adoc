@@ -22,16 +22,16 @@ This command is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
 [[operands]]
 == Operands
 
-target::
+*target*:
   The target is either a standalone server instance or a cluster. If the target is the stand-alone instance, then the number of timers owned by
   the instance is listed. If the target is a cluster, then the number of timers owned by each instance in the cluster is listed. The default
   target is `server`, the default server instance.
@@ -54,9 +54,9 @@ The list-timers command was executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

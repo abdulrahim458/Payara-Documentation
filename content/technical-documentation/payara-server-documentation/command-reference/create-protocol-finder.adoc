@@ -24,18 +24,18 @@ The `create-protocol-finder` subcommand creates a protocol finder for a protocol
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--protocol`::
+*`--protocol`*:
   The name of the associated protocol.
-`--targetprotocol`::
+*`--targetprotocol`*:
   The name of the target protocol.
-`--classname`::
+*`--classname`*:
   The fully qualified name of the Java class that implements the protocol finder.
-`--target`::
+*`--target`*:
   Creates the protocol finder only on the specified target. Valid values are as follows: +
   `server`;;
     Creates the protocol finder on the default server instance. This is the default value.
@@ -49,15 +49,15 @@ asadmin-options::
 [[operands]]
 == Operands
 
-protocol-finder-name::
+*protocol-finder-name*:
   The name of the protocol finder.
 
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

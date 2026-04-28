@@ -21,16 +21,16 @@ Java-based task at a specific stage in the server life cycle. This subcommand is
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
 [[operands]]
 == Operands
 
-target::
+*target*:
   Indicates the location where lifecycle modules are to be listed. Valid values are +
   * `server`- Specifies the default server instance as the target for listing lifecycle modules. `server` is the name of the default server
   instance and is the default value for this operand.
@@ -54,9 +54,9 @@ Command list-lifecycle-modules executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

@@ -20,16 +20,16 @@ The `get-health` subcommand gets information about the health of the cluster. No
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
 [[operands]]
 == Operands
 
-cluster_name::
+*cluster_name*:
   The name of the cluster for which you want the health information. This subcommand prompts you for the cluster name if you don't specify it.
 
 [[examples]]
@@ -48,9 +48,9 @@ Command get-health executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

@@ -25,16 +25,16 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--dryrun`::
+*`--dryrun`*:
   Displays the default configuration of a module but does not add it to `domain.xml`. The default value is `false`.
-`--all`::
+*`--all`*:
   Adds all default configurations of modules to `domain.xml` if they are not already in it. The default value is `false`.
-`--target`::
+*`--target`*:
   Specifies the target to which the default configuration is being added. +
   Possible values are as follows: +
   `server`;;
@@ -49,7 +49,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-service_name::
+*service_name*:
   The name of the module for which the default configuration is to be added.
 
 [[examples]]
@@ -68,9 +68,9 @@ Command create-module-config executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

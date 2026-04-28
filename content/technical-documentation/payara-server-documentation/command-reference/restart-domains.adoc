@@ -22,15 +22,15 @@ The `restart-domains` subcommand can be used to restart the specified list of do
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--timeout`::
+*`--timeout`*:
 Specifies how long to take for the domains to restart in seconds. If restarting the domains takes longer than this amount then this command will fail.
 +
 The default value is `600`.
 
-`--domainTimeout`::
+*`--domainTimeout`*:
 Specifies how long to take for each domain to restart in seconds. If restarting the domain takes longer than this amount then this command will fail.
 +
 The default value is `600`.
@@ -38,7 +38,7 @@ The default value is `600`.
 [[operands]]
 == Operands
 
-domain-names::
+*domain-names*:
   The name of the domains you want to restart.
 
 [[examples]]
@@ -64,9 +64,9 @@ Command restart-domains executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

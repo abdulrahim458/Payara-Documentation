@@ -30,20 +30,20 @@ Clusters are deprecated and will be removed in Payara 7.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--autohadboverride`::
+*`--autohadboverride`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
-`--nodeagent`::
+*`--nodeagent`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
 [[operands]]
 == Operands
 
-cluster-name::
+*cluster-name*:
   The name of the cluster to delete.
 
 [[examples]]
@@ -62,9 +62,9 @@ Command delete-cluster executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

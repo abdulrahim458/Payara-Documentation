@@ -22,16 +22,16 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
 [[operands]]
 == Operands
 
-`--target`::
+*`--target`*:
   This operand specifies which JDBC resources you can list. Usage of this operand is optional. Valid values are: +
   `server`;;
     Lists the JDBC resources in the current server and is the default.
@@ -59,9 +59,9 @@ Command list-jdbc-resources executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

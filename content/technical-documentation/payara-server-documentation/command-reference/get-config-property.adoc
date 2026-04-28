@@ -28,23 +28,23 @@ For example, where the source is `server`, the `--sourceName` can be used to spe
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--propertyName`::
+*`--propertyName`*:
 The name of the configuration property to get.
-`--source`::
+*`--source`*:
 The configuration source where the property is stored.
-`--sourceName`::
+*`--sourceName`*:
 The name of the source when there may be ambiguity, for example a source of type `application` must specify the name of the application.
 +
 This property is required for sources of type: `config`, `server`, `application` or `module`
-`--moduleName`::
+*`--moduleName`*:
 The name of the module when the source is of type `module`. When this is specified, the `sourceName` parameter must be provided and must have the name of the application where the module is deployed.
-`--target`::
+*`--target`*:
 Specifies the target where the configuration source resides. +
 Valid values are as follows: +
 `server`;;
@@ -71,9 +71,9 @@ asadmin get-config-property --propertyName=JMSBrokerURL --source=module --source
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

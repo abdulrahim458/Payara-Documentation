@@ -28,15 +28,15 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--timeoutmsec`::
+*`--timeoutmsec`*:
   The time limit in milliseconds for determining the status of instances. The default is 2,000, which is equivalent to 2 seconds.
-`--long`::
-`-l`::
+*`--long`*:
+*`-l`*:
   Specifies whether detailed information is displayed for each instance that is listed. +
   The `--long` option and `--nostatus` option are mutually exclusive. If both options are specified in the same command, an error occurs. +
   Valid values are as follows: +
@@ -51,7 +51,7 @@ asadmin-options::
     When an instance is listed, some configuration changes in the domain administration server (DAS) for the instance might not have been applied to the instance itself. In this situation, the commands that are required to apply the changes are listed adjacent to the state of the instance. The maximum number of commands that are listed for an instance is 10.
   `false`;;
     Only the name of the instance and an indication of whether the instance is running are displayed (default). The length of time that the instance has been running is not displayed.
-`--nostatus`::
+*`--nostatus`*:
   Specifies whether information about whether instances are running is suppressed. +
   The `--long` option and `--nostatus` option are mutually exclusive. If both options are specified in the same command, an error occurs. +
   Valid values are as follows: +
@@ -59,7 +59,7 @@ asadmin-options::
     Information about whether instances are running is suppressed. Only the name of each instance is displayed.
   `false`;;
     Information about whether instances are running is displayed (default).
-`--standaloneonly`::
+*`--standaloneonly`*:
   Specifies whether only standalone instances are listed. +
   The `--standaloneonly` option and the target operand and are mutually exclusive. If both the `--standaloneonly` option and the target operand are specified in the same command, an error occurs. +
   Valid values are as follows: +
@@ -71,7 +71,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-target::
+*target*:
   Filters the list of Payara Server instances by specifying the target for which instances are listed. +
   The target operand and the `--standaloneonly` option are mutually exclusive. If both the target operand and the `--standaloneonly` option are specified in the same command, an error occurs. +
   Valid values are as follows: +
@@ -156,9 +156,9 @@ Command list-instances executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

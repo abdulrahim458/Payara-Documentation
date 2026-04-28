@@ -19,21 +19,21 @@ The following topics are addressed here:
 
 Each Payara Server node is one of the following types of node:
 
-`DCOM`::
+*`DCOM`*:
 A `DCOM` node supports communication over the Distributed Component Object Model (DCOM) remote protocol. The DCOM remote protocol is available only on Windows systems. If DCOM is set up, and you plan to administer your Payara Server instances centrally, the instances must reside on `DCOM` nodes.
 +
 IMPORTANT: DCOM nodes are deprecated and are not recommended to be used in production environments. +
 See xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc[Enabling Centralized Administration of Payara Server Instances] for more information.
 
-`SSH`::
+*`SSH`*:
 An `SSH` node supports communication over secure shell (SSH). If SSH is set up, and you plan to administer your Payara Server instances centrally, the instances must reside on `SSH` nodes.
 +
 An `SSH` node's configuration contains the information that is required to connect to the host through SSH. This information includes, for example, the username of the SSH user and the port number for SSH connections to the host.
-`CONFIG`::
+*`CONFIG`*:
 A `CONFIG` node does not support remote communication. If SSH is set up, and you plan to administer your instances locally, the instances can reside on `CONFIG` nodes. You cannot use `CONFIG` nodes for instances that you plan to administer centrally.
 +
 Each domain contains a predefined `CONFIG` node that is named `localhost-`domain, where domain is the name of the domain. On the host where the domain administration server (DAS) is running, this node represents the local host.
-`DOCKER`::
+*`DOCKER`*:
 A Docker node is similar to the existing SSH, DCOM, and CONFIG nodes in that it is a virtual representation of a Payara Server installation, providing connection details that the Domain Administration Server (DAS) uses to communicate with the installation to create, stop, start, and delete instances.
 +
 Where it differs from these existing node types is that instances created against it are actually housed in Docker containers, and so also contains details on how to communicate with the Docker engine of the remote machine.
@@ -68,15 +68,15 @@ NOTE: Only the options that are required to complete this task are provided in t
 C:\> asadmin --passwordfile filename create-node-dcom --nodehost node-host [--installdir install-dir] node-name
 ----
 +
-filename::
+*filename*:
 The name of the file that contains the alias for the Windows user's password.
-node-host::
+*node-host*:
 The name of the host that the node represents. The name of the host must be specified. Otherwise, an error occurs.
-install-dir::
+*install-dir*:
 The full path to the parent of the base installation directory of the Payara Server software on the host, for example, `C:\payara`.
 +
 If the Payara Server software is installed in the same directory on the node's host and the DAS host, you can omit this option.
-node-name::
+*node-name*:
 Your choice of name for the node that you are creating.
 
 The following example creates the `DCOM` node `wpmdl1` to represent the host `wpmdl1.example.com`. The Payara Server software is installed in the same directory on the DAS host and on the host `wpmdl1.example.com`.
@@ -163,7 +163,7 @@ NOTE: Only the options that are required to complete this task are provided in t
 asadmin> ping-node-dcom node-name
 ----
 +
-node-name:: The name of the node to test.
+*node-name*: The name of the node to test.
 
 The following example tests if the `DCOM` node `wpmdl2` is reachable.
 
@@ -210,7 +210,7 @@ asadmin> list-nodes-dcom --long=true
 asadmin> delete-node-dcom node-name
 ----
 +
-node-name::
+*node-name*:
 The name of the node that you are deleting.
 
 The following example confirms that no instances reside on the `DCOM` node `xkyd` and deletes the node `xkyd`.
@@ -269,12 +269,12 @@ If you are using password authentication for the SSH user, you must specify a pa
 asadmin> create-node-ssh --nodehost node-host [--installdir install-dir ] node-name
 ----
 +
-node-host::
+*node-host*:
   The name of the host that the node represents. The name of the host must be specified. Otherwise, an error occurs.
-install-dir::
+*install-dir*:
   The full path to the parent of the base installation directory of the Payara Server software on the host, for example,
   `/export/payara/`. If the Payara Server software is installed in the same directory on the node's host and the DAS host, you can omit this option.
-node-name::
+*node-name*:
   Your choice of name for the node that you are creating.
 
 The following example creates the `SSH` node `sj01` to represent the host `sj01.example.com`. The Payara Server software is installed in the same directory on the DAS host and on the host `sj01.example.com`.
@@ -371,7 +371,7 @@ NOTE: Only the options that are required to complete this task are provided in t
 ----
 asadmin> ping-node-ssh node-name
 ----
-node-name::
+*node-name*:
   The name of the node to test.
 
 The following example tests if the `SSH` node `sj01` is reachable.
@@ -416,7 +416,7 @@ asadmin> list-nodes-ssh --long=true
 ----
 asadmin> delete-node-ssh node-name
 ----
-node-name:: The name of the node that you are deleting.
+*node-name*: The name of the node that you are deleting.
 
 The following example confirms that no instances reside on the `SSH` node `sj01` and deletes the node `sj01`.
 
@@ -476,12 +476,12 @@ NOTE: Only the options that are required to complete this task are provided in t
 asadmin> create-node-config [--nodehost node-host] [--installdir install-dir ]
 node-name
 ----
-node-host::
+*node-host*:
   The name of the host that the node represents. You may omit this option. The name of the host can be determined when instances that reside on the node are created.
-install-dir::
+*install-dir*:
   The full path to the parent of the base installation directory of the Payara Server software on the host, for example, `/export/payara/`. You may omit this option.
   The installation directory can be determined when instances that reside on the node are created.
-node-name::
+*node-name*:
   Your choice of name for the node that you are creating.
 
 The following example creates the `CONFIG` node `cfg01`. The host that the node represents and the installation directory of the Payara Server software on the host are to be determined when instances are added to the node.
@@ -576,7 +576,7 @@ asadmin> list-nodes-config --long=true
 ----
 asadmin> delete-node-config node-name
 ----
-node-name::
+*node-name*:
   The name of the node that you are deleting.
 
 The following example confirms that no instances reside on the `CONFIG` node `cfg01` and deletes the node `cfg01`.
@@ -727,7 +727,7 @@ asadmin list-nodes-config --long=true
 ----
 asadmin> delete-node-docker node-name
 ----
-node-name::
+*node-name*:
 The name of the node that you are deleting.
 
 [[updating-and-changing-the-type-of-a-node]]
@@ -757,9 +757,9 @@ Ensure that the following prerequisites are met:
 asadmin> update-node-ssh options node-name
 ----
 +
-options::
+*options*:
   Options of the `update-node-ssh` subcommand for changing the node's configuration data. For information about these options, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc[`update-node-ssh`] help page.
-node-name::
+*node-name*:
   The name of the `SSH` node to update.
 
 The following example updates the host that the node `sj01` represents to `adc01.example.com`.
@@ -794,9 +794,9 @@ Ensure that the node that you are updating exists.
 ----
 asadmin> update-node-config options node-name
 ----
-options::
+*options*:
   Options of the `update-node-config` subcommand for changing the node's configuration data. For information about these options, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc[`update-node-config`] help page.
-node-name::
+*node-name*:
   The name of the `CONFIG` node to update.
 
 The following example updates the host that the node `cfg02` represents to `adc02.example.com`.
@@ -846,11 +846,11 @@ Execute the following steps:
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Run the appropriate subcommand for updating a node, depending on the type of the node after the change.
 +
-config-or-ssh-node-name::
+*config-or-ssh-node-name*:
   The name of the `CONFIG` node or the `SSH` node to change.
 * To change the type of a node to `SSH`, run the `update-node-ssh` subcommand on the node.
 +
-options::
+*options*:
   Options of the `update-node-ssh` subcommand for changing the node's configuration data. For information about these options, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc[`update-node-ssh`] help page.
 
 * To change the type of a node to `CONFIG`, run the `update-node-config` subcommand on the node.
@@ -859,9 +859,9 @@ options::
 ----
 asadmin> update-node-config [options] ssh-node-name
 ----
-options::
+*options*:
   Options of the `update-node-config` subcommand for changing the node's configuration data. For information about these options, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc[`update-node-config`] help page.
-ssh-node-name::
+*ssh-node-name*:
   The name of the `SSH` node to change.
 
 The following example changes the `CONFIG` node `cfg02` to an `SSH` node.

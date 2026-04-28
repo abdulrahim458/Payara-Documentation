@@ -26,16 +26,16 @@ If a new password is not provided, this subcommand fails if secure administratio
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--groups`::
+*`--groups`*:
   This is the name of the group to which the file user belongs.
-`--authrealmname`::
+*`--authrealmname`*:
   Name of the authentication realm where the user to be updated can be found.
-`--target`::
+*`--target`*:
   This option helps specify the target on which you are updating a file user. Valid values are: +
   `server`;;
     Updates the file user in the default server instance. This is the default value.
@@ -47,7 +47,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-username::
+*username*:
   This is the name of the file user to be updated.
 
 [[examples]]
@@ -67,9 +67,9 @@ Command update-file-user executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -29,12 +29,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target on which you are creating the administered object. Valid values are as follows: +
   `server`;;
     Creates the administered object for the default server instance `server` and is the default value.
@@ -47,23 +47,23 @@ asadmin-options::
 
 NOTE: The resource is always created for the domain as a whole, but the `resource-ref` for the resource is only created for the specified `--target`. This means that although the resource is defined at the domain level, it is only available at the specified target level. Use the `create-resource-ref` subcommand to refer to the resource in multiple targets if needed.
 
-`--restype`::
+*`--restype`*:
   Specifies the interface definition for the administered object. The resource type must be an interface definition that is specified in the `ra.xml` file of the resource adapter.
-`--classname`::
+*`--classname`*:
   Specifies the class name of the administered object. Required if multiple administered objects use the same interface definition.
-`--raname`::
+*`--raname`*:
   Specifies the name of the resource adapter associated with this administered object.
-`--enabled`::
+*`--enabled`*:
   Specifies if this object is enabled. Default is true.
-`--description`::
+*`--description`*:
   Text string describing the administered object.
-`--property`::
+*`--property`*:
   Description of the name/values pairs for configuring the resource. Dependent on the resource adapter. For JMS properties, see xref:technical-documentation/payara-server-documentation/command-reference/create-jms-resource.adoc#create-jms-resource[`create-jms-resource`] for JMS destination resources.
 
 [[operands]]
 == Operands
 
-jndi_name::
+*jndi_name*:
   JNDI name of the administered object to be created.
 
 [[examples]]
@@ -85,9 +85,9 @@ Command create-admin-object executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

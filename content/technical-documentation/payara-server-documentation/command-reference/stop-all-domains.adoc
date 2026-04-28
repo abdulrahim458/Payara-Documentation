@@ -23,22 +23,22 @@ The `stop-all-domains` subcommand can be used to stop ALL current running domain
 [[options]]
 == Options
 
-`--force`::
+*`--force`*:
 Specifies whether each domain is forcibly stopped immediately.
 +
 The default value is `true`.
 
-`--kill`::
+*`--kill`*:
 Specifies whether the domain is killed by using functionality of the operating system to terminate the domain process.
 +
 The default value is `false`.
 
-`--timeout`::
+*`--timeout`*:
 Specifies how long to take for the domains to stop in seconds. If stopping the domains takes longer than this amount then this command will fail.
 +
 The default value is `600`.
 
-`--domainTimeout`::
+*`--domainTimeout`*:
 Specifies how long to take for each domain to stop in seconds. If stopping the domain takes longer than this amount then this command will fail
 +
 The default value is `600`.
@@ -68,9 +68,9 @@ Command stop-all-domains executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

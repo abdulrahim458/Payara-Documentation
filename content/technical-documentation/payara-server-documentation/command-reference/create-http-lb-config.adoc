@@ -30,24 +30,24 @@ You must specify either a target or a configuration name, or both. If you do not
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--responsetimeout`::
+*`--responsetimeout`*:
   The time in seconds within which a server instance must return a response. If no response is received within the time period, the server is considered unhealthy. If set to a positive number, and the request is idempotent, the request is retried. If the request is not idempotent, an error page is returned. If set to 0 no timeout is used. The default is 60.
-`--httpsrouting`::
+*`--httpsrouting`*:
   If set to `true`, HTTPS requests to the load balancer result in HTTPS requests to the server instance. If set to `false`, HTTPS requests to the load balancer result in HTTP requests to the server instance. The default is `false`.
-`--reloadinterval`::
+*`--reloadinterval`*:
   The interval between checks for changes to the load balancer configuration file `loadbalancer.xml`. When the check detects changes, the configuration file is reloaded. A value of `0` disables reloading.
-`--monitor`::
+*`--monitor`*:
   Specifies whether monitoring is enabled. The default is `false`.
-`--routecookie`::
+*`--routecookie`*:
   This option is deprecated. The value is always `true`.
-`--property`::
+*`--property`*:
   Optional attribute name/value pairs for configuring the load balancer.
-`--target`::
+*`--target`*:
   Specifies the target to which the load balancer configuration applies. If you don't specify a target, the load balancer configuration is created without a target. You can specify targets later using the subcommand `create-http-lb-ref`. +
   Valid values are: +
   * cluster_name - Specifies that requests for this cluster will be handled by the load balancer.
@@ -56,7 +56,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-config_name::
+*config_name*:
   The name of the new load balancer configuration. This name must not conflict with any other load balancer groups, agents, configurations, clusters, or sever instances in the domain. If you don't specify a name, the load balancer configuration name is based on the target name, target_name`-http-lb-config`.
 
 [[examples]]
@@ -76,9 +76,9 @@ Command create-http-lb-config executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -23,15 +23,15 @@ This subcommand is supported in remote mode and local mode.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--verbose`::
-`-v`::
+*`--verbose`*:
+*`-v`*:
 If this option is set to `true`, the subcommand provides the version of the Java Runtime Environment (JRE) that the server is running. The default is `false`.
-`--local`::
+*`--local`*:
 If this option is set to `true`, the subcommand obtains the version locally from the installation of Payara Server on the host where the subcommand is run.
 +
 If this option is set to `false` (default), the subcommand attempts to contact the DAS to obtain the version. If the attempt to contact the DAS fails, the subcommand retrieves the version locally and displays a warning message.
@@ -64,9 +64,9 @@ Command version executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

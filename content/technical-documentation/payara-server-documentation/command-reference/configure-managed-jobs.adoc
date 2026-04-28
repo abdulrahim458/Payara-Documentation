@@ -25,18 +25,18 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--in-memory-retention-period`::
+*`--in-memory-retention-period`*:
   Specifies how long a completed job is kept in memory after the job is finished. The default value is 1 hour.
-`--job-retention-period`::
+*`--job-retention-period`*:
   Specifies how long a job is stored. The default value is 24 hours.
-`--cleanup-initial-delay`::
+*`--cleanup-initial-delay`*:
   After server startup, specifies the initial delay after which the cleanup service starts purging jobs. The default value is 5 minutes.
-`--cleanup-poll-interval`::
+*`--cleanup-poll-interval`*:
   Specifies the time interval after which the cleanup service polls for expired jobs. The default value is 20 minutes.
 
 [[examples]]
@@ -55,9 +55,9 @@ Command configure-managed-jobs executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

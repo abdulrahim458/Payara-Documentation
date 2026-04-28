@@ -22,9 +22,9 @@ Payara Server supports the development and deployment of resource adapters that 
 * The Connector 1.0 specification defines the outbound connectivity system contracts between the resource adapter and Payara Server.
 * The Connector 1.5 specification introduces major additions in defining system level contracts between the Payara Server and the resource adapter with respect to inbound connectivity, life cycle management, and thread management.
 * The Connector 1.6 specification introduces further additions in defining system level contracts between the Payara Server and the resource adapter with respect to the following:
-Generic work context contract:: A generic contract that enables a resource adapter to control the execution context of a `Work` instance that it has submitted to Payara Server for execution. The `Generic` work contract provides the mechanism for a resource adapter to augment the runtime context of a `Work` instance with additional contextual information flown-in from the EIS. This contract enables a resource adapter to control, in a more flexible manner, the contexts in which the `Work` instances submitted by it are executed by the application server's `WorkManager`.
-Security work context:: A standard contract that enables a resource adapter to establish security information while submitting a `Work` instance for execution to a `WorkManager` and while delivering messages-to-message endpoints residing in the Payara Server. This contract provides a mechanism to support the execution of a `Work` instance in the context of an established identity. It also supports the propagation of user information or `Principal` information from an EIS to a `MessageEndpoint` during message inflow.
-Transaction context:: The transaction context contract between the resource adapter and the application server leverages the Generic Work Context mechanism by describing a standard `WorkContext`, the `TransactionContext`. It represents the standard interface a resource adapter can use to propagate transaction context information from the EIS to the application server.
+*Generic work context contract*: A generic contract that enables a resource adapter to control the execution context of a `Work` instance that it has submitted to Payara Server for execution. The `Generic` work contract provides the mechanism for a resource adapter to augment the runtime context of a `Work` instance with additional contextual information flown-in from the EIS. This contract enables a resource adapter to control, in a more flexible manner, the contexts in which the `Work` instances submitted by it are executed by the application server's `WorkManager`.
+*Security work context*: A standard contract that enables a resource adapter to establish security information while submitting a `Work` instance for execution to a `WorkManager` and while delivering messages-to-message endpoints residing in the Payara Server. This contract provides a mechanism to support the execution of a `Work` instance in the context of an established identity. It also supports the propagation of user information or `Principal` information from an EIS to a `MessageEndpoint` during message inflow.
+*Transaction context*: The transaction context contract between the resource adapter and the application server leverages the Generic Work Context mechanism by describing a standard `WorkContext`, the `TransactionContext`. It represents the standard interface a resource adapter can use to propagate transaction context information from the EIS to the application server.
 * The Connector 2.0 specification moves the old Java Connectors Architecture specification (JCA) to Jakarta EE.
 * The Connector 2.1 specification, as part of Jakarta EE 10 has introduced Java SE 11 as the minimum requirement to run Jakarta EE applications.
 
@@ -181,9 +181,9 @@ WARNING: Payara Server deactivates all message-driven bean deployments before st
 
 Use the `class-loading-policy` setting to determine which resource adapters are accessible to applications. Allowed values are:
 
-`derived`:: Applications access resource adapters based on references in their deployment descriptors. These references can be `resource-ref`,
+*`derived`*: Applications access resource adapters based on references in their deployment descriptors. These references can be `resource-ref`,
 `resource-env-ref`, `resource-adapter-mid`, or equivalent annotations.
-`global`:: All stand-alone resource adapters are available to all applications.
+*`global`*: All stand-alone resource adapters are available to all applications.
 
 To configure this setting, use the `asadmin set` command. For example:
 

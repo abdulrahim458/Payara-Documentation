@@ -22,18 +22,18 @@ This command can be used to list all keys in a Hazelcast (Data Grid) cache.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are executing this operation. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
 instance_name;;
 Applies to a specified server instance.
-`--name`::
+*`--name`*:
 Name of the cache to query.
 +
 TIP: If omitted, this command will be executed for all available caches in the corresponding target.
@@ -65,9 +65,9 @@ Command list-cache-keys executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

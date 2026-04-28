@@ -19,29 +19,29 @@ A *security authentication realm*, also called a *security policy domain* or *se
 
 If the application does not specify a security realm, Payara Server uses its default realm (`file`).
 
-File realm:: Payara Server stores user credentials locally in a file named `keyfile`. This is the default realm.
+*File realm*: Payara Server stores user credentials locally in a file named `keyfile`. This is the default realm.
 
-Administration realm:: The administration realm is also a file realm and stores administrator user credentials locally in a file named `admin-keyfile`.
+*Administration realm*: The administration realm is also a file realm and stores administrator user credentials locally in a file named `admin-keyfile`.
 
-Certificate realm:: Payara Server stores user credentials in a certificate keystore. When using the certificate realm, the server uses certificates with the HTTPS protocol to authenticate web clients exclusively.
+*Certificate realm*: Payara Server stores user credentials in a certificate keystore. When using the certificate realm, the server uses certificates with the HTTPS protocol to authenticate web clients exclusively.
 
-LDAP realm:: Payara Server can get user credentials from a Lightweight Directory Access Protocol (LDAP) server.
+*LDAP realm*: Payara Server can get user credentials from a Lightweight Directory Access Protocol (LDAP) server.
 
-JDBC realm::
+*JDBC realm*:
   Payara Server gets user credentials from a database. The server uses the database information and the enabled JDBC realm option in the configuration file.
 
-Digest realm::
+*Digest realm*:
   Digest Authentication authenticates a user based on a username and a password. However, the authentication is performed by transmitting the password in an encrypted manner using a digest algorithm.
 
-Oracle Solaris realm::
+*Oracle Solaris realm*:
   Payara Server gets user credentials directly from the Oracle Solaris operating system user accounts.
 +
 IMPORTANT: This realm supports both Oracle Solaris 9 and 10 versions only.
 
-PAM realm::
+*PAM realm*:
   A Pluggable Authentication Module (PAM) realm allows applications deployed on Payara Server to authenticate users against a native Unix users list. PAM realms are implemented through the `com.sun.enterprise.security.auth.realm.pam.PamRealm` class and the JAAS Context `pamRealm`.
 
-Custom realm::
+*Custom realm*:
   You can create custom realms that retrieve user credentials from other type of repositories for user credentials, such as a NoSQL database or a third-party user management system. For more information about custom realms, see
   "xref:technical-documentation/application-development/securing-applications.adoc#creating-a-custom-realm[Creating a Custom Realm]" in the Payara Server Application Development section.
 
@@ -189,9 +189,9 @@ asadmin configure-ldap-for-admin --basedn "dn-list" --url [ldap|ldaps]://ldap-ur
 
 Where the arguments are defined as follows:
 
-dn-list:: LDAP BaseDN parameters
-ldap-url:: URL and port number for the LDAP server; can use standard (`ldap`) or secure (`ldaps`) protocol
-group-name:: LDAP group name for allowed users, as defined on the LDAP server.
+*dn-list*: LDAP BaseDN parameters
+*ldap-url*: URL and port number for the LDAP server; can use standard (`ldap`) or secure (`ldaps`) protocol
+*group-name*: LDAP group name for allowed users, as defined on the LDAP server.
 
 For example:
 

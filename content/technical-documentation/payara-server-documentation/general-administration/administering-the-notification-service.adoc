@@ -263,9 +263,9 @@ image:notification-service/cdi-event-bus/cdi-event-bus-notif-config.png[CDI Even
 
 The following options are available:
 
-`Enabled`:: Enables/disables the notifier.
-`Dynamic`:: Applies changes to the notifier without a server restart.
-`Loop Back`:: Whether events should also be observed on the same instance that triggered the instance or not.
+*`Enabled`*: Enables/disables the notifier.
+*`Dynamic`*: Applies changes to the notifier without a server restart.
+*`Loop Back`*: Whether events should also be observed on the same instance that triggered the instance or not.
 
 To make these changes via the Asadmin CLI, use the following subcommand:
 

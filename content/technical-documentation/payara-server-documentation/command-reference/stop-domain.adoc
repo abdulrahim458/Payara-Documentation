@@ -26,29 +26,29 @@ This subcommand is supported in local or remote mode. If you specify a host name
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--domaindir`::
+*`--domaindir`*:
   Specifies the directory of the domain that is to be stopped. If specified, the path must be accessible in the file system. If not
   specified, the domain in the default `as-install/domains` directory is stopped.
-`--force`::
+*`--force`*:
   Specifies whether the domain is forcibly stopped immediately. +
   Possible values are as follows: +
   `true`;;
     The domain is forcibly stopped immediately (default).
   `false`;;
     The subcommand waits until all threads that are associated with the domain are exited before stopping the domain.
-`--kill`::
+*`--kill`*:
   Specifies whether the domain is killed by using functionality of the operating system to terminate the domain process. +
   Possible values are as follows: +
   `false`;;
     The domain is not killed. The subcommand uses functionality of the Java platform to terminate the domain process (default).
   `true`;;
     The domain is killed. The subcommand uses functionality of the operating system to terminate the domain process.
-`--timeout`::
+*`--timeout`*:
 Specifies how long to take for the domain to stop in seconds. If stopping the domain takes longer than this amount then this command will fail.
 +
 The default value is `600`.
@@ -56,7 +56,7 @@ The default value is `600`.
 [[operands]]
 == Operands
 
-domain-name::
+*domain-name*:
   The name of the domain you want to stop. Default is the name specified during installation, usually `domain1`.
 
 [[examples]]
@@ -76,9 +76,9 @@ Command stop-domain executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

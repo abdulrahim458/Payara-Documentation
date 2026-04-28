@@ -21,12 +21,12 @@ This subcommand removes the named audit module. This subcommand is supported in 
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target on which you are deleting the audit module. Valid values are as follows: +
   `server`;;
     Deletes the audit module for the default server instance `server` and is the default value.
@@ -40,7 +40,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-audit_module_name::
+*audit_module_name*:
   The name of the audit module to be deleted.
 
 [[examples]]
@@ -57,9 +57,9 @@ Command delete-audit-module executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

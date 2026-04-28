@@ -89,7 +89,7 @@ If a configuration property isn't shown here but is visible in the admin console
 
 Existing network listeners can be configured from the admin console or with asadmin commands. The network listener configurations can be found in the admin console under *Configurations* -> *your-config* -> *Network Config* -> *Network Listeners*.
 
-image::http/network-listener-config.png[Configuration Page Location]
+*image*: http/network-listener-config.png[Configuration Page Location]
 
 The following fields can be configured for network listeners:
 
@@ -897,7 +897,7 @@ Command list-transports executed successfully.
 
 The values for target operand are as follows:
 
-target::
+*target*:
 Restricts the listing to transports for a specified target. Valid values are as follows: +
 `server`;;
 Lists the transports for the default server instance. This is the default value.
@@ -957,7 +957,7 @@ Some virtual server properties can be set for a specific web application. For de
 
 Existing virtual servers can be configured from the admin console or with `set` asadmin commands. The virtual server configurations can be found in the admin console under *Configurations* -> *your-config* -> *Virtual Servers*.
 
-image::http/virtual-server-config.png[Configuration Page Location]
+*image*: http/virtual-server-config.png[Configuration Page Location]
 
 The following fields can be configured:
 
@@ -1251,11 +1251,11 @@ Use the xref:technical-documentation/payara-server-documentation/command-referen
 
 The values supported for these attributes are as follows:
 
-`sso-cookie-http-only`::
+*`sso-cookie-http-only`*:
 A boolean value that specifies whether the `HttpOnly` attribute is included in `JSESSIONIDSSO` cookies.
 +
 When set to `true`, which is the  default, the `HttpOnly` attribute is included. When set to `false`, the `HttpOnly` attribute is not included.
-`sso-cookie-secure`::
+*`sso-cookie-secure`*:
 A string value that specifies whether the `Secure` attribute is included in `JSESSIONIDSSO` cookies. Allowed values are as follows:
 +
 * `true` — The `Secure` attribute is included.
@@ -1271,11 +1271,11 @@ Use the xref:technical-documentation/payara-server-documentation/command-referen
 
 The values supported for these attributes are as follows:
 
-`session-cookie-http-only`::
+*`session-cookie-http-only`*:
 A boolean value that specifies whether the `HttpOnly` attribute is included in `JSESSIONID` cookies.
 +
 When set to `true`, which is the  default, the `HttpOnly` attribute is included. When set to `false`, the `HttpOnly` attribute is not included.
-`session-cookie-secure`::
+*`session-cookie-secure`*:
 A string value that specifies whether the `Secure` attribute is included in `JSESSIONID` cookies. Allowed values are as follows:
 +
 * `true` — The `Secure` attribute is included.

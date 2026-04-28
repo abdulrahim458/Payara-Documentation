@@ -25,12 +25,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--systemproperties`::
+*`--systemproperties`*:
   Optional attribute name-value pairs for the configuration. These properties override port settings in the configuration. +
   The following properties are available: +
   `ASADMIN_LISTENER_PORT`;;
@@ -70,9 +70,9 @@ asadmin-options::
 [[operands]]
 == Operands
 
-source-configuration-name::
+*source-configuration-name*:
   The name of the configuration that you are copying.
-destination-configuration-name::
+*destination-configuration-name*:
   The name of the configuration that you are creating by copying the source configuration. +
   The name must meet the following requirements: +
   * The name may contain only ASCII characters.
@@ -109,9 +109,9 @@ Command copy-config executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

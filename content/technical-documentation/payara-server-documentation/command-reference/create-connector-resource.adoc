@@ -28,16 +28,16 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--poolname`::
+*`--poolname`*:
   The name of the connection pool. When two or more resource elements point to the same connection pool element, they use the same pool connections at runtime.
-`--enabled`::
+*`--enabled`*:
   This option determines whether the resource is enabled at runtime. The default value is true.
-`--objecttype`::
+*`--objecttype`*:
   Defines the type of the connector resource. Default is user. Allowed values are: +
   `system-all`;;
     A system resource for all server instances and the domain administration server (DAS).
@@ -47,11 +47,11 @@ asadmin-options::
     A system resource for all server instances only.
   `user`;;
     A user resource.
-`--description`::
+*`--description`*:
   Text providing details about the connector resource.
-`--property`::
+*`--property`*:
   Optional attribute name value pairs for configuring the resource.
-`--target`::
+*`--target`*:
   This option specifies the ending location of the connector resources. Valid targets are: +
   `server`;;
     Creates the connector resource in the default server instance. This is the default value.
@@ -69,7 +69,7 @@ domain level, it is only available at the specified target level. Use the `creat
 [[operands]]
 == Operands
 
-jndi_name::
+*jndi_name*:
   The JNDI name of this connector resource.
 
 [[examples]]
@@ -102,9 +102,9 @@ Where `jms/qConnFactory` is the sample connector resource that is created.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

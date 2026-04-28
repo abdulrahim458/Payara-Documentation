@@ -27,12 +27,12 @@ The `set-azure-config-source-configuration` provides configuration options for t
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 Specifies the target where the configuration source resides. +
 Valid values are as follows: +
 `server`;;
@@ -44,25 +44,25 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-`--key-vault-name`::
+*`--key-vault-name`*:
 Name of the Azure Key Vault to fetch secrets from.
 
-`--tenant-id`::
+*`--tenant-id`*:
 Tenant ID of your Azure Active Directory application.
 
-`--client-id`::
+*`--client-id`*:
 The Client (Application) ID of your Azure Active Directory application.
 
-`--thumbprint`::
+*`--thumbprint`*:
 The thumbprint of the certificate(certificate hash) that is tied to your Azure Active Directory application.
 
-`--private-key-file`::
+*`--private-key-file`*:
 The path to the Private key file which will be used for certificate-based authentication to request access token. This file will be copied to the config/ directory.
 
-`--dynamic`::
+*`--dynamic`*:
 Configure the config source dynamically, which will not require a restart.
 
-`--enabled`::
+*`--enabled`*:
 Enables or disables the config source, which fetches data from Azure Key Vault.
 
 [[examples]]
@@ -80,9 +80,9 @@ asadmin set-azure-config-source-configuration --dynamic true --enabled true --ke
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

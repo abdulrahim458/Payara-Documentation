@@ -29,28 +29,28 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--name`::
+*`--name`*:
 (Windows and Oracle Solaris systems only) The name of the service that you will use when administering the service through Oracle Solaris SMF commands or the service management features of the Windows operating system.
 +
 The default is the name of the domain or instance that is
   specified as the operand of this subcommand.
 
-`--system-type`::
+*`--system-type`*:
 If specified, system-type must be one of `systemd`, `systemv`, `solaris` or `windows`, which determine the type of init scripts to create.
 +
 If not specified, the command performs auto-detection of init system.
 
-`--domaindir`::
+*`--domaindir`*:
 The absolute path of the directory on the disk that contains the configuration of the domain. If this option is specified, the operand must specify a domain.
 
-`--nodedir`::
+*`--nodedir`*:
 Specifies the directory that contains the instance's node directory. The instance's files are stored in the instance's node directory. The default is `as-install/nodes`. If this option is specified, the operand must specify an instance.
 
-`--node`::
+*`--node`*:
 Specifies the node on which the instance resides. This option may be omitted only if the directory that the `--nodedir` option specifies contains only one node directory.
 +
 Otherwise, this option is required. If this option is specified, the operand must specify an instance.
@@ -58,7 +58,7 @@ Otherwise, this option is required. If this option is specified, the operand mus
 [[operands]]
 == Operands
 
-domain-or-instance-name::
+*domain-or-instance-name*:
 The name of the domain or instance to configure. If no operand is specified, the default domain is used.
 
 [[examples]]
@@ -79,9 +79,9 @@ Command _delete-service executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

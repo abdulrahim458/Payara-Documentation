@@ -23,12 +23,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-target::
+*target*:
   Restricts the listing to protocol finders for a specified target. Valid values are as follows: +
   `server`;;
     Lists the protocol finders for the default server instance. This is the default value.
@@ -42,15 +42,15 @@ target::
 [[operands]]
 == Operands
 
-protocol-name::
+*protocol-name*:
   The name of the protocol for which to list protocol finders.
 
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

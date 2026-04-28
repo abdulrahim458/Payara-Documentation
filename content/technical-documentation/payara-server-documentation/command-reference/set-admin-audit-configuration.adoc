@@ -27,25 +27,25 @@ The `set-admin-audit-configuration` subcommand can be used to set the configurat
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
---dynamic::
+*--dynamic*:
 Applies changes dynamically to the running system without the need for a restart, allowing for immediate effect of the audit configuration adjustments.
---enabled::
+*--enabled*:
 Turns the audit service on or off, controlling whether administrative actions are tracked and logged for security and compliance purposes.
---auditlevel::
+*--auditlevel*:
 Sets the auditing level. One of:
 +
     * MODIFIERS (default)
     * ACCESSORS
     * INTERNAL
---target:: Specifies the target for which to configure the audit settings, in this case, a server.
---enablenotifiers:: Enables selected notification services for audit events.
---disablenotifiers:: Disables selected notification services without affecting others.
---setnotifiers:: Configures notification services, specifying event types and settings.
+*--target*: Specifies the target for which to configure the audit settings, in this case, a server.
+*--enablenotifiers*: Enables selected notification services for audit events.
+*--disablenotifiers*: Disables selected notification services without affecting others.
+*--setnotifiers*: Configures notification services, specifying event types and settings.
 
 
 [[examples]]
@@ -63,9 +63,9 @@ Command set-admin-audit-configuration executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

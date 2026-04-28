@@ -7,13 +7,13 @@ The Payara Tools VS Code IDE Extension source code is available in the https://g
 == Prerequisites
 Before building the Payara Tools VS Code extension, you will need to configure your local environment. Subsequent builds will not require these steps.
 
-Clone the ecosystem-vscode-plugin repository::
+*Clone the ecosystem-vscode-plugin repository*:
 You must first clone the repository where the extension source code is stored. https://github.com/payara/ecosystem-vscode-plugin[VS Code Extension repository]
 
-Install Yarn::
+*Install Yarn*:
 Yarn is the build tool for the Payara Tools VS Code IDE Plugin and must be configured locally. https://classic.yarnpkg.com/lang/en/docs/install/[Install Yarn]
 
-Install vsce::
+*Install vsce*:
 vsce is the tool to package VS Code extensions. https://www.npmjs.com/package/vsce[Install vsce]
 
 [[building-vscode-extension]]
@@ -36,7 +36,7 @@ After Payara Tools for VS Code has been compiled and packaged successfully, you 
 
 Installing a vsix file in VS Code is as simple as right clicking the file in the explorer, and selecting `Install Extension VSIX`
 
-image::vscode-extension/building-extension/install-vsix.png[Install VSIX File]
+*image*: vscode-extension/building-extension/install-vsix.png[Install VSIX File]
 
 [[remove-compiled-vscode-extension]]
 === Removing Payara Tools from VS Code
@@ -46,4 +46,4 @@ Removing Payara Tools from VS Code after installing using the method above is th
 . Navigate to Extensions (Ctrl + Shift + X)
 . Right click `Payara Tools` and click Uninstall
 
-image::vscode-extension/building-extension/uninstall-extension.png[Uninstall VS Code Extension]
+*image*: vscode-extension/building-extension/uninstall-extension.png[Uninstall VS Code Extension]

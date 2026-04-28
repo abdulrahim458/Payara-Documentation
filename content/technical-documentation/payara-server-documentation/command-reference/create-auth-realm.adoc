@@ -23,12 +23,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target on which you are creating the realm. Valid values are +
   `server`;;
     Creates the realm on the default server instance. This is the
@@ -39,7 +39,7 @@ asadmin-options::
     Creates the realm on all server instances in the specified cluster.
   instance_name;;
     Creates the realm on a specified server instance.
-`--classname`::
+*`--classname`*:
   Java class which implements this realm. These include
   `com.sun.enterprise.security.auth.realm.file.FileRealm`,
   `com.sun.enterprise.security.auth.realm.certificate.CertificateRealm`,
@@ -48,7 +48,7 @@ asadmin-options::
   `com.sun.enterprise.security.auth.realm.ldap.PamRealm`, and
   `com.sun.enterprise.security.auth.realm.solaris.SolarisRealm`, or a
   custom realm.
-`--property`::
+*`--property`*:
   Optional attribute name-value pairs for configuring the authentication realm. Authentication realms require provider-specific properties, which vary based on implementation. +
   The following properties are common to all of the supported realms, which include `FileRealm`, `CertificateRealm`, `JDBCRealm`, `LDAPRealm`, PamRealm, and `SolarisRealm`. +
   `jaas-context`;;
@@ -138,7 +138,7 @@ It is a security risk not to specify a password encryption algorithm.
 [[operands]]
 == Operands
 
-auth_realm_name::
+*auth_realm_name*:
   A short name for the realm. This name is used to refer to the realm from, for example, `web.xml`.
 
 [[examples]]
@@ -161,9 +161,9 @@ Where `file` is the authentication realm created.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -33,20 +33,20 @@ If an application is deployed to a single server instance, use this subcommand t
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--timeout`::
+*`--timeout`*:
   The timeout (in minutes) to wait before disabling the specified application. This time allows for the graceful shutdown (quiescing) of the specified application. The default value is 30 minutes. The minimum value is 1 minute.
-`--name`::
+*`--name`*:
   The name of the application to be disabled.
 
 [[operands]]
 == Operands
 
-target::
+*target*:
   This operand specifies the server instance or cluster on which to disable the application. Valid values are: +
   * cluster_name - The name of a target cluster.
   * instance_name - The name of a target server instance.
@@ -68,9 +68,9 @@ Command disable-http-lb-application executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

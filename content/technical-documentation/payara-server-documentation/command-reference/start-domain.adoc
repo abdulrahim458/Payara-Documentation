@@ -39,15 +39,15 @@ after adding the entry `AS_ADMIN_NEWPASSWORD` to the password file.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--debug`::
-`-d`::
+*`--debug`*:
+*`-d`*:
   Specifies whether the domain is started with https://docs.oracle.com/en/java/javase/11/docs/specs/jpda/conninv.html[Java Platform Debugger Architecture (JPDA)]
   debugging enabled. With debugging enabled extra exceptions can be printed.
 +
@@ -58,18 +58,18 @@ Possible values are as follows:
   `false`;;
     The instance is started with JPDA debugging disabled (default).
 
-`--dry-run`::
-`-n`::
+*`--dry-run`*:
+*`-n`*:
   Suppresses actual starting of the domain. Instead, `start-domain` displays the full java command that would be used to start the domain,
   including all options. Reviewing this command can be useful to confirm JVM options and when troubleshooting startup issues.
 +
 The default value is `false`.
 
-`--domaindir`::
+*`--domaindir`*:
   The domain root directory, which contains the directory of the domain that is to be restarted. If specified, the path must be accessible in
   the file system. The default location of the domain root directory is `as-install/domains`.
 
-`--upgrade`::
+*`--upgrade`*:
   This option is deprecated.
   Specifies whether the configuration of the domain administration server (DAS) is upgraded to the current release. Normally, if the
   subcommand detects that the configuration is from an older release of Payara Server, the configuration is upgraded automatically before
@@ -82,8 +82,8 @@ Possible values are as follows:
 `false`;;
     The configuration of the DAS is not updated (default).
 
-`--verbose`::
-`-v`::
+*`--verbose`*:
+*`-v`*:
   Specifies whether detailed information about the domain is displayed in the console window where the subcommand is run.
 +
 Possible values are as follows:
@@ -102,8 +102,8 @@ You can kill the Payara Server process and obtain a thread dump for the server b
   `false`;;
     Detailed information is not displayed (default).
 
-`--watchdog`::
-`-w`::
+*`--watchdog`*:
+*`-w`*:
   Specifies whether limited information about the domain is displayed in the console window where the subcommand is run. The `--watchdog`
   option is similar to `--verbose` but does not display the detailed startup messages and log messages. This option is useful when running
   the `asadmin` utility in the background or with no attached console.
@@ -115,18 +115,18 @@ Possible values are as follows:
   `false`;;
     Limited information is not displayed in the console window (default).
 
-`--prebootcommandfile`::
+*`--prebootcommandfile`*:
  Path to file containing commands to run before booting the server. Only a limited amount of commands will work at this point.
 
-`--postbootcommandfile`::
+*`--postbootcommandfile`*:
 Path to file containing commands to run after the server's boot sequence is completed.
 
-`--timeout`::
+*`--timeout`*:
 Specifies how long to take for the domain to start in seconds. If starting the domain takes longer than this amount then this command will fail.
 +
 The default value is `600`.
 
-`--warmup`::
+*`--warmup`*:
 Specifies if the server will stop after setting configurations.
 +
 The default value is `false`.
@@ -134,7 +134,7 @@ The default value is `false`.
 [[operands]]
 == Operands
 
-domain-name::
+*domain-name*:
 The unique name of the domain you want to start.
 +
 This operand is optional if only one domain exists in the Payara Server installation.
@@ -160,9 +160,9 @@ Command start-domain executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

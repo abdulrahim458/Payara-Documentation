@@ -41,13 +41,13 @@ Options control the behavior of the `asadmin` utility and its subcommands. Optio
 
 The `asadmin` utility has the following types of options:
 
-*`asadmin` utility options*:: These options control the behavior of the `asadmin` utility, not the subcommand.
+**`asadmin` utility options**: These options control the behavior of the `asadmin` utility, not the subcommand.
 +
 The `asadmin` utility options may precede or follow the subcommand, but `asadmin` utility options after the subcommand are deprecated.
 +
 All `asadmin` utility options must either precede or follow the subcommand. If `asadmin` utility options are specified both before and after the subcommand, an error occurs.
 
-*Subcommand Options*:: These options control the behavior of the subcommand, not the `asadmin` utility. Subcommand options must follow the subcommand. +
+**Subcommand Options**: These options control the behavior of the subcommand, not the `asadmin` utility. Subcommand options must follow the subcommand. +
 
 A subcommand option may have the same name as an `asadmin` utility option, but the effects of the two options are different.
 
@@ -463,7 +463,7 @@ This example deletes a system property named `http-listener-port` from `localhos
 
 The following properties are used exclusively by Payara Server to configure specific settings across multiple features:
 
-`fish.payara.clientHttpsProtocol`::
+*`fish.payara.clientHttpsProtocol`*:
 Sets the TLS version to be used by the asadmin client.
 +
 This is separate from the TLS version set for HTTPS communication on a listener.
@@ -474,26 +474,26 @@ Valid values are:
 * `TLSv1.3`
 * `TLSv1.3` (default)
 
-`fish.payara.classloading.delegate`::
+*`fish.payara.classloading.delegate`*:
 When set to `false`, libraries from applications, and `domain-dir/lib` will override the library in the `as-install/glassfish/modules` directory
 +
 Defaults to `true`.
 
-`fish.payara.admin.command.jline.log.disable`::
+*`fish.payara.admin.command.jline.log.disable`*:
 When set to `true`, JLine logging entries for invalid key bindings and other unwanted errors will be prevented
 +
 NOTE: This is a property used exclusively by the Asadmin CLI
 +
 Defaults to `false`
 
-`fish.payara.deployment.transform.namespace`::
+*`fish.payara.deployment.transform.namespace`*:
 When set to `true`, namespace transformation (`javax.\*` to `jakarta.\*` package refactoring) is always performed.
 +
 If the value is `undefined` then auto transformation is performed on the absence of `jakarta.\*` classes in the deployment archive otherwise transformation task is disabled.
 +
 Defaults to `null` (undefined)
 
-`fish.payara.permittedFormBasedAuthHttpMethods` ::
+*`fish.payara.permittedFormBasedAuthHttpMethods`*:
 A comma separated list of HTTP methods that are permitted to use for FORM based authentication (`j_security_check`).
 +
 If not set all HTTP methods are permitted.
@@ -512,19 +512,19 @@ Valid values are:
 +
 Defaults to `null` (undefined)
 
-`fish.payara.shutdowngrace`::
+*`fish.payara.shutdowngrace`*:
 After server shutdown is initiated the server waits this period of time (in seconds) to finish ongoing requests before terminating.
 +
 New requests are still accepted during this grace period. Accepts values between `0` - `Integer.MAX` and defaults to `0`.
 
-`fish.payara.SO_KEEPALIVE`::
+*`fish.payara.SO_KEEPALIVE`*:
 Enables keep alive (`SO_KEEPALIVE`) on the sockets created by an IIOP listener. Can be set as a global system property, or as a property on a specific listener (with the latter taking precedence over the global setting if both are set).
 +
 NOTE: Replaces deprecated property `fish.payara.SOKeepAlive`.
 +
 Defaults to `false`
 
-`org.glassfish.grizzly.DEFAULT_MEMORY_MANAGER`::
+*`org.glassfish.grizzly.DEFAULT_MEMORY_MANAGER`*:
 If option (defined as JVM Option with `-D` or as System Property value) `org.glassfish.grizzly.DEFAULT_MEMORY_MANAGER` is not present in the server/instance configuration, the server will override the Grizzly default and use the `HeapMemoryManager` class.
 +
 To override this behaviour (so to use a different memory manager), you must specify this JVM option in the server/instance config with your desired setting.
@@ -535,7 +535,7 @@ Valid values are:
 * `org.glassfish.grizzly.memory.PooledMemoryManager`
 * `org.glassfish.grizzly.memory.ByteBufferManager`
 
-`deployment.resource.validation`::
+*`deployment.resource.validation`*:
 This option (defined as JVM Option with `-D` or as System Property value) defines if the resources are validated during deployment of the application.
 +
 When active, the default value, all JNDI references are verified but those references can be provided by the application itself and thus not yet available at deployment time (for example the `java:module/env/` based ones).
@@ -546,7 +546,7 @@ However, issues will occur at runtime of the application in case of errors in th
 +
 Defaults to `true`
 
-`fish.payara.faces.integration.allowFacesCdiInitialisation`::
+*`fish.payara.faces.integration.allowFacesCdiInitialisation`*:
 This option specifies whether scanning for Jakarta Faces content during application deployment is enabled. When enabled, if Faces content is detected, it forces an attempt to initialise CDI and Weld, even if bean discovery is set to "none".
 +
 A similar property can be set as a property `deploy` command. See xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[deploy] for details.
@@ -555,14 +555,14 @@ The `deploy` command property has precedence over the value defined by this prop
 +
 Default is `false`.
 
-`fish.payara.javax.servlet.jsp.disable-static-field-references`::
+*`fish.payara.javax.servlet.jsp.disable-static-field-references`*:
 This option brings back the behaviour of evaluating EL in JSP pages from previous iterations.
 +
 When enabled, a static field reference won't be evaluated.
 +
 Defaults to `false`
 
-`fish.payara.node.ssh.timeout`::
+*`fish.payara.node.ssh.timeout`*:
 This option sets the SSH timeout in milliseconds for running commands on SSH nodes.
 +
 This is a separate timeout to the Asadmin CLI communication or any command specific timeout, this is specifically for the SSH connection used for running certain commands that operate on the remote node itself (e.g. `setup-ssh` and `start-instance`).
@@ -571,37 +571,37 @@ If set to an invalid value a warning will be logged and the default will be used
 +
 Accepts values from `1` - `Integer.MAX`. Defaults to `120000ms`
 
-`fish.payara.tenantcontrol.blocking.disable`::
+*`fish.payara.tenantcontrol.blocking.disable`*:
 This option determines if a server instance should skip its standard checks for if it is available for a Hazelcast `Tenantable` object.
 +
 Defaults to `true`.
 
 //Conditional block, only rendered for the Community Edition
-ifeval::["{page-site-edition}" == "community"]
-`fish.payara.autoscale.maxscale`::
+*ifeval*: ["{page-site-edition}" == "community"]
+*`fish.payara.autoscale.maxscale`*:
 This option sets the default maximum boundary for the number of instances to scale up or down by when using auto-scale groups.
 +
 Accepts values from `1` - `Integer.MAX`. Defaults to `100` instances.
-endif::[]
+*endif*: []
 
 //Conditional block, only rendered for the Enterprise Edition
-ifeval::["{page-site-edition}" == "enterprise"]
-`fish.payara.upgrade.repo.url`::
+*ifeval*: ["{page-site-edition}" == "enterprise"]
+*`fish.payara.upgrade.repo.url`*:
 This option defines the Maven repository URL used by the `upgrade-server` command.
 +
 Accepts a URL pointing to the Payara Enterprise Nexus repository to download from (expected to point to the `fish/payara/distributions` directory of the repository).
 +
 Defaults to `https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/distributions/`
-endif::[]
+*endif*: []
 
-`hazelcast.cp-subsystem.auto-promote`::
+*`hazelcast.cp-subsystem.auto-promote`*:
 When the Payara Server's Data Grid/Hazelcast CP subsystem is enabled (more than `0` members are configured), this option will enable or disable an auto-promote behaviour that will allow other server instances to join the Hazelcast CP subsystem when detected by the DAS.
 +
 IMPORTANT: The CP subsystem is automatically enabled on the Data Grid/Hazelcast when the `hazelcast.cp-subsystem.cp-member-count` system property is set an integer greater than zero.
 +
 Defaults to `true`
 
-`hazelcast.auto-partition-group`::
+*`hazelcast.auto-partition-group`*:
 Enables/disables Hazelcast group auto-partitioning behaviour in Payara Server's Data Grid.
 +
 When auto-partitioning is turned on, instances that join the Data Grid will not follow the default partition group configuration strategy and instead will form individual partition groups. Read more about how partition groups work in the official link:https://docs.hazelcast.com/hazelcast/5.3/clusters/partition-group-configuration[Hazelcast Platform documentation].
@@ -611,8 +611,8 @@ This option is intended to make member partitioning work consistently for highly
 CAUTION: Use this option with extreme care
 
 //Conditional block, only rendered for the Community Edition
-ifeval::["{page-site-edition}" == "community"]
-`fish.payara.ear-combined-cdi-deployment`::
+*ifeval*: ["{page-site-edition}" == "community"]
+*`fish.payara.ear-combined-cdi-deployment`*:
 This option defines whether or not to restrict CDI scanning when multiple WARs exist within an EAR.
 +
 This option is intended to allow a user to revert the CDI scanning behaviour to how it operated in prior versions.
@@ -620,11 +620,11 @@ This option is intended to allow a user to revert the CDI scanning behaviour to 
 The behaviour in prior versions aligned with `false`.
 +
 Default is undefined (`true`)
-endif::[]
+*endif*: []
 
 //Conditional block, only rendered for the Community Edition
-ifeval::["{page-site-edition}" == "community"]
-`fish.payara.ready-after-applications`::
+*ifeval*: ["{page-site-edition}" == "community"]
+*`fish.payara.ready-after-applications`*:
 This option determines when the server is marked as "ready".
 +
 When enabled: The server is marked as ready after all post-boot configuration has been applied and all previously deployed applications have been loaded.
@@ -634,11 +634,11 @@ When disabled: the server is marked as ready after all `InstanceLifecycleListene
 The behaviour in versions 6.2022.2 to 6.2025.9 aligned with `false`. The behaviour in versions prior to 6.2022.2 aligned with `true`.
 +
 Defaults to `true`.
-endif::[]
+*endif*: []
 
 //Conditional block, only rendered for the Enterprise Edition
-ifeval::["{page-site-edition}" == "enterprise"]
-`fish.payara.ready-after-applications`::
+*ifeval*: ["{page-site-edition}" == "enterprise"]
+*`fish.payara.ready-after-applications`*:
 This option determines when the server marks itself as "ready".
 +
 When enabled, this will be once all post-boot configuration is applied and previously deployed applications have been loaded.
@@ -648,7 +648,7 @@ When disabled, this will be once all `InstanceLifecycleListener` and services ha
 The behaviour in prior versions of Enterprise 6 aligned with `false`. The behaviour in versions prior to Enterprise 5.47.0 aligned with `true`.
 +
 Defaults to `false`.
-endif::[]
+*endif*: []
 
 //TODO - Not sure what this feature is for and how it works or it is properly supported.
 

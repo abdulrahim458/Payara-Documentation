@@ -26,20 +26,20 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--mqhost`::
+*`--mqhost`*:
   The host name for the JMS service.
-`--mqport`::
+*`--mqport`*:
   The port number used by the JMS service.
-`--mquser`::
+*`--mquser`*:
   The user name for the JMS service.
-`--mqpassword`::
+*`--mqpassword`*:
   The password for the JMS service.
-`--target`::
+*`--target`*:
   Creates the JMS host only for the specified target. Valid values are as follows: +
   `server`;;
     Creates the JMS host for the default server instance. This is the default value.
@@ -50,13 +50,13 @@ asadmin-options::
     cluster.
   instance-name;;
     Creates the JMS host for the specified server instance.
-`--force`::
+*`--force`*:
   Specifies whether the subcommand overwrites the existing JMS host of the same name. The default value is `false`.
 
 [[operands]]
 == Operands
 
-jms_host_name::
+*jms_host_name*:
   A unique identifier for the JMS host to be created.
 
 [[examples]]
@@ -77,9 +77,9 @@ Command create-jms-host executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

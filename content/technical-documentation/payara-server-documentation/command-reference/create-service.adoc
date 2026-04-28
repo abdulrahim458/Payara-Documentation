@@ -88,19 +88,19 @@ The Oracle Solaris command `svccfg` does not delete this directory.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--name`::
+*`--name`*:
   (Windows and Oracle Solaris systems only) The name of the service that you will use when administering the service through Oracle Solaris SMF
   commands or the service management features of the Windows operating system. The default is the name of the domain or instance that is
   specified as the operand of this subcommand.
 
-`--serviceproperties`::
+*`--serviceproperties`*:
   Specifies a colon(:)-separated list of various properties that are specific to the service.
 +
 To customize the display name of the service in the Windows Service list, set the `DISPLAY_NAME` property to the required name.
@@ -110,12 +110,12 @@ For Oracle Solaris 10 systems, if you specify `net_privaddr`, the service's proc
 +
 On Linux systems using SystemD these properties are stored as Environment entries, accessible via Microprofile property in the applications.
 
-`--dry-run`::
-`-n`::
+*`--dry-run`*:
+*`-n`*:
   Previews your attempt to create a service. Indicates issues and the outcome that will occur if you run the command without using the
   `--dry-run` option. Nothing is actually configured. Default is false.
 
-`--force`::
+*`--force`*:
   Specifies whether the service is created even if validation of the service fails.
 +
 Possible values are as follows:
@@ -125,29 +125,29 @@ Possible values are as follows:
   `false`;;
     The service is not created (default).
 
-`--system-type`::
+*`--system-type`*:
 If specified, system-type must be one of `systemd`, `systemv`, `solaris` or `windows`, which determine the type of init scripts to create.
 +
 If not specified, the command performs auto-detection of init system.
 
-`--serviceuser`::
+*`--serviceuser`*:
 (Linux systems only) The user that is to run the Payara Server software when the service is started. The default is the user that is running the subcommand. Specify this option if the Payara Server is to be run by a user other than the root user.
 
-`--domaindir`::
+*`--domaindir`*:
 The absolute path of the directory on the disk that contains the configuration of the domain. If this option is specified, the operand must specify a domain.
 
-`--nodedir`::
+*`--nodedir`*:
 Specifies the directory that contains the instance's node directory. The instance's files are stored in the instance's node directory.
 +
 The default is `as-install/nodes`. If this option is specified, the operand must specify an instance.
 
-`--node`::
+*`--node`*:
 Specifies the node on which the instance resides. This option may be omitted only if the directory that the `--nodedir` option specifies contains only one node directory. Otherwise, this option is required. If this option is specified, the operand must specify an instance.
 
 [[operands]]
 == Operands
 
-domain-or-instance-name::
+*domain-or-instance-name*:
   The name of the domain or instance to configure. If no operand is specified, the default domain is used.
 
 [[examples]]
@@ -260,9 +260,9 @@ Command create-service executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

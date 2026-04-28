@@ -11,12 +11,12 @@ Payara has been part of the MicroProfile project from its inception and, therefo
 
 == Payara Support for MicroProfile
 
-Version 6.1::
+*Version 6.1*:
 Version 6.1 of MicroProfile is a minor release that updates Metrics, Config and Telemetry. Also, this version aligns with Jakarta EE 10 Core Profile and continues with the `jakarta.*` namespace alignment and allows to be certified with Java SE 11 or higher.
 
 This is supported by Payara Platform Community/Enterprise starting from releases *6.2023.11*/*6.8.0* onwards respectively
 
-Version 6.0::
+*Version 6.0*:
 Version 6.0 of MicroProfile is a major release that updates JWT Authentication, OpenAPI, and Metrics.
 In addition, this version introduces OpenTelemetry Tracing as a replacement for OpenTracing (which is now an optional specification), as well as bringing in Jakarta EE Core Profile 10.0 in place of the individual Jakarta specifications it pulled in previously (CDI, JAX-RS, Annotations, JSON-B, and JSON-P).
 

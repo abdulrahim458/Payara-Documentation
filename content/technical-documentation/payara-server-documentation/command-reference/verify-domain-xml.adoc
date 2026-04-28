@@ -25,17 +25,17 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`-h` `--help`::
+*`-h` `--help`*:
   Displays the help text for the subcommand.
-`--domaindir`::
+*`--domaindir`*:
   Specifies the domain root directory, where the domains are located. The path must be accessible in the file system. The default is `as-install/domains`.
 
 [[operands]]
 == Operands
 
-domain_name::
+*domain_name*:
   Specifies the name of the domain. The default is `domain1`.
 
 [[examples]]
@@ -53,9 +53,9 @@ domain.xml is valid
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

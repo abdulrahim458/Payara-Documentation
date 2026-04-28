@@ -22,17 +22,17 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
 
 [[operands]]
 == Operands
 
-name::
+*name*:
 The name of the deployment group to delete. If the name doesn't match any existing deployment groups the command will exit with an error.
 
 [[examples]]
@@ -51,9 +51,9 @@ Command delete-deployment-group executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 command executed successfully
-1::
+*1*:
 error in executing the command
 
 See Also

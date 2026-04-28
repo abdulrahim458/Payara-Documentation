@@ -26,22 +26,22 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--securitymap`::
+*`--securitymap`*:
   Specifies the name of the security map contained within the connector connection pool from which the identity and principals should be listed. With this option, `--verbose` is redundant.
-`--verbose`::
+*`--verbose`*:
   If set to `true`, returns a list including the identity, principals, and security name. The default is `false`.
-`--target`::
+*`--target`*:
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
 [[operands]]
 == Operands
 
-pool-name::
+*pool-name*:
   Name of the connector connection pool for which you want to list security maps.
 
 [[examples]]
@@ -63,9 +63,9 @@ Command list-connector-security-maps executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

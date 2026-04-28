@@ -44,10 +44,10 @@ image:recorder/recorder-config.png[Asadmin Recorder configuration]
 
 You will be presented with the following configuration options:
 
-_Enabled_:: Sets whether the asadmin recorder service should be enabled or disabled.
-_Filter Commands_:: Sets whether to exclude the `asadmin` commands and regular expressions listed in the _Filtered Commands_ setting from being recorded.
-_Output Location_:: The absolute file path for the `asadmin` commands to be written to. This defaults to a file called _asadmin-commands.txt_ in the domain directory.
-_Filtered Commands_:: A comma separated list of asadmin commands and regular expressions to be excluded from being recorded if the _Filter Commands_ option is enabled.
+*_Enabled_*: Sets whether the asadmin recorder service should be enabled or disabled.
+*_Filter Commands_*: Sets whether to exclude the `asadmin` commands and regular expressions listed in the _Filtered Commands_ setting from being recorded.
+*_Output Location_*: The absolute file path for the `asadmin` commands to be written to. This defaults to a file called _asadmin-commands.txt_ in the domain directory.
+*_Filtered Commands_*: A comma separated list of asadmin commands and regular expressions to be excluded from being recorded if the _Filter Commands_ option is enabled.
 
 The default regular expressions and asadmin commands set in the _Filtered Commands_ option are a selection of commands and regular expressions that are typically not needed for any automation purposes, yet are still sometimes called by commands and through navigation of the admin console.
 
@@ -109,9 +109,9 @@ restart the domain) to switch the auditing service on.
 
 The *Audit Level* options sets the level of operations that will be logged:
 
-**MODIFIERS**:: (Default setting) All operations that modify the configuration of the server in some capacity.
-**ACCESSORS**:: All operations query the configuration of the server in some capacity.
-**INTERNAL**:: All existing operations, including internal operations of the server.
+***MODIFIERS***: (Default setting) All operations that modify the configuration of the server in some capacity.
+***ACCESSORS***: All operations query the configuration of the server in some capacity.
+***INTERNAL***: All existing operations, including internal operations of the server.
 
 Aside from this configuration setting, you can also define which notifiers will be used to relay the admin console audit events by moving them to the **Selected Notifiers** box.
 

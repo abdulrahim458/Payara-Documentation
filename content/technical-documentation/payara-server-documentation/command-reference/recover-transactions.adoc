@@ -30,23 +30,23 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--transactionlogdir`::
+*`--transactionlogdir`*:
   The location of the transaction logs for a server for which transaction recovery is requested. This option applies only if
   transaction logs are stored on a shared file system.
-`--target`::
+*`--target`*:
   The target server that performs the recovery for the server that is specified by the server_name operand. The target server should be running.
-`--destination`::
+*`--destination`*:
   This option is deprecated. It works exactly as the `--target` option does.
 
 [[operands]]
 == Operands
 
-server_name::
+*server_name*:
   For a stand-alone server, the value of this operand is typically `server`. Transactions are recovered only if a resource fails, but the server is still running. +
   For an installation of multiple server instances, the value of this operand is the name of the server for which the recovery is required.
   The in-flight transactions on this server will be recovered. If this server is running, recovery is performed by the same server. In this
@@ -75,9 +75,9 @@ Transaction recovered.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

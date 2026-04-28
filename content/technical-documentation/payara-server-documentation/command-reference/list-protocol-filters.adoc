@@ -21,12 +21,12 @@ The `list-protocol-filters` subcommand lists the existing protocol filters. This
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-target::
+*target*:
   Restricts the listing to protocol filters for a specified target. Valid values are as follows: +
   `server`;;
     Lists the protocol filters for the default server instance. This is
@@ -41,7 +41,7 @@ target::
 [[operands]]
 == Operands
 
-protocol-name::
+*protocol-name*:
   The name of the protocol for which to list protocol filters.
 
 [[examples]]
@@ -62,9 +62,9 @@ Command list-protocol-filters executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

@@ -30,27 +30,27 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--description`::
+*`--description`*:
   Text providing descriptive details about the connector work security
   map.
-`--groupsmap`::
+*`--groupsmap`*:
   Specifies a map of the backend EIS user group to the Payara Server user group. Use a comma-separated list to specify more than one
   mapping. Use either the `--principalsmap` option or the `--groupsmap` option, but not both.
-`--principalsmap`::
+*`--principalsmap`*:
   Specifies a map of the backend EIS principal to the Payara Server principal. Use a comma-separated list to specify more than one
   mapping. Use either the `--principalsmap` option or the `--groupsmap` option, but not both.
-`--raname`::
+*`--raname`*:
   Indicates the connector module name, which is the name of the resource adapter.
 
 [[operands]]
 == Operands
 
-mapname::
+*mapname*:
   The name of the work security map to be created.
 
 [[examples]]
@@ -84,9 +84,9 @@ Command create-connector-work-security-map executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

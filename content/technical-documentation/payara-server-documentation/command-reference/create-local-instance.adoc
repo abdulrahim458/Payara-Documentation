@@ -42,15 +42,15 @@ A Payara Server instance requires a reference to the following items:
 
 Each Payara Server instance is one of the following types of instance:
 
-Standalone instance::
+*Standalone instance*:
 A standalone instance does not share its configuration with any other instances or clusters. A standalone instance is created if either of the following conditions is met: +
 * No configuration or cluster is specified in the command to create the instance.
 * A configuration that is not referenced by any other instances or clusters is specified in the command to create the instance.
 +
 When no configuration or cluster is specified, a copy of the `default-config` configuration is created for the instance. The name of this configuration is instance-name`-config`, where instance-name represents the name of an unclustered server instance.
-Shared instance::
+*Shared instance*:
 A shared instance shares its configuration with other instances or clusters. A shared instance is created if a configuration that is referenced by other instances or clusters is specified in the command to create the instance.
-Clustered instance::
+*Clustered instance*:
 A clustered instance inherits its configuration from the cluster to which the instance belongs and shares its configuration with other instances in the cluster. A clustered instance is created if a cluster is specified in the command to create the instance.
 +
 Any instance that is not part of a cluster is considered an unclustered server instance. Therefore, standalone instances and shared instances are unclustered server instances.
@@ -64,31 +64,31 @@ When creating an instance, the subcommand retrieves the files that are required 
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--node`::
+*`--node`*:
 The name of the node that defines the host where the instance is to be created. The node must be specified only if more than one node exists in the directory where nodes are stored. Otherwise, the node may be omitted. If a node is specified, the node must exist. If no node is specified, the behavior of the subcommand depends on the number of existing nodes in the directory where nodes are stored:
 +
 * If no nodes exist, the subcommand creates a node for the instance.
 The name of the node is the name of the host on which the subcommand is run.
 * If only one node exists, the subcommand creates a reference to the existing node for the instance.
 * If two or more nodes exist, an error occurs.
-`--nodedir`::
+*`--nodedir`*:
 The path to the directory in which the files for instance's node is to be stored. The default is as-install`/nodes`.
-`--config`::
+*`--config`*:
   Specifies the named configuration that the instance references. The configuration must exist and must not be named `default-config` or `server-config`. Specifying the `--config` option creates a shared instance. The `--config` option and the `--cluster` option are mutually exclusive. If both options are omitted, a standalone instance is created.
-`--cluster`::
+*`--cluster`*:
   Specifies the cluster from which the instance inherits its configuration. Specifying the `--cluster` option creates a clustered instance. The `--config` option and the `--cluster` option are mutually exclusive. If both options are omitted, a standalone instance is created.
-`--lbenabled`::
+*`--lbenabled`*:
   Specifies whether the instance is enabled for load balancing. Possible values are as follows: +
   `true`;;
     The instance is enabled for load balancing (default). When an instance is enabled for load balancing, a load balancer sends requests to the instance.
   `false`;;
     The instance is disabled for load balancing. When an instance is disabled for load balancing, a load balancer does not send requests to the instance.
-`--portbase`::
+*`--portbase`*:
 Determines the number with which the port assignment should start. An instance uses a certain number of ports that are statically assigned. The `portbase` value determines where the assignment should start. The values for the ports are calculated as follows: +
 * Administration port: `portbase + 48`
 * HTTP listener port: `portbase + 80`
@@ -102,17 +102,17 @@ Determines the number with which the port assignment should start. An instance u
 * Felix shell service port for OSGi module management: `portbase + 66`
 +
 When the `--portbase` option is specified, the output of this subcommand includes a complete list of used ports.
-`--checkports`::
+*`--checkports`*:
   Specifies whether to check for the availability of the administration, HTTP, JMS, JMX, and IIOP ports. The default value is `true`.
-`--savemasterpassword`::
+*`--savemasterpassword`*:
   Setting this option to `true` allows the master password to be written to the file system. If the master password is written to the file system, the instance can be started without the need to prompt for the password. If this option is `true`, the `--usemasterpassword` option is also true, regardless of the value that is specified on the command line. Because writing the master password to the file system is an insecure practice, the default is `false`. +
   The master-password file for an instance is saved in the node directory, not the domain directory. Therefore, this option is required only for the first instance that is created for each node in a domain.
-`--masterpasswordlocation`::
+*`--masterpasswordlocation`*:
 Only applies if the `--savemasterpassword` parameter is set to true.
 This parameter receives an absolute filepath that the master password
 will be saved to. +
 If this parameter is omitted, the default location will be used.
-`--usemasterpassword`::
+*`--usemasterpassword`*:
   Specifies whether the key store is encrypted with a master password that is built into the system or a user-defined master password. +
   If `false` (default), the keystore is encrypted with a well-known
   password that is built into the system. Encrypting the keystore with a password that is built into the system provides no additional security. +
@@ -121,7 +121,7 @@ If this parameter is omitted, the default location will be used.
   xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]utility. +
   If the `--savemasterpassword` option is `true`, this option is also true, regardless of the value that is specified on the command line. +
   The master password must be the same for all instances in a domain.
-`--systemproperties`::
+*`--systemproperties`*:
   Defines system properties for the instance. These properties override property definitions for port settings in the instance's
   configuration. Predefined port settings must be overridden if, for example, two clustered instances reside on the same host. In this situation, port settings for one instance must be overridden because
   both instances share the same configuration. +
@@ -147,7 +147,7 @@ If this parameter is omitted, the default location will be used.
     This property specifies the port number on which the JMX connector listens. Valid values are 1-65535. On UNIX, creating sockets that listen on ports 1-1024 requires superuser privileges.
   `OSGI_SHELL_TELNET_PORT`;;
     This property specifies the port number of the port that is used for connections to the Apache Felix Remote Shell (`http://felix.apache.org/site/apache-felix-remote-shell.html`). This shell uses the Felix shell service to interact with the OSGi module management subsystem. Valid values are 1-65535. On UNIX, creating sockets that listen on ports 1-1024 requires superuser privileges.
-`--dataGridStartPort`::
+*`--dataGridStartPort`*:
 Sets Data Grid (Hazelcast) instance's starting port.
 +
 If set to `0` the Domain wide start port will be used instead.
@@ -157,7 +157,7 @@ The default value is `0`.
 [[operands]]
 == Operands
 
-instance-name::
+*instance-name*:
 The name of the instance that is being created.
 +
 The name must meet the following requirements:
@@ -254,9 +254,9 @@ Command create-local-instance executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

@@ -23,19 +23,19 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--context`::
+*`--context`*:
   The name of the JNDI context or subcontext. If context is not specified, all entries in the naming service are returned. If context
   (such as `ejb`) is specified, all those entries are returned.
 
 [[operands]]
 == Operands
 
-target::
+*target*:
   This operand specifies the JNDI tree to browse. +
   Possible values are as follows: +
   `server`;;
@@ -69,9 +69,9 @@ Command list-jndi-entries executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

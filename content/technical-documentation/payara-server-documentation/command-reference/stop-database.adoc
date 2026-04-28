@@ -24,17 +24,17 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--dbuser`::
+*`--dbuser`*:
   The username of the Java DB user that is to stop the server process.
   If this option is omitted, no user is specified.
-`--dbhost`::
+*`--dbhost`*:
   The host name or IP address of the Java DB server process. The default is the IP address 0.0.0.0, which denotes all network interfaces on the host where you run the `stop-database` subcommand.
-`--dbport`::
+*`--dbport`*:
   The port number where the H2 database server listens for client connections.
 
 [[examples]]
@@ -58,9 +58,9 @@ The exit status applies to errors in executing the `asadmin` utility. For inform
 
 If you did not specify `--dbhome`, the value of `H2_INSTALL` defaults to `as-install/h2`.
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

@@ -29,13 +29,13 @@ TIP: Make sure that the password aliases `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACC
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--target`::
+*`--target`*:
 Specifies the target where the configuration source resides. +
 Valid values are as follows: +
 `server`;;
@@ -47,25 +47,25 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-`--region-name`::
+*`--region-name`*:
 The regional location of your DynamoDB service.
 
-`--table-name`::
+*`--table-name`*:
 Name of the table in the database.
 
-`--key-column-name`::
+*`--key-column-name`*:
 Name of the column containing the key.
 
-`--value-column-name`::
+*`--value-column-name`*:
 Name of the column containing the value.
 
-`--limit`::
+*`--limit`*:
 The maximum number of items to retrieves from the database table. The default value is 100.
 
-`--dynamic`::
+*`--dynamic`*:
 Configure the config source dynamically, which will not require a restart.
 
-`--enabled`::
+*`--enabled`*:
 Enables or disables the config source.
 
 [[examples]]
@@ -83,9 +83,9 @@ asadmin> set-dynamodb-config-source-configuration --enabled true --dynamic true 
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

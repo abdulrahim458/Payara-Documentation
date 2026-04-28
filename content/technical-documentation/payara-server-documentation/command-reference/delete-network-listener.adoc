@@ -21,12 +21,12 @@ The `delete-network-listener` subcommand removes the specified network listener.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Deletes the network listener only from the specified target. Valid values are as follows: +
   `server`;;
     Deletes the network listener from the default server instance. This is the default value.
@@ -41,7 +41,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-listener-name::
+*listener-name*:
   The name of the network listener to be deleted.
 
 [[examples]]
@@ -61,9 +61,9 @@ Command delete-network-listener executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

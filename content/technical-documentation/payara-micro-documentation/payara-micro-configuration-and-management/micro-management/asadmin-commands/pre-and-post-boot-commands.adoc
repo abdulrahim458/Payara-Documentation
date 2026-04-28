@@ -47,9 +47,9 @@ set configs.config.server-config.network-config.protocols.protocol.http-listener
 
 When running Payara Micro from the command line, use appropriate command file options to specify the script file locations and the moment in the boot lifecycle when they should be executed:
 
-`--prebootcommandfile`:: provides a file of asadmin commands to run before booting the server (only some commands work at this point)
-`--postbootcommandfile`:: provides a file of asadmin commands to run after booting the server
-`--postdeploycommandfile`:: provides a file of asadmin commands to run after all deployments have completed
+*`--prebootcommandfile`*: provides a file of asadmin commands to run before booting the server (only some commands work at this point)
+*`--postbootcommandfile`*: provides a file of asadmin commands to run after booting the server
+*`--postdeploycommandfile`*: provides a file of asadmin commands to run after all deployments have completed
 
 For example:
 

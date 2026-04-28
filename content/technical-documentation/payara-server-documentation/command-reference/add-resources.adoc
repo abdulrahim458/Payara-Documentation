@@ -29,12 +29,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target for which you are creating the resources. +
   Valid values are as follows: +
   `server`;;
@@ -45,7 +45,7 @@ asadmin-options::
     Creates the resources for every server instance in the cluster.
   instance-name;;
     Creates the resources for a particular Payara Server instance.
-`--upload`::
+*`--upload`*:
   Specifies whether the subcommand uploads the file to the DAS. In most situations, this option can be omitted. +
   Valid values are as follows: +
   `false`;;
@@ -60,7 +60,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-xml-file-name::
+*xml-file-name*:
   The path to the XML file that contains the resources that are to be created. You can specify an absolute path, only the file name, or a relative path. +
   * If you specify an absolute path, the XML file can be anywhere.
   * If you specify only the file name, the XML file must reside in the domain-dir`/config` directory on the DAS host. This requirement must be met even if you run the subcommand from another host.
@@ -115,9 +115,9 @@ Command add-resources executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

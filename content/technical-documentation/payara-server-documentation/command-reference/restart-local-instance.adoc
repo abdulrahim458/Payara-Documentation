@@ -40,16 +40,16 @@ This subcommand is supported in local mode. However, to synchronize the instance
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--nodedir`::
+*`--nodedir`*:
   Specifies the directory that contains the instance's node directory. The instance's files are stored in the instance's node directory. The default is as-install`/nodes`.
-`--node`::
+*`--node`*:
   Specifies the node on which the instance resides. This option may be omitted only if the directory that the `--nodedir` option specifies contains only one node directory. Otherwise, this option is required.
-`--debug`::
+*`--debug`*:
   Specifies whether the instance is restarted with http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java Platform Debugger Architecture (JPDA)]
   (http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html) debugging enabled. +
   Possible values are as follows: +
@@ -58,14 +58,14 @@ asadmin-options::
   `false`;;
     The instance is restarted with JPDA debugging disabled (default). +
   The default is the current setting of this option for the instance that is being restarted.
-`--force`::
+*`--force`*:
   Specifies whether the instance is forcibly stopped immediately before it is restarted. +
   Possible values are as follows: +
   `true`;;
     The instance is forcibly stopped immediately (default).
   `false`;;
     The subcommand waits until all threads that are associated with the instance are exited before stopping the instance.
-`--kill`::
+*`--kill`*:
   Specifies whether the instance is killed before it is restarted by using functionality of the operating system to terminate the instance process. +
   Possible values are as follows: +
   `false`;;
@@ -76,7 +76,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-instance-name::
+*instance-name*:
   The name of the Payara Server instance to restart. If the instance is not running, the subcommand displays a warning message and attempts to start the instance.
 
 [[examples]]
@@ -95,9 +95,9 @@ Command restart-local-instance executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

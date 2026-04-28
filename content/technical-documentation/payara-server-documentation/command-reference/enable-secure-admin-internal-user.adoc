@@ -51,18 +51,18 @@ If you set up more than one secure admin internal user, you should not make any 
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--passwordalias`::
+*`--passwordalias`*:
   The password alias for the user that Payara Server should use for internally authenticating and authorizing the DAS to instances and the instances to the DAS.
 
 [[operands]]
 == Operands
 
-admin-username::
+*admin-username*:
   The admin username that Payara Server should use for internally authenticating and authorizing the DAS to instances and the instances to the DAS.
 
 [[examples]]
@@ -82,9 +82,9 @@ newAdminUsername
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

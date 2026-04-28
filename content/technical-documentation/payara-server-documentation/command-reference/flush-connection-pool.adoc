@@ -35,20 +35,20 @@ The `jndi-name` for application-scoped-resources or module-scoped-resources are 
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--appname`::
+*`--appname`*:
   Name of the application in which the application scoped resource is defined.
-`--modulename`::
+*`--modulename`*:
   Name of the module in which the module scoped resource is defined.
 
 [[operands]]
 == Operands
 
-pool_name::
+*pool_name*:
   Name of the connection pool to be reinitialized.
 
 [[flushing-a-connection-pool]]
@@ -65,9 +65,9 @@ Command flush-connection-pool executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

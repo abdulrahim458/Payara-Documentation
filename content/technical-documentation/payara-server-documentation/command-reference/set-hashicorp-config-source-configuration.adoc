@@ -28,25 +28,25 @@ Make sure that the password aliases `HASHICORP_VAULT_TOKEN` is registered.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--api-version`::
+*`--api-version`*:
 KV Secrets Engine API version.
 
-`--secrets-engine-path`::
+*`--secrets-engine-path`*:
 The path where the KV secrets engine is enabled.
 
-`--secrets-path`::
+*`--secrets-path`*:
 The path where your secrets are stored.
 
-`--vault-address`::
+*`--vault-address`*:
 Vault's address represented as URL and port. For example, "http://127.0.0.1:8200".
 
-`--target`::
+*`--target`*:
 Specifies the target where the configuration source resides. +
 Valid values are as follows: +
 `server`;;
@@ -58,10 +58,10 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-`--dynamic`::
+*`--dynamic`*:
 Configure the config source dynamically, which will not require a restart.
 
-`--enabled`::
+*`--enabled`*:
 Enables or disables the config source.
 
 [[examples]]
@@ -79,9 +79,9 @@ asadmin set-hashicorp-config-source-configuration --enabled true --dynamic true 
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -20,13 +20,13 @@ When you install Payara Server or create a new domain, secure admin is disabled 
 
 The following subcommands enable and disable secure admin:
 
-`enable-secure-admin`:: The `enable-secure-admin` subcommand turns on secure admin. Payara Server uses SSL/TLS encryption to protect subsequent administrative traffic and will ALSO accept remote administrative connections. Enabling secure admin affects the entire domain, including the DAS and all of its instances. The DAS must be running to run `enable-secure-admin`.
+*`enable-secure-admin`*: The `enable-secure-admin` subcommand turns on secure admin. Payara Server uses SSL/TLS encryption to protect subsequent administrative traffic and will ALSO accept remote administrative connections. Enabling secure admin affects the entire domain, including the DAS and all of its instances. The DAS must be running to run `enable-secure-admin`.
 +
 You must restart the DAS immediately after enabling secure admin, and then start any instances you want to run.
 +
 CAUTION: The `enable-secure-admin` subcommand fails if ANY administrator users have an empty password credential assigned. Before retrying the command, ALL administrator users should have non-empty passwords assigned.
 
-`disable-secure-admin`:: The `disable-secure-admin` subcommand turns off secure admin. Payara Server no longer encrypts administrative messages and will no longer accept remote administration connections. Disabling secure admin affects the entire domain, including the DAS and all instances. The DAS must be running to run `disable-secure-admin`.
+*`disable-secure-admin`*: The `disable-secure-admin` subcommand turns off secure admin. Payara Server no longer encrypts administrative messages and will no longer accept remote administration connections. Disabling secure admin affects the entire domain, including the DAS and all instances. The DAS must be running to run `disable-secure-admin`.
 +
 You must restart the DAS immediately after disabling secure admin, and then start any instances you want to run.
 +

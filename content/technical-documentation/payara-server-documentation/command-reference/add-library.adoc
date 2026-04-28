@@ -6,7 +6,7 @@ Adds one or more library JAR files to Payara Server
 [[synopsis]]
 == Synopsis
 
-ifeval::["{page-site-edition}" == "community"]
+*ifeval*: ["{page-site-edition}" == "community"]
 [source,shell]
 ----
 asadmin [asadmin-options]
@@ -16,9 +16,9 @@ add-library
 [--upload={false|true}]
 [library-file-path ...]
 ----
-endif::[]
+*endif*: []
 
-ifeval::["{page-site-edition}" == "enterprise"]
+*ifeval*: ["{page-site-edition}" == "enterprise"]
 [source,shell]
 ----
 asadmin [asadmin-options]
@@ -28,7 +28,7 @@ add-library
 [--upload={false|true}]
 [library-file-path ...]
 ----
-endif::[]
+*endif*: []
 
 [[description]]
 == Description
@@ -48,14 +48,14 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these  options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--type`::
+*`--type`*:
 Specifies the library type and the Payara Server directory to which the library is added. Valid values are as follows:
 +
 `common`;;
@@ -65,16 +65,16 @@ Adds the library files to the Java optional package directory, `domain-dir/lib/e
 `app`;;
 Adds the library files to the application-specific class loader directory, `domain-dir/lib/applibs`.
 
-ifeval::["{page-site-edition}" == "community"]
+*ifeval*: ["{page-site-edition}" == "community"]
 `war`;;
 Adds the library files to the war-packaged class loader directory, `domain-dir/lib/warlibs`.
-endif::[]
+*endif*: []
 
 +
 For more information about these directories, see
 xref:technical-documentation/application-development/class-loaders.adoc#class-loaders[Class Loaders] in the Payara Server Application Development section.
 
-`--upload`::
+*`--upload`*:
 Specifies whether the subcommand uploads the file to the DAS. In most situations, this option can be omitted.
 +
 NOTE: If a directory filepath is specified, this option is ignored.
@@ -96,7 +96,7 @@ The default value depends on whether the DAS is on the host where the subcommand
 [[operands]]
 == Operands
 
-library-file-path::
+*library-file-path*:
 The paths to the archive files that contain the libraries that are to be added. You can specify an absolute path or a relative path. +
 If the `--upload` option is set to `true`, this is the path to the file on the local client machine. If the `--upload` option is set to `false`, this is the path to the file on the server machine.
 
@@ -116,9 +116,9 @@ Command add-library executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

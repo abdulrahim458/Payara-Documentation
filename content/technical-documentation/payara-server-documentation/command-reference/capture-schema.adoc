@@ -30,24 +30,24 @@ grant the database user running the `capture-schema` command the
 [[options]]
 == Options
 
-`-username`::
+*`-username`*:
   user name for authenticating access to a database.
-`-password`::
+*`-password`*:
   password for accessing the selected database.
-`-dburl`::
+*`-dburl`*:
   JDBC URL required by the driver for accessing a database.
-`-driver`::
+*`-driver`*:
   JDBC driver classname in your `CLASSPATH`.
-`-schemaname`::
+*`-schemaname`*:
   name of the user schema being captured. If not specified, the default
   will capture metadata for all tables from all the schemas accessible to this user. +
   Specifying this parameter is highly recommended. Without this option if more than one schema is accessible to this user, more than one
   table with the same name may be captured, which will cause problems when mapping CMP fields to tables. +
   The specified schema name must be uppercase.
-`-table`::
+*`-table`*:
   name of a table; multiple table names can be specified. If no table is specified, all the tables in the database or named schema are captured. +
   The specified table name or names are case sensitive. Be sure to match the case of the previously created table names.
-`-out`::
+*`-out`*:
   name of the output file. This option is required. If the specified output file does not contain the .dbschema suffix, it will be appended to the filename.
 
 [[examples]]

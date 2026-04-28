@@ -26,29 +26,29 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target for which you are creating the application reference. Valid values are +
   * `server` - Specifies the default server instance as the target for creating the application reference. `server` is the name of the default server instance and
     is the default value for this option.
   * cluster_name - Specifies a particular cluster as the target for creating the application reference.
   * instance_name - Specifies a particular stand-alone server instance as the target for creating the application reference.
-`--virtualservers`::
+*`--virtualservers`*:
   Specifies a comma-separated list of virtual server IDs on which to deploy. This option applies only to Web modules (either standalone or in a Java EE application).
   If this option is not specified, the application is deployed to all virtual servers except the administrative server, `__asadmin`.
-`--enabled`::
+*`--enabled`*:
   Indicates whether the application should be enabled (that is, loaded). This value will take effect only if the application is enabled at the global level. The default is `true`.
-`--lbenabled`::
+*`--lbenabled`*:
   Controls whether the deployed application is available for load balancing. The default is true.
 
 [[operands]]
 == Operands
 
-reference_name::
+*reference_name*:
   The name of the application or module, which can be a Java EE application, Web module, EJB module, connector module, application client module, or lifecycle module. +
   The name can include an optional version identifier, which follows the name and is separated from the name by a colon (`:`). The version identifier must begin with a letter
   or number. It can contain alphanumeric characters plus underscore (`_`), dash (`-`), and period (`.`) characters. If the `--enabled` option is set to false, you can create
@@ -72,9 +72,9 @@ Command create-application-ref executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 [[sthref130]]

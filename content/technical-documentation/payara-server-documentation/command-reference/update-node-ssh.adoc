@@ -37,30 +37,30 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--nodehost`::
+*`--nodehost`*:
   The name of the host that the node is to represent after the node is updated.
-`--installdir`::
+*`--installdir`*:
   The full path to the parent of the base installation directory of the Payara Server software on the host, for example, `/export/payara`.
-`--nodedir`::
+*`--nodedir`*:
   The path to the directory that is to contain Payara Server instances that are created on the node. If a relative path is
   specified, the path is relative to the as-install directory, where as-install is the base installation directory of the Payara Server software on the host.
-`--sshport`::
+*`--sshport`*:
   The port to use for SSH connections to this node's host. The default depends on whether this subcommand is run to enable SSH communication for the node: +
   * If the node is already enabled for communication over SSH, the default is to leave the port unchanged.
   * If this subcommand is run to enable SSH communication for the node, the default port is `22`. +
   If the `--nodehost` is set to `localhost`, the `--sshport` option is ignored.
-`--sshuser`::
+*`--sshuser`*:
   The user on this node's host that is to run the process for connecting to the host through SSH. The default depends on whether this
   subcommand is run to enable SSH communication for the node: +
   * If the node is already enabled for communication over SSH, the default is to leave the user unchanged.
   * If this subcommand is run to enable SSH communication for the node, the default is the user that is running the DAS process. +
   If the `--nodehost` option is set to `localhost`, the `--sshuser` option is ignored.
-`--sshkeyfile`::
+*`--sshkeyfile`*:
   The absolute path to the SSH private key file for user that the `--sshuser` option specifies. This file is used for authentication to the `sshd` daemon on the node's host. +
 
 NOTE: Payara Server also supports password authentication through the `AS_ADMIN_SSHPASSWORD` entry in the password file. The password file is specified in the `--paswordfile` option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] utility.
@@ -74,7 +74,7 @@ The default depends on whether this subcommand is run to enable SSH communicatio
   . `id_rsa`
   . `id_dsa`
   . `identity`
-`--force`::
+*`--force`*:
   Specifies whether the node is updated even if validation of the node's parameters fails. To validate a node's parameters, the DAS must be
   able to contact the node's host through SSH. Possible values are as follows: +
   `false`;;
@@ -85,7 +85,7 @@ The default depends on whether this subcommand is run to enable SSH communicatio
 [[operands]]
 == Operands
 
-node-name::
+*node-name*:
   The name of the node to update. The node must exist. Otherwise, an error occurs.
 
 [[examples]]
@@ -119,9 +119,9 @@ Command update-node-ssh executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

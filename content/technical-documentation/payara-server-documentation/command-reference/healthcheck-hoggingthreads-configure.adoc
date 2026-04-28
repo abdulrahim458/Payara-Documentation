@@ -31,12 +31,12 @@ Configures the *Hogging Threads* checker service settings. The checker  will det
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are configuring the hogging threads checker service. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -44,24 +44,24 @@ cluster_name;;
 Applies to every server instance in the cluster.
 instance_name;;
 Applies to a specified server instance.
-`--enabled`::
+*`--enabled`*:
 Defaults to `false`. Enables or disables the healthcheck service
-`--dynamic`::
+*`--dynamic`*:
 Defaults to `false`. When set to `true`, applies the changes without a server restart.
-`--name`::
+*`--name`*:
 Unused option.
-`--checkername`::
+*`--checkername`*:
 Unused option.
 
-`--time`::
+*`--time`*:
 Defaults to `1`. The amount of time units that the service will use to periodically monitor the metric.
-`unit`::
+*`unit`*:
 Defaults to `MINUTES`. The time unit to set the frequency of the metric monitoring.
 +
 NOTE: Must correspond to a valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[`java.util.concurrent.TimeUnit`]
-`--threshold-percentage`::
+*`--threshold-percentage`*:
 Defaults to `95`. The threshold value that this metric will be compared to mark threads as hogging the CPU.
-`--retry-count`::
+*`--retry-count`*:
 Defaults to `3`. The number of retries that the checker service will execute in order to identify a hogging thread.
 
 [[examples]]
@@ -83,9 +83,9 @@ asadmin healthcheck-hoggingthreads-configure --dynamic=true --threshold-percenta
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

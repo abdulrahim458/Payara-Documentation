@@ -31,12 +31,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target for which you are showing JVM machine statistics. +
   Valid values are as follows: +
   `server`;;
@@ -47,7 +47,7 @@ asadmin-options::
     Specifies a cluster.
   configuration-name;;
     Specifies a named configuration.
-`--type`::
+*`--type`*:
   The type of report that is to be generated. Default is `summary`. +
   `summary`;;
     Displays summary information about the threads, classes, and memory (default).
@@ -117,9 +117,9 @@ Command generate-jvm-report executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

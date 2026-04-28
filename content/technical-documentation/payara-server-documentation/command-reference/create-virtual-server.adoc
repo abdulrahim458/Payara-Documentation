@@ -32,28 +32,28 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--hosts`::
+*`--hosts`*:
   A comma-separated (,) list of values allowed in the host request header to select the current virtual server. Each virtual server that
   is configured to the same connection group must have a unique host for that group.
-`--httplisteners`::
+*`--httplisteners`*:
   A comma-separated (,) list of HTTP listener IDs. Required only for a virtual server that is not the default virtual server. HTTP listeners
   are converted to network listeners. This option is deprecated but maintained for backward compatibility. Use `--networklisteners`
   instead. If `--networklisteners` is used, this option is ignored.
-`--networklisteners`::
+*`--networklisteners`*:
   A comma-separated (,) list of network listener IDs. Required only for a virtual server that is not the default virtual server.
-`--defaultwebmodule`::
+*`--defaultwebmodule`*:
   The standalone web module associated with this virtual server by default.
-`--state`::
+*`--state`*:
   Determines whether a virtual server is active (`on`) or inactive (`off` or disabled). Default is `on`. When inactive, the virtual server does not service requests.
-`--logfile`::
+*`--logfile`*:
   Name of the file where log entries for this virtual server are to be written. By default, this is the server log. The file and directory in
   which the access log is kept must be writable by the user account under which the server runs.
-`--property`::
+*`--property`*:
   Optional property name/value pairs for configuring the virtual server. The following properties are available: +
   `sso-max-inactive-seconds`;;
     Specifies the number of seconds after which a user's single sign-on record becomes eligible for purging if no client activity is received. Since single sign-on applies across several applications
@@ -219,7 +219,7 @@ You can set this property for a specific web application. For  details, see xref
     server. Specify an empty string to disable the default error page mechanism for this virtual server.
   `cacheTTL`;;
     Specifies the time to live (TTL), in milliseconds, for the virtual server cache used when serving files. Defaults to 5000.
-`--target`::
+*`--target`*:
   Creates the virtual server only on the specified target. Valid values are as follows: +
   `server`;;
     Creates the virtual server on the default server instance. This is the default value.
@@ -233,7 +233,7 @@ You can set this property for a specific web application. For  details, see xref
 [[operands]]
 == Operands
 
-virtual-server-id::
+*virtual-server-id*:
   Identifies the unique ID for the virtual server to be created. This ID cannot begin with a number.
 
 [[examples]]
@@ -253,9 +253,9 @@ Command create-virtual-server executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

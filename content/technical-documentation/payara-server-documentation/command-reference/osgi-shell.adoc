@@ -32,17 +32,17 @@ server instance whose shell is being accessed must be running.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--file`::
-`-f`::
+*`--file`*:
+*`-f`*:
   Reads the commands in the specified file.
-`--printprompt`::
+*`--printprompt`*:
   Controls printing of the shell prompt. The default value is `true`, which means the shell prompt is displayed.
-`--encoding`::
+*`--encoding`*:
   Specifies the character set for the file to be decoded. By default, the system character set is used.
 
 [[examples]]
@@ -105,9 +105,9 @@ gogo$
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

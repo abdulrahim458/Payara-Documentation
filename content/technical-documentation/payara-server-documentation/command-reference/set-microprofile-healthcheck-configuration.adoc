@@ -27,24 +27,24 @@ IMPORTANT: Changes made with this command will only be applied when the server o
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--enabled`::
+*`--enabled`*:
 Defaults to true. Enables or disables the service.
 
-`--securityenabled`::
+*`--securityenabled`*:
 Defaults to false. Whether to secure access to the health-check endpoint is enabled.
 
-`--roles`::
+*`--roles`*:
 Defaults to `microprofile`. If defined, the endpoint will be assigned to a list of the role specified as a comma-separated.
 
-`--endpoint`::
+*`--endpoint`*:
 Defaults to health. The context root used to expose the health checks endpoint.
 
-`--target`::
+*`--target`*:
 Specifies the target of this command. +
 Valid values are as follows: +
 `server`;;
@@ -56,7 +56,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-`--virtualservers`::
+*`--virtualservers`*:
 If defined, the `/health`` endpoint will be assigned to the list of virtual servers specified as a comma-separated list of names.
 +
 Otherwise, the endpoint will be assigned to all virtual servers available.
@@ -82,9 +82,9 @@ asadmin set-microprofile-healthcheck-configuration \
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -130,14 +130,14 @@ The request tracing messages are in JSON format, so can be parsed by log parsing
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--first`::
+*`--first`*:
 Defaults to `false`. A limit for the number of Request Tracing messages to return in the output.
-`--historicTraces`::
+*`--historicTraces`*:
 Defaults to `true`. Whether to get the traces from the historic trace store or not.
 
 [[examples]]
@@ -164,9 +164,9 @@ Occurring Time            Elapsed Time  Traced Message
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

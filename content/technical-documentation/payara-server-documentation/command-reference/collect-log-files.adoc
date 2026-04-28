@@ -25,12 +25,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--retrieve`::
+*`--retrieve`*:
   Specifies whether the ZIP archive is created in a directory other than the default directory. +
   By default the ZIP archive is created in the `domain-dir/collected-logs` directory. The ZIP file names are constructed from the specified target and timestamp, as follows:
 +
@@ -43,7 +43,7 @@ log_yyyy-mm-dd_hh-min-sec.zip
     The ZIP archive will be created in the default directory. If omitted, the `--retrieve` option defaults to `false`.
 `true`;;
     The ZIP archive will be created in the directory that the retrievefilepath operand specifies. If retrievefilepath is omitted, the ZIP archive will be created in the default directory.
-`--target`::
+*`--target`*:
   Specifies the target for which log files will be collected. +
   Possible values are as follows: +
 `server`;;
@@ -56,7 +56,7 @@ log_yyyy-mm-dd_hh-min-sec.zip
 [[operands]]
 == Operands
 
-retrievefilepath::
+*retrievefilepath*:
   The name of the directory in which the ZIP archive will be created. If this operand is omitted, the ZIP archive will be created in the
   default directory. If the `--retrieve` option is `false`, this operand is ignored.
 
@@ -108,9 +108,9 @@ Command collect-log-files executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

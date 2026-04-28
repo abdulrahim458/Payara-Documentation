@@ -125,9 +125,9 @@ The `bundle` goal always searches for domain configuration files in `src/main/re
 
 Additionally, boot command scripts will be included if they exist in `src/main/resources` and transferred to the `MICRO-INF` directory of the Uber jar artifact.
 
-`pre-boot-commands.txt`:: Provides a file of asadmin commands to run before booting the server.
-`post-boot-commands.txt`:: Provides a file of asadmin commands to run after booting the server.
-`post-deploy-commands.txt`:: Provides a file of asadmin commands to run after all deployments have completed.
+*`pre-boot-commands.txt`*: Provides a file of asadmin commands to run before booting the server.
+*`post-boot-commands.txt`*: Provides a file of asadmin commands to run after booting the server.
+*`post-deploy-commands.txt`*: Provides a file of asadmin commands to run after all deployments have completed.
 
 [[start-goal]]
 === `start`

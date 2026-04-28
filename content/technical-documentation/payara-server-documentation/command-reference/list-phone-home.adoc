@@ -34,9 +34,9 @@ Command list-phone-home executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 command executed successfully
-1::
+*1*:
 error in executing the command
 
 *See Also*

@@ -25,12 +25,12 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target for which the operation is to be performed. Valid values are as follows: +
   `server`;;
     Pings the JMS service for the default server instance. This is the default value
@@ -59,9 +59,9 @@ Command jms-ping executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

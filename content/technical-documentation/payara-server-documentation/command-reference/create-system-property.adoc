@@ -29,18 +29,18 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 The target on which you are creating the system properties.
 
 [[operands]]
 == Operands
 
-target::
+*target*:
 The valid targets for this subcommand are instance, cluster, configuration, domain, and server. Server is the default option. Valid values are: +
 `server`;;
 Creates the property on the default server instance. This is the default value.
@@ -52,7 +52,7 @@ cluster_name;;
 Creates the property on all server instances in the specified cluster.
 instance_name;;
 Creates the property on a specified server instance.
-name=value::
+*name=value*:
 The name value pair of the system property to add to the specified target.
 If a system property was already defined, it is updated with the new value.
 
@@ -72,9 +72,9 @@ Command create-system-property executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

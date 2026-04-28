@@ -26,24 +26,24 @@ Use the `delete-http-lb-ref` subcommand to remove a reference to a cluster or st
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--config`::
+*`--config`*:
   Specifies which load balancer configuration to delete cluster and server instance references from. +
   Specify either a load balancer configuration or a load balancer. Specifying both results in an error.
-`--lbname`::
+*`--lbname`*:
   Specifies the load balancer to delete cluster and server instance references from. +
   Specify either a load balancer configuration or a load balancer. Specifying both results in an error.
-`--force`::
+*`--force`*:
   If `force` is set to true, then the references are deleted even if there are currently enabled applications or instances. The default is false.
 
 [[operands]]
 == Operands
 
-target::
+*target*:
   Specifies which cluster or instance to remove from the load balancer. Valid values are: +
   * cluster_name - The name of a target cluster.
   * instance_name - The name of a target server instance.
@@ -66,9 +66,9 @@ Command delete-http-lb-ref executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

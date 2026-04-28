@@ -21,12 +21,12 @@ The `delete-http` subcommand removes the specified HTTP parameter set from a pro
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Deletes the HTTP parameter set only from the specified target. Valid values are as follows: +
   `server`;;
     Deletes the HTTP parameter set from the default server instance. This is the default value.
@@ -40,7 +40,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-protocol-name::
+*protocol-name*:
   The name of the protocol from which to delete the HTTP parameter set.
 
 [[examples]]
@@ -59,9 +59,9 @@ Command delete-http executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

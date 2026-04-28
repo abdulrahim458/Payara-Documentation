@@ -23,12 +23,12 @@ stored in the `config` element in `domain.xml`.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target for which to list the batch runtime configuration. Valid values are as follows: +
   `server`;;
     Lists the batch runtime configuration for the default server instance `server` and is the default value.
@@ -36,8 +36,8 @@ asadmin-options::
     Lists the batch runtime configuration for every server instance in the cluster.
   instance-name;;
     Lists the batch runtime configuration for a particular server instance.
-`--output`::
-`-o`::
+*`--output`*:
+*`-o`*:
   Displays specific details about the batch runtime configuration. Use a comma-separated list to specify the details to display and their
   order. The values are case-insensitive. The `datasourcelookupname` and `executorservicelookupname` column headings are displayed by default. +
   Possible values are as follows: +
@@ -46,8 +46,8 @@ asadmin-options::
   `executorservicelookupname`;;
     The JNDI lookup name of the managed executor service used to provide threads to jobs. By default, the batch runtime uses the default
     managed executor service `concurrent/__defaultManagedExecutorService`.
-`--header`::
-`-h`::
+*`--header`*:
+*`-h`*:
   Specifies whether column headings are displayed when the `--long` option is used. The default value is `true`. To suppress the headings, set the `--header` option to `false`.
 
 [[examples]]
@@ -68,9 +68,9 @@ Command list-batch-runtime-configuration executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

@@ -54,42 +54,42 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these
   options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--archive`::
+*`--archive`*:
   The absolute path to the archive file of the Payara Server software that is to be installed. If no archive file is specified, the
   subcommand creates an archive from the installation of Payara Server software from which the subcommand is run. This
   archive is created in the home directory of the user that is running the command.
-`--create`::
+*`--create`*:
   Specifies whether the subcommand should create an archive file of the Payara Server software to install. +
   `false`;;
     No archive file is created. The subcommand installs the software from the existing archive file that the `--archive` option specifies (default).
   `true`;;
     The subcommand creates an archive file from the installation of Payara Server software from which the subcommand is run.
-`--save`::
+*`--save`*:
   Specifies whether the archive file from which the software is installed is saved after installation. +
   `false`;;
     The archive file is not saved. The subcommand deletes the file after installing the software (default).
   `true`;;
     The archive file is saved.
-`--installdir`::
+*`--installdir`*:
   The absolute path to the parent of the base installation directory where the Payara Server software is to be installed on each host,
   for example, `/export/payara6/`. If the directory does not exist, the subcommand creates the directory. +
   The user that is running this subcommand must have write access to the specified directory. Otherwise, an error occurs. +
   To overwrite an existing an installation of the Payara Server software, set the `--force` option to `true`. If the directory already
   contains an installation and the `--force` option is `false`, an error occurs. +
   The default is the parent of the base installation directory of the Payara Server software on the host where this subcommand is run.
-`--sshport`::
+*`--sshport`*:
   The port to use for SSH connections to the host where the Payara Server software is to be installed. The default is 22.
-`--sshuser`::
+*`--sshuser`*:
   The user on the host where the Payara Server software is to be installed that is to run the process for connecting through SSH to the
   host. The default is the user that is running this subcommand. To ensure that the DAS can read this user's SSH private key file, specify
   the user that is running the DAS process.
-`--sshkeyfile`::
+*`--sshkeyfile`*:
   The absolute path to the SSH private key file for user that the `--sshuser` option specifies. This file is used for authentication to
   the `sshd` daemon on the host. +
   The user that is running this subcommand must be able to reach the path to the key file and read the key file. +
@@ -97,7 +97,7 @@ asadmin-options::
   . `id_rsa`
   . `id_dsa`
   . `identity`
-`--force`::
+*`--force`*:
   Specifies whether the subcommand overwrites an existing installation of the Payara Server software in the directory that the
   `--installdir` option specifies. Possible values are as follows: +
   `false`;;
@@ -108,7 +108,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-host-list::
+*host-list*:
   A space-separated list of the names of the hosts where the Payara Server software is to be installed.
 
 [[examples]]
@@ -142,9 +142,9 @@ Command install-node-ssh executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

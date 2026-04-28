@@ -26,15 +26,15 @@ NOTE: WS-Security as provided by WSIT is in addition to existing transport-level
 
 The Simple Object Access Protocol (SOAP) layer message security providers installed with Payara Server can be used to employ username/password and X.509 certificate security tokens to authenticate and encrypt SOAP web services messages.
 
-Username Tokens:: Payara Server uses username tokens in SOAP messages to authenticate the message sender. The recipient of a message containing a username token (within embedded password) validates that the message sender is authorized to act as the user (identified in the token) by confirming that the sender knows the password of the user.
+*Username Tokens*: Payara Server uses username tokens in SOAP messages to authenticate the message sender. The recipient of a message containing a username token (within embedded password) validates that the message sender is authorized to act as the user (identified in the token) by confirming that the sender knows the password of the user.
 +
 When using a username token, a valid user database must be configured on Payara Server.
 
-Digital Signatures:: Payara Server uses XML digital signatures to bind an authentication identity to message content. Clients use digital signatures to establish their caller identity. Digital signatures are verified by the message receiver to authenticate the source of the message content (which might be different from the sender of the message.)
+*Digital Signatures*: Payara Server uses XML digital signatures to bind an authentication identity to message content. Clients use digital signatures to establish their caller identity. Digital signatures are verified by the message receiver to authenticate the source of the message content (which might be different from the sender of the message.)
 +
 When using digital signatures, valid keystore and truststore files must be configured on Payara Server.
 
-Encryption:: The purpose of encryption is to modify the data so that it can only be understood by its intended audience. This is accomplished by substituting an encrypted element for the original content. When based on public key cryptography, encryption can be used to establish the
+*Encryption*: The purpose of encryption is to modify the data so that it can only be understood by its intended audience. This is accomplished by substituting an encrypted element for the original content. When based on public key cryptography, encryption can be used to establish the
 identity of the parties who are authorized to read a message.
 +
 When using encryption, a Java Cryptography Extension (JCE) provider that supports the corresponding encryption algorithm suites must be installed.

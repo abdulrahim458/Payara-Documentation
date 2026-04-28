@@ -31,14 +31,14 @@ This command is supported in remote mode only.
 
 CAUTION: These are not the same options available for the `start-local-instance` command.
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--debug`::
+*`--debug`*:
   Specifies whether the instance is started with http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java
   Platform Debugger Architecture (JPDA)]
   debugging enabled.
@@ -50,7 +50,7 @@ Possible values are as follows:
   `false`;;
     The instance is started with JPDA debugging disabled (default).
 
-`--sync`::
+*`--sync`*:
   The type of synchronization between the DAS and the instance's file when the instance is started.
 +
 Possible values are as follows:
@@ -76,12 +76,12 @@ This value is the default.
 +
 WARNING: Using full synchronization will cause the configuration to be deleted if the DAS cannot be reached.
 
-`--timeout`::
+*`--timeout`*:
 Specifies how long to take for the instance to start in seconds. If starting the instance takes longer than this amount then this command will fail (but the instance may still continue its startup process).
 +
 The default value is `120`.
 
-`--terse`::
+*`--terse`*:
 Specifies whether information on the result is output
 +
 The default value is `false`.
@@ -89,7 +89,7 @@ The default value is `false`.
 [[operands]]
 == Operands
 
-instance-name::
+*instance-name*:
   The name of the Payara Server instance to start.
 
 [[examples]]
@@ -135,9 +135,9 @@ Command start-instance executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

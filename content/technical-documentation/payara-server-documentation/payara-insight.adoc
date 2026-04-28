@@ -102,9 +102,9 @@ The pre-configured pages are a starting point that can be changed and extended b
 
 To switch page use the left menu.
 
-image::monitoring-console/mc_menu_left.png[Page Navigation]
+*image*: monitoring-console/mc_menu_left.png[Page Navigation]
 
-image::monitoring-console/mc_menu_left-min.png[Page Navigation (minimised)]
+*image*: monitoring-console/mc_menu_left-min.png[Page Navigation (minimised)]
 
 TIP: Each page switch also updates the URL making them "bookmarkeable". URLs can be copied and shared with others to share particular pages with them.
 
@@ -122,7 +122,7 @@ Changing the column layout of a page does not change the preferred position of t
 
 By default, the graphs on a page update every 2 seconds. To control the interval use quick access on the left side menu or _General_ application settings.
 
-image::monitoring-console/mc_settings_app_general-h.png[General Application Settings]
+*image*: monitoring-console/mc_settings_app_general-h.png[General Application Settings]
 
 The interval can be paused and continued without changing the interval duration by using the _play/pause_ toggle next to the interval setting.
 
@@ -131,14 +131,14 @@ The interval can be paused and continued without changing the interval duration 
 
 To add a new page expand the left menu, click the _Add New Page_ button below the list of pages and enter a name for the new page in the dialogue.
 
-image::monitoring-console/mc_dialog_add-new-page.png[Add Page Dialog]
+*image*: monitoring-console/mc_dialog_add-new-page.png[Add Page Dialog]
 
 Usually pages are populated manually.
 Use the _Add New Widgets_ button in the right sidebar (_+_ when minimized) to populate the page and configure the added widgets.
 
 Alternatively pages can use a query to automatically populate the page with widgets for those metrics that match the query. To use a query page open the page settings and switch the _Type_ to _Query_:
 
-image::monitoring-console/mc_settings_page_general-query-h.png[Query Page Settings]
+*image*: monitoring-console/mc_settings_page_general-query-h.png[Query Page Settings]
 
 Fill in _Query Series_ and _Query Interval_ and click the _Update Now_ button.
 
@@ -152,11 +152,11 @@ Learn more about xref:#pattern-data-series[series patterns] as used by query pag
 
 To delete a page open the left sidebar and click the on the trash icon next to the page name in the list of pages you want to delete.
 
-image::monitoring-console/mc_menu_delete.png[Delete a Page]
+*image*: monitoring-console/mc_menu_delete.png[Delete a Page]
 
 Confirm the deletion.
 
-image::monitoring-console/mc_dialog_delete-page.png[Delete a Page Confirmation Dialogue]
+*image*: monitoring-console/mc_dialog_delete-page.png[Delete a Page Confirmation Dialogue]
 
 NOTE: Pages that are based on a preset cannot be deleted. They can only be reset to their preset configuration.
 
@@ -165,17 +165,17 @@ NOTE: Pages that are based on a preset cannot be deleted. They can only be reset
 
 When the configuration of a preconfigured page or any of the widgets on it was changed by the user the page can be reset by clicking the _Reset_ icon next to the page name in the expanded left side menu.
 
-image::monitoring-console/mc_menu_reset.png[Reset a Page]
+*image*: monitoring-console/mc_menu_reset.png[Reset a Page]
 
 Confirm the reset.
 
-image::monitoring-console/mc_dialog_reset-page.png[Reset a Page]
+*image*: monitoring-console/mc_dialog_reset-page.png[Reset a Page]
 
 WARNING: The reset will affect all widgets and the general page settings of the currently shown page. All changes made previously by a user will be overridden.
 
 NOTE: To reset all pages and remove all user-created pages, clear the browser's local storage of Payara InSight.
 
-image::monitoring-console/mc_sample_local-storage-chrome.png[Clear Local Storage in Chrome Browser]
+*image*: monitoring-console/mc_sample_local-storage-chrome.png[Clear Local Storage in Chrome Browser]
 
 [[page-rotation]]
 ==== Page Rotation
@@ -189,7 +189,7 @@ The duration can be adjusted by changing the text field of the _Page Rotation_ t
 
 Individual pages can be excluded from rotation by toggling the _Include In Rotation_ toggle to _No_ in the page settings.
 
-image::monitoring-console/mc_settings_page_general-h.png[Page Settings]
+*image*: monitoring-console/mc_settings_page_general-h.png[Page Settings]
 
 [[page-management]]
 ==== Page Management
@@ -206,16 +206,16 @@ The monitoring console can be used in one of three roles:
 
 The chosen role controls the behaviour and available options for the page synchronisation:
 
-__Administrator__:: This role that is meant to manage the persistent server page configuration. The _Administrator_ pushes local changes to the server to update the base configuration.
-__User__::
-__Guest__::
+*__Administrator__*: This role that is meant to manage the persistent server page configuration. The _Administrator_ pushes local changes to the server to update the base configuration.
+*__User__*:
+*__Guest__*:
 They pull the server configuration to update their local configuration with the base.
 
 The control remains with each user.
 
 The _Page Synchronisation_ dialogue shown when entering the GUI allows the user to pick the pages that should be updated (pulled).
 
-image::monitoring-console/mc_dialog_sync-pages.png[Page Synchronisation]
+*image*: monitoring-console/mc_dialog_sync-pages.png[Page Synchronisation]
 
 By default, all pages available remotely that have not been changed locally are preselected.
 
@@ -225,32 +225,32 @@ The newest version is marked with an asterisk for easier orientation.
 
 This dialogue can also be opened from the _Pages_ application settings by clicking the _Update Local..._ button for the _Page Sync_ property.
 
-image::monitoring-console/mc_settings_app_pages-h.png[Page Synchronisation Application Settings]
+*image*: monitoring-console/mc_settings_app_pages-h.png[Page Synchronisation Application Settings]
 
 __Administrators__ also find a button to _Update Server..._ pages with any changes applied to local changes. This is only needed for pages that are not using automatic updates in their page settings.
 
 This simply should give administrators different approaches to managing the configuration of shared pages. To bulk update all server pages click the _Update Server..._ button and confirm the update:
 
-image::monitoring-console/mc_dialog_push-pages.png[Push All Pages Confirmation Dialogue]
+*image*: monitoring-console/mc_dialog_push-pages.png[Push All Pages Confirmation Dialogue]
 
 To share a page that so far is not part of the persistent server configuration open the _Page_ settings and look for the _Server Sync_ property.
 
-image::monitoring-console/mc_settings_page_general-h.png[General Page Settings]
+*image*: monitoring-console/mc_settings_page_general-h.png[General Page Settings]
 
 __Users__ and __Administrators__ can both _Push_ a page to share or update the persistent server configuration or _Pull_ the server configuration to update the local page.
 __Administrators__ can also enable or disable the __automatic__ page synchronisation. When enabled any local change done by an _Administrator_ is automatically pushed to the remote configuration.
 
 Both _Push_ and _Pull_ need to be confirmed.
 
-image::monitoring-console/mc_dialog_pull-page.png[Confirm Page Pull]
-image::monitoring-console/mc_dialog_push-page.png[Confirm Page Push]
+*image*: monitoring-console/mc_dialog_pull-page.png[Confirm Page Pull]
+*image*: monitoring-console/mc_dialog_push-page.png[Confirm Page Push]
 
 [[page-export]]
 ==== Page Export
 
 Besides the managed page synchronisation which is using the persistent server configuration the local configuration can also be managed manually. To manually export pages click the _Export..._ button and select the set of pages to export in the dialogue and confirm your selection by pressing _Export_
 
-image::monitoring-console/mc_dialog_export-pages.png[Page Export Dialogue]
+*image*: monitoring-console/mc_dialog_export-pages.png[Page Export Dialogue]
 
 [[page-import]]
 ==== Page Import
@@ -259,7 +259,7 @@ To manually import pages click the _Import..._ button and select a file. The dia
 
 Select the pages that should be imported:
 
-image::monitoring-console/mc_dialog_import-pages.png[Page Import Dialogue]
+*image*: monitoring-console/mc_dialog_import-pages.png[Page Import Dialogue]
 
 WARNING: Importing a page will override the local page with the same ID (name). Any customisation made to the local page will be lost.
 
@@ -268,11 +268,11 @@ WARNING: Importing a page will override the local page with the same ID (name). 
 
 When no role is set from previous sessions the user is asked to choose a role when opening the Payara InSight application.
 
-image::monitoring-console/mc_dialog_role-selection.png[Role Selection]
+*image*: monitoring-console/mc_dialog_role-selection.png[Role Selection]
 
 The selection can be changed at any time in the _General_ application settings for _Role_.
 
-image::monitoring-console/mc_settings_app_general-h.png[Role Setting]
+*image*: monitoring-console/mc_settings_app_general-h.png[Role Setting]
 
 NOTE: Roles are not connected to accounts or other forms of permission management. Users can switch between the roles to suit their current intentions when using Payara InSight.
 
@@ -286,12 +286,12 @@ Widgets are the components that can be placed on a page to show a particular met
 
 Widgets can be added to any page. Click the plus button in the minimized right side menu or the _Add New Chart_ button when it is expanded:
 
-image::monitoring-console/mc_menu_right.png[Settings Menu Expanded]
-image::monitoring-console/mc_menu_right-min.png[Settings Menu Collapsed]
+*image*: monitoring-console/mc_menu_right.png[Settings Menu Expanded]
+*image*: monitoring-console/mc_menu_right-min.png[Settings Menu Collapsed]
 
 This opens the _Add New Widget_ dialogue.
 
-image::monitoring-console/mc_dialog_add-new-widget.png[Add New Widget Dialogue]
+*image*: monitoring-console/mc_dialog_add-new-widget.png[Add New Widget Dialogue]
 
 Use any one of combination of the filter dropdowns to select a subset of metrics and/or enter a query text in any of the free text search input fields to further narrow down the results. All matching metrics will be shown in the list on the left.
 
@@ -314,7 +314,7 @@ NOTE: If the settings have been opened explicitly through the _Settings_ menu an
 
 The _General_ widget settings are concerned with the widget's position within the page and its general appearance.
 
-image::monitoring-console/mc_settings_widget_general-h.png[Widget General Settings]
+*image*: monitoring-console/mc_settings_widget_general-h.png[Widget General Settings]
 
 .Widget General Settings
 [cols="1,1,4",options="header"]
@@ -333,7 +333,7 @@ If the number of columns is reduced the width might be reduced to match the page
 
 The _Data_ settings are concerned with what and how the data is shown in the graph of a widget.
 
-image::monitoring-console/mc_settings_widget_data-h.png[Widget Data Settings]
+*image*: monitoring-console/mc_settings_widget_data-h.png[Widget Data Settings]
 
 .Widget Data Settings
 [cols="1,1,4a",options="header"]
@@ -400,7 +400,7 @@ This includes visual helpers that can be added to a graph of a widget in order t
 
 In particular these are reference lines and threshold indications.
 
-image::monitoring-console/mc_settings_widget_extras-h.png[Widget Extras Settings]
+*image*: monitoring-console/mc_settings_widget_extras-h.png[Widget Extras Settings]
 
 .Widget Extras Settings
 [cols="1,1,4a",options="header"]
@@ -454,7 +454,7 @@ The current value of a metric can automatically be categorised as a certain stat
 
 For example based on the threshold values of decorations or by encountered errors or missing data. The _Status_ settings allows to set a custom message for a particular status.
 
-image::monitoring-console/mc_settings_widget_status-h.png[Widget Status Settings]
+*image*: monitoring-console/mc_settings_widget_status-h.png[Widget Status Settings]
 
 [cols="1,1,4",options="header"]
 |====================
@@ -482,7 +482,7 @@ State changes to amber or red are reported as alerts. This is shown in the widge
 
 The settings allow filtering these related alerts to prevent them from showing. This makes sense on pages that have dedicated widgets to show alerts or just if users prefer to see the graph instead.
 
-image::monitoring-console/mc_settings_widget_alerts-h.png[Widget Alerts Settings]
+*image*: monitoring-console/mc_settings_widget_alerts-h.png[Widget Alerts Settings]
 
 [cols="1,1,4",options="header"]
 |====================
@@ -503,7 +503,7 @@ A watch describes the conditions and thresholds used to determine a state from t
 
 A _Red_ or _Amber_ state causes an alert that is shown on top of the graph.
 
-image::monitoring-console/mc_sample_widget-alert.png[Example for an alert in line graph]
+*image*: monitoring-console/mc_sample_widget-alert.png[Example for an alert in line graph]
 
 When an alert occurred for a metric shown in a graph the background of the line causing the alert is coloured in _Red_ or _Amber_ default colour until the alert is stopped.
 
@@ -513,9 +513,9 @@ Other ways to hide an alert from a line graph is to acknowledge the alert by che
 
 To see stopped or acknowledged alerts add a widget of type _Alert Table_.
 
-image::monitoring-console/mc_sample_widget-alert-table.png[Example of alert table showing a subset of alerts]
+*image*: monitoring-console/mc_sample_widget-alert-table.png[Example of alert table showing a subset of alerts]
 
-image::monitoring-console/mc_sample_page-alerts.png[Example of a "global" alert table shown all alerts (as used by the alert page)]
+*image*: monitoring-console/mc_sample_page-alerts.png[Example of a "global" alert table shown all alerts (as used by the alert page)]
 
 By default, an alert table shows all alerts including stopped and acknowledged alerts. Use the widget _Alerts_ xref:#alerts-settings[settings] to exclude alerts with certain properties.
 
@@ -530,11 +530,11 @@ Any widget can be removed from any page. Click the pencil symbol in the top righ
 
 On the _General_ widget settings tab you find the _Remove_ button.
 
-image::monitoring-console/mc_settings_widget_general-h.png[Remove Widget Button in General Widget Settings]
+*image*: monitoring-console/mc_settings_widget_general-h.png[Remove Widget Button in General Widget Settings]
 
 Confirm you want to remove the widget.
 
-image::monitoring-console/mc_dialog_delete-widget.png[Remove Widget Confirmation Dialogue]
+*image*: monitoring-console/mc_dialog_delete-widget.png[Remove Widget Confirmation Dialogue]
 
 Remember that a page originating from a preset can be xref:#reset-pages[reset] to recover a widget that was removed accidentally.
 
@@ -545,7 +545,7 @@ Most of the page settings have already been described in context of the differen
 
 The common page settings are those used by pages of _Type_ _Manual_ and _Query_.
 
-image::monitoring-console/mc_settings_page_general-h.png[Common Page Settings]
+*image*: monitoring-console/mc_settings_page_general-h.png[Common Page Settings]
 
 .Common Page Settings
 [cols="1,1,4a",options="header"]
@@ -568,7 +568,7 @@ image::monitoring-console/mc_settings_page_general-h.png[Common Page Settings]
 
 NOTE: Pages of _Type: Query_ have more settings to configure the contents of the page.
 
-image::monitoring-console/mc_settings_page_general-query-h.png[Query Page Settings]
+*image*: monitoring-console/mc_settings_page_general-query-h.png[Query Page Settings]
 
 .Query Page Settings
 [cols="1,1,4",options="header"]
@@ -592,7 +592,7 @@ NOTE: These settings cannot be shared.
 [[general-application-settings]]
 ==== General Application Settings
 
-image::monitoring-console/mc_settings_app_general-h.png[Application General Settings]
+*image*: monitoring-console/mc_settings_app_general-h.png[Application General Settings]
 
 .Application General Settings
 [cols="1,1,4",options="header"]
@@ -609,14 +609,14 @@ image::monitoring-console/mc_settings_app_general-h.png[Application General Sett
 
 The _Pages_ application settings give access to different page management operations as described in detain in section xref:#page-management[Page Management]
 
-image::monitoring-console/mc_settings_app_pages-h.png[Application Pages Settings]
+*image*: monitoring-console/mc_settings_app_pages-h.png[Application Pages Settings]
 
 [[alerts-settings]]
 ==== Alerts Settings
 
 The _Alerts_ application settings contain general alert configuration that applies globally (to any page).
 
-image::monitoring-console/mc_settings_app_alerts-h.png[Application Alerts Settings]
+*image*: monitoring-console/mc_settings_app_alerts-h.png[Application Alerts Settings]
 
 .Alerts Settings
 [cols="1,1,4a",options="header"]
@@ -632,7 +632,7 @@ TIP: With this feature no alarms will be missed.
 
 Payara InSight allows you to configure the colours used in graphs. There is a global colour configuration affecting all graphs.
 
-image::monitoring-console/mc_settings_app_appearance-h.png[Application Appearance Settings]
+*image*: monitoring-console/mc_settings_app_appearance-h.png[Application Appearance Settings]
 
 .Appearance Settings
 [cols="1,1,4",options="header"]
@@ -668,7 +668,7 @@ Each point corresponds to 0.5px with. Default for lines in a line graph is 3, so
 
 Themes act as a (p)reset of the data colour palette, default colours and _Opacity_ setting. When switching theme these settings are reset to the theme's value:
 
-image::monitoring-console/mc_dialog_switch-theme.png[Switch Theme Dialogue]
+*image*: monitoring-console/mc_dialog_switch-theme.png[Switch Theme Dialogue]
 
 Any further customisation of individual colours can and should be done after applying the theme of choice as switching theme would reset such customisations again.
 
@@ -679,8 +679,8 @@ The values of series can be monitored using xref:#watch-management[watches]. If 
 
 While alerts transition between the states _Unhealthy_, _Degraded_, _Healthy_ and possibly _Normal_ based on the watch definition they originated from there are two manual status fields available for each alert:
 
-**Global**:: _Acknowledged_/_Unacknowledged_: When an alert transitions to a more severe state it resets to _Unacknowledged_ waiting for users to manually acknowledge that they took notice (and care) of the degrading state transition.
-**User**:: _Confirmed_/_Unconfirmed_: Alerts are unconfirmed for a user if that user has not seen and confirmed the alert transition yet.
+***Global***: _Acknowledged_/_Unacknowledged_: When an alert transitions to a more severe state it resets to _Unacknowledged_ waiting for users to manually acknowledge that they took notice (and care) of the degrading state transition.
+***User***: _Confirmed_/_Unconfirmed_: Alerts are unconfirmed for a user if that user has not seen and confirmed the alert transition yet.
 
 Both of these manual states should help users to keep track of alert transitions and the alerts they have dealt with.
 
@@ -691,7 +691,7 @@ Alerts are manually acknowledged by system operators when they have checked and 
 
 To acknowledge alerts click the checkbox on left of an alert row.
 
-image::monitoring-console/mc_dialog_alerts2.png[Alert Acknowledge Checkbox (left)]
+*image*: monitoring-console/mc_dialog_alerts2.png[Alert Acknowledge Checkbox (left)]
 
 An alert can be acknowledged:
 
@@ -704,7 +704,7 @@ An alert can be acknowledged:
 
 When the state of alerts changed compared to the last state that has been confirmed by a user the change is indicated by the _Alert Status Change_ pop-up dialogue. It shows all transitions that took place since the user last confirmed alert status changes.
 
-image::monitoring-console/mc_dialog_alerts.png[Confirm Alerts Dialogue]
+*image*: monitoring-console/mc_dialog_alerts.png[Confirm Alerts Dialogue]
 
 When a user confirmed the change by either pressing _OK_ or _Show_ the shown transitions are considered as confirmed and are no longer shown.
 
@@ -717,7 +717,7 @@ The confirmation pop-ups can be disabled in the xref:#alerts-settings[Applicatio
 
 All alerts are indicated in the bottom right corner of the footer so that users do not miss alerts that would otherwise not show on the current page.
 
-image::monitoring-console/mc_footer-alerts.png[Alerts Indicator]
+*image*: monitoring-console/mc_footer-alerts.png[Alerts Indicator]
 
 The indicator gives a summary of the ongoing alerts:
 
@@ -737,9 +737,9 @@ Optionally a stop condition can be given which when met will stop the alert. If 
 
 Such pairs of start and stop conditions can be defined for 3 levels:
 
-Unhealthy:: corresponds to a "red" alert
-Degraded:: corresponds to an "amber" alert
-Healthy:: conditions for particularly good values, these will not cause alerts but can be used to mark a _healthy_ range in graphs.
+*Unhealthy*: corresponds to a "red" alert
+*Degraded*: corresponds to an "amber" alert
+*Healthy*: conditions for particularly good values, these will not cause alerts but can be used to mark a _healthy_ range in graphs.
 
 Each watch must have at least an _Unhealthy_ or a _Degraded_ condition.
 When both are given alerts can transition between _Degraded_ and _Unhealthy_ as the same issue or alert.
@@ -750,11 +750,11 @@ Should a _Degraded_ alert be acknowledged, but it transitions to _Unhealthy_ aft
 
 To open the watch management click the _Go to Watch Settings_ button in the _General_ application settings:
 
-image::monitoring-console/mc_settings_app_general-h.png[Access Watch Settings]
+*image*: monitoring-console/mc_settings_app_general-h.png[Access Watch Settings]
 
 NOTE: Generally the appearance of the watch management and the available options are dependent on the user role. Full access in given to _Administrators_. _Users_ are restricted to viewing and creating new user watches. _Guests_ can only view the settings.
 
-image::monitoring-console/mc_dialog_manage-watches.png[Watch Management Dialogue]
+*image*: monitoring-console/mc_dialog_manage-watches.png[Watch Management Dialogue]
 
 The list shows _System Watches_ and _User Watches_ (below if any exists).
 To expand and see a watches' conditions click on the down arrow or its name to toggle the details.
@@ -764,7 +764,7 @@ To expand and see a watches' conditions click on the down arrow or its name to t
 
 Open the watch management as described above and click the _Add New Watch_ button at the top.
 
-image::monitoring-console/mc_dialog_add-new-watch.png[Add a New Watch Dialogue]
+*image*: monitoring-console/mc_dialog_add-new-watch.png[Add a New Watch Dialogue]
 
 The above example shows a relatively simple watch first copied from an existing watch which then is customised. The name of the watch can be anything as long as it is unique.
 
@@ -836,7 +836,7 @@ WARNING: Watches operate on the DAS server. Their configuration is common for al
 
 To edit a user watch open the xref:#watch-management[watch manager], scroll down to the list of _User Watches_ and click the _Edit_ button of the watch that should be edited.
 
-image::monitoring-console/mc_dialog_edit-watch.png[Edit a User Watch Dialogue]
+*image*: monitoring-console/mc_dialog_edit-watch.png[Edit a User Watch Dialogue]
 
 Confirm changes by clicking _Update_.
 
@@ -867,7 +867,7 @@ Users can modify these pages freely, but they cannot be deleted.
 
 The _Core_ page gives an overview of some of the important instance metrics. Each instance in the grid is shown separately.
 
-image::monitoring-console/mc_page_core.png[Core Page]
+*image*: monitoring-console/mc_page_core.png[Core Page]
 
 * _Active Sessions_: Total number of active session for the instance.
 * _Thread Count_: Total number of threads used by the instance.
@@ -881,7 +881,7 @@ image::monitoring-console/mc_page_core.png[Core Page]
 
 The _Traffic Light Status_ page (a.k.a. RAG Status for Red-Amber-Green Status) indicates the health status of the server and deployed application using traffic light signals to visualise the current state.
 
-image::monitoring-console/mc_page_rag.png[Traffic Light Status Page]
+*image*: monitoring-console/mc_page_rag.png[Traffic Light Status Page]
 
 The content of the page is based on Payara Health Checks (needs to be enabled in the server configuration) and MicroProfile Heath checks of deployed applications.
 
@@ -894,7 +894,7 @@ For more details on query pages see sections xref:#adding-pages[Adding Pages] an
 
 The _HTTP_ page gives a rough overview of the state of the HTTP services of each instance.
 
-image::monitoring-console/mc_page_http.png[HTTP Page]
+*image*: monitoring-console/mc_page_http.png[HTTP Page]
 
 * _Connection Queue Count Open Connections_: Total number of open connection in the connection queue
 * _Thread Pool Current Threads Busy_: Number of threads in the HTTP thread pool currently processing an HTTP request.
@@ -908,7 +908,7 @@ image::monitoring-console/mc_page_http.png[HTTP Page]
 
 The _JVM_ pages gives a general overview of the state of the JVM running Payara Server.
 
-image::monitoring-console/mc_page_jvm.png[JVM Page]
+*image*: monitoring-console/mc_page_jvm.png[JVM Page]
 
 * _Used Heap_: Total size of the used heap memory
 * _Heap Size_: Size of the committed (reserved) heap memory (OS level)
@@ -922,7 +922,7 @@ image::monitoring-console/mc_page_jvm.png[JVM Page]
 
 This is mostly useful to identify problems with the monitoring system or to cross-check that unexpected metric values aren't caused by general problems with monitoring.
 
-image::monitoring-console/mc_page_monitoring.png[Monitoring Page]
+*image*: monitoring-console/mc_page_monitoring.png[Monitoring Page]
 
 * _Source Times_: Shows the duration it took to collect metric data from the individual sources within the server. Durations should be well below a second. Usually in two digit millisecond range.
 * _Sources_: Number of sources metrics are collected from in a particular second. This varies as some sources are collected in an interval of several seconds.
@@ -944,7 +944,7 @@ A page that gives an overview of the state of the server health checks. The indi
 
 NOTE: It is not required to enable the _HealthCheck service_ in the _General_ tab in case the checks should only be enabled for metrics based monitoring without causing health check notifier messages.
 
-image::monitoring-console/mc_page_health-checks.png[Health Checks Page]
+*image*: monitoring-console/mc_page_health-checks.png[Health Checks Page]
 
 * _CPU_: CPU Health Check, average percentage of CPU used by the server instance during last 4 seconds
 * _GC_: Garbage Collection Health Check, percentage of time used to collect garbage objects during the last 4 seconds
@@ -959,7 +959,7 @@ image::monitoring-console/mc_page_health-checks.png[Health Checks Page]
 
 The _Threads_ page gives detailed information on thread health of the cluster and lists information on stuck or hogging threads. The total number of live and daemon threads are given for reference.
 
-image::monitoring-console/mc_page_threads.png[Thread Health Page]
+*image*: monitoring-console/mc_page_threads.png[Thread Health Page]
 
 * _Stuck Thread Incidents_: Table listing the most recent information for threads that are considered stuck.
 +
@@ -986,7 +986,7 @@ The _Trace Duration Range_ widget shows all traces for the same method as a sing
 
 The bar starts at the minimum duration observed and ends at the maximum duration observed in the last minute. The legend shows the average duration and the method traced (innermost trace span operation)
 
-image::monitoring-console/mc_page_request-tracing.png[Request Tracing Page]
+*image*: monitoring-console/mc_page_request-tracing.png[Request Tracing Page]
 
 When checking the minimum and/or maximum checkbox in the widgets _Extras_ settings the bar starts and/or ends at these "all time" values instead of the minimum and/or maximum within the last minute.
 
@@ -994,7 +994,7 @@ The _Trace Duration Above Threshold_ widget shows a graph where each point marks
 
 By clicking on one of the bars in the overview's _Trace Duration Range_ widget the details of all kept traces for this method can be viewed.
 
-image::monitoring-console/mc_dialog_request-tracing.png[Request Tracing Details Dialogue]
+*image*: monitoring-console/mc_dialog_request-tracing.png[Request Tracing Details Dialogue]
 
 This data corresponds to the traces stored in the trace-store.
 For each trace, each of the spans corresponds to a bar in this graph.
@@ -1018,7 +1018,7 @@ The _SQL_ page gives insight into slow SQL queries for all connection pools conf
 
 NOTE: To capture slow SQL queries the _JDBC Connection Pool_ configuration's _Slow Query Log Threshold_ in the _Advanced_ tab needs to be set to a positive number.
 
-image::monitoring-console/mc_page_sql.png[Slow SQL Page]
+*image*: monitoring-console/mc_page_sql.png[Slow SQL Page]
 
 * _Slow SQL Queries_: Shows SQL details for queries that were too slow. _Value_ refers to the duration of the SQL query.
 * _Worst SQL Execution Time_: Shows SQL query activity. Each data point gives the duration of the slowest query run during last second. Zero means no SQL query was run.
@@ -1031,7 +1031,7 @@ The main use of the _Alerts_ page is to check for any server alerts. The page is
 
 As always for alert lists both lists are sorted starting with the most recent severe alert progressing to the oldest least severe alert. Annotations associated with alerts are hidden in this view to make room for more alert entries.
 
-image::monitoring-console/mc_page_alerts.png[Alerts Page]
+*image*: monitoring-console/mc_page_alerts.png[Alerts Page]
 
 NOTE: Past alerts can be managed by acknowledging the alerts which makes them disappear from the list.
 
@@ -1044,13 +1044,13 @@ It does not require and further configuration to make them available as metrics 
 
 In addition, the metrics selection wizard has additional filters specifically filtering on the properties of MicroProfile Metrics.
 
-image::monitoring-console/mc_dialog_add-new-widget.png[Select MicroProfile Metrics]
+*image*: monitoring-console/mc_dialog_add-new-widget.png[Select MicroProfile Metrics]
 
 When MicroProfile Metrics get translated to InSight series the MP tags become the `@` group of the shown series key, the MP _metric_ stays the metric name.
 
 The _Application Metrics_ page is a page that is automatically populated will MicroProfile Metrics based on a query. This means the metrics shown on the page vary depending on what metrics are defined in applications and the server as MicroProfile metrics.
 
-image::monitoring-console/mc_page_app-metrics.png[Application Metrics Page]
+*image*: monitoring-console/mc_page_app-metrics.png[Application Metrics Page]
 
 When populating the page the widgets are configured automatically based on the information available in MicroProfile.
 

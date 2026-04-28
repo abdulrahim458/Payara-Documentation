@@ -25,20 +25,20 @@ The `set-asadmin-recorder-configuration` subcommand adjusts the settings of the 
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
---enabled::
+*--enabled*:
 Activates or deactivates the Asadmin Recorder feature.
---outputLocation::
--o::
+*--outputLocation*:
+*-o*:
 The absolute file path for the asadmin commands to be written to. This defaults to a file called asadmin-commands.txt in the domain directory.
---filterCommands::
--f::
+*--filterCommands*:
+*-f*:
 Specifies whether the commands specified with the `--filteredcommands` option should be excluded from being recorded or not.
---filteredCommands::
+*--filteredCommands*:
 A comma separated list of asadmin commands and regular expressions to exclude from being recorded.
 
 [[examples]]
@@ -58,9 +58,9 @@ Command set-asadmin-recorder-configuration executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

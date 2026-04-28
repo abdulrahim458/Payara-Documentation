@@ -1319,8 +1319,8 @@ In both cases, the _<pool-name>_ is the actual pool name you have created within
 
 The properties we want to highlight here are
 
-`frequsedsqlqueries`:: Contains the list of all SQL statements and their execution count, which are executed during the collection time frame.
-`slowSqlQueries`:: Contains again the list of all SQL statements but this time with the maximum execution time they took.
+*`frequsedsqlqueries`*: Contains the list of all SQL statements and their execution count, which are executed during the collection time frame.
+*`slowSqlQueries`*: Contains again the list of all SQL statements but this time with the maximum execution time they took.
 
 [[configure-sql-statment-overview]]
 == Configuring parameters

@@ -23,18 +23,18 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--securitymap`::
+*`--securitymap`*:
   Specifies the name of the security map contained within the resource adapter from which the identity and principals should be listed.
 
 [[operands]]
 == Operands
 
-resource_adapter_name::
+*resource_adapter_name*:
   The name of the resource adapter for which you want to list security maps.
 
 [[examples]]
@@ -59,9 +59,9 @@ Command list-connector-work-security-maps executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

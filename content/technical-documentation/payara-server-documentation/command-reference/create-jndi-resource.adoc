@@ -27,12 +27,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   This option specifies the target for which you are registering a JNDI resource. Valid values for target are described below. +
 
 NOTE: The resource is always created for the domain as a whole, but the `resource-ref` for the resource is only created for the specified `--target`. This means that although the resource is defined at the domain level, it is only available at the specified target level. Use the `create-resource-ref` subcommand to refer to the resource in multiple targets if needed.
@@ -46,23 +46,23 @@ NOTE: The resource is always created for the domain as a whole, but the `resourc
     Creates the resource for every server instance in the cluster
   instance-name;;
     Creates the resource for a particular server instance
-`--restype`::
+*`--restype`*:
   The JNDI resource type. Valid values are `topic` or `queue`.
-`--factoryclass`::
+*`--factoryclass`*:
   The class that creates the JNDI resource.
-`--jndilookupname`::
+*`--jndilookupname`*:
   The lookup name that the external container uses.
-`--enabled`::
+*`--enabled`*:
   Determines whether the resource is enabled at runtime. Default is true.
-`--description`::
+*`--description`*:
   The text that provides details about the JNDI resource.
-`--property`::
+*`--property`*:
   Optional properties for configuring the resource. Each property is specified as a name-value pair. The available properties are specific to the implementation that is specified by the `--factoryclass` option and are used by that implementation. Payara Server itself does not define any properties for configuring a JNDI resource.
 
 [[operands]]
 == Operands
 
-jndi-name::
+*jndi-name*:
   The unique name of the JNDI resource to be created.
 
 [[examples]]
@@ -86,9 +86,9 @@ Command create-jndi-resource executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

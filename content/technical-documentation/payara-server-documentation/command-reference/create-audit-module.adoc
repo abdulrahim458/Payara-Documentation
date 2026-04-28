@@ -25,20 +25,20 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--classname`::
+*`--classname`*:
   The name of the Java class that implements this audit module. If not specified, this option defaults to `com.sun.enterprise.security.Audit`.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--property`::
+*`--property`*:
   Optional keyword-value pairs that specify additional properties for the audit module. +
   Audit module properties that are defined by Payara Server are as follows: +
   `auditOn`;;
     If `true`, specifies that the audit module is loaded and called by the Payara Server audit library at audit points. +
   Other available properties are determined by the implementation of the audit module.
-`--target`::
+*`--target`*:
   Specifies the target on which you are creating the audit module. Valid values are as follows: +
   `server`;;
     Creates the audit module for the default server instance `server` and is the default value.
@@ -52,7 +52,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-audit_module_name::
+*audit_module_name*:
   The name of this audit module.
 
 [[examples]]
@@ -72,9 +72,9 @@ Command create-audit-module executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

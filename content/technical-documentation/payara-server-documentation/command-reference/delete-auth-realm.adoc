@@ -21,12 +21,12 @@ The `delete-auth-realm` subcommand removes the named authentication realm. This 
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target on which you are deleting the authentication realm. Valid values are +
   `server`;;
     Deletes the realm for the default server instance `server` and is the default value.
@@ -40,7 +40,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-auth_realm_name::
+*auth_realm_name*:
   Name of the realm to be deleted.
 
 [[examples]]
@@ -59,9 +59,9 @@ Command delete-auth-realm executed successfully
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

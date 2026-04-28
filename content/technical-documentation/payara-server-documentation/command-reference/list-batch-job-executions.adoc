@@ -25,12 +25,12 @@ The `list-batch-job-executions` subcommand lists batch job executions and execut
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target for which to list batch job executions and execution details. Valid values are as follows: +
   `server`;;
     Lists executions for the default server instance `server` and is the default value.
@@ -38,14 +38,14 @@ asadmin-options::
     Lists executions for every server instance in the cluster.
   instance-name;;
     Lists executions for a particular server instance.
-`--executionid`::
-`-x`::
+*`--executionid`*:
+*`-x`*:
   Specifies the execution ID of a specific batch job execution.
-`--long`::
-`-l`::
+*`--long`*:
+*`-l`*:
   Displays detailed information about batch job executions. The default value is `false`.
-`--output`::
-`-o`::
+*`--output`*:
+*`-o`*:
   Displays specific details about batch job executions. Use a comma-separated list to specify the details to display and their
   order. The values are case-insensitive. A subset of all possible headings is displayed by default. +
   Possible values are as follows: +
@@ -67,14 +67,14 @@ asadmin-options::
     Displays the properties passed to the batch runtime for the batch job execution, listed as name/value pairs.
   `stepcount`;;
     Displays the number of steps in the batch job execution.
-`--header`::
-`-h`::
+*`--header`*:
+*`-h`*:
   Specifies whether column headings are displayed when the `--long`  option is used. The default value is `true`. To suppress the headings, set the `--header` option to `false`.
 
 [[operands]]
 == Operands
 
-instance_id::
+*instance_id*:
   The ID of the job instance for which to list execution details.
 
 [[examples]]
@@ -96,9 +96,9 @@ Command list-batch-job-executions executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

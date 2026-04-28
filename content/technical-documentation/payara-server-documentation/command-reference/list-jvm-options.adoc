@@ -25,12 +25,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
   Specifies the target for which you are listing Java application launcher options. +
   Valid values are as follows: +
   `server`;;
@@ -41,7 +41,7 @@ asadmin-options::
     Specifies a cluster.
   configuration-name;;
     Specifies a named configuration.
-`--profiler`::
+*`--profiler`*:
   Specifies whether the Java application launcher options to list are for the profiler. Set this option to true only if a profiler has been
   configured. If this option is set to true and no profiler is configured, an error occurs. The default is false.
 
@@ -79,9 +79,9 @@ Command list-jvm-options executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

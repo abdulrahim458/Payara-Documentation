@@ -36,66 +36,66 @@ This command can be used to configure several aspects of the Request Tracing ser
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--enabled`::
+*`--enabled`*:
 Defaults to `false`. Enables or disables the Request Tracing service
-`--dynamic`::
+*`--dynamic`*:
 Defaults to `false`. When set to `true`, applies the changes without a server restart.
 +
 Otherwise, a restart is required.
-`--sampleRate`::
+*`--sampleRate`*:
 The probability of a trace being sampled.
 +
 The rate must be a positive number between `0` and `1.0`
-`--adaptiveSamplingEnabled`::
+*`--adaptiveSamplingEnabled`*:
 Defaults to `false`. Whether to use an adaptive sampling rate.
-`--adaptiveSamplingTargetCount`::
+*`--adaptiveSamplingTargetCount`*:
 The target number of traces to sample per the configured time window.
 +
 Defaults to `6`.
-`--adaptiveSamplingTimeValue`::
+*`--adaptiveSamplingTimeValue`*:
 The period of time to attempt to hit the adaptive sample target count in.
 +
 Defaults to `1`.
-`--adaptiveSamplingTimeUnit`::
+*`--adaptiveSamplingTimeUnit`*:
 The time unit for the `adaptiveSampleTimeValue` option.
 +
 Defaults to `MINUTES`.
-`--applicationsOnlyEnabled`::
+*`--applicationsOnlyEnabled`*:
 Defaults to `true`. Whether to exclusively sample traces related to applications.
-`--thresholdValue`::
+*`--thresholdValue`*:
 Sets the number of time units which trigger the tracing of a request.
 +
 NOTE: Only used if `adaptiveSamplingEnabled` is set to `false`.
-`--thresholdUnit`::
+*`--thresholdUnit`*:
 Sets the time unit to use for the threshold.
 +
 NOTE: Only used if `adaptiveSamplingEnabled` is set to `false`.
-`--sampleRateFirstEnabled`::
+*`--sampleRateFirstEnabled`*:
 Defaults to `true`. Whether to perform the sampling check before or after the threshold calculation.
-`--traceStoreSize`::
+*`--traceStoreSize`*:
 Sets how many request traces will be stored.
 +
 Defaults to `20` trace records.
-`--traceStoreTimeout`::
+*`--traceStoreTimeout`*:
 Sets how long before Request Tracing messages are removed.
 +
 This field is specified in the format `%d %h %m %s` where `%` is an integer. Any of the units can also be omitted.
 +
 NOTE: This option is ignored when reservoir sampling is enabled.
-`--reservoirSamplingEnabled`::
+*`--reservoirSamplingEnabled`*:
 Defaults to `false`. Whether to use reservoir sampling, or time based sampling.
-`--historicTracestoreEnabled`::
+*`--historicTracestoreEnabled`*:
 Defaults to `false`. When present, enables storage of the slowest sampled historical request traces in a separate trace store.
-`--historicTracestoreSize`::
+*`--historicTracestoreSize`*:
 Sets how many request traces will be stored for historical purposes.
 +
 Defaults to `20` trace records.
-`--historicTracestoreTimeout`::
+*`--historicTracestoreTimeout`*:
 Sets how long before Request Tracing messages are removed from the historical trace store.
 +
 This field is specified in the format `%d %h %m %s` where `%` is an integer. Any of the units can also be omitted.
@@ -124,9 +124,9 @@ asadmin> set-requesttracing-configuration
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

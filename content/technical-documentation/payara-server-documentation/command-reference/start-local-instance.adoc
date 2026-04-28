@@ -34,27 +34,27 @@ This subcommand is supported in local mode. However, to synchronize the instance
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 NOTE: These are not the same as the options available for the start-instance command.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--nodedir`::
+*`--nodedir`*:
   Specifies the directory that contains the instance's node directory.
   The instance's files are stored in the instance's node directory.
 +
 The default is `as_install/nodes/`.
 
-`--node`::
+*`--node`*:
   Specifies the node on which the instance resides. This option may be omitted only if the directory that the `--nodedir` option specifies
   contains only one node directory. Otherwise, this option is required.
 
-`--debug`::
-`-d`::
+*`--debug`*:
+*`-d`*:
   Specifies whether the instance is started with http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java
   Platform Debugger Architecture (JPDA)]
   debugging enabled.
@@ -66,14 +66,14 @@ Possible values are as follows:
   `false`;;
     The instance is started with JPDA debugging disabled (default).
 
-`--dry-run`::
-`-n`::
+*`--dry-run`*:
+*`-n`*:
   Suppresses actual starting of the instance. Instead, `start-local-instance` displays the full command that would be used to
   start the instance, including all options. Reviewing this command can be useful when troubleshooting startup issues.
 +
 The default value is `false`.
 
-`--sync`::
+*`--sync`*:
   The type of synchronization between the DAS and the instance's files when the instance is started.
 +
 Possible values are as follows:
@@ -94,8 +94,8 @@ The DAS synchronizes the instance with all of the instance's files, regardless o
 +
 CAUTION: If the DAS is not running or is unreachable from the host where you are running this subcommand, do not set the `--sync` option to `full`. To perform a full synchronization, the subcommand removes the instance's cache. If the DAS cannot be contacted to replace the cache, the subcommand fails and the instance cannot be restarted until it is resynchronized with the DAS.
 
-`--verbose`::
-`-v`::
+*`--verbose`*:
+*`-v`*:
  Specifies that the server log is printed to the console from where the subcommand is run. Control is not returned to the console after the instance has started. The instance can be stopped and control returned by inputting CTRL-C.
 +
 Possible values are as follows:
@@ -114,8 +114,8 @@ You can kill the Payara Server process and obtain a thread dump for the server b
   `false`;;
     Detailed information is not displayed (default).
 
-`--watchdog`::
-`-w`::
+*`--watchdog`*:
+*`-w`*:
   Specifies whether limited information about the instance is displayed in the console window where the subcommand is run. The `--watchdog`
   option is similar to `--verbose` but does not display the detailed startup messages and log messages. This option is useful when running
   the `asadmin` utility in the background or with no attached console.
@@ -127,7 +127,7 @@ Possible values are as follows:
   `false`;;
     Limited information is not displayed in the console window (default).
 
-`--timeout`::
+*`--timeout`*:
 Specifies how long to take for the local instance to start in seconds. If starting the instance takes longer than this amount then this command will fail (but the instance may still continue its startup process)
 +
 The default value is `600`.
@@ -135,7 +135,7 @@ The default value is `600`.
 [[operands]]
 == Operands
 
-instance-name::
+*instance-name*:
   The name of the instance to start.
 
 [[examples]]
@@ -159,9 +159,9 @@ Command start-local-instance executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

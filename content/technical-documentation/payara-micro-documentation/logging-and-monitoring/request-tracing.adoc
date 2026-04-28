@@ -127,12 +127,12 @@ Notation for units is as follows:
 
 == Example usages
 
-`*java -jar payara-micro.jar --enableRequestTracing*`:: Enable request tracing
-`*java -jar payara-micro.jar --enableRequestTracing ns*`:: Enable request tracing and set threshold unit to nanoseconds (`_value_`
+*`*java -jar payara-micro.jar --enableRequestTracing*`*: Enable request tracing
+*`*java -jar payara-micro.jar --enableRequestTracing ns*`*: Enable request tracing and set threshold unit to nanoseconds (`_value_`
 _defaults to_ `_30_`)
-`*java -jar payara-micro.jar --enableRequestTracing 2*`:: Enable request tracing and set threshold value to 2 (`_unit_` _defaults to_
+*`*java -jar payara-micro.jar --enableRequestTracing 2*`*: Enable request tracing and set threshold value to 2 (`_unit_` _defaults to_
   `_SECONDS_`)
-`*java -jar payara-micro.jar --enableRequestTracing 4ms*`:: Enable request tracing and set threshold to 4 microseconds
+*`*java -jar payara-micro.jar --enableRequestTracing 4ms*`*: Enable request tracing and set threshold to 4 microseconds
 
 [WARNING]
 ====

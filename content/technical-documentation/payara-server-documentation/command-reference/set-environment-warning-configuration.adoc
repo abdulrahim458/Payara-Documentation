@@ -23,18 +23,18 @@ The `set-environment-warning-configuration` subcommand sets the environment warn
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
---enabled::
+*--enabled*:
 Activates or deactivates the Environment Warning feature, enabling or disabling the display of the warning bar in the Admin Console based on the chosen setting.
---message::
+*--message*:
 Specifies the custom text message to be displayed within the Environment Warning bar, allowing for tailored alerts or reminders specific to the current server environment.
---backgroundcolour::
+*--backgroundcolour*:
 Sets the background color of the Environment Warning bar, providing a visual means to distinguish between different environments by color-coding the warning bar.
---textcolour::
+*--textcolour*:
 Determines the color of the text within the Environment Warning bar, ensuring readability and contrast against the background color, enhancing the visibility of the warning message.
 
 [[examples]]
@@ -51,9 +51,9 @@ Command set-environment-warning-configuration executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

@@ -33,11 +33,11 @@ The formats of the URLs to resources that represent objects in the configuration
 
 The replaceable items in these URLs are as follows:
 
-host::
+*host*:
 The host where the DAS is running.
-port::
+*port*:
 The HTTP port or HTTPS port for administration.
-path::
+*path*:
 The path to the object. The path is the dotted name of the object in which each dot (`.`) is replaced with a slash (`/`).
 +
 NOTE: The path to a Payara Server instance is `servers/server/<instance-name>`, where `instance-name` is the name of the instance. For the DAS, `instance-name` is `server` and the path is `servers/server/server`.
@@ -65,9 +65,9 @@ The formats of the URLs to resources that represent the log file are as follows:
 
 The replaceable items in these URLs are as follows:
 
-host::
+*host*:
 The host where the DAS is running.
-port::
+*port*:
 The HTTP port or HTTPS port for administration.
 
 You can use the optional `start` parameter in the URL to the resource for the log file to specify the number of characters at the start of the file to skip.
@@ -634,17 +634,17 @@ The general format for the JSON representation of a resource for a configuration
 
 The replaceable items in this format are as follows:
 
-resource::
+*resource*:
 The name of the resource.
-code::
+*code*:
 The result of the attempt to get the resource.
-command-list::
+*command-list*:
 One or more metadata sets separated by a comma (`,`) that represent the `asadmin` subcommands for performing non—CRUD operations on the resource. For the format of each metadata set, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#json-representation-of-a-command-in-a-command-list[JSON Representation of a Command in a Command List].
-method-list::
+*method-list*:
 One or more metadata sets separated by a comma (`,`) that represent the methods that the resource supports. For the format of each metadata set, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#json-representation-of-a-method-in-a-method-list[JSON Representation of a Method in a Method List].
-attributes::
+*attributes*:
 Zero or more name-value pairs separated by a comma (`,`). Each name-value pair is specified as `name:value`.
-children::
+*children*:
 Zero or more child resources separated by a comma (`,`). Each child resource is specified as `resource-name:url`.
 +
 resource-name;;
@@ -669,11 +669,11 @@ The JSON representation of a command in a command list is as follows:
 
 The replaceable items in this format are as follows:
 
-command-path::
+*command-path*:
 The relative path to REST resource that represents the command. This path is relative to the URL of the REST resource that is the parent of the resource that represents the command.
-command-name::
+*command-name*:
 The name of the command as displayed in client applications that access the resource.
-rest-method::
+*rest-method*:
 The REST resource method that the command invokes when the command is run. The method is `GET`, `POST`, or `DELETE`.
 
 [[json-representation-of-a-method-in-a-method-list]]
@@ -696,11 +696,11 @@ The JSON representation of a method in a method list is as follows:
 
 The replaceable items in this format are as follows:
 
-method-name::
+*method-name*:
 The name of the method, which is `GET`, `POST`, or `DELETE`.
-message-parameter-list::
+*message-parameter-list*:
 Zero or more metadata sets separated by a comma (`,`) that represent the message parameters that are allowed for the method. For the format of each metadata set, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#json-representation-of-a-message-parameter-or-a-query-parameter[JSON Representation of a Message Parameter or a Query Parameter].
-query-parameter-list::
+*query-parameter-list*:
 Zero or more metadata sets separated by a comma (`,`) that represent the query parameters that are allowed for the method. For the format of each metadata set, see xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#json-representation-of-a-message-parameter-or-a-query-parameter[JSON Representation of a Message Parameter or a Query Parameter].
 
 [[json-representation-of-a-message-parameter-or-a-query-parameter]]
@@ -721,9 +721,9 @@ The JSON representation of a message parameter or a query parameter is as follow
 
 The replaceable items in this format are as follows:
 
-parameter-name::
+*parameter-name*:
 The name of the parameter.
-attribute-list::
+*attribute-list*:
 A comma-separated list of name-value pairs of attributes for the parameter. Each pair is in the following format:
 +
 [source,json]
@@ -835,9 +835,9 @@ The general format for the XML representation of a resource for a configuration 
 
 The replaceable items in this format are as follows:
 
-methods::
+*methods*:
 One or more XML elements that represent the methods that the resource supports. For the format of each element, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#xml-representation-of-a-resource-method[XML Representation of a Resource Method].
-attributes::
+*attributes*:
 Zero or more XML elements that represent the attributes of the resource. Each element specifies a name-value pair as follows:
 +
 [source,xml]
@@ -845,9 +845,9 @@ Zero or more XML elements that represent the attributes of the resource. Each el
 <entry key="name" value="value"></entry>
 ----
 
-commands::
+*commands*:
 One or more XML elements that represent the `asadmin` subcommands for performing non—CRUD operations on the resource. For the format of each element, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#xml-representation-of-a-command[XML Representation of a Command].
-children::
+*children*:
 Zero or more XML elements that represent the children of the resource. Each element is specified as follows:
 +
 [source,xml]
@@ -859,9 +859,9 @@ resource-name;;
 The name of the resource as displayed in client applications that access the parent of the resource.
 url;;
 The URL to the child resource.
-code::
+*code*:
 The result of the attempt to get the resource.
-resource::
+*resource*:
 The name of the resource.
 
 [[xml-representation-of-a-resource-method]]
@@ -884,11 +884,11 @@ The XML representation of a method in a method list is as follows:
 
 The replaceable items in this format are as follows:
 
-method-name::
+*method-name*:
 The name of the method, which is `GET`, `POST`, or `DELETE`.
-message-parameter-list::
+*message-parameter-list*:
 Zero or more XML elements that represent the message parameters that are allowed for the method. For the format of each element, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#xml-representation-of-a-message-parameter-or-a-query-parameter[XML Representation of a Message Parameter or a Query Parameter].
-query-parameter-list::
+*query-parameter-list*:
 Zero or more XML elements that represent the query parameters that are allowed for the method. For the format of each element, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#xml-representation-of-a-message-parameter-or-a-query-parameter[XML Representation of a Message Parameter or a Query Parameter].
 
 [[xml-representation-of-a-command]]
@@ -907,11 +907,11 @@ The XML representation of a command is as follows:
 
 The replaceable items in this format are as follows:
 
-command-name::
+*command-name*:
 The name of the command as displayed in client applications that access the resource.
-command-path::
+*command-path*:
 The relative path to REST resource that represents the command. This path is relative to the URL of the REST resource that is the parent of the resource that represents the command.
-rest-method::
+*rest-method*:
 The REST resource method that the command invokes when the command is run. The method is `GET`, `POST`, or `DELETE`.
 
 [[xml-representation-of-a-message-parameter-or-a-query-parameter]]
@@ -932,9 +932,9 @@ The XML representation of a message parameter or a query parameter is as follows
 
 The replaceable items in this format are as follows:
 
-parameter-name::
+*parameter-name*:
 The name of the parameter.
-attributes::
+*attributes*:
 One or more XML elements that represent the attributes for the parameter. Each element specifies a name-value pair as follows:
 +
 [source,xml]
@@ -1110,11 +1110,11 @@ The general format for the JSON representation of a resource for a monitoring ob
 
 The replaceable items in this format are as follows:
 
-code::
+*code*:
 The result of the attempt to get the resource.
-entity::
+*entity*:
 Contains the statistics that the monitoring object provides. For the format of each metadata set, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#json-representation-of-a-statistic-in-a-statistics-list[JSON Representation of a Statistic in a Statistics List].
-childResources::
+*childResources*:
 Zero or more child resources separated by a comma (`,`). Each child resource is specified as "resource-name":"url". +
 resource-name;;
 The name of the resource as displayed in client applications that access the parent of the resource.
@@ -1155,21 +1155,21 @@ The JSON representation of a range statistic in a statistics list is as follows:
 
 The replaceable items in these formats are as follows:
 
-statistic::
+*statistic*:
 The name of the statistic.
-count::
+*count*:
 Counter statistics only: The current value of the statistic.
-highest-value::
+*highest-value*:
 Range statistics only: The highest value of the statistic since monitoring of the statistic began.
-lowest-value::
+*lowest-value*:
 Range statistics only: The lowest value of the statistic since monitoring of the statistic began.
-current-value::
+*current-value*:
 Range statistics only: The lowest value of the statistic since monitoring of the statistic began.
-last-sample-time::
+*last-sample-time*:
 The time in UNIX time at which the statistic was last sampled.
-description::
+*description*:
 A textual description of what the statistic represents.
-unit::
+*unit*:
 The unit of measurement of the statistic, which is one of the
 following units of measurement:
 +
@@ -1188,9 +1188,9 @@ Values of an attribute that provide the following timing measurements for an ope
 * The minimum amount of time to perform the operation once.
 * The total amount of time that has been spent performing the operation.
 * The average amount of time to perform the operation.
-name::
+*name*:
 The name of the statistic as displayed in client applications that access the resource that contains the statistic.
-start-time::
+*start-time*:
 The time in UNIX time at which monitoring of the statistic began.
 
 [[example-json-resource-representation-for-a-monitoring-object]]
@@ -1266,20 +1266,20 @@ The general format for the XML representation of a resource for a monitoring obj
 
 The replaceable items in this format are as follows:
 
-statistics::
+*statistics*:
 Zero or more XML elements that represent the statistics that the monitoring object provides. For the format of each element, see xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#xml-representation-of-a-statistic[XML Representation of a Statistic].
-children::
+*children*:
 Zero or more XML elements that represent the children of the resource. Each element is specified as follows:
 +
 [source,xml]
 ----
 <entry key="resource-name" value="url"></entry>
 ----
-resource-name::
+*resource-name*:
 The name of the resource as displayed in client applications that access the parent of the resource.
-url::
+*url*:
 The URL to the child resource.
-code::
+*code*:
 The result of the attempt to get the resource.
 
 [[xml-representation-of-a-statistic]]
@@ -1335,9 +1335,9 @@ The XML representation of a range statistic is as follows:
 
 The replaceable items in these formats are as follows:
 
-statistic::
+*statistic*:
 The name of the statistic.
-unit::
+*unit*:
 The unit of measurement of the statistic, which is one of the following units of measurement:
 +
 `count`;;
@@ -1358,21 +1358,21 @@ Values of an attribute that provide the following timing measurements for an ope
 * The total amount of time that has been spent performing the
 operation.
 * The average amount of time to perform the operation.
-start-time::
+*start-time*:
 The in time in UNIX time at which monitoring of the statistic began.
-count::
+*count*:
 Counter statistics only: The current value of the statistic.
-highest-value::
+*highest-value*:
 Range statistics only: The highest value of the statistic since monitoring of the statistic began.
-lowest-value::
+*lowest-value*:
 Range statistics only: The lowest value of the statistic since monitoring of the statistic began.
-current-value::
+*current-value*:
 Range statistics only: The lowest value of the statistic since monitoring of the statistic began.
-description::
+*description*:
 A textual description of what the statistic represents.
-name::
+*name*:
 The name of the statistic as displayed in client applications that access the resource that contains the statistic.
-last-sample-time::
+*last-sample-time*:
 The time in UNIX time at which the statistic was last sampled.
 
 [[example-xml-resource-representation-for-a-monitoring-object]]
@@ -1511,25 +1511,25 @@ The JSON representation of a log record in a record list is as follows:
 
 The replaceable items in this format are as follows:
 
-record-number::
+*record-number*:
 A serial number in the form of a decimal integer that uniquely identifies the log record.
-logged-date::
+*logged-date*:
 The date and time in UNIX time that the record was created.
-log-level::
+*log-level*:
 The severity level of the message in the log record. For more information, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#setting-log-levels[Setting Log Levels].
-product-name::
+*product-name*:
 The current name and version of the server runtime.
-logger-class-name::
+*logger-class-name*:
 The fully qualified name of the Java class of the logger class that created the log message. Each component of Payara Server provides its own logger class.
 +
 For detailed information about the names of logger classes in the Payara Server, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#logger-namespaces[Logger Namespaces].
-thread-id::
+*thread-id*:
 The numerical identifier of the thread that created the message.
-thread-name::
+*thread-name*:
 The name of the thread that created the message.
-message-id::
+*message-id*:
 A unique identifier for the message. For messages from Payara Server, this identifier consists of a module code and a numerical value, for example, `CORE5004`. All `SEVERE` and `WARNING` messages and some `INFO` messages from Payara Server contain a message identifier.
-message-text::
+*message-text*:
 The text of the log message.
 
 [[example-json-resource-representation-for-log-file-details]]
@@ -1601,23 +1601,23 @@ The XML representation of a log record is as follows:
 
 The replaceable items in this format are as follows:
 
-logged-date::
+*logged-date*:
 The date and time in UNIX time that the record was created.
-log-level::
+*log-level*:
 The severity level of the message in the log record. For more information, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#setting-log-levels[Setting Log Levels].
-logger-class-name::
+*logger-class-name*:
 The fully qualified name of the Java class of the logger class that created the log message. Each component of Payara Server provides its own logger class.
 +
 For detailed information about the names of logger classes in Payara Server, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#logger-namespaces[Logger Namespaces].
-message-id::
+*message-id*:
 A unique identifier for the message. For messages from Payara Server, this identifier consists of a module code and a numerical value, for example, `CORE5004`. All `SEVERE` and `WARNING` messages and some `INFO` messages from Payara Server contain a message identifier.
-thread-id::
+*thread-id*:
 The numerical identifier of the thread that created the message.
-thread-name::
+*thread-name*:
 The name of the thread that created the message.
-product-name::
+*product-name*:
 The current name and version of the server runtime.
-record-number::
+*record-number*:
 A serial number in the form of a decimal integer that uniquely identifies the log record.
 
 [[example-xml-resource-representation-for-log-file-details]]

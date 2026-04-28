@@ -113,11 +113,11 @@ If you need more control on the attributes of specific MBeans used in a metric d
 
 These placeholders are used as follows:
 
-`key`:: Used as a placeholder of the name (or part of the name) of an AMX MBean.
+*`key`*: Used as a placeholder of the name (or part of the name) of an AMX MBean.
 
-`attribute`:: Used as a placeholder for the name of an *attribute* of an AMX MBean.
+*`attribute`*: Used as a placeholder for the name of an *attribute* of an AMX MBean.
 
-`subattribute`:: Used as a placeholder for the name of a *sub-attribute* (or second-level attribute), which corresponds to the attribute of a `CompositeData` object.
+*`subattribute`*: Used as a placeholder for the name of a *sub-attribute* (or second-level attribute), which corresponds to the attribute of a `CompositeData` object.
 
 IMPORTANT: You will need to use the `$+{key}+`, `${attribute}` and `${subattribute}` placeholders in the `name` element as well to prevent name collisions between different templated metrics.
 
@@ -218,9 +218,9 @@ It is possible to create a template for a metric for multiple resource, attribut
 
 These placeholders are used as follows:
 
-`attribute`:: Used as a placeholder for the name of an *attribute* of an AMX MBean.
+*`attribute`*: Used as a placeholder for the name of an *attribute* of an AMX MBean.
 
-`subattribute`:: Used as a placeholder for the name of a *sub-attribute* (or second-level attribute), which corresponds to the attribute of a `CompositeData` object.
+*`subattribute`*: Used as a placeholder for the name of a *sub-attribute* (or second-level attribute), which corresponds to the attribute of a `CompositeData` object.
 
 IMPORTANT: You will need to use the `${attribute}` and `${subattribute}` placeholders in the `name` element as well to prevent name collisions between different templated metrics.
 

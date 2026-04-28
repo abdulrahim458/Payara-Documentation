@@ -46,12 +46,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--type`::
+*`--type`*:
   Specifies the type of sessions for which persistence types are listed. Allowed values are as follows: +
   * `web` — Lists persistence types for HTTP sessions.
   * `ejb` — Lists persistence types for SFSB instances.
@@ -75,9 +75,9 @@ Command list-persistence-types executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

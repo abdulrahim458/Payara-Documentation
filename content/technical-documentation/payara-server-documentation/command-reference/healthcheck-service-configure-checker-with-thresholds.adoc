@@ -33,12 +33,12 @@ Enables and disables the monitoring of a HealthCheck performance metric service.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are configuring the Healthcheck performance metric service. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -46,11 +46,11 @@ cluster_name;;
 Applies to every server instance in the cluster.
 instance_name;;
 Applies to a specified server instance.
-`--enabled`::
+*`--enabled`*:
 Defaults to `false`. Enables or disables the healthcheck service
-`--dynamic`::
+*`--dynamic`*:
 Defaults to `false`. When set to `true`, applies the changes without a server restart.
-`--servicename`::
+*`--servicename`*:
 The performance service metric name. Required.
 +
 One of:
@@ -65,7 +65,7 @@ One of:
 * `mp-health` or `mh`
 * `mp-metrics` or `mm`
 
-`--checkername`::
+*`--checkername`*:
 A user determined name for easy identification of the checker.
 +
 This should be unique among the services you have configured, to avoid confusion on the notification messages.
@@ -81,24 +81,24 @@ Depends on the service checker. One of:
 * `MP`
 * `MPM`
 
-`--add-to-microprofile-health`::
+*`--add-to-microprofile-health`*:
 Defaults to `false`. When enabled, the checker results are displayed on MicroProfile Health xref:technical-documentation/microprofile/healthcheck.adoc#rest-endpoints[REST endpoints] as a readiness check.
 
-`--time`::
+*`--time`*:
 Defaults to `5`. The amount of time units that the service will use to periodically monitor the metric.
-`--unit`::
+*`--unit`*:
 Defaults to `MINUTES`. The time unit to set the frequency of the metric monitoring.
 +
 NOTE: Must correspond to a valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[`java.util.concurrent.TimeUnit`]
-`--thresholdcritical`::
+*`--thresholdcritical`*:
 Defaults to `90`. The threshold value that this metric must surpass to generate a **`CRITICAL`** event.
 +
 A value between _WARNING VALUE_ and `100` must be used.
-`--thresholdwarning`::
+*`--thresholdwarning`*:
 Defaults to `50`. The threshold value that this metric must surpass to generate a *`WARNING`* event.
 +
 A value between _GOOD VALUE_ and _WARNING VALUE_ must be used.
-`--thresholdgood`::
+*`--thresholdgood`*:
 Defaults to `0`. The threshold value that this metric must surpass to generate a *`GOOD`* event.
 +
 A value between `0` and _WARNING VALUE_ must be used.
@@ -122,9 +122,9 @@ asadmin healthcheck-service-configure-checker-with-thresholds --enabled=true --t
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

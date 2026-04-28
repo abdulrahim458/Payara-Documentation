@@ -153,11 +153,11 @@ TIP: Keep in mind that this solution only works if your bean has one injected ca
 
 The Payara Platform supports cache definitions and operations on caches by using the standard set of annotations that are part of the JCache API:
 
-`@CachePut`:: Puts the specified key and value in the cache.
-`@CacheRemove`:: Removes an element from the cache that corresponds to the supplied key.
-`@CacheDefaults`:: Allows the configuration of defaults for `CacheResult`, `CachePut`, `CacheRemove`, and `CacheRemoveAll` at the class level.
-`@CacheKey`:: Marks a method parameter as the key of a cache.
-`@CacheValue`:: Marks a method parameter as the value of a cache key.
+*`@CachePut`*: Puts the specified key and value in the cache.
+*`@CacheRemove`*: Removes an element from the cache that corresponds to the supplied key.
+*`@CacheDefaults`*: Allows the configuration of defaults for `CacheResult`, `CachePut`, `CacheRemove`, and `CacheRemoveAll` at the class level.
+*`@CacheKey`*: Marks a method parameter as the key of a cache.
+*`@CacheValue`*: Marks a method parameter as the value of a cache key.
 
 [[see-also]]
 == See Also

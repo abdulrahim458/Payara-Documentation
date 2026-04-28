@@ -23,16 +23,16 @@ The `create-protocol-filter` subcommand creates a protocol filter for a protocol
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--protocol`::
+*`--protocol`*:
   The name of the associated protocol.
-`--classname`::
+*`--classname`*:
   The fully qualified name of the Java class that implements the protocol filter.
-`--target`::
+*`--target`*:
   Creates the protocol filter only on the specified target. Valid values are as follows: +
   `server`;;
     Creates the protocol filter on the default server instance. This is the default value.
@@ -46,7 +46,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-protocol-filter-name::
+*protocol-filter-name*:
   The name of the protocol filter.
 
 [[examples]]
@@ -66,9 +66,9 @@ Command create-protocol-filter executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

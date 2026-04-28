@@ -24,20 +24,20 @@ IMPORTANT: This command only restarts all HTTP listeners except `admin-listener`
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--all`::
+*`--all`*:
 Applies the command to all instances. The default value is `false`.
 
 [[operands]]
 == Operands
 
-target::
+*target*:
 Name of the target instance, deployment group or cluster to which restart the corresponding HTTP listeners.
 
 [[examples]]
@@ -56,9 +56,9 @@ Command restart-http-listeners executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

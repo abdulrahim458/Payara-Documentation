@@ -13,14 +13,14 @@ EclipseLink is the default persistence provider in the Payara Platform. It is a 
 
 EclipseLink implements the following specifications, plus value-added extensions:
 
-Jakarta Persistence (JPA) 3.0+::
+*Jakarta Persistence (JPA) 3.0+*:
 
 JPA is part of the Jakarta EE specification. It includes improvements and enhancements to domain modeling, object/relational mapping, `EntityManager` and `Query` interfaces, and the Jakarta Persistence Query Language (JPQL).
 It includes an API for criteria queries, a metamodel API, and support for validation. The Jakarta Persistence API can be used with non-EJB components outside the EJB container.
 +
 For more information, see the https://jakarta.ee/specifications/persistence/[Jakarta Persistence specification]. For basic information about the Jakarta Persistence API, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#persistence[Persistence]" in The Jakarta EE Tutorial.
 
-Jakarta XML Binding (JAXB):: The EclipseLink JAXB implementation, plus EclipseLink extensions, is called *MOXy*. The `org.eclipse.persistence.moxy.jar` file is bundled as a module in Payara Server.
+*Jakarta XML Binding (JAXB)*: The EclipseLink JAXB implementation, plus EclipseLink extensions, is called *MOXy*. The `org.eclipse.persistence.moxy.jar` file is bundled as a module in Payara Server.
 +
 For more information about MOXy support in Payara Server, see xref:technical-documentation/application-development/developing-soap-webservices.adoc#the-databinding-provider[The Databinding Provider].
 +

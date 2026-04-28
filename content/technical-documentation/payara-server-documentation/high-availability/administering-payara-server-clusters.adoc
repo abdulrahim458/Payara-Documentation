@@ -54,15 +54,15 @@ Payara Server has the following types of GMS settings:
 
 The following GMS configuration settings are used in GMS for group discovery and failure detection:
 
-`group-discovery-timeout-in-millis`::
+*`group-discovery-timeout-in-millis`*:
 Indicates the amount of time (in milliseconds) an instance's GMS module will wait during instance startup for discovering other members of the group.
 +
 The `group-discovery-timeout-in-millis` timeout value should be set to the default or higher. The default is 5000.
 
-`max-missed-heartbeats`::
+*`max-missed-heartbeats`*:
 Indicates the maximum number of missed heartbeats that the health monitor counts before the instance can be marked as a suspected failure. GMS also tries to make a peer-to-peer connection with the suspected member. If the maximum number of missed heartbeats is exceeded and peer-to-peer connection fails, the member is marked as a suspected failure. The default value is `3`.
 
-`heartbeat-frequency-in-millis`::
+*`heartbeat-frequency-in-millis`*:
 Indicates the frequency (in milliseconds) at which a heartbeat is sent by each server instance to the cluster.
 +
 The failure detection interval is the `max-missed-heartbeats` multiplied by the `heartbeat-frequency-in-millis`. Therefore, the combination of defaults, 3 multiplied by 2000 milliseconds, results in a failure detection interval of 6 seconds.
@@ -73,12 +73,12 @@ However, lowering this value could result in false positives because you could p
 +
 The default value is `2000`.
 
-`verify-failure-waittime-in-millis`::
+*`verify-failure-waittime-in-millis`*:
 Indicates the verify suspect protocol's timeout used by the health monitor. After a member is marked as suspect based on missed heartbeats and a failed peer-to-peer connection check, the verify suspect protocol is activated and waits for the specified timeout to check for any further health state messages received in that time, and to see if a peer-to-peer connection can be made with the suspect member. If not, then the member is marked as failed and a failure notification is sent.
 +
 The default value is `1500`.
 
-`verify-failure-connect-timeout-in-millis`::
+*`verify-failure-connect-timeout-in-millis`*:
 Indicates the time it takes for the GMS to detect a hardware or network failure of a server instance. Be careful not to set this value too low. The smaller this timeout value is, the greater the chance of detecting false failures. That is, the instance has not failed but doesn't respond within the short window of time.
 +
 The default value is `10000`.
@@ -346,24 +346,24 @@ GMS_TCPSTARTPORT=start-port:GMS_TCPENDPORT=end-port cluster-name
 asadmin> create-cluster --config configuration --properties GMS_DISCOVERY_URI_LIST=discovery-instances:GMS_LISTENER_PORT=gms-port cluster-name
 ----
 
-configuration::
+*configuration*:
   An existing named configuration that the cluster is to reference.
-multicast-address::
+*multicast-address*:
   The address on which GMS listens for group events.
-multicast-port::
+*multicast-port*:
   The port number of the communication port on which GMS listens for
   group events.
-max-iterations::
+*max-iterations*:
   The maximum number of iterations or transmissions that a multicast message for GMS events can experience before the message is discarded.
-discovery-instances::
+*discovery-instances*:
   Instances to use for discovering the cluster.
-gms-port::
+*gms-port*:
   The port number of the port on which the cluster listens for messages from GMS.
-start-port::
+*start-port*:
   The lowest port number in the range of ports from which GMS selects a TCP port on which to listen. The default is 9090.
-end-port::
+*end-port*:
   The highest port number in the range of ports from which GMS selects a TCP port on which to listen. The default value is 9200.
-cluster-name::
+*cluster-name*:
   Your choice of name for the cluster that you are creating.
 . If necessary, create a system property to represent the IP address of the network interface on the DAS host to which GMS binds. This step is necessary only if the DAS is running on a multihome host.
 +
@@ -372,9 +372,9 @@ cluster-name::
 asadmin> create-system-properties
 GMS-BIND-INTERFACE-ADDRESS-cluster-name=das-bind-address
 ----
-cluster-name::
+*cluster-name*:
   The name that you assigned to the cluster in Step 2.
-das-bind-address::
+*das-bind-address*:
   The IP address of the network interface on the DAS host to which GMS binds.
 
 This example creates a cluster that is named `ltscluster` for which port 1169 is to be used for secure IIOP connections. Because the `--config` option is not specified, the cluster references a copy of the named configuration `default-config` that is named `ltscluster-config`.
@@ -468,7 +468,7 @@ Follow these steps:
 ----
 asadmin> list-clusters cluster-name
 ----
-cluster-name::
+*cluster-name*:
   The name of the cluster that you are deleting.
 . Confirm that the cluster contains no instances.
 +
@@ -476,7 +476,7 @@ cluster-name::
 ----
 asadmin> list-instances cluster-name
 ----
-cluster-name::
+*cluster-name*:
   The name of the cluster that you are deleting.
 . Run the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-cluster.adoc[`delete-cluster`] subcommand.
 +
@@ -484,7 +484,7 @@ cluster-name::
 ----
 asadmin> delete-cluster cluster-name
 ----
-cluster-name::
+*cluster-name*:
   The name of the cluster that you are deleting.
 
 This example confirms that the cluster `adccluster` is stopped and contains no instances and deletes the cluster `adccluster`.

@@ -34,14 +34,14 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--name`::
+*`--name`*:
   The name of the environment entry that is to be set. The name is a JNDI name relative to the `java:comp/env` context. The name must be unique within a deployment component.
-`--type`::
+*`--type`*:
   The fully-qualified Java type of the environment entry value that is expected by the application's code. This type must be one of the following Java types: +
   * `java.lang.Boolean`
   * `java.lang.Byte`
@@ -52,11 +52,11 @@ asadmin-options::
   * `java.lang.Long`
   * `java.lang.Short`
   * `java.lang.String`
-`--value`::
+*`--value`*:
   The value to which the environment entry is to be set. If the `--type` is `java.lang.Character`, the value must be a single character.
   Otherwise, the value must be a string that is valid for the constructor of the specified type. +
   Either the `--value` option or the `--ignoredescriptoritem` option must be set.
-`--ignoredescriptoritem`::
+*`--ignoredescriptoritem`*:
   Specifies whether the environment entry is ignored if it is set in the application's deployment descriptor. When an environment entry is
   ignored, the application behaves as if the entry had never been set in the application's deployment descriptor. The behavior of an
   application in this situation depends on the application. +
@@ -71,17 +71,17 @@ NOTE: Do not use the `--ignoredescriptoritem` option to unset an environment ent
 subcommand. Instead, use the xref:technical-documentation/payara-server-documentation/command-reference/unset-web-env-entry.adoc#unset-web-env-entry[`unset-web-env-entry`]
 subcommand for this purpose.
 
-`--description`::
+*`--description`*:
   An optional textual description of the environment entry that is being set.
 
 [[operands]]
 == Operands
 
-application-name::
+*application-name*:
   The name of the application. This name can be obtained from the Administration Console or by using the
   xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`] subcommand. +
   The application must already be deployed. Otherwise, an error occurs.
-module::
+*module*:
   The relative path to the module within the application's enterprise archive (EAR) file. The path to the module is specified in the
   `module` element of the application's `application.xml` file. +
   module is required only if the environment entry applies to a web module of a Java EE application. If specified, module must follow
@@ -127,9 +127,9 @@ Command set-web-env-entry executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

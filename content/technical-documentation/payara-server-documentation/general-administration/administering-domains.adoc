@@ -145,68 +145,68 @@ Your configuration changes will be included in the template that you create from
 A domain's `domain.xml` file is located in the domain-dir`/config` directory.
 . In a plain text editor, edit the file that you copied to replace with tokens values that are to be substituted when a domain is created. +
 Each token is identified as `token-name` where token-name is one of the following names:
-`ADMIN_PORT`::
+*`ADMIN_PORT`*:
   Represents the port number of the HTTP port or the HTTPS port for administration. This token is replaced with one of the following
   values in the command to create a domain from the template: +
   * The value of the `--adminport` option
   * The value of the `domain.adminPort` property
-`CONFIG_MODEL_NAME`::
+*`CONFIG_MODEL_NAME`*:
   Represents the name of the configuration that is created for the domain that is being created. This token is replaced with the string `server-config`.
-`DOMAIN_NAME`::
+*`DOMAIN_NAME`*:
   Represents the name of the domain that is being created. This token is replaced with the operand of `create-domain` subcommand.
-`HOST_NAME`::
+*`HOST_NAME`*:
   Represents the name of the host on which the domain is being created. This token is replaced with the fully qualified host name of the host
   where the domain is being created.
-`HTTP_PORT`::
+*`HTTP_PORT`*:
   Represents the port number of the port that is used to listen for HTTP requests. This token is replaced with one of the following values in
   the command to create a domain from the template: +
   * The value of the `--instanceport` option
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `domain.instancePort` property
-`HTTP_SSL_PORT`::
+*`HTTP_SSL_PORT`*:
   Represents the port number of the port that is used to listen for secure HTTP requests. This token is replaced with one of the following
   values in the command to create a domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `http.ssl.port` property
-`JAVA_DEBUGGER_PORT`::
+*`JAVA_DEBUGGER_PORT`*:
   Represents the port number of the port that is used for connections to the
   http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/architecture.html[Java Platform Debugger Architecture (JPDA)] debugger. This token is
   replaced with one of the following values in the command to create a domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `java.debugger.port` property
-`JMS_PROVIDER_PORT`::
+*`JMS_PROVIDER_PORT`*:
   Represents the port number for the Java Message Service provider. This token is replaced with one of the following values in the command to
   create a domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `jms.port` property
-`JMX_SYSTEM_CONNECTOR_PORT`::
+*`JMX_SYSTEM_CONNECTOR_PORT`*:
   Represents the port number on which the JMX connector listens. This token is replaced with one of the following values in the command to
   create a domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `domain.jmxPort` property
-`ORB_LISTENER_PORT`::
+*`ORB_LISTENER_PORT`*:
   Represents the port number of the port that is used for IIOP connections. This token is replaced with one of the following values
   in the command to create a domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `orb.listener.port` property
-`ORB_MUTUALAUTH_PORT`::
+*`ORB_MUTUALAUTH_PORT`*:
   Represents the port number of the port that is used for secure IIOP connections with client authentication. This token is replaced with
   one of the following values in the command to create a domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `orb.mutualauth.port` property
-`ORB_SSL_PORT`::
+*`ORB_SSL_PORT`*:
   Represents the port number of the port that is used for secure IIOP connections. This token is replaced with one of the following values
   in the command to create a domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `orb.ssl.port` property
-`OSGI_SHELL_TELNET_PORT`::
+*`OSGI_SHELL_TELNET_PORT`*:
   Represents the port number of the port that is used for connections to the
   http://felix.apache.org/documentation/subprojects/apache-felix-remote-shell.html[Apache Felix Remote Shell] . This shell uses the Felix shell service to
   interact with the OSGi module management subsystem. This token is replaced with one of the following values in the command to create a
   domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `osgi.shell.telnet.port` property
-`SERVER_ID`::
+*`SERVER_ID`*:
   Represents the name of the DAS for the domain that is being created. This token is replaced with the string `server`. +
 . Create the domain that you want to be based on a custom template. +
 In the command to create the domain, pass the name of file that you edited in the previous step as the `--template` option of the
@@ -966,10 +966,10 @@ behavior of the domain, see the xref:ROOT:technical-documentation/payara-server-
 $ asadmin --host host-name --port old-port-number stop-domain
 ----
 
-host-name::
+*host-name*:
   The name of the host on which the DAS is running. If you run the `stop-domain` subcommand on the host where the DAS is running, you
   must specify the actual host name and not `localhost`. If you specify `localhost`, the `stop-domain` subcommand fails.
-old-port-number::
+*old-port-number*:
   The value of administration port number of the domain before you changed it in the preceding step.
 . Start the domain. +
 

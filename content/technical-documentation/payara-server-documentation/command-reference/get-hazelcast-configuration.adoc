@@ -22,18 +22,18 @@ This command can be used to retrieve the current Data Grid (Hazelcast) configura
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are executing this operation. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
 instance_name;;
 Applies to a specified server instance.
-`--checkEncrypted`::
+*`--checkEncrypted`*:
 This option helps check if encryption of data stored in the xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc[Domain Data Grid] store is enabled or disabled.
 
 [[examples]]
@@ -82,9 +82,9 @@ Command get-hazelcast-configuration executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

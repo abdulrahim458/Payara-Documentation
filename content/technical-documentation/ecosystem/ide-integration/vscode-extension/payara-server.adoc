@@ -9,7 +9,7 @@
 . Choose a name for the server.
 . Then select a domain from the list or create a new domain by pressing the *+* button.
 
-image::vscode-extension/payara-server/Add Payara Server VS Code.gif[Add Payara Server]
+*image*: vscode-extension/payara-server/Add Payara Server VS Code.gif[Add Payara Server]
 
 [[managing-server]]
 == Managing Payara Server from VS Code
@@ -25,7 +25,7 @@ Once Payara Server is added to VS Code it can be found under the Payara Servers 
 * Update admin credentials
 * Update JDK path
 
-image::vscode-extension/payara-server/start-payara-server.png[Start Payara Server]
+*image*: vscode-extension/payara-server/start-payara-server.png[Start Payara Server]
 
 [[manage-applications]]
 == Managing Applications on Payara Server
@@ -36,17 +36,17 @@ An application can be deployed to Payara Server easily though VS Code. Applicati
 
 Right-click on the application and select *Run on Payara Server* to deploy the application:
 
-image::vscode-extension/payara-server/deploy-application.png[Deploy application]
+*image*: vscode-extension/payara-server/deploy-application.png[Deploy application]
 
 Alternatively, an application can be deployed from the *Java Projects* interface:
 
-image::vscode-extension/payara-server/java-projects-deploy.png[Deploy application]
+*image*: vscode-extension/payara-server/java-projects-deploy.png[Deploy application]
 
 [[undeploy-applications]]
 === Undeploying Applications
 Deployed applications can be opened in the browser, undeployed or disabled by right-clicking on the application in the *Payara Servers* interface:
 
-image::vscode-extension/payara-server/list-application.png[Open application homepage]
+*image*: vscode-extension/payara-server/list-application.png[Open application homepage]
 
 [[deploy-to-docker-container]]
 == Deploy Applications in a Local Docker Container
@@ -126,8 +126,8 @@ Here's how you can make use of this feature:
 
 *Hot Deploy* and *Auto Deploy* can be enabled in Visual Studio Code IDE from the *Deployment Settings* of Payara Server:
 
-image::hot-auto-deploy/vscode-deployment-settings.png[Deployment Settings]
-image::hot-auto-deploy/vscode-deployment-settings-options.png[Enable Hot Deploy]
+*image*: hot-auto-deploy/vscode-deployment-settings.png[Deployment Settings]
+*image*: hot-auto-deploy/vscode-deployment-settings-options.png[Enable Hot Deploy]
 
 [[see-also]]
 == See Also

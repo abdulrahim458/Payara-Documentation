@@ -29,12 +29,12 @@ It functions as a combination of the `notification-configure` and `set-log-notif
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
 Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
 Displays the help text for the subcommand.
-`--target`::
+*`--target`*:
 This option helps specify the target on which you are configuring the notification service. Valid values are: +
 `server`;;
 Applies to the default server instance. This is the default value.
@@ -42,19 +42,19 @@ cluster_name;;
 Applies to every server instance in the cluster.
 instance_name;;
 Applies to a specified server instance.
-`--enabled`::
+*`--enabled`*:
 Defaults to `false`. Enables or disables the notification service
-`--dynamic`::
+*`--dynamic`*:
 Defaults to `false`. When set to `true`, applies the changes without a server restart.
-`--notifierEnabled`::
+*`--notifierEnabled`*:
 Defaults to `false`. Enables or disables the log notifier
-`--notifierDynamic`::
+*`--notifierDynamic`*:
 Defaults to `false`. When set to `true`, applies the changes to the log notifier without a server restart.
 +
 Otherwise, a restart is required.
-`--filter`::
+*`--filter`*:
 Defaults to `WARNING`. The notifier only responds to events at or above this level. (INFO, WARNING, SEVERE)
-`--useseparatelogfile`::
+*`--useseparatelogfile`*:
 Defaults to `false`. Whether to use a separate log file to store notifications.
 
 [[examples]]
@@ -70,9 +70,9 @@ asadmin set-notification-configuration --enabled=true --dynamic=true --notifierE
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
 subcommand executed successfully
-1::
+*1*:
 error in executing the subcommand
 
 *See Also*

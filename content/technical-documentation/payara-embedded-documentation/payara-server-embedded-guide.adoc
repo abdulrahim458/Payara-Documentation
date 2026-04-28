@@ -64,7 +64,7 @@ Payara Embedded has two distribution variants, `payara-embedded-all` and `payara
 To enable your applications to locate the class libraries for embedded
 Payara Server, add one of the following JAR files to your class path:
 
-`payara-embedded-all.jar`::
+*`payara-embedded-all.jar`*:
 Contains classes needed for deploying all Jakarta EE application types.
 Can be setup as a Maven dependency with the following GAV coordinates:
 +
@@ -78,7 +78,7 @@ Can be setup as a Maven dependency with the following GAV coordinates:
 </dependency>
 ----
 
-`payara-embedded-web.jar`::
+*`payara-embedded-web.jar`*:
 Contains classes needed for deploying strictly Jakarta EE web applications.
 Can be setup as a Maven dependency with the following GAV coordinates:
 +

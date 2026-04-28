@@ -22,23 +22,23 @@ The `set-fault-tolerance-configuration` provides a way to modify the configurati
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
 
-`--managedexecutorservicename`::
+*`--managedexecutorservicename`*:
 The Logical JNDI name of the Managed Executor Service to look up. Changes to this configuration require a restart of the server to take effect.
 +
 Defaults to `java:comp/DefaultManagedExecutorService`
 
-`--managedscheduledexecutorservicename`::
+*`--managedscheduledexecutorservicename`*:
 The Logical JNDI name of the Managed Scheduled Executor Service to look up. Changes to this configuration require a restart of the server to take effect.
 +
 Defaults to `java:comp/DefaultManagedScheduledExecutorService`
 
-`--target`::
+*`--target`*:
 Specifies the target of this command. +
 Valid values are as follows: +
 `server`;;
@@ -65,9 +65,9 @@ asadmin> set-fault-tolerance-configuration --managedexecutorservicename=java:com
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   subcommand executed successfully
-1::
+*1*:
   error in executing the subcommand
 
 *See Also*

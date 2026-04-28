@@ -48,23 +48,23 @@ This subcommand is supported in local mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--installdir`::
+*`--installdir`*:
   The absolute path to the parent of the base installation directory where the Payara Server software is installed on each host, for example, `/export/payara6/`. +
   The user that is running this subcommand must have write access to the specified directory. Otherwise, an error occurs. +
   The specified directory must contain the installation of the Payara Server software on the host. Otherwise, an error occurs. +
   The default is the parent of the base installation directory of the Payara Server software on the host where this subcommand is run.
-`--sshport`::
+*`--sshport`*:
   The port to use for SSH connections to the host where the Payara Server software is to be uninstalled. The default is 22.
-`--sshuser`::
+*`--sshuser`*:
   The user on the host where the Payara Server software is to be uninstalled that is to run the process for connecting through SSH to
   the host. The default is the user that is running this subcommand. To ensure that the DAS can read this user's SSH private key file, specify
   the user that is running the DAS process.
-`--sshkeyfile`::
+*`--sshkeyfile`*:
   The absolute path to the SSH private key file for user that the `--sshuser` option specifies. This file is used for authentication to
   the `sshd` daemon on the host. +
   The user that is running this subcommand must be able to reach the path to the key file and read the key file. +
@@ -73,7 +73,7 @@ asadmin-options::
   . `id_rsa`
   . `id_dsa`
   . `identity`
-`--force`::
+*`--force`*:
   Specifies whether the subcommand uninstalls the Payara Server software from a host even if a user-defined node resides on the host.
   Possible values are as follows: +
   `false`;;
@@ -87,7 +87,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-host-list::
+*host-list*:
   A space-separated list of the names of the hosts from which the Payara Server software is to be uninstalled.
 
 [[examples]]
@@ -132,9 +132,9 @@ Command uninstall-node-ssh executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*

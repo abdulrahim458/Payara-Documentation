@@ -38,12 +38,12 @@ This subcommand is supported in remote mode only.
 [[options]]
 == Options
 
-asadmin-options::
+*asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-`--help`::
-`-?`::
+*`--help`*:
+*`-?`*:
   Displays the help text for the subcommand.
-`--validate`::
+*`--validate`*:
   Specifies whether the subcommand validates the node. +
   Possible values are as follows: +
   `true`;;
@@ -54,7 +54,7 @@ asadmin-options::
 [[operands]]
 == Operands
 
-node-name::
+*node-name*:
   The name of the node to test. The node must be enabled for communication over SSH. Otherwise, an error occurs.
 
 [[examples]]
@@ -91,9 +91,9 @@ Command ping-node-ssh executed successfully.
 [[exit-status]]
 == Exit Status
 
-0::
+*0*:
   command executed successfully
-1::
+*1*:
   error in executing the command
 
 *See Also*
