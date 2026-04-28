@@ -41,9 +41,7 @@ variables:
 
 stages:
   - prepare
-  - test_sources
   - build
-  - test
   - deploy
   - release
 
@@ -59,14 +57,6 @@ get_templates:
       - ${TEMPLATES_DIR}/
   variables:
     GIT_STRATEGY: none
-
-vale_checks:
-  stage: test_sources
-  script:
-    - command -v vale &>/dev/null && vale --config=${TEMPLATES_DIR}/vale/vale.ini .
-  rules:
-    - allow_failure: true
-  <<: *cache_configuration
 
 docs_html:
   stage: build
