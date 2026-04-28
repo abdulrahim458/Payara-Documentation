@@ -158,6 +158,7 @@ push_docs_to_nexus:
       export TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
       export ZIP_FILE="docs-payara-${TIMESTAMP}-${CI_PIPELINE_ID}.zip"
       echo "Building ZIP ${ZIP_FILE} in ${ZIP_NEXUS_BUILD_DIR} for upload to Nexus"
+      rm -rf ${ZIP_NEXUS_BUILD_DIR}
       mkdir -p ${ZIP_NEXUS_BUILD_DIR}
      
       echo "Copy generated HTML"
@@ -166,13 +167,13 @@ push_docs_to_nexus:
      
       echo "Create ZIP with all the files"
       cd ${ZIP_NEXUS_BUILD_DIR}
-      zip -r ${ZIP_FILE} .
+      zip -r ${ZIP_FILE} html
      
       echo "Generated files:"
       ls -l
      
       echo "Uploading the ZIP to Nexus"
-      curl -f -v -u "${CM_NEXUS_USER}:${CM_NEXUS_PASS}" --upload-file ${ZIP_FILE} ${CM_NEXUS_PATH}/repository/docs/${DOCS_ID}/${ZIP_FILE}
+      curl --fail --show-error --retry 3 --retry-all-errors -u "${CM_NEXUS_USER}:${CM_NEXUS_PASS}" --upload-file ${ZIP_FILE} ${CM_NEXUS_PATH}/repository/docs/${DOCS_ID}/${ZIP_FILE}
   only:
     - main
   artifacts:
