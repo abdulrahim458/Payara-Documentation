@@ -1,0 +1,191 @@
+workflow:
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
+      when: never
+    - if: '$CI_COMMIT_BRANCH'
+      changes:
+        - content/**/*
+        - extensions/**/*
+        - config/**/*
+        - scripts/build-tpl.rb
+        - .gitlab-ci.yml
+        - project.properties
+        - toc.yaml
+
+variables:
+  GIT_STRATEGY: clone
+  GIT_DEPTH: 1
+  DOCS_ID: "payara"
+  TEMPLATES_DIR: docs_templates
+  HTML_BUILD_DIR: build/html
+  PDF_BUILD_DIR: build/pdf
+  TPL_BUILD_DIR: build/tpl
+  ZIP_NEXUS_BUILD_DIR: build/zip_nexus
+  TEST_DEPLOY_BASE_DIR: "/var/www/html/docs"
+  TEST_DEPLOY_DIR_HTML: $TEST_DEPLOY_BASE_DIR/$DOCS_ID/$CI_COMMIT_REF_NAME
+  TEST_DEPLOY_DIR_PDF_TPL: $TEST_DEPLOY_BASE_DIR/$DOCS_ID
+  ARCHIVE_DIR: $TEST_DEPLOY_BASE_DIR/archive/$DOCS_ID/$RELEASE_ID
+  PROD_SERVER: azuldocs@cdn-access.azulsystems.com
+  STAGING_DIR: "/mnt/efs/docs.azul.com/staging-public_html/$DOCS_ID"
+  PROD_DIR: "/mnt/efs/docs.azul.com/public_html/$DOCS_ID"
+
+# template for jobs that use HTML templates (and therefore depend on the "get_templates" job)
+.cache_job: &cache_configuration
+  needs: [get_templates]
+  cache:
+    paths:
+      - ${TEMPLATES_DIR}/
+      - vendor/bundle/
+    policy: pull
+
+stages:
+  - prepare
+  - test_sources
+  - build
+  - test
+  - deploy
+  - release
+
+get_templates:
+  stage: prepare
+  script:
+    - rm -rf ${TEMPLATES_DIR}
+    - git clone --depth 1 https://gitlab.azulsystems.com/docs/docs-templates ${TEMPLATES_DIR}
+    #- git clone --branch feature/ZULU-56140 --depth 1 https://gitlab.azulsystems.com/docs/docs-templates ${TEMPLATES_DIR}/
+    - ls -lR ${TEMPLATES_DIR}
+  cache:
+    paths:
+      - ${TEMPLATES_DIR}/
+  variables:
+    GIT_STRATEGY: none
+
+vale_checks:
+  stage: test_sources
+  script:
+    - command -v vale &>/dev/null && vale --config=${TEMPLATES_DIR}/vale/vale.ini .
+  rules:
+    - allow_failure: true
+  <<: *cache_configuration
+
+docs_html:
+  stage: build
+  script:
+    - |
+      echo "Building HTML for: ${VERSION}"
+      ruby ${TEMPLATES_DIR}/build.rb \
+        --export-public-markdown --generate-sitemap --site-url https://docs.azul.com/payara \
+        --generate-index --index-group-id "payara" --index-group-label "Payara" \
+        -d content -o ${HTML_BUILD_DIR} 
+      
+      echo "Generated HTML versions:"
+      ls -l ${HTML_BUILD_DIR}
+  artifacts:
+    paths:
+      - $HTML_BUILD_DIR
+    name: docs-html
+  interruptible: true
+  <<: *cache_configuration
+
+deploy_to_test_server:
+  stage: deploy
+  resource_group: test_server
+  needs: [docs_html]
+  script:
+    - |
+      rm -rf ${TEST_DEPLOY_DIR_HTML}/
+        
+      echo "Uploading HTML ${VERSION} to TEST server in directory '${TEST_DEPLOY_DIR_HTML}'"
+      mkdir -p ${TEST_DEPLOY_DIR_HTML}
+      cp -R ${HTML_BUILD_DIR}/${VERSION}/* ${TEST_DEPLOY_DIR_HTML}/
+    
+      PDF_DIR_SRC=${PDF_BUILD_DIR}/${VERSION}
+      PDF_DIR_DEST=${TEST_DEPLOY_DIR_PDF_TPL}/pdfs/${VERSION}
+      if [ -d "${PDF_DIR_SRC}" ]; then
+        if [ "$(ls -A ${PDF_DIR_SRC})" ]; then
+          echo "Uploading PDFs from ${PDF_DIR_SRC} to TEST server in directory '${PDF_DIR_DEST}'"
+          mkdir -p ${PDF_DIR_DEST}
+          cp ${PDF_DIR_SRC}/* ${PDF_DIR_DEST}
+        else
+          echo "No PDFs to be uploaded for ${VERSION}, ${PDF_DIR_SRC} is empty"
+        fi
+      fi
+    
+      TLPS_DIR_SRC=${TPL_BUILD_DIR}/${VERSION}
+      TLPS_DIR_DEST=${TEST_DEPLOY_DIR_PDF_TPL}/tpls/${VERSION}
+      if [ -d "${TLPS_DIR_SRC}" ]; then
+        if [ "$(ls -A ${TLPS_DIR_SRC})" ]; then
+          echo "Uploading TPLs from ${TLPS_DIR_SRC} to TEST server in directory '${TLPS_DIR_DEST}'"
+          mkdir -p ${TLPS_DIR_DEST}
+          cp ${TLPS_DIR_SRC}/* ${TLPS_DIR_DEST}
+        else
+          echo "No TPLs to be uploaded for ${VERSION}, ${TLPS_DIR_SRC} is empty"
+        fi
+      fi
+  variables:
+    GIT_STRATEGY: none
+  environment:
+    name: test
+    url: http://doc-builder.azulsystems.com/$DOCS_ID/$CI_COMMIT_REF_NAME
+
+deploy_to_staging_server:
+  stage: deploy
+  needs: [docs_html]
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - |
+      echo "Uploading HTML ${VERSION} to STAGING server"
+      rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${STAGING_DIR}
+
+deploy_to_prod_server:
+  stage: deploy
+  needs: [docs_html, deploy_to_staging_server]
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - |
+      echo "Uploading HTML ${VERSION} to PRODUCTION server"
+      rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${PROD_DIR}
+    # Pipeline triggers must be defined in each project separately in their Settings > CI/CD Settings > Pipeline trigger tokens
+    # Start the purge CDN cache pipeline
+    - "curl -X POST -F token=${CICD_TRIGGER_TOKEN_PURGE} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2016/trigger/pipeline"
+    # Start the Docs Index Generator pipeline
+    #- "curl -X POST -F token=${CICD_TRIGGER_TOKEN_INDEXER} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/1622/trigger/pipeline"
+    # Start the Docs Quality Control pipeline
+    #- "curl -X POST -F token=${CICD_TRIGGER_TOKEN_QUALITY} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2038/trigger/pipeline"
+  when: manual
+  only:
+    - main
+
+push_docs_to_nexus:
+  stage: deploy
+  needs: [docs_html]
+  variables:
+    GIT_STRATEGY: none
+  script:
+    - |
+      export TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
+      export ZIP_FILE="docs-payara-${TIMESTAMP}-${CI_PIPELINE_ID}.zip"
+      echo "Building ZIP ${ZIP_FILE} in ${ZIP_NEXUS_BUILD_DIR} for upload to Nexus"
+      mkdir -p ${ZIP_NEXUS_BUILD_DIR}
+     
+      echo "Copy generated HTML"
+      mkdir -p ${ZIP_NEXUS_BUILD_DIR}/html/
+      cp -R ${HTML_BUILD_DIR}/* ${ZIP_NEXUS_BUILD_DIR}/html/
+     
+      echo "Create ZIP with all the files"
+      cd ${ZIP_NEXUS_BUILD_DIR}
+      zip -r ${ZIP_FILE} .
+     
+      echo "Generated files:"
+      ls -l
+     
+      echo "Uploading the ZIP to Nexus"
+      curl -f -v -u "${CM_NEXUS_USER}:${CM_NEXUS_PASS}" --upload-file ${ZIP_FILE} ${CM_NEXUS_PATH}/repository/docs/${DOCS_ID}/${ZIP_FILE}
+  only:
+    - main
+  artifacts:
+    paths:
+      - ${ZIP_NEXUS_BUILD_DIR}/*.zip
+    name: nexus-upload

@@ -1,3 +1,0 @@
-= Overview of Payara Server Deployment Planning
-
-This section explains how to build a production deployment of Payara Server.
