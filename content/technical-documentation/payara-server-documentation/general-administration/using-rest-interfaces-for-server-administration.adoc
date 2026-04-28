@@ -8,7 +8,7 @@ You can access the Payara Server REST interfaces through client applications suc
 
 * Web browsers
 * REST API Clients
-* http://curl.haxx.se/[cURL]
+* http://curl.haxx.se/[cURL^]
 
 It allows execution of administration commands in a similar way as the `asadmin` utility, such as:
 
