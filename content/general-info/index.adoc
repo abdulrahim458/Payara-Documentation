@@ -13,6 +13,7 @@ The Payara Platform Enterprise Edition project is released each month. Each rele
 
 The general format of a Payara Platform version number is:
 
+[source, text]
 ----
 Major Version Number. Minor Version Number. Patch Version Number
 ----
