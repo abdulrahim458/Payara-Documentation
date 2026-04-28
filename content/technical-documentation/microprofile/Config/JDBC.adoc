@@ -16,7 +16,7 @@ IMPORTANT: The type of the database columns for the _key_ and _value_ columns ne
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `JDBC`.
 
-image:microprofile/config/jdbc/admin-console-example.png[Payara Server Administration Console configuration route]
+image:microprofile/config/jdbc/admin-console-example.png[alt="Payara Server Administration Console configuration route",width=600px]
 
 From here you configure the JNDI name of the database JDBC resources, name of the database table, name of the key column containing the key and name of the column containing the value.
 
@@ -36,7 +36,7 @@ Once all required options are configured. You should be able to read configurati
 
 For example, let's look at the following diagram. It shows a table named Books with columns ISBN, Author and Title.
 
-image:microprofile/config/jdbc/database-example.png[Database Example]
+image:microprofile/config/jdbc/database-example.png[alt="Database Example",width=600px]
 
 If the key column name is set to `ISBN` and the value column name to `Title`. You can get the value of the Title column in relation to the ISBN column using the following command along with the ISBN value:
 

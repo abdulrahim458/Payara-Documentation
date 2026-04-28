@@ -40,7 +40,7 @@ This means that the asadmin recorder will remain enabled or disabled across serv
 
 To configure the asadmin recorder, navigate to the following page in the admin console: _server -> Asadmin Recorder_:
 
-image:recorder/recorder-config.png[Asadmin Recorder configuration]
+image:recorder/recorder-config.png[alt="Asadmin Recorder configuration",width=600px]
 
 You will be presented with the following configuration options:
 
@@ -100,7 +100,7 @@ This service can be configured from the admin console and from the command line.
 
 The auditing service configuration can be found in the web console under `Configurations` -> `<configuration-name>` -> `Security` -> `Admin Audit`:
 
-image:admin-console/admin-audit-menu.png[Admin Audit Service in Web Console]
+image:admin-console/admin-audit-menu.png[alt="Admin Audit Service in Web Console",width=600px]
 
 Once enabled, actions in the admin console that have a corresponding `asadmin` command will be sent to the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc[Notification service].
 
@@ -115,7 +115,7 @@ The *Audit Level* options sets the level of operations that will be logged:
 
 Aside from this configuration setting, you can also define which notifiers will be used to relay the admin console audit events by moving them to the **Selected Notifiers** box.
 
-image:request-tracing/select-notifiers.png[Activate Notifiers in the Admin Console]
+image:request-tracing/select-notifiers.png[alt="Activate Notifiers in the Admin Console",width=600px]
 
 IMPORTANT: Keep in mind that for audit events to be relayed to the
 selected notifiers, both the Notification Service and each selected notifier must be enabled and configured beforehand.
@@ -140,7 +140,7 @@ One way to ensure no accidental changes are made would be to revoke access to th
 
 As an alternative, Payara Server ships with a configurable warning bar to ensure any user will see a warning message in while viewing the console:
 
-image:admin-console/environment-warning.png[alt="Payara Server Environment Warning"]
+image:admin-console/environment-warning.png[alt="Payara Server Environment Warning",width=600px]
 
 The warning can be configured in the admin console as seen in the screenshot above. There is a new "_Environment Warning_" tab in the "_Domain_" section which allows you to configure the text and colours of the warning message.
 

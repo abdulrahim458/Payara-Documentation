@@ -13,7 +13,7 @@ If you haven't already, you will need to register an Azure Active Directory (Azu
 
 NOTE: If you have access to multiple tenants and want to select a specific tenant to register with your application, use the Directory + subscription filter in the top menu.
 
-image:microprofile/config/cloud/azure/application-registration.png[Application Registration]
+image:microprofile/config/cloud/azure/application-registration.png[alt="Application Registration",width=600px]
 
 Then on the _Register an application_ page:
 
@@ -23,7 +23,7 @@ Then on the _Register an application_ page:
 
 Once the application registration is completed, the service principal is automatically created in your home tenant.
 
-image:microprofile/config/cloud/azure/application-registration-configuration.png[Application Registration Configuration]
+image:microprofile/config/cloud/azure/application-registration-configuration.png[alt="Application Registration Configuration",width=600px]
 
 [[app-api-permissions]]
 == Application API Permissions
@@ -40,7 +40,7 @@ You can learn more about permissions and consent https://docs.microsoft.com/en-g
 . Tick the _user_impersonation_ checkbox
 . Click Add permissions
 +
-image:microprofile/config/cloud/azure/API-permissions.png[API Permissions]
+image:microprofile/config/cloud/azure/API-permissions.png[alt="API Permissions",width=600px]
 
 [[adding-credentials]]
 == Adding Credentials
@@ -57,7 +57,7 @@ You can upload your certificate for authentication using the following steps:
 
 Once the certificate is successfully uploaded, it should generate a _Thumbprint_, which will be required when we configure the _Azure Config_ Source.
 
-image:microprofile/config/cloud/azure/certificate-upload.png[Certificate Upload]
+image:microprofile/config/cloud/azure/certificate-upload.png[alt="Certificate Upload",width=600px]
 
 [[create-key-vault]]
 == Create a Key Vault
@@ -71,7 +71,7 @@ To store your secrets securely, you will need to create a key vault.
 
 NOTE: Although key vault allows storing of keys, secrets, and certificates, _Azure Config Source_ currently only support secrets.
 
-image:microprofile/config/cloud/azure/key-vault-creation.png[Key Vault Creation]
+image:microprofile/config/cloud/azure/key-vault-creation.png[alt="Key Vault Creation",width=600px]
 
 In the above diagram, the Basic section has been configured and the remaining sections have been left to their default settings. You can configure other sections, such as Access policy and Networking, to fit your requirements.
 
@@ -88,7 +88,7 @@ To give your application access to the secrets in a key vault, you will need to 
 . Click _Add_
 . Click _Save_ to commit your changes
 
-image:microprofile/config/cloud/azure/access-policy-configuration.png[Access Policy Configuration]
+image:microprofile/config/cloud/azure/access-policy-configuration.png[alt="Access Policy Configuration",width=600px]
 
 [[add-secret-key-vault]]
 === Add a Secret to Key Vault
@@ -101,7 +101,7 @@ To add a secret to the key vault:
 . Provide relevant information on the Create a secret page
 . Click Create
 
-image:microprofile/config/cloud/azure/secret-creation.png[Secret Creation]
+image:microprofile/config/cloud/azure/secret-creation.png[alt="Secret Creation",width=600px]
 
 [[payara-server-configuration]]
 == Configuration in Payara Server
@@ -115,7 +115,7 @@ NOTE: Your private key file will be copied into `domain-dir/config`.
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `Azure Secrets`.
 
-image:microprofile/config/cloud/azure/admin-console-config.png[Payara Server Administration Console configuration route]
+image:microprofile/config/cloud/azure/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=600px]
 
 From here, you can pass the name of the key vault, tenant ID and client ID of the application, absolute path to the private key file and thumbprint of the certificate.
 

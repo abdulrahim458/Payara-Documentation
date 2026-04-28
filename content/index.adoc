@@ -1,6 +1,6 @@
 = Overview
 
-image:payara-logo-blue.png[Payara Logo]
+image:payara-logo-blue.png[alt="Payara Logo",width=600px]
 
 == Introduction
 

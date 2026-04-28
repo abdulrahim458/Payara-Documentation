@@ -58,7 +58,7 @@ As with any other services available in Payara Server, the Request Tracing servi
 
 To configure the Request Tracing Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Request Tracing_:
 
-image:request-tracing/configuration-admin-console.png[Request Tracing Configuration in the Admin Console]
+image:request-tracing/configuration-admin-console.png[alt="Request Tracing Configuration in the Admin Console",width=600px]
 
 Check the *Enabled* box (and the *Dynamic* box too if you don't want to restart the domain) to switch the request tracing service on.
 
@@ -82,7 +82,7 @@ You can configure the request tracing service settings using the following attri
 
 Aside from this configuration settings, you can also define which notifiers will be used to relay the request tracing events by moving them to the **Selected Notifiers** box.
 
-image:request-tracing/select-notifiers.png[Activate Notifiers in the Admin Console]
+image:request-tracing/select-notifiers.png[alt="Activate Notifiers in the Admin Console",width=600px]
 
 IMPORTANT: Keep in mind that for request tracing events to be relayed to the selected notifiers, both the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc[Notification Service] and each respective notifier must be enabled first.
 

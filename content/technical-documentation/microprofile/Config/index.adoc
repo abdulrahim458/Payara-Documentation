@@ -173,7 +173,7 @@ Configuration variables ordinal values can be configured by using Admin Console 
 
 To configure the ordinal value in the Admin Console, go to Configuration → [instance-configuration (like server-config)] -> MicroProfile -> Config -> Ordinal:
 
-image:microprofile/config-ordinal.png[Set Config Ordinal]
+image:microprofile/config-ordinal.png[alt="Set Config Ordinal",width=600px]
 
 [[using-asadmin-commands]]
 === Using Asadmin Commands
@@ -195,7 +195,7 @@ Configuration properties can be configured by using Admin Console or Asadmin com
 
 To configure the property in the Admin Console, go to Configuration → [instance-configuration (like server-config)] -> MicroProfile -> Config -> Property:
 
-image:microprofile/config-property.png[Set Config Property]
+image:microprofile/config-property.png[alt="Set Config Property",width=600px]
 
 [[using-asadmin-commands-get]]
 === Using Asadmin Commands

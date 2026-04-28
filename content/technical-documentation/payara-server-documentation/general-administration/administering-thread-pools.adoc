@@ -165,7 +165,7 @@ To configure the EJB thread pool using the admin console, go to Configuration â†
 
 Add a new additional property, set the Name to the property name from the table above of the property you want to set, and set the Value to a valid value for that property.
 
-image:ejb/ejb-thread-pool-admin-console-configuration.png[Admin Console Configuration]
+image:ejb/ejb-thread-pool-admin-console-configuration.png[alt="Admin Console Configuration",width=600px]
 
 === Using the Asadmin CLI
 To configure the EJB thread pool with the asadmin CLI, execute the following set command, replacing the configName with the name of your configuration, the property name with a property name from the table above and a valid value for that property.

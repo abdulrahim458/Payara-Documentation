@@ -15,7 +15,7 @@ IMPORTANT: If you are using IntelliJ IDEA Ultimate, you should only install the 
 . Click the **Install** button for *Payara Tools*
 . Click **OK** to apply the changes and restart IntelliJ IDEA if prompted
 
-image:intellij-plugin/install-plugin.png[Install IntelliJ Plugin]
+image:intellij-plugin/install-plugin.png[alt="Install IntelliJ Plugin",width=600px]
 
 [[intellij-tools-features]]
 == Payara IntelliJ Tools features

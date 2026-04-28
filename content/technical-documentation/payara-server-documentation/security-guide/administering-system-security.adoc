@@ -192,7 +192,7 @@ Roles are defined in the standard deployment descriptor for the application. The
 users, groups, and roles, like this:
 
 .Role Mappings
-image:security/securityrolemapping.png["Shows how users are assigned to groups, how users and groups are assigned to roles, and how applications use groups and roles."]
+image:security/securityrolemapping.png[alt=""Shows how users are assigned to groups",how users and groups are assigned to roles, and how applications use groups and roles.",width=600px]
 
 IMPORTANT: By default, group principal names are mapped to roles of the same name. Therefore, the Default Principal To Role Mapping setting is enabled by default on the _Security_ page of the Administration Console. +
 With this setting enabled, if the group name defined on Payara Server matches the role name defined in the application, there is no need to use the runtime deployment descriptor to provide a mapping. The application server will implicitly make this mapping, as long as the names of the groups and roles match (case sensitivity considered).
@@ -1195,7 +1195,7 @@ To use the Administration Console to administer JACC providers, perform the foll
 . Select _Security_ and expand the entry.
 . Select _JACC Providers_. The existing JACC providers are shown on this page.
 +
-image:security/jacc-providers.png[Configured JACC Providers]
+image:security/jacc-providers.png[alt="Configured JACC Providers",width=600px]
 +
 . To create a new provider, click _New_.
 +

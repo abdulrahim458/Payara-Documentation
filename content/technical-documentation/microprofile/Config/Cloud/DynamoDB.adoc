@@ -9,17 +9,17 @@ In order to access DynamoDB, you need an AWS access key. If you don't have an ac
 
 From the AWS console, visit the _IAM Users_ dashboard by searching 'IAM' in the top search bar. From here, head to _Users_ in the left menu. You'll see all your IAM users associated with this region.
 
-image:microprofile/config/cloud/aws/iam-users.png[AWS IAM users]
+image:microprofile/config/cloud/aws/iam-users.png[alt="AWS IAM users",width=600px]
 
 From here you can create a new IAM user. Skip this step if you already have an IAM user you want to use.
 
-image:microprofile/config/cloud/aws/new-iam-user.png[AWS new IAM user]
+image:microprofile/config/cloud/aws/new-iam-user.png[alt="AWS new IAM user",width=600px]
 
 Set the IAM username. This isn't used by Payara Server but will be helpful for your own reference. Make sure you enable _Programmatic access_, as this will be used by Payara Server to access your AWS Secrets.
 
 Next, select your IAM user permissions.
 
-image:microprofile/config/cloud/aws/iam-user-permissions.png[AWS IAM user permissions]
+image:microprofile/config/cloud/aws/iam-user-permissions.png[alt="AWS IAM user permissions",width=600px]
 
 Whether you assign a group or select individual permissions, make sure the IAM user contains the _SecretsManagerReadWrite_ permission, which will allow the user access to your secrets.
 
@@ -38,7 +38,7 @@ IMPORTANT: The type of the database columns for the `key` and `value` columns ne
 
 To find the region in the AWS console, check the top right dropdown:
 
-image:microprofile/config/cloud/aws/region.png[AWS Region Selection]
+image:microprofile/config/cloud/aws/region.png[alt="AWS Region Selection",width=600px]
 
 NOTE: The region name is the snake-case notation, not the full words. E.g. `eu-west-2`.
 
@@ -49,7 +49,7 @@ To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliase
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `DynamoDB`.
 
-image:microprofile/config/cloud/dynamodb/admin-console-config.png[Payara Server Administration Console configuration route]
+image:microprofile/config/cloud/dynamodb/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=600px]
 
 From here you configure the name of the database table, the region name, name of the key column containing the key, name of the column containing the value and the maximum number of items to retrieves from the database table.
 
@@ -69,7 +69,7 @@ To configure the DynamoDB config source from the command line, use these command
 
 Once all required options are configured, you should be able to read configuration properties from a database table. For example, let's look at the following diagram. It shows a table named `Books` with columns ISBN, Author and Title.
 
-image:microprofile/config/cloud/dynamodb/database-example.png[Database Example]
+image:microprofile/config/cloud/dynamodb/database-example.png[alt="Database Example",width=600px]
 
 If the key column name is set to ISBN and the value column name to Title. You can get the value of the Title column in relation to the ISBN column using the following command along with the ISBN value:
 

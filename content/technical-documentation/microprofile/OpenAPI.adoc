@@ -271,7 +271,7 @@ On Payara Server, MicroProfile OpenAPI settings can be configured by using the A
 
 To configure the OpenAPI in the Admin Console, go to Configuration -> [instance-configuration (like `server-config`)] -> MicroProfile -> OpenAPI:
 
-image:microprofile/openapi.png[Set OpenAPI Configuration]
+image:microprofile/openapi.png[alt="Set OpenAPI Configuration",width=600px]
 
 [[using-asadmin-commands]]
 === Using Asadmin Commands

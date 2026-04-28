@@ -135,7 +135,7 @@ Jakarta Mail sessions are added from the `Resources` tab on the left pane of the
 
 Select `New` on the `Sessions` table to create a new Jakarta Mail session:
 
-image:mail/admin-console-javamail-location.png[image]
+image:mail/admin-console-javamail-location.png[alt="image",width=600px]
 
 Emails will be sent with a return address of `example@example.com`, using `SMTP` to send mail and `IMAP` to retrieve mail. With the current implementation of the Jakarta Mail API there is no alternative transport protocol provided by default, though as an alternative to the default store protocol of `imap`, `pop3` is available.
 
@@ -145,4 +145,4 @@ These allow for extra security when sending emails and will not always be requir
 
 The example below shows the configuration of a mail host:
 
-image:mail/admin-console-javamail-configuration.png[image]
+image:mail/admin-console-javamail-configuration.png[alt="image",width=600px]

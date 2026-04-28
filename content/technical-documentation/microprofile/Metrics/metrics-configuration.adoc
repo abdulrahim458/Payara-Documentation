@@ -10,7 +10,7 @@ Payara Micro doesn't have a convenient solution for its MicroProfile Metrics ser
 
 To configure the Metrics in the Admin Console, go to Configuration -> [instance-configuration (like `server-config`)] -> MicroProfile -> Metrics:
 
-image:microprofile/metrics.png[Set Metrics Configuration]
+image:microprofile/metrics.png[alt="Set Metrics Configuration",width=600px]
 
 [[using-asadmin-commands]]
 == Using Asadmin Commands

@@ -194,7 +194,7 @@ Click the _New_ button and enter the following values:
 
 Click Next and then click Finish on the next screen, accepting the default values.
 
-image:connection-pools/connection_pools_1.png[New JDBC Connection Pool]
+image:connection-pools/connection_pools_1.png[alt="New JDBC Connection Pool",width=600px]
 
 Add the following properties to the connection pool by going to the _Additional Properties_ tab of the connection pool:
 
@@ -209,7 +209,7 @@ Add the following properties to the connection pool by going to the _Additional 
 |connectionAttributes | |Other connection attributes (supported by the JDBC driver)
 |=======================================================================
 
-image:connection-pools/connection_pools_2.png[Connection pool properties]
+image:connection-pools/connection_pools_2.png[alt="Connection pool properties",width=600px]
 
 To test the connection attributes, go back to the _General_ tab and click the _Ping_ button at the top of the screen. You should see a message stating that the ping succeeded.
 
@@ -327,7 +327,7 @@ The minimum size of the connection pool ensures that a number of connections to 
 
 Click on the connection pool name and under the _Pool Settings_ section you will find Initial and Minimum Pool Size and Maximum Pool Size. Set these to your required sizes:
 
-image:connection-pools/connection_pools_3.png[Connection Pool sizes in the admin console]
+image:connection-pools/connection_pools_3.png[alt="Connection Pool sizes in the admin console",width=600px]
 
 [[setting-the-sizes-via-asadmin]]
 === Setting the sizes using administration commands
@@ -373,7 +373,7 @@ such as `org.glassfish.api.jdbc.validation.DerbyConnectionValidation` for a
 
 From the same screen, you can also set whether to close all connections on failure.
 
-image:connection-pools/connection_pools_4.png[Connection validation configuration in Admin console]
+image:connection-pools/connection_pools_4.png[alt="Connection validation configuration in Admin console",width=600px]
 
 Additional information regarding enabling connection validation through 'asadmin' commands, along with various options, is elaborated in the the xref:technical-documentation/application-development/using-the-jdbc-api-for-database-access.adoc[`Handling Invalid Connections`] section of our Payara Server Application Development JDBC documentation.
 
@@ -479,7 +479,7 @@ When selecting a value for Statement Leak Timeout In Seconds, make sure that:
 . Scroll down to _Connection Settings_
 . Set the _Connection Leak Timeout_ and _Statement Leak Timeout_ value in seconds
 
-image:connection-pools/connection_pools_5.png[Leak Detection setting in Admin console]
+image:connection-pools/connection_pools_5.png[alt="Leak Detection setting in Admin console",width=600px]
 
 [[setting-leak-detection-via-asadmin]]
 === Configuring Leak Detection using administration commands
@@ -526,7 +526,7 @@ SQL Tracing can be enabled through the Payara Server Web administration console.
 
 Then select the *Advanced Tab* in the main window of the administration console. Then select the checkbox next to *Log JDBC Calls* to enable logging of all SQL calls:
 
-image:advanced-jdbc/logjdbccall.png[Enabling SQL Tracing in the administration console]
+image:advanced-jdbc/logjdbccall.png[alt="Enabling SQL Tracing in the administration console",width=600px]
 
 [[asadmin-command-line-interface]]
 === Using Asadmin Commands
@@ -1288,7 +1288,7 @@ The activation of the collection is controlled by the monitoring service.
 
 When using the Web Administration console, go to _Configuration → [instance-configuration (like server-config)] → Monitoring:_ and select the level _High_ for the _JDBC Connection pool_ component.
 
-image:advanced-jdbc/activate-sql-statements.png[Activate JDBC Connection pool monitoring with administration console]
+image:advanced-jdbc/activate-sql-statements.png[alt="Activate JDBC Connection pool monitoring with administration console",width=600px]
 
 When using the _asadmin_ CLI, you can execute the following command to set the _Level Value_
 
@@ -1358,7 +1358,7 @@ There are a number of ways to configure the slow SQL threshold time on a JDBC co
 
 To configure slow SQL logging on a JDBC connection pool via the administration console, navigate to the Connection Pool's *Advanced Properties* tab. Then specify the *Slow Query Log Threshold* time in seconds or use a decimal value to signify milliseconds.
 
-image:advanced-jdbc/slowsqllogging.png[Slow SQL Logging settings in the administration console]
+image:advanced-jdbc/slowsqllogging.png[alt="Slow SQL Logging settings in the administration console",width=600px]
 
 TIP: setting the threshold to `-1` will disable the feature
 
@@ -1393,7 +1393,7 @@ SQL Trace Listeners can be enabled on a JDBC connection pool through the adminis
 
 Proceed to add the fully qualified class name of your SQL Trace Listener implementation class in the *SQL Trace Listeners* field:
 
-image:advanced-jdbc/sqltracelistener.png[Enabling SQL Tracing in the administration console]
+image:advanced-jdbc/sqltracelistener.png[alt="Enabling SQL Tracing in the administration console",width=600px]
 
 IMPORTANT: The implementation class must be on the server's _classpath_ for it to work correctly.
 

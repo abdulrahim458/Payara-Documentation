@@ -8,11 +8,11 @@ Asadmin commands can be sent from the Domain Administration Server (DAS) to Paya
 
 Sending an Asadmin command is performed through the Domain Data Grid. This Data Grid is powered by Hazelcast and is enabled by default. You can verify if it actived by looking under the _server-config_ configuration under the _Data Grid_ item.
 
-image:payara-micro/enable-hazelcast-on-das.png[Enable Hazelcast]
+image:payara-micro/enable-hazelcast-on-das.png[alt="Enable Hazelcast",width=600px]
 
 All the members can be seen under the _Data Grid_ entry of the Domain item on the left menu. At the bottom of the page, you will find a table filled with the Payara Micro instances:
 
-image:payara-micro/micro-instances-on-das.png[Micro Instances on DAS]
+image:payara-micro/micro-instances-on-das.png[alt="Micro Instances on DAS",width=600px]
 
 To send an administration command:
 
@@ -20,7 +20,7 @@ To send an administration command:
 . Enter the asadmin command in the textbox
 . Press *Send Asadmin Command*
 
-image:payara-micro/sending-asadmin-command-from-the-das-to-micro.png[Send commands from DAS]
+image:payara-micro/sending-asadmin-command-from-the-das-to-micro.png[alt="Send commands from DAS",width=600px]
 
 [[sending-asadmin-commands-from-the-command-line]]
 == Sending Asadmin Commands from the Command Line

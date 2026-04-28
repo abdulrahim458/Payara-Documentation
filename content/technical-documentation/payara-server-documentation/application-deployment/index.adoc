@@ -129,7 +129,7 @@ The following figure shows separately-deployed EJB, web, and application client 
 
 [[figure-1-1-module-based-assembly-and-deployment]]
 .*Figure 1-1 Module-Based Assembly and Deployment*
-image:app-deployment/dgdeploy3.png["Figure shows EJB, web, and application client module assembly and deployment."]
+image:app-deployment/dgdeploy3.png[alt=""Figure shows EJB",web, and application client module assembly and deployment.",width=600px]
 
 [[application-based-deployment]]
 ==== Application-Based Deployment
@@ -140,7 +140,7 @@ The following figure shows EJB, web, application client, and connector modules a
 
 [[figure-1-2-application-based-assembly-and-deployment]]
 .*Figure 1-2 Application-Based Assembly and Deployment*
-image:app-deployment/dgdeploya.png["Figure shows Jakarta EE application assembly and deployment."]
+image:app-deployment/dgdeploya.png[alt=""Figure shows Jakarta EE application assembly and deployment."",width=600px]
 
 [[access-to-shared-framework-classes]]
 === Access to Shared Framework Classes

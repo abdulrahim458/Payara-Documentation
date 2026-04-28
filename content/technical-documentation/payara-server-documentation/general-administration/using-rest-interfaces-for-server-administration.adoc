@@ -51,7 +51,7 @@ If the URL to a REST resource for Payara Server monitoring or configuration data
 The following figure shows the web page for the REST resource for managing a domain.
 
 .*Web Page for the REST Resource for Managing a Domain*
-image:administration/rest-management.png["REST resource for managing a domain."]
+image:administration/rest-management.png[alt=""REST resource for managing a domain."",width=600px]
 
 [[rest-urls-for-accessing-the-log-file]]
 === REST URLs for Accessing the Log File
@@ -1465,7 +1465,7 @@ The following figure shows the web page for the REST resource that provides clas
 //TODO - Update this image
 
 *Web Page for the REST Resource That Provides Class Loader Statistics*
-image:administration/rest-monitoring.png["REST resource that provides class loader statistics."]
+image:administration/rest-monitoring.png[alt=""REST resource that provides class loader statistics."",width=600px]
 
 [[formats-for-resource-representation-of-log-file-details]]
 == Formats for Resource Representation of Log File Details

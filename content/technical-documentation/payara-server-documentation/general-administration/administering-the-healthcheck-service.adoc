@@ -37,7 +37,7 @@ As with any other services available in Payara Server, the HealthCheck service c
 
 To configure the HealthCheck Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Healthcheck_:
 
-image:healthcheck/admin-console-configuration.png[HealthCheck Configuration in the Admin Console]
+image:healthcheck/admin-console-configuration.png[alt="HealthCheck Configuration in the Admin Console",width=600px]
 
 Check the *Enabled* box (and the *Dynamic* box too if you don't want to restart the domain) to switch the HealthCheck service on.
 
@@ -72,7 +72,7 @@ Each of the available checkers that are used to determine the server's health ca
 
 You can configure the settings for each checker on the respective tab in the web console. Here's a sample image with the current configuration for the *CPU Usage* checker:
 
-image:healthcheck/cpu-usage-checker-configuration.png[CPU Usage Checker Configuration in the Admin Console]
+image:healthcheck/cpu-usage-checker-configuration.png[alt="CPU Usage Checker Configuration in the Admin Console",width=600px]
 
 [[common-checker-configuration]]
 ==== Common HealthCheck Service Checkers Configuration
@@ -126,7 +126,7 @@ They do not have a threshold range configuration, instead opting for different a
 
 Here's a configuration sample of the *Hogging Threads* checker:
 
-image:healthcheck/hogging-threads-checker-configuration.png[Hogging Threads Checker Configuration in the Admin Console]
+image:healthcheck/hogging-threads-checker-configuration.png[alt="Hogging Threads Checker Configuration in the Admin Console",width=600px]
 
 The following are the attributes used to configure this checker:
 
@@ -135,7 +135,7 @@ The following are the attributes used to configure this checker:
 
 And here's a configuration sample for the *Stuck Threads* checker:
 
-image:healthcheck/stuck-threads-checker-configuration.png[Stuck Threads Checker Configuration in the Admin Console]
+image:healthcheck/stuck-threads-checker-configuration.png[alt="Stuck Threads Checker Configuration in the Admin Console",width=600px]
 
 The following are the attributes used to configure this checker:
 

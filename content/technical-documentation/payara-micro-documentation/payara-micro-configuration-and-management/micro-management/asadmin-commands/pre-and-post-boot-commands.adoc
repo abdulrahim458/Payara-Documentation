@@ -69,7 +69,7 @@ java -jar payara-micro.jar --prebootcommandfile prepare-resources.txt --postboot
 
 Examining the JAR structure will confirm that the scripts have been transferred correctly:
 
-image:payara-micro/uber-jar-command-scripts-structure.png[Uber JAR Command scripts structure]
+image:payara-micro/uber-jar-command-scripts-structure.png[alt="Uber JAR Command scripts structure",width=600px]
 
 [[boot-scripts-with-persistent-rootdir]]
 == Boot Scripts with Persistent Root Directory
