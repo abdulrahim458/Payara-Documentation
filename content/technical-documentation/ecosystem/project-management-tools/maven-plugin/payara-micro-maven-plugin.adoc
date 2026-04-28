@@ -395,7 +395,7 @@ NOTE: This goal is specifically designed for integration with the IDEs and Edito
 This can lead to significant savings of time when an application is redeployed and boost developer productivity even more.
 
 .Configuration tags
-[cols="2,1,7",options="header"]
+[cols="2,2,2,1,7",options="header"]
 |===
 |Element
 |System Property 
@@ -426,6 +426,7 @@ This can lead to significant savings of time when an application is redeployed a
 |PAYARA_KEEP_STATE
 |false
 |Persists session state across multiple re-deployments.
+
 |===
 
 [[dev-goal]]

@@ -74,7 +74,7 @@ This command can be used to upgrade Payara Server to the specified distribution 
 
 The command will also back up the old version and domains in the default location (`payara6/glassfish/domains`) or the location specified using the `--domaindir` option to allow for rolling back.
 [[command-options-1]]
-==== Command Options
+=== Command Options
 
 [cols="2,1,4,1,1",options="header",]
 |=======================================================================
@@ -89,7 +89,7 @@ The command will also back up the old version and domains in the default locatio
 |=======================================================================
 
 [[upgrade-example]]
-==== Example
+=== Example
 
 This example upgrades a Payara Web distribution to version 6.33.0
 
@@ -107,7 +107,7 @@ asadmin> upgrade-server --username example-user --version 6.33.0 --nodes localho
 ----
 
 [[rollback-server-command]]
-=== Rollback Server Command
+== Rollback Server Command
 
 **Usage**: `asadmin> rollback-server`
 
@@ -116,7 +116,7 @@ asadmin> upgrade-server --username example-user --version 6.33.0 --nodes localho
 WARNING: This command is not supported on Windows OS, please use the `rollbackUpgrade.bat` script instead.
 
 [[command-options-2]]
-==== Command Options
+=== Command Options
 
 [cols="1,1,4,1,1",options="header",]
 |=======================================================================
@@ -217,8 +217,7 @@ IMPORTANT: This feature requires payara-upgrade-tool.jar from Payara v5.83.0 or 
 
 By default, upgrading Payara requires that the domain and all SSH nodes are stopped. This feature allows the upgrading of individual SSH nodes, eliminating downtime. Only upgrades in the same major version are supported 5.x to 5.x, 6.x to 6.x. Upgrades between 5.x and 6.x are not supported.
 
-[[command-options-3]]
-==== Steps to upgrade:
+=== Steps to upgrade
 
 stop the DAS 
 [source, shell]
@@ -255,8 +254,7 @@ asadmin> start-domain
 WARNING: the upgrade can cause issues if the nodes are forming a cluster with Hazelcast. When 2 versions of Payara use different versions of Hazelcast, the upgraded node will fail to start as long as nodes using the older versions are running. If the upgraded node/DAS fails to start, you may have to upgrade everything else before restarting the nodes and the DAS. Alternatively, you can avoid these issues by disabling the data grid for every nodes.
 Below are the known combinations causing issues:
 
-[[command-options-3]]
-==== Known upgrade issues
+== Known upgrade issues
 
 [cols="1,1,4",options="header",separator=¦]
 |=======================================================================
