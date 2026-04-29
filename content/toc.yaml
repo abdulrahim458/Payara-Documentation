@@ -6,6 +6,7 @@ sections:
       - file: general-info/index
       - file: general-info/supported-platforms
       - file: general-info/jakarta-ee-8-support
+
   - title: Technical Documentation
     sections:
       - title: Payara Server Documentation
@@ -760,6 +761,7 @@ sections:
           - title: Miscellaneous
             sections:
               - file: technical-documentation/ecosystem/miscellaneous/jax-rs-extension
+
   - title: Release Notes
     sections:
       - file: release-notes/index
@@ -839,6 +841,7 @@ sections:
         file: release-notes/release-notes-6.1.0
       - title: Payara Enterprise 6.0.0
         file: release-notes/release-notes-6.0.0
+
   - title: Jakarta EE Certification
     sections:
       - file: jakarta-ee-certification/index
@@ -1070,6 +1073,7 @@ sections:
           - file: "jakarta-ee-certification/6.0.0/6.0.0-web-tck-results"
           - file: "jakarta-ee-certification/6.0.0/6.0.0-core-tck-results"
           - file: "jakarta-ee-certification/6.0.0/6.0.0-web-profile-core-tck-results"
+
   - title: Eclipse MicroProfile Certification
     sections:
       - file: eclipse-microprofile-certification/index
@@ -1154,6 +1158,7 @@ sections:
     sections:
       - file: security/index
       - file: security/security-fix-list
+
   - title: Appendix
     sections:
       - title: Schemas
