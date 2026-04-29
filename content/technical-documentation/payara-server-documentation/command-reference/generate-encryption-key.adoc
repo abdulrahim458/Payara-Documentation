@@ -1,4 +1,3 @@
-[[generate-encryption-key]]
 = generate-encryption-key
 
 Generates an encryption key for Data Grid secure communication.

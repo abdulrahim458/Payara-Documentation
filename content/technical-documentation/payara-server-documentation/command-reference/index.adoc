@@ -1,4 +1,3 @@
-[[overview]]
 = Overview
 
 This section contains reference collection of all Asadmin CLI subcommands available for the Administration interface of Payara Server and a comprehensive detail of what each command does and how it operates.

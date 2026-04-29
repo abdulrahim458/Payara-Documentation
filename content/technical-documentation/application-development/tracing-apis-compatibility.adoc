@@ -1,4 +1,3 @@
-[[tracing-apis-compatibility-matrix]]
 = Tracing APIs Compatibility Matrix
 :ordinal: 24
 

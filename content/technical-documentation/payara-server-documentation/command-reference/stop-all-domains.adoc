@@ -1,4 +1,3 @@
-[[stop-all-domains]]
 = stop-all-domains
 
 Stops the Domain Administration Server(DAS) of all current running domains on the server’s installation.

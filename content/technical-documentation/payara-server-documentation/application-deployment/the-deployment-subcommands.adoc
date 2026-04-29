@@ -1,4 +1,3 @@
-[[the-asadmin-deployment-subcommands]]
 = The `asadmin` Deployment Subcommands
 :ordinal: 2
 

@@ -1,4 +1,3 @@
-[[delete-cluster]]
 = delete-cluster
 
 deletes a Payara Server cluster

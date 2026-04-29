@@ -1,4 +1,3 @@
-[[create-http-redirect]]
 = create-http-redirect
 
 Adds a new HTTP redirect.

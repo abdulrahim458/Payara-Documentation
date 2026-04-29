@@ -1,4 +1,3 @@
-[[list-http-listeners]]
 = list-http-listeners
 
 Lists the existing network listeners.

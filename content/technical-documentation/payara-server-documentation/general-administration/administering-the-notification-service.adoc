@@ -1,4 +1,3 @@
-[[notification-service]]
 = Administering the Notification Service
 :ordinal: 11
 

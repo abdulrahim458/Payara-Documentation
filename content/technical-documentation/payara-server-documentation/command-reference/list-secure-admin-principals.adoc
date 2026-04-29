@@ -1,4 +1,3 @@
-[[list-secure-admin-principals]]
 = list-secure-admin-principals
 
 Lists the certificates for which Payara Server accepts admin requests from clients.

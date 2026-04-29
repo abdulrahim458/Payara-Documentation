@@ -1,4 +1,3 @@
-[[create-file-user]]
 = create-file-user
 
 Creates a new file user.

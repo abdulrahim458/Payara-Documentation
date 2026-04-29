@@ -1,4 +1,3 @@
-[[list-healthcheck-services]]
 = list-healthcheck-services
 
 Lists the names of all available Healthcheck services.

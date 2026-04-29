@@ -1,4 +1,3 @@
-[[delete-jms-host]]
 = delete-jms-host
 
 Removes a JMS host.

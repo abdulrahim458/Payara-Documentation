@@ -1,4 +1,3 @@
-[[using-the-jdbc-api-for-database-access]]
 = Using the JDBC API for Database Access
 :ordinal: 16
 

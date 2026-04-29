@@ -1,4 +1,3 @@
-[[domain]]
 == domain
 :ordinal: 1
 

@@ -1,4 +1,3 @@
-[[remove-instance-from-deployment-group]]
 = remove-instance-from-deployment-group
 
 Removes a standalone instance from an existing deployment group.

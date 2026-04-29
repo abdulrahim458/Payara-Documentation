@@ -1,4 +1,3 @@
-[[overview]]
 = Overview
 
 This security guide provides instructions for configuring and administering basic security concerns in Payara Server.

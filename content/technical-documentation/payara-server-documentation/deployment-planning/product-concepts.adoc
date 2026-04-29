@@ -1,4 +1,3 @@
-[[product-concepts]]
 = Product Concepts
 :ordinal: 1
 

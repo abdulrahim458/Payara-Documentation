@@ -1,4 +1,3 @@
-[[delete-jms-resource]]
 = delete-jms-resource
 
 Removes a JMS resource.

@@ -1,4 +1,3 @@
-[[deploying-applications]]
 = Deploying Applications
 :ordinal: 1
 

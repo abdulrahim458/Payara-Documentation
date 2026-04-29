@@ -1,4 +1,3 @@
-[[list-components]]
 = list-components
 
 Lists deployed components.

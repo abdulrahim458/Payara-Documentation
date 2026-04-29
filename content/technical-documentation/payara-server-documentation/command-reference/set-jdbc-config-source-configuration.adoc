@@ -1,4 +1,3 @@
-[[set-jdbc-config-source-configuration]]
 = set-jdbc-config-source-configuration
 
 Configures the JDBC configuration source.

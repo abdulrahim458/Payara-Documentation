@@ -1,4 +1,3 @@
-[[create-connector-connection-pool]]
 = create-connector-connection-pool
 
 Adds a connection pool with the specified connection pool name.

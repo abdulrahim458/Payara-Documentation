@@ -1,4 +1,3 @@
-[[debugging-applications]]
 = Debugging Applications
 :ordinal: 2
 

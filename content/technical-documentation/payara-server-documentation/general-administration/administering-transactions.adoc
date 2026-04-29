@@ -1,4 +1,3 @@
-[[administering-transactions]]
 = Administering Transactions
 :ordinal: 22
 

@@ -1,4 +1,3 @@
-[[administering-the-java-naming-and-directory-interface-jndi-service]]
 = Administering the Java Naming and Directory Interface (JNDI) Service
 :ordinal: 21
 

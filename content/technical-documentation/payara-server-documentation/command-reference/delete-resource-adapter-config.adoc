@@ -1,4 +1,3 @@
-[[delete-resource-adapter-config]]
 = delete-resource-adapter-config
 
 Deletes the resource adapter configuration.

@@ -1,4 +1,3 @@
-[[create-javamail-resource]]
 = create-javamail-resource
 
 Creates a JavaMail session resource.

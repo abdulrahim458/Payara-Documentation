@@ -1,4 +1,3 @@
-[[deployment-groups]]
 = Administering Deployment Groups
 :ordinal: 4
 

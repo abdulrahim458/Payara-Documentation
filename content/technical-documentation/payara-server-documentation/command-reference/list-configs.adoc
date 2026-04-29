@@ -1,4 +1,3 @@
-[[list-configs]]
 == list-configs
 
 Lists named configurations.

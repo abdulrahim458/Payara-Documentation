@@ -1,4 +1,3 @@
-[[delete-http-redirect]]
 = delete-http-redirect
 
 Removes an HTTP redirect.

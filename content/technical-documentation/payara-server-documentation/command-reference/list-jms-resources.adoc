@@ -1,4 +1,3 @@
-[[list-jms-resources]]
 = list-jms-resources
 
 Lists the JMS resources.

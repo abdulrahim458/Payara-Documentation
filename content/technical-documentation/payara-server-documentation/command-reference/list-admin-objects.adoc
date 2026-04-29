@@ -1,4 +1,3 @@
-[[list-admin-objects]]
 = list-admin-objects
 
 Gets all the administered objects.

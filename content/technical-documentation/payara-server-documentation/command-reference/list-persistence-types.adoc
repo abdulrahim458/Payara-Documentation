@@ -1,4 +1,3 @@
-[[list-persistence-types]]
 = list-persistence-types
 
 Lists registered persistence types for HTTP sessions and SFSB instances.

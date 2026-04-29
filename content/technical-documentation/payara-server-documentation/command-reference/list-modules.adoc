@@ -1,4 +1,3 @@
-[[list-modules]]
 = list-modules
 
 Lists Payara Server modules.

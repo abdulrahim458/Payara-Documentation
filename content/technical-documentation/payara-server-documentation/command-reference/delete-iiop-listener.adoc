@@ -1,4 +1,3 @@
-[[delete-iiop-listener]]
 = delete-iiop-listener
 
 Removes an IIOP listener.

@@ -1,4 +1,3 @@
-[[add-to-truststore]]
 = add-to-truststore
 
 Adds the specified certificate to a target domain truststore.

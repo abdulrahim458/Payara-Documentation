@@ -1,4 +1,3 @@
-[[eclipse-microprofile-opentracing]]
 = Eclipse MicroProfile OpenTracing
 
 Payara Platform {page-version} provides MicroProfile OpenTracing {mpOpenTracingVersion}

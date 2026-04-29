@@ -1,4 +1,3 @@
-[[deploy]]
 = deploy
 
 Deploys the specified component.

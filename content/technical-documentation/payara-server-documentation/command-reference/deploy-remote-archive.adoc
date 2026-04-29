@@ -1,4 +1,3 @@
-[[deploy-remote-archive]]
 = deploy-remote-archive
 
 Deploys the specified component from a remote location.

@@ -1,4 +1,3 @@
-[[ssl-certificates]]
 = SSL Certificate Management
 :ordinal: 9
 

@@ -1,4 +1,3 @@
-[[list-rest-endpoints]]
 = list-rest-endpoints
 
 Lists all the rest endpoints of a deployed web application

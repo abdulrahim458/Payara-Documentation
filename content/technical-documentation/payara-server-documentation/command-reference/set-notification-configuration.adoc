@@ -1,4 +1,3 @@
-[[set-notification-configuration]]
 = set-notification-configuration
 
 Configures the notification service along with the log notifier.

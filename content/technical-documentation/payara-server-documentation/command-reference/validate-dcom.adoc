@@ -1,4 +1,3 @@
-[[validate-dcom]]
 = validate-dcom
 
 Tests the connection over DCOM to a remote host.

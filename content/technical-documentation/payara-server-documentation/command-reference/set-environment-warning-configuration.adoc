@@ -1,4 +1,3 @@
-[[set-environment-warning-configuration]]
 = set-environment-warning-configuration
 
 Allows customization of a warning bar for clear identification of the server environment in the Admin Console.

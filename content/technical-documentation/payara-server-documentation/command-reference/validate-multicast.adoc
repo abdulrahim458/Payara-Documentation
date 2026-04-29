@@ -1,4 +1,3 @@
-[[validate-multicast]]
 = validate-multicast
 
 Validates that multicast transport is available for clusters.

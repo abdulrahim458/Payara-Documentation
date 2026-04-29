@@ -1,4 +1,3 @@
-[[copy-config]]
 = copy-config
 
 Copies an existing named configuration to create another configuration.

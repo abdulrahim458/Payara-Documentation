@@ -1,4 +1,3 @@
-[[list-jvm-options]]
 = list-jvm-options
 
 Lists options for the Java application launcher.

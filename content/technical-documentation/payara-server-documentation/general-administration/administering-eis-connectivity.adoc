@@ -1,4 +1,3 @@
-[[administering-eis-connectivity]]
 = Administering EIS Connectivity
 :ordinal: 15
 

@@ -1,4 +1,3 @@
-[[configuring-the-access-log]]
 = Configuring The Access Log
 :ordinal: 2
 

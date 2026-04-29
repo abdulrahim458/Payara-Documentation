@@ -1,4 +1,3 @@
-[[list-sub-components]]
 = list-sub-components
 
 Lists EJB or servlet components in a deployed module or module of a deployed application.

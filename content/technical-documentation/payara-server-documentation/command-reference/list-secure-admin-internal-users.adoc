@@ -1,4 +1,3 @@
-[[list-secure-admin-internal-users]]
 = list-secure-admin-internal-users
 
 Lists the user names that the Payara Server DAS and instances use to authenticate with each other and to authorize admin operations.

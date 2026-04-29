@@ -1,4 +1,3 @@
-[[create-jndi-resource]]
 = create-jndi-resource
 
 Registers a JNDI resource.

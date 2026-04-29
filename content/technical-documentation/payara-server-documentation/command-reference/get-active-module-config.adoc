@@ -1,4 +1,3 @@
-[[get-active-module-config]]
 = get-active-module-config
 
 Displays the current active configuration of a service or instance.

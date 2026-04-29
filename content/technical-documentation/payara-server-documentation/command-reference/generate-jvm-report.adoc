@@ -1,4 +1,3 @@
-[[generate-jvm-report]]
 = generate-jvm-report
 
 Shows the JVM machine statistics for a given target instance.

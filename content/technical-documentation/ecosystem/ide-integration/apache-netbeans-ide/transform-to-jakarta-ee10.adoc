@@ -1,4 +1,3 @@
-[[transform-to-jakartaee-10]]
 = Transform Source Code to Jakarta EE 10
 
 Apache NetBeans IDE provides tools to allow users to automatically convert the source code of Java/Jakarta EE 8 applications to Jakarta EE 10. 

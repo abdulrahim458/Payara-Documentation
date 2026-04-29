@@ -1,4 +1,3 @@
-[[create-auth-realm]]
 = create-auth-realm
 
 Adds the named authentication realm.

@@ -1,4 +1,3 @@
-[[set-rest-monitoring-configuration]]
 = set-rest-monitoring-configuration
 
 Configures the REST monitoring service subsystem.

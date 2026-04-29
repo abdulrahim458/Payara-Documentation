@@ -1,4 +1,3 @@
-[[configuration-variable-reference]]
 = Configuration Variables Reference
 :ordinal: 23
 

@@ -1,4 +1,3 @@
-[[payara-platform-deployment-descriptor-files]]
 = Payara Platform Deployment Descriptor Files
 :ordinal: 3
 

@@ -1,4 +1,3 @@
-[[administering-http-connectivity]]
 = Administering HTTP Connectivity
 :ordinal: 16
 

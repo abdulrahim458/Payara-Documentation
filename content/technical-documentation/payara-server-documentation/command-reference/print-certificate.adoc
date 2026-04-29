@@ -1,4 +1,3 @@
-[[print-certificate]]
 = print-certificate
 
 Prints legible and detailed information of one or multiple SSL certificate and key entries.

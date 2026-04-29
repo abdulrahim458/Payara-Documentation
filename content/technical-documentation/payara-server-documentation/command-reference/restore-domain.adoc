@@ -1,4 +1,3 @@
-[[restore-domain]]
 = restore-domain
 
 Restore files from backup.

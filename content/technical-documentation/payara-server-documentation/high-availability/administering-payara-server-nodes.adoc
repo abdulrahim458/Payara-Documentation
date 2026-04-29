@@ -1,4 +1,3 @@
-[[administering-payara-server-nodes]]
 = Administering Payara Server Nodes
 :ordinal: 2
 

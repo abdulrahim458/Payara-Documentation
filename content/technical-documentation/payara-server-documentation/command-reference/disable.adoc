@@ -1,4 +1,3 @@
-[[disable]]
 = disable
 
 Disables the component.

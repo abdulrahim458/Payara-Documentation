@@ -1,4 +1,3 @@
-[[remove-expired-certificates]]
 = remove-expired-certificates
 
 Removes all expired certificates from the target instance or listener's keystores and truststores.

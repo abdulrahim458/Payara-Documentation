@@ -1,4 +1,3 @@
-[[sql-trace-listeners]]
 = SQL Trace Listeners in Payara Micro
 
 Payara Micro also supports SQL Trace Listeners which brings powerful

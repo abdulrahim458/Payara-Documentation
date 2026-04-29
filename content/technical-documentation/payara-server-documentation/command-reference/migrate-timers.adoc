@@ -1,4 +1,3 @@
-[[migrate-timers]]
 = migrate-timers
 
 Moves EJB timers when a clustered instance was stopped or has crashed.

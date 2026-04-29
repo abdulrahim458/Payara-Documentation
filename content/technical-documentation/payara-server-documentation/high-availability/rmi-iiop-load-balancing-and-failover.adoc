@@ -1,4 +1,3 @@
-[[rmi-iiop-load-balancing-and-failover]]
 = RMI-IIOP Load Balancing and Failover
 :ordinal: 11
 

@@ -1,4 +1,3 @@
-[[delete-protocol]]
 = delete-protocol
 
 Removes a protocol.

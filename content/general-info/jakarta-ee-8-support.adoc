@@ -1,4 +1,3 @@
-[[java-ee-to-jakarta-ee-transformation]]
 = Jakarta EE 8 Support
 :ordinal: 3
 

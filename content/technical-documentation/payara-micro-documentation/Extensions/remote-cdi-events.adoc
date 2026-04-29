@@ -1,4 +1,3 @@
-[[remote-cdi-events-in-payara-micro]]
 = Remote CDI Events in Payara Micro
 
 Payara Micro can listen to and fire CDI events across the cluster of Payara Micro instances, and also across Payara Server instances within the same cluster. Payara Micro supports the same functionality for xref:/technical-documentation/payara-micro-documentation/extensions/remote-cdi-events.adoc[remote CDI events] as provided by Payara Server.

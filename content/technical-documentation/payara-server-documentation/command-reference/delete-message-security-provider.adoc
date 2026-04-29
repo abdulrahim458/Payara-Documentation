@@ -1,4 +1,3 @@
-[[delete-message-security-provider]]
 = delete-message-security-provider
 
 Enables administrators to delete a message security provider.

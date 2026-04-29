@@ -1,4 +1,3 @@
-[[create-profiler]]
 = create-profiler
 
 Creates the profiler element.

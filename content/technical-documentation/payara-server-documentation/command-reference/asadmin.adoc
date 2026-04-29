@@ -1,4 +1,3 @@
-[[asadmin-1m]]
 = asadmin
 
 Utility for performing administrative tasks for Payara Server.

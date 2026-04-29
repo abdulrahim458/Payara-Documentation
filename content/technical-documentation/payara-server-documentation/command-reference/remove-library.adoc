@@ -1,4 +1,3 @@
-[[remove-library]]
 = remove-library
 
 Removes one or more library JAR files from Payara Server.

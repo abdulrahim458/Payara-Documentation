@@ -1,4 +1,3 @@
-[[subcommands-for-the-asadmin-utility]]
 == Subcommands for the `asadmin` Utility
 :ordinal: 24
 

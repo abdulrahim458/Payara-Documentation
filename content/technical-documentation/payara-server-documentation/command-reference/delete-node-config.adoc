@@ -1,4 +1,3 @@
-[[delete-node-config]]
 = delete-node-config
 
 Deletes a node that is not enabled for remote communication.

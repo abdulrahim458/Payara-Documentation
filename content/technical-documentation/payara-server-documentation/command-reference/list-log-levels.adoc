@@ -1,4 +1,3 @@
-[[list-log-levels]]
 = list-log-levels
 
 Lists the loggers and their log levels.

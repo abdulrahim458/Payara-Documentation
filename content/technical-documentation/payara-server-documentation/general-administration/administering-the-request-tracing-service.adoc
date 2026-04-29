@@ -1,4 +1,3 @@
-[[request-tracing-service]]
 = Administering the Request Tracing Service
 :ordinal: 10
 

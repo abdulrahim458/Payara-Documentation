@@ -1,4 +1,3 @@
-[[list-javamail-resources]]
 = list-javamail-resources
 
 Lists the existing JavaMail session resources.

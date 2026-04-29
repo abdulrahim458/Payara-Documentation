@@ -1,4 +1,3 @@
-[[list-managed-thread-factories]]
 = list-managed-thread-factories
 
 Lists managed thread factory resources.

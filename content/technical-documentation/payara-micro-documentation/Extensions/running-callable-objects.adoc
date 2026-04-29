@@ -1,4 +1,3 @@
-[[running-callable-objects-on-bootstrapped-instances]]
 = Running Callable Objects on Bootstrapped Instances
 
 Like with running asadmin commands, there are two methods available for running

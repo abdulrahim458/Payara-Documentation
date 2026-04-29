@@ -1,4 +1,3 @@
-[[update-connector-work-security-map]]
 = update-connector-work-security-map
 
 Modifies a work security map for the specified resource adapter.

@@ -1,4 +1,3 @@
-[[list-batch-job-steps]]
 = list-batch-job-steps
 
 Lists steps for a specific batch job execution.

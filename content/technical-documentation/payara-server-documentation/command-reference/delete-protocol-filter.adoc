@@ -1,4 +1,3 @@
-[[delete-protocol-filter]]
 = delete-protocol-filter
 
 Removes a protocol filter.

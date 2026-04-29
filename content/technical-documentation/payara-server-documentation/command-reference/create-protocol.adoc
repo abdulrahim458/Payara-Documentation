@@ -1,4 +1,3 @@
-[[create-protocol]]
 = create-protocol
 
 Adds a new protocol.

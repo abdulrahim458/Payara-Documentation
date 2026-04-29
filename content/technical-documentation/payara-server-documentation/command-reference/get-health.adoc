@@ -1,4 +1,3 @@
-[[get-health]]
 = get-health
 
 Provides information on the cluster health.

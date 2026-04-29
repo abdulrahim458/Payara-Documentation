@@ -1,4 +1,3 @@
-[[list-hazelcast-members]]
 = list-hazelcast-members
 
 List the Data Grid (Hazelcast) current members.

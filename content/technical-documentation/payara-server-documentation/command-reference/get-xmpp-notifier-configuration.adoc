@@ -1,4 +1,3 @@
-[[get-xmpp-notifier-configuration]]
 = get-xmpp-notifier-configuration
 
 Retrieves the settings of the XMPP notifier.

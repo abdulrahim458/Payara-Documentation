@@ -1,4 +1,3 @@
-[[list-protocol-filters]]
 = list-protocol-filters
 
 Lists the existing protocol filters.

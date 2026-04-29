@@ -1,4 +1,3 @@
-[[get-healthcheck-configuration]]
 = get-healthcheck-configuration
 
 Lists the current Healthcheck service settings.

@@ -1,4 +1,3 @@
-[[using-jakarta-faces]]
 = Using Jakarta Faces Technology
 :ordinal: 8
 

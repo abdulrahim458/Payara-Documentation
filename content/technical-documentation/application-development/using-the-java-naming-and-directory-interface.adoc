@@ -1,4 +1,3 @@
-[[using-the-java-naming-and-directory-interface]]
 = Using the Java Naming and Directory Interface
 :ordinal: 18
 

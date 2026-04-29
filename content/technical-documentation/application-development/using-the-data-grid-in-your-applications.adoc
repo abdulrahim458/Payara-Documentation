@@ -1,4 +1,3 @@
-[[using-datagrid-in-your-applications]]
 = Using the Data Grid in your Applications
 :ordinal: 21
 

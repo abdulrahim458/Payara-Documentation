@@ -1,4 +1,3 @@
-[[delete-audit-module]]
 = delete-audit-module
 
 Removes the named audit-module.

@@ -1,4 +1,3 @@
-[[delete-jacc-provider]]
 = delete-jacc-provider
 
 Enables administrators to delete JACC providers defined for a domain.

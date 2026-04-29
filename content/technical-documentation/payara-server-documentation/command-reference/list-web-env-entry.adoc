@@ -1,4 +1,3 @@
-[[list-web-env-entry]]
 = list-web-env-entry
 
 Lists environment entries for a deployed web application or module.

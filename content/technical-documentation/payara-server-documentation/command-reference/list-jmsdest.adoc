@@ -1,4 +1,3 @@
-[[list-jmsdest]]
 = list-jmsdest
 
 Lists the existing JMS physical destinations.

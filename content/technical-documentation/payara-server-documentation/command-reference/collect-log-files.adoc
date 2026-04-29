@@ -1,4 +1,3 @@
-[[collect-log-files]]
 = collect-log-files
 
 Creates a ZIP archive of all available log files.

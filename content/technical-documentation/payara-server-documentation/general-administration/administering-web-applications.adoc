@@ -1,4 +1,3 @@
-[[administering-web-applications]]
 = Administering Web Applications
 :ordinal: 22
 

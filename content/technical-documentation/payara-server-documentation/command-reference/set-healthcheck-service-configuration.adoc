@@ -1,4 +1,3 @@
-[[set-healthcheck-service-configuration]]
 = set-healthcheck-service-configuration
 
 Enables or disables the Healthcheck of a specific performance metric service.

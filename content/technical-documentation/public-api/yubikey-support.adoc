@@ -1,4 +1,3 @@
-[[yubikey]]
 = Yubikey Support
 
 The Payara Public API provides a way to authenticate with Yubikey using the `@YubikeyIdentityStoreDefinition` annotation. This works in the same way as other identity stores in the Java EE Security API.

@@ -1,4 +1,3 @@
-[[monitoring]]
 = monitoring
 
 Reviewing the runtime state of components and services deployed in Payara Server.

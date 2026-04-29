@@ -1,4 +1,3 @@
-[[create-jmsdest]]
 = create-jmsdest
 
 Creates a JMS physical destination.

@@ -1,4 +1,3 @@
-[[delete-node-dcom]]
 = delete-node-dcom
 
 Deletes a node that is enabled for communication over DCOM.

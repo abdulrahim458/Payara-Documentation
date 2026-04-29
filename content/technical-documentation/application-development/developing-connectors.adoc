@@ -1,4 +1,3 @@
-[[developing-connectors]]
 = Developing Connectors
 :ordinal: 13
 

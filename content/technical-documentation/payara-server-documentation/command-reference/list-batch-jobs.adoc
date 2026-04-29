@@ -1,4 +1,3 @@
-[[list-batch-jobs]]
 = list-batch-jobs
 
 Lists batch jobs details.

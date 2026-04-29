@@ -1,4 +1,3 @@
-[[start-database]]
 = start-database
 
 Starts a standalone H2 database in server mode.

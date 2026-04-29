@@ -1,4 +1,3 @@
-[[install-node-ssh]]
 = install-node-ssh
 
 Installs Payara Server software on specified SSH-enabled hosts.

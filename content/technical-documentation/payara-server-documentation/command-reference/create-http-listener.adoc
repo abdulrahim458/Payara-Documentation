@@ -1,4 +1,3 @@
-[[create-http-listener]]
 = create-http-listener
 
 Adds a new HTTP network listener socket.

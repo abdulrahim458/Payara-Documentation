@@ -1,4 +1,3 @@
-[[custom-notifiers]]
 = Custom Notifiers
 
 IMPORTANT: Custom Notifiers are deprecated and are no longer supported in Payara 7 onwards.

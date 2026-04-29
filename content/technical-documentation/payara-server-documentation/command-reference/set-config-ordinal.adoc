@@ -1,4 +1,3 @@
-[[set-config-ordinal]]
 = set-config-ordinal
 
 Provides a way to set the ordinal value of a configuration source.

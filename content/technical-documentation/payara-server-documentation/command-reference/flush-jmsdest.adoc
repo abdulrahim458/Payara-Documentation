@@ -1,4 +1,3 @@
-[[flush-jmsdest]]
 = flush-jmsdest
 
 Purges messages in a JMS destination.

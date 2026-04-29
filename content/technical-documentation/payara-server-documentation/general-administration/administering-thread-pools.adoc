@@ -1,4 +1,3 @@
-[[administering-thread-pools]]
 = Administering Thread Pools
 :ordinal: 5
 

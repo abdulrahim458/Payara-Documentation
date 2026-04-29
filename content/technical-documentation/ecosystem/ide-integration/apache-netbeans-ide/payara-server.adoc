@@ -1,4 +1,3 @@
-[[payara-server-netbeans]]
 = Payara Server Apache NetBeans IDE Support
 :ordinal: 1
 

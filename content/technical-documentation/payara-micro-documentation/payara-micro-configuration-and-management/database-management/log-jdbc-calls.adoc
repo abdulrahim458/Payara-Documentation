@@ -1,4 +1,3 @@
-[[logging-jdbc-calls]]
 = Logging JDBC Calls in Payara Micro
 
 Payara Micro supports SQL Tracing which brings powerful operational

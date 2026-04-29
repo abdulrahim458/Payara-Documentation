@@ -1,4 +1,3 @@
-[[list-jms-hosts]]
 = list-jms-hosts
 
 Lists the existing JMS hosts.

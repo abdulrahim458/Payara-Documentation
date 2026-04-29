@@ -1,4 +1,3 @@
-[[using-jakarta-messaging]]
 = Using Jakarta Messaging
 :ordinal: 19
 

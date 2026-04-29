@@ -1,4 +1,3 @@
-[[domain-and-node-directories-upgrade-method]]
 = Domain and Node Directories Upgrade Method
 :ordinal: 3
 

@@ -1,4 +1,3 @@
-[[enable-asadmin-recorder]]
 = enable-asadmin-recorder
 
 Enables the asadmin recorder.

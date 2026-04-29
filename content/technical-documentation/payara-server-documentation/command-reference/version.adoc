@@ -1,4 +1,3 @@
-[[version]]
 = version
 
 Displays version information for Payara Server.

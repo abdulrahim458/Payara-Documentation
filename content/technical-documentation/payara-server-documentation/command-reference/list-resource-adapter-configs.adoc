@@ -1,4 +1,3 @@
-[[list-resource-adapter-configs]]
 = list-resource-adapter-configs
 
 Lists the names of the current resource adapter configurations.

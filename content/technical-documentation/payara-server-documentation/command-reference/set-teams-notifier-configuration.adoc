@@ -1,4 +1,3 @@
-[[set-teams-notifier-configuration]]
 = set-teams-notifier-configuration
 
 Configures the settings of the MS Teams notifier.

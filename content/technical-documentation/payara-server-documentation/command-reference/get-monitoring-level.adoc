@@ -1,4 +1,3 @@
-[[get-monitoring-level]]
 = get-monitoring-level
 
 Retrieves the level configuration of a monitoring service's server module.

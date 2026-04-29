@@ -1,4 +1,3 @@
-[[generate-self-signed-certificate]]
 = generate-self-signed-certificate
 
 Generates a new self-signed certificate in the specified server configuration.

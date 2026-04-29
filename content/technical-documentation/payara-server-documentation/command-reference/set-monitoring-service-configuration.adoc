@@ -1,4 +1,3 @@
-[[set-monitoring-service-configuration]]
 = set-monitoring-service-configuration
 
 Configures the monitoring service.

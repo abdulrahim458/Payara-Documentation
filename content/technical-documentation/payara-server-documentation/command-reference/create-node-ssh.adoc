@@ -1,4 +1,3 @@
-[[create-node-ssh]]
 = create-node-ssh
 
 Creates a node that is enabled for communication over SSH.

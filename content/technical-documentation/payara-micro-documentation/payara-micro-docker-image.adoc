@@ -1,4 +1,3 @@
-[[docker-image-overview]]
 = Payara Micro Docker Image Overview
 
 Overview of the usage and details of the official Payara Micro Enterprise Docker image.

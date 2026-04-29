@@ -1,4 +1,3 @@
-[[list-lifecycle-modules]]
 = list-lifecycle-modules
 
 Lists the lifecycle modules.

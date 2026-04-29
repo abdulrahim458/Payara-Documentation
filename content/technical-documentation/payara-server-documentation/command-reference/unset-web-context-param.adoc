@@ -1,4 +1,3 @@
-[[unset-web-context-param]]
 = unset-web-context-param
 
 Unsets a servlet context-initialization parameter of a deployed web application or module.

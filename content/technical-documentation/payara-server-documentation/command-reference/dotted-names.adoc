@@ -1,4 +1,3 @@
-[[dotted-names]]
 = Dotted Names
 :ordinal: 4
 

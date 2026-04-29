@@ -1,4 +1,3 @@
-[[slow-sql-logger-in-micro]]
 = Slow SQL Logging in Payara Micro
 
 Payara Micro supports slow logging of SQL queries which brings powerful operational

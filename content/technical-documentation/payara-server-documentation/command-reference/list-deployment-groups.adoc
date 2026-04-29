@@ -1,4 +1,3 @@
-[[list-deployment-groups]]
 = list-deployment-groups
 
 List all deployment groups registered in an existing server domain.

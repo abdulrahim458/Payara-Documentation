@@ -1,4 +1,3 @@
-[[list-clusters]]
 = list-clusters
 
 Lists existing clusters in a domain.

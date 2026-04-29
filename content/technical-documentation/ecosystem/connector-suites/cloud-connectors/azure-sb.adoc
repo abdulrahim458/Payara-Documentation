@@ -1,4 +1,3 @@
-[[azuresb-connector]]
 = Azure Service Bus Cloud Connector
 
 The Microsoft Azure Service Bus allows code that runs both outside and inside

@@ -1,4 +1,3 @@
-[[list-connector-work-security-maps]]
 = list-connector-work-security-maps
 
 Lists the work security maps belonging to the specified resource adapter.

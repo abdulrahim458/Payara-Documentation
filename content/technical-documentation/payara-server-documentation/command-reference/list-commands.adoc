@@ -1,4 +1,3 @@
-[[list-commands]]
 = list-commands
 
 Lists available commands.

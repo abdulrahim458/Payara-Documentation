@@ -1,4 +1,3 @@
-[[create-module-config]]
 = create-module-config
 
 Adds the default configuration of a module to `domain.xml`.

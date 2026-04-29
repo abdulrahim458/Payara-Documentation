@@ -1,4 +1,3 @@
-[[delete-domain]]
 = delete-domain
 
 Deletes a domain.

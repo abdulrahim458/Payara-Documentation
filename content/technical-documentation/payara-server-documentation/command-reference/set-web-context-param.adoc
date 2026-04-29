@@ -1,4 +1,3 @@
-[[set-web-context-param]]
 = set-web-context-param
 
 Sets a servlet context-initialization parameter of a deployed web application or module.

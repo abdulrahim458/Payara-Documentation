@@ -1,4 +1,3 @@
-[[create-protocol-finder]]
 = create-protocol-finder
 
 Adds a new protocol finder.

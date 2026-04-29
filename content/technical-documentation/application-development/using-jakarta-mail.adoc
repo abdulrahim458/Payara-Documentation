@@ -1,4 +1,3 @@
-[[using-jakarta-mail-api]]
 = Using Jakarta Mail
 :ordinal: 20
 

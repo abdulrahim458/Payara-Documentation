@@ -1,4 +1,3 @@
-[[list-message-security-providers]]
 = list-message-security-providers
 
 Lists all security message providers for the given message layer.

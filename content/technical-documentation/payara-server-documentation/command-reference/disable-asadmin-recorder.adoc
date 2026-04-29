@@ -1,4 +1,3 @@
-[[disable-asadmin-recorder]]
 = disable-asadmin-recorder
 
 Disables the Asadmin recorder.

@@ -1,4 +1,3 @@
-[[administering-the-monitoring-service]]
 = Administering the Monitoring Service
 :ordinal: 8
 

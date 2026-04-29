@@ -1,4 +1,3 @@
-[[developing-web-applications]]
 = Developing Web Applications
 :ordinal: 7
 

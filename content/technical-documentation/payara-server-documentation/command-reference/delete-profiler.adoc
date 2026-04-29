@@ -1,4 +1,3 @@
-[[delete-profiler]]
 = delete-profiler
 
 Removes the profiler element.

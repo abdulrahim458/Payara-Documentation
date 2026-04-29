@@ -1,4 +1,3 @@
-[[delete-virtual-server]]
 = delete-virtual-server
 
 Removes a virtual server.

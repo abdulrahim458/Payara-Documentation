@@ -1,4 +1,3 @@
-[[unset-web-env-entry]]
 = unset-web-env-entry
 
 Unsets an environment entry for a deployed web application or module.

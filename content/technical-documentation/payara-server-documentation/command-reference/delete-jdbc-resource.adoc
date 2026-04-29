@@ -1,4 +1,3 @@
-[[delete-jdbc-resource]]
 = delete-jdbc-resource
 
 Removes a JDBC resource with the specified JNDI name.

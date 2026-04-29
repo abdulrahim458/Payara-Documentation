@@ -1,4 +1,3 @@
-[[securing-applications]]
 = Securing Applications
 :ordinal: 3
 

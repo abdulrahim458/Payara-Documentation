@@ -1,4 +1,3 @@
-[[monitor]]
 = monitor
 
 Displays monitoring data for commonly used components and services.

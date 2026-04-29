@@ -1,4 +1,3 @@
-[[healthcheck-hoggingthreads-configure]]
 = healthcheck-hoggingthreads-configure
 
 Configures the specifics of the Healthcheck hogging threads performance metric service.

@@ -1,4 +1,3 @@
-[[create-threadpool]]
 = create-threadpool
 
 Adds a thread pool.

@@ -1,4 +1,3 @@
-[[update-node-docker]]
 = update-node-docker
 
 Updates the configuration data of a DOCKER node.

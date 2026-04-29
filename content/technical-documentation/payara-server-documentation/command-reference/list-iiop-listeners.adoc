@@ -1,4 +1,3 @@
-[[list-iiop-listeners]]
 = list-iiop-listeners
 
 Lists the existing IIOP listeners.

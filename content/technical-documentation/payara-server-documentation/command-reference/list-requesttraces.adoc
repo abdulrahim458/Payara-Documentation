@@ -1,4 +1,3 @@
-[[list-requesttraces]]
 = list-requesttraces
 
 Retrieves a list of request tracing service traces.

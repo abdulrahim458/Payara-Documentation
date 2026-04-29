@@ -1,4 +1,3 @@
-[[stop-instance]]
 = stop-instance
 
 Stops a running Payara Server instance.

@@ -1,4 +1,3 @@
-[[rotate-log]]
 = rotate-log
 
 Rotates the log file.

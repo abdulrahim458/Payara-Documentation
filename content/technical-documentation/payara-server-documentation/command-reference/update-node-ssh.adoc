@@ -1,4 +1,3 @@
-[[update-node-ssh]]
 = update-node-ssh
 
 Updates the configuration data of a SSH node.

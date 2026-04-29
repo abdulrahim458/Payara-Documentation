@@ -1,4 +1,3 @@
-[[install-node-dcom]]
 = install-node-dcom
 
 Installs Payara Server software on specified DCOM-enabled hosts.

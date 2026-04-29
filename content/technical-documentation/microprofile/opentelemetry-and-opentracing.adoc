@@ -1,4 +1,3 @@
-[[opentelemetry-and-opentracing]]
 = OpenTelemetry and OpenTracing Support
 
 The Payara Platform natively supports OpenTelemetry APIs as well as export of traces over the OTLP protocol. Natively in this context means, that deployment of an OpenTelemetry Agent is not necessary and may lead to duplicate traces.

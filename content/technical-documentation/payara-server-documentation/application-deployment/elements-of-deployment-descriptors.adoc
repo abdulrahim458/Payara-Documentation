@@ -1,4 +1,3 @@
-[[elements-of-the-payara-platform-deployment-descriptors]]
 = Elements of the Payara Platform Deployment Descriptors
 :ordinal: 4
 

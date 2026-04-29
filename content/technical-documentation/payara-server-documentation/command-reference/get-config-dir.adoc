@@ -1,4 +1,3 @@
-[[get-config-dir]]
 = get-config-dir
 
 Gets the settings of the Directory configuration settings.

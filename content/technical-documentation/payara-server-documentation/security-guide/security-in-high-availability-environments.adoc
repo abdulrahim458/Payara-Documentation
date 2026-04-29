@@ -1,4 +1,3 @@
-[[administering-security-in-ha-environment]]
 = Administering Security in a High-Availability Environment
 :ordinal: 4
 

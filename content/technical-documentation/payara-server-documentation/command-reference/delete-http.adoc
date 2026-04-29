@@ -1,4 +1,3 @@
-[[delete-http]]
 = delete-http
 
 Removes HTTP parameters from a protocol.

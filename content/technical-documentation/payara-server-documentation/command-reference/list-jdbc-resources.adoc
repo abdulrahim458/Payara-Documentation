@@ -1,4 +1,3 @@
-[[list-jdbc-resources]]
 = list-jdbc-resources
 
 Lists all JDBC resources.

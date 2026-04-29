@@ -1,4 +1,3 @@
-[[high-availability-in-payara-server]]
 = High Availability in Payara Server
 
 This chapter describes the high availability features in Payara Server.

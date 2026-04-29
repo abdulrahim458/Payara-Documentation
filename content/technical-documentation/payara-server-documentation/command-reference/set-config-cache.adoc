@@ -1,4 +1,3 @@
-[[set-config-cache]]
 = set-config-cache
 
 Provides a way to set the value of the cache duration of Eclipse MicroProfile configuration properties.

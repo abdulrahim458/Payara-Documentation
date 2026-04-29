@@ -1,4 +1,3 @@
-[[list-timers]]
 = list-timers
 
 Lists all persistent timers owned by server instance(s).

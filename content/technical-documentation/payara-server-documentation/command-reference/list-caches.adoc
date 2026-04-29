@@ -1,4 +1,3 @@
-[[list-caches]]
 = list-caches
 
 Lists all configured Hazelcast distributed caches.

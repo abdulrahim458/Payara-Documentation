@@ -1,4 +1,3 @@
-[[set-config-dir]]
 = set-config-dir
 
 Provides a way to configure the *Directory* configuration source.

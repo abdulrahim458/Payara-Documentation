@@ -1,4 +1,3 @@
-[[get-rest-monitoring-configuration]]
 = get-rest-monitoring-configuration
 
 Retrieves the REST monitoring service general settings.

@@ -1,4 +1,3 @@
-[[asadmin-recorder-enabled]]
 = asadmin-recorder-enabled
 
 Returns whether the Asadmin Recorder service is enabled .

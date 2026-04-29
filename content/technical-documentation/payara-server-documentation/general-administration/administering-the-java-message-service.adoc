@@ -1,4 +1,3 @@
-[[administering-the-java-message-service-jms]]
 = Administering the Java Message Service (JMS)
 :ordinal: 20
 

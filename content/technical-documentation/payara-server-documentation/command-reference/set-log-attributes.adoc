@@ -1,4 +1,3 @@
-[[set-log-attributes]]
 = set-log-attributes
 
 Sets the logging attributes for one or more loggers.

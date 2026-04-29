@@ -1,4 +1,3 @@
-[[generate-csr]]
 = generate-csr
 
 Generates a new CSR (certificate signing request).

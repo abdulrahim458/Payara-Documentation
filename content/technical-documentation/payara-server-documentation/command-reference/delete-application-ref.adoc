@@ -1,4 +1,3 @@
-[[delete-application-ref]]
 = delete-application-ref
 
 Removes a reference to an application.

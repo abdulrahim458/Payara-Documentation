@@ -1,4 +1,3 @@
-[[list-threadpools]]
 = list-threadpools
 
 Lists all the thread pools.

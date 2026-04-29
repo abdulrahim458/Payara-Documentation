@@ -1,4 +1,3 @@
-[[delete-config]]
 = delete-config
 
 Deletes an existing named configuration.

@@ -1,4 +1,3 @@
-[[administering-the-object-request-broker-orb]]
 = Administering the Object Request Broker (ORB)
 :ordinal: 18
 

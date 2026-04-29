@@ -1,4 +1,3 @@
-[[get-client-stubs]]
 == get-client-stubs
 
 Retrieves the application JAR files needed to launch the application client.

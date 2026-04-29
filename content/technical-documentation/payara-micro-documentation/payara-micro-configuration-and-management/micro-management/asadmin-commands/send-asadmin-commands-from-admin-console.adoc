@@ -1,4 +1,3 @@
-[[sending-asadmin-commands-to-payara-micro-from-a-domain-administration-server]]
 = Sending Asadmin Commands to Payara Micro from a Domain Administration Server
 
 Asadmin commands can be sent from the Domain Administration Server (DAS) to Payara Micro instances that are running within the same data grid as the DAS.

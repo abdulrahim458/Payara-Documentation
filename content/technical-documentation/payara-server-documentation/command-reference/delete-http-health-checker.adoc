@@ -1,4 +1,3 @@
-[[delete-http-health-checker]]
 = delete-http-health-checker
 
 Deletes the health-checker for a specified load balancer configuration.

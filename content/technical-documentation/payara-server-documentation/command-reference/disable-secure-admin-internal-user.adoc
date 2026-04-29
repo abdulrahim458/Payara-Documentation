@@ -1,4 +1,3 @@
-[[disable-secure-admin-internal-user]]
 = disable-secure-admin-internal-user
 
 Instructs the Payara Server DAS and instances to not use the specified admin user to authenticate with each other and to authorize admin operations.

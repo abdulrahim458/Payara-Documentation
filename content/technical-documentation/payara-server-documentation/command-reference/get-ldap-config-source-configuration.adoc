@@ -1,4 +1,3 @@
-[[get-ldap-config-source-configuration]]
 = get-ldap-config-source-configuration
 
 Gets the settings of the LDAP configuration source.

@@ -1,4 +1,3 @@
-[[set-hashicorp-config-source-configuration]]
 = set-hashicorp-config-source-configuration
 
 Sets the configuration for the HashiCorp secrets Config Source.

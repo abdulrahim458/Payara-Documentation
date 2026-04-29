@@ -1,4 +1,3 @@
-[[_delete-service]]
 = _delete-service
 
 Deletes the init scripts created by the `create-service` subcommand.

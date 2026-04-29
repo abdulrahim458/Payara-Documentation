@@ -1,4 +1,3 @@
-[[create-admin-object]]
 = create-admin-object
 
 Adds the administered object with the specified JNDI name for a resource adapter.

@@ -1,4 +1,3 @@
-[[set-jms-notifier-configuration]]
 = set-jms-notifier-configuration
 
 Configures the settings of the JMS notifier

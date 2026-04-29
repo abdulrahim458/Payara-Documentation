@@ -1,4 +1,3 @@
-[[list-jobs]]
 = list-jobs
 
 Lists information about subcommands that were started using `asadmin --detach` or that contain progress information.

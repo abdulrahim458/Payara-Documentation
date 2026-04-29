@@ -1,4 +1,3 @@
-[[list-auth-realms]]
 = list-auth-realms
 
 Lists the authentication realms.

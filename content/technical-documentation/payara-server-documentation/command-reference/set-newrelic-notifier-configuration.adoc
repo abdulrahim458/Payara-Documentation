@@ -1,4 +1,3 @@
-[[set-newrelic-notifier-configuration]]
 = set-newrelic-notifier-configuration
 
 Configures the settings of the New Relic notifier.

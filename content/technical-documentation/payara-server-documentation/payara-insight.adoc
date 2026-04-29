@@ -1,4 +1,3 @@
-[[payara-insight]]
 = Payara InSight
 :ordinal: 11
 

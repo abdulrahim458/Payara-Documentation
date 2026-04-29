@@ -1,4 +1,3 @@
-[[get-openapi-configuration]]
 = get-openapi-configuration
 
 Gets the current settings of the MicroProfile OpenAPI service.

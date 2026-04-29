@@ -1,4 +1,3 @@
-[[list-batch-job-executions]]
 = list-batch-job-executions
 
 Lists batch job executions and execution details.

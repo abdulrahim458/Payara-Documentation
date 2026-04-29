@@ -1,4 +1,3 @@
-[[list-truststore-entries]]
 = list-truststore-entries
 
 Displays entries in the specified domain trust store

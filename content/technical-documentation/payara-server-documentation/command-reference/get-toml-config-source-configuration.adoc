@@ -1,4 +1,3 @@
-[[get-toml-config-source-configuration]]
 = get-toml-config-source-configuration
 
 Gets the settings of the TOML configuration source.

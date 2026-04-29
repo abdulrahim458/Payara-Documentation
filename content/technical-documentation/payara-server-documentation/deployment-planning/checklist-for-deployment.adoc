@@ -1,4 +1,3 @@
-[[deployment-checklist]]
 = Deployment Checklist
 :ordinal: 3
 

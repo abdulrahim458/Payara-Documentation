@@ -1,4 +1,3 @@
-[[verify-domain-xml]]
 = verify-domain-xml
 
 Verifies the contents of the domain.xml file.

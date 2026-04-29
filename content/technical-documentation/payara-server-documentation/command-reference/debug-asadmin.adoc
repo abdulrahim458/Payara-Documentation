@@ -1,4 +1,3 @@
-[[debug-asadmin]]
 = debug-asadmin
 
 Variant of the `asadmin` utility for performing administrative tasks for Payara Server. This variant

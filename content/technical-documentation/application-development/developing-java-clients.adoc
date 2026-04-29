@@ -1,4 +1,3 @@
-[[developing-java-clients]]
 = Developing Java Clients
 :ordinal: 12
 

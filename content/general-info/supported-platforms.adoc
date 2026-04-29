@@ -1,4 +1,3 @@
-[[supported-platforms]]
 = Supported Platforms
 :ordinal: 2
 

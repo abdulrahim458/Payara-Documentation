@@ -1,4 +1,3 @@
-[[restart-http-listeners]]
 = restart-http-listeners
 
  Restarts all HTTP network listener of the targeted instance(s).

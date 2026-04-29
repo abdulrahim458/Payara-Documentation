@@ -1,4 +1,3 @@
-[[healthcheck-stuckthreads-configure]]
 = healthcheck-stuckthreads-configure
 
 Configures the specifics of the Healthcheck stuck threads performance metric service.

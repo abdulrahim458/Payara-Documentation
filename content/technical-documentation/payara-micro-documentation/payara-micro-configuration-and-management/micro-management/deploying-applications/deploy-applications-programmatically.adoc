@@ -1,4 +1,3 @@
-[[deploy-programatically]]
 = Deploying Applications on Micro Programmatically
 :ordinal: 2
 

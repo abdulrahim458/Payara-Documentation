@@ -1,4 +1,3 @@
-[[list-hazelcast-cluster-members]]
 = list-hazelcast-cluster-members
 
 List the current members of the Data Grid visible to the domain.

@@ -1,4 +1,3 @@
-[[get-monitoring-service-configuration]]
 = get-monitoring-service-configuration
 
 Retrieves the monitoring service general settings.

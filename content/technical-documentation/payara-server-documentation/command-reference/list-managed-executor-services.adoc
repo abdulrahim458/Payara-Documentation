@@ -1,4 +1,3 @@
-[[list-managed-executor-services]]
 = list-managed-executor-services
 
 Lists managed executor service resources.

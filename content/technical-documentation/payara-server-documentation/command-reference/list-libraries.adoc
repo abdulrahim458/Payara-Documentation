@@ -1,4 +1,3 @@
-[[list-libraries]]
 = list-libraries
 
 Lists library JAR files on Payara Server.

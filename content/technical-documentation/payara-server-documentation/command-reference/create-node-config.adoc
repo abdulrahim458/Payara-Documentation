@@ -1,4 +1,3 @@
-[[create-node-config]]
 = create-node-config
 
 Creates a node that is not enabled for remote communication.

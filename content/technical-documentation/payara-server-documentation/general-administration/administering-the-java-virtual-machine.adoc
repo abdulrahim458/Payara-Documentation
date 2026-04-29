@@ -1,4 +1,3 @@
-[[administering-the-virtual-machine-for-the-java-platform]]
 = Administering the Virtual Machine for the Java Platform
 :ordinal: 3
 

@@ -1,4 +1,3 @@
-[[administering-payara-server-clusters]]
 = Administering Payara Server Clusters
 :ordinal: 3
 

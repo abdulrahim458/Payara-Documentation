@@ -1,4 +1,3 @@
-[[list-backups]]
 = list-backups
 
 Lists all backups.

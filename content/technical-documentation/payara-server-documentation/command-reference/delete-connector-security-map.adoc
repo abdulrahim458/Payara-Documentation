@@ -1,4 +1,3 @@
-[[delete-connector-security-map]]
 = delete-connector-security-map
 
 Celetes a security map for the specified connector connection pool.

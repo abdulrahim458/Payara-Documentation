@@ -1,4 +1,3 @@
-[[running-in-a-secure-environment]]
 = Running in a Secure Environment
 :ordinal: 6
 

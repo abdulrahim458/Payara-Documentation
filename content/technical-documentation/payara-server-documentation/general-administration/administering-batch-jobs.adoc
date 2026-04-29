@@ -1,4 +1,3 @@
-[[administering-batch-jobs]]
 = Administering Batch Jobs
 :ordinal: 13
 

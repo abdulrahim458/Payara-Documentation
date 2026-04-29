@@ -1,4 +1,3 @@
-[[delete-javamail-resource]]
 = delete-javamail-resource
 
 Removes a JavaMail session resource.

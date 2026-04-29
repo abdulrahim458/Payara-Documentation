@@ -1,4 +1,3 @@
-[[list-applications]]
 = list-applications
 
 Lists deployed applications.

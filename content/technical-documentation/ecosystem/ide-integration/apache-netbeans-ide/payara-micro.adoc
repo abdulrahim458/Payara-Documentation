@@ -1,4 +1,3 @@
-[[payara-micro-netbeans]]
 = Payara Micro Apache NetBeans IDE Support
 :ordinal: 2
 

@@ -1,4 +1,3 @@
-[[domain-datagrid-concept]]
 = Administering the Domain Data Grid
 :ordinal: 5
 

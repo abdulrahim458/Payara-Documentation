@@ -1,4 +1,3 @@
-[[list-context-services]]
 = list-context-services
 
 Lists context service resources.

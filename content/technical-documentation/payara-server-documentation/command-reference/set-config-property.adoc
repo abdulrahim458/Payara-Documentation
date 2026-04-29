@@ -1,4 +1,3 @@
-[[set-config-property]]
 = set-config-property
 
 Provides a way to set the value of a MicroProfile Configuration property in a specific configuration source.

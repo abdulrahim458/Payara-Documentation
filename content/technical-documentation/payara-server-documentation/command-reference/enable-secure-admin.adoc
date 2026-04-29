@@ -1,4 +1,3 @@
-[[enable-secure-admin]]
 = enable-secure-admin
 
 Enables secure admin (if it is not already enabled), optionally changing the alias used for DAS-to-instance admin messages or the alias used for instance-to-DAS admin messages.

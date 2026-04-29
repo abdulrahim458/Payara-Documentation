@@ -1,4 +1,3 @@
-[[delete-jmsdest]]
 = delete-jmsdest
 
 Removes a JMS physical destination.

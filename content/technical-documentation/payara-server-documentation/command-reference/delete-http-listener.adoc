@@ -1,4 +1,3 @@
-[[delete-http-listener]]
 = delete-http-listener
 
 Removes a network listener.

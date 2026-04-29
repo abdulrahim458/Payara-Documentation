@@ -1,4 +1,3 @@
-[[restart-domains]]
 = restart-domains
 
 Restarts the Domain Administration Server(DAS) of the specified domains.

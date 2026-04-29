@@ -1,4 +1,3 @@
-[[delete-node-docker]]
 = delete-node-docker
 
 Deletes a Docker node

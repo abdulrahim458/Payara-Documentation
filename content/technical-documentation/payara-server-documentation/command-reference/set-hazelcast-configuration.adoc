@@ -1,4 +1,3 @@
-[[set-hazelcast-configuration]]
 = set-hazelcast-configuration
 
 Configures the underlying Data Grid (Hazelcast) instance.

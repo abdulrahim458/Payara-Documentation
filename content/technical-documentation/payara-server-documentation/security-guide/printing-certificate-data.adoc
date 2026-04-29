@@ -1,4 +1,3 @@
-[[printing-certificate-data]]
 = Printing Certificate Data
 :ordinal: 10
 

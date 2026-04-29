@@ -1,4 +1,3 @@
-[[remove-from-truststore]]
 = remove-from-truststore
 
 Removes a certificate entry from the specified server truststore.

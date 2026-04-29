@@ -1,4 +1,3 @@
-[[add-instance-to-deployment-group]]
 = add-instance-to-deployment-group
 
 Adds a standalone instance to an existing deployment group.

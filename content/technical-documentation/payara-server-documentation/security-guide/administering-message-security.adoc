@@ -1,4 +1,3 @@
-[[administering-message-security]]
 = Administering Message Security
 :ordinal: 3
 

@@ -1,4 +1,3 @@
-[[enabling-centralized-administration-of-payara-server-instances]]
 = Enabling Centralized Administration of Payara Server Instances
 :ordinal: 1
 

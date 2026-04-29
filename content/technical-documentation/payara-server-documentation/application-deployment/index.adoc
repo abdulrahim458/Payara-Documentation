@@ -1,4 +1,3 @@
-[[overview-of-payara-server-application-deployment]]
 = Overview of Payara Server Application Deployment
 
 Payara Server provides an environment for developing and deploying Jakarta applications and web services. Payara Server applications include Jakarta Platform, Enterprise Edition (Jakarta EE platform) standard features as well as features specific to Payara Server. This guide explains the tools and processes used for deploying applications and modules in the Payara Server environment. Only Payara Server features are described in detail in this document.

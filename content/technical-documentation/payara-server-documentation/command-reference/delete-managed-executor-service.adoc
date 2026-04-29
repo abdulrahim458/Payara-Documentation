@@ -1,4 +1,3 @@
-[[delete-managed-executor-service]]
 = delete-managed-executor-service
 
 Removes a managed executor service resource with the specified JNDI name.

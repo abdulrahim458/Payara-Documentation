@@ -1,4 +1,3 @@
-[[backup-domain]]
 = backup-domain
 
 Performs a backup on the domain.

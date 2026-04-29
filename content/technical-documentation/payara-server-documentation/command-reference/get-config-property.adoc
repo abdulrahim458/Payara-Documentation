@@ -1,4 +1,3 @@
-[[get-config-property]]
 = get-config-property
 
 Provides a way to get the value of a MicroProfile configuration property stored in a specific configuration source.

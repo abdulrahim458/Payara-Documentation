@@ -1,4 +1,3 @@
-[[upgrade-advisor-tool]]
 = Upgrade Advisor Tool
 :ordinal: 4
 

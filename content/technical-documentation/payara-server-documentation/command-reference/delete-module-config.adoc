@@ -1,4 +1,3 @@
-[[delete-module-config]]
 = delete-module-config
 
 Removes the configuration of a module from `domain.xml`.

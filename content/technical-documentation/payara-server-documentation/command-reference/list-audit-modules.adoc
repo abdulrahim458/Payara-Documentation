@@ -1,4 +1,3 @@
-[[list-audit-modules]]
 = list-audit-modules
 
 Gets all audit modules and displays them.

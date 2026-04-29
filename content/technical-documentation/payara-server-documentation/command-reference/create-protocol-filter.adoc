@@ -1,4 +1,3 @@
-[[create-protocol-filter]]
 = create-protocol-filter
 
 Adds a new protocol filter.

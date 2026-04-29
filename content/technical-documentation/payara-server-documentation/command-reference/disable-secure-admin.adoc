@@ -1,4 +1,3 @@
-[[disable-secure-admin]]
 = disable-secure-admin
 
 Disables secure admin if it is already enabled.

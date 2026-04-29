@@ -1,4 +1,3 @@
-[[set-healthcheck-configuration]]
 = set-healthcheck-configuration
 
 Configures the Healthcheck service.

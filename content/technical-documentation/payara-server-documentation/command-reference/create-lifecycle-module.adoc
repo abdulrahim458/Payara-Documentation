@@ -1,4 +1,3 @@
-[[create-lifecycle-module]]
 = create-lifecycle-module
 
 Creates a lifecycle module.

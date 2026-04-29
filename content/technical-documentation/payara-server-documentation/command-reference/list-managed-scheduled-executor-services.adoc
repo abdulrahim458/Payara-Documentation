@@ -1,4 +1,3 @@
-[[list-managed-scheduled-executor-services]]
 = list-managed-scheduled-executor-services
 
 Lists managed scheduled executor service resources.

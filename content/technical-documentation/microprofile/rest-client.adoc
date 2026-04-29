@@ -1,4 +1,3 @@
-[[rest-client-api]]
 = Eclipse MicroProfile Rest Client API
 
 Payara Platform {page-version} provides MicroProfile Rest Client {mpRestClientVersion}

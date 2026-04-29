@@ -1,4 +1,3 @@
-[[delete-custom-resource]]
 = delete-custom-resource
 
 Removes a custom resource.

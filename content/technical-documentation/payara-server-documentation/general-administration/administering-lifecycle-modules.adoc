@@ -1,4 +1,3 @@
-[[administering-life-cycle-modules]]
 = Administering Life Cycle Modules
 :ordinal: 12
 

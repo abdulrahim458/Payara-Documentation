@@ -1,4 +1,3 @@
-[[using-enterprise-javabeans-technology]]
 = Using Jakarta Enterprise Beans Technology
 :ordinal: 9
 

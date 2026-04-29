@@ -1,4 +1,3 @@
-[[administering-domains]]
 = Administering Domains
 :ordinal: 2
 

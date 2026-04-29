@@ -1,4 +1,3 @@
-[[get-metrics-configuration]]
 = get-metrics-configuration
 
 Gets the configuration settings of the MicroProfile Metrics service.

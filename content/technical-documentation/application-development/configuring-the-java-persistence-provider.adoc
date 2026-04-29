@@ -1,4 +1,3 @@
-[[configuring-the-java-persistence-provider]]
 = Configuring the Java Persistence Provider
 :ordinal: 6
 

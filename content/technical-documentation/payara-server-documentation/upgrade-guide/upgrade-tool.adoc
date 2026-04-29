@@ -1,4 +1,3 @@
-[[upgrade-tool]]
 = Payara Server Upgrade Tool
 :ordinal: 1
 

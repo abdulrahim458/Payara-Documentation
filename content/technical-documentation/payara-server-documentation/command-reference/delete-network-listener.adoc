@@ -1,4 +1,3 @@
-[[delete-network-listener]]
 = delete-network-listener
 
 Removes a network listener.

@@ -1,4 +1,3 @@
-[[update-node-dcom]]
 = update-node-dcom
 
 Updates the configuration data of a DCOM node.

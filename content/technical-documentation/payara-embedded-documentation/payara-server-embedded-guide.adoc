@@ -1,4 +1,3 @@
-[[payara-server-embedded-server-guide]]
 = Payara Server Embedded Server Guide
 
 This document explains how to run applications in embedded Payara Server and to develop applications in which Payara Server is embedded.

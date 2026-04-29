@@ -1,4 +1,3 @@
-[[list-log-attributes]]
 = list-log-attributes
 
 Lists all logging attributes defined for a specified target in a domain.

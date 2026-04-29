@@ -1,4 +1,3 @@
-[[disable-secure-admin-principal]]
 = disable-secure-admin-principal
 
 Disables the certificate for authorizing access in secure administration.

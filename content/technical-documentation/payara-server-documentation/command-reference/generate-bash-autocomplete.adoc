@@ -1,4 +1,3 @@
-[[generate-bash-autocomplete]]
 = generate-bash-autocomplete
 
 Creates an Asadmin CLI autocompletion script for bash.

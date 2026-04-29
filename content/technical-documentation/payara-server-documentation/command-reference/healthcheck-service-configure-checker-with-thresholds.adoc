@@ -1,4 +1,3 @@
-[[healthcheck-service-configure-checker-with-thresholds]]
 = healthcheck-service-configure-checker-with-thresholds
 
 Enables or disables the Healthcheck of a specific performance metric service and configures its event thresholds.

@@ -1,4 +1,3 @@
-[[add-resources]]
 = add-resources
 
 Creates the resources specified in an XML file.

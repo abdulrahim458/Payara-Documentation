@@ -1,4 +1,3 @@
-[[create-managed-executor-service]]
 = create-managed-executor-service
 
 Creates a managed executor service resource.

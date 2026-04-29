@@ -1,4 +1,3 @@
-[[deployment-group]]
 = Deployment Group
 :ordinal: 5
 

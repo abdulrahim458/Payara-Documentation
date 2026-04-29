@@ -1,4 +1,3 @@
-[[list-protocols]]
 = list-protocols
 
 Lists the existing protocols.

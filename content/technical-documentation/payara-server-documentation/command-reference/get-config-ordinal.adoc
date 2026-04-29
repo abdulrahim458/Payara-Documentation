@@ -1,4 +1,3 @@
-[[get-config-ordinal]]
 = get-config-ordinal
 
 Returns the ordinal value for the given configuration source type.

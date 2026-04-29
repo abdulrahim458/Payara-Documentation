@@ -1,4 +1,3 @@
-[[administering-the-javamail-service]]
 = Administering the Jakarta Mail Service
 :ordinal: 19
 

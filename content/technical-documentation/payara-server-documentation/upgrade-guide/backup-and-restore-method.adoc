@@ -1,4 +1,3 @@
-[[backup-and-restore]]
 = Backup and Restore Upgrade Method
 :ordinal: 2
 

@@ -1,4 +1,3 @@
-[[create-domain]]
 = create-domain
 
 Creates a domain.

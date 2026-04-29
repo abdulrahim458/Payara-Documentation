@@ -1,4 +1,3 @@
-[[list-jacc-providers]]
 = list-jacc-providers
 
 Enables administrators to list JACC providers defined for a domain.

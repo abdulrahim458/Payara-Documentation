@@ -1,4 +1,3 @@
-[[package-appclient]]
 = package-appclient
 
 Packs the application client container libraries and jar files.

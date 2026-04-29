@@ -1,4 +1,3 @@
-[[using-the-transaction-service]]
 = Using the Transaction Service
 :ordinal: 17
 

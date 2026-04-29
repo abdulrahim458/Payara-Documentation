@@ -1,4 +1,3 @@
-[[administering-named-configurations]]
 = Administering Named Configurations
 :ordinal: 7
 

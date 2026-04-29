@@ -1,4 +1,3 @@
-[[set-log-levels]]
 = set-log-levels
 
 Sets the log level for one or more loggers.

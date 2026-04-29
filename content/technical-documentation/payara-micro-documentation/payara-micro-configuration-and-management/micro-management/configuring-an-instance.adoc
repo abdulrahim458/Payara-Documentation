@@ -1,4 +1,3 @@
-[[configuring-an-instance]]
 = Configuring an Instance
 :ordinal: 2
 

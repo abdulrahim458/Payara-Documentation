@@ -1,4 +1,3 @@
-[[uninstall-node-ssh]]
 = uninstall-node-ssh
 
 Uninstalls Payara Server software from specified SSH-enabled hosts.

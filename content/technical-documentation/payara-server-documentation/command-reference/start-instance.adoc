@@ -1,4 +1,3 @@
-[[start-instance]]
 = start-instance
 
 Starts a Payara Server instance.

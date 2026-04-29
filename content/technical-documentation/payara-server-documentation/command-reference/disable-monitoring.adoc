@@ -1,4 +1,3 @@
-[[disable-monitoring]]
 = disable-monitoring
 
 Disables monitoring for the server or for specific monitorable module.

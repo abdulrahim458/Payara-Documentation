@@ -1,4 +1,3 @@
-[[delete-instance]]
 == delete-instance
 
 Deletes a Payara Server instance.

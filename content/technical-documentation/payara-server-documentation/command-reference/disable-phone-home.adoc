@@ -1,4 +1,3 @@
-[[disable-phone-home]]
 = disable-phone-home
 
 Disables the phone home services.

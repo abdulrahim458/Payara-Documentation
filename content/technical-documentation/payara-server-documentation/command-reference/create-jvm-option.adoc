@@ -1,4 +1,3 @@
-[[create-jvm-options]]
 = create-jvm-options
 
 Create options for the Java application launcher.

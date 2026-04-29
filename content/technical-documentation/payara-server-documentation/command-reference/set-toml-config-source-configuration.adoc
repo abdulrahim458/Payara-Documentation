@@ -1,4 +1,3 @@
-[[set-toml-config-source-configuration]]
 = set-toml-config-source-configuration
 
 Configures the toml configuration source.

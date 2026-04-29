@@ -1,4 +1,3 @@
-[[list-cache-keys]]
 = list-cache-keys
 
 Lists all keys in a Hazelcast cache.

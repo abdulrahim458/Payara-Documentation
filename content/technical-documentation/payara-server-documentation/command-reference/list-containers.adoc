@@ -1,4 +1,3 @@
-[[list-containers]]
 = list-containers
 
 Lists application containers.

@@ -1,4 +1,3 @@
-[[administering-payara-server-instances]]
 = Administering Payara Server Instances
 :ordinal: 6
 

@@ -1,4 +1,3 @@
-[[lite-remote-ejb]]
 = Using Lite Remote EJB Technology
 :ordinal: 10
 

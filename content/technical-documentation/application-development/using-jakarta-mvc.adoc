@@ -1,4 +1,3 @@
-[[using-jakarta-mvc]]
 = Using Jakarta MVC
 :ordinal: 25
 

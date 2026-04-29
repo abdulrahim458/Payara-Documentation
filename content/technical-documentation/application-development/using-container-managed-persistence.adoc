@@ -1,4 +1,3 @@
-[[using-container-managed-persistence]]
 = Using Container-Managed Persistence
 :ordinal: 11
 

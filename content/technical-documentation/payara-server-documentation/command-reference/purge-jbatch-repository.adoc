@@ -1,4 +1,3 @@
-[[purge-jbatch-repository]]
 = purge-jbatch-repository
 
 Purges the current Jakarta Batch repository.

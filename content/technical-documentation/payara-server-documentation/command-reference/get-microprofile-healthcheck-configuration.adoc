@@ -1,4 +1,3 @@
-[[get-microprofile-healthcheck-configuration]]
 = get-microprofile-healthcheck-configuration
 
 Retrieves the configuration settings of the MicroProfile HealthCheck service.

@@ -1,4 +1,3 @@
-[[planning-your-deployment]]
 = Planning your Deployment
 :ordinal: 2
 

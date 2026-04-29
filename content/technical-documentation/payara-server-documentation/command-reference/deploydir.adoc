@@ -1,4 +1,3 @@
-[[deploydir]]
 = deploydir
 
 Deploys an exploded format of application archive.

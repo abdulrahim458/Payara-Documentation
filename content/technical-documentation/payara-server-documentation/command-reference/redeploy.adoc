@@ -1,4 +1,3 @@
-[[redeploy]]
 = redeploy
 
 Redeploys the specified component.

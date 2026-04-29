@@ -1,4 +1,3 @@
-[[building-vscode-ide-plugin]]
 = Building Payara Tools VS Code IDE Plugin
 
 The Payara Tools VS Code IDE Extension source code is available in the https://github.com/payara/ecosystem-vscode-plugin[VS Code Extension repository].

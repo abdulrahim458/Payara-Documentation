@@ -1,4 +1,3 @@
-[[configuring-java-message-service-high-availability]]
 = Configuring Java Message Service High Availability
 :ordinal: 10
 

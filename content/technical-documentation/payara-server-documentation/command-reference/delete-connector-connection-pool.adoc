@@ -1,4 +1,3 @@
-[[delete-connector-connection-pool]]
 = delete-connector-connection-pool
 
 Removes the specified connector connection pool.

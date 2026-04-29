@@ -1,4 +1,3 @@
-[[health-check-service]]
 = Administering the HealthCheck Service
 :ordinal: 9
 

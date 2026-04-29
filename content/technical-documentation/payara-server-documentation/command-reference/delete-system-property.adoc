@@ -1,4 +1,3 @@
-[[delete-system-property]]
 = delete-system-property
 
 Removes a system property of the domain, configuration, cluster, or server instance, one at a time.

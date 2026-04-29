@@ -1,4 +1,3 @@
-    [[installing-grpc-server-support-module]]
 = Installing gRPC Server Support Module
 
 You need to download the following artifact from enterprise nexus repository: https://nexus.payara.fish/repository/payara-enterprise .

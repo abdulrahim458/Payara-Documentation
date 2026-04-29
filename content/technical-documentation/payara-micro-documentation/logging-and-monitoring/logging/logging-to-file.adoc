@@ -1,4 +1,3 @@
-[[logging-to-a-file]]
 = Logging to a file
 :ordinal: 1
 

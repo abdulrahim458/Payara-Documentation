@@ -1,4 +1,3 @@
-[[request-tracing]]
 = Using Request Tracing in Applications
 :ordinal: 23
 

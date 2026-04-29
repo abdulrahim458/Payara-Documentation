@@ -1,4 +1,3 @@
-[[list-virtual-servers]]
 = list-virtual-servers
 
 Lists the existing virtual servers.

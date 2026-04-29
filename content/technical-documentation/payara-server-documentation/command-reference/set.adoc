@@ -1,4 +1,3 @@
-[[set]]
 = set
 
 Sets the values of configurable attributes.

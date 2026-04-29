@@ -1,4 +1,3 @@
-[[list-connector-security-maps]]
 = list-connector-security-maps
 
 Lists the security maps belonging to the specified connector connection pool.

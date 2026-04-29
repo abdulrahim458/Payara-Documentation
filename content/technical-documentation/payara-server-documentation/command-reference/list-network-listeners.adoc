@@ -1,4 +1,3 @@
-[[list-network-listeners]]
 = list-network-listeners
 
 Lists the existing network listeners.

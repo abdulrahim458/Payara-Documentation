@@ -1,4 +1,3 @@
-[[set-log-notifier-configuration]]
 = set-log-notifier-configuration
 
 Configures the settings of the Log notifier

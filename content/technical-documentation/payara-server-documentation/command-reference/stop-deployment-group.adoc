@@ -1,4 +1,3 @@
-[[stop-deployment-group]]
 = stop-deployment-group
 
 Stops all the instances in a Payara Server deployment group.

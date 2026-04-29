@@ -1,4 +1,3 @@
-[[delete-config-property]]
 = delete-config-property
 
 Provides a way to delete a MicroProfile Configuration property in one of the built-in configuration sources.

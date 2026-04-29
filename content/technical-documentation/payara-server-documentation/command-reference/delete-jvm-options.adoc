@@ -1,4 +1,3 @@
-[[delete-jvm-options]]
 = delete-jvm-options
 
 Removes one or more options for the Java application launcher.

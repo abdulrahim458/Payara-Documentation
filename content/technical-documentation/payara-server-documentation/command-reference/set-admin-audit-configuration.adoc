@@ -1,4 +1,3 @@
-[[set-admin-audit-configuration]]
 = set-admin-audit-configuration
 
 Configures the Administrative Audit Service.

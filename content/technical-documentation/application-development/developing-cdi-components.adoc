@@ -1,4 +1,3 @@
-[[cdi]]
 = Developing CDI Components
 :ordinal: 4
 

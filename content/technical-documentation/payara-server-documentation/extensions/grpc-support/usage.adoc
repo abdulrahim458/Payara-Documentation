@@ -1,4 +1,3 @@
-[[usage]]
 = Using gRPC Support Module
 
 This page documents how to use gRPC support in web applications.

@@ -1,4 +1,3 @@
-[[export]]
 = export
 
 Marks a variable name for automatic export to the environment of subsequent commands in multimode.

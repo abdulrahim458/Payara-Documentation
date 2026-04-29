@@ -1,4 +1,3 @@
-[[delete-file-user]]
 = delete-file-user
 
 Removes the named file user.

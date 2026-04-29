@@ -1,5 +1,3 @@
-
-[[payara-server-documentation]]
 = Payara Server Documentation
 
 Comprehensive documentation of how to operate and manage a Payara Server installation composed of the following subsections:

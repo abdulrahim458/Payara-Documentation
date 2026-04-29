@@ -1,4 +1,3 @@
-[[get-dynamodb-config-source-configuration]]
 = get-dynamodb-config-source-configuration
 
 Gets the configuration for the DynamoDB configuration source.

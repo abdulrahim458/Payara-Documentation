@@ -1,4 +1,3 @@
-[[stopping-an-instance]]
 = Stopping an Instance
 
 This section describes how to shut down a Payara Micro instance.

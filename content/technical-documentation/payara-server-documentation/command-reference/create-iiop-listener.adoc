@@ -1,4 +1,3 @@
-[[create-iiop-listener]]
 = create-iiop-listener
 
 Adds an IIOP listener.

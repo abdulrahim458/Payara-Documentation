@@ -1,4 +1,3 @@
-[[get-requesttracing-configuration]]
 = get-requesttracing-configuration
 
 Retrieves the Request Tracing service's configuration.

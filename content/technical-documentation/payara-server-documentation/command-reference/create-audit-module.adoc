@@ -1,4 +1,3 @@
-[[create-audit-module]]
 = create-audit-module
 
 Adds an audit module.

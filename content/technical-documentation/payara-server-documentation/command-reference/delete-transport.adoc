@@ -1,4 +1,3 @@
-[[delete-transport]]
 = delete-transport
 
 Removes a transport.

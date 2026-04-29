@@ -1,4 +1,3 @@
-[[administering-concurrent-resources]]
 = Administering Concurrent Resources
 :ordinal: 17
 

@@ -1,4 +1,3 @@
-[[queue-management]]
 = Programmatic SQS Queue Management
 
 Amazon SQS Queues (and other resources) can be managed through the use of the official Amazon SQS API, which allows programmatic control over them. In general, managing queues in Amazon SQS is crucial for effective message handling.

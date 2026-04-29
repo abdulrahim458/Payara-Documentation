@@ -1,4 +1,3 @@
-[[overview]]
 = Documentation Overview
 
 This page provides some general information about the Payara Platform Enterprise Edition.

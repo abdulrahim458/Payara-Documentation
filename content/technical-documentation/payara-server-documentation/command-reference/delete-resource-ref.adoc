@@ -1,4 +1,3 @@
-[[delete-resource-ref]]
 = delete-resource-ref
 
 Removes a reference to a resource.

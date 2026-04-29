@@ -1,4 +1,3 @@
-[[set-amx-enabled]]
 = set-amx-enabled
 
 Enables or disables the AMX monitoring subsystem.

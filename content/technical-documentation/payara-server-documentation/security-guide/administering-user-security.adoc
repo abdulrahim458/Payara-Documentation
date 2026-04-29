@@ -1,4 +1,3 @@
-[[administering-user-security]]
 = Administering User Security
 :ordinal: 2
 

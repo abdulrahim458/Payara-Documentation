@@ -1,4 +1,3 @@
-[[developing-osgi-enabled-jakarta-ee-applications]]
 = Developing OSGi-enabled Jakarta EE Applications
 :ordinal: 15
 

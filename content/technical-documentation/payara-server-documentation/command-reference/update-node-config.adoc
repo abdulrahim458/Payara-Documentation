@@ -1,4 +1,3 @@
-[[update-node-config]]
 = update-node-config
 
 Updates the configuration data of a node.

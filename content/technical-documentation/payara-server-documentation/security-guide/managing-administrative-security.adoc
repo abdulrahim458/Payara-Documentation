@@ -1,4 +1,3 @@
-[[managing-administrative-security]]
 = Managing Administrative Security
 :ordinal: 5
 

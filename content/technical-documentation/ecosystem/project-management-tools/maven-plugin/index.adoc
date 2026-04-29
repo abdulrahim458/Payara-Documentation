@@ -1,4 +1,3 @@
-[[payara-maven-plugins]]
 = Payara Maven Plugins
 
 The Payara Maven Plugins provide seamless integration with Maven, enabling developers to start, stop, and deploy Jakarta EE applications on Payara Server and Payara Micro. These plugins streamline development, support automated deployment, and enhance workflow efficiency.

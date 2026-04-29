@@ -1,4 +1,3 @@
-[[create-transport]]
 = create-transport
 
 Adds a new transport.

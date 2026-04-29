@@ -1,4 +1,3 @@
-[[persistent-ejb-timers]]
 = Persistent EJB timers
 
 Payara Micro supports persistent EJB timers which are stored across Payara Micro instances within the cluster, backed by distributed Hazelcast cache.

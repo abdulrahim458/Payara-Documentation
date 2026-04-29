@@ -1,4 +1,3 @@
-[[list-batch-runtime-configuration]]
 = list-batch-runtime-configuration
 
 Displays the configuration of the batch runtime.

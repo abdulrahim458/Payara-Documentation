@@ -1,4 +1,3 @@
-[[restart-cluster]]
 = restart-cluster
 
 Restarts all instances in a cluster.

@@ -1,4 +1,3 @@
-[[administering-system-security]]
 = Administering System Security
 :ordinal: 1
 

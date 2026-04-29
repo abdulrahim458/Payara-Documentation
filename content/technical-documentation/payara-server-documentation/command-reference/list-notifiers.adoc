@@ -1,4 +1,3 @@
-[[list-notifiers]]
 = list-notifiers
 
 List all available notifiers to the server.

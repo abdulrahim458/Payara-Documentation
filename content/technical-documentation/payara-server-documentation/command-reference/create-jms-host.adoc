@@ -1,4 +1,3 @@
-[[create-jms-host]]
 = create-jms-host
 
 Creates a JMS host.

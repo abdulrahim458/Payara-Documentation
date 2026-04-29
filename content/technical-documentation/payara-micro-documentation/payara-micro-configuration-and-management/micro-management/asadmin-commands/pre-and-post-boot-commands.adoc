@@ -1,4 +1,3 @@
-[[running-asadmin-commands-using-preboot-and-posboot-scripts]]
 = Running asadmin commands using Pre-boot and Post-boot Scripts
 
 Administration commands can also be run against a Payara Micro instance at specific moments in its lifecycle. To do this, you must provide the commands you wish to execute in special scripts via a command line option.

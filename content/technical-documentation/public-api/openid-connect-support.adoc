@@ -1,4 +1,3 @@
-[[openid-connect-support]]
 = OpenID Connect Support
 
 The Payara API provides a `@OpenIdAuthenticationDefinition` annotation that creates an authorization mechanism for OpenID Connect support. This works in the same way as other authorization mechanisms in the Java EE Security API.

@@ -1,4 +1,3 @@
-[[list-jndi-entries]]
 = list-jndi-entries
 
 Browses and queries the JNDI tree.

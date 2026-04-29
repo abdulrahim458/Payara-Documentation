@@ -1,4 +1,3 @@
-[[list-connector-resources]]
 = list-connector-resources
 
 Lists all connector resources.

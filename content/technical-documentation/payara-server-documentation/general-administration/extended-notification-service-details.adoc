@@ -1,4 +1,3 @@
-[[extended-notification-service-details]]
 = Extended Notification Service Details
 :ordinal: 11
 

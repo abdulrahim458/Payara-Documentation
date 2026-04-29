@@ -1,4 +1,3 @@
-[[setup-local-dcom]]
 = setup-local-dcom
 
 Sets up DCOM on a host.

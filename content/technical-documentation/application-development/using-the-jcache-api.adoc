@@ -1,4 +1,3 @@
-[[jcache-in-payara-platform]]
 = Using the JCache API
 :ordinal: 22
 

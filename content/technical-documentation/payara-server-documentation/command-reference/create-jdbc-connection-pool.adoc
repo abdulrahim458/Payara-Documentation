@@ -1,4 +1,3 @@
-[[create-jdbc-connection-pool]]
 = create-jdbc-connection-pool
 
 Registers a JDBC connection pool.

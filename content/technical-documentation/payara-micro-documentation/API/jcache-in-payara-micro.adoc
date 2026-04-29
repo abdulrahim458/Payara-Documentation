@@ -1,4 +1,3 @@
-[[jcache-in-payara-micro]]
 = JCache in Payara Micro
 
 Payara Micro provides JCache functionality and the documentation for using xref:technical-documentation/application-development/using-the-jcache-api.adoc[JCache in Payara Server] also applies to it.

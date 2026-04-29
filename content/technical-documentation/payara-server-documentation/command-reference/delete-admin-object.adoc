@@ -1,4 +1,3 @@
-[[delete-admin-object]]
 = delete-admin-object
 
 Removes the administered object with the specified JNDI name.

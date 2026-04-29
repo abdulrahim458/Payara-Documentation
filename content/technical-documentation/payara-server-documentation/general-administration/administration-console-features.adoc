@@ -1,4 +1,3 @@
-[[admin-console-features]]
 = Administration Console Features
 :ordinal: 4
 

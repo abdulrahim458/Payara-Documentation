@@ -1,4 +1,3 @@
-[[login]]
 = login
 
 Logs you into a domain.

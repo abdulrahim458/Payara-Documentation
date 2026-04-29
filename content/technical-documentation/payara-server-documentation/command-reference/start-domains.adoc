@@ -1,4 +1,3 @@
-[[start-domains]]
 = start-domains
 
 Starts the Domain Administration Server(DAS) of the specified domains.

@@ -1,4 +1,3 @@
-[[adding-jars-to-instance]]
 = Adding Third-Party JARs to a Micro Instance
 :ordinal: 2
 

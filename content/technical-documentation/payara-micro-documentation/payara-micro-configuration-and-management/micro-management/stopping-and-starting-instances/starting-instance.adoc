@@ -1,4 +1,3 @@
-[[starting-an-instance]]
 = Starting an Instance
 
 This section details the very basics of starting a Payara Micro instance.

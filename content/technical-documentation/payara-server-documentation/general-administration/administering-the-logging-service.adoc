@@ -1,4 +1,3 @@
-[[administering-the-logging-service]]
 = Administering the Logging Service
 :ordinal: 7
 

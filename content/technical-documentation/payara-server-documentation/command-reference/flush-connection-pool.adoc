@@ -1,4 +1,3 @@
-[[flush-connection-pool]]
 = flush-connection-pool
 
 Reintializes all connections established in the specified connection pool.

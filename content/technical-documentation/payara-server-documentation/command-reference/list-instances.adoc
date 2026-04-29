@@ -1,4 +1,3 @@
-[[list-instances]]
 = list-instances
 
 Lists Payara Server instances in a domain.

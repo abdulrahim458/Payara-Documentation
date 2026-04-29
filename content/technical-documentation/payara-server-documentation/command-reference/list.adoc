@@ -1,4 +1,3 @@
-[[list]]
 = list
 
 Lists configurable or monitorable elements.

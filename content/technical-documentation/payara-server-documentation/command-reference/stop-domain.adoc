@@ -1,4 +1,3 @@
-[[stop-domain]]
 = stop-domain
 
 Stops the Domain Administration Server(DAS) of the specified domain.

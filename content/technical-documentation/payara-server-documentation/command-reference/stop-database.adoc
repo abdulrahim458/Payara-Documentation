@@ -1,4 +1,3 @@
-[[stop-database]]
 = stop-database
 
 Stops a running H2 database server.

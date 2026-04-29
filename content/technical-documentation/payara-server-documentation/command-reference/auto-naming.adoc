@@ -1,4 +1,3 @@
-[[auto-naming]]
 = Auto-Naming
 :ordinal: 7
 

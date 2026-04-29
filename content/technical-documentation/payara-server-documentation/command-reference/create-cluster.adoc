@@ -1,4 +1,3 @@
-[[create-cluster]]
 = create-cluster
 
 Creates a Payara Server cluster.

@@ -1,4 +1,3 @@
-[[using-rest-interfaces-to-administer-payara-server]]
 = Using REST Interfaces to Administer Payara Server
 :ordinal: 1
 

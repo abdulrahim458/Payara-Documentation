@@ -1,4 +1,3 @@
-[[delete-lifecycle-module]]
 = delete-lifecycle-module
 
 Removes the lifecycle module.

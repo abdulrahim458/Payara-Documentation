@@ -1,4 +1,3 @@
-[[list-jndi-resources]]
 = list-jndi-resources
 
 Lists all existing JNDI resources.

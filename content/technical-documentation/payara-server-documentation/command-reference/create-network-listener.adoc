@@ -1,4 +1,3 @@
-[[create-network-listener]]
 = create-network-listener
 
 Adds a new network listener socket.

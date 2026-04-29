@@ -1,4 +1,3 @@
-[[create-virtual-server]]
 = create-virtual-server
 
 Creates the named virtual server.

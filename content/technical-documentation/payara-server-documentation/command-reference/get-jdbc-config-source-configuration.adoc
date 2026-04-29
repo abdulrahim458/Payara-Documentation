@@ -1,4 +1,3 @@
-[[get-jdbc-config-source-configuration]]
 = get-jdbc-config-source-configuration
 
 Gets the settings of the JDBC configuration source.

@@ -1,4 +1,3 @@
-[[get-asadmin-recorder-configuration]]
 = get-asadmin-recorder-configuration
 
 Returns the current configuration of the Asadmin Recorder service.

@@ -1,4 +1,3 @@
-[[list-resource-refs]]
 = list-resource-refs
 
 Lists existing resource references.

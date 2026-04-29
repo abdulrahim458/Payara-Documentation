@@ -1,4 +1,3 @@
-[[recover-transactions]]
 = recover-transactions
 
 Manually recovers pending transactions.

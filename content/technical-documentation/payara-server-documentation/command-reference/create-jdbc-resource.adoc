@@ -1,4 +1,3 @@
-[[create-jdbc-resource]]
 = create-jdbc-resource
 
 Creates a JDBC resource with the specified JNDI name.

@@ -1,4 +1,3 @@
-[[create-connector-work-security-map]]
 = create-connector-work-security-map
 
 Creates a work security map for the specified resource adapter.

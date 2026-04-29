@@ -1,4 +1,3 @@
-[[administering-database-connectivity]]
 = Administering Database Connectivity
 :ordinal: 14
 

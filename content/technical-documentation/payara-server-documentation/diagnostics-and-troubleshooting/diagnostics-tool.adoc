@@ -1,4 +1,3 @@
-[[diagnostics-tool]]
 = Diagnostics Tool
 
 Payara Server has a diagnostic tool that on demand collects the following information from the server runtime.

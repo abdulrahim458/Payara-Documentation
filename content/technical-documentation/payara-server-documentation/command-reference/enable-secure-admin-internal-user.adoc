@@ -1,4 +1,3 @@
-[[enable-secure-admin-internal-user]]
 = enable-secure-admin-internal-user
 
 Instructs the Payara Server DAS and instances to use the specified admin user and the password associated with the password alias to authenticate with each other and to authorize admin operations.

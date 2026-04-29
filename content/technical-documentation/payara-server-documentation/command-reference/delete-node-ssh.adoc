@@ -1,4 +1,3 @@
-[[delete-node-ssh]]
 = delete-node-ssh
 
 Deletes a node that is enabled for communication over SSH.

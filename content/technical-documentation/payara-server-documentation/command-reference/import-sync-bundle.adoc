@@ -1,4 +1,3 @@
-[[import-sync-bundle]]
 = import-sync-bundle
 
 Imports the configuration data of a clustered instance or standalone instance from an archive file.

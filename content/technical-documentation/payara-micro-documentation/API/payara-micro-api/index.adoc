@@ -1,5 +1,3 @@
-
-[[payara-micro-api]]
 = Payara Micro API
 
 This section details documentation on the Payara Micro API. The Javadoc for the most recent version of the Payara Micro API can be

@@ -1,4 +1,3 @@
-[[jakarta-ee-security-extensions]]
 = Jakarta EE Security Extensions
 
 This section documents available extensions for custom authentication mechanisms and identity store configurations that can be used in any Jakarta EE application.

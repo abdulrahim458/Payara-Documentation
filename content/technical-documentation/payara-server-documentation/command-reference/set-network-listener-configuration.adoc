@@ -1,4 +1,3 @@
-[[set-network-listener-configuration]]
 = set-network-listener-configuration
 
 Helps to modify an existing network listener.

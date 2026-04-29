@@ -1,4 +1,3 @@
-[[delete-deployment-group]]
 = delete-deployment-group
 
 Deletes a Payara Server deployment group.

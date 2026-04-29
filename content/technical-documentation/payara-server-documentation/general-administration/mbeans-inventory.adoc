@@ -1,4 +1,3 @@
-[[mbeans]]
 = MBeans Inventory
 :ordinal: 25
 

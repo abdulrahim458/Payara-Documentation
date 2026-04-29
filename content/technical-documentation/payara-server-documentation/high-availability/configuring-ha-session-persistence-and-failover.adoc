@@ -1,4 +1,3 @@
-[[configuring-high-availability-session-persistence-and-failover]]
 =  Configuring High Availability Session Persistence and Failover
 :ordinal: 9
 

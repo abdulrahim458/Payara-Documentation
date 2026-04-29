@@ -1,4 +1,3 @@
-[[list-phone-home]]
 = list-phone-home
 
 List the current status of the Phone Home service.

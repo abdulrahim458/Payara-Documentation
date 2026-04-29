@@ -1,4 +1,3 @@
-[[create-http]]
 = create-http
 
 Sets HTTP parameters for a protocol.

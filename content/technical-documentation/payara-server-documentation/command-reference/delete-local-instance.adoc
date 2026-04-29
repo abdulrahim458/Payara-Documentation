@@ -1,4 +1,3 @@
-[[delete-local-instance]]
 = delete-local-instance
 
 Deletes a Payara Server instance on the machine where the subcommand is run/

@@ -1,4 +1,3 @@
-[[resource]]
 = resource
 
 Provide connectivity to various types of EIS and other integrated systems.

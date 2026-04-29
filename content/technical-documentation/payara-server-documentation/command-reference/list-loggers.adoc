@@ -1,4 +1,3 @@
-[[list-loggers]]
 = list-loggers
 
 Lists existing loggers.

@@ -1,4 +1,3 @@
-[[create-custom-resource]]
 = create-custom-resource
 
 Creates a custom resource.

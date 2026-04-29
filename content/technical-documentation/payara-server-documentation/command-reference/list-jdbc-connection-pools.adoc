@@ -1,4 +1,3 @@
-[[list-jdbc-connection-pools]]
 = list-jdbc-connection-pools
 
 Lists all JDBC connection pools.

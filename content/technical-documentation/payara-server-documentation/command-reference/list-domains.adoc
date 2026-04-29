@@ -1,4 +1,3 @@
-[[list-domains]]
 = list-domains
 
 Lists the domains in the specified directory.

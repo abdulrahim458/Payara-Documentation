@@ -1,4 +1,3 @@
-[[notification-configure]]
 = notification-configure
 
 Configures the notification service.

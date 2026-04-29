@@ -1,4 +1,3 @@
-[[delete-jdbc-connection-pool]]
 = delete-jdbc-connection-pool
 
 Removes the specified JDBC connection pool.

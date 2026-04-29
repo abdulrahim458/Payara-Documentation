@@ -1,4 +1,3 @@
-[[create-node-docker]]
 = create-node-docker
 
 Creates a node that hosts server instances on a Docker containers.

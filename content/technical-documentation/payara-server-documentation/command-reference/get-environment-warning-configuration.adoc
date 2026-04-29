@@ -1,4 +1,3 @@
-[[get-environment-warning-configuration]]
 = get-environment-warning-configuration
 
 Retrieves the current settings of the Environment Warning feature in the Admin Console

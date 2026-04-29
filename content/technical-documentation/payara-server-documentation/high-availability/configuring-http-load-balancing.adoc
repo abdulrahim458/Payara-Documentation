@@ -1,4 +1,3 @@
-[[configuring-http-load-balancing]]
 = Configuring HTTP Load Balancing
 :ordinal: 8
 

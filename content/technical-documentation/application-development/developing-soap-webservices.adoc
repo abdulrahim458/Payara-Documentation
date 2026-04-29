@@ -1,4 +1,3 @@
-[[developing-web-services]]
 = Developing SOAP Web Services
 :ordinal: 5
 

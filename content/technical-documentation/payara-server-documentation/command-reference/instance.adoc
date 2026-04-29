@@ -1,4 +1,3 @@
-[[instance]]
 = Instance
 :ordinal: 2
 
