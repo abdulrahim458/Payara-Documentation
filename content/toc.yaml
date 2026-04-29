@@ -761,44 +761,82 @@ sections:
   - title: Release Notes
     sections:
       - file: release-notes/index
-      - file: release-notes/release-notes-6.37.0
-      - file: release-notes/release-notes-6.36.0
-      - file: release-notes/release-notes-6.35.0
-      - file: release-notes/release-notes-6.34.0
-      - file: release-notes/release-notes-6.33.0
-      - file: release-notes/release-notes-6.32.0
-      - file: release-notes/release-notes-6.31.0
-      - file: release-notes/release-notes-6.30.0
-      - file: release-notes/release-notes-6.29.0
-      - file: release-notes/release-notes-6.28.0
-      - file: release-notes/release-notes-6.27.0
-      - file: release-notes/release-notes-6.26.0
-      - file: release-notes/release-notes-6.25.0
-      - file: release-notes/release-notes-6.24.0
-      - file: release-notes/release-notes-6.23.0
-      - file: release-notes/release-notes-6.22.0
-      - file: release-notes/release-notes-6.21.0
-      - file: release-notes/release-notes-6.20.0
-      - file: release-notes/release-notes-6.19.0
-      - file: release-notes/release-notes-6.18.0
-      - file: release-notes/release-notes-6.17.0
-      - file: release-notes/release-notes-6.16.0
-      - file: release-notes/release-notes-6.15.0
-      - file: release-notes/release-notes-6.14.0
-      - file: release-notes/release-notes-6.13.0
-      - file: release-notes/release-notes-6.12.0
-      - file: release-notes/release-notes-6.11.0
-      - file: release-notes/release-notes-6.10.0
-      - file: release-notes/release-notes-6.9.0
-      - file: release-notes/release-notes-6.8.0
-      - file: release-notes/release-notes-6.7.0
-      - file: release-notes/release-notes-6.6.0
-      - file: release-notes/release-notes-6.5.0
-      - file: release-notes/release-notes-6.4.0
-      - file: release-notes/release-notes-6.3.0
-      - file: release-notes/release-notes-6.2.0
-      - file: release-notes/release-notes-6.1.0
-      - file: release-notes/release-notes-6.0.0
+      - title: Payara Enterprise 6.37.0
+        file: release-notes/release-notes-6.37.0
+      - title: Payara Enterprise 6.36.0
+        file: release-notes/release-notes-6.36.0
+      - title: Payara Enterprise 6.35.0
+        file: release-notes/release-notes-6.35.0
+      - title: Payara Enterprise 6.34.0
+        file: release-notes/release-notes-6.34.0
+      - title: Payara Enterprise 6.33.0
+        file: release-notes/release-notes-6.33.0
+      - title: Payara Enterprise 6.32.0
+        file: release-notes/release-notes-6.32.0
+      - title: Payara Enterprise 6.31.0
+        file: release-notes/release-notes-6.31.0
+      - title: Payara Enterprise 6.30.0
+        file: release-notes/release-notes-6.30.0
+      - title: Payara Enterprise 6.29.0
+        file: release-notes/release-notes-6.29.0
+      - title: Payara Enterprise 6.28.0
+        file: release-notes/release-notes-6.28.0
+      - title: Payara Enterprise 6.27.0
+        file: release-notes/release-notes-6.27.0
+      - title: Payara Enterprise 6.26.0
+        file: release-notes/release-notes-6.26.0
+      - title: Payara Enterprise 6.25.0
+        file: release-notes/release-notes-6.25.0
+      - title: Payara Enterprise 6.24.0
+        file: release-notes/release-notes-6.24.0
+      - title: Payara Enterprise 6.23.0
+        file: release-notes/release-notes-6.23.0
+      - title: Payara Enterprise 6.22.0
+        file: release-notes/release-notes-6.22.0
+      - title: Payara Enterprise 6.21.0
+        file: release-notes/release-notes-6.21.0
+      - title: Payara Enterprise 6.20.0
+        file: release-notes/release-notes-6.20.0
+      - title: Payara Enterprise 6.19.0
+        file: release-notes/release-notes-6.19.0
+      - title: Payara Enterprise 6.18.0
+        file: release-notes/release-notes-6.18.0
+      - title: Payara Enterprise 6.17.0
+        file: release-notes/release-notes-6.17.0
+      - title: Payara Enterprise 6.16.0
+        file: release-notes/release-notes-6.16.0
+      - title: Payara Enterprise 6.15.0
+        file: release-notes/release-notes-6.15.0
+      - title: Payara Enterprise 6.14.0
+        file: release-notes/release-notes-6.14.0
+      - title: Payara Enterprise 6.13.0
+        file: release-notes/release-notes-6.13.0
+      - title: Payara Enterprise 6.12.0
+        file: release-notes/release-notes-6.12.0
+      - title: Payara Enterprise 6.11.0
+        file: release-notes/release-notes-6.11.0
+      - title: Payara Enterprise 6.10.0
+        file: release-notes/release-notes-6.10.0
+      - title: Payara Enterprise 6.9.0
+        file: release-notes/release-notes-6.9.0
+      - title: Payara Enterprise 6.8.0
+        file: release-notes/release-notes-6.8.0
+      - title: Payara Enterprise 6.7.0
+        file: release-notes/release-notes-6.7.0
+      - title: Payara Enterprise 6.6.0
+        file: release-notes/release-notes-6.6.0
+      - title: Payara Enterprise 6.5.0
+        file: release-notes/release-notes-6.5.0
+      - title: Payara Enterprise 6.4.0
+        file: release-notes/release-notes-6.4.0
+      - title: Payara Enterprise 6.3.0
+        file: release-notes/release-notes-6.3.0
+      - title: Payara Enterprise 6.2.0
+        file: release-notes/release-notes-6.2.0
+      - title: Payara Enterprise 6.1.0
+        file: release-notes/release-notes-6.1.0
+      - title: Payara Enterprise 6.0.0
+        file: release-notes/release-notes-6.0.0
 
   - title: Jakarta EE Certification
     sections:
