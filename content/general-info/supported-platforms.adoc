@@ -7,13 +7,49 @@ Though it is always possible for new versions to be supported, this page details
 
 The Payara Platform currently runs on the following Java Virtual Machines:
 
-* Azul Zulu JDK (Azul Platform Core): 11 (11.0.12+), 17 (17.34/17.0.3+), 21 (21.30/21.0.1+)
-* Azul Zing JDK (Azul Platform Prime): 11 (11.0.12+), 17 (17.34/17.0.3+), 21 (21.30/21.0.1+)
-* Oracle JDK: 11 (11.0.12+), 17 (17.0.3+), 21 (21.0.1+)
-* Amazon Corretto: 11 (11.0.12+), 17 (17.0.3+), 21 (21.0.1+)
-* Adopt Open JDK: 11 (11.0.12+), 17 (17.0.3+), 21 (21.0.1+)
-* Adopt Open JDK with Eclipse Open J9: 11 (11.0.12+), 17 (17.0.3+), 21 (21.0.1+)
-* Any other JVM based on OpenJDK 11.0.12+ or 17.0.3+ or 21.0.1+
+[cols="1,2,^1,^1,^1", opts="header", stripes="even"]
+|===
+
+| Distributor | Distribution | 11 | 17 | 21
+
+| Azul
+| Zulu (Azul Core)
+| 11.0.12+
+| 17.34/17.0.3+
+| 21.30/21.0.1+
+
+| Azul
+| Zing (Azul Prime)
+| 11.0.12+
+| 17.34/17.0.3+
+| 21.30/21.0.1+
+
+2+| Oracle JDK
+^| 11.0.12+
+| 17.0.3+
+| 21.0.1+
+
+2+| Amazon Corretto
+^| 11.0.12+
+| 17.0.3+
+| 21.0.1+
+
+2+| Adopt Open JDK
+^| 11.0.12+
+| 17.0.3+
+| 21.0.1+
+
+2+| Adopt Open JDK  With Eclipse Open J9
+^| 11.0.12+
+| 17.0.3+
+| 21.0.1+
+
+2+| Any other JVM based on OpenJDK
+^| 11.0.12+
+| 17.0.3+
+| 21.0.1+
+
+|===
 
 The Payara Platform runs on the `x64` and `arm64` variants of the above JVMs.
 
@@ -21,24 +57,28 @@ The Payara Platform runs on the `x64` and `arm64` variants of the above JVMs.
 
 The Payara Platform currently runs on the following Operating Systems in all the versions listed below and all their newer versions:
 
-* Windows
-** Windows 7+
-** Windows Server 2008+
-* Linux
-** Ubuntu 14.04 (Trusty Tahr) LTS+
-** Debian 7 (Wheezy)+
-** CentOS 6+
-** RHEL 5+
-** OpenSUSE 42.2+
-** SUSE 11, 12, 15, 16 (See Note 1)
-** Amazon Linux (all versions)
-* Other
-** MacOS(OSX) 10.10.5 (Yosemite)+
-** IBM AIX 7.1+
+[cols="1,2", opts="header", stripes="even"]
+|===
+
+| OS | Version
+
+| Windows | 7+
+| Windows Server | 2008+
+| Linux Ubuntu | 14.04 (Trusty Tahr) LTS+
+| Linux Debian | 7 (Wheezy)+
+| Linux CentOS | 6+
+| Linux RHEL | 5+
+| Linux OpenSUSE | 42.2+
+| Linux SUSE | 11, 12, 15, 16 fn2:suse["Payara will support Enterprise products when deployed in RHEL-compatible environments that are supported by SUSE through its Multi-Linux Support (MLS) offering"]
+| Linux Amazon Linux | Aall versions
+| MacOS(OSX) | 10.10.5 (Yosemite)+
+| IBM |  AIX 7.1+
+
+|===
+
+place_footnotes::[]
 
 In general, any Payara Platform distribution runs on any system supported by at least one of the JVMs it runs on.
-
-Note (1): Payara will support Enterprise products when deployed in RHEL-compatible environments that are supported by SUSE through its Multi-Linux Support (MLS) offering
 
 == Third Party Collaborations
 Payara Platform Enterprise integrates with various other services that complement
