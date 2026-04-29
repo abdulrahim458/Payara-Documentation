@@ -8,15 +8,15 @@ rm -rf ${HTML_BUILD_DIR}
 mkdir -p ${HTML_BUILD_DIR}/
 
 echo "Pulling docs-website"
-git clone --depth 1 https://gitlab.azulsystems.com/docs/docs-website.git
-#git clone --branch feature/llm --depth 1 https://gitlab.azulsystems.com/docs/docs-website.git
+#git clone --depth 1 https://gitlab.azulsystems.com/docs/docs-website.git
+git clone --branch feature/payara --depth 1 https://gitlab.azulsystems.com/docs/docs-website.git
 
 mkdir -p ${HTML_BUILD_DIR}/assets/
 cp -a docs-website/assets/* ${HTML_BUILD_DIR}/assets/
 
 echo "Pulling docs-templates"
-git clone --depth 1 https://gitlab.azulsystems.com/docs/docs-templates.git
-#git clone --branch feature/indexer --depth 1 https://gitlab.azulsystems.com/docs/docs-templates.git
+#git clone --depth 1 https://gitlab.azulsystems.com/docs/docs-templates.git
+git clone --branch feature/payara --depth 1 https://gitlab.azulsystems.com/docs/docs-templates.git
 
 echo "Building content"
 ruby $TEMPLATES_DIR/build.rb \
