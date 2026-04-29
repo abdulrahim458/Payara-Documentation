@@ -17,7 +17,7 @@
 
 * [FISH-11054] Add support for MicroProfile OpenAPI 3.1 Bean Validation
 
-* [FISH-11197] [Community Contribution - https://github.com/pzygielo[pzygielo]] Align Cluster Deprecation Message With Product Versions
+* [FISH-11197] [Community Contribution - https://github.com/pzygielo[pzygielo^]] Align Cluster Deprecation Message With Product Versions
 
 == Bug Fixes
 
@@ -27,7 +27,7 @@
 
 * [FISH-11029] Fix IMQ and IMQJMX Versions
 
-* [FISH-11223] [Community Contribution - https://github.com/pzygielo[pzygielo]] Fix Cannot find the resource bundle for the name `com.sun.logging.enterprise.system.container.ejb` for class `org.glassfish.ejb.persistent.timer.TimerState` Error
+* [FISH-11223] [Community Contribution - https://github.com/pzygielo[pzygielo^]] Fix Cannot find the resource bundle for the name `com.sun.logging.enterprise.system.container.ejb` for class `org.glassfish.ejb.persistent.timer.TimerState` Error
 
 == Component Upgrades
 

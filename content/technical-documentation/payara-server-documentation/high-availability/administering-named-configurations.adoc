@@ -306,13 +306,13 @@ The properties in a named configuration that define port numbers are as follows:
 *`IIOP_SSL_MUTUALAUTH_PORT`*:
   This property specifies the port number of the port that is used for secure IIOP connections with client authentication.
 *`JAVA_DEBUGGER_PORT`*:
-  This property specifies the port number of the port that is used for connections to the http://java.sun.com/javase/technologies/core/toolsapis/jpda/[Java Platform Debugger Architecture (JPDA)] debugger.
+  This property specifies the port number of the port that is used for connections to the http://java.sun.com/javase/technologies/core/toolsapis/jpda/[Java Platform Debugger Architecture (JPDA)^] debugger.
 *`JMS_PROVIDER_PORT`*:
   This property specifies the port number for the Jakarta Message Service provider.
 *`JMX_SYSTEM_CONNECTOR_PORT`*:
   This property specifies the port number on which the JMX connector listens.
 *`OSGI_SHELL_TELNET_PORT`*:
-This property specifies the port number of the port that is used for connections to the http://felix.apache.org/site/apache-felix-remote-shell.html[Apache Felix Remote Shell].
+This property specifies the port number of the port that is used for connections to the http://felix.apache.org/site/apache-felix-remote-shell.html[Apache Felix Remote Shell^].
 +
 This shell uses the Felix shell service to interact with the OSGi module management subsystem.
 

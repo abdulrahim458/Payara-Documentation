@@ -7,8 +7,8 @@ NOTE: It is important to be aware of the distinction between a message broker cl
 
 Documentation for the _Open Message Queue_ software can be found in the following online resources:
 
-* link:https://eclipse-ee4j.github.io/openmq/guides/mq-tech-over/toc.html[OpenMQ Technical Overview]
-* link:https://eclipse-ee4j.github.io/openmq/guides/mq-admin-guide/toc.html[OpenMQ Administration Guide]
+* link:https://eclipse-ee4j.github.io/openmq/guides/mq-tech-over/toc.html[OpenMQ Technical Overview^]
+* link:https://eclipse-ee4j.github.io/openmq/guides/mq-admin-guide/toc.html[OpenMQ Administration Guide^]
 
 [[using-message-queue-broker-clusters-with-payara-server]]
 == Using Message Queue Broker Clusters With Payara Server

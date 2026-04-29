@@ -1,6 +1,6 @@
 = Payara Micro Command Line Options
 
-All of the options listed below are case-insensitive starting from release `4.1.1.171`; prior versions need the option to be set with https://en.wikipedia.org/wiki/Camel_case[camelCase notation]
+All of the options listed below are case-insensitive starting from release `4.1.1.171`; prior versions need the option to be set with https://en.wikipedia.org/wiki/Camel_case[camelCase notation^]
 
 [cols=",a,",options="header",]
 |=======================================================================

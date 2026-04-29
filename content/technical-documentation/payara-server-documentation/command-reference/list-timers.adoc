@@ -62,7 +62,7 @@ The list-timers command was executed successfully.
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/migrate-timers#migrate-timers[`migrate-timers`]
-* https://jakarta.ee/specifications/platform/8/apidocs/javax/ejb/timerservice[Using the Timer Service] in The Java EE 8 Tutorial
+* https://jakarta.ee/specifications/platform/8/apidocs/javax/ejb/timerservice[Using the Timer Service^] in The Java EE 8 Tutorial
 * xref:technical-documentation/application-development/using-jakarta-enterprise-beans-technology.adoc#ejb-timer-service[EJB Timer Service] in the Payara Server Application Development section
 
 

@@ -45,7 +45,7 @@
 
 * [FISH-7223] Upgrade IMQJMX to 5.1
 
-* [FISH-8048] [Community Contribution - https://github.com/ctabin[ctabin]] Upgrade H2DB to 2.2.224
+* [FISH-8048] [Community Contribution - https://github.com/ctabin[ctabin^]] Upgrade H2DB to 2.2.224
 
 * [FISH-8050] Upgrade EclipseLink ASM to 9.6.0
 

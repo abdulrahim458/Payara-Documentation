@@ -47,7 +47,7 @@ after adding the entry `AS_ADMIN_NEWPASSWORD` to the password file.
 
 *`--debug`*:
 *`-d`*:
-  Specifies whether the domain is started with https://docs.oracle.com/en/java/javase/11/docs/specs/jpda/conninv.html[Java Platform Debugger Architecture (JPDA)]
+  Specifies whether the domain is started with https://docs.oracle.com/en/java/javase/11/docs/specs/jpda/conninv.html[Java Platform Debugger Architecture (JPDA)^]
   debugging enabled. With debugging enabled extra exceptions can be printed.
 +
 Possible values are as follows:

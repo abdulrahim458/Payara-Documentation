@@ -1,19 +1,19 @@
 = Developing SOAP Web Services
 :ordinal: 5
 
-This chapter describes Payara Server's support for SOAP-compatible web services. "https://eclipse-ee4j.github.io/jakartaee-tutorial/#building-web-services-with-jakarta-xml-web-services[Building with Jakarta XML Web Services]" in The Jakarta EE Tutorial shows more details on creating dedicated SOAP Web Services for any Jakarta EE runtime.
+This chapter describes Payara Server's support for SOAP-compatible web services. "https://eclipse-ee4j.github.io/jakartaee-tutorial/#building-web-services-with-jakarta-xml-web-services[Building with Jakarta XML Web Services^]" in The Jakarta EE Tutorial shows more details on creating dedicated SOAP Web Services for any Jakarta EE runtime.
 
-For additional information about JAXB (Jakarta XML Binding), see https://jakarta.ee/specifications/xml-binding/[its corresponding specification] and xref:#the-databinding-provider[The Databinding Provider].
+For additional information about JAXB (Jakarta XML Binding), see https://jakarta.ee/specifications/xml-binding/[its corresponding specification^] and xref:#the-databinding-provider[The Databinding Provider].
 
 For additional information about Jakarta XML Web Services,
-see https://jakarta.ee/specifications/xml-web-services/[its corresponding specification].
+see https://jakarta.ee/specifications/xml-web-services/[its corresponding specification^].
 
 For information about web services security, see xref:technical-documentation/application-development/securing-applications.adoc#configuring-message-security-for-web-services[Configuring Message Security for Web Services].
 
 The Fast Infoset standard specifies a binary format based on the XML Information Set. This format is an efficient alternative to XML. For more information about using Fast Infoset, see the following links:
 
-* https://github.com/eclipse-ee4j/jaxb-fi[Fast Infoset Project]
-* https://www.w3.org/TR/xml-infoset/[XML Information Set]
+* https://github.com/eclipse-ee4j/jaxb-fi[Fast Infoset Project^]
+* https://www.w3.org/TR/xml-infoset/[XML Information Set^]
 
 [[deploying-a-web-service]]
 == Deploying a Web Service

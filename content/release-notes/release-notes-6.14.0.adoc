@@ -16,7 +16,7 @@
 
 * [FISH-8273] Unable to delete System Properties via admin console
 
-* [FISH-8317] [Community Contribution - https://github.com/poikilotherm[poikilotherm]]  Microprofile Config NPE for profiled setting
+* [FISH-8317] [Community Contribution - https://github.com/poikilotherm[poikilotherm^]]  Microprofile Config NPE for profiled setting
 
 * [FISH-8482] Payara server admin console - Version number appears to remove any non-numerical character
 

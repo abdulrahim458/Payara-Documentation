@@ -26,7 +26,7 @@ NOTE: Where multiple configuration properties exist, the property from a source 
 
 |`directory`
 |90
-|Reads configuration properties from files in a specified directory. Each file name is the configuration property name and the contents of the file are the config property value. This config source can be used to read https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-files-from-a-pod[Kubernetes secrets files].
+|Reads configuration properties from files in a specified directory. Each file name is the configuration property name and the contents of the file are the config property value. This config source can be used to read https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-files-from-a-pod[Kubernetes secrets files^].
 +
 You can find out more about directory config sources here: xref:technical-documentation/microprofile/config/directory.adoc[Directory Config Sources]
 

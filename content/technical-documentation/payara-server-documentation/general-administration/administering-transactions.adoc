@@ -9,9 +9,9 @@ Instructions for accomplishing the tasks in this chapter by using the Administra
 
 For more information about the Java Transaction API (JTA) and Java Transaction Service (JTS), see the following sites:
 
-https://jakarta.ee/specifications/transactions/2.0/jakarta-transactions-spec-2.0.html#jakarta-transactions-api[Jakarta Transactions API] and https://jakarta.ee/specifications/transactions/2.0/jakarta-transactions-spec-2.0.html#java-transaction-service[Java Transaction Service].
+https://jakarta.ee/specifications/transactions/2.0/jakarta-transactions-spec-2.0.html#jakarta-transactions-api[Jakarta Transactions API^] and https://jakarta.ee/specifications/transactions/2.0/jakarta-transactions-spec-2.0.html#java-transaction-service[Java Transaction Service^].
 
-You might also want to read https://jakarta.ee/specifications/transactions/2.0/[Transactions].
+You might also want to read https://jakarta.ee/specifications/transactions/2.0/[Transactions^].
 
 [[about-transactions]]
 == About Transactions

@@ -177,5 +177,5 @@ Command start-local-instance executed successfully.
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc#stop-domain[`stop-domain`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc#stop-instance[`stop-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc#stop-local-instance[`stop-local-instance`]
-* http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java Platform Debugger Architecture (JPDA)]
+* http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java Platform Debugger Architecture (JPDA)^]
 

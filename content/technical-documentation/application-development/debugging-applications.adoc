@@ -164,9 +164,9 @@ You can use a profiler to perform remote profiling on Payara Server to discover 
 
 Most profiling tools in the market can be integrated with Payara Server running on Java 11. The following "free-to_use" tools are recommended to be used due to their simplicity and ease to integrate with Payara Server:
 
-*Apache NetBeans Profiler*: Comes bundled with Apache Netbeans, which has native support for running, debugging and profiling applications in Payara Server. For more information read https://netbeans.apache.org/kb/docs/java/profiler-intro.html[Introduction to Profiling Java Applications in NetBeans IDE]
+*Apache NetBeans Profiler*: Comes bundled with Apache Netbeans, which has native support for running, debugging and profiling applications in Payara Server. For more information read https://netbeans.apache.org/kb/docs/java/profiler-intro.html[Introduction to Profiling Java Applications in NetBeans IDE^]
 
-*Async Profiler*: A powerful lightweight profiler that can run locally or remotely and trace CPU cycles, hardware and software performance and do Java Heap allocation analysis. This profiler is currently maintained as an https://github.com/async-profiler/async-profiler[open source project].
+*Async Profiler*: A powerful lightweight profiler that can run locally or remotely and trace CPU cycles, hardware and software performance and do Java Heap allocation analysis. This profiler is currently maintained as an https://github.com/async-profiler/async-profiler[open source project^].
 +
 NOTE: If using IntelliJ IDEA Ultimate, Async profiler is bundled by default and requires no extra installation.
 

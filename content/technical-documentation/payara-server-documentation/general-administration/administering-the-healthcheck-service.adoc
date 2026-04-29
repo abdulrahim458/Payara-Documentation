@@ -42,7 +42,7 @@ Check the *Enabled* box (and the *Dynamic* box too if you don't want to restart 
 
 The general settings of the service are:
 
-***Threshold Unit***: This defines the time duration per unit. The accepted options are any valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[java.util.concurrent.TimeUnit] values.
+***Threshold Unit***: This defines the time duration per unit. The accepted options are any valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[java.util.concurrent.TimeUnit^] values.
 +
 NOTE: The default value is _SECONDS_.
 ***Threshold Value***: This defines the number of units beyond which a request will be traced.
@@ -95,7 +95,7 @@ The following are the configurable attributes available to *ALL* the HealthCheck
 |====
 
 *_Time_*: The time interval value (as an `Integer`) specified in given unit to execute the checker for the metric. The default value is **5**.
-*_Unit_*: This defines the time duration per unit. The accepted options are any valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[java.util.concurrent.TimeUnit] values.
+*_Unit_*: This defines the time duration per unit. The accepted options are any valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[java.util.concurrent.TimeUnit^] values.
 +
 The default value is **MINUTES**.
 

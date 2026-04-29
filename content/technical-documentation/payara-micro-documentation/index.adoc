@@ -21,6 +21,6 @@ Payara Services Limited provides official Payara Micro Docker Images which are u
 
 These images are hosted on Docker hub in the following locations:
 
-* https://hub.docker.com/r/payara/micro/[Payara Micro Docker Image]
+* https://hub.docker.com/r/payara/micro/[Payara Micro Docker Image^]
 
 TIP: Payara Enterprise customers have access to a private Docker repository containing Payara Enterprise Edition equivalent images, which are also released and updated every month.

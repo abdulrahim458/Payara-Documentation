@@ -191,11 +191,11 @@ The Notifier API itself is available in the `internal-api` artifact that is loca
 </repository>
 ----
 
-The knowledge base article https://support.payara.fish/hc/en-gb/articles/115002023334-Using-Payara-Enterprise-Builds-in-a-Maven-Project[Using Payara Enterprise Builds in a Maven project] describes how you can define the authentication for the repository that is defined above.
+The knowledge base article https://support.payara.fish/hc/en-gb/articles/115002023334-Using-Payara-Enterprise-Builds-in-a-Maven-Project[Using Payara Enterprise Builds in a Maven project^] describes how you can define the authentication for the repository that is defined above.
 
 Any additional dependencies for your notifier also need to be specified and included when you install it within Payara Server.
 
-Have a look at https://github.com/payara/Notifiers[Notifiers GitHub repository] for the setup of the current Notifiers.
+Have a look at https://github.com/payara/Notifiers[Notifiers GitHub repository^] for the setup of the current Notifiers.
 
 [[instalation]]
 == Installation

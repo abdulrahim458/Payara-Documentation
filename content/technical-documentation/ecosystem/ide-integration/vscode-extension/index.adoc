@@ -1,11 +1,11 @@
 = Payara VS Code Extension
 
-The Payara VS Code extension enables Payara Server and Payara Micro integration with Visual Studio Code. The Payara Tools extension is available in the https://marketplace.visualstudio.com/items?itemName=Payara.payara-vscode[Visual Studio Marketplace].
+The Payara VS Code extension enables Payara Server and Payara Micro integration with Visual Studio Code. The Payara Tools extension is available in the https://marketplace.visualstudio.com/items?itemName=Payara.payara-vscode[Visual Studio Marketplace^].
 
 [[prerequisites-for-extension]]
 == Prerequisites for Payara Tools on VS Code
 
-The https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack[Java Extension Pack, by Microsoft] must be installed first.
+The https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack[Java Extension Pack, by Microsoft^] must be installed first.
 
 IMPORTANT: If you are using Maven or Gradle as the build tool in your project, the `MAVEN_HOME` or `GRADLE_HOME` environment variables must be set respectively.
 

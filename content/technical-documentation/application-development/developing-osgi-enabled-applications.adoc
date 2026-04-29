@@ -6,7 +6,7 @@ This chapter describes the features and interfaces that Payara Server provides t
 [[overview-of-osgi-application-and-payara-server]]
 == Overview of OSGi Application and Payara Server
 
-Payara Server is a certified Jakarta EE implementation, so it provides the latest Jakarta EE APIs and frameworks. It is built using OSGi technology, and includes as its OSGi module management subsystem the http://felix.apache.org[Apache Felix OSGi framework], which is a fully-compliant implementation of the OSGi Service Platform R7 specification. Payara Server supports deployment of OSGi-based applications using this framework.
+Payara Server is a certified Jakarta EE implementation, so it provides the latest Jakarta EE APIs and frameworks. It is built using OSGi technology, and includes as its OSGi module management subsystem the http://felix.apache.org[Apache Felix OSGi framework^], which is a fully-compliant implementation of the OSGi Service Platform R7 specification. Payara Server supports deployment of OSGi-based applications using this framework.
 
 OSGi applications can make use of core as well as enterprise OSGi features. Payara Server makes available many of its Jakarta EE platform services, such as the transaction service, HTTP service, JDBC Service and JMS, as OSGi services. It also enables use of Jakarta EE programming model in OSGi applications, so enterprise Jakarta application developers can continue to leverage their existing skills in OSGi-based applications. See xref:#benefits-of-using-osgi-in-enterprise-jakarta-applications[Benefits of Using OSGi in Enterprise Jakarta Applications] for more information.
 

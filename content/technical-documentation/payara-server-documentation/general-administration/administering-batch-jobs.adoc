@@ -12,7 +12,7 @@ Payara Server provides a batch runtime for the scheduling and execution of batch
 
 Batch applications submit jobs to the batch runtime and provide instructions about how and when to execute the steps. The batch runtime processes the steps as directed by job XML documents packaged with the applications and stores information about jobs in a job repository. In Payara Server, the job repository is a database.
 
-For detailed information about batch jobs, batch processing, and the batch processing framework, see "https://jakarta.ee/specifications/batch/2.1/jakarta-batch-spec-2.1.html#introduction-to-jakarta-batch[Batch Processing]" in The Jakarta Batch specifications. The specification defines the programming model for batch applications and the runtime for scheduling and executing batch jobs.
+For detailed information about batch jobs, batch processing, and the batch processing framework, see "https://jakarta.ee/specifications/batch/2.1/jakarta-batch-spec-2.1.html#introduction-to-jakarta-batch[Batch Processing^]" in The Jakarta Batch specifications. The specification defines the programming model for batch applications and the runtime for scheduling and executing batch jobs.
 
 [[viewing-batch-jobs]]
 == Viewing Batch Jobs

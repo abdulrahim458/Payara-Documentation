@@ -8,9 +8,9 @@
 
 == Improvements
 
-* [FISH-1419] [Community Contribution - https://github.com/lprimak[lprimak]] Hazelcast Partition Group according to Instance Group
+* [FISH-1419] [Community Contribution - https://github.com/lprimak[lprimak^]] Hazelcast Partition Group according to Instance Group
 
-* [FISH-7640] [Community Contribution - https://github.com/lprimak[lprimak]] Improve Hazelcast CP Subsystem Integration Behaviour
+* [FISH-7640] [Community Contribution - https://github.com/lprimak[lprimak^]] Improve Hazelcast CP Subsystem Integration Behaviour
 
 * [FISH-8083] Enhance Payara BOM for Version Consistency with Payara API Dependency
 

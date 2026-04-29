@@ -61,6 +61,6 @@ Command freeze-transaction-service executed successfully
 * xref:technical-documentation/payara-server-documentation/command-reference/rollback-transaction.adoc#rollback-transaction[`rollback-transaction`],
 * xref:technical-documentation/payara-server-documentation/command-reference/unfreeze-transaction-service.adoc#unfreeze-transaction-service[`unfreeze-transaction-service`]
 * "xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc[Administering Transactions]" in Payara Server General Administration section
-* https://jakarta.ee/specifications/transactions/[Transactions]" in Jakarta EE Specification
+* https://jakarta.ee/specifications/transactions/[Transactions^]" in Jakarta EE Specification
 
 

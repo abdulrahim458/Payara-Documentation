@@ -135,7 +135,7 @@ The following file names are allowed for this file. The file given must also be 
 [[sources-annotations]]
 === Annotations
 
-The MicroProfile OpenAPI API provides many annotations to use to augment the OpenAPI document. These are detailed in the https://download.eclipse.org/microprofile/microprofile-open-api-{mpOpenAPIVersion}/microprofile-openapi-spec-{mpOpenAPIVersion}.html#_annotations[OpenAPI Specification]. These annotations are applied before the OASFilter.
+The MicroProfile OpenAPI API provides many annotations to use to augment the OpenAPI document. These are detailed in the https://download.eclipse.org/microprofile/microprofile-open-api-{mpOpenAPIVersion}/microprofile-openapi-spec-{mpOpenAPIVersion}.html#_annotations[OpenAPI Specification^]. These annotations are applied before the OASFilter.
 
 [[sources-annotation-example]]
 ==== Example

@@ -80,9 +80,9 @@ An annotation, also called metadata, enables a declarative style of programming.
 
 When the application or module is deployed, the information can either be used or overridden by the deployment descriptor. Payara Server supports annotation according to the following specifications:
 
-* https://jakarta.ee/specifications/annotations/[Jakarta Annotations]
-* https://jakarta.ee/specifications/web-services-metadata/[Jakarta Web Services Metadata]
-* https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans]
+* https://jakarta.ee/specifications/annotations/[Jakarta Annotations^]
+* https://jakarta.ee/specifications/web-services-metadata/[Jakarta Web Services Metadata^]
+* https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans^]
 
 The following annotation and deployment descriptor combinations are supported:
 

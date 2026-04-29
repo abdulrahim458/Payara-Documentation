@@ -3,10 +3,10 @@
 
 This chapter describes how Jakarta Enterprise Beans (EJB) technology is supported in the Payara Platform.
 
-For general information about enterprise beans, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#enterprise-beans[Enterprise Beans]" in The Jakarta EE Tutorial.
+For general information about enterprise beans, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#enterprise-beans[Enterprise Beans^]" in The Jakarta EE Tutorial.
 
 NOTE:  The Web Profile of the Payara Server supports the EJB 4.0+ Lite specification, which allows enterprise beans within web applications, among other features. +
-The Full Profile supports the entire EJB 4.0+ specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans].
+The Full Profile supports the entire EJB 4.0+ specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans^].
 
 Payara Server is backward compatible with 1.1, 2.0, 2.1, 3.0, 3.1 and 4.0 enterprise beans. However, to take advantage of version 3.1+ features, you should develop new beans as 3.1+ enterprise beans.
 
@@ -983,7 +983,7 @@ public class MainClass{
 }
 ----
 
-Extra information on creating a Tracer instance and registering it to the `GlobalTracer` can be found link:https://opentracing.io/guides/java/tracers/[here], but in short it can be done like so (replacing `CustomTracer` with your desired implementation):
+Extra information on creating a Tracer instance and registering it to the `GlobalTracer` can be found link:https://opentracing.io/guides/java/tracers/[here^], but in short it can be done like so (replacing `CustomTracer` with your desired implementation):
 
 [source, java]
 ----
@@ -1036,7 +1036,7 @@ public class TracerClass{
 }
 ----
 
-Once your span has been started, you can attach any desired baggage items (link:https://opentracing.io/docs/overview/tags-logs-baggage/[String key:value pairs]), and these will be propagated to the server along with the span context. These can then be retrieved within the EJB implementation hosted on Payara Server like so:
+Once your span has been started, you can attach any desired baggage items (link:https://opentracing.io/docs/overview/tags-logs-baggage/[String key:value pairs^]), and these will be propagated to the server along with the span context. These can then be retrieved within the EJB implementation hosted on Payara Server like so:
 
 [source, java]
 ----

@@ -2,9 +2,9 @@
 
 The process of building and testing the IntelliJ IDEA IDE Plugin, is the same for both the Ultimate and Community versions of the plugin. After cloning the appropriate repository, the following steps can be applied to either plugin.
 
-The Payara IntelliJ Community Tools source code is available in the https://github.com/payara/ecosystem-intellij-plugin[Ecosystem IntelliJ Community repository].
+The Payara IntelliJ Community Tools source code is available in the https://github.com/payara/ecosystem-intellij-plugin[Ecosystem IntelliJ Community repository^].
 
-The Payara IntelliJ Ultimate Tools source code is available in the https://github.com/payara/ecosystem-intellij-ultimate-plugin[Ecosystem IntelliJ Ultimate repository].
+The Payara IntelliJ Ultimate Tools source code is available in the https://github.com/payara/ecosystem-intellij-ultimate-plugin[Ecosystem IntelliJ Ultimate repository^].
 
 [[building-intellij-plugin-prequisites]]
 == Prerequisites

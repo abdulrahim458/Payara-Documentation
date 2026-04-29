@@ -55,8 +55,8 @@ The following notifiers are available in Payara Server Enterprise:
 
 Payara Server is able to direct notifications to a single given email address. The notifier modules are available in these locations:
 
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-core/2.0-enterprise/email-notifier-core-2.0-enterprise.jar[Email Notifier Core 2.0-enterprise^]
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-console-plugin/2.0-enterprise/email-notifier-console-plugin-2.0-enterprise.jar[Email Notifier Console Plugin 2.0-enterprise^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-core/2.0-enterprise/email-notifier-core-2.0-enterprise.jar[Email Notifier Core 2.0-enterprise^^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-console-plugin/2.0-enterprise/email-notifier-console-plugin-2.0-enterprise.jar[Email Notifier Console Plugin 2.0-enterprise^^]
 
 To use this notifier the following requirements have to be met:
 
@@ -123,9 +123,9 @@ The **S**imple **N**etwork **M**anagement **P**rotocol is a standard Internet Pr
 
 The notifier modules are available in these locations:
 
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/snmp-notifier-core/2.0-enterprise/snmp-notifier-core-2.0-enterprise.jar[SNMP Notifier Core 2.0-enterprise^]
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/snmp-notifier-console-plugin/2.0-enterprise/snmp-notifier-console-plugin-2.0-enterprise.jar[SNMP Notifier Console Plugin 2.0-enterprise^]
-* https://nexus.payara.fish/repository/payara-artifacts/fish/payara/server/core/packager/snmp4j-repackaged/3.7.5/snmp4j-repackaged-3.7.5.jar[Dependency: SNMP4J 3.7.5^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/snmp-notifier-core/2.0-enterprise/snmp-notifier-core-2.0-enterprise.jar[SNMP Notifier Core 2.0-enterprise^^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/snmp-notifier-console-plugin/2.0-enterprise/snmp-notifier-console-plugin-2.0-enterprise.jar[SNMP Notifier Console Plugin 2.0-enterprise^^]
+* https://nexus.payara.fish/repository/payara-artifacts/fish/payara/server/core/packager/snmp4j-repackaged/3.7.5/snmp4j-repackaged-3.7.5.jar[Dependency: SNMP4J 3.7.5^^]
 
 IMPORTANT: Use the version of SNMP4J 3.7.5 provided above as it has a modified manifest to be compatible with Payara Enterprise.
 
@@ -243,7 +243,7 @@ If you do not see any notification event messages, check the following:
 * Are the SNMP management system's MIB correctly configured to verify traps sent with the configured OID?
 * Is there a firewall between Payara Server and the network management system that is correctly configured to allow sending SNMP traps in the respective port?
 
-Here's a sample of how the SNMP traps are visualized using http://www.mg-soft.com/tringer.html[MG-Soft Trap Ringer] software:
+Here's a sample of how the SNMP traps are visualized using http://www.mg-soft.com/tringer.html[MG-Soft Trap Ringer^] software:
 
 image:docs::notification-service/snmp/trap-ringer-pro-output.png[alt="SNMP Traps onTRinger",width=600px]
 
@@ -256,21 +256,21 @@ Formerly known as *Jabber*, XMPP is an open standard, which means that anyone ca
 
 The notifier modules are available in these locations:
 
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/xmpp-notifier-core/2.0-enterprise/xmpp-notifier-core-2.0-enterprise.jar[XMPP Notifier Core 2.0-enterprise^]
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/xmpp-notifier-console-plugin/2.0-enterprise/xmpp-notifier-console-plugin-2.0-enterprise.jar[XMPP Notifier Console Plugin 2.0-enterprise^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/xmpp-notifier-core/2.0-enterprise/xmpp-notifier-core-2.0-enterprise.jar[XMPP Notifier Core 2.0-enterprise^^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/xmpp-notifier-console-plugin/2.0-enterprise/xmpp-notifier-console-plugin-2.0-enterprise.jar[XMPP Notifier Console Plugin 2.0-enterprise^^]
 
 And these are the required dependencies for the core module to work correctly:
 
-* https://repo1.maven.org/maven2/org/igniterealtime/smack/smack-core/4.3.4/smack-core-4.3.4.jar[Dependency: smack-core 4.3.4]
-* https://repo.maven.apache.org/maven2/org/igniterealtime/smack/smack-java7/4.3.4/smack-java7-4.3.4.jar[Dependency: smack-java7 4.3.4]
-* https://repo.maven.apache.org/maven2/org/igniterealtime/smack/smack-tcp/4.3.4/smack-tcp-4.3.4.jar[Dependency: smack-tcp 4.3.4]
-* https://repo.maven.apache.org/maven2/org/igniterealtime/smack/smack-extensions/4.3.4/smack-extensions-4.3.4.jar[Dependency: smack-extensions 4.3.4]
-* https://repo.maven.apache.org/maven2/org/igniterealtime/smack/smack-im/4.3.4/smack-im-4.3.4.jar[Dependency: smack-im 4.1.9]
-* https://repo1.maven.org/maven2/org/apache/servicemix/bundles/org.apache.servicemix.bundles.xpp3/1.1.4c_7/org.apache.servicemix.bundles.xpp3-1.1.4c_7.jar[Dependency: XPP3 1.1.4c_7]
-* https://search.maven.org/remotecontent?filepath=org/jxmpp/jxmpp-jid/0.6.4/jxmpp-jid-0.6.4.jar[Dependency: jxmpp-jid 0.6.4]
-* https://search.maven.org/remotecontent?filepath=org/jxmpp/jxmpp-core/0.6.4/jxmpp-core-0.6.4.jar[Dependency: jxmpp-core 0.6.4]
-* https://search.maven.org/remotecontent?filepath=org/jxmpp/jxmpp-util-cache/0.6.4/jxmpp-util-cache-0.6.4.jar[Dependency: jxmpp-util-cache 0.6.4]
-* https://search.maven.org/remotecontent?filepath=org/minidns/minidns-core/0.3.4/minidns-core-0.3.4.jar[Dependency: minidns-core 0.3.4]
+* https://repo1.maven.org/maven2/org/igniterealtime/smack/smack-core/4.3.4/smack-core-4.3.4.jar[Dependency: smack-core 4.3.4^]
+* https://repo.maven.apache.org/maven2/org/igniterealtime/smack/smack-java7/4.3.4/smack-java7-4.3.4.jar[Dependency: smack-java7 4.3.4^]
+* https://repo.maven.apache.org/maven2/org/igniterealtime/smack/smack-tcp/4.3.4/smack-tcp-4.3.4.jar[Dependency: smack-tcp 4.3.4^]
+* https://repo.maven.apache.org/maven2/org/igniterealtime/smack/smack-extensions/4.3.4/smack-extensions-4.3.4.jar[Dependency: smack-extensions 4.3.4^]
+* https://repo.maven.apache.org/maven2/org/igniterealtime/smack/smack-im/4.3.4/smack-im-4.3.4.jar[Dependency: smack-im 4.1.9^]
+* https://repo1.maven.org/maven2/org/apache/servicemix/bundles/org.apache.servicemix.bundles.xpp3/1.1.4c_7/org.apache.servicemix.bundles.xpp3-1.1.4c_7.jar[Dependency: XPP3 1.1.4c_7^]
+* https://search.maven.org/remotecontent?filepath=org/jxmpp/jxmpp-jid/0.6.4/jxmpp-jid-0.6.4.jar[Dependency: jxmpp-jid 0.6.4^]
+* https://search.maven.org/remotecontent?filepath=org/jxmpp/jxmpp-core/0.6.4/jxmpp-core-0.6.4.jar[Dependency: jxmpp-core 0.6.4^]
+* https://search.maven.org/remotecontent?filepath=org/jxmpp/jxmpp-util-cache/0.6.4/jxmpp-util-cache-0.6.4.jar[Dependency: jxmpp-util-cache 0.6.4^]
+* https://search.maven.org/remotecontent?filepath=org/minidns/minidns-core/0.3.4/minidns-core-0.3.4.jar[Dependency: minidns-core 0.3.4^]
 
 [[xmpp-server-configuration]]
 ==== XMPP Server Configuration
@@ -279,11 +279,11 @@ XMPP works using a _client-server_ architecture, akin to other messaging solutio
 
 There are multiple server implementations in the market, with both open source and commercial licensing models like the following:
 
-* https://mina.apache.org/vysper-project[Apache Vysper] (Open Source)
-* https://docs.oracle.com/en/industries/communications/instant-messaging-server/index.html[Oracle Communications Instant Messaging Server] (Commercial)
-* http://igniterealtime.org/projects/openfire/index.jsp[OpenFire] (Open Source)
-* https://www.communigate.com[CommuniGate Pro] (Commercial)
-* http://jabberd2.org/[Jabberd 2] (Open Source)
+* https://mina.apache.org/vysper-project[Apache Vysper^] (Open Source)
+* https://docs.oracle.com/en/industries/communications/instant-messaging-server/index.html[Oracle Communications Instant Messaging Server^] (Commercial)
+* http://igniterealtime.org/projects/openfire/index.jsp[OpenFire^] (Open Source)
+* https://www.communigate.com[CommuniGate Pro^] (Commercial)
+* http://jabberd2.org/[Jabberd 2^] (Open Source)
 
 No matter what XMPP server you or your organization is using, the XMPP Notifier will be able to communicate with it and push notifications to a specific chat room hosted on the server.
 
@@ -301,7 +301,7 @@ We will use _OpenFire_ to illustrate how to correctly configure these requiremen
 [[openfire-configuration]]
 ===== OpenFire Configuration
 
-. Proceed to download and install the OpenFire server by following the instructions detailed http://download.igniterealtime.org/openfire/docs/latest/documentation/install-guide.html[here].
+. Proceed to download and install the OpenFire server by following the instructions detailed http://download.igniterealtime.org/openfire/docs/latest/documentation/install-guide.html[here^].
 +
 Once the server is installed, start the OpenFire service and head to the server's admin console located at `http://{FQDN}:9090/`
 
@@ -432,14 +432,14 @@ If you do not see any notification event messages in the client, check the follo
 * Are the room permissions configured correctly?
 * If using secure transport, is the server configured with a valid SSL certificate for its _FQDN_?
 
-Here's a sample of how the notifications are visualized on a chat room using the https://www.igniterealtime.org/projects/spark/[Spark] XMPP client:
+Here's a sample of how the notifications are visualized on a chat room using the https://www.igniterealtime.org/projects/spark/[Spark^] XMPP client:
 
 image:docs::notification-service/xmpp/spark-chat.png[alt="Spark Chat Room",width=600px]
 
 [[newrelic-notifier]]
 === New Relic Notifier
 
-https://newrelic.com/[New Relic] is an application performance monitoring (APM) tool that can be used to gather statistics and notify on key critical events generated by different type of applications.
+https://newrelic.com/[New Relic^] is an application performance monitoring (APM) tool that can be used to gather statistics and notify on key critical events generated by different type of applications.
 
 New Relic specializes on integrating Java application servers like GlassFish, JBoss WildFly, etc. and other application frameworks seamlessly.
 
@@ -449,15 +449,15 @@ Custom notification events generated from Payara Server's own monitoring systems
 
 The notifier modules are available in these locations:
 
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/newrelic-notifier-core/2.0-enterprise/newrelic-notifier-core-2.0-enterprise.jar[New Relic Notifier Core 2.0-enterprise]
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/newrelic-notifier-console-plugin/2.0-enterprise/newrelic-notifier-console-plugin-2.0-enterprise.jar[New Relic Notifier Console Plugin 2.0-enterprise]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/newrelic-notifier-core/2.0-enterprise/newrelic-notifier-core-2.0-enterprise.jar[New Relic Notifier Core 2.0-enterprise^]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/newrelic-notifier-console-plugin/2.0-enterprise/newrelic-notifier-console-plugin-2.0-enterprise.jar[New Relic Notifier Console Plugin 2.0-enterprise^]
 
 [[newrelic-integration-configuration]]
 ==== New Relic Configuration
 
 In order for the notifier to work correctly, you must complete the following requirements:
 
-. Create a New Relic user account. You can sign up for a new account https://newrelic.com/signup[here]
+. Create a New Relic user account. You can sign up for a new account https://newrelic.com/signup[here^]
 +
 NOTE: New Relic offers 14-days trial accounts that can be used to test the service for free.
 
@@ -661,7 +661,7 @@ You can observe that the events are correctly identified depending on the severi
 [[datadog-notifier]]
 === Datadog Notifier
 
-https://www.datadoghq.com[Datadog] is a cloud metric aggregator that simplifies the gathering and visualization of multiple platform stacks and services that can be on premises or on the cloud. Datadog also eases browsing through of all this information by implementing combination graphs (multiple graphs that can be configured on a single view) of related metrics.
+https://www.datadoghq.com[Datadog^] is a cloud metric aggregator that simplifies the gathering and visualization of multiple platform stacks and services that can be on premises or on the cloud. Datadog also eases browsing through of all this information by implementing combination graphs (multiple graphs that can be configured on a single view) of related metrics.
 
 Datadog supports gathering metrics from the following sources:
 
@@ -679,8 +679,8 @@ IMPORTANT: Currently, the Payara Datadog notifier only supports the `US1 - East`
 
 The notifier modules are available in these locations:
 
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/datadog-notifier-core/2.0-enterprise/datadog-notifier-core-2.0-enterprise.jar[Datadog Notifier Core 2.0-enterprise]
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/datadog-notifier-console-plugin/2.0-enterprise/datadog-notifier-console-plugin-2.0-enterprise.jar[Datadog Notifier Console Plugin 2.0-enterprise]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/datadog-notifier-core/2.0-enterprise/datadog-notifier-core-2.0-enterprise.jar[Datadog Notifier Core 2.0-enterprise^]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/datadog-notifier-console-plugin/2.0-enterprise/datadog-notifier-console-plugin-2.0-enterprise.jar[Datadog Notifier Console Plugin 2.0-enterprise^]
 
 [[datadog-integration-configuration]]
 ==== Datadog Account Integration
@@ -767,8 +767,8 @@ A notifier extension for publishing to a Microsoft Teams channel.
 
 The notifier modules are available in these locations:
 
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/teams-notifier-core/2.0-enterprise/teams-notifier-core-2.0-enterprise.jar[Teams Notifier Core 2.0-enterprise]
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/teams-notifier-console-plugin/2.0-enterprise/teams-notifier-console-plugin-2.0-enterprise.jar[Teams Notifier Console Plugin 2.0-enterprise]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/teams-notifier-core/2.0-enterprise/teams-notifier-core-2.0-enterprise.jar[Teams Notifier Core 2.0-enterprise^]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/teams-notifier-console-plugin/2.0-enterprise/teams-notifier-console-plugin-2.0-enterprise.jar[Teams Notifier Console Plugin 2.0-enterprise^]
 
 [[teams-notifier-configuration]]
 ==== Notifier Configuration Configuration
@@ -810,14 +810,14 @@ true     WARNING  https://outlook.office.com/webhook/xyz
 [[slack-notifier]]
 === Slack Notifier
 
-https://slack.com/[Slack] is a functional enterprise chat and team collaboration tool inspired by IRC. It allows an organisation to create specific *domains* and discuss work topics or subjects in separate *channels* that can either be public or private.
+https://slack.com/[Slack^] is a functional enterprise chat and team collaboration tool inspired by IRC. It allows an organisation to create specific *domains* and discuss work topics or subjects in separate *channels* that can either be public or private.
 
 This notifier sends notification events to an organisation's domain channel using Slack API integrations.
 
 The notifier modules are available in these locations:
 
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/slack-notifier-core/2.0-enterprise/slack-notifier-core-2.0-enterprise.jar[Slack Notifier Core 2.0-enterprise]
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/slack-notifier-console-plugin/2.0-enterprise/slack-notifier-console-plugin-2.0-enterprise.jar[Slack Notifier Console Plugin 2.0-enterprise]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/slack-notifier-core/2.0-enterprise/slack-notifier-core-2.0-enterprise.jar[Slack Notifier Core 2.0-enterprise^]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/slack-notifier-console-plugin/2.0-enterprise/slack-notifier-console-plugin-2.0-enterprise.jar[Slack Notifier Console Plugin 2.0-enterprise^]
 
 [[slack-integration-configuration]]
 ==== Slack Integration Configuration
@@ -828,7 +828,7 @@ In order to allow the notification service to log events on a Slack channel of y
 * Have a Slack account with granted permissions to create channels and configure API integrations.
 * Have created a Slack channel which will be used by the notification service to report notification events.
 
-Once you have completed these requirements, you can configure an link:https://api.slack.com/incoming-webhooks[Incoming Webhook integration] for the channel.
+Once you have completed these requirements, you can configure an link:https://api.slack.com/incoming-webhooks[Incoming Webhook integration^] for the channel.
 
 An _Incoming Webhook_ is the simplest integration mechanism that Slack provides, in that they make use of normal HTTP requests with a _JSON_ payload that includes the message text and additional options to format incoming messages to the channel.
 
@@ -914,7 +914,7 @@ When you have correctly configured the Slack notifier, it can be used to push no
 * Is the service configured to send notifications frequently enough to observe?
 * Have you enabled the service after configuring it?
 * Is the *Incoming WebHook* correctly configured in the Slack API portal?
-* Check that you have not surpassed the current https://api.slack.com/docs/rate-limits[rate limit for the Slack API]
+* Check that you have not surpassed the current https://api.slack.com/docs/rate-limits[rate limit for the Slack API^]
 
 Here's a sample of how the notifications are visualized on the Slack Desktop application:
 
@@ -927,8 +927,8 @@ A notifier for publishing notifications to a Discord channel.
 
 The notifier modules are available in these locations:
 
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/discord-notifier-core/2.0-enterprise/discord-notifier-core-2.0-enterprise.jar[Discord Notifier Core 2.0-enterprise]
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/discord-notifier-console-plugin/2.0-enterprise/discord-notifier-console-plugin-2.0-enterprise.jar[Discord Notifier Console Plugin 2.0-enterprise]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/discord-notifier-core/2.0-enterprise/discord-notifier-core-2.0-enterprise.jar[Discord Notifier Core 2.0-enterprise^]
+* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/discord-notifier-console-plugin/2.0-enterprise/discord-notifier-console-plugin-2.0-enterprise.jar[Discord Notifier Console Plugin 2.0-enterprise^]
 
 [[discord-notifier-configuration]]
 ==== Notifier Configuration

@@ -28,7 +28,7 @@ Here's the Maven dependency:
 </dependency>
 ----
 
-The Hazelcast JAR (for non-Maven projects), can either be downloaded from the http://hazelcast.org/download/[Hazelcast website], or you can make use of the JAR that is packaged in Payara Server. The JAR packaged with Payara can be found at `<Payara Installation Directory>/glassfish/modules/hazelcast.jar`.
+The Hazelcast JAR (for non-Maven projects), can either be downloaded from the http://hazelcast.org/download/[Hazelcast website^], or you can make use of the JAR that is packaged in Payara Server. The JAR packaged with Payara can be found at `<Payara Installation Directory>/glassfish/modules/hazelcast.jar`.
 
 The following code sample will initialize a `HazelcastInstance` variable in the instance embedded in Payara:
 

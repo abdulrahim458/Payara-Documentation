@@ -106,7 +106,7 @@ Payara Services Limited provides official Payara Server Docker Images which are 
 
 These images are hosted on Docker hub in the following locations:
 
-* https://hub.docker.com/r/payara/server-full/[Payara Server Full Profile Docker Image]
-* https://hub.docker.com/r/payara/server-web/[Payara Server Web Profile Docker Image]
+* https://hub.docker.com/r/payara/server-full/[Payara Server Full Profile Docker Image^]
+* https://hub.docker.com/r/payara/server-web/[Payara Server Web Profile Docker Image^]
 
 TIP: Payara Enterprise customers have access to a private Docker repository containing Payara Enterprise Edition equivalent images, which are also released and updated every month.

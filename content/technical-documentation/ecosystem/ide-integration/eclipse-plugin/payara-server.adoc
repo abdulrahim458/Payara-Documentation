@@ -36,7 +36,7 @@ Using the Payara Tools Eclipse plugin, you can integrate Payara Server within th
 [[adding-resources-eclipse]]
 == Adding Resources to Server
 
-. First import or create some project, deployable to the *Payara Server*. Here we use one of the https://github.com/javaee-samples/javaee7-samples[Java EE 7 Samples] .
+. First import or create some project, deployable to the *Payara Server*. Here we use one of the https://github.com/javaee-samples/javaee7-samples[Java EE 7 Samples^] .
 
 . Right-click the target server in the *Servers* view and click *Add and Remove...*
 +

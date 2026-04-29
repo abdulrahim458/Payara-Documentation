@@ -14,7 +14,7 @@
 
 == Bug Fixes
 
-* [FISH-6472] [Community Contribution - https://github.com/myresd[myresd]] Fix Exception When Datasource Isolationlevel `TRANSACTION_READ_UNCOMMITTED` is Used
+* [FISH-6472] [Community Contribution - https://github.com/myresd[myresd^]] Fix Exception When Datasource Isolationlevel `TRANSACTION_READ_UNCOMMITTED` is Used
 
 * [FISH-8334] [Data Grid] Can't start 2nd instance on the node when Auto Increment Port is disabled.
 
@@ -22,15 +22,15 @@
 
 * [FISH-8437] Fix asadmin --help command fails
 
-* [FISH-8672] [Community Contribution - https://github.com/lprimak[lprimak]] Fix Class Loader Leaks
+* [FISH-8672] [Community Contribution - https://github.com/lprimak[lprimak^]] Fix Class Loader Leaks
 
-* [FISH-8728] [Community Contribution - https://github.com/pzygielo[pzygielo]] Allow Host in JDWP Agent Address
+* [FISH-8728] [Community Contribution - https://github.com/pzygielo[pzygielo^]] Allow Host in JDWP Agent Address
 
 * [FISH-8736] Fix Incomplete deployment of the war file with webservices
 
 * [FISH-8794] Fix Data grid members not showing in Admin Console of Payara Server running on Docker
 
-* [FISH-8811] [Community Contribution - https://github.com/lprimak[lprimak]] Properly Clean Up ContainerBackgroundSessionProcessor Threads after Application is Undeployed
+* [FISH-8811] [Community Contribution - https://github.com/lprimak[lprimak^]] Properly Clean Up ContainerBackgroundSessionProcessor Threads after Application is Undeployed
 
 * [FISH-8953] Fix Incorrect Unprocessed Change Showing for Hazelcast Encryption Settings
 

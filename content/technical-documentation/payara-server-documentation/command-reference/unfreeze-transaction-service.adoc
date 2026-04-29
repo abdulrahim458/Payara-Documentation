@@ -64,6 +64,6 @@ Command unfreeze-transaction-service executed successfully
 * xref:technical-documentation/payara-server-documentation/command-reference/recover-transactions.adoc#recover-transactions[`recover-transactions`],
 * xref:technical-documentation/payara-server-documentation/command-reference/rollback-transaction.adoc#rollback-transaction[`rollback-transaction`]
 * xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions] in Payara Server General Administration section
-* https://jakarta.ee/specifications/transactions/2.0/[Transactions]
+* https://jakarta.ee/specifications/transactions/2.0/[Transactions^]
 
 

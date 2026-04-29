@@ -165,4 +165,4 @@ to be reloaded via the Hot Reload feature.
 [[see-also]]
 == See Also
 
-* https://plugins.gradle.org/plugin/fish.payara.micro-gradle-plugin[Plugin page on Gradle Plugins Website]
+* https://plugins.gradle.org/plugin/fish.payara.micro-gradle-plugin[Plugin page on Gradle Plugins Website^]

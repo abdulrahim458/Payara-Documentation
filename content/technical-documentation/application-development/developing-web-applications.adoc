@@ -3,7 +3,7 @@
 
 This chapter describes how web applications are supported in the Payara Platform.
 
-For general information about web applications, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#the-web-tier[The Web Tier]" in The Jakarta EE Tutorial.
+For general information about web applications, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#the-web-tier[The Web Tier^]" in The Jakarta EE Tutorial.
 
 [[using-servlets]]
 == Using Servlets
@@ -175,7 +175,7 @@ This section describes how to use Jakarta Server Pages (JSP files) as page templ
 [[jsp-tag-libraries-and-standard-portable-tags]]
 === JSP Tag Libraries and Standard Portable Tags
 
-Payara Server and Micro supports tag libraries and standard portable tags. For more information, see the https://jakarta.ee/specifications/tags/[Jakarta Standard Tag Library (JSTL) specification].
+Payara Server and Micro supports tag libraries and standard portable tags. For more information, see the https://jakarta.ee/specifications/tags/[Jakarta Standard Tag Library (JSTL) specification^].
 
 NOTE: The standard tag libraries are automatically available to all web applications.
 
@@ -584,7 +584,7 @@ With Java NIO, Grizzly enables greater performance and scalability by avoiding t
 [[client-technologies-to-use-with-comet]]
 ==== Client Technologies to Use With Comet
 
-In addition to creating a web component that uses the Comet APIs, you need to enable your client to accept asynchronous updates from the web component. To accomplish this, you can use Iframes, plain JavaScript, or a robust JavaScript framework, such as the http://dojotoolkit.org[Dojo Toolkit].
+In addition to creating a web component that uses the Comet APIs, you need to enable your client to accept asynchronous updates from the web component. To accomplish this, you can use Iframes, plain JavaScript, or a robust JavaScript framework, such as the http://dojotoolkit.org[Dojo Toolkit^].
 
 The next section explains the two kinds of connections that you can make to the server. While you can use any of the client technologies listed in this section with either kind of connection, it is more challenging to use JavaScript with an HTTP-streaming connection.
 
@@ -678,12 +678,12 @@ asadmin set server-config.network-config.protocols.protocol.${protocol-name}.htt
 
 To set the default locale of the entire server runtime, which determines the locale of the Payara Server Administration Console (In a multi-language distribution variant), text entries in the logs, and so on, use the Administration Console. Select the _domain_ component.
 
-Then type a value in the _Locale_ field. Values must conform to a valid `java.util.Locale` constant (see the Javadoc for the https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Locale.html[Locale] class for more information).
+Then type a value in the _Locale_ field. Values must conform to a valid `java.util.Locale` constant (see the Javadoc for the https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Locale.html[Locale^] class for more information).
 
 [[servlet-character-encoding]]
 === Servlet Character Encoding
 
-This section explains how the server runtime determines the character encoding for the servlet request and response. Valid encoding formats must conform to the list of Java's https://docs.oracle.com/en/java/javase/11/intl/supported-encodings.html[supported encodings].
+This section explains how the server runtime determines the character encoding for the servlet request and response. Valid encoding formats must conform to the list of Java's https://docs.oracle.com/en/java/javase/11/intl/supported-encodings.html[supported encodings^].
 
 [[servlet-request-encoding]]
 ==== Servlet Request
@@ -838,7 +838,7 @@ asadmin set server-config.http-service.virtual-server.vs1.property.contextXmlDef
 
 To define a `context.xml` file for a specific web application, place the file in the `META-INF` directory of the corresponding application and name it `context.xml`.
 
-For more information about virtual server properties, see xref:#virtual-server-properties[Virtual Server Properties]. For more information about the `context.xml` file, see http://tomcat.apache.org/tomcat-5.5-doc/config/context.html[The Context Container].
+For more information about virtual server properties, see xref:#virtual-server-properties[Virtual Server Properties]. For more information about the `context.xml` file, see http://tomcat.apache.org/tomcat-5.5-doc/config/context.html[The Context Container^].
 
 NOTE: Not all context definitions are supported by the Payara Platform.
 

@@ -40,4 +40,4 @@
 
 * [FISH-7829] Upgrade Nimbus-Jose-JWT to 9.35
 
-* [FISH-7865] [Community Contribution - https://github.com/ctabin[ctabin]] Update ASM to 9.6
+* [FISH-7865] [Community Contribution - https://github.com/ctabin[ctabin^]] Update ASM to 9.6

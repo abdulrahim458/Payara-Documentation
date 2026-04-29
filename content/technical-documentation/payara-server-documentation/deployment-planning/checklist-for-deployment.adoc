@@ -67,7 +67,7 @@ a|
 |Java Virtual Machine Configuration
 a|
 * Initially set the minimum and maximum heap sizes to be the same, and at least one GB for each instance.
-* See https://docs.oracle.com/en/java/javase/11/troubleshoot/command-line-options1.html#GUID-A84ECBFB-B6CF-44C3-B627-58BB509C8D05[Java Hotspot VM Options] for more information.
+* See https://docs.oracle.com/en/java/javase/11/troubleshoot/command-line-options1.html#GUID-A84ECBFB-B6CF-44C3-B627-58BB509C8D05[Java Hotspot VM Options^] for more information.
 * When running multiple instances of Payara Server, consider creating a processor set and bind Payara Server to it. This helps in cases where the CMS collector is used to sweep the old generation.
 
 |Configuring time-outs in Payara Server

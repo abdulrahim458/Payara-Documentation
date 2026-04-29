@@ -18,7 +18,7 @@
 
 * [FISH-11208] Fix JVM View Switching in Admin UI
 
-* [FISH-11423] [Community Contribution - https://github.com/pzygielo[pzygielo]] Fix `DependOn` Typo
+* [FISH-11423] [Community Contribution - https://github.com/pzygielo[pzygielo^]] Fix `DependOn` Typo
 
 == Component Upgrades
 

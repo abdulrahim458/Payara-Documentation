@@ -175,5 +175,5 @@ java -jar payara-micro.jar --autobindhttp --clustermode tcpip:192.168.0.104:6900
 [[see-also]]
 == See Also
 
-* https://github.com/hazelcast/hazelcast-kubernetes#grating-permissions-to-use-kubernetes-api[Grating Permissions To Use Kubernetes API]
-* https://github.com/helm/charts/tree/master/stable/hazelcast#configuration[Hazelcast Configuration]
+* https://github.com/hazelcast/hazelcast-kubernetes#grating-permissions-to-use-kubernetes-api[Grating Permissions To Use Kubernetes API^]
+* https://github.com/helm/charts/tree/master/stable/hazelcast#configuration[Hazelcast Configuration^]

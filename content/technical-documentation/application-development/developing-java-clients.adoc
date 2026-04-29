@@ -4,7 +4,7 @@
 This chapter describes how to develop, assemble, and deploy remote Java clients.
 
 NOTE: The Web Profile of Payara Server supports the Jakarta Enterprise Beans 4.0 Lite specification, which allows enterprise beans within web applications, among other features.
-The full Payara Server supports the entire EJB 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans]. +
+The full Payara Server supports the entire EJB 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans^]. +
 Accordingly, the Application Client Container is supported only in the Full Profile, not in the Web Profile. +
 JMS resources are supported only in the Full Profile, not in the Web Profile. See xref:technical-documentation/application-development/using-jakarta-messaging.adoc#using-jakarta-messaging[Using the Java Message Service].
 
@@ -33,7 +33,7 @@ The ACC integrates with Payara Server's authentication system. It also supports 
 
 You can provide an alternate implementation to gather authentication information, tailored to the needs of the application client. To do so, include the class to perform these duties in the application client and identify the fully-qualified name of this class in the `callback-handler` element of the `application-client.xml` descriptor for the client. The ACC uses this class instead of its default class for asking for and reading the authentication information.
 
-The class must implement the `javax.security.auth.callback.CallbackHandler` interface. See the https://jakarta.ee/specifications/platform/[Jakarta EE Platform specification], section 10.2, **Application Clients: Security**, for more details.
+The class must implement the `javax.security.auth.callback.CallbackHandler` interface. See the https://jakarta.ee/specifications/platform/[Jakarta EE Platform specification^], section 10.2, **Application Clients: Security**, for more details.
 
 Application clients can use a programmatic login mechanism by xref:technical-documentation/application-development/securing-applications.adoc#programmatic-login-using-the-programmaticlogin-class[using the `ProgrammaticLogin` Class].
 
@@ -124,7 +124,7 @@ xref:#using-java-web-start[Using Java Web Start] or xref:#running-an-application
 
 . Create a JMS client.
 +
-For detailed instructions on developing a JMS client, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#jakarta-messaging-examples[Jakarta Messaging Examples]" in The Jakarta EE Tutorial.
+For detailed instructions on developing a JMS client, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#jakarta-messaging-examples[Jakarta Messaging Examples^]" in The Jakarta EE Tutorial.
 
 . Next, configure a JMS resource in Payara Server.
 +
@@ -388,7 +388,7 @@ You can also specify a vendor-specific icon, splash screen, text string, or a co
 
 You can partially customize the Java Network Launching Protocol (JNLP) file that Payara Server uses for Java Web Start.
 
-For more information about JNLP, see the https://jcp.org/en/jsr/detail?id=56[JNLP Specification and API Documentation].
+For more information about JNLP, see the https://jcp.org/en/jsr/detail?id=56[JNLP Specification and API Documentation^].
 
 [[specifying-the-jnlp-file-in-the-deployment-descriptor]]
 ==== Specifying the JNLP File in the Deployment Descriptor
@@ -747,7 +747,7 @@ The `client.policy` file is the policy file used by the application client. Each
 The default policy file limits the permissions of Jakarta EE deployed application clients to the minimal set of permissions required for these applications to operate correctly. If an application client requires more than this default set of permissions, edit the `client.policy`
 file to add the custom permissions that your application client needs.
 
-For more information about the permissions you can set in the `client.policy` file, see https://docs.oracle.com/en/java/javase/11/security/permissions-jdk1.html[Permissions in the JDK].
+For more information about the permissions you can set in the `client.policy` file, see https://docs.oracle.com/en/java/javase/11/security/permissions-jdk1.html[Permissions in the JDK^].
 
 [[using-rmiiiop-over-ssl]]
 === Using RMI/IIOP Over SSL
@@ -1031,7 +1031,7 @@ For more information on deployment, see "xref:technical-documentation/payara-ser
 
 . Create a JMS client.
 +
-For detailed instructions on developing a JMS client, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#jakarta-messaging-examples[Jakarta Messaging Examples]" in The Jakarta EE Tutorial.
+For detailed instructions on developing a JMS client, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#jakarta-messaging-examples[Jakarta Messaging Examples^]" in The Jakarta EE Tutorial.
 
 . Configure a JMS resource on Payara Server.
 +

@@ -17,13 +17,13 @@ EclipseLink implements the following specifications, plus value-added extensions
 JPA is part of the Jakarta EE specification. It includes improvements and enhancements to domain modeling, object/relational mapping, `EntityManager` and `Query` interfaces, and the Jakarta Persistence Query Language (JPQL).
 It includes an API for criteria queries, a metamodel API, and support for validation. The Jakarta Persistence API can be used with non-EJB components outside the EJB container.
 +
-For more information, see the https://jakarta.ee/specifications/persistence/[Jakarta Persistence specification]. For basic information about the Jakarta Persistence API, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#persistence[Persistence]" in The Jakarta EE Tutorial.
+For more information, see the https://jakarta.ee/specifications/persistence/[Jakarta Persistence specification^]. For basic information about the Jakarta Persistence API, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#persistence[Persistence^]" in The Jakarta EE Tutorial.
 
 *Jakarta XML Binding (JAXB)*: The EclipseLink JAXB implementation, plus EclipseLink extensions, is called *MOXy*. The `org.eclipse.persistence.moxy.jar` file is bundled as a module in Payara Server.
 +
 For more information about MOXy support in Payara Server, see xref:technical-documentation/application-development/developing-soap-webservices.adoc#the-databinding-provider[The Databinding Provider].
 +
-For the JAXB specification, see the https://jakarta.ee/specifications/xml-binding/[Jakarta XML Binding specification].
+For the JAXB specification, see the https://jakarta.ee/specifications/xml-binding/[Jakarta XML Binding specification^].
 
 * EclipseLink binary utilities are not included but can be used with Payara Server. To use them, download the EclipseLink zip file at `http://www.eclipse.org/eclipselink/downloads/` and unzip it. The utility files are located in the `bin` folder and are the following:
 ** `jaxb-compiler`: Used to compile Java binding source files.
@@ -34,9 +34,9 @@ NOTE: All utilities are available as both a CMD and BASH shell script.
 
 For information about developing, deploying, and configuring EclipseLink, and applications, see the following resources:
 
-* http://wiki.eclipse.org/EclipseLink[EclipseLink Project Home]
-* https://www.eclipse.org/eclipselink/documentation/[EclipseLink Documentation Center]
-* https://wiki.eclipse.org/EclipseLink/Examples/JPA[EclipseLink JPA Examples]
+* http://wiki.eclipse.org/EclipseLink[EclipseLink Project Home^]
+* https://www.eclipse.org/eclipselink/documentation/[EclipseLink Documentation Center^]
+* https://wiki.eclipse.org/EclipseLink/Examples/JPA[EclipseLink JPA Examples^]
 
 [[using-eclipselink-in-payara-server]]
 == Using EclipseLink in Payara Server
@@ -45,7 +45,7 @@ To run EclipseLink JPA applications in Payara Server, you must configure the ser
 
 . Set up the datasource. See "xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#administering-database-connectivity[Administering Database Connectivity]" in Payara Server General Administration section.
 
-. Create the application. For guidance in writing your application, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#persistence[Persistence]" in The Jakarta EE Tutorial.
+. Create the application. For guidance in writing your application, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#persistence[Persistence^]" in The Jakarta EE Tutorial.
 
 . Create the `persistence.xml` file. See xref:#specifying-the-database-for-an-application[Specifying the Database for an Application] for considerations specific to Payara Server.
 +
@@ -120,7 +120,7 @@ Symfoware
 TimesTen
 ----
 
-For more information about the `eclipselink.target-database` property, see https://www.eclipse.org/eclipselink/documentation/4.0/jpa/extensions/jpa-extensions.html#target-database[EclipseLink JPA Extensions - Target Database].
+For more information about the `eclipselink.target-database` property, see https://www.eclipse.org/eclipselink/documentation/4.0/jpa/extensions/jpa-extensions.html#target-database[EclipseLink JPA Extensions - Target Database^].
 
 If you are using the Java Persistence API by calling `Persistence.createEMF()`, do not specify the `jta-data-source` or `non-jta-data-source` elements. Instead, specify the `provider` element and any additional properties required by the JDBC driver or the database. For example:
 
@@ -270,7 +270,7 @@ Schema generation properties or `asadmin` command line options can control autom
 * Generating the DDL files
 
 //TODO - Find an updated link to EclipseLink documentation
-Optional schema generation properties control the automatic creation of database tables. You can specify them in the `persistence.xml` file. For more information, see https://www.eclipse.org/eclipselink/documentation/4.0/jpa/extensions/jpa-extensions.html#CHDFDDBF[EclipseLink JPA Extensions for Schema Generation].
+Optional schema generation properties control the automatic creation of database tables. You can specify them in the `persistence.xml` file. For more information, see https://www.eclipse.org/eclipselink/documentation/4.0/jpa/extensions/jpa-extensions.html#CHDFDDBF[EclipseLink JPA Extensions for Schema Generation^].
 
 The following options of the `asadmin deploy` or `asadmin deploydir` command control the automatic creation of database tables at deployment.
 

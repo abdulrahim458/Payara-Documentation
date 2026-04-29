@@ -23,7 +23,7 @@ NOTE: Traces of request types marked in (*) are using higher-level APIs and are 
 
 Traces have form of nested spans following the model found in modern tracing APIs such as *OpenTelemetry* and *OpenTracing*.
 
-The OpenTracing specification, found link:https://github.com/opentracing/specification/blob/master/specification.md[here], gives a more detailed description of what Spans are and the general trace format.
+The OpenTracing specification, found link:https://github.com/opentracing/specification/blob/master/specification.md[here^], gives a more detailed description of what Spans are and the general trace format.
 Alternatively you can view a short summary xref:technical-documentation/application-development/using-request-tracing-in-applications.adoc#terminology[here]
 
 The Request Tracing service has the concept of sample rates, affording you extra options to limit the amount of traces processed. The Payara Platform offers two options:
@@ -43,7 +43,7 @@ For the full details, see the xref:technical-documentation/microprofile/opentele
 [[opentracing-support]]
 == OpenTracing Support
 
-In-line with Payara Platform's support for xref:/technical-documentation/microprofile/opentracing.adoc[MicroProfile OpenTracing], there's added support for http://opentracing.io/[OpenTracing.io] code instrumentation.
+In-line with Payara Platform's support for xref:/technical-documentation/microprofile/opentracing.adoc[MicroProfile OpenTracing], there's added support for http://opentracing.io/[OpenTracing.io^] code instrumentation.
 
 NOTE: Since OpenTracing is just a wrapper around OpenTelemetry, it is advised to use OpenTelemetry APIs instead.
 
@@ -70,7 +70,7 @@ You can configure the request tracing service settings using the following attri
 ***Time Unit***: This defines the time unit of the _Time Value_ attribute.
 ***Applications Only***: When enabled, traces that originate from outside deployed applications (e.g. the Admin Console) will not be sampled.
 ***Threshold Value***: This defines the number of units beyond which a request will be traced.
-***Threshold Unit***: This defines the time duration per unit. The accepted options are any valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[java.util.concurrent.TimeUnit] values. The default value is _SECONDS_.
+***Threshold Unit***: This defines the time duration per unit. The accepted options are any valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[java.util.concurrent.TimeUnit^] values. The default value is _SECONDS_.
 ***Sample Rate First***: When enabled, the sample rate will be checked as a trace begins, meaning that traces that would have broken the thresholds are potentially discarded. When disabled, the sample rate is checked after a trace has completed, meaning that you're only sampling traces that have breached your threshold values. Having this disabled will potentially give more accurate trace data, at the expense of a small extra performance overhead.
 ***Reservoir Sampling***: When disabled, the trace stores will contain the longest request traces. When enabled, the chance of any sampled request being in the trace stores becomes constant. Note that this applies to both trace stores in most circumstances it doesn't make sense to have this enabled if _Store Historic Traces_ is also enabled.
 ***Trace Store Size***: The maximum number of traces to be stored in the local rolling trace store. A store shared in a cluster uses the maximum setting of this property of any instance in the cluster with request tracing enabled.

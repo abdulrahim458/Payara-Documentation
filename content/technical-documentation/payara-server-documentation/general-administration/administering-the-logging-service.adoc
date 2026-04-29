@@ -14,8 +14,8 @@ Although application components can use the Apache Commons Logging Library to re
 
 For more information about Logging in Java, see:
 
-* link:http://jcp.org/en/jsr/detail?id=47[JSR 47 Specification]
-* link:https://docs.oracle.com/javase/8/docs/technotes/guides/logging/overview.html[Logging Overview]
+* link:http://jcp.org/en/jsr/detail?id=47[JSR 47 Specification^]
+* link:https://docs.oracle.com/javase/8/docs/technotes/guides/logging/overview.html[Logging Overview^]
 
 [[log-files]]
 === Log Files
@@ -672,7 +672,7 @@ asadmin set-log-attributes fish.payara.deprecated.jsonlogformatter.underscorepre
 [[support-additional-fields]]
 ===== Support for Additional Fields
 
-The JSON Log Formatter also supports the customization of additional fields through the `setParameters` method of the https://docs.oracle.com/javase/8/docs/api/java/util/logging/LogRecord.html[LogRecord] class. This action is done when logging a new entry at runtime, so it is limited to an application business logic context.
+The JSON Log Formatter also supports the customization of additional fields through the `setParameters` method of the https://docs.oracle.com/javase/8/docs/api/java/util/logging/LogRecord.html[LogRecord^] class. This action is done when logging a new entry at runtime, so it is limited to an application business logic context.
 
 Here's a quick example of how to pass additional fields to the resulting JSON object by using a map with a single entry:
 

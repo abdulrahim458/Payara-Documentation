@@ -5,9 +5,9 @@
 
 Payara Starter is a web application and command line tool designed to accelerate Jakarta EE development by simplifying the creation of new application projects. It supports the creation of both Maven and Gradle projects, allowing developers to focus on coding their application components in a faster way as they don't have to deal with the complexities of setting up their projects.
 
-* link:https://start.payara.fish[Website]
-* link:https://github.com/payara/ecosystem-starter[GitHub Repository]
-* link:https://mvnrepository.com/artifact/fish.payara.starter/payara-starter-archetype[Maven Central Repository for Payara Starter Archetype]
+* link:https://start.payara.fish[Website^]
+* link:https://github.com/payara/ecosystem-starter[GitHub Repository^]
+* link:https://mvnrepository.com/artifact/fish.payara.starter/payara-starter-archetype[Maven Central Repository for Payara Starter Archetype^]
 
 [[key-features-of-payara-starter]]
 == Key Features of Payara Starter
@@ -207,7 +207,7 @@ Available choices:
 
 === Web application at `start.payara.fish`
 
-Visit https://start.payara.fish[start.payara.fish] to use the web application for generating applications via a graphical interface.
+Visit https://start.payara.fish[start.payara.fish^] to use the web application for generating applications via a graphical interface.
 
 [[using-the-payara-starter-web-application]]
 ==== Using the Payara Starter Web Application
@@ -217,7 +217,7 @@ Payara Starter provides a convenient web application that allows you to generate
 Follow these steps to use the web application:
 
 . Access the web application:
-* Visit the Payara Starter web application at https://start.payara.fish[https://start.payara.fish].
+* Visit the Payara Starter web application at https://start.payara.fish[https://start.payara.fish^].
 
 . Fill in the *Project Details*:
 * On the web application's landing page, you'll find a user-friendly interface to input project details.
@@ -284,7 +284,7 @@ Feel free to adjust archetype parameters to tailor the generated application to 
 [[new-feature-er-diagram-integration]]
 == ER Diagram Designer with Generative AI Support
 
-Payara Starter https://start.payara.fish[start.payara.fish] enables developers to streamline the creation of full-stack applications by leveraging Entity-Relationship (ER) diagrams. Generative AI enhances this process by automating the generation and customization of diagrams based on inputs and requirements. Developers can visualize, interact, and modify these diagrams in real time, making Payara Starter a more powerful tool for application design and development.
+Payara Starter https://start.payara.fish[start.payara.fish^] enables developers to streamline the creation of full-stack applications by leveraging Entity-Relationship (ER) diagrams. Generative AI enhances this process by automating the generation and customization of diagrams based on inputs and requirements. Developers can visualize, interact, and modify these diagrams in real time, making Payara Starter a more powerful tool for application design and development.
 
 *image*: payara-starter/er-diagram.png[ER Diagram, width=50%]
 
@@ -293,7 +293,7 @@ Payara Starter https://start.payara.fish[start.payara.fish] enables developers t
 
 ==== Default ER Diagrams
 
-The Payara Starter website includes default ER diagrams, stored in https://mermaid.js.org/syntax/entityRelationshipDiagram.html[Mermaid format], which users can modify as a starting point for their own designs.
+The Payara Starter website includes default ER diagrams, stored in https://mermaid.js.org/syntax/entityRelationshipDiagram.html[Mermaid format^], which users can modify as a starting point for their own designs.
 
 *image*: payara-starter/existing-er-diagram.png[Existing ER Diagram, width=50%]
 
@@ -358,7 +358,7 @@ This feature helps users quickly prototype or refine their diagrams by adjusting
 [[live-diagram-panel]]
 ==== Live Diagram Panel
 
-The Payara Starter interface includes a split panel where the https://mermaid.js.org/syntax/entityRelationshipDiagram.html[Mermaid] source code appears on the left, and a live visual representation of the ER diagram is shown on the right. Any changes made in the source or through Generative AI interactions update the visualization immediately.
+The Payara Starter interface includes a split panel where the https://mermaid.js.org/syntax/entityRelationshipDiagram.html[Mermaid^] source code appears on the left, and a live visual representation of the ER diagram is shown on the right. Any changes made in the source or through Generative AI interactions update the visualization immediately.
 
 Users can freely modify the ER diagram by editing the Mermaid source code directly in the left panel. These modifications are instantly reflected in the live preview, offering full control over the diagram's structure and appearance.
 

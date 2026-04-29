@@ -8,9 +8,9 @@
 
 == Improvements
 
-* [FISH-11046] [Community Contribution - https://github.com/hsuk04[Hsuk04]] Change createTempDir to use Java nio Files package
+* [FISH-11046] [Community Contribution - https://github.com/hsuk04[Hsuk04^]] Change createTempDir to use Java nio Files package
 
-* [FISH-11918] [Community Contribution - https://github.com/mkarg[Mkarg]] Reduced logging level for "Clustered CDI Event bus initialized"
+* [FISH-11918] [Community Contribution - https://github.com/mkarg[Mkarg^]] Reduced logging level for "Clustered CDI Event bus initialized"
 
 * [FISH-10379] Add Jakarta EE MVC 2.1 API and Eclipse Krazo 3.0.1
 

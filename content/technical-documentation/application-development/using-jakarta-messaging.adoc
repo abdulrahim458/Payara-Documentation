@@ -5,7 +5,7 @@ This chapter describes how to use the Jakarta Messaging (JMS) API. Payara Server
 
 IMPORTANT: JMS resources are supported only in the Full Profile, not in the Web Profile.
 
-For information about the JMS, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#messaging[Messaging]" in The Jakarta EE Tutorial.
+For information about the JMS, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#messaging[Messaging^]" in The Jakarta EE Tutorial.
 
 For detailed information about JMS concepts and JMS support in Payara Server, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-the-java-message-service-jms[Administering Jakarta Messaging (JMS)]" in the Payara Server General Administration section.
 

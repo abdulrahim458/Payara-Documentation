@@ -13,7 +13,7 @@ Breaking changes introduced in MicroProfile Fault Tolerance {mpFaultToleranceVer
 [[additions-to-spec]]
 == Additions to the Fault Tolerance Spec
 
-In addition to the functionality https://github.com/eclipse/microprofile-fault-tolerance/blob/master/spec/src/main/asciidoc/microprofile-fault-tolerance-spec.asciidoc[detailed in the specification document], Payara Platform has implemented additional features like:
+In addition to the functionality https://github.com/eclipse/microprofile-fault-tolerance/blob/master/spec/src/main/asciidoc/microprofile-fault-tolerance-spec.asciidoc[detailed in the specification document^], Payara Platform has implemented additional features like:
 
 [[configurable-executor-services]]
 === Configurable Executor Services

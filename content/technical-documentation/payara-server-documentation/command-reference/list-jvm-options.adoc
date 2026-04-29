@@ -91,7 +91,7 @@ Command list-jvm-options executed successfully.
 
 For more information about the Java application launcher, see the reference page for the operating system that you are using:
 
-* http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/java.html[Oracle Solaris and Linux: java - the Java application launcher] (http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/java.html)
-* http://docs.oracle.com/javase/6/docs/technotes/tools/windows/java.html[Windows: java - the Java application launcher] (http://docs.oracle.com/javase/6/docs/technotes/tools/windows/java.html)
+* http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/java.html[Oracle Solaris and Linux: java - the Java application launcher^] (http://docs.oracle.com/javase/6/docs/technotes/tools/solaris/java.html)
+* http://docs.oracle.com/javase/6/docs/technotes/tools/windows/java.html[Windows: java - the Java application launcher^] (http://docs.oracle.com/javase/6/docs/technotes/tools/windows/java.html)
 
 

@@ -16,7 +16,7 @@
 
 * [FISH-7409] Unable to Instantiate LdapCtxFactory with JDK 17 Micro
 
-* [FISH-7451] [Community Contribution - https://github.com/thehpi[Thehpi]] Fix for `DataSource.getConnection()` blows up on transaction with wrong status
+* [FISH-7451] [Community Contribution - https://github.com/thehpi[Thehpi^]] Fix for `DataSource.getConnection()` blows up on transaction with wrong status
 
 * [FISH-7528] Staged upgrade from Payara 5 to Payara 6 fail after moving osgi-cache
 

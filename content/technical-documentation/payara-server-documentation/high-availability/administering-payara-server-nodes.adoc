@@ -683,7 +683,7 @@ TIP: The admin console page for creating Docker nodes is the same as creating th
 
 As Docker must expose an HTTP port, it is recommended that it be protected using TLS outside of development environments.
 
-A full guide for how to do so can be found link:https://docs.docker.com/engine/security/https/[here] In short, create self-signed TLS certificates (or use your own signed ones), and add them to your `DOCKER_OPTS` variable to secure the Docker REST admin service:
+A full guide for how to do so can be found link:https://docs.docker.com/engine/security/https/[here^] In short, create self-signed TLS certificates (or use your own signed ones), and add them to your `DOCKER_OPTS` variable to secure the Docker REST admin service:
 
 [source, shell]
 ----

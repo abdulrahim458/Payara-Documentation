@@ -22,11 +22,11 @@
 
 * [FISH-9111] Required dependency of jackson-dataformat-xml is missing in micro and web
 
-* [FISH-9171] [Community Contribution - https://github.com/lprimak[lprimak]] Prevent Deployment Failures from Causing an Undeployment Failure and Leaks
+* [FISH-9171] [Community Contribution - https://github.com/lprimak[lprimak^]] Prevent Deployment Failures from Causing an Undeployment Failure and Leaks
 
 * [FISH-9186] Alternate Document Root not working on DFSN on Windows Server 2019
 
-* [FISH-9222] [Community Contribution - https://github.com/lprimak[lprimak]] Disable Monitoring Collection Before Server Shuts Down
+* [FISH-9222] [Community Contribution - https://github.com/lprimak[lprimak^]] Disable Monitoring Collection Before Server Shuts Down
 
 * [FISH-9456] Fix `Cannot find the resource bundle for the name com.sun.logging.enterprise.system.container.ejb`
 

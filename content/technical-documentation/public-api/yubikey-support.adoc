@@ -63,4 +63,4 @@ These attributes can be overridden with MicroProfile configuration values:
 [[see-also]]
 == See Also
 
-* link:https://www.yubico.com/[Yubico Official Site]
+* link:https://www.yubico.com/[Yubico Official Site^]

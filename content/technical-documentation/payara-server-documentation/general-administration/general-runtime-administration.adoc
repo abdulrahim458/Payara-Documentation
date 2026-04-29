@@ -604,7 +604,7 @@ Defaults to `true`
 *`hazelcast.auto-partition-group`*:
 Enables/disables Hazelcast group auto-partitioning behaviour in Payara Server's Data Grid.
 +
-When auto-partitioning is turned on, instances that join the Data Grid will not follow the default partition group configuration strategy and instead will form individual partition groups. Read more about how partition groups work in the official link:https://docs.hazelcast.com/hazelcast/5.3/clusters/partition-group-configuration[Hazelcast Platform documentation].
+When auto-partitioning is turned on, instances that join the Data Grid will not follow the default partition group configuration strategy and instead will form individual partition groups. Read more about how partition groups work in the official link:https://docs.hazelcast.com/hazelcast/5.3/clusters/partition-group-configuration[Hazelcast Platform documentation^].
 +
 This option is intended to make member partitioning work consistently for highly dynamic environments (like Kubernetes).
 +
@@ -1033,10 +1033,10 @@ Command show-component-status executed successfully.
 ----
 This example shows the status of the `MEjbApp` component.
 
-* http://www.gnu.org/software/wget/[GNU Wget]
+* http://www.gnu.org/software/wget/[GNU Wget^]
 
-The implementation of the Payara Server REST interfaces is based on https://eclipse-ee4j.github.io/jersey[project Jersey]. Project Jersey is the reference implementation of https://jakarta.ee/specifications/restful-ws/[Jakarta RESTful Web Services].
+The implementation of the Payara Server REST interfaces is based on https://eclipse-ee4j.github.io/jersey[project Jersey^]. Project Jersey is the reference implementation of https://jakarta.ee/specifications/restful-ws/[Jakarta RESTful Web Services^].
 
 [[see-also]]
 ==== See Also
-* https://www.gnu.org/software/bash/manual/html_node/Event-Designators.html[Event Designators]
+* https://www.gnu.org/software/bash/manual/html_node/Event-Designators.html[Event Designators^]

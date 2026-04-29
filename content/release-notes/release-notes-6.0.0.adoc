@@ -18,7 +18,7 @@ The minimum required JDK to run this and subsequent releases of this stream is 1
 Jakarta EE 10 is a major release with backwards incompatible changes, the major one being the javax to jakarta package refactoring. This major change affects all Jakarta EE 8 and below applications.
 
 === MicroProfile 6
-MicroProfile 6 introduced some https://microprofile.io/2023/01/10/microprofile-6-0-release/[breaking changes] that you should be aware of.
+MicroProfile 6 introduced some https://microprofile.io/2023/01/10/microprofile-6-0-release/[breaking changes^] that you should be aware of.
 
 === Improvements
 

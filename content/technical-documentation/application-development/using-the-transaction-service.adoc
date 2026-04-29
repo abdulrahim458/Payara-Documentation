@@ -3,9 +3,9 @@
 
 The Jakarta EE platform provides several abstractions that simplify development of dependable transaction processing for applications. This chapter discusses Jakarta EE transactions and transaction support in the Payara Platform.
 
-For more information about the Jakarta Transactions API (JTA) and Java Transaction Service (JTS), see "xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in Payara Server General Administration section and in the https://jakarta.ee/specifications/transactions[Jakarta Transactions specification].
+For more information about the Jakarta Transactions API (JTA) and Java Transaction Service (JTS), see "xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in Payara Server General Administration section and in the https://jakarta.ee/specifications/transactions[Jakarta Transactions specification^].
 
-You might also want to read "https://eclipse-ee4j.github.io/jakartaee-tutorial/#transactions[Transactions]" in The Jakarta EE Tutorial.
+You might also want to read "https://eclipse-ee4j.github.io/jakartaee-tutorial/#transactions[Transactions^]" in The Jakarta EE Tutorial.
 
 [[handling-transactions-with-databases]]
 == Handling Transactions with Databases
@@ -207,8 +207,8 @@ The default setting is `false`. For more information about non-component callers
 
 If possible, you should use the `jakarta.transaction.TransactionSynchronizationRegistry` interface instead of `jakarta.transaction.TransactionManager` , for portability. You can look up the implementation of this interface by using the JNDI name `java:comp/TransactionSynchronizationRegistry`.
 
-For details, see the https://jakarta.ee/specifications/transactions/2.0/apidocs/jakarta/transaction/transactionsynchronizationregistry[`TransactionSynchronizationRegistryInterface`] API documentation and the
-https://jakarta.ee/specifications/transactions[Jakarta Transactions specification].
+For details, see the https://jakarta.ee/specifications/transactions/2.0/apidocs/jakarta/transaction/transactionsynchronizationregistry[`TransactionSynchronizationRegistryInterface`^] API documentation and the
+https://jakarta.ee/specifications/transactions[Jakarta Transactions specification^].
 
 If accessing the `jakarta.transaction.TransactionManager` implementation is absolutely necessary, you can look up the Payara Platform's implementation of this interface using the JNDI name `java:appserver/TransactionManager`.
 

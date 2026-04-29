@@ -394,7 +394,7 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=jdbc-connection
 [[keep-alive-statistics]]
 ==== Keep-Alive Statistics
 
-This MBean is for network connections in keep-alive mode. For more details on `keep-alive` see https://tools.ietf.org/html/rfc7230#section-6.3[RFC 7230 6.3].
+This MBean is for network connections in keep-alive mode. For more details on `keep-alive` see https://tools.ietf.org/html/rfc7230#section-6.3[RFC 7230 6.3^].
 
 NOTE: As of *HTTP 1.1* all connections are `keep-alive` unless declared otherwise.
 
@@ -842,4 +842,4 @@ In JMX Logging set value to
 [[openmq-mbeans]]
 == OpenMQ MBeans
 
-Payara Server includes OpenMQ as a JMS broker, which includes its own MBeans.Documentation on them can be found in the official link:https://eclipse-ee4j.github.io/openmq/guides/mq-dev-guide-java/toc.html[Eclipse Open Message Queue Developer's Guide for Java Clients].
+Payara Server includes OpenMQ as a JMS broker, which includes its own MBeans.Documentation on them can be found in the official link:https://eclipse-ee4j.github.io/openmq/guides/mq-dev-guide-java/toc.html[Eclipse Open Message Queue Developer's Guide for Java Clients^].

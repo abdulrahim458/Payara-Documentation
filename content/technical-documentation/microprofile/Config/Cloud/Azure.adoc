@@ -30,7 +30,7 @@ image:microprofile/config/cloud/azure/application-registration-configuration.png
 
 You will need to allow your application full access to the Azure Key Vault service to enable it to retrieve secrets from the vault. To do this, you will need to configure your application's API permissions.
 
-You can learn more about permissions and consent https://docs.microsoft.com/en-gb/azure/active-directory/develop/v2-permissions-and-consent[here].
+You can learn more about permissions and consent https://docs.microsoft.com/en-gb/azure/active-directory/develop/v2-permissions-and-consent[here^].
 
 . Select your application
 . Select API permissions under the Manage section

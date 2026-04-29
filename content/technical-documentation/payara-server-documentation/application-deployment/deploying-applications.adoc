@@ -930,7 +930,7 @@ For more information about JSP precompilation, see xref:technical-documentation/
 == EJB Module Deployment Guidelines
 
 NOTE: The Payara Server Web Profile supports the Jakarta Enterprise Beans 4.0 Lite specification, which allows enterprise beans within web applications, among other features. +
-The Payara Server Full Platform Profile supports the entire Jakarta Enterprise Beans 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans]
+The Payara Server Full Platform Profile supports the entire Jakarta Enterprise Beans 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans^]
 
 The following guidelines apply to deploying an EJB module in Payara Server:
 

@@ -9,11 +9,11 @@
 
 == Improvements
 
-* [FISH-8688] [Community Contribution - https://github.com/lprimak[lprimak]] Optimize MR-jar class loading
+* [FISH-8688] [Community Contribution - https://github.com/lprimak[lprimak^]] Optimize MR-jar class loading
 
 == Bug Fixes
 
-* [FISH-8044] [Community Contribution - https://github.com/ctabin[ctabin]] Avoid crashing due to FileSystemNotFound while behind a Spring boot
+* [FISH-8044] [Community Contribution - https://github.com/ctabin[ctabin^]] Avoid crashing due to FileSystemNotFound while behind a Spring boot
 
 * [FISH-8174 ]Session Timeout not behaving consistently when using Session Replication with --lite members.
 
@@ -23,7 +23,7 @@
 
 * [FISH-8543] Enabling HSTS breaks upload of Artifacts Greater than 2 Mb on Secure Admin Listener
 
-* [FISH-8671] [Community Contribution - https://github.com/lprimak[lprimak]] Prevent JavaMail Warning due to the `javamail.default.address.map` File Not Being Found
+* [FISH-8671] [Community Contribution - https://github.com/lprimak[lprimak^]] Prevent JavaMail Warning due to the `javamail.default.address.map` File Not Being Found
 
 == Security Fixes
 

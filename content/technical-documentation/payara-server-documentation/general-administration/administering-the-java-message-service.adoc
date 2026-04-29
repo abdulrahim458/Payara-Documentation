@@ -537,7 +537,7 @@ Payara Server comes with its own message queue broker: OpenMQ. However, ActiveMQ
 
 [[installing-activemq]]
 === Installing ActiveMQ
-The latest version of ActiveMQ can be downloaded from here: https://activemq.apache.org/components/classic/download/[ActiveMQ Downloads]
+The latest version of ActiveMQ can be downloaded from here: https://activemq.apache.org/components/classic/download/[ActiveMQ Downloads^]
 
 Once downloaded, unzip the file and navigate to /bin folder and run the following command in order to start ActiveMQ:
 
@@ -554,7 +554,7 @@ After accessing the web console and logged in with the default credentials (`adm
 
 [[deploying-the-activemq-rar-to-payara-server]]
 === Deploy the ActiveMQ RAR to Payara Serve
-In order to use ActiveMQ with Payara Server, you need to deploy the ActiveMQ RAR to Payara Server. You can download the ActiveMQ RAR from here: https://mvnrepository.com/artifact/org.apache.activemq/activemq-rar/5.17.4[ActiveMQ RAR]
+In order to use ActiveMQ with Payara Server, you need to deploy the ActiveMQ RAR to Payara Server. You can download the ActiveMQ RAR from here: https://mvnrepository.com/artifact/org.apache.activemq/activemq-rar/5.17.4[ActiveMQ RAR^]
 
 The rar needs then to be deployed to Payara Server. This can be done by using the Payara Admin Console or by using the following asadmin command:
 [source,shell]

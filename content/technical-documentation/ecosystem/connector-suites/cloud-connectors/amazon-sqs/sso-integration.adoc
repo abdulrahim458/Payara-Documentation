@@ -4,7 +4,7 @@
 
 If you are using version 2 of the Amazon Web Services Java SDK, then it is possible to configure the SQS connector use Amazon SSO authentication instead of a `secretKey` and `keyID` set of credentials.
 
-The Amazon Single Sign-On (AWS SSO) is also known as the AWS IAM Identity Center. This center is used by AWS administrators to centrally manage the data and access permissions of all user identities. To view more information about it please read here: https://aws.amazon.com/about-aws/whats-new/2022/07/aws-single-sign-on-aws-sso-now-aws-iam-identity-center/?nc1=h_ls[AWS IAM Identity Center]
+The Amazon Single Sign-On (AWS SSO) is also known as the AWS IAM Identity Center. This center is used by AWS administrators to centrally manage the data and access permissions of all user identities. To view more information about it please read here: https://aws.amazon.com/about-aws/whats-new/2022/07/aws-single-sign-on-aws-sso-now-aws-iam-identity-center/?nc1=h_ls[AWS IAM Identity Center^]
 
 In this case, instead of using a traditional "Service Account" to allow a deployed application to connect to a SQS Queue, instead you can allow individual AWS accounts to log in via SSO first and then make the calls as long as they have been configured with the right permissions. To configure this you must follow these steps:
 
@@ -20,7 +20,7 @@ IMPORTANT: Using AWS SSO credentials is a recommended practice for development e
 [[configure-aws-iam-identity-center]]
 == Configure AWS IAM Identity Center Accounts
 
-To configure AWS IAM Identity Center Accounts, please read the instructions detailed in https://aws.amazon.com/blogs/security/how-to-create-and-manage-users-within-aws-sso/[Create Users with AWS IAM Identity Center].
+To configure AWS IAM Identity Center Accounts, please read the instructions detailed in https://aws.amazon.com/blogs/security/how-to-create-and-manage-users-within-aws-sso/[Create Users with AWS IAM Identity Center^].
 
 Here's an example identity that is ready to be used for SSO login:
 
@@ -33,7 +33,7 @@ This account is also setup with full privileges so that it can access SQS resour
 [[configure-sqs-queue]]
 == Configure a SQS Queue
 
-To configure an SQS Queue, please follow the instructions detailed in https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/step-create-queue.html[Create Amazon SQS Queue]
+To configure an SQS Queue, please follow the instructions detailed in https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/step-create-queue.html[Create Amazon SQS Queue^]
 
 Here's an example of a SQS Queue:
 
@@ -47,7 +47,7 @@ To download and install Amazon SQS Connector V2, please check xref:technical-doc
 [[install-amazon-cli-local-environment]]
 == Install Amazon CLI Locally
 
-To install the Amazon CLI toolset on you local environment, please check https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html[Amazon CLI getting started]
+To install the Amazon CLI toolset on you local environment, please check https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html[Amazon CLI getting started^]
 
 You can verify that the CLI has been correctly installed with the following command:
 
@@ -60,7 +60,7 @@ aws-cli/2.8.11 Python/3.9.11 Windows/10 exe/AMD64 prompt/off
 [[setup-local-configuration]]
 == Setup Local Configuration
 
-Next, you'll have to setup the Amazon IAM configuration file on your local machine to enable SSO authentication. Read detailed instructions on how to setup this configuration file on https://docs.aws.amazon.com/sdkref/latest/guide/feature-sso-credentials.html[AWS SSO Credentials].
+Next, you'll have to setup the Amazon IAM configuration file on your local machine to enable SSO authentication. Read detailed instructions on how to setup this configuration file on https://docs.aws.amazon.com/sdkref/latest/guide/feature-sso-credentials.html[AWS SSO Credentials^].
 
 Here's a sample configuration file:
 
@@ -73,7 +73,7 @@ sso_account_id = <ACCOUNT_ID>
 sso_role_name = <ROLE_NAME>
 ----
 
-IMPORTANT: The `sso_start_url`, `sso_region` and `sso_role_name` are parameters associated with the SSO credentials for the user account identity. To get the `sso_account_id` find the instructions in https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html[Account ID].
+IMPORTANT: The `sso_start_url`, `sso_region` and `sso_role_name` are parameters associated with the SSO credentials for the user account identity. To get the `sso_account_id` find the instructions in https://docs.aws.amazon.com/IAM/latest/UserGuide/console_account-alias.html[Account ID^].
 
 Before proceeding, you'll have to set the URL of the SQS Queue and its corresponding region as Environment Variables:
 

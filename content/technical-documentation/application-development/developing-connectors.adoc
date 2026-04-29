@@ -3,7 +3,7 @@
 
 NOTE: This section strictly applies to Payara Server Full Profile.
 
-This chapter describes Payara Server support for the https://jakarta.ee/specifications/connectors/[Jakarta Connectors specification].
+This chapter describes Payara Server support for the https://jakarta.ee/specifications/connectors/[Jakarta Connectors specification^].
 
 Jakarta Connectors provides a Java solution to the problem of connectivity between multiple application servers and existing enterprise information systems (EIS). By using Jakarta Connectors, EIS vendors no longer need to customize their product for each application server. Application server vendors who conform to Jakarta Connectors do not need to write custom code to add connectivity to a new EIS.
 
@@ -11,7 +11,7 @@ This chapter uses the terms *connector* and *resource adapter* interchangeably. 
 
 IMPORTANT: If you installed the Web Profile, connector modules that use only outbound communication features and work-management that does not involve inbound communication features are supported. Other connector features are supported only in Full Profile.
 
-For more information about connectors, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#resource-adapters-and-contracts[Resource Adapters and Contracts]" in the Jakarta EE Tutorial.
+For more information about connectors, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#resource-adapters-and-contracts[Resource Adapters and Contracts^]" in the Jakarta EE Tutorial.
 
 [[connector-support-in-payara-server]]
 == Connector Support in Payara Server

@@ -1310,7 +1310,7 @@ Use the following dotted name pattern for JVM class loading system statistics:
 server.jvm.class-loading-system.statistic
 ----
 
-With Java SE, additional monitoring information can be obtained from the JVM. Set the monitoring level to LOW to enable the display of this additional information. Set the monitoring level to HIGH to also view information pertaining to each live thread in the system. More information about the additional monitoring features for Java SE is available in https://docs.oracle.com/en/java/javase/17/management/overview-java-se-monitoring-and-management.html[Monitoring and Management for the Java Platform] .
+With Java SE, additional monitoring information can be obtained from the JVM. Set the monitoring level to LOW to enable the display of this additional information. Set the monitoring level to HIGH to also view information pertaining to each live thread in the system. More information about the additional monitoring features for Java SE is available in https://docs.oracle.com/en/java/javase/17/management/overview-java-se-monitoring-and-management.html[Monitoring and Management for the Java Platform^] .
 
 The Java SE monitoring tools are discussed at `https://docs.oracle.com/en/java/javase/17/docs/specs/man/index.html`.
 
@@ -2654,7 +2654,7 @@ asadmin set-jmx-monitoring-configuration --logfrequency 60 --enabled false
 [[rest-monitoring]]
 == Rest Monitoring
 
-This section covers how to use the REST monitoring functionality in Payara Server. The REST monitoring is implemented through an internal application that functions similarly to link:https://jolokia.org/[Jolokia], as it exposes MBeans over HTTP with a REST API to stop JMX monitoring requiring RMI.
+This section covers how to use the REST monitoring functionality in Payara Server. The REST monitoring is implemented through an internal application that functions similarly to link:https://jolokia.org/[Jolokia^], as it exposes MBeans over HTTP with a REST API to stop JMX monitoring requiring RMI.
 
 The REST monitoring is hosted on the admin-listener (port `4848`) on the default context root, `/rest-monitoring`.
 

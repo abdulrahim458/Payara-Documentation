@@ -3,7 +3,7 @@
 
 This chapter contains information on how EJB 2.1 container-managed persistence (CMP) works in the Payara Platform.
 
-NOTE: The Web Profile of Payara Server supports the Jakarta Enterprise Beans (formerly known as EJB) 4.0 Lite specification, which allows enterprise beans within web applications, among other features. The Full Profile supports the entire 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans[Jakarta Enterprise Beans] +
+NOTE: The Web Profile of Payara Server supports the Jakarta Enterprise Beans (formerly known as EJB) 4.0 Lite specification, which allows enterprise beans within web applications, among other features. The Full Profile supports the entire 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans[Jakarta Enterprise Beans^] +
 The concepts discussed in here are applicable to Payara Micro up to some extent as well.
 
 WARNING: As of Jakarta EE 10, the CMP API group has been marked as deprecated and will be removed in a future release.
@@ -659,7 +659,7 @@ query-ordering
 
 The bean developer uses these elements to construct a query. When the finder method that uses these elements executes, the values of these elements are used to execute a query in the database. The objects from the JDOQL query result set are converted into primary key instances to be returned by the EJB 1.1 `ejbFind` method.
 
-NOTE: `The JDO specification, http://jcp.org/en/jsr/detail?id=12[JSR 12] (`http://jcp.org/en/jsr/detail?id=12`), provides a comprehensive description of JDOQL.
+NOTE: `The JDO specification, http://jcp.org/en/jsr/detail?id=12[JSR 12^] (`http://jcp.org/en/jsr/detail?id=12`), provides a comprehensive description of JDOQL.
 
 [[query-filter-expression]]
 === Query Filter Expression

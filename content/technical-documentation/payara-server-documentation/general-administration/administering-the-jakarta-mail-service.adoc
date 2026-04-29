@@ -16,7 +16,7 @@ NOTE: The API does not provide mail server functionality; you must have access t
 
 The Jakarta Mail API is implemented as an optional package in the Jakarta platform and is also available as part of the Jakarta EE platform.
 
-To learn more about the Jakarta Mail API, consult the https://jakarta.ee/specifications/mail/2.0/jakarta-mail-spec-2.0.html[Jakarta Mail specification].
+To learn more about the Jakarta Mail API, consult the https://jakarta.ee/specifications/mail/2.0/jakarta-mail-spec-2.0.html[Jakarta Mail specification^].
 
 [[administering-javamail-resources]]
 == Administering Jakarta Mail Resources

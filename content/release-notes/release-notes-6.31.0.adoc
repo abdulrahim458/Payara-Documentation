@@ -8,7 +8,7 @@
 
 == Improvements
 
-* [FISH-12205] [Community Contribution - https://github.com/lprimak[LPrimaK]] Add Cache Time To Live to Application Deployment Properties
+* [FISH-12205] [Community Contribution - https://github.com/lprimak[LPrimaK^]] Add Cache Time To Live to Application Deployment Properties
 
 == Bug Fixes
 

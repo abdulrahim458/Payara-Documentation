@@ -26,7 +26,7 @@ When an entity tries to access a protected resource, Payara Server uses the auth
 [[authentication-types]]
 ==== Authentication Types
 
-Within its deployment descriptors, an application can specify the type of authentication that it uses. The https://jakarta.ee/specifications/security/[Jakarta Security] API provides an alternative mechanism for configuring the type of authentication an application uses.
+Within its deployment descriptors, an application can specify the type of authentication that it uses. The https://jakarta.ee/specifications/security/[Jakarta Security^] API provides an alternative mechanism for configuring the type of authentication an application uses.
 
 Payara Server supports specifying the following types of authentication in deployment descriptors:
 

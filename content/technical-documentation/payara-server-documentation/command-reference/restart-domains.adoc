@@ -78,7 +78,7 @@ Command restart-domains executed successfully.
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc#stop-domain[`stop-domain`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-domains.adoc#stop-domains[`stop-domains`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-all-domains.adoc#stop-all-domains[`stop-all-domains`]
-* https://docs.oracle.com/javase/8/docs/technotes/guides/jpda/index.html/[Java Platform Debugger Architecture (JPDA)]
+* https://docs.oracle.com/javase/8/docs/technotes/guides/jpda/index.html/[Java Platform Debugger Architecture (JPDA)^]
 (`https://docs.oracle.com/javase/8/docs/technotes/guides/jpda/index.html/)
 
 

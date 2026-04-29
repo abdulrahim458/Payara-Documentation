@@ -86,6 +86,6 @@ Transaction recovered.
 * xref:technical-documentation/payara-server-documentation/command-reference/rollback-transaction.adoc#rollback-transaction[`rollback-transaction`],
 * xref:technical-documentation/payara-server-documentation/command-reference/unfreeze-transaction-service.adoc#unfreeze-transaction-service[`unfreeze-transaction-service`]
 * xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in Payara Server General Administration section,
-* https://jakarta.ee/specifications/transactions/2.0/jakarta-transactions-spec-2.0.html[Transactions]
+* https://jakarta.ee/specifications/transactions/2.0/jakarta-transactions-spec-2.0.html[Transactions^]
 
 

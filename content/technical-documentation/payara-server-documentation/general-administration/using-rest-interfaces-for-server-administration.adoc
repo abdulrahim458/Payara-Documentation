@@ -7,7 +7,7 @@ You can access the Payara Server REST interfaces through client applications suc
 
 * Web browsers
 * REST API Clients
-* http://curl.haxx.se/[cURL^]
+* http://curl.haxx.se/[cURL^^]
 
 It allows execution of administration commands in a similar way as the `asadmin` utility, such as:
 
@@ -1083,7 +1083,7 @@ Each method and its parameters are presented as a field of the appropriate type 
 
 The Payara Server REST interfaces represent resources for monitoring data in the following formats:
 
-* http://www.json.org/[JSON]
+* http://www.json.org/[JSON^]
 * XML
 * HTML
 
@@ -1638,9 +1638,9 @@ This example shows the XML representation of the resource for log file details. 
 
 The Payara Server REST interfaces support the following types in the content-type header of a client request:
 
-* http://www.json.org/[JSON]
+* http://www.json.org/[JSON^]
 * XML
-* http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1[Form URL encoded]
+* http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.1[Form URL encoded^]
 
 How to specify the type in the content-type header depends on how you are sending the request. For example, if you are using the cURL utility, specify the type through the `-H` option as follows:
 

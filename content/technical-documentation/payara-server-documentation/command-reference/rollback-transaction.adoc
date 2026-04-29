@@ -78,6 +78,6 @@ Command rollback-transaction executed succeessfully
 * xref:technical-documentation/payara-server-documentation/command-reference/recover-transactions.adoc#recover-transactions[`recover-transactions`],
 * xref:technical-documentation/payara-server-documentation/command-reference/unfreeze-transaction-service.adoc#unfreeze-transaction-service[`unfreeze-transaction-service`],
 * "xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in the Payara Server General Administration section
-* "https://jakarta.ee/specifications/transactions/[Transactions]" in The Jakarta EE Specifications
+* "https://jakarta.ee/specifications/transactions/[Transactions^]" in The Jakarta EE Specifications
 
 

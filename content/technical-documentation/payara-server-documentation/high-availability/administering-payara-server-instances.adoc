@@ -1513,7 +1513,7 @@ For instructions, see xref:technical-documentation/payara-server-documentation/h
 *See Also*
 
 * xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online]
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1touch-1[`touch`(1)]
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1touch-1[`touch`(1)^]
 
 [[to-resynchronize-additional-configuration-files]]
 === To Resynchronize Additional Configuration Files

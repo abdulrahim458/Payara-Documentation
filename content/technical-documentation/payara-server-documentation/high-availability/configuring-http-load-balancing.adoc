@@ -32,7 +32,7 @@ You can also create `jk-connectors` under different virtual-servers using the `j
 [[to-configure-the-mod_jk-connector-module]]
 ==== To Configure the `mod_jk` Connector Module
 
-. Install https://httpd.apache.org/docs/[Apache HTTP Server] and http://tomcat.apache.org/connectors-doc/webserver_howto/apache.html[mod_jk].
+. Install https://httpd.apache.org/docs/[Apache HTTP Server^] and http://tomcat.apache.org/connectors-doc/webserver_howto/apache.html[mod_jk^].
 
 . Configure `workers.properties` and `httpd.conf`. For example:
 +
@@ -144,7 +144,7 @@ To enable the `mod_proxy_ajp` module in Payara Server, set the Payara Server `jk
 [[to-configure-the-mod_proxy_ajp-connector-module]]
 ==== To Configure the `mod_proxy_ajp` Connector Module
 
-. Install https://httpd.apache.org/docs/[Apache HTTP Server].
+. Install https://httpd.apache.org/docs/[Apache HTTP Server^].
 . Configure the `httpd.conf` configuration file. For example:
 +
 [source, text]

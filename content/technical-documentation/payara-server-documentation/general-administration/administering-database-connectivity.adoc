@@ -116,7 +116,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 [[h2-documentation]]
 === H2 Database documentation
 
-For further details on how to configure the embedded H2 database you can visit the following: https://www.h2database.com/html/quickstart.html[H2 Database Documentation].
+For further details on how to configure the embedded H2 database you can visit the following: https://www.h2database.com/html/quickstart.html[H2 Database Documentation^].
 
 [[configuring-access-to-the-database]]
 == Configuring Access to the Database

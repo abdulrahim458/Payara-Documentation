@@ -2,7 +2,7 @@
 
 Payara Platform {page-version} provides MicroProfile Telemetry  {mpTelemetryVersion}.
 
-The aim of the spec is to adopt https://opentelemetry.io[OpenTelemetry] into MicroProfile applications, so they can benefit from distributed tracing.
+The aim of the spec is to adopt https://opentelemetry.io[OpenTelemetry^] into MicroProfile applications, so they can benefit from distributed tracing.
 
 OpenTelemetry thus becomes the primary observability API in Payara Platform.
 

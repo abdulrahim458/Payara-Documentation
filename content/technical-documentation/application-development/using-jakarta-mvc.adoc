@@ -299,4 +299,4 @@ This way, the view has access to the model without explicitly using the `Models`
 [[see-also]]
 == See Also
 
-* link:https://jakarta.ee/specifications/mvc/2.1/[Jakarta MVC Specification]
+* link:https://jakarta.ee/specifications/mvc/2.1/[Jakarta MVC Specification^]

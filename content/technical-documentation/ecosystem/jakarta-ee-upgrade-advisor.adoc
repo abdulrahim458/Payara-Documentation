@@ -10,7 +10,7 @@ The purpose of the tool is to summarize all changes that affect your application
 
 As with any other Maven plugins, the upgrade advisor can be run directly from the command line without any extra configuration required.
 
-TIP: The tool is freely available in https://mvnrepository.com/artifact/fish.payara.advisor/advisor-maven-plugin[Maven Central].
+TIP: The tool is freely available in https://mvnrepository.com/artifact/fish.payara.advisor/advisor-maven-plugin[Maven Central^].
 
 To run the upgrade advisor, you must go to the root of your project folder and execute the following command:
 
@@ -137,7 +137,7 @@ public class JsonBeanTest {
 }
 ----
 
-In Jakarta EE 10 the https://jakarta.ee/specifications/jsonb/3.0/[Jakarta JSON Binding 3.0] API's `@JsonbProperty` annotation was modified: Its `nillable` attribute has been marked as deprecated.
+In Jakarta EE 10 the https://jakarta.ee/specifications/jsonb/3.0/[Jakarta JSON Binding 3.0^] API's `@JsonbProperty` annotation was modified: Its `nillable` attribute has been marked as deprecated.
 
 The upgrade advisor will report it as such when analysing this code snippet and will present advice in what to do regarding this change:
 

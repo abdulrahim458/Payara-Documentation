@@ -201,7 +201,7 @@ docker run -p 8080:8080 nexus.payara.fish:5000/payara/server-full:{page-version}
 
 If preboot command files are not enough, you can add your customized shell scripts to the `${SCRIPT_DIR}/init.d` directory. This will allow you to modify the environment before the Payara Server domain starts.
 
-Scripts added to this folder should be link:https://www.gnu.org/software/bash/[Bash] scripts and they should end with the `.sh` suffix.
+Scripts added to this folder should be link:https://www.gnu.org/software/bash/[Bash^] scripts and they should end with the `.sh` suffix.
 
 TIP: Scripts in `${SCRIPT_DIR}/init.d` will be executed in the standard file order. If you need to start them in a specific order, we recommend prepending a prefix number to their name, for example, `01_script1.sh`, `02_script2.sh`, and so on.
 
@@ -210,7 +210,7 @@ As with the preboot command file, you may either create a custom Docker image th
 [[default-entrypoint]]
 === The Default Docker Entrypoint
 
-The default entry point of the Docker image is defined using the https://github.com/krallin/tini[tini utility], to allow the DAS's JVM to run as a single child process.
+The default entry point of the Docker image is defined using the https://github.com/krallin/tini[tini utility^], to allow the DAS's JVM to run as a single child process.
 
 The default `CMD` argument for _tini_ runs the `bin/entrypoint.sh` shell script in `exec` mode, which in turn runs the following scripts in order:
 

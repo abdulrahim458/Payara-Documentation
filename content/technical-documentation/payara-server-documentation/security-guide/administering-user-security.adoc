@@ -6,7 +6,7 @@ This chapter provides instructions for administering user security in the Payara
 Instructions for accomplishing these tasks by using the Administration Console are contained in the Administration Console online help.
 
 NOTE: Jakarta Security defines the concept of an Identity Store, and an SPI interface for writing providers that can authenticate users against Identity Stores. It also provides multiple built-in providers +
-See https://eclipse-ee4j.github.io/jakartaee-tutorial/#working-with-identity-stores[Working with Identity Stores] in The Jakarta EE Tutorial for more information about Identity Stores.
+See https://eclipse-ee4j.github.io/jakartaee-tutorial/#working-with-identity-stores[Working with Identity Stores^] in The Jakarta EE Tutorial for more information about Identity Stores.
 
 [[administering-security-realms]]
 == Administering Security Realms

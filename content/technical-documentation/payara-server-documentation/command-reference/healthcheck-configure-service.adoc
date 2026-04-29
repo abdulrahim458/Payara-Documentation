@@ -85,7 +85,7 @@ Defaults to `5`. The amount of time units that the service will use to periodica
 *`--unit`*:
 Defaults to `MINUTES`. The time unit to set the frequency of the metric monitoring.
 +
-NOTE: Must correspond to a valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[`java.util.concurrent.TimeUnit`]
+NOTE: Must correspond to a valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[`java.util.concurrent.TimeUnit`^]
 
 [[examples]]
 == Examples

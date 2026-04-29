@@ -49,7 +49,7 @@ This subcommand is supported in local mode. However, to synchronize the instance
 *`--node`*:
   Specifies the node on which the instance resides. This option may be omitted only if the directory that the `--nodedir` option specifies contains only one node directory. Otherwise, this option is required.
 *`--debug`*:
-  Specifies whether the instance is restarted with http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java Platform Debugger Architecture (JPDA)]
+  Specifies whether the instance is restarted with http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java Platform Debugger Architecture (JPDA)^]
   (http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html) debugging enabled. +
   Possible values are as follows: +
   `true`;;
@@ -112,6 +112,6 @@ Command restart-local-instance executed successfully.
 * xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc#start-local-instance[`start-local-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc#stop-instance[`stop-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc#stop-local-instance[`stop-local-instance`]
-* http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java Platform Debugger Architecture (JPDA)] (http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html)
+* http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java Platform Debugger Architecture (JPDA)^] (http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html)
 
 

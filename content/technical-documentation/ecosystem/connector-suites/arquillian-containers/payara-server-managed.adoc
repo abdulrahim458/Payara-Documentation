@@ -9,7 +9,7 @@ NOTE: As a requirement, the adapter will need to use a local installation of Pay
 [[usage]]
 == Usage
 
-The Payara Server Managed Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-managed[Maven Central], and can be included in your project using the following Maven GAV coordinates:
+The Payara Server Managed Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-managed[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
 
 [source,XML]
 ----
@@ -23,7 +23,7 @@ The Payara Server Managed Arquillian container adapter can be found on link:http
 [[configuration]]
 == Container Configuration
 
-The Payara Server container can be configured via the `arquillian.xml` file using the standard http://arquillian.org/arquillian-core/#container-configuration[Arquillian Container Configuration] mechanism.
+The Payara Server container can be configured via the `arquillian.xml` file using the standard http://arquillian.org/arquillian-core/#container-configuration[Arquillian Container Configuration^] mechanism.
 
 The following configuration options are mandatory:
 
@@ -197,7 +197,7 @@ This is how you can do it with the maven `surefire` plugin (`my.admin.password` 
 
 You can configure your Maven project to automatically download and install the Payara Server version required by the container adapter.
 
-To set up this installation, you can use the link:https://maven.apache.org/plugins/maven-dependency-plugin/usage.html[Maven Dependency Plugin] (specifically the `unpack` goal) as follows:
+To set up this installation, you can use the link:https://maven.apache.org/plugins/maven-dependency-plugin/usage.html[Maven Dependency Plugin^] (specifically the `unpack` goal) as follows:
 
 .Example - Dependency plugin configuration in the project's POM file
 [source,xml]

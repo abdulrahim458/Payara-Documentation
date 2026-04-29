@@ -26,7 +26,7 @@ You can specify the minimum and maximum number of threads that are reserved for 
 
 The thread pool `thread-pool-1` starts with a minimum size of *2* instead of *1* (like in previous versions)
 
-This includes the benefit of allowing users to execute tasks concurrently using the `ManagedExecutorService` and `ManagedScheduledExecutorService` components included with Java EE Concurrency Utilities (link:https://github.com/opentracing/specification/blob/master/specification.md[JSR-236]).
+This includes the benefit of allowing users to execute tasks concurrently using the `ManagedExecutorService` and `ManagedScheduledExecutorService` components included with Java EE Concurrency Utilities (link:https://github.com/opentracing/specification/blob/master/specification.md[JSR-236^]).
 Without this change, new tasks submitted to these service components would just have been queued in a linear fashion.
 
 NOTE: This minor optimization is configured on the default domain template (so all newly created domains inherit it).

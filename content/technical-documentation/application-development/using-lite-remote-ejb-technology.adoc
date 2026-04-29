@@ -3,7 +3,7 @@
 
 For scenarios when communication with remote EJBs is needed across a complex network topology or when a server architecture is deployed on a cloud provider, there's a new feature for the EJB server and client applications: A lite and thin client that can be used to communicate via HTTP(S) instead of IIOP-RMI.
 
-Payara Server has support for classic remote EJB since its inception. Classic remote EJB uses the **IIOP-RMI** (Internet Inter-ORB Protocol Remote Method Invocation) protocol for transport communication and the https://omg.org/spec/SEC[CSIv2] (Common Secure Interoperability Protocol Version 2) protocol for security.
+Payara Server has support for classic remote EJB since its inception. Classic remote EJB uses the **IIOP-RMI** (Internet Inter-ORB Protocol Remote Method Invocation) protocol for transport communication and the https://omg.org/spec/SEC[CSIv2^] (Common Secure Interoperability Protocol Version 2) protocol for security.
 
 While feature rich, these protocols were not designed with firewalls, NAT, (private) clouds, Docker and generally the Internet in mind. For these environments the requirements of the protocol, such as establishing independent connections back from the server to the client, are too troublesome.
 
@@ -40,7 +40,7 @@ Client applications that wish to use HTTP(S) as the transport protocol when call
 </dependency>
 ----
 
-This artifact requires a patched version of the Jersey client which is pulled intransitive. This patched version is available within our https://nexus.payara.fish/repository/payara-artifacts[Payara Nexus Repository].
+This artifact requires a patched version of the Jersey client which is pulled intransitive. This patched version is available within our https://nexus.payara.fish/repository/payara-artifacts[Payara Nexus Repository^].
 The Maven repository definition is present in the pom.xml file of the `ejb-http-client` artifact. However, when your dependencies are managed by a private artifact repository, for example, you might need to update it to refer to the Payara Nexus repository.
 
 Also, we recommend having a look at the BOM feature so that versions can be defined more consistently.
@@ -290,7 +290,7 @@ public class Application{
 }
 ----
 
-See link:https://javadoc.io/doc/fish.payara.extras/ejb-http-client[API documentation] of the client library for detailed description of `ClientAdapterCustomizer` methods and contracts of `CompositeClientAdapter`.
+See link:https://javadoc.io/doc/fish.payara.extras/ejb-http-client[API documentation^] of the client library for detailed description of `ClientAdapterCustomizer` methods and contracts of `CompositeClientAdapter`.
 
 [[known-limitations]]
 == Known Limitations
@@ -298,7 +298,7 @@ See link:https://javadoc.io/doc/fish.payara.extras/ejb-http-client[API documenta
 [[serialization-limitations]]
 === Serialization Limitations
 
-The HTTP adapter utilizes http://json-b.net/[JSON-B] for serialization. This places limits on types of objects that can be transmitted as method arguments or return types. The serialization can be customized by means of JSON-B annotations.
+The HTTP adapter utilizes http://json-b.net/[JSON-B^] for serialization. This places limits on types of objects that can be transmitted as method arguments or return types. The serialization can be customized by means of JSON-B annotations.
 
 . By default, only public properties and fields are transferred
 . Complex object graphs should form a tree and not contain cyclic references

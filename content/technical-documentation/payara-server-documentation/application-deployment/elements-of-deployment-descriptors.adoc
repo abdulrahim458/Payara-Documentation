@@ -1958,7 +1958,7 @@ To set the `Secure` attribute of a `JSESSIONIDSSO` cookie, use the `ssoCookieSec
 For details, see xref:technical-documentation/payara-server-documentation/command-reference/create-virtual-server.adoc[`create-virtual-server`].
 
 |`cookieHttpOnly` |none |Specifies that the cookie is marked HTTP only. Allowed values are `true` or `false`.
-|`cookieSameSite` |none |Users can set up the link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value[`SameSite`] Cookie attribute for the corresponding web application. Can be one of `Strict`, `Lax` or `None`. For example:
+|`cookieSameSite` |none |Users can set up the link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value[`SameSite`^] Cookie attribute for the corresponding web application. Can be one of `Strict`, `Lax` or `None`. For example:
 
 [source, xml]
 ----
@@ -4876,7 +4876,7 @@ public class Component{
 }
 ----
 
-For more information about Jakarta Mail properties, see link:https://jakarta.ee/specifications/mail[Jakarta Mail API Documentation] (`https://jakarta.ee/specifications/mail`).
+For more information about Jakarta Mail properties, see link:https://jakarta.ee/specifications/mail[Jakarta Mail API Documentation^] (`https://jakarta.ee/specifications/mail`).
 
 [[manager-properties]]
 == `manager-properties`

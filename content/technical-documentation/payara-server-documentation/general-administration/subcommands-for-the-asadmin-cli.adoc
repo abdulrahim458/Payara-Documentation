@@ -1,7 +1,7 @@
 == Subcommands for the `asadmin` Utility
 :ordinal: 24
 
-For information and instructions on using the `asadmin` application deployment subcommands, see https://docs.payara.fish/community/docs/documentation/payara-server/app-deployment/app-deployment.html[Application Deployment]
+For information and instructions on using the `asadmin` application deployment subcommands, see https://docs.payara.fish/community/docs/documentation/payara-server/app-deployment/app-deployment.html[Application Deployment^]
 
 NOTE: Online help for the `asadmin` subcommands can be invoked on the command line, for example, `asadmin create-domain`  `--help`.
 

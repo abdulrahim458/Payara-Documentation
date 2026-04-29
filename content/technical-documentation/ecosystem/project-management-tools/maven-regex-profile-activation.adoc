@@ -17,7 +17,7 @@ The Regex Profile Activator Maven Extension can be found on Maven Central and ca
 </dependency>
 ----
 
-You can find the latest artifact version https://mvnrepository.com/artifact/fish.payara.maven.extensions/regex-profile-activator[from here].
+You can find the latest artifact version https://mvnrepository.com/artifact/fish.payara.maven.extensions/regex-profile-activator[from here^].
 
 [[example]]
 == Example

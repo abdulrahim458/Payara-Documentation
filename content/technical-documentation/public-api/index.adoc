@@ -2,7 +2,7 @@
 
 This page contains information on using the Public API integrated within Payara Server and Payara Micro.
 
-TIP: See the http://javadoc.io/doc/fish.payara.api/payara-api[Payara API Javadoc] for the complete public Payara API reference. 
+TIP: See the http://javadoc.io/doc/fish.payara.api/payara-api[Payara API Javadoc^] for the complete public Payara API reference. 
 
 [[use-cases]]
 == Use Cases

@@ -20,9 +20,9 @@
 
 * [FISH-8522] MicroProfile /metrics endpoint contains multiple HELP lines for the same metric name
 
-* [FISH-9748] [Community Contribution - https://github.com/lprimak[lprimak]] Fix High Availability Session Race Condition
+* [FISH-9748] [Community Contribution - https://github.com/lprimak[lprimak^]] Fix High Availability Session Race Condition
 
-* [FISH-9803] [Community Contribution - https://github.com/adLuk[adLuk]] Fix NullPointerException in WebServiceTesterServlet
+* [FISH-9803] [Community Contribution - https://github.com/adLuk[adLuk^]] Fix NullPointerException in WebServiceTesterServlet
 
 * [FISH-10072] Prevent endless loop whan FacesServlet is mapped to /
 

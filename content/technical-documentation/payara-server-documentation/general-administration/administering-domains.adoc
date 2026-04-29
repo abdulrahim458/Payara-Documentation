@@ -169,7 +169,7 @@ Each token is identified as `token-name` where token-name is one of the followin
   * The value of the `http.ssl.port` property
 *`JAVA_DEBUGGER_PORT`*:
   Represents the port number of the port that is used for connections to the
-  http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/architecture.html[Java Platform Debugger Architecture (JPDA)] debugger. This token is
+  http://docs.oracle.com/javase/8/docs/technotes/guides/jpda/architecture.html[Java Platform Debugger Architecture (JPDA)^] debugger. This token is
   replaced with one of the following values in the command to create a domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
   * The value of the `java.debugger.port` property
@@ -200,7 +200,7 @@ Each token is identified as `token-name` where token-name is one of the followin
   * The value of the `orb.ssl.port` property
 *`OSGI_SHELL_TELNET_PORT`*:
   Represents the port number of the port that is used for connections to the
-  http://felix.apache.org/documentation/subprojects/apache-felix-remote-shell.html[Apache Felix Remote Shell] . This shell uses the Felix shell service to
+  http://felix.apache.org/documentation/subprojects/apache-felix-remote-shell.html[Apache Felix Remote Shell^] . This shell uses the Felix shell service to
   interact with the OSGi module management subsystem. This token is replaced with one of the following values in the command to create a
   domain from the template: +
   * A value that the `create-domain` subcommand calculates from the value of the `--portbase` option
@@ -614,12 +614,12 @@ After you create and enable the SMF service, if the domain or instance is stoppe
 *Before You Begin*
 
 To run the `create-service` subcommand, you must have `solaris.smf.*` authorization. For information about how to set the authorizations, see
-the http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Museradd-1m[`useradd] man page and the
-http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Musermod-1m[`usermod`] man page. You must also have write permission in the directory tree:
+the http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Museradd-1m[`useradd^] man page and the
+http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Musermod-1m[`usermod`^] man page. You must also have write permission in the directory tree:
 `/var/svc/manifest/application/SUNWappserver`. Usually, the superuser has both of these permissions. Additionally, Oracle Solaris
-administration commands such as http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Msvccfg-1m[`svccfg`],
-http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1svcs-1[`svcs`], and
-http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1auths-1[`auths`] must be available in the PATH.
+administration commands such as http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Msvccfg-1m[`svccfg`^],
+http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1svcs-1[`svcs`^], and
+http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1auths-1[`auths`^] must be available in the PATH.
 
 If a particular Payara Server domain or instance should not have default user privileges, modify the manifest of the service and reimport the service.
 
@@ -659,16 +659,16 @@ Command create-service executed successfully
 
 For information about administering the service, see the following Oracle Solaris documentation:
 
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=SYSADV1hbrunlevels-25516[Managing Services (Overview)] in System Administration Guide: Basic Administration
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=SYSADV1faauf[Managing Services (Tasks)] in System Administration Guide: Basic Administration
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1auths-1[`auths`]
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1svcs-1[`svcs`]
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Msvcadm-1m[`svcadm`]
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Msvccfg-1m[`svccfg`]
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Museradd-1m[`useradd`]
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Musermod-1m[`usermod`]
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5rbac-5[`rbac`]
-* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5smf-security-5[`smf_security`]
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=SYSADV1hbrunlevels-25516[Managing Services (Overview)^] in System Administration Guide: Basic Administration
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=SYSADV1faauf[Managing Services (Tasks)^] in System Administration Guide: Basic Administration
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1auths-1[`auths`^]
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1svcs-1[`svcs`^]
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Msvcadm-1m[`svcadm`^]
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Msvccfg-1m[`svccfg`^]
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Museradd-1m[`useradd`^]
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Musermod-1m[`usermod`^]
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5rbac-5[`rbac`^]
+* http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5smf-security-5[`smf_security`^]
 
 [[to-prevent-service-shutdown-when-a-user-logs-out-on-windows]]
 === To Prevent Service Shutdown When a User Logs Out on Windows

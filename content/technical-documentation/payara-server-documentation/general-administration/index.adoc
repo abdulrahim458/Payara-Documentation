@@ -428,9 +428,9 @@ Payara Server provides representational state transfer (REST) interfaces to enab
 [[osgi-module-management-subsystem]]
 === OSGi Module Management Subsystem
 
-The OSGi module management subsystem that is provided with Payara Server is the http://felix.apache.org/[Apache Felix OSGi framework] .
+The OSGi module management subsystem that is provided with Payara Server is the http://felix.apache.org/[Apache Felix OSGi framework^] .
 
-To administer this framework, use either the http://felix.apache.org/documentation/subprojects/apache-felix-remote-shell.html[Apache Felix Gogo] remote shell. This shell is provided with Payara Server. The shell uses the Felix Gogo shell-service to interact with the OSGi module management subsystem.
+To administer this framework, use either the http://felix.apache.org/documentation/subprojects/apache-felix-remote-shell.html[Apache Felix Gogo^] remote shell. This shell is provided with Payara Server. The shell uses the Felix Gogo shell-service to interact with the OSGi module management subsystem.
 
 This tool allows you to perform administrative tasks on OSGi bundles such as:
 
@@ -665,5 +665,5 @@ See xref:technical-documentation/payara-server-documentation/command-reference/l
 === See Also
 
 * xref:/technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/command-line-options/disable-phone-home.adoc[Disable PhoneHome in Payara Micro]
-* https://github.com/payara/Payara/blob/master/nucleus/payara-modules/phonehome-bootstrap/src/main/java/fish/payara/nucleus/phonehome/PhoneHomeTask.java[Phone Home Source Code]
+* https://github.com/payara/Payara/blob/master/nucleus/payara-modules/phonehome-bootstrap/src/main/java/fish/payara/nucleus/phonehome/PhoneHomeTask.java[Phone Home Source Code^]
 

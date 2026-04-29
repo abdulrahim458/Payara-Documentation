@@ -21,7 +21,7 @@ The artifacts can be found in `/fish/payara/cloud/connectors`.
 
 Cloud Connectors can be built from source as follows:
 
-Clone the https://github.com/payara/Cloud-Connectors[Cloud-Connectors] git repository:
+Clone the https://github.com/payara/Cloud-Connectors[Cloud-Connectors^] git repository:
 
 [source, shell]
 ----

@@ -161,4 +161,4 @@ The Payara Platform supports cache definitions and operations on caches by using
 [[see-also]]
 == See Also
 
-* https://javadoc.io/doc/javax.cache/cache-api/latest/index.html[JCache API Javadoc]
+* https://javadoc.io/doc/javax.cache/cache-api/latest/index.html[JCache API Javadoc^]

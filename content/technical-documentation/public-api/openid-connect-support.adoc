@@ -29,7 +29,7 @@ public class SecurityBean {
 }
 ----
 
-See https://github.com/javaee-samples/vendoree-samples/tree/master/payara/openid[this sample project] for a more detailed example.
+See https://github.com/javaee-samples/vendoree-samples/tree/master/payara/openid[this sample project^] for a more detailed example.
 
 When defining a OpenID Connect flow within an application deployed on Payara Server, it is possible to retrieve the access token, identity token, user claims and the other authentication information within any bean in the scope of the callback/redirectURI resource used to configure the authentication:
 
@@ -293,7 +293,7 @@ By default, the same configuration of the OpenID connector is applied for the wh
 
 This is useful in a multi-tenant scenario to define a different configuration for each tenant. It's also useful if the user should be able to select which provider they want to use to authenticate.
 
-To enable re-evaluation of the configuration for each user session, set the MicroProfile Configuration property `payara.security.openid.sessionScopedConfiguration` to `true`. To specify it directly in the application, you can place it in the link:https://download.eclipse.org/microprofile/microprofile-config-1.4/microprofile-config-spec.html#default_configsources[microprofile-config.properties] file in the `META-INF` directory on the classpath (in a WAR application it could be in `WEB-INF/classes/META-INF`).
+To enable re-evaluation of the configuration for each user session, set the MicroProfile Configuration property `payara.security.openid.sessionScopedConfiguration` to `true`. To specify it directly in the application, you can place it in the link:https://download.eclipse.org/microprofile/microprofile-config-1.4/microprofile-config-spec.html#default_configsources[microprofile-config.properties^] file in the `META-INF` directory on the classpath (in a WAR application it could be in `WEB-INF/classes/META-INF`).
 
 With this enabled, it's possible to use EL expressions to dynamically adjust the configuration before each authentication attempt, e.g. based on any information in the incoming HTTP request. The information about the HTTP request can be retrieved from a `HttpServletRequest` object injected using `@Inject`.
 
@@ -462,7 +462,7 @@ It's also possible to specify all values by using MicroProfile Config properties
 
 TIP: The order of evaluation is: MicroProfile Config ->  `@OpenIdProviderMetadata` -> automatic configuration on `providerURI` address.
 
-When these values, which correspond to lists (e.g. `scopesSupported`, `responseTypesSupported`), are loaded from MicroProfile Config, they are separated by a comma, following link:https://download.eclipse.org/microprofile/microprofile-config-2.0/microprofile-config-spec-2.0.html#_array_converters[MicroProfile Config Array conventions].
+When these values, which correspond to lists (e.g. `scopesSupported`, `responseTypesSupported`), are loaded from MicroProfile Config, they are separated by a comma, following link:https://download.eclipse.org/microprofile/microprofile-config-2.0/microprofile-config-spec-2.0.html#_array_converters[MicroProfile Config Array conventions^].
 
 .Provider Metadata Options
 |===
@@ -624,14 +624,14 @@ public class SecurityBean {
 [[bearer-auth]]
 == Bearer Authentication and Authorization
 
-In order to authenticate and authorize calls between services using the OpenID mechanism, it is possible to use authorization compatible with link:https://datatracker.ietf.org/doc/html/rfc6750[RFC 6750].
+In order to authenticate and authorize calls between services using the OpenID mechanism, it is possible to use authorization compatible with link:https://datatracker.ietf.org/doc/html/rfc6750[RFC 6750^].
 
 In this case, the access token presented to the resource service is an JWT token that is used to verify that the caller has access to OAuth2 protected resources.
 
 [[obtaining-token]]
 === Obtaining JWT Token
 
-Obtaining the token is specific to the OAuth provider and the application. The usual approach is using link:https://datatracker.ietf.org/doc/html/rfc6749#section-4.4[Client Credentials Grant], where an application posts its clientId and secret to identity provider and receives access and refresh tokens in return.
+Obtaining the token is specific to the OAuth provider and the application. The usual approach is using link:https://datatracker.ietf.org/doc/html/rfc6749#section-4.4[Client Credentials Grant^], where an application posts its clientId and secret to identity provider and receives access and refresh tokens in return.
 
 [[passing-token]]
 === Passing Token To The Resource Service
@@ -650,7 +650,7 @@ When the `Bearer` authorization header is present in the request, the provided t
 
 NOTE: Compared to the normal browser flow, no groups are automatically assigned to the identity. The reason for this is that machine-to-machine communication tends to be much more fine-grained and services might want to check more claims, such as `audience`.
 
-The resource service is required to map the information in the JWT token to groups utilizing the `https://jakarta.ee/specifications/platform/10/apidocs/jakarta/security/enterprise/identitystore/identitystore[IdentityStore]` interface. The OpenID connector provides the following classes to make this process possible:
+The resource service is required to map the information in the JWT token to groups utilizing the `https://jakarta.ee/specifications/platform/10/apidocs/jakarta/security/enterprise/identitystore/identitystore[IdentityStore^]` interface. The OpenID connector provides the following classes to make this process possible:
 
 *`AccessTokenCallerPrincipal`*: Caller principal subclass that contains access to all claims of passed JWT token
 *`BearerGroupIdentityStore`*: A convenience base implementation of the necessary Jakarta EE security identity store.
@@ -790,7 +790,7 @@ Keycloak is an Open Source Identity and Access Management Server, which is a OAu
 
 the basic steps are described to set up a Keycloak OpenId provider:
 
-. Refer to the Keycloak https://www.keycloak.org/docs/latest/getting_started/index.html[getting started documentation] to run and setup Keycloak.
+. Refer to the Keycloak https://www.keycloak.org/docs/latest/getting_started/index.html[getting started documentation^] to run and setup Keycloak.
 
 . After Keycloak setup done, login to Keycloak admin console and add the new realm by pressing the **Add Realm** button:
 +
@@ -878,7 +878,7 @@ public class SecurityBean {
 [[see-also]]
 == See Also
 
-* http://openid.net/specs/openid-connect-core-1_0.html[OpenID Connect Core]
-* https://www.keycloak.org/documentation.html[KeyCloak Documentation]
-* https://jakarta.ee/specifications/security/[Jakarta Security API]
+* http://openid.net/specs/openid-connect-core-1_0.html[OpenID Connect Core^]
+* https://www.keycloak.org/documentation.html[KeyCloak Documentation^]
+* https://jakarta.ee/specifications/security/[Jakarta Security API^]
 * xref:technical-documentation/microprofile/jwt.adoc[MicroProfile JWT Authentication API]

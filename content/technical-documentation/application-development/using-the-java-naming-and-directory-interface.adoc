@@ -6,7 +6,7 @@ The JNDI API allows application components and clients to look up distributed re
 
 For general information about the JNDI API, see `http://www.oracle.com/technetwork/java/jndi/index.html`.
 
-IMPORTANT: Payara Server's Web Profile supports the EJB 4.0 Lite specification, which allows enterprise beans within web applications, among other features. The Full Profile supports the entire EJB 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans].
+IMPORTANT: Payara Server's Web Profile supports the EJB 4.0 Lite specification, which allows enterprise beans within web applications, among other features. The Full Profile supports the entire EJB 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans^].
 
 [[accessing-the-naming-context]]
 == Accessing the Naming Context
@@ -29,7 +29,7 @@ NOTE: This is true of existing EJB 3.0 and 2.x applications that are deployed to
 
 No code changes are required to the bean class itself in order to have the portable global JNDI name automatically assigned when deployed to an EJB container.
 
-For more information, see the Jakarta EE Platform Specification, section https://jakarta.ee/specifications/platform/10/jakarta-platform-spec-10.0.html#a616[5.2.2, "Application Component Environment Namespaces]", and the EJB 4.0 Specification, section https://jakarta.ee/specifications/enterprise-beans/4.0/jakarta-enterprise-beans-spec-core-4.0.html#a800[4.4. Access in the Global JNDI Namespace].
+For more information, see the Jakarta EE Platform Specification, section https://jakarta.ee/specifications/platform/10/jakarta-platform-spec-10.0.html#a616[5.2.2, "Application Component Environment Namespaces^]", and the EJB 4.0 Specification, section https://jakarta.ee/specifications/enterprise-beans/4.0/jakarta-enterprise-beans-spec-core-4.0.html#a800[4.4. Access in the Global JNDI Namespace^].
 
 NOTE: If the `disable-nonportable-jndi-names` property is set to `false` (the
 default), a Payara Server JNDI name is assigned in addition to a portable global JNDI name.
@@ -237,7 +237,7 @@ To create a custom resource that provides configuration properties to applicatio
 +
 The path can be absolute or relative to the installation directory. The file must be accessible to the operating system user running the Payara Server's process.
 +
-If an XML file is specified, it must match the document type definition (DTD) specified in the API definition of link:https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Properties.html[java.util.Properties].
+If an XML file is specified, it must match the document type definition (DTD) specified in the API definition of link:https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Properties.html[java.util.Properties^].
 
 * Create the desired properties directly as properties of the custom resource.
 +

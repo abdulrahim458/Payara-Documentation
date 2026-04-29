@@ -3,9 +3,9 @@
 
 This chapter describes how to write secure Jakarta EE applications, which contain components that perform user authentication and access authorization for the business logic of Jakarta EE components.
 
-For general information about Jakarta EE security, see link:https://eclipse-ee4j.github.io/jakartaee-tutorial/#security-2[Security] in The Jakarta EE Tutorial.
+For general information about Jakarta EE security, see link:https://eclipse-ee4j.github.io/jakartaee-tutorial/#security-2[Security^] in The Jakarta EE Tutorial.
 
-NOTE: Payara Server's Web Profile supports the EJB 4.0+ specification, which allows enterprise beans within web applications, among other features. The Full Profile supports the entire EJB 4.0+ specification. For details, see https://jakarta.ee/specifications/enterprise-beans[Jakarta Enterprise Beans].
+NOTE: Payara Server's Web Profile supports the EJB 4.0+ specification, which allows enterprise beans within web applications, among other features. The Full Profile supports the entire EJB 4.0+ specification. For details, see https://jakarta.ee/specifications/enterprise-beans[Jakarta Enterprise Beans^].
 
 [[security-goals]]
 == Security Goals
@@ -19,17 +19,17 @@ The goal of Payara Server is to provide highly secure, interoperable, and distri
 * Support for web services message security.
 * Security support for application clients.
 
-* Support for the https://jakarta.ee/specifications/authentication/[Jakarta Authentication API].
-* Support for the https://jakarta.ee/specifications/authorization/[Jakarta Authorization API].
-* Support for Web Services Interoperability Technologies (WSIT) as described in the https://javaee.github.io/metro/doc/user-guide/index.html[Metro Users Guide].
-* Support for the https://jakarta.ee/specifications/security/[Jakarta Security API]
+* Support for the https://jakarta.ee/specifications/authentication/[Jakarta Authentication API^].
+* Support for the https://jakarta.ee/specifications/authorization/[Jakarta Authorization API^].
+* Support for Web Services Interoperability Technologies (WSIT) as described in the https://javaee.github.io/metro/doc/user-guide/index.html[Metro Users Guide^].
+* Support for the https://jakarta.ee/specifications/security/[Jakarta Security API^]
 * Support for several underlying security realms, such as simple file, JDBC and Lightweight Directory Access Protocol (LDAP) configurable realms.
 +
 Certificate authentication is also supported for Secure Socket Layer (SSL) client authentication.
 +
 NOTE: For Solaris, OS platform authentication is supported in addition to these.
 * Support for declarative security through Payara Server specific XML-based role mapping.
-* Support for https://openid.net/connect/[OpenID Connect] compatible security features (such as OAuth2 and Yubikey).
+* Support for https://openid.net/connect/[OpenID Connect^] compatible security features (such as OAuth2 and Yubikey).
 
 [[payara-server-specific-security-features]]
 == Payara Server Specific Security Features
@@ -111,7 +111,7 @@ Payara Server supports these interfaces as specified in the Jakarta EE specifica
 
 There is also a proprietary Payara API for programmatic login. See xref:#programmatic-login-using-the-programmaticlogin-class[Programmatic Login Using the ProgrammaticLogin Class].
 
-For more information about programmatic security in web applications, see https://eclipse-ee4j.github.io/jakartaee-tutorial/#using-programmatic-security-with-web-applications[Using Programmatic Security with Web Applications] in the Jakarta EE Tutorial.
+For more information about programmatic security in web applications, see https://eclipse-ee4j.github.io/jakartaee-tutorial/#using-programmatic-security-with-web-applications[Using Programmatic Security with Web Applications^] in the Jakarta EE Tutorial.
 
 [[roles-principals-and-principal-to-role-mapping]]
 == Roles, Principals, and Principal to Role Mapping
@@ -698,11 +698,11 @@ For more information about web services, see xref:technical-documentation/applic
 
 For more information about message security, see the following:
 
-* https://eclipse-ee4j.github.io/jakartaee-tutorial/#introduction-to-security-in-the-jakarta-ee-platform[Introduction to Security in the Jakarta EE Platform] in The Jakarta EE Tutorial
-* https://jakarta.ee/specifications/authorization/[Jakarta Authorization]
-* The http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf[Oasis Web Services Security (WSS) specification]
-* The http://www.ws-i.org/Profiles/BasicSecurityProfile-1.0.html[Web Services Interoperability Organization (WS-I) Basic Security Profile (BSP) specification]
-* The Metro User's guide https://javaee.github.io/metro/doc/user-guide/ch12.html[WSIT Security documentation].
+* https://eclipse-ee4j.github.io/jakartaee-tutorial/#introduction-to-security-in-the-jakarta-ee-platform[Introduction to Security in the Jakarta EE Platform^] in The Jakarta EE Tutorial
+* https://jakarta.ee/specifications/authorization/[Jakarta Authorization^]
+* The http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf[Oasis Web Services Security (WSS) specification^]
+* The http://www.ws-i.org/Profiles/BasicSecurityProfile-1.0.html[Web Services Interoperability Organization (WS-I) Basic Security Profile (BSP) specification^]
+* The Metro User's guide https://javaee.github.io/metro/doc/user-guide/ch12.html[WSIT Security documentation^].
 
 [[message-security-providers]]
 === Message Security Providers
@@ -1276,7 +1276,7 @@ NOTE: When no parameter is specified, the standard rules of Jakarta Security are
 [[jakarta-authentication-support]]
 == Jakarta Authentication Support
 
-Jakarta Authentication is part of the Jakarta EE specification and defined by https://jakarta.ee/specifications/authentication[its own specification].
+Jakarta Authentication is part of the Jakarta EE specification and defined by https://jakarta.ee/specifications/authentication[its own specification^].
 
 Jakarta Authentication defines an interface for pluggable authorization providers. Specifically, it is used to plug in the Java policy provider used by the container to perform Jakarta EE caller access decisions. The Java policy provider performs Java policy decisions during application execution.
 
@@ -1837,7 +1837,7 @@ NOTE: Although the provider can be changed while the server is running, this can
 [[example]]
 === Example
 
-The example below uses an existing provider (https://bouncycastle.org/[Bouncy Castle]), to which a custom service is added programmatically. As suggested above, this is not the suggested way to do this since it is being changed dynamically. Rather, this example is here for an idea of how it _could_ be used.
+The example below uses an existing provider (https://bouncycastle.org/[Bouncy Castle^]), to which a custom service is added programmatically. As suggested above, this is not the suggested way to do this since it is being changed dynamically. Rather, this example is here for an idea of how it _could_ be used.
 
 [[custom-certificate-factory]]
 ==== Custom Certificate Factory
@@ -1860,9 +1860,9 @@ public class MyJCECertificateFactory extends CertificateFactory {
 }
 ----
 
-This factory is based on the link:https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/CertificateFactorySpi.html[CertificateFactory SPI] type, but instead of implementing it fully the Bouncy Castle's CertificateFactory is used.
+This factory is based on the link:https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/CertificateFactorySpi.html[CertificateFactory SPI^] type, but instead of implementing it fully the Bouncy Castle's CertificateFactory is used.
 
-The returned link:https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/Certificate.html[Certificate] is then wrapped in our own. A custom certificate type might then look as follows:
+The returned link:https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/cert/Certificate.html[Certificate^] is then wrapped in our own. A custom certificate type might then look as follows:
 
 .Custom Certificate Type
 [source, java]
@@ -1927,7 +1927,7 @@ public class BouncyServlet extends HttpServlet {
 
 The above code instantiates the bouncy castle provider, and registers the previous custom certificate factory with it. In this example you can see the type and algorithm being combined into the single key for registering our factory class.
 
-The modified provider is then inserted at provider position `1` (the first, there's no 0), using a static method of the link:https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/Security.html[Security] class.
+The modified provider is then inserted at provider position `1` (the first, there's no 0), using a static method of the link:https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/security/Security.html[Security^] class.
 
 After pinging this Servlet, and requesting another Servlet over HTTPS that's protected with the client-cert authentication mechanism, a principal with name `CN=lfoo,OU=bar,O=kaz,L=zak,ST=lak,C=UK` will be replaced at nearly the lowest level in the system with `CN=u1`, and the server runtime will only see this principal name. We can use this principal name for instance to map groups and roles to it:
 
@@ -1943,4 +1943,4 @@ After pinging this Servlet, and requesting another Servlet over HTTPS that's pro
 ----
 
 //TODO - Get an updated sample
-A fully working sample demonstrating exactly this can be found in the https://github.com/javaee-samples/javaee7-samples/tree/master/servlet/security-clientcert-jce[Java EE 7 samples repo].
+A fully working sample demonstrating exactly this can be found in the https://github.com/javaee-samples/javaee7-samples/tree/master/servlet/security-clientcert-jce[Java EE 7 samples repo^].

@@ -43,7 +43,7 @@ To use the newly installed application client container, you must do the followi
 [[attributes]]
 == Attributes
 
-See http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5attributes-5[`attributes`] for descriptions of the following attributes:
+See http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5attributes-5[`attributes`^] for descriptions of the following attributes:
 
 [width="100%",cols="50%,50%",options="header",]
 |===============================
