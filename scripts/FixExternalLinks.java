@@ -5,7 +5,10 @@
 //DESCRIPTION Converts:   https://example.com[Link Text]
 //DESCRIPTION To:         https://example.com[Link Text^]
 //DESCRIPTION
-//DESCRIPTION Skips content inside code/comment/literal blocks (delimited by 4+ repeated chars).
+//DESCRIPTION Features:
+//DESCRIPTION - Skips links that already have `^`
+//DESCRIPTION - Validates that no double `^^` exist after processing
+//DESCRIPTION - Skips content inside code/comment/literal blocks (delimited by 4+ repeated chars)
 //DESCRIPTION
 //DESCRIPTION Usage:
 //DESCRIPTION   jbang FixExternalLinks.java [content-dir]            # dry run, prints plan
@@ -31,6 +34,9 @@ public class FixExternalLinks {
     // The pattern captures the URL and link text, but excludes those already ending in ^]
     private static final Pattern EXTERNAL_LINK = Pattern.compile(
             "(https?://[^\\s\\[]+)\\[([^\\[\\]]+)\\](?!\\^)");
+
+    // Pattern to detect double carets (validation check)
+    private static final Pattern DOUBLE_CARET = Pattern.compile("\\^\\^");
 
     // 4+ of the same delimiter char used for AsciiDoc blocks
     private static final Pattern BLOCK_DELIM = Pattern.compile(
@@ -73,6 +79,40 @@ public class FixExternalLinks {
         System.out.printf("%nDone: %d external links %s in %d files.%n",
                 totalLinks, apply ? "updated" : "would update", totalFiles);
         if (!apply) System.out.println("Re-run with --apply to execute the changes.");
+
+        // Validate for double carets if changes were applied
+        if (apply) {
+            System.out.println("\nValidating for double carets (^^)...");
+            validateNoDoubleCarets(content, adocs);
+        }
+    }
+
+    static void validateNoDoubleCarets(Path root, List<Path> adocs) throws IOException {
+        int doubleCaretCount = 0;
+        int filesWithDoubleCaret = 0;
+
+        for (Path p : adocs) {
+            String content = Files.readString(p, StandardCharsets.UTF_8);
+            Matcher m = DOUBLE_CARET.matcher(content);
+
+            while (m.find()) {
+                doubleCaretCount++;
+            }
+
+            if (doubleCaretCount > 0) {
+                filesWithDoubleCaret++;
+                System.out.printf("⚠️  DOUBLE CARET FOUND: %s (%d occurrences)%n",
+                        root.relativize(p), doubleCaretCount);
+                doubleCaretCount = 0;
+            }
+        }
+
+        if (filesWithDoubleCaret == 0) {
+            System.out.println("✅ Validation passed: No double carets (^^) found.");
+        } else {
+            System.out.printf("⚠️  Validation failed: %d files contain double carets.%n", filesWithDoubleCaret);
+            System.exit(1);
+        }
     }
 
     static Result transform(String text) {
@@ -113,7 +153,7 @@ public class FixExternalLinks {
                 continue;
             }
 
-            // Process external links: add ^ before closing ]
+            // Process external links: add ^ before closing ] only if not already present
             String processed = line;
             Matcher m = EXTERNAL_LINK.matcher(processed);
             StringBuffer lineBuffer = new StringBuffer();
@@ -122,9 +162,14 @@ public class FixExternalLinks {
             while (m.find()) {
                 String url = m.group(1);
                 String linkText = m.group(2);
-                String replacement = url + "[" + linkText + "^]";
-                m.appendReplacement(lineBuffer, Matcher.quoteReplacement(replacement));
-                lineCount++;
+
+                // Double-check that the link doesn't already have ^ before the ]
+                // This is an extra safety measure in case the regex lookahead misses anything
+                if (!linkText.endsWith("^")) {
+                    String replacement = url + "[" + linkText + "^]";
+                    m.appendReplacement(lineBuffer, Matcher.quoteReplacement(replacement));
+                    lineCount++;
+                }
             }
             m.appendTail(lineBuffer);
             processed = lineBuffer.toString();

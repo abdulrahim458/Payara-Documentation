@@ -55,8 +55,8 @@ The following notifiers are available in Payara Server Enterprise:
 
 Payara Server is able to direct notifications to a single given email address. The notifier modules are available in these locations:
 
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-core/2.0-enterprise/email-notifier-core-2.0-enterprise.jar[Email Notifier Core 2.0-enterprise^^]
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-console-plugin/2.0-enterprise/email-notifier-console-plugin-2.0-enterprise.jar[Email Notifier Console Plugin 2.0-enterprise^^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-core/2.0-enterprise/email-notifier-core-2.0-enterprise.jar[Email Notifier Core 2.0-enterprise^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-console-plugin/2.0-enterprise/email-notifier-console-plugin-2.0-enterprise.jar[Email Notifier Console Plugin 2.0-enterprise^]
 
 To use this notifier the following requirements have to be met:
 
@@ -123,9 +123,9 @@ The **S**imple **N**etwork **M**anagement **P**rotocol is a standard Internet Pr
 
 The notifier modules are available in these locations:
 
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/snmp-notifier-core/2.0-enterprise/snmp-notifier-core-2.0-enterprise.jar[SNMP Notifier Core 2.0-enterprise^^]
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/snmp-notifier-console-plugin/2.0-enterprise/snmp-notifier-console-plugin-2.0-enterprise.jar[SNMP Notifier Console Plugin 2.0-enterprise^^]
-* https://nexus.payara.fish/repository/payara-artifacts/fish/payara/server/core/packager/snmp4j-repackaged/3.7.5/snmp4j-repackaged-3.7.5.jar[Dependency: SNMP4J 3.7.5^^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/snmp-notifier-core/2.0-enterprise/snmp-notifier-core-2.0-enterprise.jar[SNMP Notifier Core 2.0-enterprise^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/snmp-notifier-console-plugin/2.0-enterprise/snmp-notifier-console-plugin-2.0-enterprise.jar[SNMP Notifier Console Plugin 2.0-enterprise^]
+* https://nexus.payara.fish/repository/payara-artifacts/fish/payara/server/core/packager/snmp4j-repackaged/3.7.5/snmp4j-repackaged-3.7.5.jar[Dependency: SNMP4J 3.7.5^]
 
 IMPORTANT: Use the version of SNMP4J 3.7.5 provided above as it has a modified manifest to be compatible with Payara Enterprise.
 
@@ -256,8 +256,8 @@ Formerly known as *Jabber*, XMPP is an open standard, which means that anyone ca
 
 The notifier modules are available in these locations:
 
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/xmpp-notifier-core/2.0-enterprise/xmpp-notifier-core-2.0-enterprise.jar[XMPP Notifier Core 2.0-enterprise^^]
-* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/xmpp-notifier-console-plugin/2.0-enterprise/xmpp-notifier-console-plugin-2.0-enterprise.jar[XMPP Notifier Console Plugin 2.0-enterprise^^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/xmpp-notifier-core/2.0-enterprise/xmpp-notifier-core-2.0-enterprise.jar[XMPP Notifier Core 2.0-enterprise^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/xmpp-notifier-console-plugin/2.0-enterprise/xmpp-notifier-console-plugin-2.0-enterprise.jar[XMPP Notifier Console Plugin 2.0-enterprise^]
 
 And these are the required dependencies for the core module to work correctly:
 
