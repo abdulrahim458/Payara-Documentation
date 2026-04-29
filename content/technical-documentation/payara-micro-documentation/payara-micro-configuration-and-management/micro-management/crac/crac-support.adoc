@@ -58,4 +58,4 @@ lack link:https://docs.azul.com/crac/usage/guidelines#using-crac-in-your-applica
 
 CRaC may be utilised in Docker by creating a custom Docker image. The default Payara {pageSiteEditionCapitalised} Micro image does not utilise a CRaC JDK and so cannot be used.
 
-See xref:Technical Documentation/Payara Micro Documentation/Payara Micro Docker Image.adoc#custom-crac-image[Payara Micro Docker Image] for details.
+See xref:technical-documentation/payara-micro-documentation/payara-micro-docker-image.adoc#custom-crac-image[Payara Micro Docker Image] for details.

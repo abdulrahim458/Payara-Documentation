@@ -34,7 +34,7 @@ IMPORTANT: Custom Notifiers are deprecated and are no longer supported in Payara
 
 To create a new custom notifier, you'll have to create a new extension module that follows the structure outlined previously.
 
-Read the xref:Technical Documentation/Payara Server Documentation/Extensions/Custom Notifiers.adoc[custom notifiers section] to find detailed instructions and guidelines on how to create a custom notifier implementation.
+Read the xref:technical-documentation/payara-server-documentation/extensions/custom-notifiers.adoc[custom notifiers section] to find detailed instructions and guidelines on how to create a custom notifier implementation.
 
 [[removing-notifiers]]
 == Removing Notifiers
@@ -73,7 +73,7 @@ At a high level, the steps to configure the email notifier are:
 [[email-notifier-admin-console]]
 ===== Using the admin console
 
-You will need a `JavaMail` session to send the notifications; instructions on setting up a `JavaMail` session can be found xref:docs::Technical Documentation/Payara Server Documentation/General Administration/Administering the Jakarta Mail Service.adoc[in this section].
+You will need a `JavaMail` session to send the notifications; instructions on setting up a `JavaMail` session can be found xref:docs::technical-documentation/payara-server-documentation/general-administration/administering-the-jakarta-mail-service.adoc[in this section].
 
 The email notifier is configured in the **Email** tab of the Notification Section of the server's instance configuration.
 
@@ -443,7 +443,7 @@ https://newrelic.com/[New Relic^] is an application performance monitoring (APM)
 
 New Relic specializes on integrating Java application servers like GlassFish, JBoss WildFly, etc. and other application frameworks seamlessly.
 
-Payara Server includes a special notifier to send notifications from the xref:docs::Technical Documentation/Payara Server Documentation/General Administration/Administering the Notification Service.adoc[Notification service] to the New Relic **Insights service** using its remote API.
+Payara Server includes a special notifier to send notifications from the xref:docs::technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc[Notification service] to the New Relic **Insights service** using its remote API.
 
 Custom notification events generated from Payara Server's own monitoring systems like the Request Tracing and Healthcheck services can be automatically identified by this API and gathered correctly to identify performance issues on the application server.
 
@@ -673,7 +673,7 @@ Datadog supports gathering metrics from the following sources:
 * SQL and NoSQL Databases (MySQL, PostgreSQL, MongoDB, CouchBase)
 * Monitoring Solutions (New Relic, Nagios, Splunk, Amazon Cloud Trail)
 
-Payara Server includes a special notifier to send notifications from the xref:docs::Technical Documentation/Payara Server Documentation/General Administration/Administering the Notification Service.adoc[Notification service] to a Datadog account by means of an API key.
+Payara Server includes a special notifier to send notifications from the xref:docs::technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc[Notification service] to a Datadog account by means of an API key.
 
 IMPORTANT: Currently, the Payara Datadog notifier only supports the `US1 - East` region.
 

@@ -4,10 +4,10 @@ The Payara Cloud Connectors are a collection of JCA adapters for use with variou
 
 The following connectors are available:
 
-* xref:Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Apache Kafka.adoc[Apache Kafka]
-* xref:Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Amazon SQS/Overview.adoc[Amazon SQS]
-* xref:Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/MQTT.adoc[MQTT]
-* xref:Technical Documentation/Ecosystem/Connector Suites/Cloud Connectors/Azure SB.adoc[Azure Service Bus]
+* xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/apache-kafka.adoc[Apache Kafka]
+* xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/overview.adoc[Amazon SQS]
+* xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/mqtt.adoc[MQTT]
+* xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/azure-sb.adoc[Azure Service Bus]
 
 == Obtaining the connectors
 

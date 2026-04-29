@@ -16,7 +16,7 @@ To add your SSL Certificate to the Payara Server configuration files, you need:
 * The private key associated with your certificate.
 * The Certificate you received from the Certificate Authority based on your Certificate Signing Request (CSR).
 
-You can generate a self-signed certificate using the xref:Technical Documentation/Payara Server Documentation/Command Reference/generate-self-signed-certificate.adoc[`generate-self-signed-certificate`] command:
+You can generate a self-signed certificate using the xref:technical-documentation/payara-server-documentation/command-reference/generate-self-signed-certificate.adoc[`generate-self-signed-certificate`] command:
 
 [source,shell]
 ----
@@ -49,7 +49,7 @@ The information needs to be imported into the `keystore.p12` file of your Payara
 [[via-asadmin-cli-1]]
 ==== Using Asadmin CLI
 
-You can use the xref:Technical Documentation/Payara Server Documentation/Command Reference/add-to-keystore.adoc[`add-to-keystore`] command:
+You can use the xref:technical-documentation/payara-server-documentation/command-reference/add-to-keystore.adoc[`add-to-keystore`] command:
 
 [source,shell]
 ----
@@ -87,7 +87,7 @@ A similar command is used to import the information into the Trust Store file so
 [[via-asadmin-cli-2]]
 ==== Using Asadmin CLI
 
-You can use the xref:Technical Documentation/Payara Server Documentation/Command Reference/add-to-truststore.adoc[`add-to-truststore`] command:
+You can use the xref:technical-documentation/payara-server-documentation/command-reference/add-to-truststore.adoc[`add-to-truststore`] command:
 
 [source,shell]
 ----
@@ -198,9 +198,9 @@ NOTE: The log level of the expired certificates is of type **WARNING**.
 
 If you wish to remove all expired certificates, you can use the following Asadmin CLI subcommands:
 
-* xref:Technical Documentation/Payara Server Documentation/Command Reference/remove-expired-certificates.adoc#remove-expired-certificates[`remove-expired-certificates`],
-* xref:Technical Documentation/Payara Server Documentation/Command Reference/remove-from-keystore.adoc#remove-from-keystore[`remove-from-keystore`], and
-* xref:Technical Documentation/Payara Server Documentation/Command Reference/remove-from-truststore.adoc#remove-from-truststore[`remove-from-truststore`] respectively.
+* xref:technical-documentation/payara-server-documentation/command-reference/remove-expired-certificates.adoc#remove-expired-certificates[`remove-expired-certificates`],
+* xref:technical-documentation/payara-server-documentation/command-reference/remove-from-keystore.adoc#remove-from-keystore[`remove-from-keystore`], and
+* xref:technical-documentation/payara-server-documentation/command-reference/remove-from-truststore.adoc#remove-from-truststore[`remove-from-truststore`] respectively.
 
 [source,shell]
 ----

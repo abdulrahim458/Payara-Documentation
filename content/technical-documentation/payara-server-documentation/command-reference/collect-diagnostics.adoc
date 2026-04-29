@@ -44,7 +44,7 @@ NOTE: The data collected is stored in a ZIP file in your user home directory, th
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:docs::Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:docs::technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -151,4 +151,4 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:Technical Documentation/Payara Server Documentation/Diagnostics and Troubleshooting/Diagnostics Tool.adoc[Diagnostics Tool]
+* xref:technical-documentation/payara-server-documentation/diagnostics-and-troubleshooting/diagnostics-tool.adoc[Diagnostics Tool]

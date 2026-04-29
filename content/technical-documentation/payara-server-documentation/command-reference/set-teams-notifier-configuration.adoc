@@ -27,7 +27,7 @@ This notifier's extension is installed by default on Payara Server Enterprise.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -74,5 +74,5 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:Technical Documentation/Payara Server Documentation/Command Reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:Technical Documentation/Payara Server Documentation/Command Reference/get-teams-notifier-configuration.adoc#get-teams-notifier-configuration[`get-teams-notifier-configuration`]
+* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:technical-documentation/payara-server-documentation/command-reference/get-teams-notifier-configuration.adoc#get-teams-notifier-configuration[`get-teams-notifier-configuration`]

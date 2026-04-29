@@ -93,5 +93,5 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:Technical Documentation/Payara Server Documentation/Security Guide/SSL Certificate Management.adoc[SSL Certificate Management],
-* xref:Technical Documentation/Payara Server Documentation/Command Reference/add-to-keystore.adoc[`add-to-keystore`]
+* xref:technical-documentation/payara-server-documentation/security-guide/ssl-certificate-management.adoc[SSL Certificate Management],
+* xref:technical-documentation/payara-server-documentation/command-reference/add-to-keystore.adoc[`add-to-keystore`]
