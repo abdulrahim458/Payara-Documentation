@@ -1,4 +1,3 @@
-[[overview]]
 = Overview
 
 This section describes Payara's official policy for managing Payara Platform's security vulnerabilities.

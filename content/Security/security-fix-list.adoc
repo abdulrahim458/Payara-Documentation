@@ -1,4 +1,3 @@
-[[security-advisories]]
 = Security Advisories
 
 The following is a list of reported _**C**ommon **V**ulnerabilities and **E**xposures_ that have been analyzed and documented across releases:
