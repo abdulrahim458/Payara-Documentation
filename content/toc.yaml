@@ -847,232 +847,382 @@ sections:
       - file: jakarta-ee-certification/index
       - title: 6.37.0
         sections:
-          - file: "jakarta-ee-certification/6.37.0/6.37.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.37.0/6.37.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.37.0/6.37.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.37.0/6.37.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.37.0/6.37.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.37.0/6.37.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.37.0/6.37.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.37.0/6.37.0-web-profile-core-tck-results
       - title: 6.36.0
         sections:
-          - file: "jakarta-ee-certification/6.36.0/6.36.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.36.0/6.36.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.36.0/6.36.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.36.0/6.36.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.36.0/6.36.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.36.0/6.36.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.36.0/6.36.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.36.0/6.36.0-web-profile-core-tck-results
       - title: 6.35.0
         sections:
-          - file: "jakarta-ee-certification/6.35.0/6.35.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.35.0/6.35.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.35.0/6.35.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.35.0/6.35.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.35.0/6.35.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.35.0/6.35.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.35.0/6.35.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.35.0/6.35.0-web-profile-core-tck-results
       - title: 6.34.0
         sections:
-          - file: "jakarta-ee-certification/6.34.0/6.34.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.34.0/6.34.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.34.0/6.34.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.34.0/6.34.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.34.0/6.34.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.34.0/6.34.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.34.0/6.34.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.34.0/6.34.0-web-profile-core-tck-results
       - title: 6.33.0
         sections:
-          - file: "jakarta-ee-certification/6.33.0/6.33.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.33.0/6.33.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.33.0/6.33.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.33.0/6.33.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.33.0/6.33.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.33.0/6.33.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.33.0/6.33.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.33.0/6.33.0-web-profile-core-tck-results
       - title: 6.32.0
         sections:
-          - file: "jakarta-ee-certification/6.32.0/6.32.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.32.0/6.32.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.32.0/6.32.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.32.0/6.32.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.32.0/6.32.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.32.0/6.32.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.32.0/6.32.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.32.0/6.32.0-web-profile-core-tck-results
       - title: 6.31.0
         sections:
-          - file: "jakarta-ee-certification/6.31.0/6.31.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.31.0/6.31.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.31.0/6.31.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.31.0/6.31.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.31.0/6.31.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.31.0/6.31.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.31.0/6.31.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.31.0/6.31.0-web-profile-core-tck-results
       - title: 6.30.0
         sections:
-          - file: "jakarta-ee-certification/6.30.0/6.30.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.30.0/6.30.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.30.0/6.30.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.30.0/6.30.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.30.0/6.30.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.30.0/6.30.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.30.0/6.30.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.30.0/6.30.0-web-profile-core-tck-results
       - title: 6.29.0
         sections:
-          - file: "jakarta-ee-certification/6.29.0/6.29.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.29.0/6.29.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.29.0/6.29.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.29.0/6.29.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.29.0/6.29.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.29.0/6.29.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.29.0/6.29.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.29.0/6.29.0-web-profile-core-tck-results
       - title: 6.28.0
         sections:
-          - file: "jakarta-ee-certification/6.28.0/6.28.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.28.0/6.28.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.28.0/6.28.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.28.0/6.28.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.28.0/6.28.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.28.0/6.28.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.28.0/6.28.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.28.0/6.28.0-web-profile-core-tck-results
       - title: 6.27.0
         sections:
-          - file: "jakarta-ee-certification/6.27.0/6.27.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.27.0/6.27.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.27.0/6.27.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.27.0/6.27.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.27.0/6.27.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.27.0/6.27.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.27.0/6.27.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.27.0/6.27.0-web-profile-core-tck-results
       - title: 6.26.0
         sections:
-          - file: "jakarta-ee-certification/6.26.0/6.26.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.26.0/6.26.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.26.0/6.26.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.26.0/6.26.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.26.0/6.26.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.26.0/6.26.0-web-profile-web-tck-results
+          - file: jakarta-ee-certification/6.26.0/6.26.0-core-tck-results
+          - file: jakarta-ee-certification/6.26.0/6.26.0-web-profile-core-tck-results
       - title: 6.25.0
         sections:
-          - file: "jakarta-ee-certification/6.25.0/6.25.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.25.0/6.25.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.25.0/6.25.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.25.0/6.25.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.25.0/6.25.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.25.0/6.25.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.25.0/6.25.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.25.0/6.25.0-web-profile-core-tck-results
       - title: 6.24.0
         sections:
-          - file: "jakarta-ee-certification/6.24.0/6.24.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.24.0/6.24.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.24.0/6.24.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.24.0/6.24.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.24.0/6.24.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.24.0/6.24.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.24.0/6.24.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.24.0/6.24.0-web-profile-core-tck-results
       - title: 6.23.0
         sections:
-          - file: "jakarta-ee-certification/6.23.0/6.23.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.23.0/6.23.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.23.0/6.23.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.23.0/6.23.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.23.0/6.23.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.23.0/6.23.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.23.0/6.23.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.23.0/6.23.0-web-profile-core-tck-results
       - title: 6.22.0
         sections:
-          - file: "jakarta-ee-certification/6.22.0/6.22.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.22.0/6.22.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.22.0/6.22.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.22.0/6.22.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.22.0/6.22.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.22.0/6.22.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.22.0/6.22.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.22.0/6.22.0-web-profile-core-tck-results
       - title: 6.21.0
         sections:
-          - file: "jakarta-ee-certification/6.21.0/6.21.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.21.0/6.21.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.21.0/6.21.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.21.0/6.21.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.21.0/6.21.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.21.0/6.21.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.21.0/6.21.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.21.0/6.21.0-web-profile-core-tck-results
       - title: 6.20.0
         sections:
-          - file: "jakarta-ee-certification/6.20.0/6.20.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.20.0/6.20.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.20.0/6.20.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.20.0/6.20.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.20.0/6.20.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.20.0/6.20.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.20.0/6.20.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.20.0/6.20.0-web-profile-core-tck-results
       - title: 6.19.0
         sections:
-          - file: "jakarta-ee-certification/6.19.0/6.19.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.19.0/6.19.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.19.0/6.19.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.19.0/6.19.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.19.0/6.19.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.19.0/6.19.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.19.0/6.19.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.19.0/6.19.0-web-profile-core-tck-results
       - title: 6.18.0
         sections:
-          - file: "jakarta-ee-certification/6.18.0/6.18.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.18.0/6.18.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.18.0/6.18.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.18.0/6.18.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.18.0/6.18.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.18.0/6.18.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.18.0/6.18.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.18.0/6.18.0-web-profile-core-tck-results
       - title: 6.17.0
         sections:
-          - file: "jakarta-ee-certification/6.17.0/6.17.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.17.0/6.17.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.17.0/6.17.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.17.0/6.17.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.17.0/6.17.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.17.0/6.17.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.17.0/6.17.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.17.0/6.17.0-web-profile-core-tck-results
       - title: 6.16.0
         sections:
-          - file: "jakarta-ee-certification/6.16.0/6.16.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.16.0/6.16.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.16.0/6.16.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.16.0/6.16.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.16.0/6.16.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.16.0/6.16.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.16.0/6.16.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.16.0/6.16.0-web-profile-core-tck-results
       - title: 6.15.0
         sections:
-          - file: "jakarta-ee-certification/6.15.0/6.15.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.15.0/6.15.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.15.0/6.15.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.15.0/6.15.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.15.0/6.15.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.15.0/6.15.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.15.0/6.15.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.15.0/6.15.0-web-profile-core-tck-results
       - title: 6.14.0
         sections:
-          - file: "jakarta-ee-certification/6.14.0/6.14.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.14.0/6.14.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.14.0/6.14.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.14.0/6.14.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.14.0/6.14.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.14.0/6.14.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.14.0/6.14.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.14.0/6.14.0-web-profile-core-tck-results
       - title: 6.13.0
         sections:
-          - file: "jakarta-ee-certification/6.13.0/6.13.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.13.0/6.13.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.13.0/6.13.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.13.0/6.13.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.13.0/6.13.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.13.0/6.13.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.13.0/6.13.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.13.0/6.13.0-web-profile-core-tck-results
       - title: 6.12.0
         sections:
-          - file: "jakarta-ee-certification/6.12.0/6.12.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.12.0/6.12.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.12.0/6.12.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.12.0/6.12.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.12.0/6.12.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.12.0/6.12.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.12.0/6.12.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.12.0/6.12.0-web-profile-core-tck-results
       - title: 6.11.0
         sections:
-          - file: "jakarta-ee-certification/6.11.0/6.11.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.11.0/6.11.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.11.0/6.11.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.11.0/6.11.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.11.0/6.11.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.11.0/6.11.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.11.0/6.11.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.11.0/6.11.0-web-profile-core-tck-results
       - title: 6.10.0
         sections:
-          - file: "jakarta-ee-certification/6.10.0/6.10.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.10.0/6.10.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.10.0/6.10.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.10.0/6.10.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.10.0/6.10.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.10.0/6.10.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.10.0/6.10.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.10.0/6.10.0-web-profile-core-tck-results
       - title: 6.9.0
         sections:
-          - file: "jakarta-ee-certification/6.9.0/6.9.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.9.0/6.9.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.9.0/6.9.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.9.0/6.9.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.9.0/6.9.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.9.0/6.9.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.9.0/6.9.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.9.0/6.9.0-web-profile-core-tck-results
       - title: 6.8.0
         sections:
-          - file: "jakarta-ee-certification/6.8.0/6.8.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.8.0/6.8.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.8.0/6.8.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.8.0/6.8.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.8.0/6.8.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.8.0/6.8.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.8.0/6.8.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.8.0/6.8.0-web-profile-core-tck-results
       - title: 6.7.0
         sections:
-          - file: "jakarta-ee-certification/6.7.0/6.7.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.7.0/6.7.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.7.0/6.7.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.7.0/6.7.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.7.0/6.7.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.7.0/6.7.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.7.0/6.7.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.7.0/6.7.0-web-profile-core-tck-results
       - title: 6.6.0
         sections:
-          - file: "jakarta-ee-certification/6.6.0/6.6.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.6.0/6.6.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.6.0/6.6.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.6.0/6.6.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.6.0/6.6.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.6.0/6.6.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.6.0/6.6.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.6.0/6.6.0-web-profile-core-tck-results
       - title: 6.5.0
         sections:
-          - file: "jakarta-ee-certification/6.5.0/6.5.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.5.0/6.5.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.5.0/6.5.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.5.0/6.5.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.5.0/6.5.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.5.0/6.5.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.5.0/6.5.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.5.0/6.5.0-web-profile-core-tck-results
       - title: 6.4.0
         sections:
-          - file: "jakarta-ee-certification/6.4.0/6.4.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.4.0/6.4.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.4.0/6.4.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.4.0/6.4.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.4.0/6.4.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.4.0/6.4.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.4.0/6.4.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.4.0/6.4.0-web-profile-core-tck-results
       - title: 6.3.0
         sections:
-          - file: "jakarta-ee-certification/6.3.0/6.3.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.3.0/6.3.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.3.0/6.3.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.3.0/6.3.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.3.0/6.3.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.3.0/6.3.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.3.0/6.3.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.3.0/6.3.0-web-profile-core-tck-results
       - title: 6.2.0
         sections:
-          - file: "jakarta-ee-certification/6.2.0/6.2.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.2.0/6.2.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.2.0/6.2.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.2.0/6.2.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.2.0/6.2.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.2.0/6.2.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.2.0/6.2.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.2.0/6.2.0-web-profile-core-tck-results
       - title: 6.1.0
         sections:
-          - file: "jakarta-ee-certification/6.1.0/6.1.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.1.0/6.1.0-web-profile-web-tck-results"
-          - file: "jakarta-ee-certification/6.1.0/6.1.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.1.0/6.1.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.1.0/6.1.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.1.0/6.1.0-web-profile-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.1.0/6.1.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.1.0/6.1.0-web-profile-core-tck-results
       - title: 6.0.0
         sections:
-          - file: "jakarta-ee-certification/6.0.0/6.0.0-platform-tck-results"
-          - file: "jakarta-ee-certification/6.0.0/6.0.0-web-tck-results"
-          - file: "jakarta-ee-certification/6.0.0/6.0.0-core-tck-results"
-          - file: "jakarta-ee-certification/6.0.0/6.0.0-web-profile-core-tck-results"
+          - title: TCK Results Platform
+            file: jakarta-ee-certification/6.0.0/6.0.0-platform-tck-results
+          - title: TCK Results Web Profile
+            file: jakarta-ee-certification/6.0.0/6.0.0-web-tck-results
+          - title: TCK Results Core
+            file: jakarta-ee-certification/6.0.0/6.0.0-core-tck-results
+          - title: TCK Results Core Web Profile
+            file: jakarta-ee-certification/6.0.0/6.0.0-web-profile-core-tck-results
 
   - title: Eclipse MicroProfile Certification
     sections:
