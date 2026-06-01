@@ -88,7 +88,7 @@ docs_html:
       ruby ${TEMPLATES_DIR}/build.rb \
         --export-public-markdown --generate-sitemap --site-url ${SITE_URL} \
         --generate-index --index-group-id "${DOCS_ID}" --index-group-label "${INDEX_GROUP_LABEL}" --index-version "${VERSION}" \
-        -d ${MERGED} -o ${HTML_BUILD_DIR} -a ca -a RELEASE_ID=${VERSION} --page-extension ".html"
+        -d ${MERGED} -o ${HTML_BUILD_DIR}/${VERSION} -a ca -a RELEASE_ID=${VERSION} --page-extension ".html"
       rm -rf ${MERGED}
       echo "Generated HTML:"
       ls -l ${HTML_BUILD_DIR}

@@ -3,7 +3,7 @@ TEMPLATES_DIR=docs-templates
 HTML_BUILD_DIR=build/payara
 ENTERPRISE_DIR=${HTML_BUILD_DIR}/enterprise
 COMMUNITY_DIR=${HTML_BUILD_DIR}/community
-VERSION=26-ga
+VERSION=7
 
 echo "Removing directory $HTML_BUILD_DIR"
 rm -rf ${HTML_BUILD_DIR}
@@ -39,13 +39,13 @@ echo "Building content Enterprise"
 build_merged content_enterprise ${ENTERPRISE_DIR} \
   --export-public-markdown --generate-sitemap --site-url https://docs.azul.com/payara \
   --generate-index --index-group-id "payara" --index-group-label "Azul Payara" --index-version "${VERSION}" \
-  -a ca -a RELEASE_ID=${VERSION} --page-extension ".html"
+  -a ca --page-extension ".html"
 
 echo "Building content Community"
 build_merged content_community ${COMMUNITY_DIR} \
   --export-public-markdown --generate-sitemap --site-url https://docs.azul.com/payara-community \
   --generate-index --index-group-id "payara-community" --index-group-label "Azul Payara Community" --index-version "${VERSION}" \
-  -a ca -a RELEASE_ID=${VERSION} --page-extension ".html"
+  -a ca --page-extension ".html"
 
 echo "Generating index.html"
 cat > ${HTML_BUILD_DIR}/index.html << 'HTML'
