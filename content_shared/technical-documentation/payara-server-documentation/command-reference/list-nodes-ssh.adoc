@@ -90,8 +90,8 @@ This example lists the Payara Server nodes that support communication over SSH i
 ----
 asadmin> list-nodes-ssh --long=true
 NODE NAME   TYPE   NODE HOST          INSTALL DIRECTORY    REFERENCED BY           
-sj02        SSH    sj02.example.com   /export/payara6   pmd-i-sj02, yml-i-sj02
-sj01        SSH    sj01.example.com   /export/payara6   pmd-i-sj01, yml-i-sj01
+sj02        SSH    sj02.example.com   /export/payara7   pmd-i-sj02, yml-i-sj02
+sj01        SSH    sj01.example.com   /export/payara7   pmd-i-sj01, yml-i-sj01
 Command list-nodes-ssh executed successfully.
 ----
 
@@ -106,14 +106,11 @@ Command list-nodes-ssh executed successfully.
 *See Also*
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-dcom.adoc#create-node-dcom[`create-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc#create-node-config[`create-node-config`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-node-config.adoc#delete-node-config[`delete-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-dcom.adoc#delete-node-dcom[`delete-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc#list-nodes-config[`list-nodes-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-dcom.adoc#list-nodes-dcom[`list-nodes-dcom`]
+* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc#list-nodes-config[`list-nodes-config`]
 
 

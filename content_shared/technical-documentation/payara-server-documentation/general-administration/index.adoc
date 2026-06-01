@@ -23,7 +23,7 @@ NOTE: The default administrator login is `admin`, with no password, which means 
 === Default Administration Values
 
 //TODO - Add additional ports (Hazelcast~Data-Grid, for example)
-[width="100%",cols="1,1",options="header",]
+[width="100%",cols="43%,57%",options="header",]
 |===
 |Item
 |Default
@@ -65,7 +65,7 @@ NOTE: The default administrator login is `admin`, with no password, which means 
 [[table-default-settings-and-locations-2]]
 .Default Locations
 
-[width="100%",cols="1,1",options="header",]
+[width="100%",cols="43%,57%",options="header",]
 |===
 |Item
 |Default
@@ -101,15 +101,13 @@ The following resources and services frequently require configuration immediatel
 *Domains*:
   The initial `domain1` is created during installation. Additional configuration tasks might include such tasks as configuring additional domains or setting up automatic restart. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#administering-domains[Administering Domains].
 *JVM*:
-  The initial tasks for configuring the JVM include creating JVM options and profilers.
+  The initial tasks for configuring the JVM include creating JVM options.
 *Logging*:
   By default, logging is enabled, so basic logging works without additional configuration. However, you might want to change log levels, property values, or the location of log files. See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#administering-the-logging-service[Administering the Logging Service].
 *Monitoring*:
   By default, the monitoring service is enabled. However, monitoring for the individual modules is not enabled, so your first monitoring task is to enable monitoring for the modules that you want to monitor. See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service].
-*Life Cycle Modules*:
-  See xref:technical-documentation/payara-server-documentation/general-administration/administering-lifecycle-modules.adoc#administering-life-cycle-modules[Administering Life Cycle Modules].
 *Security*:
-  * System Security. Initial configuration tasks might include setting up passwords, audit modules, and certificates. See "xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-system-security[Administering System Security]" in the Payara Server Security Guide.
+  * System Security. Initial configuration tasks might include setting up passwords and certificates. See "xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-system-security[Administering System Security]" in the Payara Server Security Guide.
   * User Security. Initial configuration tasks might include creating authentication realms and file users. See "xref:technical-documentation/payara-server-documentation/security-guide/administering-user-security.adoc#administering-user-security[Administering User Security]" in the Payara Server Security Guide.
   * Message Security. Initial configuration tasks might include configuring a Java Cryptography Extension (JCE) provider, enabling default and non-default security providers, and configuring message protection policies. See "xref:technical-documentation/payara-server-documentation/security-guide/administering-message-security.adoc#administering-message-security[Administering Message Security]" in the Payara Server Security Guide.
 *Database Connectivity*:
@@ -192,7 +190,6 @@ server.http-service.http-listener.http-listener-1.port = 8080
 server.http-service.http-listener.http-listener-1.redirect-port =
 server.http-service.http-listener.http-listener-1.security-enabled = false
 server.http-service.http-listener.http-listener-1.server-name =
-server.http-service.http-listener.http-listener-1.xpowered-by = true
 ----
 
 *  Modify an attribute by using the `set` subcommand.

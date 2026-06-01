@@ -217,8 +217,6 @@ The entries in this file that are read by subcommands are as follows: +
 subcommand)
 * `AS_ADMIN_ALIASPASSWORD=`alias-password`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-password-alias.adoc#create-password-alias[`create-password-alias`] subcommand)
 * `AS_ADMIN_MAPPEDPASSWORD=`mapped-password`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-security-map.adoc#create-connector-security-map[`create-connector-security-map`] subcommand)
-* `AS_ADMIN_WINDOWSPASSWORD=`windows-password`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-node-dcom.adoc#create-node-dcom[`create-node-dcom`], xref:technical-documentation/payara-server-documentation/command-reference/install-node-dcom.adoc#install-node-dcom[`install-node-dcom`], and
-   xref:technical-documentation/payara-server-documentation/command-reference/update-node-dcom.adoc#update-node-dcom[`update-node-dcom`] subcommands)
 * `AS_ADMIN_SSHPASSWORD=`sshd-password`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`], xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
   xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`], and xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc#update-node-ssh[`update-node-ssh`] subcommands)
 * `AS_ADMIN_SSHKEYPASSPHRASE=`sshd-passphrase`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`], xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`], xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`], and xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc#update-node-ssh[`update-node-ssh`] subcommands)
@@ -578,12 +576,10 @@ Environment variables modify the default values of `asadmin` utility options as 
 * xref:technical-documentation/payara-server-documentation/command-reference/create-file-user.adoc#create-file-user[`create-file-user`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc#create-jvm-options[`create-jvm-options`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-dcom.adoc#create-node-dcom[`create-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-password-alias.adoc#create-password-alias[`create-password-alias`],
 * xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`],
 * xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node-dcom.adoc#install-node-dcom[`install-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-commands.adoc#list-commands[`list-commands`],
@@ -594,5 +590,4 @@ Environment variables modify the default values of `asadmin` utility options as 
 * xref:technical-documentation/payara-server-documentation/command-reference/set-web-env-entry.adoc#set-web-env-entry[`set-web-env-entry`],
 * xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc#start-domain[`start-domain`],
 * xref:technical-documentation/payara-server-documentation/command-reference/update-file-user.adoc#update-file-user[`update-file-user`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-dcom.adoc#update-node-dcom[`update-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc#update-node-ssh[`update-node-ssh`]

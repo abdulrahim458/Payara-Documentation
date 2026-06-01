@@ -134,7 +134,7 @@ __locations                             enable
 add-resources                           enable-monitoring
 configure-ldap-for-admin                flush-jmsdest
 create-admin-object                     freeze-transaction-service
-create-audit-module                     generate-jvm-report
+                                        generate-jvm-report
 create-auth-realm                       get
 create-connector-connection-pool        get-client-stubs
 create-connector-resource               get-host-and-port
@@ -143,9 +143,9 @@ create-connector-work-security-map      list
 create-custom-resource                  list-admin-objects
 create-file-user                        list-app-refs
 create-http                             list-applications
-create-http-listener                    list-audit-modules
+create-http-listener
 create-iiop-listener                    list-auth-realms
-create-javamail-resource                list-components
+create-javamail-resource
 create-jdbc-connection-pool             list-connector-connection-pools
 create-jdbc-resource                    list-connector-resources
 create-jms-host                         list-connector-security-maps
@@ -153,11 +153,11 @@ create-jms-resource                     list-connector-work-security-maps
 create-jmsdest                          list-containers
 create-jndi-resource                    list-custom-resources
 create-jvm-options                      list-file-groups
-create-lifecycle-module                 list-file-users
+                                        list-file-users
 create-message-security-provider        list-http-listeners
 create-network-listener                 list-iiop-listeners
 create-password-alias                   list-javamail-resources
-create-profiler                         list-jdbc-connection-pools
+                                        list-jdbc-connection-pools
 create-protocol                         list-jdbc-resources
 create-resource-adapter-config          list-jms-hosts
 create-resource-ref                     list-jms-resources
@@ -165,9 +165,9 @@ create-ssl                              list-jmsdest
 create-system-properties                list-jndi-entries
 create-threadpool                       list-jndi-resources
 create-transport                        list-jvm-options
-create-virtual-server                   list-lifecycle-modules
+create-virtual-server
 delete-admin-object                     list-logger-levels
-delete-audit-module                     list-message-security-providers
+                                        list-message-security-providers
 ...
 ----
 
@@ -182,6 +182,5 @@ delete-audit-module                     list-message-security-providers
 *See Also*
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-components.adoc#list-components[`list-components`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-containers.adoc#list-containers[`list-containers`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-modules.adoc#list-modules[`list-modules`]

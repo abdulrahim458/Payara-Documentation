@@ -5,53 +5,15 @@ Detailed information about features and fixes in every release.
 [[all-Release-Notes]]
 == All Release Notes
 
-*2025*
+**2026**
 
-* 2025 November - xref:release-notes/release-notes-6.2025.11.adoc[Payara Community 6.2025.11]
-* 2025 October - xref:release-notes/release-notes-6.2025.10.adoc[Payara Community 6.2025.10]
-* 2025 September - xref:release-notes/release-notes-6.2025.9.adoc[Payara Community 6.2025.9]
-* 2025 August - xref:release-notes/release-notes-6.2025.8.adoc[Payara Community 6.2025.8]
-* 2025 July - xref:release-notes/release-notes-6.2025.7.adoc[Payara Community 6.2025.7]
-* 2025 June - xref:release-notes/release-notes-6.2025.6.adoc[Payara Community 6.2025.6]
-* 2025 May - xref:release-notes/release-notes-6.2025.5.adoc[Payara Community 6.2025.5]
-* 2025 April - xref:release-notes/release-notes-6.2025.4.adoc[Payara Community 6.2025.4]
-* 2025 March - xref:release-notes/release-notes-6.2025.3.adoc[Payara Community 6.2025.3]
-* 2025 February - xref:release-notes/release-notes-6.2025.2.adoc[Payara Community 6.2025.2]
-* 2025 January - xref:release-notes/release-notes-6.2025.1.adoc[Payara Community 6.2025.1]
+* 2026 May - xref:release-notes/release-notes-7.2026.5.adoc[Release Notes 7.2026.5]
+* 2026 April - xref:release-notes/release-notes-7.2026.4.adoc[Release Notes 7.2026.4]
+* 2026 March - xref:release-notes/release-notes-7.2026.3.adoc[Release Notes 7.2026.3]
+* 2026 February - xref:release-notes/release-notes-7.2026.2.adoc[Release Notes 7.2026.2]
+* 2026 January - xref:release-notes/release-notes-7.2026.1.adoc[Release Notes 7.2026.1]
 
-*2024*
+**2025**
 
-* 2024 December - xref:release-notes/release-notes-6.2024.12.adoc[Payara Community 6.2024.12]
-* 2024 November - xref:release-notes/release-notes-6.2024.11.adoc[Payara Community 6.2024.11]
-* 2024 October - xref:release-notes/release-notes-6.2024.10.adoc[Payara Community 6.2024.10]
-* 2024 September - xref:release-notes/release-notes-6.2024.9.adoc[Payara Community 6.2024.9]
-* 2024 August - xref:release-notes/release-notes-6.2024.8.adoc[Payara Community 6.2024.8]
-* 2024 July - xref:release-notes/release-notes-6.2024.7.adoc[Payara Community 6.2024.7]
-* 2024 June - xref:release-notes/release-notes-6.2024.6.adoc[Payara Community 6.2024.6]
-* 2024 May - xref:release-notes/release-notes-6.2024.5.adoc[Payara Community 6.2024.5]
-* 2024 April - xref:release-notes/release-notes-6.2024.4.adoc[Payara Community 6.2024.4]
-* 2024 March - xref:release-notes/release-notes-6.2024.3.adoc[Payara Community 6.2024.3]
-* 2024 February - xref:release-notes/release-notes-6.2024.2.adoc[Payara Community 6.2024.2]
-* 2024 January - xref:release-notes/release-notes-6.2024.1.adoc[Payara Community 6.2024.1]
-
-*2023*
-
-* 2023 December - xref:release-notes/release-notes-6.2023.12.adoc[Payara Community 6.2023.12]
-* 2023 November - xref:release-notes/release-notes-6.2023.11.adoc[Payara Community 6.2023.11]
-* 2023 October - xref:release-notes/release-notes-6.2023.10.adoc[Payara Community 6.2023.10]
-* 2023 September - xref:release-notes/release-notes-6.2023.9.adoc[Payara Community 6.2023.9]
-* 2023 August - xref:release-notes/release-notes-6.2023.8.adoc[Payara Community 6.2023.8]
-* 2023 July - xref:release-notes/release-notes-6.2023.7.adoc[Payara Community 6.2023.7]
-* 2023 June - xref:release-notes/release-notes-6.2023.6.adoc[Payara Community 6.2023.6]
-* 2023 May - xref:release-notes/release-notes-6.2023.5.adoc[Payara Community 6.2023.5]
-* 2023 April - xref:release-notes/release-notes-6.2023.4.adoc[Payara Community 6.2023.4]
-* 2023 March - xref:release-notes/release-notes-6.2023.3.adoc[Payara Community 6.2023.3]
-* 2023 February - xref:release-notes/release-notes-6.2023.2.adoc[Payara Community 6.2023.2]
-* 2023 January - xref:release-notes/release-notes-6.2023.1.adoc[Payara Community 6.2023.1]
-
-*2022*
-
-* 2022 December - xref:release-notes/release-notes-6.2022.2.adoc[Payara Community 6.2022.2]
-* 2022 November - xref:release-notes/release-notes-6.2022.1.adoc[Payara Community 6.2022.1]
-* 2022 September - xref:release-notes/release-notes-6.2022.1.alpha4.adoc[Payara Community 6.2022.1.Alpha4]
-* 2022 July - xref:release-notes/release-notes-6.2022.1.alpha3.adoc[Payara Community 6.2022.1.Alpha3]
+* 2025 December - xref:release-notes/release-notes-7.2025.2.adoc[Release Notes 7.2025.2]
+* 2025 November - xref:release-notes/release-notes-7.2025.1.adoc[Release Notes 7.2025.1]

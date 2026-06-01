@@ -24,8 +24,7 @@ The `install-node-ssh` subcommand installs Payara Server software on the hosts t
 subcommand requires secure shell (SSH) to be configured on the host where the subcommand is run and on each host where the Payara Server
 software is being installed.
 
-NOTE: This subcommand is equivalent to the xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`] subcommand. To
-install Payara Server software on hosts that use the Distributed Component Object Model (DCOM) remote protocol, use the xref:technical-documentation/payara-server-documentation/command-reference/install-node-dcom.adoc#install-node-dcom[`install-node-dcom`] subcommand.
+NOTE: This subcommand is equivalent to the xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`] subcommand.
 
 If necessary, the subcommand creates a ZIP archive of the Payara Server software from the installation where this subcommand
 is run. The archive does not contain the `domains` directory or the `nodes` directory. These directories are synchronized from the domain
@@ -77,7 +76,7 @@ This subcommand is supported in local mode only.
     The archive file is saved.
 *`--installdir`*:
   The absolute path to the parent of the base installation directory where the Payara Server software is to be installed on each host,
-  for example, `/export/payara6/`. If the directory does not exist, the subcommand creates the directory. +
+  for example, `/export/payara7/`. If the directory does not exist, the subcommand creates the directory. +
   The user that is running this subcommand must have write access to the specified directory. Otherwise, an error occurs. +
   To overwrite an existing an installation of the Payara Server software, set the `--force` option to `true`. If the directory already
   contains an installation and the `--force` option is `false`, an error occurs. +
@@ -124,17 +123,17 @@ Created installation zip /home/gfuser/glassfish2339538623689073993.zip
 Successfully connected to gfuser@sj03.example.com using keyfile /home/gfuser
 /.ssh/id_rsa
 Copying /home/gfuser/glassfish2339538623689073993.zip (81395008 bytes) to 
-sj03.example.com:/export/payara6
-Installing glassfish2339538623689073993.zip into sj03.example.com:/export/payara6
-Removing sj03.example.com:/export/payara6/glassfish2339538623689073993.zip
-Fixing file permissions of all files under sj03.example.com:/export/payara6/bin
+sj03.example.com:/export/payara7
+Installing glassfish2339538623689073993.zip into sj03.example.com:/export/payara7
+Removing sj03.example.com:/export/payara7/glassfish2339538623689073993.zip
+Fixing file permissions of all files under sj03.example.com:/export/payara7/bin
 Successfully connected to gfuser@sj04.example.com using keyfile /home/gfuser
 /.ssh/id_rsa
 Copying /home/gfuser/glassfish2339538623689073993.zip (81395008 bytes) to 
-sj04.example.com:/export/payara6
-Installing glassfish2339538623689073993.zip into sj04.example.com:/export/payara6
-Removing sj04.example.com:/export/payara6/glassfish2339538623689073993.zip
-Fixing file permissions of all files under sj04.example.com:/export/payara6/bin
+sj04.example.com:/export/payara7
+Installing glassfish2339538623689073993.zip into sj04.example.com:/export/payara7
+Removing sj04.example.com:/export/payara7/glassfish2339538623689073993.zip
+Fixing file permissions of all files under sj04.example.com:/export/payara7/bin
 Command install-node-ssh executed successfully
 ----
 
@@ -150,7 +149,6 @@ Command install-node-ssh executed successfully
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node-dcom.adoc#install-node-dcom[`install-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node.adoc#uninstall-node[`uninstall-node`],
 * xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`]
 

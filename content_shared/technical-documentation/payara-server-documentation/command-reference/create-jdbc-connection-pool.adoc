@@ -47,7 +47,6 @@ asadmin [asadmin-options] create-jdbc-connection-pool [--help]
 [--description description]
 [--property name=value)[:name=value]*]
 [--skipclientinfovalidation={false|true}]
-[--target=target]
 connectionpoolid
 ----
 
@@ -208,14 +207,6 @@ Required when a datasource class implements two or more interfaces (`javax.sql.D
     Specifies the URL for this connection pool. Although this is not a standard property, it is commonly used.
   `dynamic-reconfiguration-wait-timeout-in-seconds`;;
     Used to enable dynamic reconfiguration of the connection pool transparently to the applications that are using the pool, so that applications need not be re-enabled for the attribute or property changes to the pool to take effect. Any in-flight transaction's connection requests will be allowed to complete with the old pool configuration as long as the connection requests are within the timeout period, so as to complete the transaction. New connection requests will wait for the pool reconfiguration to complete and connections will be acquired using the modified pool configuration.
-  `LazyConnectionEnlistment`;;
-    Deprecated. Use the equivalent attribute. The default value is false.
-  `LazyConnectionAssociation`;;
-    Deprecated. Use the equivalent attribute. The default value is false.
-  `AssociateWithThread`;;
-    Deprecated. Use the equivalent attribute. The default value is false.
-  `MatchConnections`;;
-    Deprecated. Use the equivalent attribute. The default value is true.
   `Prefer-Validate-Over-Recreate`;;
     Specifies whether pool resizer should validate idle connections before destroying and recreating them. The default value is true.
   `time-to-keep-queries-in-minutes`;;
@@ -229,9 +220,6 @@ NOTE: If an attribute name or attribute value contains a colon, the backslash (`
   Determines whether to skip the validation of client info properties. Default is false.
 
 NOTE: Skipping client info validation may improve the performance of persistent operations when pooling is disabled and managed by the JDBC driver.
-
-*`--target`*:
-  Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
 [[operands]]
 == Operands

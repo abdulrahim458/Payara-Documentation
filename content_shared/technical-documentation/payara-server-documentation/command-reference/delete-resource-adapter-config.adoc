@@ -26,8 +26,6 @@ This command is supported in remote mode only.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
-*`--target`*:
-  This option is deprecated.
 
 [[operands]]
 == Operands

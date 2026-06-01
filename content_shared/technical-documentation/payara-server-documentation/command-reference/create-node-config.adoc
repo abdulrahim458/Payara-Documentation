@@ -15,8 +15,7 @@ asadmin [asadmin-options] create-node-config [--help]
 [[description]]
 == Description
 
-The `create-node-config` subcommand creates a node that is not enabled for remote communication. The `create-node-config` subcommand does not
-require the Distributed Component Object Model (DCOM) remote protocol or secure shell (SSH) to be configured to create the node.
+The `create-node-config` subcommand creates a node that is not enabled for remote communication. The `create-node-config` subcommand does not require the secure shell (SSH) to be configured to create the node.
 
 A node represents a host on which the Payara Server software is installed. A node must exist for every host on which Payara Server instances reside.
 
@@ -95,22 +94,18 @@ Command create-node-config executed successfully.
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc#create-local-instance[`create-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-dcom.adoc#create-node-dcom[`create-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-node-config.adoc#delete-node-config[`delete-node-config`],
 * xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node-dcom.adoc#install-node-dcom[`install-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`],
 * xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc#start-local-instance[`start-local-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc#stop-instance[`stop-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc#stop-local-instance[`stop-local-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node.adoc#uninstall-node[`uninstall-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-dcom.adoc#uninstall-node-dcom[`uninstall-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc#update-node-config[`update-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-dcom.adoc#update-node-dcom[`update-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc#update-node-ssh[`update-node-ssh`]
 
 

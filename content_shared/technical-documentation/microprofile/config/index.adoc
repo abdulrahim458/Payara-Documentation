@@ -18,7 +18,7 @@ A `ConfigSource` is a definition of a source of configuration values that can be
 
 NOTE: Where multiple configuration properties exist, the property from a source with a higher ordinal number is preferred.
 
-[cols="1,1,1", options="header"]
+[cols="2,1,10", options="header"]
 |===
 |Source
 |Ordinal
@@ -107,7 +107,7 @@ These have `@Priority` of `1`, the same as the default converters.
 
 In addition to the standard configuration properties, Payara Server and Micro provide a number of out-of-the-box config properties you can use in your application to find information about the runtime environment.
 
-[cols="1,1", options="header"]
+[cols="7,10", options="header"]
 |===
 |Property
 |Description

@@ -8,8 +8,7 @@ Lists options for the Java application launcher.
 [source,shell]
 ----
 asadmin [asadmin-options] list-jvm-options [--help] 
-[--target target] 
-[--profiler={false|true}] 
+[--target target]
 ----
 
 [[description]]
@@ -40,9 +39,6 @@ This subcommand is supported in remote mode only.
     Specifies a cluster.
   configuration-name;;
     Specifies a named configuration.
-*`--profiler`*:
-  Specifies whether the Java application launcher options to list are for the profiler. Set this option to true only if a profiler has been
-  configured. If this option is set to true and no profiler is configured, an error occurs. The default is false.
 
 [[examples]]
 == Examples

@@ -88,7 +88,7 @@ killall -9 jwebserver 2>/dev/null || true
 
 echo "Starting webserver"
 . ~/.sdkman/bin/sdkman-init.sh
-sdk use java 21.0.1.fx-zulu
+sdk use java 26.fx-zulu
 cd $HTML_BUILD_DIR
 jwebserver &
 

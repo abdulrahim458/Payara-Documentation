@@ -1,0 +1,151 @@
+= Core TCK Results
+
+As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License^], following is a summary of the TCK results for Payara Server releases for Jakarta EE Core Profile 11.
+
+[[payara-server-results]]
+== Payara Server 7.2024.1.Alpha3 Jakarta EE 11 Core Profile Certification Summary
+
+- Product Name, Version and download URL (if applicable):
++
+[cols="1,2",grid=none,frame=none]
+|===
+|image:JakartaEE_Logo_compatible-color.png[alt="JakartaEE_Logo_compatible-color",width=600px]
+|
+{empty} +
+{empty} +
+https://www.payara.fish/downloads/payara-platform-community-edition[Payara Server 7.2024.1.Alpha3^]
+|===
+
+- Specification Name, Version and download URL:
++
+https://jakarta.ee/specifications/coreprofile/11//[Jakarta EE Core Profile 11^]
+- TCK Version, digital SHA-256 fingerprint and download URL:
++
+https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-core-profile-tck-11.0.0.zip[Jakarta EE Core Profile TCK 11.0.0.zip^]
+, SHA-256: `0357bfab7025972edb2bf50277b6b4206b499a2961bc94e783f34782cc4a9bda`
+
+- Public URL of TCK Results Summary:
++
+https://docs.payara.fish/community/docs/7.2024.1.Alpha3/Jakarta%20EE%20Certification/7.2024.1.Alpha3/7.2024.1.Alpha3%20Core%20TCK%20Results.html[7.2024.1.Alpha3 Core TCK Results^]
+
+- Any Additional Specification Certification Requirements:
+
+** Jakarta Contexts and Dependency Injection 4.0.6 TCK
++
+See test results in section `cdi` and `cdi-lang-model`. +
+Download URL & SHA-256:
+https://download.eclipse.org/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip[cdi-tck-4.1.0-dist.zip^],
+SHA-512:  `6e3967107a7eba503d243d848069fa4e689220bb0ca1f8906fc1dbcae6920f7039e331104432d246e6c026b6f6b41e7a2c840fbd4ac44cbedf78684fbd1b1080`
+
+** Jakarta Dependency Injection 2.0.2 TCK
++
+See test results in section `di`. +
+Download URL & SHA-256:
+https://download.eclipse.org/ee4j/cdi/inject/2.0/jakarta.inject-tck-2.0.2-bin.zip[jakarta.inject-tck-2.0.2-bin.zip^],
+SHA-256: `23bce4317ca061c3de648566cdf65c74b57e1264d6891f366567955d6b834972`
+
+** Jakarta RESTful Web Services 3.1.2 TCK
++
+See test results in section `jaxrs`. +
+Download URL & SHA-256:
+https://download.eclipse.org/jakartaee/restful-ws/4.0.0/jakarta-restful-ws-tck-4.0.0.zip[jakarta-restful-ws-tck-4.0.0.zip^],
+SHA-512: `f24052b8c8aeae387f99ae6a9264b641ef3e7ce634b5c53065cdf54baa5814f8b8470d76f0eca5116345ff42c140824c6645e208d90a4a359eb34bac3900bd97`
+
+** Jakarta JSON Binding 3.0.0 TCK
++
+See test results in section `jsonb`. +
+Download URL & SHA-256:
+https://download.eclipse.org/jakartaee/jsonb/3.0/jakarta-jsonb-tck-3.0.0.zip[jakarta-jsonb-tck-3.0.0.zip^],
+SHA-256: `954fd9a3a67059ddeabe5f51462a6a3b542c94fc798094dd8c312a6a28ef2d0b`
+
+** Jakarta JSON Processing 2.1.1 TCK
++
+See test results in section `jsonp`. +
+Download URL & SHA-256:
+https://download.eclipse.org/jakartaee/jsonp/2.1/jakarta-jsonp-tck-2.1.1.zip[jakarta-jsonp-tck-2.1.1.zip^],
+SHA-256: `949f203de84deffa8c7892b555918e42f1dd220ccb7b6800741ea58af62737c1`
+
+- Java runtime used to run the implementation:
++
+`OpenJDK Runtime Environment zulu21.0.3 (build 21.0.3+11)`
+
+
+- Summary of the information for the certification environment:
++
+Apache Derby, Linux, Ubuntu 20.04 LTS +
+
+=== Test Results
+
+### annotations
+
+```
+    [INFO]  [mvn.test] [INFO] Results:
+    [INFO]  [mvn.test] [INFO]
+    [INFO]  [mvn.test] [INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+```
+
+### cdi
+
+```
+    [INFO]  [mvn.test] [INFO] Results:
+    [INFO]  [mvn.test] [INFO]
+    [INFO]  [mvn.test] [INFO] Tests run: 779, Failures: 0, Errors: 0, Skipped: 0
+```
+
+### cdi-lang-model
+
+```
+    Results :
+
+    Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+```
+
+### core
+
+```
+    [INFO] Results:
+    [INFO]
+    [INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0
+```
+
+### di
+
+```
+    Completed running 50 tests
+    Number of tests failed 0
+    Number of tests with errors 0
+    Number of tests skipped 0
+```
+
+### jaxrs
+
+```
+    [INFO] Results:
+    [INFO]
+    [WARNING] Tests run: 2667, Failures: 0, Errors: 0, Skipped: 60
+
+    [INFO] Results:
+    [INFO]
+    [INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0
+```
+
+### jsonb
+
+```
+    [INFO] Results:
+    [INFO]
+    [WARNING] Tests run: 295, Failures: 0, Errors: 0, Skipped: 5
+```
+
+### jsonp
+
+```
+    [INFO] Results:
+    [INFO]
+    [INFO] Tests run: 179, Failures: 0, Errors: 0, Skipped: 0
+
+    Pluggability Tests:
+    [INFO] Results:
+    [INFO]
+    [INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0
+```

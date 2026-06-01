@@ -52,7 +52,7 @@ This command generates a new application based on specified options. Adjust prop
 
 The Payara Starter Archetype has a robust set of parameters that allows the customization of various aspects during the application generation process. Below is a table detailing each parameter, its default value, and additional notes:
 
-[cols="1,1,1",options="header"]
+[cols="5,5,12a",options="header"]
 |===
 | Element
 | Default Value

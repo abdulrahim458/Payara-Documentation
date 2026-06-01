@@ -14,13 +14,10 @@ node-name
 [[description]]
 == Description
 
-The `delete-node-config` subcommand deletes a node that is not enabled for remote communication from the domain. This subcommand does not require the Distributed Component Object Model (DCOM) remote protocol or secure shell (SSH) to be configured.
-
-IMPORTANT: DCOM is deprecated and is no longer supported in Payara 7 onwards.
+The `delete-node-config` subcommand deletes a node that is not enabled for remote communication from the domain. This subcommand does not require the secure shell (SSH) to be configured.
 
 This subcommand can delete only a node that is not enabled for remote communication. The subcommand for deleting other types of nodes depends on the type of the node:
 
-* A node that is enabled for remote communication over DCOM must be deleted by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-node-dcom.adoc#delete-node-dcom[`delete-node-dcom`] subcommand.
 * A node that is enabled for remote communication over SSH must be deleted by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`] subcommand.
 
 To determine whether a node is enabled for remote communication, use the xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`] subcommand.
@@ -44,7 +41,7 @@ This subcommand is supported in remote mode only.
 == Operands
 
 *node-name*:
-  The name of the node to delete. The node must not be enabled for communication over DCOM or SSH. Otherwise, an error occurs.
+  The name of the node to delete. The node must not be enabled for communication over SSH. Otherwise, an error occurs.
 
 [[examples]]
 == Examples
@@ -73,19 +70,15 @@ Command delete-node-config executed successfully.
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc#create-node-config[`create-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-dcom.adoc#create-node-dcom[`create-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node-dcom.adoc#install-node-dcom[`install-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`],
 * xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node.adoc#uninstall-node[`uninstall-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-dcom.adoc#uninstall-node-dcom[`uninstall-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc#update-node-config[`update-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-dcom.adoc#update-node-dcom[`update-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc#update-node-ssh[`update-node-ssh`]
 
 

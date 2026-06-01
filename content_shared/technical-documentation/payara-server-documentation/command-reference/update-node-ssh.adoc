@@ -126,20 +126,15 @@ Command update-node-ssh executed successfully.
 *See Also*
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-dcom.adoc#create-node-dcom[`create-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc#create-node-config[`create-node-config`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-node-config.adoc#delete-node-config[`delete-node-config],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-dcom.adoc#delete-node-dcom[`delete-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node-dcom.adoc#install-node-dcom[`install-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`],
 * xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node.adoc#uninstall-node[`uninstall-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-dcom.adoc#uninstall-node-dcom[`uninstall-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc#update-node-config[`update-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-dcom.adoc#update-node-dcom[`update-node-dcom`]
+* xref:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc#update-node-config[`update-node-config`]
 
 

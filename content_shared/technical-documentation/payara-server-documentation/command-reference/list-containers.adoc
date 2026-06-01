@@ -79,5 +79,4 @@ Command list-containers executed successfully.
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-commands.adoc#list-commands[`list-commands`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-components.adoc#list-components[`list-components`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-modules.adoc#list-modules[`list-modules`]

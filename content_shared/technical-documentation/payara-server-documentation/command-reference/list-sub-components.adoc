@@ -77,4 +77,3 @@ Command list-sub-components executed successfully.
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/disable#disable[`disable`],
 * xref:technical-documentation/payara-server-documentation/command-reference/enable#enable[`enable`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-components#list-components[`list-components`]

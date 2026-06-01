@@ -31,8 +31,6 @@ This subcommand is supported in remote mode only.
 *`--target`*:
   This is the target server instance. If this option is not specified, then DAS will find a server instance or multiple server instances. A
   migration notification will be sent to the selected server instances.
-*`--destination`*:
-  This option is deprecated. It works exactly as the `--target` option does.
 
 [[operands]]
 == Operands

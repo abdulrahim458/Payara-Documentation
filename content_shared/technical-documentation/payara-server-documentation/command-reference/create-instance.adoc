@@ -20,11 +20,9 @@ instance-name
 [[description]]
 == Description
 
-The `create-instance` subcommand creates a Payara instance. This subcommand requires the Distributed Component Object Model (DCOM) remote protocol or secure shell (SSH) to be configured on the host where the domain administration server (DAS) is running and on the host that is represented by the node where the instance is to reside.
+The `create-instance` subcommand creates a Payara instance. This subcommand requires the secure shell (SSH) to be configured on the host where the domain administration server (DAS) is running and on the host that is represented by the node where the instance is to reside.
 
-NOTE: DCOM or SSH is not required if the instance is to reside on a node of type `CONFIG` that represents the local host. A node of type `CONFIG` is not enabled for remote communication over DCOM or SSH.
-
-IMPORTANT: DCOM is deprecated and is no longer supported in Payara 7 onwards.
+NOTE: SSH is not required if the instance is to reside on a node of type `CONFIG` that represents the local host. A node of type `CONFIG` is not enabled for remote communication over SSH.
 
 You may run this command from any host that can contact the DAS.
 
@@ -272,7 +270,6 @@ Command create-instance executed successfully.
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
 * xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc#create-local-instance[`create-local-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc#create-node-config[`create-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-dcom.adoc#create-node-dcom[`create-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-system-properties.adoc#create-system-properties[`create-system-properties`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],

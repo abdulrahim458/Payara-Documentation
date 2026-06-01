@@ -22,8 +22,6 @@ By default, the subcommand displays the following information for each node that
 ** The type of the node, which is one of the following types*: :
 *`CONFIG`*:
   The node does not support remote communication.
-*`DCOM (deprecated)`*:
-  The node supports communication over the Distributed Component Object Model (DCOM) remote protocol.
 *`SSH`*:
   The node supports communication over secure shell (SSH).
 * The name of the host that the node represents
@@ -94,10 +92,10 @@ This example lists the Payara Server nodes in the domain `domain1` in long forma
 ----
 asadmin> list-nodes --long=true
 NODE NAME           TYPE     NODE HOST          INSTALL DIRECTORY     REFERENCED BY
-localhost-domain1   CONFIG   localhost          /export/payara6
-sj02                SSH      sj02.example.com   /export/payara6    pmd-i2, yml-i2
-sj01                SSH      sj01.example.com   /export/payara6    pmd-i1, yml-i1
-devnode             CONFIG   localhost          /export/payara6    pmdsa1
+localhost-domain1   CONFIG   localhost          /export/payara7
+sj02                SSH      sj02.example.com   /export/payara7    pmd-i2, yml-i2
+sj01                SSH      sj01.example.com   /export/payara7    pmd-i1, yml-i1
+devnode             CONFIG   localhost          /export/payara7    pmdsa1
 Command list-nodes executed successfully.
 ----
 
@@ -113,12 +111,9 @@ Command list-nodes executed successfully.
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc#create-node-config[`create-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-dcom.adoc#create-node-dcom[`create-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-dcom.adoc#delete-node-dcom[`delete-node-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc#list-nodes-config[`list-nodes-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-dcom.adoc#list-nodes-dcom[`list-nodes-dcom`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-ssh.adoc#list-nodes-ssh[`list-nodes-ssh`]
 
 

@@ -12,7 +12,6 @@ asadmin [asadmin-options] create-connector-security-map [--help]
 [--principals principal-name1[,principal-name2]*]
 [--usergroups user-group1[,user-group2]*]
 [--mappedusername user-name]
-[--target target]
 mapname
 ----
 
@@ -49,9 +48,6 @@ This subcommand is supported in remote mode only.
   `--principals` or `--usergroups` options, but not both in the same command.
 *`--mappedusername`*:
   Specifies the EIS username.
-*`--target`*:
-  Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does
-  not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
 [[operands]]
 == Operands

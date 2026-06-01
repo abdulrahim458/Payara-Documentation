@@ -89,6 +89,5 @@ Command list-applications executed successfully
 *See Also*
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-components.adoc#list-components[`list-components`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-sub-components.adoc#list-sub-components[`list-sub-components`],
 * xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc#show-component-status[`show-component-status`]

@@ -15,9 +15,9 @@ asadmin [asadmin-options] start-instance [--help]
 [[description]]
 == Description
 
-The `start-instance` subcommand starts a Payara Server instance.This subcommand requires the Distributed Component Object Model (DCOM) remote protocol or secure shell (SSH) to be configured on the machine where the domain administration server (DAS) is running and on the machine where the instance resides.
+The `start-instance` subcommand starts a Payara Server instance. This subcommand requires the secure shell (SSH) to be configured on the machine where the domain administration server (DAS) is running and on the machine where the instance resides.
 
-NOTE: DCOM or SSH is not required if the instance resides on a node of type `CONFIG` that represents the local host. A node of type `CONFIG` is not enabled for remote communication over DCOM or SSH.
+NOTE: SSH is not required if the instance resides on a node of type `CONFIG` that represents the local host. A node of type `CONFIG` is not enabled for remote communication over SSH.
 
 You may run this subcommand from any machine that can contact the DAS.
 
@@ -103,8 +103,8 @@ This example starts the Payara Server instance `pmdsa1`.
 asadmin start-instance pmdsa1
 Waiting for the server to start ..............................
 Successfully started the instance: pmdsa1
-instance Location: /export/payara6/glassfish/nodes/localhost/pmdsa1
-Log File: /export/payara6/glassfish/nodes/localhost/pmdsa1/logs/server.log
+instance Location: /export/payara7/glassfish/nodes/localhost/pmdsa1
+Log File: /export/payara7/glassfish/nodes/localhost/pmdsa1/logs/server.log
 Admin Port: 24848
 Command start-local-instance executed successfully.
 The instance, pmdsa1, was started on host localhost
@@ -121,8 +121,8 @@ This example starts the Payara Server instance `ymlsa1` with JPDA debugging enab
 asadmin start-instance --debug=true ymlsa1
 Waiting for the server to start ...............................
 Successfully started the instance: ymlsa1
-instance Location: /export/payara6/glassfish/nodes/localhost/ymlsa1
-Log File: /export/payara6/glassfish/nodes/localhost/ymlsa1/logs/server.log
+instance Location: /export/payara7/glassfish/nodes/localhost/ymlsa1
+Log File: /export/payara7/glassfish/nodes/localhost/ymlsa1/logs/server.log
 Admin Port: 24849
 Debugging is enabled. The debugging port is: 29010
 Command start-local-instance executed successfully.
@@ -152,6 +152,5 @@ Command start-instance executed successfully.
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc#stop-domain[`stop-domain`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc#stop-instance[`stop-instance`],
 * xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc#stop-local-instance[`stop-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/validate-dcom.adoc#validate-dcom[`validate-dcom`],
 * http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html [Java Platform Debugger Architecture (JPDA)]
 

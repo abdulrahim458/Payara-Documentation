@@ -17,8 +17,6 @@ asadmin [asadmin-options] deploy [--help]
 [--upload={true|false}]
 [--retrieve local_dirpath]
 [--dbvendorname dbvendorname]
-[--createtables={true|false}|--dropandcreatetables={true|false}]
-[--uniquetablenames={true|false}]
 [--deploymentplan deployment_plan]
 [--altdd alternate_deploymentdescriptor]
 [--runtimealtdd runtime_alternate_deploymentdescriptor]
@@ -44,10 +42,6 @@ endif::[]
 == Description
 
 The `deploy` subcommand deploys applications to the server. Applications can be enterprise applications, web applications, Enterprise JavaBeans (EJB) modules, connector modules, and application client modules. If the component is already deployed or already exists, it is forcibly redeployed if the `--force` option is set to `true` (default is `false`).
-
-The `--createtables` and `--dropandcreatetables` options are boolean flags and therefore can take the values of true or false. These options are only used during deployment of CMP beans that have not been mapped to a database (that is, no `sun-cmp-mappings.xml` descriptor is provided in the module's `META-INF` directory). They are ignored otherwise.
-
-The `--createtables` and `--dropandcreatetables` options are mutually exclusive; only one should be used. If drop and/or create tables fails, the deployment does not fail; a warning message is provided in the log file.
 
 This subcommand is supported in remote mode only.
 
@@ -88,19 +82,13 @@ This subcommand is supported in remote mode only.
   Retrieves the client stub JAR file from the server machine to the local directory.
 *`--dbvendorname`*:
 //TODO - Consider removing JavaDB/Derby support
-  Specifies the name of the database vendor for which tables are created. Supported values include `db2`, `mssql`, `h2`, `mysql`, `oracle`, `derby`, `javadb`, `postgresql`, and `sybase`. These values are case-insensitive. If not specified, the value of the `database-vendor-name` attribute in `glassfish-ejb-jar.xml` is used. If no value is specified, a connection is made to the resource specified by the `jndi-name` subelement of the `cmp-resource` element in the `glassfish-ejb-jar.xml` file, and the database vendor name read. If the connection cannot be established, or if the value is not valid, SQL-92 compliance is presumed.
-*`--createtables`*:
-  If specified as true, creates tables at deployment of an application with unmapped CMP beans. If specified as false, tables are not created. If not specified, the value of the `create-tables-at-deploy` entry in the `cmp-resource` element of the `glassfish-ejb-jar.xml` file determines whether or not tables are created. No unique constraints are created for the tables. This parameter is deprecated and will be removed in Payara 7.
-*`--dropandcreatetables`*:
-  If specified as true when the component is redeployed, the tables created by the previous deployment are dropped before creating the new tables. Applies to deployed applications with unmapped CMP beans. Preexisting tables will not be dropped on the initial deployment of an application or on a deployment that follows an explicit undeploy. If specified as false, tables are neither dropped nor created. If not specified, the tables are dropped if the `drop-tables-at-undeploy` entry in the `cmp-resource` element of the `glassfish-ejb-jar.xml` file is set to true, and the new tables are created if the `create-tables-at-deploy` entry in the `cmp-resource` element of the `glassfish-ejb-jar.xml` file is set to true. This parameter is deprecated and will be removed in Payara 7.
-*`--uniquetablenames`*:
-  Guarantees unique table names for all the beans and results in a hash code added to the table names. This is useful if you have an application with case-sensitive bean names. Applies to applications with unmapped CMP beans. This parameter is deprecated and will be removed in Payara 7.
+  Specifies the name of the database vendor for which tables are created. Supported values include `db2`, `mssql`, `h2`, `mysql`, `oracle`, `derby`, `javadb`, `postgresql`, and `sybase`. These values are case-insensitive. If not specified, the value of the `database-vendor-name` attribute in `glassfish-ejb-jar.xml` is used. If the connection cannot be established, or if the value is not valid, SQL-92 compliance is presumed.
 *`--deploymentplan`*:
   Deploys the deployment plan, which is a JAR file that contains Payara Server descriptors. Specify this option when deploying a pure EAR file. A pure EAR file is an EAR without Payara Server descriptors.
 *`--altdd`*:
   Deploys the application using a Jakarta EE standard deployment descriptor that resides outside of the application archive. Specify an absolute path or a relative path to the alternate deployment descriptor file. The alternate deployment descriptor overrides the top-level deployment descriptor packaged in the archive. For example, for an EAR, the `--altdd` option overrides `application.xml`. For a standalone module, the `--altdd` option overrides the top-level module descriptor such as `web.xml`.
 *`--runtimealtdd`*:
-  Deploys the application using a Payara Server runtime deployment descriptor that resides outside of the application archive. Specify an absolute path or a relative path to the alternate deployment descriptor file. The alternate deployment descriptor overrides the top-level deployment descriptor packaged in the archive. For example, for an EAR, the `--runtimealtdd` option overrides `glassfish-application.xml`. For a standalone module, the `--runtimealtdd` option overrides the top-level module descriptor such as `glassfish-web.xml` (deprecated) or `payara-web.xml`. Applies to Payara Server deployment descriptors only (`glassfish-*.xml`/`payara-*.xml`); the name of the alternate deployment descriptor file must begin with `glassfish-` (or `payara-` in specific cases). Does not apply to `sun-*.xml` deployment descriptors, which are deprecated.
+  Deploys the application using a Payara Server runtime deployment descriptor that resides outside of the application archive. Specify an absolute path or a relative path to the alternate deployment descriptor file. The alternate deployment descriptor overrides the top-level deployment descriptor packaged in the archive. For example, for an EAR, the `--runtimealtdd` option overrides `payara-application.xml`. For a standalone module, the `--runtimealtdd` option overrides the top-level module descriptor such as `glassfish-web.xml` (deprecated) or `payara-web.xml`. Applies to Payara Server deployment descriptors only (`glassfish-*.xml`/`payara-*.xml`); the name of the alternate deployment descriptor file must begin with `glassfish-` (or `payara-` in specific cases). Does not apply to `sun-*.xml` deployment descriptors, which are deprecated.
 *`--deploymentorder`*:
   Specifies the deployment order of the application. This is useful if the application has dependencies and must be loaded in a certain order at server startup. The deployment order is specified as an integer. The default value is 100. Applications with lower numbers are loaded before applications with higher numbers. For example, an application with a deployment order of 102 is loaded before an application with a deployment order of 110. If a deployment order is not specified, the default value of 100 is assigned. If two applications have the same deployment order, the first application to be deployed is the first application to be loaded at server startup. +
   The deployment order is typically specified when the application is first deployed but can also be specified or changed after initial deployment using the `set` subcommand. You can view the deployment order of an application using the `get` subcommand.
@@ -118,7 +106,7 @@ This subcommand is supported in remote mode only.
   This option controls whether web sessions, SFSB instances, and persistently created EJB timers are retained between redeployments. +
   The default is false. This option is supported only on the default server instance, named `server`. It is not supported and ignored for any other target. +
   Some changes to an application between redeployments prevent this feature from working properly. For example, do not change the set of instance variables in the SFSB bean class. +
-  For web applications, this feature is applicable only if in the `glassfish-web-app.xml` file the `persistence-type` attribute of the `session-manager` element is `file`. +
+  For web applications, this feature is applicable only if in the `payara-web.xml` file the `persistence-type` attribute of the `session-manager` element is `file`. +
   For stateful session bean instances, the persistence type without high availability is set in the server (the `sfsb-persistence-type` attribute) and must be set to `file`, which is the default and recommended value. +
   If any active web session, SFSB instance, or EJB timer fails to be preserved or restored, none of these will be available when the redeployment is complete. However, the redeployment continues and a warning is logged. +
   To preserve active state data, Payara Server serializes the data and saves it in memory. To restore the data, the class loader of the newly redeployed application deserializes the data that was previously saved.
@@ -243,20 +231,7 @@ Application deployed successfully with name hello.
 Command deploy executed successfully
 ----
 
-*Example 4 Deploying an Enterprise Bean*
-
-This example deploys a component based on the EJB specification (enterprise bean) with CMP and creates the database tables used by the bean.
-
-This example uses the `--target` option. The target in this example is an existing cluster, `cluster1`.
-
-[source,shell]
-----
-asadmin> deploy --createtables=true --target cluster1 EmployeeEJB.jar
-Application deployed successfully with name EmployeeEJB.
-Command deploy executed successfully
-----
-
-*Example 5 Deploying a Connector Module*
+*Example 4 Deploying a Connector Module*
 
 This example deploys a connector module that is packaged in a RAR file.
 
@@ -269,7 +244,7 @@ Application deployed successfully with name jdbcra.
 Command deploy executed successfully
 ----
 
-*Example 6 Specifying the Deployment Order for an Application*
+*Example 5 Specifying the Deployment Order for an Application*
 
 This example specifies the deployment order for two applications. The `cart` application is loaded before the `horse` application at server startup.
 
@@ -283,7 +258,7 @@ asadmin> deploy --deploymentorder 110 --name horse horse.war
 ...
 ----
 
-*Example 7 Deploying an Application Using an Alternate Jakarta EE 8 Deployment Descriptor File*
+*Example 6 Deploying an Application Using an Alternate Jakarta EE 8 Deployment Descriptor File*
 
 This example deploys an application using a Jakarta EE standard deployment descriptor file that resides outside the application archive.
 
@@ -294,7 +269,7 @@ Application deployed successfully with name cart.
 Command deploy executed successfully
 ----
 
-*Example 8 Deploying an Application Using an Alternate Payara Server Deployment Descriptor File*
+*Example 7 Deploying an Application Using an Alternate Payara Server Deployment Descriptor File*
 
 This example deploys an application using a Payara Server runtime deployment descriptor file that resides outside the application archive.
 
@@ -305,7 +280,7 @@ Application deployed successfully with name horse.
 Command deploy executed successfully
 ----
 
-*Example 9 Wrapping a WAR File as a WAB*
+*Example 8 Wrapping a WAR File as a WAB*
 
 This example wraps a plain WAR file as a WAB when an OSGi bundle is deployed, and is specific to components packaged as OSGi bundles.
 
@@ -335,7 +310,6 @@ Command deploy executed successfully
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
 * xref:technical-documentation/payara-server-documentation/command-reference/get.adoc#get[`get`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-components.adoc#list-components[`list-components`],
 * xref:technical-documentation/payara-server-documentation/command-reference/redeploy.adoc#redeploy[`redeploy`],
 * xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`],
 * xref:technical-documentation/payara-server-documentation/command-reference/undeploy.adoc#undeploy[`undeploy`]

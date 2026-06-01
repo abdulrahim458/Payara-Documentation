@@ -11,14 +11,8 @@ xref:ROOT:technical-documentation/payara-server-documentation/command-reference/
 xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-application-ref.adoc[`create-application-ref`]::
   Creates a reference from a cluster or an un-clustered server instance to a previously deployed Jakarta EE application or module. This effectively results in the application element being deployed and made available on the targeted instance or cluster.
 
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-lifecycle-module.adoc[`create-lifecycle-module`]::
-  Creates a lifecycle module. A lifecycle module provides a means of running a short or long duration Jakarta-based task at a specific stage in the server life cycle.
-
 xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-application-ref.adoc[`delete-application-ref`]::
   Removes a reference from a cluster or an un-clustered server instance to a previously deployed Jakarta EE application or module. This effectively results in the application element being un-deployed on the targeted instance or cluster.
-
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-lifecycle-module.adoc[`delete-lifecycle-module`]::
-  Deletes a lifecycle module.
 
 xref:ROOT:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`]::
   Deploys an enterprise application, web application, EJB module, connector module, or application client module. If the component is already deployed or already exists, you can forcefully redeploy if you set the `--force` option to `true`.
@@ -28,8 +22,6 @@ xref:technical-documentation/payara-server-documentation/command-reference/deplo
 Deploys an enterprise application, web application, EJB module, connector module, or application client module from a remote location, either using a URL or a set of Maven GAV coordinates.
 For usage instructions, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-from-a-url[To Deploy from a URL] and xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-using-maven-artifact[To Deploy using a Maven Artifact].
 
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/deploydir.adoc[`deploydir`]::
-  This subcommand is deprecated. Use the `deploy` subcommand instead.
 
 xref:ROOT:technical-documentation/payara-server-documentation/command-reference/disable.adoc[`disable`]::
   Immediately deactivates the named application or module. If the component has not been deployed, an error message is returned. Supported in remote mode only.
@@ -53,12 +45,6 @@ xref:ROOT:technical-documentation/payara-server-documentation/command-reference/
 xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-libraries.adoc[`list-libraries`]::
   Lists library JAR files that have been added to Payara Server. You can specify whether to list libraries in the Common class loader directory,
   the Jakarta optional package directory, or the application-specific class loader directory.
-
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-lifecycle-modules.adoc[`list-lifecycle-modules`]::
-  Lists lifecycle modules.
-
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-components.adoc[`list-components`]::
-  This subcommand is deprecated. Use the `list-applications` subcommand instead.
 
 xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-sub-components.adoc[`list-sub-components`]::
   Lists EJBs or servlets in a deployed module or in a module of the deployed application.

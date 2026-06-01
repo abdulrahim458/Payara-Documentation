@@ -12,8 +12,6 @@ asadmin [asadmin-options] redeploy [--help]
 [--upload={true|false}]
 [--retrieve local_dirpath]
 [--dbvendorname dbvendorname]
-[--createtables={true|false}|--dropandcreatetables={true|false}]
-[--uniquetablenames={true|false}]
 [--deploymentplan deployment_plan]
 [--altdd alternate_deploymentdescriptor]
 [--runtimealtdd runtime_alternate_deploymentdescriptor]
@@ -32,9 +30,7 @@ asadmin [asadmin-options] redeploy [--help]
 [--target target]
 [--type pkg-type]
 [--properties(name=value)[:name=value]*]
-ifeval::["{page-site-edition}" == "community"]
 [--warlibs={false|true}]
-endif::[]
 [file_archive|filepath]
 ----
 
@@ -90,22 +86,7 @@ This subcommand is supported in remote mode only.
   Retrieves the client stub JAR file from the server machine to the local directory.
 //TODO - Consider removing JavaDB/Derby support
 *`--dbvendorname`*:
-  Specifies the name of the database vendor for which tables are created. Supported values include `h2`, `db2`, `mssql`, `oracle`, `derby`, `javadb`, `postgresql`, and `sybase`, case-insensitive. If not specified, the value of the `database-vendor-name` attribute in `glassfish-ejb-jar.xml` is used. If no value is specified, a connection is made to the resource specified by the `jndi-name` subelement of the `cmp-resource` element in the `glassfish-ejb-jar.xml` file, and the database vendor name read. If the connection cannot be established, or if the value is not valid, SQL-92 compliance is presumed.
-*`--createtables`*:
-  If specified as true, creates tables at deployment of an application with unmapped CMP beans. If specified as false, tables are not
-  created. If not specified, the value of the `create-tables-at-deploy` entry in the `cmp-resource` element of the `glassfish-ejb-jar.xml`
-  file determines whether or not tables are created. No unique constraints are created for the tables. This parameter is deprecated and will be removed in Payara 7.
-*`--dropandcreatetables`*:
-  If specified as true when the component is redeployed, the tables created by the previous deployment are dropped before creating the new
-  tables. Applies to deployed applications with unmapped CMP beans. If specified as false, tables are neither dropped nor created. If not
-  specified, the tables are dropped if the `drop-tables-at-undeploy` entry in the `cmp-resource` element of the `glassfish-ejb-jar.xml`
-  file is set to true, and the new tables are created if the `create-tables-at-deploy` entry in the `cmp-resource` element of the
-  `glassfish-ejb-jar.xml` file is set to true. This parameter is deprecated and will be removed in Payara 7.
-*`--uniquetablenames`*:
-  Guarantees unique table names for all the beans and results in a hash
-  code added to the table names. This is useful if you have an
-  application with case-sensitive bean names. Applies to applications
-  with unmapped CMP beans. This parameter is deprecated and will be removed in Payara 7.
+  Specifies the name of the database vendor for which tables are created. Supported values include `h2`, `db2`, `mssql`, `oracle`, `derby`, `javadb`, `postgresql`, and `sybase`, case-insensitive. If not specified, the value of the `database-vendor-name` attribute in `glassfish-ejb-jar.xml` is used. If the connection cannot be established, or if the value is not valid, SQL-92 compliance is presumed.
 *`--deploymentplan`*:
   Deploys the deployment plan, which is a JAR file that contains Payara Server descriptors. Specify this option when deploying a
   pure EAR file. A pure EAR file is an EAR without Payara Server descriptors.
@@ -115,7 +96,7 @@ This subcommand is supported in remote mode only.
   descriptor packaged in the archive. For example, for an EAR, the `--altdd` option overrides `application.xml`. For a standalone module,
   the `--altdd` option overrides the top-level module descriptor such as `web.xml`.
 *-`-runtimealtdd`*:
-  Deploys the application using a Payara Server runtime deployment descriptor that resides outside of the application archive. Specify an absolute path or a relative path to the alternate deployment descriptor file. The alternate deployment descriptor overrides the top-level deployment descriptor packaged in the archive. For example, for an EAR, the `--runtimealtdd` option overrides `glassfish-application.xml`. For a standalone module, the `--runtimealtdd` option overrides the top-level module descriptor such as `glassfish-web.xml` (deprecated) or `payara-web.xml`. Applies to Payara Server deployment descriptors only (`glassfish-*.xml`/`payara-*.xml`); the name of the alternate
+  Deploys the application using a Payara Server runtime deployment descriptor that resides outside of the application archive. Specify an absolute path or a relative path to the alternate deployment descriptor file. The alternate deployment descriptor overrides the top-level deployment descriptor packaged in the archive. For example, for an EAR, the `--runtimealtdd` option overrides `payara-application.xml`. For a standalone module, the `--runtimealtdd` option overrides the top-level module descriptor such as `glassfish-web.xml` (deprecated) or `payara-web.xml`. Applies to Payara Server deployment descriptors only (`glassfish-*.xml`/`payara-*.xml`); the name of the alternate
   deployment descriptor file must begin with `glassfish-` (or `payara-` in specific cases). Does not apply to `sun-*.xml` deployment descriptors, which are deprecated.
 *`--deploymentorder`*:
   Specifies the deployment order of the application. This is useful if the application has dependencies and must be loaded in a certain order
@@ -146,7 +127,7 @@ This subcommand is supported in remote mode only.
   The default is false. This option is supported only on the default server instance, named `server`. It is not supported and ignored for any other target. +
   Some changes to an application between redeployments prevent this feature from working properly. For example, do not change the set of
   instance variables in the SFSB bean class. +
-  For web applications, this feature is applicable only if in the `glassfish-web-app.xml` file the `persistence-type` attribute of the
+  For web applications, this feature is applicable only if in the `payara-web.xml` file the `persistence-type` attribute of the
   `session-manager` element is `file`. +
   For stateful session bean instances, the persistence type without high availability is set in the server (the `sfsb-persistence-type`
   attribute) and must be set to `file`, which is the default and recommended value. +
@@ -154,12 +135,10 @@ This subcommand is supported in remote mode only.
   redeployment is complete. However, the redeployment continues and a warning is logged. +
   To preserve active state data, Payara Server serializes the data and saves it in memory. To restore the data, the class loader of the
   newly redeployed application deserializes the data that was previously saved.
-*ifeval*: ["{page-site-edition}" == "community"]
 *`--warlibs`*:
   If set to true, enables an application to make use of shared libraries installed to `domain_dir/lib/warlibs`.
   Default is false.
   This parameter takes precedence over enabling warlibs in --properties.
-*endif*: []
 *`--libraries`*:
   A comma-separated list of library JAR files. Specify the library JAR files by their relative or absolute paths. Specify relative paths
   relative to domain-dir`/lib/applibs`. The libraries are made available to the application in the order specified.
@@ -229,13 +208,11 @@ This subcommand is supported in remote mode only.
   `preserveAppScopedResources`;;
     If set to `true`, preserves any application-scoped resources and restores them during redeployment. Default is `false`. +
 
-*ifeval*: ["{page-site-edition}" == "community"]
   `warlibs={false|true}`;;
     (This property will be overriden by `--warlibs`)
     If set to true, enables an application to make use of shared libraries installed to `domain_dir/lib/warlibs`. Default is `false`. +
     Libraries stored in this directory allows a developer to create and deploy skinny WARs, as the libraries stored in this directory are subject to additional annotation and extension scanning & processing for CDI, EJB, Servlet, and more.
     Unlike common and application libraries (those stored in `domain_dir/lib` and `domain_dir/lib/applibs` respectively), warlibs are cached and don't dynamically update if the files within the directory are modified.
-*endif*: []
 
   Other available properties are determined by the implementation of the component that is being redeployed. +
   For components packaged as OSGi bundles (`--type=osgi`), the `deploy` subcommand accepts properties arguments to wrap a WAR file as a WAB
@@ -300,5 +277,4 @@ Command redeploy executed successfully
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`],
 * xref:technical-documentation/payara-server-documentation/command-reference/get.adoc#get[`get`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-components.adoc#list-components[`list-components`],
 * xref:technical-documentation/payara-server-documentation/command-reference/undeploy.adoc#undeploy[`undeploy`]

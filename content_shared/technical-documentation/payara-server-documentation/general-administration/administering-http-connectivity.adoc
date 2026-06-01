@@ -185,7 +185,7 @@ This example creates an HTTP listener named `sampleListener` that uses a non-def
 
 [source,shell]
 ----
-asadmin create-http-listener --listeneraddress `0.0.0.0` --listenerport 7272 --defaultvs server --servername host1.sun.com --acceptorthreads 100 --securityenabled=false --enabled=false sampleListener
+asadmin create-http-listener --listeneraddress `0.0.0.0` --listenerport 7272 --default-virtual-server server --servername host1.sun.com --acceptorthreads 100 --securityenabled=false --enabled=false sampleListener
 Command create-http-listener executed successfully.
 ----
 
@@ -540,10 +540,6 @@ TIP: Setting this to false helps prevent cross-site scripting attacks.
 | Chunking Enabled
 | Enables HTTP response chunking.
 | `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.chunking-enabled=[true\|false]`
-
-| XPoweredBy
-| Used to overwrite the default `X-Powered-By` header string.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.xpowered-by=value`
 
 | XFrame Options
 | When enabled, the `X-Frame-Options` header will be set to `SAMEORIGIN`. This can still be overridden by a deployed application.
@@ -1071,7 +1067,7 @@ Can be overridden for an individual application in the `glassfish-web.xml`/`paya
 </payara-web-app>
 ----
 
-IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future major version release.
+IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
 NOTE: Setting this property to `true` on Windows systems exposes JSP source code.

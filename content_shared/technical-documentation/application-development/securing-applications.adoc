@@ -72,13 +72,13 @@ There are two levels of declarative security, as follows:
 
 For an application, roles used by any application must be defined in `@DeclareRoles` annotations in the code or `role-name` elements in the application deployment descriptor (`application.xml`).
 
-These role names are scoped to the EJB XML deployment descriptors (`ejb-jar.xml` and `glassfish-ejb-jar.xml` files) and to the servlet XML deployment descriptors (`web.xml` and `payara-web.xml` files).
+These role names are scoped to the EJB XML deployment descriptors (`ejb-jar.xml` and `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` files) and to the servlet XML deployment descriptors (`web.xml` and `payara-web.xml` files).
 
 For an individually deployed web or EJB module, you define roles using `@DeclareRoles` annotations or `role-name` elements in the Jakarta EE deployment descriptor files `web.xml` or `ejb-jar.xml`.
 
-To map roles to principals and groups, define matching `security-role-mapping` elements in the `glassfish-application.xml`, `glassfish-ejb-jar.xml`, or `glassfish-web.xml`/`payara-web.xml` file for each `role-name` used by the application.
+To map roles to principals and groups, define matching `security-role-mapping` elements in the `glassfish-application.xml`/`payara-application.xml`, `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml`, or `glassfish-web.xml`/`payara-web.xml` file for each `role-name` used by the application.
 
-IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future major version release.
+IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
 By default, group principal names are mapped to roles of the same name.
@@ -93,10 +93,10 @@ Component level security encompasses web components and EJB components.
 
 A secure web container authenticates users and authorizes access to a servlet or JSP by using the security policy laid out in the servlet XML deployment descriptors (`web.xml`, `glassfish-web.xml` and `payara-web.xml` files).
 
-IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future major version release.
+IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-The EJB container is responsible for authorizing access to a bean method by using the security policy laid out in the EJB XML deployment descriptors (`ejb-jar.xml` and `glassfish-ejb-jar.xml` files).
+The EJB container is responsible for authorizing access to a bean method by using the security policy laid out in the EJB XML deployment descriptors (`ejb-jar.xml` and `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` files).
 
 [[programmatic-security]]
 === Programmatic Security
@@ -120,13 +120,13 @@ By default, any groups that an authenticated user belongs to will be mapped to r
 
 Therefore, the *Default Principal To Role Mapping* setting is enabled by default on the _Security_ page of the Payara Administration Console. To change the default mapping you can clear this setting.
 
-For applications, you define roles in `@DeclareRoles` annotations or the Jakarta EE deployment descriptor file `application.xml`. You define the corresponding role mappings in the Payara Server deployment descriptor file `glassfish-application.xml`.
+For applications, you define roles in `@DeclareRoles` annotations or the Jakarta EE deployment descriptor file `application.xml`. You define the corresponding role mappings in the Payara Server deployment descriptor file `glassfish-application.xml`/`payara-application.xml`.
 
-For individually deployed web or EJB modules, you define roles in `@DeclareRoles` annotations or the Jakarta EE deployment descriptor files `web.xml` or `ejb-jar.xml`. You define the corresponding role mappings in the Payara Server deployment descriptor files `glassfish-web.xml`/`payara-web.xml` or `glassfish-ejb-jar.xml`.
+For individually deployed web or EJB modules, you define roles in `@DeclareRoles` annotations or the Jakarta EE deployment descriptor files `web.xml` or `ejb-jar.xml`. You define the corresponding role mappings in the Payara Server deployment descriptor files `glassfish-web.xml`/`payara-web.xml` or `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml`.
 
 For more information regarding Jakarta EE deployment descriptors, see the Jakarta EE Specification. For more information regarding Payara Server deployment descriptors, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors]" in the Application Deployment section.
 
-Each `security-role-mapping` element in the `glassfish-application.xml`, `glassfish-web.xml`/`payara-web.xml`, or `glassfish-ejb-jar.xml` file maps a role name permitted by the application or module to principals and groups.
+Each `security-role-mapping` element in the `glassfish-application.xml`/`payara-application.xml`, `glassfish-web.xml`/`payara-web.xml`, or `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` file maps a role name permitted by the application or module to principals and groups.
 
 For example, a `payara-web.xml` file for an individually deployed web module might contain the following:
 
@@ -146,7 +146,7 @@ For example, a `payara-web.xml` file for an individually deployed web module mig
 </payara-web-app>
 ----
 
-IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future major version release.
+IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
 A role can be mapped to either specific principals or to groups (or both). The principal or group names used must be valid principals or groups in the realm for the application or module.
@@ -222,22 +222,22 @@ You can configure a realm in one of these ways:
 
 The following deployment descriptor elements have optional `realm` or `realm-name` data sub-elements or attributes that override the domain's default realm:
 
-* `glassfish-application` element in `glassfish-application.xml`
+* `glassfish-application`/`payara-application` element in `glassfish-application.xml`/`payara-application.xml`
 * `web-app` element in `web.xml`
-* `as-context` element in `glassfish-ejb-jar.xml`
+* `as-context` element in `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml`
 * `client-container` element in `sun-acc.xml`
 * `client-credential` element in `sun-acc.xml`
 
-If modules within an application specify realms, these are ignored. If present, the realm defined in `glassfish-application.xml` is used, otherwise the domain's default realm is used.
+If modules within an application specify realms, these are ignored. If present, the realm defined in `glassfish-application.xml`/`payara-application.xml` is used, otherwise the domain's default realm is used.
 
-For example, a realm is specified in `glassfish-application.xml` as follows:
+For example, a realm is specified in `payara-application.xml` as follows:
 
 [source,xml]
 ----
-<glassfish-application>
+<payara-application>
     ...
     <realm>ldap</realm>
-</glassfish-application>
+</payara-application>
 ----
 
 For more information about the deployment descriptor files and elements, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors]" in the Payara Server Application Deployment section.
@@ -419,90 +419,6 @@ NOTE: The array passed to the `commitUseAuthentication` method should be newly c
 So the second time your custom realm executes it returns an array with `null` elements.
 
 Ideally, your custom realm should not return member variables from the `authenticate` method. It should return local variables  Your custom realm can create a local `String` array in its `authenticate` method, copy the values from the member variables, and return the `String` array.
-
-[[pluggable-audit-module-support]]
-== Pluggable Audit Module Support
-
-Audit modules collect and store information on incoming requests (servlets, EJB components) and outgoing responses. You can create a custom audit module.
-
-IMPORTANT: Audit Modules are deprecated and will be removed in Payara 7.
-
-[[configuring-an-audit-module]]
-=== Configuring an Audit Module
-
-To configure an audit module, you can perform one of the following tasks:
-
-* To specify an audit module using the Administration Console, open the _Security_ component under the relevant configuration, and select the _Audit Modules_ component.
-* You can use the `asadmin create-audit-module` command to configure an audit module.
-
-[[the-auditmodule-class]]
-=== The `AuditModule` Class
-
-You can create a custom audit module by implementing a class that extends the `com.sun.enterprise.security.audit.AuditModule` class.
-
-For Javadoc tool pages relevant to audit modules, see the `com.sun.enterprise.security.audit` package.
-
-The `AuditModule` class provides default "no-op" implementations for each of the following methods, which your custom class can override.
-
-[source,java]
-----
-public class AuditModule{
-    public void init(Properties props);
-}
-----
-
-The preceding method is invoked during server startup when the audit module is initially loaded. The `props` argument contains the configuration properties defined for this module. The module can do any initialization it needs in this method. If the method returns without throwing an exception, Payara Server assumes the module realm is ready to service audit requests. If an exception is thrown, the module is disabled.
-
-[source,java]
-----
-public class AuditModule{
-    public void authentication(String user, String realm, boolean success);
-}
-----
-
-This method is invoked when an authentication request has been processed by a realm for the given user. The `success` flag indicates whether the authorization was granted or denied.
-
-[source,java]
-----
-public class AuditModule{
-    public void webInvocation(String user, HttpServletRequest req, String type, boolean success);
-}
-----
-
-This method is invoked when a web container call has been processed by authorization. The `success` flag indicates whether the authorization was granted or denied. The `req` object is the standard `HttpServletRequest` object for this request.
-
-NOTE: The `type` string is one of `hasUserDataPermission` or `hasResourcePermission`.
-
-[source,java]
-----
-public class AuditModule{
-    public void ejbInvocation(String user, String ejb, String method, boolean success);
-}
-----
-
-This method is invoked when an EJB container call has been processed by authorization. The `success` flag indicates whether the authorization was granted or denied.
-
-NOTE: The `ejb` and `method` strings describe the EJB component and its method that is being invoked.
-
-[source,java]
-----
-public class AuditModule{
-    public void webServiceInvocation(String uri, String endpoint, boolean success);
-}
-----
-
-This method is invoked during validation of a web service request in which the endpoint is a servlet. The `uri` is the URL representation of the web service endpoint.
-
-NOTE: The `endpoint` is the name of the endpoint representation. The `success` flag indicates whether the authorization was granted or denied.
-
-[source,java]
-----
-public class AuditModule{
-    public void ejbAsWebServiceInvocation(String endpoint, boolean success);
-}
-----
-
-This method is invoked during validation of a web service request in which the endpoint is a stateless session bean. The `endpoint` is the name of the endpoint representation. The `success` flag indicates whether the authorization was granted or denied.
 
 [[the-server.policy-file]]
 == The `server.policy` File
@@ -817,7 +733,7 @@ For more details on message security binding for EJB web services,servlet web se
 [[using-a-signature-to-enable-message-protection-for-all-methods]]
 ==== Using a Signature to Enable Message Protection for All Methods
 
-To enable message protection for all methods using digital signature, update the `message-security-binding` element for the EJB web service endpoint in the application's `glassfish-ejb-jar.xml` file.
+To enable message protection for all methods using digital signature, update the `message-security-binding` element for the EJB web service endpoint in the application's `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` file.
 
 To apply the same protection mechanisms for all methods, leave the method-name element blank. xref:#configuring-message-protection-for-a-specific-method-based-on-digital-signatures[Configuring Message Protection for a Specific Method Based on Digital Signatures] discusses listing specific methods or using wildcard characters.
 
@@ -826,11 +742,11 @@ To apply the same protection mechanisms for all methods, leave the method-name e
 
 Follow this procedure:
 
-. Modify the `glassfish-ejb-jar.xml` file by adding the `message-security-binding` element as shown:
+. Modify the `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` file by adding the `message-security-binding` element as shown:
 +
 [source,xml]
 ----
-<glassfish-ejb-jar>
+<payara-ejb-jar>
   <enterprise-beans>
     <unique-id>1</unique-id>
     <ejb>
@@ -848,7 +764,7 @@ Follow this procedure:
       </webservice-endpoint>
     </ejb>
   </enterprise-beans>
-</glassfish-ejb-jar>
+</payara-ejb-jar>
 ----
 
 . Compile and deploy the corresponding application.
@@ -860,7 +776,7 @@ To enable message protection for a specific method, or for a set of
 methods that can be identified using a wildcard value, follow these
 steps.
 
-As in the example discussed in xref:#using-a-signature-to-enable-message-protection-for-all-methods[Using a Signature to Enable Message Protection for All Methods], to enable message protection for a specific method, update the `message-security-binding` element for the EJB web service endpoint in the application's `glassfish-ejb-jar.xml` file.
+As in the example discussed in xref:#using-a-signature-to-enable-message-protection-for-all-methods[Using a Signature to Enable Message Protection for All Methods], to enable message protection for a specific method, update the `message-security-binding` element for the EJB web service endpoint in the application's `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` file.
 
 Add the `request-protection` and `response-protection` elements, which are analogous to the `request-policy` and `response-policy` elements discussed in the Payara Platform Security Guide.
 
@@ -871,11 +787,11 @@ The administration guide includes a table listing the set and order of security 
 
 Follow this procedure.
 
-. Modify the `glassfish-ejb-jar.xml` file by adding the `message-security-binding` element as shown:
+. Modify the `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` file by adding the `message-security-binding` element as shown:
 +
 [source,xml]
 ----
-<glassfish-ejb-jar>
+<payara-ejb-jar>
   <enterprise-beans>
   <unique-id>1</unique-id>
     <ejb>
@@ -903,7 +819,7 @@ Follow this procedure.
       </webservice-endpoint>
     </ejb>
   </enterprise-beans>
-</glassfish-ejb-jar>
+</payara-ejb-jar>
 ----
 
 . Compile and deploy the corresponding application.
@@ -1554,7 +1470,7 @@ After you install and configure the SAM, you can bind it for use by the containe
 
 TIP: You can find a description of the functionality of an `AuthConfigProvider` and of the registration facilities provided by an `AuthConfigFactory` in the Jakarta Authentication specification.
 
-IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future major version release.
+IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
 [[advanced-group-configuration]]
@@ -1639,7 +1555,7 @@ For example, if user roles were mapped like this in the `payara-web.xml` deploym
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 4 Servlet 3.0//EN" "{payaraWebDtd}">
+<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1//EN" "https://raw.githubusercontent.com/payara/Payara-Documentation/main-7/docs/modules/ROOT/pages/Appendix/Schemas/payara-web-app_6_1-0.dtd">
 <payara-web-app error-url="">
   <context-root>/health-services</context-root>
   <security-role-mapping>
@@ -1662,7 +1578,7 @@ Then the role mapping can be based on organizational unit in this case. But you 
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 4 Servlet 3.0//EN" "{payaraWebDtd}">
+<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1//EN" "https://raw.githubusercontent.com/payara/Payara-Documentation/main-7/docs/modules/ROOT/pages/Appendix/Schemas/payara-web-app_6_1-0.dtd">
 <payara-web-app error-url="">
   <context-root>/health-services</context-root>
   <security-role-mapping>
@@ -1722,7 +1638,7 @@ For example, if user authorization roles were mapped like this in the `payara-we
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 4 Servlet 3.0//EN" "{payaraWebDtd}">
+<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1//EN" "https://raw.githubusercontent.com/payara/Payara-Documentation/main-7/docs/modules/ROOT/pages/Appendix/Schemas/payara-web-app_6_1-0.dtd">
 <payara-web-app error-url="">
   <context-root>/health-services</context-root>
   <security-role-mapping>
@@ -1737,7 +1653,7 @@ Then the `principal-name` can be simplified by using only the common name like t
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 4 Servlet 3.0//EN" "{payaraWebDtd}">
+<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1//EN" "https://raw.githubusercontent.com/payara/Payara-Documentation/main-7/docs/modules/ROOT/pages/Appendix/Schemas/payara-web-app_6_1-0.dtd">
 <payara-web-app error-url="">
   <context-root>/health-services</context-root>
   <security-role-mapping>
@@ -1935,13 +1851,13 @@ After pinging this Servlet, and requesting another Servlet over HTTPS that's pro
 
 [source, xml]
 ----
-<glassfish-web-app>
+<payara-web-app>
     <security-role-mapping>
         <role-name>g1</role-name>
         <group-name>g1</group-name>
         <principal-name>CN=u1</principal-name>
     </security-role-mapping>
-</glassfish-web-app>
+</payara-web-app>
 ----
 
 //TODO - Get an updated sample
