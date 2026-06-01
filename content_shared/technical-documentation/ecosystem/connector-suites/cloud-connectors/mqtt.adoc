@@ -90,7 +90,7 @@ public class ReceiveMQTTMessage implements MQTTListener {
 }
 ----
 
-[cols="2",options="header"]
+[cols="1,1,1,1",options="header"]
 |===
 |Config Property Name
 |Type

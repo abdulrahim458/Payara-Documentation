@@ -260,7 +260,7 @@ The following environment variables can be used to configure multiple settings o
 
 The following is a list of variables used by the Docker image to set up the Payara Micro instance startup, so it is not recommended to alter their values:
 
-[width="100%",cols="29%,50%,21%",options="header",]
+[width="100%",cols="29%,50%,21%,1",options="header",]
 |===
 |Variable name |Description | Value
 |`HOME_DIR` |The directory containing the Payara Micro JAR binary and the scripts used to run the instance.| `/opt/payara`|

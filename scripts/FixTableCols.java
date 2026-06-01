@@ -43,10 +43,11 @@ import java.util.stream.Stream;
  */
 public class FixTableCols {
 
-    // Matches the block attribute line that contains a cols= spec, e.g.:
+    // Matches the cols= value inside a block attribute line, e.g.:
     //   [cols="3,2,2,3"]  or  [header, cols="1,2,3"]  or  [%header,cols="~,~,~"]
+    // Three alternatives: double-quoted, single-quoted, or unquoted.
     private static final Pattern COLS_ATTR = Pattern.compile(
-            "(?i)\\bcols=[\"']?([^\"'\\]]+)[\"']?");
+            "(?i)\\bcols=\"([^\"]+)\"|\\bcols='([^']+)'|\\bcols=(\\S+?)[,\\]]");
 
     public static void main(String[] args) throws IOException {
         boolean apply = false;
@@ -113,7 +114,11 @@ public class FixTableCols {
             // Look for a block attribute line containing cols=
             Matcher colsMatcher = COLS_ATTR.matcher(line);
             if (colsMatcher.find() && i + 1 < lines.length && lines[i + 1].trim().equals("|===")) {
-                String colsValue = colsMatcher.group(1).trim();
+                // Extract value from whichever capture group matched (double-quoted, single-quoted, unquoted)
+                String colsValue = colsMatcher.group(1) != null ? colsMatcher.group(1)
+                        : colsMatcher.group(2) != null ? colsMatcher.group(2)
+                        : colsMatcher.group(3);
+                colsValue = colsValue.trim();
                 int declaredCols = parseColCount(colsValue);
 
                 // Collect table body lines (from |=== open to |=== close)
@@ -127,13 +132,18 @@ public class FixTableCols {
 
                 if (declaredCols > 0 && actualCols > 0 && declaredCols != actualCols) {
                     problems++;
-                    String fixedCols = trimColsSpec(colsValue, actualCols);
+                    String fixedCols = fixColsSpec(colsValue, actualCols);
                     System.out.printf("  [%s] cols declared=%d actual=%d  cols=\"%s\" -> cols=\"%s\"%n",
                             filename, declaredCols, actualCols, colsValue, fixedCols);
 
-                    // Rewrite the attribute line
-                    String fixedLine = line.substring(0, colsMatcher.start(1)) + fixedCols
-                            + line.substring(colsMatcher.end(1));
+                    // Rewrite the attribute line, replacing only the value portion
+                    int valueStart = colsMatcher.group(1) != null ? colsMatcher.start(1)
+                            : colsMatcher.group(2) != null ? colsMatcher.start(2)
+                            : colsMatcher.start(3);
+                    int valueEnd = colsMatcher.group(1) != null ? colsMatcher.end(1)
+                            : colsMatcher.group(2) != null ? colsMatcher.end(2)
+                            : colsMatcher.end(3);
+                    String fixedLine = line.substring(0, valueStart) + fixedCols + line.substring(valueEnd);
                     out.append(fixedLine).append("\n");
                     changed = true;
 
@@ -157,38 +167,66 @@ public class FixTableCols {
 
     /**
      * Count the number of columns declared in a cols= value.
-     * Handles comma-separated lists ("3,2,2,3" → 4) and repeat notation ("4*" → 4, "2*~" → 2).
+     *
+     * <p>AsciiDoc cols= semantics:
+     * <ul>
+     *   <li>{@code cols="1,3,1"} — 3 columns with proportional widths 1, 3, 1.
+     *       The number of comma-separated tokens = number of columns.</li>
+     *   <li>{@code cols="3*"} or {@code cols="3*~"} — repeat notation: 3 columns
+     *       of equal (or specified) width. The digit before {@code *} = column count.</li>
+     *   <li>{@code cols="2"} — a single bare integer means ONE column of proportional
+     *       width 2. This is commonly misused as "2 columns" but is NOT correct.</li>
+     * </ul>
      */
     static int parseColCount(String colsValue) {
         // Repeat notation: e.g. "4*" or "3*~"
         if (colsValue.matches("\\d+\\*.*")) {
             return Integer.parseInt(colsValue.split("\\*")[0]);
         }
-        // Comma-separated: count tokens
-        String[] tokens = colsValue.split(",");
-        return tokens.length;
+        // Comma-separated width list: number of tokens = number of columns
+        if (colsValue.contains(",")) {
+            return colsValue.split(",").length;
+        }
+        // Single bare value (e.g. "2" or "~") — one column
+        return 1;
     }
 
     /**
-     * Find the maximum number of cells in any row within the table body.
-     * Cells are counted by the number of {@code |} characters that start a cell,
-     * i.e. {@code |} not preceded by a backslash. Multi-line cells (where a cell
-     * content wraps to the next line without a leading {@code |}) are handled by
-     * only counting lines that contain at least one cell-starting {@code |}.
+     * Detect the actual column count of a table body.
+     *
+     * <p>Two layouts are handled:
+     * <ol>
+     *   <li><b>Inline rows</b> — all cells of a row on one line:
+     *       {@code |cell1 |cell2 |cell3}. The max cell count on any single line
+     *       is the column count.</li>
+     *   <li><b>One-cell-per-line rows</b> — each cell on its own line, rows
+     *       separated by a blank line (or by the header separator blank line
+     *       immediately after the opening {@code |===}). The column count is the
+     *       number of consecutive cell lines in the first row group (header).</li>
+     * </ol>
      */
     static int detectActualCols(String[] lines, int from, int to) {
-        int maxCols = 0;
-
-        // Strategy: a "row" in psych terms is a group of consecutive non-blank lines
-        // each starting with | (or containing |). We collect all | counts per logical row.
-        // Simpler: find the line with the most cell-starting | characters.
+        // Pass 1: check if any line has more than one cell (inline layout)
+        int maxOnOneLine = 0;
         for (int i = from; i < to && i < lines.length; i++) {
-            String line = lines[i];
-            if (line.trim().isEmpty()) continue;
-            int cells = countCellsOnLine(line);
-            if (cells > maxCols) maxCols = cells;
+            int cells = countCellsOnLine(lines[i]);
+            if (cells > maxOnOneLine) maxOnOneLine = cells;
         }
-        return maxCols;
+        if (maxOnOneLine > 1) {
+            return maxOnOneLine; // inline layout — max per line = column count
+        }
+
+        // Pass 2: one-cell-per-line layout.
+        // Count consecutive cell lines in the first row group (before first blank line).
+        // In a table with options="header", the header row is separated from the body
+        // by a blank line; that first group is the header and its cell count = column count.
+        int headerCells = 0;
+        for (int i = from; i < to && i < lines.length; i++) {
+            String trimmed = lines[i].trim();
+            if (trimmed.isEmpty()) break; // end of first row group
+            if (countCellsOnLine(lines[i]) > 0) headerCells++;
+        }
+        return headerCells;
     }
 
     /**
@@ -209,22 +247,38 @@ public class FixTableCols {
     }
 
     /**
-     * Trim a cols= value to keep only {@code actualCols} tokens.
-     * For repeat notation ("4*") the count is reduced directly.
-     * For comma-separated specs the trailing tokens are dropped.
+     * Produce a corrected cols= value for {@code actualCols} columns.
+     *
+     * <ul>
+     *   <li>Repeat notation ({@code "3*"}) — adjust the count: {@code "5*" → "3*"}.</li>
+     *   <li>Comma-separated width list — trim trailing tokens if declared &gt; actual,
+     *       or return unchanged if declared &lt; actual (caller handles mismatch report).</li>
+     *   <li>Single bare value or anything else — the original cols= was wrong (declared 1
+     *       column but table has {@code actualCols}). Generate equal-width list:
+     *       {@code "2" → "1,1,1"} for actualCols=3.</li>
+     * </ul>
      */
-    static String trimColsSpec(String colsValue, int actualCols) {
+    static String fixColsSpec(String colsValue, int actualCols) {
         if (colsValue.matches("\\d+\\*.*")) {
-            // e.g. "4*~" → "2*~"
+            // Repeat notation: adjust the count, keep the width specifier
             String rest = colsValue.substring(colsValue.indexOf('*'));
             return actualCols + rest;
         }
-        String[] tokens = colsValue.split(",");
-        if (actualCols >= tokens.length) return colsValue; // nothing to trim
+        if (colsValue.contains(",")) {
+            // Comma-separated: trim excess tokens or pad with "1" for missing columns
+            String[] tokens = colsValue.split(",");
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < actualCols; i++) {
+                if (i > 0) sb.append(",");
+                sb.append(i < tokens.length ? tokens[i].trim() : "1");
+            }
+            return sb.toString();
+        }
+        // Single value (e.g. "2", "~"): was wrong, generate equal-width list
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < actualCols; i++) {
             if (i > 0) sb.append(",");
-            sb.append(tokens[i].trim());
+            sb.append("1");
         }
         return sb.toString();
     }

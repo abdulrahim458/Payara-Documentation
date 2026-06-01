@@ -42,7 +42,7 @@ payaraMicro {
 *Usage*: `gradle microBundle`
 
 .Configuration tags
-[cols="2",options="header"]
+[cols="1,1,1",options="header"]
 |===
 |Element
 |Default
@@ -64,7 +64,7 @@ payaraMicro {
 *Usage*: `gradle microStart`
 
 .Configuration tags
-[cols="2",options="header"]
+[cols="1,1,1",options="header"]
 |===
 |Element
 |Default
@@ -118,7 +118,7 @@ payaraMicro {
 *Usage*: `gradle microStop`
 
 .Configuration tags
-[cols="2",options="header"]
+[cols="1,1,1",options="header"]
 |===
 |Element
 |Default
@@ -141,7 +141,7 @@ payaraMicro {
 IMPORTANT: This task is specifically designed for integration with the IDEs and Editors. Payara Micro instance allows IDEs to deploy the application in Hot Deploy mode by reusing the existing application instance and updating its classloader and internal components relative to the modified source. This can lead to significant savings of time when an application is redeployed and boost developer productivity even more.
 
 .Configuration tags
-[cols="2",options="header"]
+[cols="1,1,1",options="header"]
 |===
 |Element
 |Default

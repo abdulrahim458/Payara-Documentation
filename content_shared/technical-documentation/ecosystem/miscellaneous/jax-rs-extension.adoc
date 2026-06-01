@@ -26,7 +26,7 @@ To install this extension, simply include its JAR file in the application's WAR 
 
 To configure the alias of the SSL certificate to be used in secure communications established by the client, the following system property must be defined when establishing a new REST client call through the use of the `jakarta.ws.rs.client.ClientBuilder` class:
 
-[cols="1,1", options="header"]
+[cols="1,1,1", options="header"]
 |===
 |Property |Description
 |`fish.payara.jaxrs.client.certificate.alias` | `PayaraConstants.JAXRS_CLIENT_CERTIFICATE_ALIAS` | The alias name of the certificate

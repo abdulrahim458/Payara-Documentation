@@ -16,7 +16,7 @@ http://server:port/context-root/servlet-mapping?name=value
 ----
 
 .Table 6-1 URL Fields for Servlets Within an Application
-[header, cols="3"]
+[header, cols="1,1,1,1"]
 |===
 |URL element
 |Description

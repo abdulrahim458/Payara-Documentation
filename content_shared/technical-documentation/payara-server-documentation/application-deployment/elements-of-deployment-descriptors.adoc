@@ -565,7 +565,7 @@ xref:technical-documentation/payara-server-documentation/application-deployment/
 The following table describes subelements for the `cache-helper` element.
 
 .`cache-helper` Subelements
-[cols=3,2,6",options="header"]
+[cols=1,1,1,2,6",options="header"]
 |===
 |Element |Required |Description
 

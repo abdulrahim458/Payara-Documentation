@@ -35,10 +35,12 @@ variables:
         CONTENT_DIR: content_enterprise
         INDEX_GROUP_LABEL: "Azul Payara"
         SITE_URL: https://docs.azul.com/payara
+        VERSION: 7
       - DOCS_ID: payara-community
         CONTENT_DIR: content_community
         INDEX_GROUP_LABEL: "Azul Payara Community"
         SITE_URL: https://docs.azul.com/payara-community
+        VERSION: 7
 
 # Template for jobs that use HTML templates (depends on the "get_templates" job).
 .cache_job: &cache_configuration
@@ -70,6 +72,10 @@ get_templates:
 
 docs_html:
   stage: build
+  # Serialize both matrix instances on the same runner: doc-builder.rb uses a
+  # hardcoded /tmp/build_docs working directory, so parallel builds on a shell
+  # executor race and destroy each other's cwd.
+  resource_group: docs_html_build
   <<: [*docs_matrix, *cache_configuration]
   script:
     - |
@@ -142,8 +148,12 @@ deploy_to_staging_server:
     GIT_STRATEGY: none
   script:
     - |
-      echo "Uploading HTML ${VERSION} to STAGING server for ${DOCS_ID}"
+      echo "Uploading HTML ${VERSION} to STAGING server as CURRENT"
       rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${STAGING_DIR}
+      
+      echo "Uploading HTML ${VERSION} to STAGING server in version directory '${VERSION_DIRECTORY}/${VERSION}'"
+      ssh ${PROD_SERVER} mkdir -p ${STAGING_DIR}/${VERSION_DIRECTORY}/${VERSION}
+      rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${STAGING_DIR}/${VERSION_DIRECTORY}/${VERSION}
 
 deploy_to_prod_server:
   stage: deploy
@@ -153,14 +163,15 @@ deploy_to_prod_server:
     GIT_STRATEGY: none
   script:
     - |
-      echo "Uploading HTML ${VERSION} to PRODUCTION server for ${DOCS_ID}"
+      echo "Uploading HTML ${VERSION} to PRODUCTION server as CURRENT"
       rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${PROD_DIR}
-    # Start the purge CDN cache pipeline
-    - "curl -X POST -F token=${CICD_TRIGGER_TOKEN_PURGE} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2016/trigger/pipeline"
-    # Start the Docs Index Generator pipeline
-    #- "curl -X POST -F token=${CICD_TRIGGER_TOKEN_INDEXER} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/1622/trigger/pipeline"
-    # Start the Docs Quality Control pipeline
-    #- "curl -X POST -F token=${CICD_TRIGGER_TOKEN_QUALITY} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2038/trigger/pipeline"
+      
+      echo "Uploading HTML ${VERSION} to PRODUCTION server version directory '${VERSION_DIRECTORY}/${VERSION}'"
+      ssh ${PROD_SERVER} mkdir -p ${PROD_DIR}/${VERSION_DIRECTORY}/${VERSION}
+      rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${PROD_DIR}/${VERSION_DIRECTORY}/${VERSION}
+      
+      # Start the purge CDN cache pipeline
+      - "curl -X POST -F token=${CICD_TRIGGER_TOKEN_PURGE} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2016/trigger/pipeline"
   when: manual
   only:
     - main

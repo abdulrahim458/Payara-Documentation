@@ -22,7 +22,7 @@ In addition, this version introduces OpenTelemetry Tracing as a replacement for 
 This is supported by the Payara Platform Community starting from release *6.2023.3*
 
 == What does each specification contain?
-[cols="1", options="header"]
+[cols="1,1,1", options="header"]
 |===
 |Version
 |Specifications

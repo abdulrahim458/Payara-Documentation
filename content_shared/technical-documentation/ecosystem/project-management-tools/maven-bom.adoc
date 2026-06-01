@@ -60,7 +60,7 @@ The following is a summary of all dependencies included in the BOM, grouped by c
 
 Distribution artifacts do not define a Maven scope and are therefore imported in `compile` scope.
 
-[%header, cols=",a,"]
+[%header, cols=",a,1"]
 |===
 |Artifact | Example usage | Note
 
@@ -138,7 +138,7 @@ Distribution artifacts do not define a Maven scope and are therefore imported in
 
 Standard APIs are defined in `provided` scope, as they already include classes that are present in the server's runtime.
 
-[%header, cols=",a,"]
+[%header, cols=",a,1"]
 |===
 |Artifact | Example usage | Note
 
@@ -276,7 +276,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 
 This is a non-exhaustive list of dependencies. By default all are declared in their respective default scopes, but it is more correct to use them with scope `provided` if they are already present in the server's internal modules.
 
-[%header, cols=",a,"]
+[%header, cols=",a,1"]
 |===
 |Artifact | Example usage | Note
 
