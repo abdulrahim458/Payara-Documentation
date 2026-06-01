@@ -1,4 +1,4 @@
-= Payara Server 6.2022.1.Alpha4 Jakarta EE 10 Platform Certification Summary
+= Platform TCK Results
 
 As required by the
 https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License^],

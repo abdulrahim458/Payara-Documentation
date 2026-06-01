@@ -1,4 +1,4 @@
-= TCK Results
+= Core TCK Results
 
 As required by the
 https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License^],

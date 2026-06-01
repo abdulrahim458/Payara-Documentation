@@ -1,4 +1,4 @@
-= TCK Results
+= Core TCK Results
 
 As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License^], following is a summary of the TCK results for Payara Server releases for Jakarta EE Core Profile 10.
 
