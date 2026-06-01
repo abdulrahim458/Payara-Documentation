@@ -25,6 +25,7 @@ variables:
   PROD_SERVER: azuldocs@cdn-access.azulsystems.com
   STAGING_DIR: "/mnt/efs/docs.azul.com/staging-public_html/$DOCS_ID"
   PROD_DIR: "/mnt/efs/docs.azul.com/public_html/$DOCS_ID"
+  VERSION_DIRECTORY: "version"
 
 # Build matrix — one instance per docs set.
 # content_shared is merged into each build (mirrors build_html_locally.sh).
