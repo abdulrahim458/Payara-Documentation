@@ -1,0 +1,405 @@
+= Payara Starter Documentation
+
+[[introduction]]
+== Introduction
+
+Payara Starter is a web application and command line tool designed to accelerate Jakarta EE development by simplifying the creation of new application projects. It supports the creation of both Maven and Gradle projects, allowing developers to focus on coding their application components in a faster way as they don't have to deal with the complexities of setting up their projects.
+
+* link:https://start.payara.fish[Website^]
+* link:https://github.com/payara/ecosystem-starter[GitHub Repository^]
+* link:https://mvnrepository.com/artifact/fish.payara.starter/payara-starter-archetype[Maven Central Repository for Payara Starter Archetype^]
+
+[[key-features-of-payara-starter]]
+== Key Features of Payara Starter
+
+* Build System Flexibility: Supports Maven and Gradle as Project Management tools for seamless integration with preferred build systems.
+* Customizable Project Details: Define crucial project specifics upfront, aligning with organizational naming conventions.
+* Java and Jakarta EE Version Control: Allows the selection of specific versions to ensure compatibility and leverage the latest features.
+* MicroProfile Integration: Includes options to integrate MicroProfile APIs for building resilient, scalable services.
+* Payara Platform Compatibility: Effortlessly works with the Payara Platform, ensuring readiness for deployment.
+* Docker Support: Facilitates Docker compatibility, streamlining containerization for agile deployment.
+* Unit Test Templates: Optionally includes test templates, encouraging best testing practices from project initiation.
+* Advanced Security Configuration: Optional advanced security setup for robust authentication via Jakarta Security, facilitating secure application development from the start.
+
+[[supported-jakartaee-profiles]]
+== Supported Jakarta EE Profiles
+
+Payara Starter supports various Jakarta EE profiles:
+
+* Platform: `jakarta.platform:jakarta.jakartaee-api`
+* Web Profile: `jakarta.platform:jakarta.jakartaee-web-api`
+* Core Profile: `jakarta.platform:jakarta.jakartaee-core-api`
+
+[[generating-a-new-app-using-payara-tarter]]
+== Generating a New App using Payara Starter
+
+You can generate a new application using Payara Starter in two ways:
+
+[[commandline-archetype]]
+=== Command Line Using Archetype
+
+To generate a new application using the Payara Starter archetype from the command line, use the following Maven command:
+
+[source,shell]
+----
+mvn archetype:generate -DarchetypeGroupId=fish.payara.starter -DarchetypeArtifactId=payara-starter-archetype -DarchetypeVersion=1.0-beta4 <other options>
+----
+This command generates a new application based on specified options. Adjust properties according to your project requirements.
+
+
+[[payara-archetype-parameters]]
+==== Payara Starter Archetype Parameter
+
+The Payara Starter Archetype has a robust set of parameters that allows the customization of various aspects during the application generation process. Below is a table detailing each parameter, its default value, and additional notes:
+
+[cols="5,5,12a",options="header"]
+|===
+| Element
+| Default Value
+| Notes
+
+| `build`
+| `maven`
+| Specifies the preferred build system for the project.
+
+Options include: `maven`, `gradle`.
+
+| `groupId`
+| `fish.payara`
+| Specifies the Group ID for the generated project.
+
+| `artifactId`
+| `hello-world`
+| Determines the Artifact ID for the generated project.
+
+| `version`
+| `0.1-SNAPSHOT`
+| Sets the version of the generated project.
+
+| `package`
+| `fish.payara`
+| Defines the base package name for the project.
+
+| `javaVersion`
+| `21`
+| Sets the Java version for the project.
+
+Available options:
+
+* 8
+* 11
+* 17
+* 21
+
+WARNING: Keep in mind that versions older than `11` are not supported in Payara Platform {page-version}
+
+| `jakartaEEVersion`
+| `10`
+| Specifies the targeted Jakarta EE version.
+
+Valid options:
+
+* 8
+* 9
+* 9.1
+* 10
+
+WARNING: For compatibility with the Payara Platform {page-version}, versions older than `10` are not supported.
+
+| `profile`
+| `full`
+| Specifies the Jakarta EE profile options: 'core', 'web', or 'full'.
+
+| `platform`
+| `server`
+| Specifies the target distribution where the application will be deployed
+
+Options include:
+
+* `server` for Payara Server.
+* `micro` for Payara Micro.
+
+| `payaraVersion`
+| `{page-version}`
+| Sets the targeted Payara version. Retrieved from Maven Central.
+
+| `addConcurrentApi`
+| `false`
+| Includes support for the Concurrent API if `true`.
+
+| `addResourceApi`
+| `false`
+| Includes support for the Resource API if `true`.
+
+| `addJBatchApi`
+| `false`
+| Includes support for the JBatch API if `true`.
+
+| `addMicroprofileApi`
+| `true`
+| Includes support for the MicroProfile API if `true`.
+
+| `addJcache`
+| `false`
+| Includes support for the JCache if `true`.
+
+| `addPayaraApi`
+| `true`
+| Includes support for the Payara Public API if `true`.
+
+| `deployWar`
+| `true`
+| Automatically deploys the WAR file if `true`.
+
+NOTE: Applicable only for Payara Micro deployments.
+
+| `autoBindHttp`
+| `true`
+| Enables automatic HTTP binding.
+
+NOTE: Applicable only for Payara Micro deployments.
+
+| `contextRoot`
+| `/`
+| Sets the web context root for the deployed artifact.
+
+NOTE: Applicable only for Payara Micro deployments.
+
+| `includeTests`
+| `false`
+| Includes a set of generated Unit tests if `true`.
+
+WARNING: Currently limited to Maven projects.
+
+| `docker`
+| `false`
+| Enables Docker compatibility.
+
+| `mpConfig`
+| `false`
+| Enables support for the MicroProfile Config API.
+
+| `mpOpenAPI`
+| `false`
+| Enables support for MicroProfile OpenAPI.
+
+| `mpFaultTolerance`
+| `false`
+| Enables support for MicroProfile Fault Tolerance.
+
+| `mpMetrics`
+| `false`
+| Enables support for MicroProfile Metrics.
+
+| `auth`
+| `none`
+| Specifies the authentication type for the application.
+
+Available choices:
+
+* `none`
+* `formAuthFileRealm`
+* `formAuthDB`
+* `formAuthLDAP`
+
+|===
+
+
+=== Web application at `start.payara.fish`
+
+Visit https://start.payara.fish[start.payara.fish^] to use the web application for generating applications via a graphical interface.
+
+[[using-the-payara-starter-web-application]]
+==== Using the Payara Starter Web Application
+
+Payara Starter provides a convenient web application that allows you to generate Jakarta EE projects via a graphical interface.
+
+Follow these steps to use the web application:
+
+. Access the web application:
+* Visit the Payara Starter web application at https://start.payara.fish[https://start.payara.fish^].
+
+. Fill in the *Project Details*:
+* On the web application's landing page, you'll find a user-friendly interface to input project details.
+* Enter the required information, such as *Group ID*, *Artifact ID*, and other relevant details.
++
+You can customize these based on your project requirements:
++
+*image*: payara-starter/project-details.png[Project Details, width=50%]
+
+. Choose the *Build System* and *Jakarta EE Version*:
+* Select your preferred build system (Maven or Gradle) from the provided options.
+* Choose the desired Jakarta EE version that aligns with your project's compatibility requirements.
++
+*image*: payara-starter/jakartaee.png[Jakarta EE version, width=50%]
+
+. Configure any *Additional Options*:
+* The web application allows you to configure additional options such as MicroProfile integration, Payara Platform version, and more.
+* Customize these options based on your project needs.
++
+*image*: payara-starter/payara-platform.png[Payara Platform, width=50%]
+
+. Review and Generate:
+* Review the summary of your selected options to ensure they match your project requirements.
+* Click the *Generate* button to initiate the project generation process.
+
+. Download the Generated Project:
+* Once the generation process is complete, the web application triggers the download of the generated project archive.
+* Download the project archive, and you can then proceed to import it into your preferred Integrated Development Environment (IDE).
+
+NOTE: The web application simplifies the project creation process but may not expose all configuration options available through the command-line archetype generation. +
+If you need better control of how the application is generated, we recommend using the starter archetype instead.
+
+[[sample-generated-jakarta-rest]]
+== Sample Generated Jakarta REST Resource
+
+Here's an example of a generated Jakarta REST resource using Payara Starter:
+
+[source,java]
+----
+package fish.payara.hello;
+
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.Response;
+
+@Path("hello")
+public class HelloWorldResource {
+
+    @GET
+    public Response hello(@QueryParam("name") String name) {
+        if ((name == null) || name.trim().isEmpty()) {
+            name = "world";
+        }
+        return Response.ok(name).build();
+    }
+}
+----
+
+This sample demonstrates a simple REST endpoint named `hello` that accepts a query parameter `name` and responds with a greeting message.
+
+Feel free to adjust archetype parameters to tailor the generated application to your project requirements.
+
+[[new-feature-er-diagram-integration]]
+== ER Diagram Designer with Generative AI Support
+
+Payara Starter https://start.payara.fish[start.payara.fish^] enables developers to streamline the creation of full-stack applications by leveraging Entity-Relationship (ER) diagrams. Generative AI enhances this process by automating the generation and customization of diagrams based on inputs and requirements. Developers can visualize, interact, and modify these diagrams in real time, making Payara Starter a more powerful tool for application design and development.
+
+*image*: payara-starter/er-diagram.png[ER Diagram, width=50%]
+
+[[features-of-er-diagram-integration]]
+=== Features of ER Diagram Designer
+
+==== Default ER Diagrams
+
+The Payara Starter website includes default ER diagrams, stored in https://mermaid.js.org/syntax/entityRelationshipDiagram.html[Mermaid format^], which users can modify as a starting point for their own designs.
+
+*image*: payara-starter/existing-er-diagram.png[Existing ER Diagram, width=50%]
+
+==== Automated ER Diagram Generation
+
+Payara Starter automates ER diagram generation by leveraging Generative AI based on user-provided descriptions. Users can create accurate and well-structured diagrams with minimal effort.
+
+==== Real-time Diagram Design via Free-text Support
+
+Through *Real-time Diagram Design via Free-text Support*, users can interact with Generative AI to refine and enlarge existing diagrams based on their specific requirements. This feature allows users to quickly modify or create new diagrams using free-form text commands.
+
+WARNING: Generative AI is a helpful assistant for designing diagrams, but it is not perfect. +
+Not all instructions will be understood as intended, and some results may differ from user expectations.
+
+[[er-diagram-instructions-examples]]
+===== Instructions and Examples
+
+To get the best results, users should provide clear, concise commands. Below are a few sample scenarios to illustrate how users can modify their diagrams.
+
+Starting from this default diagram:
+
+*image*: payara-starter/free-text-support-0.png[Default ER Diagram]
+
+. **Adding a new Field**: The following command prompts the AI to include a new attribute named `expiryDate` in the existing `PRODUCT` entity.
++
+*Command:* _Add an Expiry Date field to the `PRODUCT` entity_.
++
+*image*: payara-starter/free-text-support-1.png[Add a Field]
+
+. **Change an Entity Name**: The following command directs the AI to change the name of the `PRODUCT` entity, allowing for a new designation that may better reflect its purpose or context within the application.
++
+*Command*: _Rename the `PRODUCT` entity to other alternate name._
++
+*image*: payara-starter/free-text-support-2.png[Change Entity Name]
+
+. **Modify a Field**: The following command results in the AI updating the names of all fields that begin with `product`, replacing that prefix with `item`, thus standardizing or rebranding the fields for consistency.
++
+*Command:* _Rename all the fields with `product` prefix to `item`_.
++
+*image*: payara-starter/free-text-support-3.png[Modify Field]
+
+. **Enhance the diagram by adding more entities and relationship**: The following command instructs the AI to enrich the diagram by introducing new entities (`Company`, `Brand`, `Customer`, `Purchase`) and defining relationships between them, thus expanding the data model to cover more aspects of the application domain.
++
+*Command:* _Add `Company`, `Brand` details of product and also add `Customer`, `Purchase` info_.
++
+*image*: payara-starter/free-text-support-4.png[Enhance diagram by adding more entities and relationship]
+
+IMPORTANT: Users should review and modify the diagram after the AI-assisted prototype is generated. +
+For more complex designs or detailed customizations, manual changes may be necessary to ensure the final entity relationship model meets all requirements. +
+The AI is designed to speed up the process of generating diagram prototypes, but the user is responsible for creating the complete and accurate design of the application's business mode in its source code.
+
+==== Interactive Auto-Pilot Mode
+
+An innovative autopilot mode allows users to dynamically enlarge or shrink the number of entities in the ER diagram using (`+`/`-`) buttons, providing a quick way to modify complexity without detailed configuration.
+
+*Enlarge (`+`)*: Adds additional entities or relationships to the diagram based on the current context. For example, clicking the `+` button might introduce a related table, such as an `Order` entity linked to an existing `Customer` entity, along with predefined attributes or relationships.
+
+*Shrink (`-`)*: Removes entities or relationships from the diagram to simplify its structure. For instance, clicking the `-` button could remove auxiliary entities that are not critical to the application's initial design.
+
+This feature helps users quickly prototype or refine their diagrams by adjusting the scope and complexity of the database structure, without requiring manual edits to every detail.
+
+[[live-diagram-panel]]
+==== Live Diagram Panel
+
+The Payara Starter interface includes a split panel where the https://mermaid.js.org/syntax/entityRelationshipDiagram.html[Mermaid^] source code appears on the left, and a live visual representation of the ER diagram is shown on the right. Any changes made in the source or through Generative AI interactions update the visualization immediately.
+
+Users can freely modify the ER diagram by editing the Mermaid source code directly in the left panel. These modifications are instantly reflected in the live preview, offering full control over the diagram's structure and appearance.
+
+==== Full-Stack Application Generation
+
+Once finalized, Payara Starter uses the ER diagram to automatically generate corresponding JPA entities and REST endpoints, making it easy to move from design to implementation.
+
+[[using-the-er-diagram-feature]]
+=== Using the ER Diagram
+
+==== Open the existing or Generate a new ER Diagram:
+
+Open the ER Diagram panel within the Payara Starter application interface. Select from the default diagrams or start a new diagram by pressing the **Diagram Builder & Live Preview** button and entering a description.
+
+*image*: payara-starter/create-er-diagram.png[Create ER Diagram]
+
+==== Enhance the Diagrams
+
+Use the Real-time Diagram Design via Free-text support to interact with OpenAI. Type specific requests or commands, such as _"Add an Order entity"_ or _"Make Customer and Order related"_ and receive real-time updates to your diagram.
+
+In autopilot mode, use the (`+`/`-`) buttons to quickly enlarge or shrink the diagram.
+
+*image*: payara-starter/update-er-diagram.png[Update ER Diagram]
+
+==== Generate the Full-Stack Application
+
+Once the ER diagram meets your requirements, you can initiate the full-stack application generation. Payara Starter uses the diagram structure to create JPA entities, repository services, REST endpoints, and optionally web pages.
+
+===== Optional Features and Dependencies
+
+During the generation process, you can customize the output to include or exclude specific components. Note the cascading dependencies between components:
+
+*JPA Entities*: If skipped, all other components (repository services, REST endpoints, and web pages) will also be skipped. Only the ER diagram will be saved to the root of the project.
+
+*Repository Services*: If skipped, the generation of REST endpoints and web pages will also be skipped.
+
+*REST Endpoints*: If skipped, web pages will also be skipped.
+
+*Web Pages*: Can only be generated if repository services and REST endpoints are included.
+
+This flexibility allows developers to tailor the generated application to meet their specific project needs while ensuring structural coherence.
+
+*image*: payara-starter/generate-application.png[Generate Application, width=50%]
+*image*: payara-starter/final-application.png[Final Application, width=50%]

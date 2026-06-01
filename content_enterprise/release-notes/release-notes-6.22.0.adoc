@@ -1,0 +1,33 @@
+= Release notes - Payara Platform Enterprise 6.22.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [FISH-10318] Add `create-system-property` Command
+
+* [FISH-10319] Add `create-jvm-option` Command
+
+
+
+== Security Fixes
+
+* [FISH-9690] Fix HTTP Server incorrectly accepting disallowed characters within header values
+
+== Bug Fixes
+
+
+* [FISH-61] Fix HTTP/2 push failure to serve resources
+* [FISH-10228] Fix environmental entry injection failure due to NULL value when using `@Resource` with `messageSelector activation-config-property`
+
+
+== Component Upgrades
+
+
+* [FISH-6876] Upgrade JSON-P API to 2.1.3
+* [FISH-10308] Payara: Bump `io.projectreactor:reactor-core` from 3.7.0 to 3.7.1
+* [FISH-10365] Payara: Bump `jline.version` from 3.27.1 to 3.28.0

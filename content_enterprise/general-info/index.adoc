@@ -1,0 +1,51 @@
+= Documentation Overview
+
+This page provides some general information about the Payara Platform Enterprise Edition.
+
+[[release-strategy]]
+== Release Strategy
+
+The Payara Platform Enterprise Edition project is released each month. Each release incorporates fixes and enhancements from Platform engineering and Enterprise-only features.
+
+[[versioning-scheme]]
+== Versioning Scheme
+
+The general format of a Payara Platform version number is:
+
+[source,text]
+----
+Major Version Number. Minor Version Number. Patch Version Number
+----
+
+**Major Version** numbers start from **6** (the current major version of Payara Platform) and only increment by 1 when a new major version is released.  Fundamental changes will only be released in major Versions. There is currently no set cadence for this version change.
+
+The change of a major version number is a product management and marketing decision.
+
+TIP: Customers should expect changes to their applications and configuration scripts to move to a new major version.
+
+**Minor Version** numbers start from **0** and increment by `1` as required. These version changes will introduce significant features (typically originating from the Product Management process or stabilised and adopted from Community releases).
+
+NOTE: Features introduced during a minor version change must be backwards compatible with previous minor releases with no intervention required by an operator. +
+Features introduced during a minor version change can only introduce breaking changes as a last resort and with product management approval and appropriate customer messaging.
+
+The minor version number will reset to **0** on a major version release.
+
+TIP: Customers should not expect to change their applications and configuration scripts to move to a minor version unless by choice to take advantage of newly introduced features.
+
+**Patch Version** numbers will start from *0* and as a minimum increment as required.  These version change will introduce bug fixes and patches. The Patch Version number will reset to **0** on a minor version release.
+
+Customer specific versions used for private builds or hotfixes will add a 4th level number where the number reflects a meaningful name to the customer e.g. the number of the hotfix.
+
+For example if a customer specific hotfix is provided for a bugfix identified with _1234_ then the release number for that customer will be _6.1.0.1234_
+
+TIP: Customers should not expect to change their applications and configuration scripts to move to a patch version.
+
+[[versioning-scheme-examples]]
+=== Examples
+
+NOTE: The examples shown below are used only to showcase possible future releases and are not be followed up as a release plan when planning updates on your organization.
+
+* `6.0.0` = Major Version `6`, Minor Version `0`, Patch `0`
+* `6.1.1` = Major Version `6`, Minor Version `1`, Patch `1`
+* `6.1.2` = Major Version `6`, Minor Version `1`, Patch `2`
+* `7.0.0` = Major Version `7`, Minor Version `0`, Patch `0`

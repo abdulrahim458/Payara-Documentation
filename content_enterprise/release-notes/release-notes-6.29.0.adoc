@@ -1,0 +1,45 @@
+= Release notes - Payara Platform Enterprise 6.29.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Security Fixes
+
+* [FISH-11415] Fix Request Smuggling in Grizzly due to Improper handling of the `chunked` transfer-coding
+
+== Bug Fixes
+
+* [FISH-10713] Fix `jakarta.servlet.request.X509Certificate` Request attribute yielding NULL on Payara 6.
+
+* [FISH-11027] Fix `ConcurrentModificationException` When Running remove-expired-certificates on Payara
+
+* [FISH-11209] Fix JS Error That Causes Existing Realms To Only Display Name and No Properties
+
+* [FISH-11465] Fix Missing Properties That Causes Existing Realms To Only Display Name and No Properties
+
+== Component Upgrades
+
+* [FISH-9460] Upgrade `woodstox-core` to 7.1.1
+
+* [FISH-10142] Upgrade `Metro` to 4.0.4
+
+* [FISH-10878] Upgrade `Hazelcast` to 5.3.8 and Backport CP Fixes
+
+* [FISH-11630] Upgrade `Docker JDK` to 11.0.27
+
+* [FISH-11632] Upgrade `Docker JDK` to 17.0.15
+
+* [FISH-11633] Upgrade `Docker JDK` to 21.0.7
+
+* [FISH-11686] Upgrade `io.projectreactor:reactor-core` from 3.7.7 to 3.7.8
+
+* [FISH-11701] Upgrade `com.nimbusds:nimbus-jose-jwt` from 10.3.1 to 10.4
+
+* [FISH-11702] Upgrade `com.fasterxml.jackson:jackson-bom` from 2.19.1 to 2.19.2
+
+* [FISH-11716] Upgrade `commons-io:commons-io` from 2.19.0 to 2.20.0
+
+* [FISH-11724] Upgrade `commons-codec:commons-codec` from 1.18.0 to 1.19.0

@@ -1,0 +1,244 @@
+:ordinal: 2
+= Payara Server Managed Arquillian Container Adapter
+
+When using this adapter, the Payara Server container lifecycle is managed by Arquillian by starting a separate JVM process to run Payara Server locally.
+
+NOTE: As a requirement, the adapter will need to use a local installation of Payara Server.
+
+
+[[usage]]
+== Usage
+
+The Payara Server Managed Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-managed[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
+
+[source,XML]
+----
+<dependency>
+  <groupId>fish.payara.arquillian</groupId>
+  <artifactId>arquillian-payara-server-managed</artifactId>
+  <version>${version}</version>
+</dependency>
+----
+
+[[configuration]]
+== Container Configuration
+
+The Payara Server container can be configured via the `arquillian.xml` file using the standard http://arquillian.org/arquillian-core/#container-configuration[Arquillian Container Configuration^] mechanism.
+
+The following configuration options are mandatory:
+
+* `payaraHome` - The local Payara Server installation directory. Can be also set using the `payara.home` system property.
+
+The following Arquillian Container configuration options are available:
+
+[cols="20,70,10"]
+.Configuration Options
+|===
+| Name | Description | Default
+
+| `adminHost`
+| The host to be used to access the Payara Server Admin interface.
+| `localhost`
+
+| `adminHttps`
+| You can use it to specify whether the HTTP or HTTPS protocol shall be used to access the DAS. The property value can be `true` or `false`.
+| `false`
+
+| `adminPort`
+| The port to be used to access the Payara Server Admin interface.
+| `4848`
+
+| `adminUser`
+| The name of the admin user of your DAS.
+
+If omitted, no authentication will be used to access the DAS.
+
+In this case the `adminPassword` property should also be empty.
+|
+
+| `adminPassword`
+| The password of the admin user of your DAS.
+
+Cannot be omitted if you declare the admin user.
+
+If no authentication will be used to access the DAS you must have empty password for your admin user of your domain.
+|
+
+| `allowConnectingToRunningServer`
+| Allow Arquillian to use an already running Payara Server instance and skips `start-domain` command invocation.
+| `false`
+
+| `authorisation`
+| If true, basic access authentication is enabled.
+
+It also indicates that remote server requires an `adminUser` and `adminPassword` configuration properties.
+| `false`
+
+| `debug`
+| Starts the server in debug mode using standard Payara Server debug port.
+| `false`
+
+| `domain`
+| The Payara Server domain to use or the default domain if not specified.
+| `domain1`
+
+| `enableH2`
+| Starts/Stops the registered H2 database server using the standard H2 port.
+| `false`
+
+| `ignoreCertificates`
+| If set to `true`, SSL certificate correctness is ignored.
+
+This is useful for Docker images / Testcontainers when certificates are not easily matched to internally generated ones and host names are also very hard to match.
+| `false`
+
+| `libraries`
+| A comma-separated list of library JAR files. Specify the library JAR files by their relative or absolute paths.
+
+Specify relative paths relative to `domain-dir/lib/applibs`. The libraries are made available to the application in the order specified.
+|
+
+| `outputToConsole`
+| Show the output of the admin commands on the console.
+| `true`
+
+| `payaraHome`
+| The local Payara Server installation directory. Mandatory
+| Value of the `payara.home` system property.
+
+| `properties`
+| Optional keyword-value pair that specify additional properties for the deployment.
+
+The available properties are determined by the implementation of the component that is being deployed.
+|
+
+| `target`
+a| The deployment target of the applications involved in the test.
+
+Valid values of the target are:
+
+*`server`*: Deploys the component to the default Admin Server instance (on your DAS server). This is the default value if the property is omitted.
+
+*`instance_name`*: Deploys the component to the specified stand-alone server instance, which may be on the same hosts or can be on a different one as the DAS server.
+
+*`deployment_group_name`*: Deploys the component to every server instance in the specified deployment group. They can be on the same or on several other hosts as the DAS server.
+
+NOTE: Arquillian will use only one instance to run the test case.
+
+The domain name as a target is not a reasonable deployment scenario in case of testing.
+
+The HOST address and port numbers of the test server instance used by Arquillian (determined by the target property) will be automatically retrieved from the DAS server.
+
+TIP: You have to make them accessible for your test environment (consider any firewall or proxy configuration).
+
+| `server`
+
+| `type`
+| If set to `osgi`, the component is packaged as an OSGi bundle.
+
+If the component is packaged as a regular archive, do not set this option.
+|
+|===
+
+The context root that will be used to run the tests is also retrieved automatically from the DAS server. If the deployed application does have a `sun-web.xml`, `glassfish-web.xml` or `payara-web.xml` deployment descriptor, the container will use the name of your deployment without the extension as context root. +
+The same rule is applied for enterprise applications if there is no `application.xml` file. The JAR test-deployments are treated as a web application.
+
+IMPORTANT: glassfish-web.xml and sun-web.xml are deprecated and support will be removed in a future major version release.
+It is recommended to use payara-web.xml instead.
+
+[[examples]]
+== Examples
+
+To configure the Arquillian Container options, you need to use an `arquillian.xml` file placed on the test classpath.
+
+Here's an example `arquillian.xml` file. It configures `adminPort` with a static value.
+
+It will configure the `adminPassword` as a value of a system property `my.admin.password`, which you can specify for example in the maven `surefire` plugin using the `systemPropertyVariables` option or on the command line like `mvn -Dmy.admin.password=mypassword test`.
+
+[source, xml]
+.Example `arquillian.xml` file
+[source,text]
+----
+<?xml version="1.0"?>
+<arquillian xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://jboss.org/schema/arquillian"
+            xsi:schemaLocation="http://jboss.org/schema/arquillian
+                http://jboss.org/schema/arquillian/arquillian_1_0.xsd">
+    <container qualifier="payara" default="true">
+        <configuration>
+            <property name="adminPort">4848</property>
+            <property name="adminPassword">${my.admin.password}</property>
+        </configuration>
+    </container>
+</arquillian>
+----
+
+If you want to configure more containers, you can switch between them by setting the `arquillian.launch` system property to the container's qualifier.
+
+This is how you can do it with the maven `surefire` plugin (`my.admin.password` system property is used to set the `adminPassword` property in `arquillian.xml`):
+
+[source, xml]
+.Example - Surefire plugin configuration in the project's POM file
+[source,text]
+----
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <configuration>
+        <systemPropertyVariables>
+            <arquillian.launch>payara</arquillian.launch>
+            <payara.home>/path/to/payara</payara.home>
+            <my.admin.password>mypassword</my.admin.password>
+        </systemPropertyVariables>
+    </configuration>
+</plugin>
+----
+
+[[automatic-download-example]]
+=== Downloading Payara Server automatically from Maven
+
+You can configure your Maven project to automatically download and install the Payara Server version required by the container adapter.
+
+To set up this installation, you can use the link:https://maven.apache.org/plugins/maven-dependency-plugin/usage.html[Maven Dependency Plugin^] (specifically the `unpack` goal) as follows:
+
+[source,XML]
+.Example - Dependency plugin configuration in the project's POM file
+[source,text]
+----
+<plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+            <execution>
+                <id>unpack</id>
+                <phase>process-test-classes</phase>
+                <goals>
+                    <goal>unpack</goal>
+                </goals>
+                <configuration>
+                    <artifactItems>
+                        <artifactItem>
+                            <groupId>fish.payara.distributions</groupId>
+                            <artifactId>payara</artifactId>
+                            <version>${payara.version}</version>
+                            <type>zip</type>
+                            <overWrite>false</overWrite>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                        </artifactItem>
+                    </artifactItems>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+            <systemPropertyVariables>
+                <payara.home>${project.build.directory}/payara5</payara.home>
+            </systemPropertyVariables>
+        </configuration>
+    </plugin>
+</plugins>
+----

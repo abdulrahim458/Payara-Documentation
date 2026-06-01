@@ -1,0 +1,58 @@
+= list-connector-connection-pools
+
+Lists the existing connector connection pools.
+
+[[synopsis]]
+== Synopsis
+
+[source,shell]
+----
+asadmin [asadmin-options] list-connector-connection-pools [--help]
+----
+
+[[desciption]]
+== Description
+
+The `list-connector-connection-pools` subcommand list connector connection pools that have been created.
+
+This subcommand is supported in remote mode only.
+
+[[options]]
+== Options
+
+*asadmin-options*:
+  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+*`--help`*:
+*`-?`*:
+  Displays the help text for the subcommand.
+
+[[examples]]
+== Examples
+
+[[example-1]]
+
+*Example 1 Listing the Connector Connection Pools*
+
+This example lists the existing connector connection pools.
+
+[source,shell]
+----
+asadmin> list-connector-connection-pools
+jms/qConnPool
+Command list-connector-connection-pools executed successfully
+----
+
+[[exit-status]]
+== Exit Status
+
+*0*:
+  subcommand executed successfully
+*1*:
+  error in executing the subcommand
+
+*See Also*
+
+* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:technical-documentation/payara-server-documentation/command-reference/create-connector-connection-pool.adoc#create-connector-connection-pool[`create-connector-connection-pool`],
+* xref:technical-documentation/payara-server-documentation/command-reference/delete-connector-connection-pool.adoc#delete-connector-connection-pool[`delete-connector-connection-pool`],
+* xref:technical-documentation/payara-server-documentation/command-reference/ping-connection-pool.adoc#ping-connection-pool[`ping-connection-pool`]

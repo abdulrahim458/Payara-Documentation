@@ -8,9 +8,7 @@ workflow:
         - content_enterprise/**/*
         - content_community/**/*
         - content_shared/**/*
-        - scripts/build-tpl.rb
         - .gitlab-ci.yml
-        - project.properties
 
 variables:
   GIT_STRATEGY: clone

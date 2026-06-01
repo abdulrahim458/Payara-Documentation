@@ -1,0 +1,37 @@
+= Release notes - Payara Platform Enterprise 6.24.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [FISH-9957] Add Option to change the default context-root on Payara Micro
+
+* [FISH-10526] Improve CORBA code to prevent deadlock from pooled threads
+
+== Bug Fixes
+
+* [FISH-8545] Fix payara-web.xml does not change the SameSite cookie attribute
+
+* [FISH-10738] Revert FISH-10049 - EAR Application Deployment with CDI Fails
+
+
+== Security Fixes
+* [FISH-10521] Security Vulnerability Report: Cross-site Scripting
+
+* [FISH-10576] Update JSON Smart to 2.5.2 in Security Connectors
+
+== Component Upgrades
+
+* [FISH-10560] Payara: Bump io.projectreactor:reactor-core from 3.7.2 to 3.7.3
+
+* [FISH-10564] Payara: Bump net.minidev:json-smart from 2.5.1 to 2.5.2
+
+* [FISH-10565] Bump net.minidev:accessors-smart from 2.5.1 to 2.5.2
+
+* [FISH-10583] Payara: Bump org.yaml:snakeyaml from 2.3 to 2.4
+
+* [FISH-10667] Payara: Bump com.fasterxml.jackson:jackson-bom from 2.18.2 to 2.18.3

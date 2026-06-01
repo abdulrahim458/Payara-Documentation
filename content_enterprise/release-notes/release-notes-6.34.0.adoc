@@ -1,0 +1,28 @@
+= Release notes - Payara Platform Enterprise 6.34.0
+
+== Supported APIs and Applications
+
+* Jakarta EE 10
+* Jakarta EE 10 Applications
+* MicroProfile 6.1
+
+== Improvements
+
+* [FISH-12609] PartItem Review Improvements
+
+== Security Fixes
+
+* [FISH-12433] CVE-2020-27511 Upgrade prototype
+* [FISH-12434] CVE-2020-5258 Upgrade dojo.js
+* [FISH-12613] Vulnerability - Admin Account Takeover via malicious URL payload
+
+== Bug Fixes
+
+* [FISH-8788] Fix HTTP Status 500 when sorting column based on Keystore or Truststore Alias name
+* [FISH-12561] Fix duplicate class definition `GenericEJBHome_Generated_DynamicStub` during EJB Redeployment
+* [FISH-12706] Fix nodes option not being a valid option with Payara6 upgrade tool
+
+== Component Upgrades
+
+* [FISH-10141] Upgrade `Parsson` to 1.1.7
+* [FISH-10671] Upgrade `gmbal` to 4.1.0
