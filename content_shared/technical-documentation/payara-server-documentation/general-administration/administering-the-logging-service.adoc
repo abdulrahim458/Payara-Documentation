@@ -27,7 +27,7 @@ Payara Server log records are captured in the server log file, which captures in
 
 In a Payara Server domain, log files have the following name and location by default:
 
-[width="100%",cols="27%,73%",options="header",]
+[width="100%",cols="27%",options="header",]
 |===
 |Instance
 |Default Log File Name and Location

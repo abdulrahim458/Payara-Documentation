@@ -100,7 +100,7 @@ public class ReceiveAzureMessage implements AzureSBListener {
 
 The full list of config properties is given below:
 
-[cols="2,1,1,7",options="header"]
+[cols="2",options="header"]
 |===
 |Config Property Name
 |Type

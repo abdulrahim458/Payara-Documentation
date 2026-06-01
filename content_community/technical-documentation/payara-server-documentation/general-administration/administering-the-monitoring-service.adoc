@@ -829,7 +829,7 @@ table.
 [[table-ejb-cache-statistics]]
 ==== *Table 8-5 EJB Cache Monitoring Statistics*
 
-[width="100%",cols="37%,16%,47%",options="header",]
+[width="100%",cols="37%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -882,7 +882,7 @@ The statistics available for EJB containers are listed in the following table.
 [[table-ejb-container-statistics]]
 ==== *Table 8-6 EJB Container Monitoring Statistics*
 
-[width="100%",cols="24%,16%,60%",options="header",]
+[width="100%",cols="24%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -933,7 +933,7 @@ The statistics available for EJB method invocations are listed in the following 
 [[table-ejb-method-statistics]]
 ==== *Table 8-7 EJB Method Monitoring Statistics*
 
-[width="100%",cols="23%,16%,61%",options="header",]
+[width="100%",cols="23%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -973,7 +973,7 @@ table.
 [[table-ejb-pool-statistics]]
 ==== *Table 8-8 EJB Pool Monitoring Statistics*
 
-[width="100%",cols="28%,16%,56%",options="header",]
+[width="100%",cols="28%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1016,7 +1016,7 @@ The statistics available for timers are listed in the following table.
 [[table-timer-statistics]]
 ==== *Table 8-9 Timer Monitoring Statistics*
 
-[width="100%",cols="28%,16%,56%",options="header",]
+[width="100%",cols="28%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1057,7 +1057,7 @@ The HTTP service statistics for virtual servers are shown in the following table
 [[table-http-service-virtual-server-statistics]]
 ==== *Table 8-10 HTTP Service Virtual Server Monitoring Statistics*
 
-[width="100%",cols="21%,16%,63%",options="header",]
+[width="100%",cols="21%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1158,7 +1158,7 @@ The statistics available for Jersey are shown in the following table.
 [[table-jersey-statistics]]
 ==== *Table 8-11 Jersey Statistics*
 
-[width="100%",cols="33%,21%,46%",options="header",]
+[width="100%",cols="33%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1196,7 +1196,7 @@ NOTE: In order to improve system performance, connection pools are initialized l
 [[table-connector-connection-pool-statistics-jms]]
 ==== *Table 8-12 Connector Connection Pool Monitoring Statistics (JMS)*
 
-[width="100%",cols="37%,16%,47%",options="header",]
+[width="100%",cols="37%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1263,7 +1263,7 @@ JMS/Connector Service statistics available for connector work management are lis
 [[table-connector-work-management-statistics-jms]]
 ==== *Table 8-13 Connector Work Management Monitoring Statistics (JMS)*
 
-[width="100%",cols="28%,16%,56%",options="header",]
+[width="100%",cols="28%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1319,7 +1319,7 @@ The statistics that are available for class loading in the JVM for Java SE are s
 [[table-jvm-class-loading-system-statistics]]
 ==== *Table 8-14 JVM Monitoring Statistics for Java SE Class Loading*
 
-[width="100%",cols="31%,16%,53%",options="header",]
+[width="100%",cols="31%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1343,7 +1343,7 @@ The statistics available for threads in the JVM in Java SE are shown in the foll
 [[table-jvm-class-loading-system-statistics-2]]
 ==== *Table 8-15 JVM Monitoring Statistics for Java SE - Threads*
 
-[width="100%",cols="35%,16%,49%",options="header",]
+[width="100%",cols="35%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1394,7 +1394,7 @@ The statistics that are available for compilation in the JVM for Java SE are sho
 [[table-jvm-compilation-system-statistics]]
 ==== *Table 8-16 JVM Monitoring Statistics for Java SE Compilation*
 
-[width="100%",cols="34%,20%,46%",options="header",]
+[width="100%",cols="34%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1425,7 +1425,7 @@ The statistics that are available for garbage collection in the JVM for Java SE 
 [[table-jvm-garbage-collectors-statistics]]
 ==== *Table 8-17 JVM Monitoring Statistics for Java SE Garbage Collectors*
 
-[width="100%",cols="23%,16%,61%",options="header",]
+[width="100%",cols="23%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1455,7 +1455,7 @@ The statistics that are available for memory in the JVM for Java SE are shown in
 [[table-jvm-memory-statistics]]
 ==== *Table 8-18 JVM Monitoring Statistics for Java SE Memory*
 
-[width="100%",cols="44%,16%,40%",options="header",]
+[width="100%",cols="44%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1514,7 +1514,7 @@ The statistics that are available for the operating system for the JVM machine i
 [[table-jvm-operating-system-statistics]]
 ==== *Table 8-19 JVM Statistics for the Java SE Operating System*
 
-[width="100%",cols="28%,16%,56%",options="header",]
+[width="100%",cols="28%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1553,7 +1553,7 @@ The statistics that are available for the runtime in the JVM runtime for Java SE
 [[jtable-vm-runtime-statistics]]
 ==== *Table 8-20 JVM Monitoring Statistics for Java SE Runtime*
 
-[width="100%",cols="42%,16%,42%",options="header",]
+[width="100%",cols="42%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1626,7 +1626,7 @@ table.
 [[table-network-keep-alive-statistics]]
 ==== *Table 8-21 Network Keep Alive Statistics*
 
-[width="100%",cols="25%,16%,59%",options="header",]
+[width="100%",cols="25%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1740,7 +1740,7 @@ Statistics available for network file cache are shown in the following table.
 [[table-network-file-cache-statistics]]
 ==== *Table 8-23 Network File Cache Statistics*
 
-[width="100%",cols="28%,16%,56%",options="header",]
+[width="100%",cols="28%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1806,7 +1806,7 @@ Statistics available for network thread pool are shown in the following table.
 [[table-network-thread-pool-statistics]]
 ==== *Table 8-24 Network Thread Pool Statistics*
 
-[width="100%",cols="28%,16%,56%",options="header",]
+[width="100%",cols="28%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1856,7 +1856,7 @@ in the following table.
 [[table-orb-statistics-connection-manager]]
 ==== *Table 8-25 ORB Monitoring Statistics (Connection Manager)*
 
-[width="100%",cols="24%,26%,50%",options="header",]
+[width="100%",cols="24%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1912,7 +1912,7 @@ NOTE: In order to improve system performance, connection pools are initialized l
 [[table-resource-statistics-connection-pool]]
 ==== *Table 8-26 General Resource Monitoring Statistics (Connection Pool)*
 
-[width="100%",cols="43%,16%,41%",options="header",]
+[width="100%",cols="43%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -1995,7 +1995,7 @@ last sampling time
 [[table-resource-statistics-connection-pool-2]]
 ==== *Table 8-27 Application Specific Resource Monitoring Statistics (Connection Pool)*
 
-[width="100%",cols="23%,16%,61%",options="header",]
+[width="100%",cols="23%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2035,7 +2035,7 @@ The statistics available for EJB security are listed in the following table.
 [[table-ejb-security-statistics]]
 ==== *Table 8-28 EJB Security Monitoring Statistics*
 
-[width="100%",cols="40%,18%,42%",options="header",]
+[width="100%",cols="40%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2066,7 +2066,7 @@ The statistics available for web security are listed in the following table.
 [[table-web-security-statistics]]
 ==== *Table 8-29 Web Security Monitoring Statistics*
 
-[width="100%",cols="40%,16%,44%",options="header",]
+[width="100%",cols="40%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2097,7 +2097,7 @@ The statistics available for realm security are listed in the following table.
 [[table-realm-security-statistics]]
 .Table 8-30 Realm Security Monitoring Statistics
 
-[width="100%",cols="32%,22%,46%",options="header",]
+[width="100%",cols="32%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2130,7 +2130,7 @@ table.
 [[table-thread-pool-monitoring-statistics]]
 ==== *Table 8-31 Thread Pool Monitoring Statistics*
 
-[width="100%",cols="37%,26%,37%",options="header",]
+[width="100%",cols="37%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2174,7 +2174,7 @@ The statistics available for `ThreadInfo` in the JVM in Java SE are shown in the
 [[table-jvm-statistics-for-java-se-thread-information]]
 ==== *Table 8-32 JVM Monitoring Statistics for Java SE - Thread Info*
 
-[width="100%",cols="20%,16%,64%",options="header",]
+[width="100%",cols="20%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2242,7 +2242,7 @@ The statistics available for the transaction service are shown in the following 
 [[table-transaction-service-statistics]]
 ==== *Table 8-33 Transaction Service Monitoring Statistics*
 
-[width="100%",cols="23%,16%,61%",options="header",]
+[width="100%",cols="23%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2292,7 +2292,7 @@ table.
 [[tweb-module-servlet-statistics]]
 ==== *Table 8-34 Web Module Servlet Statistics*
 
-[width="100%",cols="21%,16%,63%",options="header",]
+[width="100%",cols="21%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2336,7 +2336,7 @@ The available web JSP statistics are shown in the following table.
 [[table-web-jsp-statistics]]
 ==== *Table 8-35 Web JSP Monitoring Statistics*
 
-[width="100%",cols="24%,16%,60%",options="header",]
+[width="100%",cols="24%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2376,7 +2376,7 @@ The available web request statistics are shown in the following table.
 [[table-web-request-statistics]]
 ==== *Table 8-36 Web Request Monitoring Statistics*
 
-[width="100%",cols="21%,16%,63%",options="header",]
+[width="100%",cols="21%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2415,7 +2415,7 @@ The available web servlet statistics are shown in the following table.
 [[table-web-servlet-statistics]]
 ==== *Table 8-37 Web Servlet Monitoring Statistics*
 
-[width="100%",cols="37%,16%,47%",options="header",]
+[width="100%",cols="37%",options="header",]
 |===
 |Statistic
 |Data Type
@@ -2451,7 +2451,7 @@ The available web session statistics are shown in the following table.
 [[table-web-session-statistics]]
 ==== *Table 8-38 Web Session Monitoring Statistics*
 
-[width="100%",cols="34%,16%,50%",options="header",]
+[width="100%",cols="34%",options="header",]
 |===
 |Statistic
 |Data Type

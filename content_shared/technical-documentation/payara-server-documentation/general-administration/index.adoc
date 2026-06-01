@@ -23,7 +23,7 @@ NOTE: The default administrator login is `admin`, with no password, which means 
 === Default Administration Values
 
 //TODO - Add additional ports (Hazelcast~Data-Grid, for example)
-[width="100%",cols="43%,57%",options="header",]
+[width="100%",cols="43%",options="header",]
 |===
 |Item
 |Default
@@ -65,7 +65,7 @@ NOTE: The default administrator login is `admin`, with no password, which means 
 [[table-default-settings-and-locations-2]]
 .Default Locations
 
-[width="100%",cols="43%,57%",options="header",]
+[width="100%",cols="43%",options="header",]
 |===
 |Item
 |Default

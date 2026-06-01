@@ -494,7 +494,7 @@ In addition to the flow described here, certificate authentication is also perfo
 
 .asadmin --secure=false, With Username and Password
 
-[width="100%",cols="34%,33%,33%",options="header",]
+[width="100%",cols="34%",options="header",]
 |===
 |`asadmin`
 |HTTP Engine

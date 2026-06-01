@@ -159,7 +159,7 @@ Configure the `s3BucketName` property along with other properties to specify the
 
 The full list of configuration properties is given below:
 
-[cols="2,1,1,7",options="header"]
+[cols="2",options="header"]
 |===
 |Config Property Name
 |Type

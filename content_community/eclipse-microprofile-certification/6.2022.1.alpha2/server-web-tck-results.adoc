@@ -7,7 +7,7 @@ following is a summary of the TCK results for releases of MicroProfile 5.0.
 
 - Product Name, Version and download URL (if applicable):
 +
-[cols="1,2",grid=none,frame=none]
+[cols="1",grid=none,frame=none]
 |===
 |image:JakartaEE_Logo_compatible-color.png[alt="JakartaEE_Logo_compatible-color",width=600px]
 |

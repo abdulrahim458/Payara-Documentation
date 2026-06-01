@@ -51,7 +51,7 @@ Example:
 ----
 
 .Configuration tags
-[cols="2,2,2,1,3",options="header"]
+[cols="2",options="header"]
 |===
 |Element
 |System Property 
@@ -189,7 +189,7 @@ Example:
 NOTE: If you want to execute the payara-micro plugin along with maven-toolchains-plugin, you need to execute the plugin as: `mvn toolchains:toolchain payara-micro:start`. See <<using-toolchains>> for more information.
 
 .Configuration tags
-[cols="2,2,2,1,3",options="header"]
+[cols="2",options="header"]
 |===
 |Element
 |System Property 
@@ -395,7 +395,7 @@ NOTE: This goal is specifically designed for integration with the IDEs and Edito
 This can lead to significant savings of time when an application is redeployed and boost developer productivity even more.
 
 .Configuration tags
-[cols="2,1,7",options="header"]
+[cols="2",options="header"]
 |===
 |Element
 |System Property 

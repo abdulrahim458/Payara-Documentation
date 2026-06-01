@@ -4641,7 +4641,7 @@ The value of this attribute must exactly match the value of the `user-agent` HTT
 The following table specifies example `agent` attribute values.
 
 .Example `agent` Attribute Values
-[cols="3,2,6",options="header"]
+[cols="3,2",options="header"]
 |===
 |Agent |`user-agent` Header and `agent` Attribute Value
 
