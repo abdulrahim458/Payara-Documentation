@@ -74,7 +74,9 @@ docs_html:
   script:
     - |
       echo "Building HTML for ${DOCS_ID} (${CONTENT_DIR}) version ${VERSION}"
-      MERGED=$(mktemp -d)
+      MERGED=build/merged-${DOCS_ID}
+      rm -rf ${MERGED}
+      mkdir -p ${MERGED}
       cp -a ${CONTENT_DIR}/. ${MERGED}/
       cp -a content_shared/. ${MERGED}/
       ruby ${TEMPLATES_DIR}/build.rb \

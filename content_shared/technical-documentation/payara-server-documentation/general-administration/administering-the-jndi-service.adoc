@@ -45,7 +45,7 @@ references for the Jakarta EE resources used by the Payara Server.
 
 .Table 18-1 JNDI Lookup Names and Their Associated References
 
-[header, cols="3,2,2,3"]
+[header, cols="3,2"]
 |===
 |JNDI Lookup Name |Associated Resource Reference
 
