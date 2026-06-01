@@ -8,10 +8,11 @@
 //DESCRIPTION Skips content inside code/comment/literal blocks (delimited by 4+ repeated chars).
 //DESCRIPTION
 //DESCRIPTION Usage:
-//DESCRIPTION   jbang FixDlist.java [content-dir]            # dry run, prints plan
-//DESCRIPTION   jbang FixDlist.java [content-dir] --apply   # actually performs the changes
+//DESCRIPTION   jbang FixDlist.java [content-dir ...]             # dry run, one or more dirs
+//DESCRIPTION   jbang FixDlist.java [content-dir ...] --apply     # actually performs the changes
 //DESCRIPTION
-//DESCRIPTION Default content-dir is `./content`.
+//DESCRIPTION If no content-dir is given, runs on content_enterprise, content_community,
+//DESCRIPTION and content_shared.
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -38,41 +39,49 @@ public class FixDlist {
 
     public static void main(String[] args) throws IOException {
         boolean apply = false;
-        Path contentDir = Paths.get("content");
+        List<Path> contentDirs = new ArrayList<>();
         for (String arg : args) {
             if ("--apply".equals(arg)) apply = true;
-            else if (!arg.startsWith("--")) contentDir = Paths.get(arg);
+            else if (!arg.startsWith("--")) contentDirs.add(Paths.get(arg));
         }
-        final Path content = contentDir.toAbsolutePath().normalize();
-        if (!Files.isDirectory(content)) {
-            System.err.println("Not a directory: " + content);
-            System.exit(2);
+        if (contentDirs.isEmpty()) {
+            contentDirs.add(Paths.get("content_enterprise"));
+            contentDirs.add(Paths.get("content_community"));
+            contentDirs.add(Paths.get("content_shared"));
         }
 
-        System.out.println("content dir : " + content);
-        System.out.println("mode        : " + (apply ? "APPLY" : "DRY RUN"));
-        System.out.println();
+        for (Path contentDir : contentDirs) {
+            final Path content = contentDir.toAbsolutePath().normalize();
+            if (!Files.isDirectory(content)) {
+                System.err.println("Not a directory: " + content + " — skipping");
+                continue;
+            }
 
-        int totalFiles = 0, totalEntries = 0;
-        List<Path> adocs = collect(content);
-        for (Path p : adocs) {
-            String original = Files.readString(p, StandardCharsets.UTF_8);
-            Result r = transform(original);
-            if (r.count > 0) {
-                totalFiles++;
-                totalEntries += r.count;
-                if (apply) {
-                    Files.writeString(p, r.text, StandardCharsets.UTF_8);
-                    System.out.printf("  %3d  %s%n", r.count, content.relativize(p));
-                } else {
-                    System.out.printf("  %3d  %s%n", r.count, content.relativize(p));
+            System.out.println("content dir : " + content);
+            System.out.println("mode        : " + (apply ? "APPLY" : "DRY RUN"));
+            System.out.println();
+
+            int totalFiles = 0, totalEntries = 0;
+            List<Path> adocs = collect(content);
+            for (Path p : adocs) {
+                String original = Files.readString(p, StandardCharsets.UTF_8);
+                Result r = transform(original);
+                if (r.count > 0) {
+                    totalFiles++;
+                    totalEntries += r.count;
+                    if (apply) {
+                        Files.writeString(p, r.text, StandardCharsets.UTF_8);
+                        System.out.printf("  %3d  %s%n", r.count, content.relativize(p));
+                    } else {
+                        System.out.printf("  %3d  %s%n", r.count, content.relativize(p));
+                    }
                 }
             }
-        }
 
-        System.out.printf("%nDone: %d dlist entries %s in %d files.%n",
-                totalEntries, apply ? "converted" : "would convert", totalFiles);
-        if (!apply) System.out.println("Re-run with --apply to execute the changes.");
+            System.out.printf("%nDone: %d dlist entries %s in %d files.%n",
+                    totalEntries, apply ? "converted" : "would convert", totalFiles);
+            if (!apply) System.out.println("Re-run with --apply to execute the changes.");
+        }
     }
 
     static Result transform(String text) {

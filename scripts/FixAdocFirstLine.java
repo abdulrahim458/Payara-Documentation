@@ -9,10 +9,11 @@
 //DESCRIPTION Then verifies the first remaining line starts with `= ` (single `=` heading).
 //DESCRIPTION
 //DESCRIPTION Usage:
-//DESCRIPTION   jbang FixAdocFirstLine.java [content-dir]          # dry run
-//DESCRIPTION   jbang FixAdocFirstLine.java [content-dir] --apply  # write changes
+//DESCRIPTION   jbang FixAdocFirstLine.java [content-dir ...]           # dry run, one or more dirs
+//DESCRIPTION   jbang FixAdocFirstLine.java [content-dir ...] --apply   # write changes
 //DESCRIPTION
-//DESCRIPTION Default content-dir is `./content`.
+//DESCRIPTION If no content-dir is given, runs on content_enterprise, content_community,
+//DESCRIPTION and content_shared.
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -30,60 +31,74 @@ public class FixAdocFirstLine {
 
     public static void main(String[] args) throws IOException {
         boolean apply = false;
-        Path contentDir = Paths.get("content");
+        List<Path> contentDirs = new ArrayList<>();
         for (String arg : args) {
             if ("--apply".equals(arg)) apply = true;
-            else if (!arg.startsWith("--")) contentDir = Paths.get(arg);
+            else if (!arg.startsWith("--")) contentDirs.add(Paths.get(arg));
+        }
+        if (contentDirs.isEmpty()) {
+            contentDirs.add(Paths.get("content_enterprise"));
+            contentDirs.add(Paths.get("content_community"));
+            contentDirs.add(Paths.get("content_shared"));
         }
 
-        Path content = contentDir.toAbsolutePath().normalize();
-        if (!Files.isDirectory(content)) {
-            System.err.println("Not a directory: " + content);
-            System.exit(2);
-        }
+        int totalInvalidFiles = 0;
 
-        System.out.println("content dir : " + content);
-        System.out.println("mode        : " + (apply ? "APPLY" : "DRY RUN"));
-        System.out.println();
+        for (Path contentDir : contentDirs) {
+            Path content = contentDir.toAbsolutePath().normalize();
+            if (!Files.isDirectory(content)) {
+                System.err.println("Not a directory: " + content + " — skipping");
+                continue;
+            }
 
-        int changedFiles = 0;
-        int invalidFiles = 0;
-        List<String> invalidDetails = new ArrayList<>();
+            System.out.println("content dir : " + content);
+            System.out.println("mode        : " + (apply ? "APPLY" : "DRY RUN"));
+            System.out.println();
 
-        for (Path p : collect(content)) {
-            String original = Files.readString(p, StandardCharsets.UTF_8);
-            Result result = transform(original);
+            int changedFiles = 0;
+            int invalidFiles = 0;
+            List<String> invalidDetails = new ArrayList<>();
 
-            if (result.changed) {
-                changedFiles++;
-                if (apply) {
-                    Files.writeString(p, result.text, StandardCharsets.UTF_8);
+            for (Path p : collect(content)) {
+                String original = Files.readString(p, StandardCharsets.UTF_8);
+                Result result = transform(original);
+
+                if (result.changed) {
+                    changedFiles++;
+                    if (apply) {
+                        Files.writeString(p, result.text, StandardCharsets.UTF_8);
+                    }
+                    System.out.printf("  [fix] %s%n", content.relativize(p));
                 }
-                System.out.printf("  [fix] %s%n", content.relativize(p));
+
+                if (!result.valid) {
+                    invalidFiles++;
+                    String first = result.firstLine == null ? "<empty>" : result.firstLine;
+                    invalidDetails.add(String.format("  [bad] %s  first line: %s", content.relativize(p), first));
+                }
             }
 
-            if (!result.valid) {
-                invalidFiles++;
-                String first = result.firstLine == null ? "<empty>" : result.firstLine;
-                invalidDetails.add(String.format("  [bad] %s  first line: %s", content.relativize(p), first));
+            System.out.printf("%nDone: %d files %s.%n",
+                    changedFiles,
+                    apply ? "updated" : "would be updated");
+
+            if (invalidFiles > 0) {
+                totalInvalidFiles += invalidFiles;
+                System.out.println("Invalid first line after normalization: " + invalidFiles);
+                for (String detail : invalidDetails) {
+                    System.out.println(detail);
+                }
+            } else {
+                System.out.println("All checked .adoc files start with a level-1 title (= ...).");
             }
+            if (!apply) {
+                System.out.println("Re-run with --apply to execute the changes.");
+            }
+            System.out.println();
         }
 
-        System.out.printf("%nDone: %d files %s.%n",
-                changedFiles,
-                apply ? "updated" : "would be updated");
-
-        if (invalidFiles > 0) {
-            System.out.println("Invalid first line after normalization: " + invalidFiles);
-            for (String detail : invalidDetails) {
-                System.out.println(detail);
-            }
+        if (totalInvalidFiles > 0) {
             System.exit(1);
-        }
-
-        System.out.println("All checked .adoc files start with a level-1 title (= ...).");
-        if (!apply) {
-            System.out.println("Re-run with --apply to execute the changes.");
         }
     }
 

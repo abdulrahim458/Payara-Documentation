@@ -5,18 +5,16 @@ workflow:
       when: never
     - if: '$CI_COMMIT_BRANCH'
       changes:
-        - content/**/*
-        - extensions/**/*
-        - config/**/*
+        - content_enterprise/**/*
+        - content_community/**/*
+        - content_shared/**/*
         - scripts/build-tpl.rb
         - .gitlab-ci.yml
         - project.properties
-        - toc.yaml
 
 variables:
   GIT_STRATEGY: clone
   GIT_DEPTH: 1
-  DOCS_ID: "payara"
   TEMPLATES_DIR: docs_templates
   HTML_BUILD_DIR: build/html
   PDF_BUILD_DIR: build/pdf
@@ -30,7 +28,21 @@ variables:
   STAGING_DIR: "/mnt/efs/docs.azul.com/staging-public_html/$DOCS_ID"
   PROD_DIR: "/mnt/efs/docs.azul.com/public_html/$DOCS_ID"
 
-# template for jobs that use HTML templates (and therefore depend on the "get_templates" job)
+# Build matrix — one instance per docs set.
+# content_shared is merged into each build (mirrors build_html_locally.sh).
+.docs_matrix: &docs_matrix
+  parallel:
+    matrix:
+      - DOCS_ID: payara
+        CONTENT_DIR: content_enterprise
+        INDEX_GROUP_LABEL: "Azul Payara"
+        SITE_URL: https://docs.azul.com/payara
+      - DOCS_ID: payara-community
+        CONTENT_DIR: content_community
+        INDEX_GROUP_LABEL: "Azul Payara Community"
+        SITE_URL: https://docs.azul.com/payara-community
+
+# Template for jobs that use HTML templates (depends on the "get_templates" job).
 .cache_job: &cache_configuration
   needs: [get_templates]
   cache:
@@ -60,35 +72,39 @@ get_templates:
 
 docs_html:
   stage: build
+  <<: [*docs_matrix, *cache_configuration]
   script:
     - |
-      echo "Building HTML for: ${VERSION}"
+      echo "Building HTML for ${DOCS_ID} (${CONTENT_DIR}) version ${VERSION}"
+      MERGED=$(mktemp -d)
+      cp -a ${CONTENT_DIR}/. ${MERGED}/
+      cp -a content_shared/. ${MERGED}/
       ruby ${TEMPLATES_DIR}/build.rb \
-        --export-public-markdown --generate-sitemap --site-url https://docs.azul.com/payara \
-        --generate-index --index-group-id "payara" --index-group-label "Payara" \
-        -d content -o ${HTML_BUILD_DIR} 
-      
-      echo "Generated HTML versions:"
+        --export-public-markdown --generate-sitemap --site-url ${SITE_URL} \
+        --generate-index --index-group-id "${DOCS_ID}" --index-group-label "${INDEX_GROUP_LABEL}" --index-version "${VERSION}" \
+        -d ${MERGED} -o ${HTML_BUILD_DIR} -a ca -a RELEASE_ID=${VERSION} --page-extension ".html"
+      rm -rf ${MERGED}
+      echo "Generated HTML:"
       ls -l ${HTML_BUILD_DIR}
   artifacts:
     paths:
       - $HTML_BUILD_DIR
-    name: docs-html
+    name: docs-html-${DOCS_ID}
   interruptible: true
-  <<: *cache_configuration
 
 deploy_to_test_server:
   stage: deploy
-  resource_group: test_server
+  resource_group: test_server-${DOCS_ID}
+  <<: *docs_matrix
   needs: [docs_html]
   script:
     - |
       rm -rf ${TEST_DEPLOY_DIR_HTML}/
-        
+
       echo "Uploading HTML ${VERSION} to TEST server in directory '${TEST_DEPLOY_DIR_HTML}'"
       mkdir -p ${TEST_DEPLOY_DIR_HTML}
       cp -R ${HTML_BUILD_DIR}/${VERSION}/* ${TEST_DEPLOY_DIR_HTML}/
-    
+
       PDF_DIR_SRC=${PDF_BUILD_DIR}/${VERSION}
       PDF_DIR_DEST=${TEST_DEPLOY_DIR_PDF_TPL}/pdfs/${VERSION}
       if [ -d "${PDF_DIR_SRC}" ]; then
@@ -100,7 +116,7 @@ deploy_to_test_server:
           echo "No PDFs to be uploaded for ${VERSION}, ${PDF_DIR_SRC} is empty"
         fi
       fi
-    
+
       TLPS_DIR_SRC=${TPL_BUILD_DIR}/${VERSION}
       TLPS_DIR_DEST=${TEST_DEPLOY_DIR_PDF_TPL}/tpls/${VERSION}
       if [ -d "${TLPS_DIR_SRC}" ]; then
@@ -120,24 +136,25 @@ deploy_to_test_server:
 
 deploy_to_staging_server:
   stage: deploy
+  <<: *docs_matrix
   needs: [docs_html]
   variables:
     GIT_STRATEGY: none
   script:
     - |
-      echo "Uploading HTML ${VERSION} to STAGING server"
+      echo "Uploading HTML ${VERSION} to STAGING server for ${DOCS_ID}"
       rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${STAGING_DIR}
 
 deploy_to_prod_server:
   stage: deploy
+  <<: *docs_matrix
   needs: [docs_html, deploy_to_staging_server]
   variables:
     GIT_STRATEGY: none
   script:
     - |
-      echo "Uploading HTML ${VERSION} to PRODUCTION server"
+      echo "Uploading HTML ${VERSION} to PRODUCTION server for ${DOCS_ID}"
       rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${PROD_DIR}
-    # Pipeline triggers must be defined in each project separately in their Settings > CI/CD Settings > Pipeline trigger tokens
     # Start the purge CDN cache pipeline
     - "curl -X POST -F token=${CICD_TRIGGER_TOKEN_PURGE} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2016/trigger/pipeline"
     # Start the Docs Index Generator pipeline
@@ -150,28 +167,29 @@ deploy_to_prod_server:
 
 push_docs_to_nexus:
   stage: deploy
+  <<: *docs_matrix
   needs: [docs_html]
   variables:
     GIT_STRATEGY: none
   script:
     - |
       export TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
-      export ZIP_FILE="docs-payara-${TIMESTAMP}-${CI_PIPELINE_ID}.zip"
+      export ZIP_FILE="docs-${DOCS_ID}-${TIMESTAMP}-${CI_PIPELINE_ID}.zip"
       echo "Building ZIP ${ZIP_FILE} in ${ZIP_NEXUS_BUILD_DIR} for upload to Nexus"
       rm -rf ${ZIP_NEXUS_BUILD_DIR}
       mkdir -p ${ZIP_NEXUS_BUILD_DIR}
-     
+
       echo "Copy generated HTML"
       mkdir -p ${ZIP_NEXUS_BUILD_DIR}/html/
       cp -R ${HTML_BUILD_DIR}/* ${ZIP_NEXUS_BUILD_DIR}/html/
-     
+
       echo "Create ZIP with all the files"
       cd ${ZIP_NEXUS_BUILD_DIR}
       zip -r ${ZIP_FILE} html
-     
+
       echo "Generated files:"
       ls -l
-     
+
       echo "Uploading the ZIP to Nexus"
       curl --fail --show-error --retry 3 --retry-all-errors -u "${CM_NEXUS_USER}:${CM_NEXUS_PASS}" --upload-file ${ZIP_FILE} ${CM_NEXUS_PATH}/repository/docs/${DOCS_ID}/${ZIP_FILE}
   only:
@@ -179,4 +197,4 @@ push_docs_to_nexus:
   artifacts:
     paths:
       - ${ZIP_NEXUS_BUILD_DIR}/*.zip
-    name: nexus-upload
+    name: nexus-upload-${DOCS_ID}

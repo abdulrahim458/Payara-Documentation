@@ -4,10 +4,11 @@
 //DESCRIPTION and rewrites any `xref:` references to `overview.adoc` → `index.adoc`.
 //DESCRIPTION
 //DESCRIPTION Usage:
-//DESCRIPTION   jbang RenameOverviewToIndex.java [content-dir]            # dry run
-//DESCRIPTION   jbang RenameOverviewToIndex.java [content-dir] --apply   # apply changes
+//DESCRIPTION   jbang RenameOverviewToIndex.java [content-dir ...]             # dry run, one or more dirs
+//DESCRIPTION   jbang RenameOverviewToIndex.java [content-dir ...] --apply     # apply changes
 //DESCRIPTION
-//DESCRIPTION Default content-dir is `./content`.
+//DESCRIPTION If no content-dir is given, runs on content_enterprise, content_community,
+//DESCRIPTION and content_shared.
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -22,6 +23,30 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
+/**
+ * Renames every {@code overview.adoc} file to {@code index.adoc} and updates all
+ * references to match.
+ *
+ * <p>Background: Antora uses {@code overview.adoc} as the conventional landing-page
+ * name for a section, but the Azul publish flow expects {@code index.adoc}.
+ * {@code ConvertNavToToc} already maps {@code overview} → {@code index} when it
+ * generates {@code toc.yaml}, but the actual files on disk and the {@code xref:}
+ * links inside other {@code .adoc} files still carry the old name.  This script
+ * closes that gap.
+ *
+ * <p>Three phases, in order:
+ * <ol>
+ *   <li><b>Rewrite xrefs</b> – any {@code xref:.../overview.adoc[...]} in every
+ *       {@code .adoc} file is rewritten to {@code .../index.adoc}.</li>
+ *   <li><b>Patch toc.yaml</b> – bare {@code overview} tokens are replaced with
+ *       {@code index}.</li>
+ *   <li><b>Rename files</b> – each {@code overview.adoc} is moved to
+ *       {@code index.adoc} in the same directory.</li>
+ * </ol>
+ *
+ * <p>Run without {@code --apply} first (dry run) to preview all changes, then
+ * re-run with {@code --apply} to execute them.
+ */
 public class RenameOverviewToIndex {
 
     private static final Pattern XREF_OVERVIEW = Pattern.compile(
@@ -29,15 +54,22 @@ public class RenameOverviewToIndex {
 
     public static void main(String[] args) throws IOException {
         boolean apply = false;
-        Path contentDir = Paths.get("content");
+        List<Path> contentDirs = new ArrayList<>();
         for (String arg : args) {
             if ("--apply".equals(arg)) apply = true;
-            else if (!arg.startsWith("--")) contentDir = Paths.get(arg);
+            else if (!arg.startsWith("--")) contentDirs.add(Paths.get(arg));
         }
+        if (contentDirs.isEmpty()) {
+            contentDirs.add(Paths.get("content_enterprise"));
+            contentDirs.add(Paths.get("content_community"));
+            contentDirs.add(Paths.get("content_shared"));
+        }
+
+        for (Path contentDir : contentDirs) {
         final Path content = contentDir.toAbsolutePath().normalize();
         if (!Files.isDirectory(content)) {
-            System.err.println("Not a directory: " + content);
-            System.exit(2);
+            System.err.println("Not a directory: " + content + " — skipping");
+            continue;
         }
 
         System.out.println("content dir : " + content);
@@ -103,6 +135,8 @@ public class RenameOverviewToIndex {
         } else {
             System.out.println("Done.");
         }
+        System.out.println();
+        } // end for contentDir
     }
 
     static String rewriteXrefs(String content) {

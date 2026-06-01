@@ -9,11 +9,11 @@
 //DESCRIPTION   * rewrites every `file:` entry in `content/toc.yaml`
 //DESCRIPTION
 //DESCRIPTION Usage:
-//DESCRIPTION   jbang RenameContent.java [content-dir]            # dry run, prints plan
-//DESCRIPTION   jbang RenameContent.java [content-dir] --apply    # actually performs the changes
+//DESCRIPTION   jbang RenameContent.java [content-dir ...]             # dry run, one or more dirs
+//DESCRIPTION   jbang RenameContent.java [content-dir ...] --apply     # actually performs the changes
 //DESCRIPTION
-//DESCRIPTION Default content-dir is `./content` (relative to the working directory).
-//DESCRIPTION Idempotent: a second run on an already-normalised tree is a no-op.
+//DESCRIPTION If no content-dir is given, runs on content_enterprise, content_community,
+//DESCRIPTION and content_shared. Idempotent: a second run on an already-normalised tree is a no-op.
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -43,18 +43,25 @@ public class RenameContent {
 
     public static void main(String[] args) throws IOException {
         boolean apply = false;
-        Path contentDir = Paths.get("content");
+        List<Path> contentDirs = new ArrayList<>();
         for (String arg : args) {
             if ("--apply".equals(arg)) {
                 apply = true;
             } else if (!arg.startsWith("--")) {
-                contentDir = Paths.get(arg);
+                contentDirs.add(Paths.get(arg));
             }
         }
+        if (contentDirs.isEmpty()) {
+            contentDirs.add(Paths.get("content_enterprise"));
+            contentDirs.add(Paths.get("content_community"));
+            contentDirs.add(Paths.get("content_shared"));
+        }
+
+        for (Path contentDir : contentDirs) {
         final Path content = contentDir.toAbsolutePath().normalize();
         if (!Files.isDirectory(content)) {
-            System.err.println("Not a directory: " + content);
-            System.exit(2);
+            System.err.println("Not a directory: " + content + " — skipping");
+            continue;
         }
 
         System.out.println("content dir : " + content);
@@ -147,6 +154,8 @@ public class RenameContent {
         } else {
             System.out.println("Done.");
         }
+        System.out.println();
+        } // end for contentDir
     }
 
     // ---------- slug helpers ----------
@@ -200,6 +209,16 @@ public class RenameContent {
             if (pre.find()) {
                 prefix = pre.group();
                 body = body.substring(prefix.length());
+            }
+            // Cross-component xref (e.g. xref:docs::path) leaves a leading ':' in body.
+            // Root-relative xref (e.g. xref:/path) has a leading '/'.
+            // Both forms reference pages that are now part of the same flat component,
+            // so we drop the component prefix and the leading marker entirely.
+            if (body.startsWith(":") || body.startsWith("/")) {
+                prefix = "";
+                while (body.startsWith(":") || body.startsWith("/")) {
+                    body = body.substring(1);
+                }
             }
             String anchor = "";
             int hash = body.indexOf('#');
