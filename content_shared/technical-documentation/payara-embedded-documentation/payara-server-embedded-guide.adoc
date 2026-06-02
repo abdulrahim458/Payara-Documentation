@@ -77,7 +77,7 @@ Can be setup as a Maven dependency with the following GAV coordinates:
 </dependency>
 ----
 
-*`payara-embedded-web.jar`*:
+* *`payara-embedded-web.jar`*:
 Contains classes needed for deploying strictly Jakarta EE web applications.
 Can be setup as a Maven dependency with the following GAV coordinates:
 +

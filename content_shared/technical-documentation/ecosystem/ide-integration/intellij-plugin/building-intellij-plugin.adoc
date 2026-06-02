@@ -10,14 +10,9 @@ The Payara IntelliJ Ultimate Tools source code is available in the https://githu
 == Prerequisites
 Before building the Payara IntelliJ Tools, you will need to configure your local environment. Subsequent builds will not require these steps.
 
-*Clone the relevant repository*:
-You must first clone the appropriate repository for the IntelliJ IDEA plugin you are trying to build.
-
-*JDK 11*:
-JDK 11 is required to build and test the IntelliJ IDEA plugin.
-
-*Install Gradle*:
-Gradle is the build tool for the Payara IntelliJ Tools. You can either download and configure Gradle locally or use the Gradle wrapper in the source code.
+* *Clone the relevant repository*: You must first clone the appropriate repository for the IntelliJ IDEA plugin you are trying to build.
+* *JDK 11*: JDK 11 is required to build and test the IntelliJ IDEA plugin.
+* *Install Gradle*: Gradle is the build tool for the Payara IntelliJ Tools. You can either download and configure Gradle locally or use the Gradle wrapper in the source code.
 
 [[building-intellij-plugin]]
 == Build Payara IntelliJ Tools

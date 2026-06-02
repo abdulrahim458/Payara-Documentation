@@ -80,10 +80,8 @@ asadmin> set server.ejb-container.property.disable-nonportable-jndi-names="true"
 
 The `disable-nonportable-jndi-names` property is a boolean flag that can take the following values:
 
-*`false`*:
-  Enables the automatic use of Payara Server specific JNDI names in addition to portable global JNDI names. This is the default setting.
-*`true`*:
-  Disables the automatic use of specific JNDI names. In all cases, only portable global JNDI names are used.
+* *`false`*: Enables the automatic use of Payara Server specific JNDI names in addition to portable global JNDI names. This is the default setting.
+* *`true`*: Disables the automatic use of specific JNDI names. In all cases, only portable global JNDI names are used.
 
 TIP: This setting applies to all session beans deployed in the server.
 

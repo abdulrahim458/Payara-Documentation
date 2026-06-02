@@ -172,14 +172,10 @@ Using the EJB Timer Service is equivalent to interacting with a single JDBC reso
 
 You can change the following EJB Timer Service settings. You must restart the server for these changes to take effect.
 
-*Minimum Delivery Interval*:
-  Specifies the minimum time in milliseconds before an expiration for a particular timer can occur. This guards against tiny timer increments that can overload the server. The default value is `1000`.
-*Maximum Redeliveries*:
-  Specifies the maximum number of times the EJB timer service attempts to redeliver a timer expiration after an exception or rollback of a container-managed transaction. The default value is `1`.
-*Redelivery Interval*:
-  Specifies how long in milliseconds the EJB timer service waits after a failed `ejbTimeout` delivery before attempting a redelivery. The default is `5000`.
-*Timer DataSource*:
-  Specifies the database used by the EJB Timer Service. The default is `jdbc/__TimerPool`.
+* *Minimum Delivery Interval*: Specifies the minimum time in milliseconds before an expiration for a particular timer can occur. This guards against tiny timer increments that can overload the server. The default value is `1000`.
+* *Maximum Redeliveries*: Specifies the maximum number of times the EJB timer service attempts to redeliver a timer expiration after an exception or rollback of a container-managed transaction. The default value is `1`.
+* *Redelivery Interval*: Specifies how long in milliseconds the EJB timer service waits after a failed `ejbTimeout` delivery before attempting a redelivery. The default is `5000`.
+* *Timer DataSource*: Specifies the database used by the EJB Timer Service. The default is `jdbc/__TimerPool`.
 +
 CAUTION: Do not use the `jdbc/__TimerPool` resource for timers in clustered Payara Server environments.
 You must instead use a custom JDBC resource or the `jdbc/__default` resource. See the instructions below, in xref:#to-deploy-an-ejb-timer-to-a-cluster[To Deploy an EJB Timer to a Cluster]. +
@@ -732,16 +728,10 @@ For more information about `payara-ejb-jar.xml`, see "xref:technical-documentati
 
 You can control the following domain-level message-driven bean settings in the EJB container:
 
-*Initial and Minimum Pool Size*:
-  Specifies the initial and minimum number of beans maintained in the pool. The default is `0`.
-*Maximum Pool Size*:
-  Specifies the maximum number of beans that can be created to satisfy client requests. The default is `32`.
-*Pool Resize Quantity*:
-  Specifies the number of beans to be created if a request arrives when the pool is empty (subject to the *Initial* and *Minimum Pool Size*), or the number of beans to remove if idle for more than the Idle Timeout.
-  The default is `8`.
-*Idle Timeout*:
-  Specifies the maximum time in seconds that a bean can remain idle in the pool. After this amount of time, the bean is destroyed.
-  The default is `600` (10 minutes). A value of `0` means a bean can remain idle indefinitely.
+* *Initial and Minimum Pool Size*: Specifies the initial and minimum number of beans maintained in the pool. The default is `0`.
+* *Maximum Pool Size*: Specifies the maximum number of beans that can be created to satisfy client requests. The default is `32`.
+* *Pool Resize Quantity*: Specifies the number of beans to be created if a request arrives when the pool is empty (subject to the *Initial* and *Minimum Pool Size*), or the number of beans to remove if idle for more than the Idle Timeout. The default is `8`.
+* *Idle Timeout*: Specifies the maximum time in seconds that a bean can remain idle in the pool. After this amount of time, the bean is destroyed. The default is `600` (10 minutes). A value of `0` means a bean can remain idle indefinitely.
 
 Select the _Instances_ component, select the instance from the table, and select the Monitor tab.
 

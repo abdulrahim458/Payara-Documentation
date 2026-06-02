@@ -204,10 +204,8 @@ This trace shows that an `executeUpdate(String sql, String columnNames)` operati
 
 When SQL statement tracing is enabled and JDBC connection pool monitoring is enabled, Payara Server maintains a tracing cache of recent queries and their frequency of use. The following JDBC connection pool properties can be configured to control this cache and the monitoring statistics available from it:
 
-*`time-to-keep-queries-in-minutes`*:
-Specifies how long in minutes to keep a query in the tracing cache,   tracking its frequency of use. The default value is `5` minutes.
-*`number-of-top-queries-to-report`*:
-Specifies how many of the most used queries, in frequency order, are   listed the monitoring statistic. The default value is `10` queries.
+* *`time-to-keep-queries-in-minutes`*: Specifies how long in minutes to keep a query in the tracing cache,   tracking its frequency of use. The default value is `5` minutes.
+* *`number-of-top-queries-to-report`*: Specifies how many of the most used queries, in frequency order, are   listed the monitoring statistic. The default value is `10` queries.
 
 Set these parameters in one of the following ways:
 

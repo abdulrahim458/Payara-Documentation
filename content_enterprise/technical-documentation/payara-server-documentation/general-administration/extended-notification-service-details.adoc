@@ -70,16 +70,12 @@ The email notifier is configured in the **Email** tab of the Notification Sectio
 
 On the Email tab there are four fields:
 
-*`Enabled`*:
-Determines whether the notifier should be activated.
-*`Dynamic`*:
-Sets whether the notifier will be enabled without a restart, `true`
+* `Enabled`: Determines whether the notifier should be activated.
+* `Dynamic`: Sets whether the notifier will be enabled without a restart, `true`
 enables it immediately, while `false` requires a restart.
-*`JavaMail JNDI Name`*:
-Sets the name of the Java Naming and Directory Interface (JNDI) of the
+* `JavaMail JNDI Name`: Sets the name of the Java Naming and Directory Interface (JNDI) of the
 configured `JavaMail` session. The parameter name is `--jndiName` in the asadmin command.
-*`Target Address`*:
-Sets the email address which will receive the email notifications. Currently
+* `Target Address`: Sets the email address which will receive the email notifications. Currently
 only one address can be specified. The parameter name is `--recipient` in the asadmin command.
 
 image:docs::notification-service/email/email-admin-console-configuration.png[alt="Email Notifier on Admin Console",width=600px]
