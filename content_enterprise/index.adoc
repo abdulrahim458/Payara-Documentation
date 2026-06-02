@@ -1,8 +1,8 @@
 = Azul Payara
 
-This is the documentation for the Payara Platform Enterprise Edition, designed to increase stability and security in production environments and provide customers with access to production-oriented features, tools, and capabilities.
+This is the documentation for Azul Payara, designed to increase stability and security in production environments and provide customers with access to production-oriented features, tools, and capabilities.
 
-Payara Platform Enterprise consists of Payara Server and Payara Micro. They have a monthly release cadence, are designed for production environments, and new features are added to Payara Platform Enterprise after they have been thoroughly tested for stability.
+Azul Payara consists of Azul Payara Server and Azul Payara Micro. They have a monthly release cadence, are designed for production environments, and new features are added to Azul Payara after they have been thoroughly tested for stability.
 
 image::payara-bg.png[alt="Payara Logo",width=600px]
 
