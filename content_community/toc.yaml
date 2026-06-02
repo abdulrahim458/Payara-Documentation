@@ -750,14 +750,14 @@ sections:
       - title: Overview
         file: appendix/schemas/index
       - title: DTD for payara-resources.xml
-        url: {payaraResourcesDtd}
+        url: "{payaraResourcesDtd}"
       - title: DTD for payara-web.xml
-        url: {payaraWebDtd}
+        url: "{payaraWebDtd}"
       - title: DTD for payara-ejb-jar.xml
-        url: {payaraEjbJarDtd}
+        url: "{payaraEjbJarDtd}"
       - title: DTD for payara-application.xml
-        url: {payaraApplicationDtd}
+        url: "{payaraApplicationDtd}"
       - title: DTD for payara-application-client.xml
-        url: {payaraApplicationClientDtd}
+        url: "{payaraApplicationClientDtd}"
       - title: DTD for payara-acc.xml
-        url: {payaraAccDtd}
+        url: "{payaraAccDtd}"
