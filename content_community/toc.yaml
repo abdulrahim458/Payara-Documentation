@@ -677,11 +677,87 @@ sections:
           - title: Miscellaneous
             sections:
               - file: technical-documentation/ecosystem/miscellaneous/jax-rs-extension
-      # empty section: include*: partial$release-notes.adoc[Release Notes]
-      # empty section: include*: partial$jakarta-ee.adoc[Jakarta EE Certification]
-      # empty section: include*: partial$eclipse-microprofile.adoc[Eclipse MicroProfile Certification]
+  - title: Release Notes
+    sections:
+    - title: Overview
+      file: release-notes/index
+    - file: release-notes/release-notes-7.2026.5
+    - file: release-notes/release-notes-7.2026.4
+    - file: release-notes/release-notes-7.2026.3
+    - file: release-notes/release-notes-7.2026.2
+    - file: release-notes/release-notes-7.2026.1
+    - file: release-notes/release-notes-7.2025.2
+    - file: release-notes/release-notes-7.2025.1
+  - title: Jakarta EE Certification
+    sections:
+    - title: Overview
+      file: jakarta-ee-certification/index
+    - title: 7.2026.5
+      sections:
+      - file: jakarta-ee-certification/7.2026.5/7.2026.5-platform-tck-results
+      - title: 7.2026.5 Web TCK Results
+        file: jakarta-ee-certification/7.2026.5/7.2026.5-web-profile-web-tck-results
+    - title: 7.2026.4
+      sections:
+      - file: jakarta-ee-certification/7.2026.4/7.2026.4-platform-tck-results
+      - title: 7.2026.4 Web TCK Results
+        file: jakarta-ee-certification/7.2026.4/7.2026.4-web-profile-web-tck-results
+    - title: 7.2026.3
+      sections:
+      - file: jakarta-ee-certification/7.2026.3/7.2026.3-platform-tck-results
+      - title: 7.2026.3 Web TCK Results
+        file: jakarta-ee-certification/7.2026.3/7.2026.3-web-profile-web-tck-results
+    - title: 7.2026.2
+      sections:
+      - file: jakarta-ee-certification/7.2026.2/7.2026.2-platform-tck-results
+      - title: 7.2026.2 Web TCK Results
+        file: jakarta-ee-certification/7.2026.2/7.2026.2-web-profile-web-tck-results
+    - title: 7.2026.1
+      sections:
+      - file: jakarta-ee-certification/7.2026.1/7.2026.1-platform-tck-results
+      - title: 7.2026.1 Web TCK Results
+        file: jakarta-ee-certification/7.2026.1/7.2026.1-web-profile-web-tck-results
+    - title: 7.2025.2
+      sections:
+      - file: jakarta-ee-certification/7.2025.2/7.2025.2-platform-tck-results
+      - title: 7.2025.2 Web TCK Results
+        file: jakarta-ee-certification/7.2025.2/7.2025.2-web-profile-web-tck-results
+    - title: 7.2025.1
+      sections:
+      - file: jakarta-ee-certification/7.2025.1/7.2025.1-platform-tck-results
+      - title: 7.2025.1 Web TCK Results
+        file: jakarta-ee-certification/7.2025.1/7.2025.1-web-profile-web-tck-results
+    - title: 7.2025.1.Beta1
+      sections:
+      - file: jakarta-ee-certification/7.2025.1.beta1/7.2025.1.beta1-platform-tck-results
+      - title: 7.2025.1.Beta1 Web TCK Results
+        file: jakarta-ee-certification/7.2025.1.beta1/7.2025.1.beta1-web-profile-web-tck-results
+    - title: 7.2024.1.Alpha3
+      sections:
+      - file: jakarta-ee-certification/7.2024.1.alpha3/7.2024.1.alpha3-core-tck-results
+  - title: Eclipse MicroProfile Certification
+    sections:
+    - title: Overview
+      file: eclipse-microprofile-certification/index
   - title: Security
     sections:
       - file: security/index
       - file: security/security-fix-list
-      # empty section: include*: partial$appendix.adoc[Appendix]
+  - title: Appendix
+    sections:
+    - title: Schemas
+      sections:
+      - title: Overview
+        file: appendix/schemas/index
+      - title: DTD for payara-resources.xml
+        url: {payaraResourcesDtd}
+      - title: DTD for payara-web.xml
+        url: {payaraWebDtd}
+      - title: DTD for payara-ejb-jar.xml
+        url: {payaraEjbJarDtd}
+      - title: DTD for payara-application.xml
+        url: {payaraApplicationDtd}
+      - title: DTD for payara-application-client.xml
+        url: {payaraApplicationClientDtd}
+      - title: DTD for payara-acc.xml
+        url: {payaraAccDtd}
