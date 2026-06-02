@@ -7,5 +7,5 @@ Detailed information about features and fixes in every release.
 
 *2026*
 
-* 2026 May - xref:release-notes/release-notes-7.0.0.adoc[Release Notes 7.0.0]
+* 2026 May - xref:release-notes-7.0.0.adoc[Release Notes 7.0.0]
 
