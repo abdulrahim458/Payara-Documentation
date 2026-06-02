@@ -33,6 +33,10 @@ public class FixDlist {
     private static final Pattern DLIST = Pattern.compile(
             "^(\\s*)((?:`[^`]+`|[^:])+?)(?<![/:])(::)\\s*(.*)$");
 
+    // AsciiDoc block macro names that use `name::target[]` syntax — must not be treated as dlists.
+    private static final java.util.Set<String> BLOCK_MACROS = new java.util.HashSet<>(java.util.Arrays.asList(
+            "include", "image", "video", "audio", "toc", "ifdef", "ifndef", "ifeval", "endif"));
+
     // 4+ of the same delimiter char used for AsciiDoc blocks
     private static final Pattern BLOCK_DELIM = Pattern.compile(
             "^([\\-\\.=\\*_/\\+]{4,})\\s*$");
@@ -123,7 +127,7 @@ public class FixDlist {
             }
 
             Matcher m = DLIST.matcher(stripped);
-            if (m.matches()) {
+            if (m.matches() && !BLOCK_MACROS.contains(m.group(2).strip().toLowerCase())) {
                 String indent = m.group(1);
                 String term = m.group(2).strip();
                 String desc = m.group(4).strip();
@@ -146,8 +150,8 @@ public class FixDlist {
         List<Path> out = new ArrayList<>();
         try (Stream<Path> s = Files.walk(root)) {
             s.filter(p -> Files.isRegularFile(p) && p.toString().endsWith(".adoc"))
-             .sorted()
-             .forEach(out::add);
+                    .sorted()
+                    .forEach(out::add);
         }
         return out;
     }
