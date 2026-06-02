@@ -14,7 +14,6 @@ variables:
   GIT_STRATEGY: clone
   GIT_DEPTH: 1
   TEMPLATES_DIR: docs_templates
-  HTML_BUILD_DIR: build/html
   PDF_BUILD_DIR: build/pdf
   TPL_BUILD_DIR: build/tpl
   ZIP_NEXUS_BUILD_DIR: build/zip_nexus
@@ -34,11 +33,13 @@ variables:
     matrix:
       - DOCS_ID: payara
         CONTENT_DIR: content_enterprise
+        HTML_BUILD_DIR: build/html_enterprise
         INDEX_GROUP_LABEL: "Azul Payara"
         SITE_URL: https://docs.azul.com/payara
         VERSION: 7
       - DOCS_ID: payara-community
         CONTENT_DIR: content_community
+        HTML_BUILD_DIR: build/html_community
         INDEX_GROUP_LABEL: "Azul Payara Community"
         SITE_URL: https://docs.azul.com/payara-community
         VERSION: 7
