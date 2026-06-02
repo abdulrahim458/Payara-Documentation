@@ -1,5 +1,0 @@
-.Jakarta EE Certification
-* xref:jakarta-ee-certification/index.adoc[Overview]
-* 7.0.0
-** xref:jakarta-ee-certification/7.0.0/7.0.0-platform-tck-results.adoc[7.0.0 Platform TCK Results]
-** xref:jakarta-ee-certification/7.0.0/7.0.0-web-profile-web-tck-results.adoc[7.0.0 Web TCK Results]

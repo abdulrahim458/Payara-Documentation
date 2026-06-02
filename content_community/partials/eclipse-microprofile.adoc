@@ -1,2 +1,0 @@
-.Eclipse MicroProfile Certification
-* xref:eclipse-microprofile-certification/index.adoc[Overview]

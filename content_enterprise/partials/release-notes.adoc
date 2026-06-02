@@ -1,4 +1,0 @@
-.Release Notes
-* xref:release-notes/index.adoc[Overview]
-
-xref:release-notes/release-notes-7.0.0.adoc[Release Notes 7.0.0]
