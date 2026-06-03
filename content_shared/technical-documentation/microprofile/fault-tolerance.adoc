@@ -61,7 +61,7 @@ On Payara Server the Fault Tolerance service can be configured by using the Admi
 
 To configure the Fault Tolerance in the Admin Console, go to Configuration -> [instance-configuration (like `server-config`)] -> MicroProfile -> Fault Tolerance:
 
-image:microprofile/fault-tolerance.png[alt="Set Fault Tolerance Configuration",width=600px]
+image:microprofile/fault-tolerance.png[alt="Set Fault Tolerance Configuration",width=100%]
 
 [#using-asadmin-commands]
 === Using Asadmin Commands

@@ -27,7 +27,7 @@ To configure the `HASHICORP_VAULT_TOKEN` password alias from the admin console, 
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `HashiCorp Secrets`.
 
-image:microprofile/config/cloud/hashicorp/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=600px]
+image:microprofile/config/cloud/hashicorp/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=100%]
 
 From here you can select the KV Secrets Engine API version you want to use, configure the vault address, the path where the KV Secrets Engine is enabled and the path where your secrets are stored.
 

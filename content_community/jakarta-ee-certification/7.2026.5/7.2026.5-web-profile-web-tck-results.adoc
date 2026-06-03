@@ -9,7 +9,7 @@ As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Tech
 +
 [cols="1,2",grid=none,frame=none]
 |===
-|image:JakartaEE_Logo_compatible-color.png[alt="JakartaEE_Logo_compatible-color",width=600px]
+|image:JakartaEE_Logo_compatible-color.png[alt="JakartaEE_Logo_compatible-color",width=100%]
 |
 {empty} +
 {empty} +

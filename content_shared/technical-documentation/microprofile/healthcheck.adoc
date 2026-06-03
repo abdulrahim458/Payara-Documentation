@@ -53,7 +53,7 @@ On Payara Server, the MicroProfile HealthCheck settings can be configured by usi
 
 To configure the Health Check in the Admin Console, go to Configuration -> [instance-configuration (like `server-config`)] -> MicroProfile -> Health Check:
 
-image:microprofile/health-check.png[alt="Set Health Check Configuration",width=600px]
+image:microprofile/health-check.png[alt="Set Health Check Configuration",width=100%]
 
 [#using-asadmin-commands]
 === Using Asadmin Commands

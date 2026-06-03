@@ -12,7 +12,7 @@ Config Directory can be configured by using Admin Console or Asadmin commands.
 
 To configure the Config Directory in the Admin Console, go to Configuration → [instance-configuration (like server-config)] → MicroProfile → Config → Directory:
 
-image:microprofile/config-property.png[alt="Set Config Property",width=600px]
+image:microprofile/config-property.png[alt="Set Config Property",width=100%]
 
 [#using-asadmin-commands]
 === Using Asadmin Commands

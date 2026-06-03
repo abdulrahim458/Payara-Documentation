@@ -1614,7 +1614,7 @@ This feature can be configured on the default certificate realm as follows on th
 . Click the `Add Property` button
 . Set the property _Name_ to be `common-name-as-principal-name` and set the _Value_ to `true`
 +
-image:security/common-name-as-principal-name.png[alt="Common Name As Principal Name Setting",width=600px]
+image:security/common-name-as-principal-name.png[alt="Common Name As Principal Name Setting",width=100%]
 
 [#advanced-principal-conf-using-asadmin-cli]
 === Configuration Using the Asadmin CLI
@@ -1741,7 +1741,7 @@ This feature can be configured on the default certificate realm as follows on th
 . Head to `Security` -> `Realms` and select the `certificate` realm
 . Set the property `certificate-validation` _value_ to `[true/false]`
 +
-image:security/default-certificate-expiration-validation.png[alt="Certificate Expiration Validation Setting",width=600px]
+image:security/default-certificate-expiration-validation.png[alt="Certificate Expiration Validation Setting",width=100%]
 +
 IMPORTANT: After setting the value of the property, make sure that you **restart the server instance** for the changes to take effect.
 

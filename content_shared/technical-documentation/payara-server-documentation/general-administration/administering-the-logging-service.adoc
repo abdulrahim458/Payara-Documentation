@@ -632,14 +632,14 @@ Besides the standard Uniform Log Format (ULF) and Oracle Diagnostics Logging (OD
 
 Once the JSON formatter is enabled, the server's log file may look similar to this sample:
 
-image:logging/json_example.png[alt="Example log file with JSON format",width=600px]
+image:logging/json_example.png[alt="Example log file with JSON format",width=100%]
 
 [#enable-json-formatter-via-admin-console]
 ===== Enable the JSON Formatter Using the Web Admin Console
 
 To enable the JSON formatter using the Admin Console, just select `JSON` from the list of Logging Formats, either for `Console` or `Log File`:
 
-image:logging/json_config.png[alt="JSON format configuration in Web Console",width=600px]
+image:logging/json_config.png[alt="JSON format configuration in Web Console",width=100%]
 
 [#enable-json-formatter-via-asadmin-cli]
 ===== Enable the JSON Formatter Using the Asadmin CLI
@@ -658,7 +658,7 @@ In some situations, the JSON representation of a log entry may use field names t
 
 To solve this problem, Payara Server can be configured to automatically prefix all field names in the JSON object representation with an underscore (`_`) character. See the following sample to get an idea of how such a JSON payload would look like:
 
-image:logging/json_underscore_prefix_example.png[alt="Example log file with underscore prefix in JSON fields",width=600px]
+image:logging/json_underscore_prefix_example.png[alt="Example log file with underscore prefix in JSON fields",width=100%]
 
 The following Asadmin command will enable this configuration setting:
 
@@ -892,7 +892,7 @@ Payara Server can be configured to automatically compress rotated log files in a
 
 When log rotation is enabled, you can turn on automatic compression in the `Logger Settings` section of the Admin Console, by ticking the `Compress on Rotation` checkbox:
 
-image:logging/compress_on_rotation.png[alt="Compress on rotation enabled",width=600px]
+image:logging/compress_on_rotation.png[alt="Compress on rotation enabled",width=100%]
 
 [#compress-on-rotation-via-asadmin-cli]
 ===== Using the Asadmin CLI
@@ -990,7 +990,7 @@ The *Write to System Log* option allows you to enable and disable the action of 
 
 To configure the `Write to System Log` option using the Admin Console:
 
-image:logging/write_to_system_log.jpg[alt="Write to System Log enabled",width=600px]
+image:logging/write_to_system_log.jpg[alt="Write to System Log enabled",width=100%]
 
 [#enable-write-to-system-log-via-asadmin-cli]
 ==== Enable Write to System Log Using the Asadmin CLI
@@ -1007,7 +1007,7 @@ asadmin set-log-attributes com.sun.enterprise.server.logging.SyslogHandler.useSy
 
 To configure the `System Log Host` option using the Admin Console:
 
-image:logging/system_log_host.jpg[alt="System Log Host",width=600px]
+image:logging/system_log_host.jpg[alt="System Log Host",width=100%]
 
 [#set-sytem-log-host-via-asadmin-cli]
 ===== Set the System Log Host Using the Asadmin CLI
@@ -1024,7 +1024,7 @@ asadmin set-log-attributes com.sun.enterprise.server.logging.SyslogHandler.host=
 
 To configure the `System Log Facility` option using the Admin Console:
 
-image:logging/system_log_facility.png[alt="System Log Facility",width=600px]
+image:logging/system_log_facility.png[alt="System Log Facility",width=100%]
 
 [#set-system-log-facility-via-asadmin-cli]
 ==== Set the System Log Facility Using the Asadmin CLI
@@ -1048,7 +1048,7 @@ TIP: This option will be more accommodating if Payara Server is running in cloud
 
 To configure the `Log to File` option using theAdmin Console:
 
-image:logging/log_to_file.png[alt="Log to File enabled",width=600px]
+image:logging/log_to_file.png[alt="Log to File enabled",width=100%]
 
 [#enable-log-to-file-via-asadmin-cli]
 ==== Enable Log to File Using the Asadmin CLI
@@ -1083,7 +1083,7 @@ Once the server is run in verbose mode, you can use either the Admin Console or 
 
 To configure the `Log to Console` option using the Admin Console:
 
-image:logging/log_to_file.png[alt="Log to Console disabled",width=600px]
+image:logging/log_to_file.png[alt="Log to Console disabled",width=100%]
 
 [#configure-log-to-console-via-asadmin-cli]
 ==== Configure Logging to Console Using the Asadmin CLI
@@ -1112,7 +1112,7 @@ Exert caution when using fast logging, as it may cause stale information to be p
 
 To configure the `Fast Logging` option, set it in the Logger settings.
 
-image:logging/fast_logging.png[alt="Fast Logging enabled",width=600px]
+image:logging/fast_logging.png[alt="Fast Logging enabled",width=100%]
 
 [#fast-logging-using-asadmin-cli]
 ==== Using Asadmin CLI
@@ -1243,7 +1243,7 @@ IMPORTANT: If the value for this option is set to `0`, HTTP access log rotation 
 
 To configure the **Max File Size** option using the Admin Console:
 
-image:logging/max_file_size.png[alt="Max File Size",width=600px]
+image:logging/max_file_size.png[alt="Max File Size",width=100%]
 
 [#max-file-size-via-asadmin-cli]
 === Using the Asadmin CLI
@@ -1282,7 +1282,7 @@ The **Log to File** option will provide a way to enable and disable logging to a
 
 To configure the **Log to File** option using Admin Console:
 
-image:logging/notification-logging/payara_notification_log_to_file.png[alt="Log to File enabled",width=600px]
+image:logging/notification-logging/payara_notification_log_to_file.png[alt="Log to File enabled",width=100%]
 
 [#log-to-file-using-asadmin-cli]
 ===== Using the Asadmin CLI
@@ -1311,7 +1311,7 @@ The **Rotation On Date Change** option provides a way to set the log rotation wh
 
 To configure the **Rotation on Date Change** option using the Admin Console:
 
-image:logging/notification-logging/payara_notification_rotation_on_date_change.png[alt="Rotation on Date Change enabled",width=600px]
+image:logging/notification-logging/payara_notification_rotation_on_date_change.png[alt="Rotation on Date Change enabled",width=100%]
 
 [#notification-rotate-on-date-change-using-asadmin-cli]
 ===== Using the Asadmin CLI
@@ -1337,7 +1337,7 @@ IMPORTANT: If the value for this option is set to `0`, log rotation will be disa
 
 To configure the **File Rotation Limit** option using the Admin Console:
 
-image:logging/notification-logging/payara_notification_rotation_on_file_size.png[alt="File Rotation Limit",width=600px]
+image:logging/notification-logging/payara_notification_rotation_on_file_size.png[alt="File Rotation Limit",width=100%]
 
 [#notification-file-rotation-limit-using-asadmin-cli]
 ===== Using the Asadmin CLI
@@ -1359,7 +1359,7 @@ The **File Rotation Time Limit** option provides a way to trigger the notificati
 
 To configure the **File Rotation Time Limit** option using the Admin Console:
 
-image:logging/notification-logging/payara_notification_rotation_on_time_limit.png[alt="File Rotation Time Limit",width=600px]
+image:logging/notification-logging/payara_notification_rotation_on_time_limit.png[alt="File Rotation Time Limit",width=100%]
 
 [#notification-rotation-on-time-limit-via-asadmin-cli]
 ===== Using the Asadmin CLI
@@ -1381,7 +1381,7 @@ The **Log File Logging Format** option can be used to change the notification lo
 
 To configure the **Log File Logging Format** option using the Admin Console:
 
-image:logging/notification-logging/payara_notification_change_logging_format.png[alt="Change Logging Format",width=600px]
+image:logging/notification-logging/payara_notification_change_logging_format.png[alt="Change Logging Format",width=100%]
 
 [#change-notification-logging-format-via-asadmin-cli]
 ===== Using the Asadmin CLI
@@ -1405,7 +1405,7 @@ Once the number of files reaches the set limit, the oldest rotated log file is d
 
 To configure the `Maximum History File` option using the Admin Console:
 
-image:logging/notification-logging/payara_notification_set_maximum_number_of_history_files.png[alt="Maximum History File",width=600px]
+image:logging/notification-logging/payara_notification_set_maximum_number_of_history_files.png[alt="Maximum History File",width=100%]
 
 [#set-maximum-number-of-historic-notification-files-via-asadmin-cli]
 ===== Using the Asadmin CLI
@@ -1427,7 +1427,7 @@ The `Log File` option provides a way to change the default name and location of 
 
 To configure `Log File` option using Admin Console:
 
-image:logging/notification-logging/payara_notification_change_name_and_location_of_log_file.png[alt="Log File",width=600px]
+image:logging/notification-logging/payara_notification_change_name_and_location_of_log_file.png[alt="Log File",width=100%]
 
 [#change-the-name-and-location-of-notification-log-file-via-asadmin-cli]
 ===== Using the Asadmin CLI
@@ -1451,7 +1451,7 @@ The `Compress on Rotation` option provides a way to enable the automatic compres
 
 To configure the `Compress on Rotation` option using the Admin Console:
 
-image:logging/notification-logging/payara_notification_set_compress_on_rotation.png[alt="Compress on Rotation Enabled",width=600px]
+image:logging/notification-logging/payara_notification_set_compress_on_rotation.png[alt="Compress on Rotation Enabled",width=100%]
 
 [#enable-notification-file-compression-on-rotation-via-asadmin-cli]
 ===== Using the Asadmin CLI

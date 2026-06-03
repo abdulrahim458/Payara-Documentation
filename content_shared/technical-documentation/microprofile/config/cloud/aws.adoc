@@ -9,11 +9,11 @@ The AWS cloud config source takes configuration from a single named secret in a 
 
 Once you've logged in, click the button to create a new secret. From here, you should specify the type as _Other type of secrets_. You'll be able to enter your config properties in a key/value format below, or leave blank for configuring through Payara Server.
 
-image:microprofile/config/cloud/aws/new-secret.png[alt="AWS Secret Creation",width=600px]
+image:microprofile/config/cloud/aws/new-secret.png[alt="AWS Secret Creation",width=100%]
 
 On the next screen, you'll be able to enter your secret name. This will need giving to Payara Server in order to fetch the config properties from it.
 
-image:microprofile/config/cloud/aws/secret-name.png[alt="AWS Secret Name",width=600px]
+image:microprofile/config/cloud/aws/secret-name.png[alt="AWS Secret Name",width=100%]
 
 [#aws-iam-user]
 == AWS IAM User
@@ -22,17 +22,17 @@ In order to connect to AWS Secrets Manager you need to know your project name as
 
 From the AWS console, visit the _IAM Users_ dashboard by searching 'IAM' in the top search bar. From here, head to _Users_ in the left menu. You'll see all your IAM users associated with this region.
 
-image:microprofile/config/cloud/aws/iam-users.png[alt="AWS IAM users",width=600px]
+image:microprofile/config/cloud/aws/iam-users.png[alt="AWS IAM users",width=100%]
 
 From here you can create a new IAM user. Skip this step if you already have an IAM user you want to use.
 
-image:microprofile/config/cloud/aws/new-iam-user.png[alt="AWS new IAM user",width=600px]
+image:microprofile/config/cloud/aws/new-iam-user.png[alt="AWS new IAM user",width=100%]
 
 Set the IAM username. This isn't used by Payara, but will be helpful for your own reference. Make sure you enable _Programmatic access_, as this will be used by Payara Server to access your AWS Secrets.
 
 Next, select your IAM user permissions.
 
-image:microprofile/config/cloud/aws/iam-user-permissions.png[alt="AWS IAM user permissions",width=600px]
+image:microprofile/config/cloud/aws/iam-user-permissions.png[alt="AWS IAM user permissions",width=100%]
 
 Whether you assign a group or select individual permissions, make sure the IAM user contains the _SecretsManagerReadWrite_ permission, which will allow the user access to your secrets.
 
@@ -56,7 +56,7 @@ To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliase
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `AWS Secrets`.
 
-image:microprofile/config/cloud/aws/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=600px]
+image:microprofile/config/cloud/aws/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=100%]
 
 From here you can pass the name of the secret to access in AWS Secrets Manager, as well as the region name. You can also decide whether to apply these changes dynamically or on the next server restart. If the config source is enabled or disabled dynamically it will take effect across the server immediately.
 

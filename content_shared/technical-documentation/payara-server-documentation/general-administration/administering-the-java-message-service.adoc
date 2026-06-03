@@ -499,7 +499,7 @@ Once downloaded, unzip the file and navigate to /bin folder and run the followin
 activemq start
 ----
 
-image:administration/activemq-1.png[alt="ActiveMQ Console",width=600px]
+image:administration/activemq-1.png[alt="ActiveMQ Console",width=100%]
 
 This is going to start the ActiveMQ broker at http://127.0.0.1:8161
 
@@ -542,9 +542,9 @@ If you chose to use the Payara Admin Console, you will need to create a new JMS 
 
 Now we need to create a new JMS Connector Connection Pool as shown in the following screenshots:
 
-image:administration/activemq-2.png[alt="Payara Admin Console - JMS Connector Connection Pool 1",width=600px]
+image:administration/activemq-2.png[alt="Payara Admin Console - JMS Connector Connection Pool 1",width=100%]
 
-image:administration/activemq-3.png[alt="Payara Admin Console - JMS Connector Connection Pool 2",width=600px]
+image:administration/activemq-3.png[alt="Payara Admin Console - JMS Connector Connection Pool 2",width=100%]
 
 The Connector Connection Pool can also be created by using the following asadmin command:
 
@@ -555,7 +555,7 @@ asadmin create-connector-connection-pool --raname activemq-rar-5.17.4 --connecti
 
 Another configuration needed is the JNDI mapping for te JMS Connector Connection Pool. This can be done by using the Payara Admin Console following this screenshot:
 
-image:administration/activemq-4.png[alt="Payara Admin Console - JMS Connector Resource",width=600px]
+image:administration/activemq-4.png[alt="Payara Admin Console - JMS Connector Resource",width=100%]
 
 Alternatively you can use the following asadmin command:
 [source,shell]
@@ -565,7 +565,7 @@ asadmin create-connector-resource --poolname jms/myConnectionPool jms/myConnecti
 
 Now we have the connection factory configured we can also create a JMS mapping to our Queue. This can be done by using the Payara Admin Console following this screenshot:
 
-image:administration/activemq-5.png[alt="Payara Admin Console - JMS mapping",width=600px]
+image:administration/activemq-5.png[alt="Payara Admin Console - JMS mapping",width=100%]
 
 Again, if you prefer, you can use the following asadmin command to create the same mapping:
 
@@ -609,12 +609,12 @@ public class NewMessageBean implements MessageListener {
 
 If we build and deploy this MDB we will see in the Active MQ console that we have a single consumer on our queue.
 
-image:administration/activemq-6.png[alt="ActiveMQ Console - Consumer",width=600px]
+image:administration/activemq-6.png[alt="ActiveMQ Console - Consumer",width=100%]
 
 We can test the MDB by sending a message using the ActiveMQ console.
 
-image:administration/activemq-7.png[alt="ActiveMQ Console - Sending a message",width=600px]
+image:administration/activemq-7.png[alt="ActiveMQ Console - Sending a message",width=100%]
 
 Once you have sent the message we can check the server log, the message will be printed out:
 
-image:administration/activemq-8.png[alt="Payara Server Log",width=600px]
+image:administration/activemq-8.png[alt="Payara Server Log",width=100%]

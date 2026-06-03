@@ -50,7 +50,7 @@ To create a new deployment group using the Admin Console, follow these steps:
 . Alternatively, check the _Auto Name_ box to give the deployment group a random name.
 . From this screen it is also possible to add a number of new server instances if desired:
 +
-image:deployment-groups/deployment-group-new.png[alt="Create New Deployment Group",width=600px]
+image:deployment-groups/deployment-group-new.png[alt="Create New Deployment Group",width=100%]
 +
 IMPORTANT: Instances created in this screen will be created alongside a corresponding xref:technical-documentation/payara-server-documentation/command-reference/configuration.adoc[configuration] object that is a copy of the `default-config` object. +
 If you want these instances to reference an existing configuration object, it is better to create them from the _Instances_ screen and add them to the deployment group later.
@@ -81,7 +81,7 @@ To delete a deployment group using the Admin Console, follow these steps:
 . Select the group from corresponding table.
 . Click the _Delete_ button.
 +
-image:deployment-groups/delete-deployment-group.png[alt="Delete a Deployment Group",width=600px]
+image:deployment-groups/delete-deployment-group.png[alt="Delete a Deployment Group",width=100%]
 
 [#delete-using-asadmin-cli]
 ==== Using Asadmin Commands
@@ -107,7 +107,7 @@ Existing standalone instances be assigned to an existing deployment group via th
 . Navigate to the deployment group you want to modify.
 . Select the instance to add from the dropdown in the _Instances_ tab.
 +
-image:deployment-groups/add-server-to-dg.png[alt="Add a Server to a Deployment Group",width=600px]
+image:deployment-groups/add-server-to-dg.png[alt="Add a Server to a Deployment Group",width=100%]
 
 The same result can be achieved from the command line by using the xref:technical-documentation/payara-server-documentation/command-reference/add-instance-to-deployment-group.adoc[`add-instance-to-deployment-group`] command:
 
@@ -127,7 +127,7 @@ If you want to remove an instance from a deployment group by using the Admin con
 . Navigate to the deployment group you want to modify.
 . Select the instance and choose the _Remove_ from the _More actions_ drop down.
 +
-image:deployment-groups/remove-server-from-dg.png[alt="Remove a Server from a Deployment Group",width=600px]
+image:deployment-groups/remove-server-from-dg.png[alt="Remove a Server from a Deployment Group",width=100%]
 
 The same can be achieved using the Asadmin CLI by using the xref:technical-documentation/payara-server-documentation/command-reference/remove-instance-from-deployment-group.adoc[`remove-instance-from-deployment-group`] command:
 
@@ -176,7 +176,7 @@ To deploy an application to a deployment group when using the Admin console you 
 
 This can be done both on the _Applications_ tab of the corresponding deployment group or on the _Applications_ section of the administration console:
 
-image:deployment-groups/deploy-to-dg.png[alt="Deploy to a deployment group",width=600px]
+image:deployment-groups/deploy-to-dg.png[alt="Deploy to a deployment group",width=100%]
 
 To deploy an application from the command line by using the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`] command, just specify the deployment group as a *target* like this:
 

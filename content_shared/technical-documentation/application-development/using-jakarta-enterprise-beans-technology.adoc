@@ -204,7 +204,7 @@ The Persistence service for EJB Timers can be set in the Admin console by naviga
 
 To use the Data Grid to store EJB Timers set the *Persistence Service* to _DataGrid_
 
-image:ejb/set-ejb-timer-persistence.png[alt="Set EJB Persistence to Data Grid",width=600px]
+image:ejb/set-ejb-timer-persistence.png[alt="Set EJB Persistence to Data Grid",width=100%]
 
 EJB Timers will be coordinated across a single deployment group and if an instance of the deployment group is stopped another instance in the same deployment group will take ownership of the timer and ensure it is fired.
 

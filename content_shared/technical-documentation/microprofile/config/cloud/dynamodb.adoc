@@ -9,17 +9,17 @@ In order to access DynamoDB, you need an AWS access key. If you don't have an ac
 
 From the AWS console, visit the _IAM Users_ dashboard by searching 'IAM' in the top search bar. From here, head to _Users_ in the left menu. You'll see all your IAM users associated with this region.
 
-image:microprofile/config/cloud/aws/iam-users.png[alt="AWS IAM users",width=600px]
+image:microprofile/config/cloud/aws/iam-users.png[alt="AWS IAM users",width=100%]
 
 From here you can create a new IAM user. Skip this step if you already have an IAM user you want to use.
 
-image:microprofile/config/cloud/aws/new-iam-user.png[alt="AWS new IAM user",width=600px]
+image:microprofile/config/cloud/aws/new-iam-user.png[alt="AWS new IAM user",width=100%]
 
 Set the IAM username. This isn't used by Payara Server but will be helpful for your own reference. Make sure you enable _Programmatic access_, as this will be used by Payara Server to access your AWS Secrets.
 
 Next, select your IAM user permissions.
 
-image:microprofile/config/cloud/aws/iam-user-permissions.png[alt="AWS IAM user permissions",width=600px]
+image:microprofile/config/cloud/aws/iam-user-permissions.png[alt="AWS IAM user permissions",width=100%]
 
 Whether you assign a group or select individual permissions, make sure the IAM user contains the _SecretsManagerReadWrite_ permission, which will allow the user access to your secrets.
 

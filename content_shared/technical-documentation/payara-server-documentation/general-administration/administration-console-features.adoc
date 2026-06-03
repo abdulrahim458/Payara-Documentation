@@ -39,7 +39,7 @@ This means that the asadmin recorder will remain enabled or disabled across serv
 
 To configure the asadmin recorder, navigate to the following page in the admin console: _server -> Asadmin Recorder_:
 
-image:recorder/recorder-config.png[alt="Asadmin Recorder configuration",width=600px]
+image:recorder/recorder-config.png[alt="Asadmin Recorder configuration",width=100%]
 
 You will be presented with the following configuration options:
 
@@ -139,7 +139,7 @@ One way to ensure no accidental changes are made would be to revoke access to th
 
 As an alternative, Payara Server ships with a configurable warning bar to ensure any user will see a warning message in while viewing the console:
 
-image:admin-console/environment-warning.png[alt="Payara Server Environment Warning",width=600px]
+image:admin-console/environment-warning.png[alt="Payara Server Environment Warning",width=100%]
 
 The warning can be configured in the admin console as seen in the screenshot above. There is a new "_Environment Warning_" tab in the "_Domain_" section which allows you to configure the text and colours of the warning message.
 

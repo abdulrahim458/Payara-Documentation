@@ -15,7 +15,7 @@ You'll need the path of the TOML configuration file and the maximum recursion de
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `TOML`.
 
-image:microprofile/config/toml/admin-console-example.png[alt="Payara Server Administration Console configuration route",width=600px]
+image:microprofile/config/toml/admin-console-example.png[alt="Payara Server Administration Console configuration route",width=100%]
 
 From here you can enter the path to the TOML configuration file and set the maximum recursion depth.
 

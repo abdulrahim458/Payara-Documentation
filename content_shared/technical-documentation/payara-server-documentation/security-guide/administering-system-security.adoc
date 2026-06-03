@@ -1125,7 +1125,7 @@ To use the Administration Console to administer JACC providers, perform the foll
 . Select _Security_ and expand the entry.
 . Select _JACC Providers_. The existing JACC providers are shown on this page.
 +
-image:security/jacc-providers.png[alt="Configured JACC Providers",width=600px]
+image:security/jacc-providers.png[alt="Configured JACC Providers",width=100%]
 +
 . To create a new provider, click _New_.
 +

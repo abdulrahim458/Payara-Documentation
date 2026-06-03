@@ -13,7 +13,7 @@ following is a summary of the TCK results for Payara Server releases for Jakarta
 +
 [cols="1,2",grid=none,frame=none]
 |===
-|image:JakartaEE_Logo_compatible-color.png[alt="JakartaEE_Logo_compatible-color",width=600px]
+|image:JakartaEE_Logo_compatible-color.png[alt="JakartaEE_Logo_compatible-color",width=100%]
 |
 {empty} +
 {empty} +

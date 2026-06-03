@@ -161,7 +161,7 @@ The self-signed certificates that Payara Server uses will not be trusted by clie
 
 If you enable secure admin and then contact the DAS using an administration client, that client will detect whether the certificate is automatically trusted. Most modern web browsers will deny access to the web  interface of the Admin console and reject any communication until the user explicitly creates an exception to continue. And example is shown in the following figure:
 
-image:security/accept-certificate.png[alt=""This screen shot shows how a Mozilla Firefox responds to an untrusted certificate."",width=600px]
+image:security/accept-certificate.png[alt=""This screen shot shows how a Mozilla Firefox responds to an untrusted certificate."",width=100%]
 
 Similarly, the first time the Asadmin CLI receives an untrusted certificate, it displays the certificate and lets you accept it or reject it, as follows:
 

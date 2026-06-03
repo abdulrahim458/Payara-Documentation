@@ -4,7 +4,7 @@ This is the documentation for Azul Payara Community, consisting of Azul Payara S
 
 Azul Payara Community Edition provides a frequent release cycle to drive faster innovation. Payara Server Community and Payara Micro Community are dedicated to rapid change and innovation, giving developers a place to play with the latest features of the Payara Platform as soon as possible.
 
-image:payara-community-bg.png[alt="payara-logo-blue.png",width=600px][alt="Payara Logo",width=600px]
+image:payara-community-bg.png[alt="payara-logo-blue.png",width=400px]
 
 == Azul Payara Editions
 

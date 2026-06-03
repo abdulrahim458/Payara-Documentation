@@ -63,11 +63,11 @@ From the Admin Console, open the instance details page (e.g. on the navigation b
 
 From here, Click on the _Add_ button of the keystore table (highlighted):
 
-image:certificate-management/CertificateManagementAddButton.png[alt="Certificate Management Add Button",width=600px]
+image:certificate-management/CertificateManagementAddButton.png[alt="Certificate Management Add Button",width=100%]
 
 You can then enter the alias name and the path to the certificate bundle:
 
-image:certificate-management/CertificateManagementAddKeystoreEntry.png[alt="Add Keystore Entry",width=600px]
+image:certificate-management/CertificateManagementAddKeystoreEntry.png[alt="Add Keystore Entry",width=100%]
 
 [#import-keystore-via-keytool]
 ==== Using the `keytool` Command
@@ -99,11 +99,11 @@ asadmin add-to-truststore --file mycert.crt mydomain_certificate
 
 You can also follow the same steps as done for adding the bundle to the keystore via the admin console, though selecting the *Add* button of the truststore table
 
-image:certificate-management/CertificateManagementAddButton2.png[alt="Certificate Management Add Button",width=600px]
+image:certificate-management/CertificateManagementAddButton2.png[alt="Certificate Management Add Button",width=100%]
 
 And then specifying the `mycert.crt` file.
 
-image:certificate-management/CertificateManagementAddTruststoreEntry.png[alt="Add Truststore Entry",width=600px]
+image:certificate-management/CertificateManagementAddTruststoreEntry.png[alt="Add Truststore Entry",width=100%]
 
 [#via-keytool-command-2]
 ==== Using the `keytool` Command
@@ -217,4 +217,4 @@ You can also remove individual or groups of certificates using the admin console
 
 Select the desired certificates from the keystore *or* truststore entries table (not both), and click on the _Delete_ button:
 
-image:certificate-management/CertificateManagementDeleteButton.png[alt="Certificate Management Delete Button",width=600px]
+image:certificate-management/CertificateManagementDeleteButton.png[alt="Certificate Management Delete Button",width=100%]

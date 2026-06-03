@@ -16,7 +16,7 @@ IMPORTANT: The type of the database columns for the _key_ and _value_ columns ne
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `JDBC`.
 
-image:microprofile/config/jdbc/admin-console-example.png[alt="Payara Server Administration Console configuration route",width=600px]
+image:microprofile/config/jdbc/admin-console-example.png[alt="Payara Server Administration Console configuration route",width=100%]
 
 From here you configure the JNDI name of the database JDBC resources, name of the database table, name of the key column containing the key and name of the column containing the value.
 

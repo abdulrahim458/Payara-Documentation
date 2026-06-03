@@ -53,7 +53,7 @@ Context services can be created by using Admin Console or Asadmin commands.
 
 To create a new Context Service in the Admin Console, go to Resources → Concurrent Resources → Context Services → New:
 
-image:concurrency/new_context_service.png[alt="New Context Service",width=600px]
+image:concurrency/new_context_service.png[alt="New Context Service",width=100%]
 
 Alternatively, you can use the `create-context-service` asadmin command to create a context service resource.
 
@@ -169,7 +169,7 @@ Managed Thread Factories can be created by using Admin Console or Asadmin comman
 
 To create a new Managed Thread Factory in the Admin Console, go to Resources → Concurrent Resources → Managed Thread Factories → New:
 
-image:concurrency/new_managed_thread_factory.png[alt="New Managed Thread Factory",width=600px]
+image:concurrency/new_managed_thread_factory.png[alt="New Managed Thread Factory",width=100%]
 
 Because all JNDI names are in the `java:comp/env` subcontext, when specifying the JNDI name of a managed thread factory, use only the `concurrent/` name format. For example, `concurrent/Factory1`.
 
@@ -287,7 +287,7 @@ Managed Executor Services can be created by using Admin Console or Asadmin comma
 
 To create a new Managed Executor Service in the Admin Console, go to Resources → Concurrent Resources → Managed Executor Services → New:
 
-image:concurrency/new_managed_executor_service.png[alt="New Managed Executor Service",width=600px]
+image:concurrency/new_managed_executor_service.png[alt="New Managed Executor Service",width=100%]
 
 Use the `create-managed-executor-service` subcommand in remote mode to create a managed executor service resource.
 
@@ -406,7 +406,7 @@ Managed Scheduled Executor Services can be created by using Admin Console or Asa
 
 To create a new Managed Scheduled Executor Service in the Admin Console, go to Resources → Concurrent Resources → Managed Scheduled Executor Services → New:
 
-image:concurrency/new_managed_scheduled_executor_service.png[alt="New Managed Exector Service",width=600px]
+image:concurrency/new_managed_scheduled_executor_service.png[alt="New Managed Exector Service",width=100%]
 
 Alternatively, the `create-managed-scheduled-executor-service` asadmin command can be used to create a managed scheduled executor service resource.
 

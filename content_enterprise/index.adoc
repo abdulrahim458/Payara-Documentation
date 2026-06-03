@@ -4,7 +4,7 @@ This is the documentation for Azul Payara, designed to increase stability and se
 
 Azul Payara consists of Azul Payara Server and Azul Payara Micro. They have a monthly release cadence, are designed for production environments, and new features are added to Azul Payara after they have been thoroughly tested for stability.
 
-image::payara-bg.png[alt="Payara Logo",width=600px]
+image::payara-bg.png[alt="Payara Logo",width=400px]
 
 == Download
 

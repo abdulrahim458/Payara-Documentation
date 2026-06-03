@@ -19,11 +19,11 @@ image:microprofile/config/cloud/gcp/service-accounts.png[alt="GCP Service Accoun
 
 From here you can create a new service account. Skip this step if you already have a service account you want to use.
 
-image:microprofile/config/cloud/gcp/new-service-account.png[alt="GCP new Service Account",width=600px]
+image:microprofile/config/cloud/gcp/new-service-account.png[alt="GCP new Service Account",width=100%]
 
 After this you'll need to add roles to your service account
 
-image:microprofile/config/cloud/gcp/service-account-roles.png[alt="GCP Service Account roles",width=600px]
+image:microprofile/config/cloud/gcp/service-account-roles.png[alt="GCP Service Account roles",width=100%]
 
 You have a selection of roles:
 
@@ -40,11 +40,11 @@ Next, you'll need to download the access key for this service account.
 
 Select the options icon for the service account you plan to use.
 
-image:microprofile/config/cloud/gcp/service-account-key.png[alt="GCP Service Account Access Key",width=600px]
+image:microprofile/config/cloud/gcp/service-account-key.png[alt="GCP Service Account Access Key",width=100%]
 
 You'll be presented with an option to download the key in `JSON` or `P12` format. The GCP config source currently requires that the `JSON` format be used, so select this one.
 
-image:microprofile/config/cloud/gcp/json-key-type.png[alt="JSON Access Key",width=600px]
+image:microprofile/config/cloud/gcp/json-key-type.png[alt="JSON Access Key",width=100%]
 
 This downloaded file can now be used by Payara Server to access GCP Secrets.
 
@@ -60,7 +60,7 @@ NOTE: The JSON key file will be copied into the Payara Server `config/` director
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `GCP Secrets`.
 
-image:microprofile/config/cloud/gcp/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=600px]
+image:microprofile/config/cloud/gcp/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=100%]
 
 From here you can pass the absolute path to the json key file downloaded in the previous section, as well as the project name. You can also decide whether to apply these changes dynamically or on the next server restart.
 

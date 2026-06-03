@@ -13,7 +13,7 @@ If you haven't already, you will need to register an Azure Active Directory (Azu
 
 NOTE: If you have access to multiple tenants and want to select a specific tenant to register with your application, use the Directory + subscription filter in the top menu.
 
-image:microprofile/config/cloud/azure/application-registration.png[alt="Application Registration",width=600px]
+image:microprofile/config/cloud/azure/application-registration.png[alt="Application Registration",width=100%]
 
 Then on the _Register an application_ page:
 
@@ -23,7 +23,7 @@ Then on the _Register an application_ page:
 
 Once the application registration is completed, the service principal is automatically created in your home tenant.
 
-image:microprofile/config/cloud/azure/application-registration-configuration.png[alt="Application Registration Configuration",width=600px]
+image:microprofile/config/cloud/azure/application-registration-configuration.png[alt="Application Registration Configuration",width=100%]
 
 [#app-api-permissions]
 == Application API Permissions
@@ -40,7 +40,7 @@ You can learn more about permissions and consent https://docs.microsoft.com/en-g
 . Tick the _user_impersonation_ checkbox
 . Click Add permissions
 +
-image:microprofile/config/cloud/azure/API-permissions.png[alt="API Permissions",width=600px]
+image:microprofile/config/cloud/azure/API-permissions.png[alt="API Permissions",width=100%]
 
 [#adding-credentials]
 == Adding Credentials
@@ -57,7 +57,7 @@ You can upload your certificate for authentication using the following steps:
 
 Once the certificate is successfully uploaded, it should generate a _Thumbprint_, which will be required when we configure the _Azure Config_ Source.
 
-image:microprofile/config/cloud/azure/certificate-upload.png[alt="Certificate Upload",width=600px]
+image:microprofile/config/cloud/azure/certificate-upload.png[alt="Certificate Upload",width=100%]
 
 [#create-key-vault]
 == Create a Key Vault
@@ -115,7 +115,7 @@ NOTE: Your private key file will be copied into `domain-dir/config`.
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `Azure Secrets`.
 
-image:microprofile/config/cloud/azure/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=600px]
+image:microprofile/config/cloud/azure/admin-console-config.png[alt="Payara Server Administration Console configuration route",width=100%]
 
 From here, you can pass the name of the key vault, tenant ID and client ID of the application, absolute path to the private key file and thumbprint of the certificate.
 

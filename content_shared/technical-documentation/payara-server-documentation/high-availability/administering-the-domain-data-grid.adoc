@@ -120,7 +120,7 @@ subjects:
 
 The domain discovery mode can be configured in the administration console under the **Data Grid** menu option. The discovery mode that is set gets to  be applied in a domain-wide manner.
 
-image:domain-datagrid/discovery-mode.png[alt="Domain Discovery Mode",width=600px]
+image:domain-datagrid/discovery-mode.png[alt="Domain Discovery Mode",width=100%]
 
 [#configuration-discovery-mode-via-asadmin-CLI]
 === Configuration Discovery Mode via Asadmin CLI
@@ -413,7 +413,7 @@ To view data grid members from the admin console:
 
 Selected the **Data Grid** menu option from the domain menu in the sidebar and select the _Data Grid Instances_ tab:
 
-image:hazelcast/hazelcast-admin-console-view-cluster-members-from-domain.png[alt="Domain Cluster Members",width=600px]
+image:hazelcast/hazelcast-admin-console-view-cluster-members-from-domain.png[alt="Domain Cluster Members",width=100%]
 
 [#viewing-cluster-members-asadmin]
 === Viewing Cluster Members via Asadmin
