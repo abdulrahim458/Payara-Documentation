@@ -80,7 +80,7 @@ This mapping should align with the exploded application path or parent path of e
 +
 [source, shell]
 ----
-docker run -p 8080:8080 -p 4848:4848 -p 9009:9009 -v HOST_PATH:CONTAINER_PATH  payara/server-full:{version}
+docker run -p 8080:8080 -p 4848:4848 -p 9009:9009 -v HOST_PATH:CONTAINER_PATH  payara/server-full:{release-id}
 ----
 +
 Replace `HOST_PATH` with the actual host path and `CONTAINER_PATH` with the desired container path.

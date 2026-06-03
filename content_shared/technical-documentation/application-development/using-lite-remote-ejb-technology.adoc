@@ -36,7 +36,7 @@ Client applications that wish to use HTTP(S) as the transport protocol when call
 <dependency>
     <groupId>fish.payara.extras</groupId>
     <artifactId>ejb-http-client</artifactId>
-    <version>{version}</version>
+    <version>{release-id}</version>
 </dependency>
 ----
 

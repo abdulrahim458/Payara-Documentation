@@ -12,7 +12,7 @@ Payara Server can be downloaded from http://www.payara.fish/downloads[the Payara
 
 [source, shell, subs=attributes+]
 ----
-unzip payara-{version}.zip
+unzip payara-{release-id}.zip
 ----
 
 By default, this will unzip the archive into `{CURRENT_DIR}/payara7`.

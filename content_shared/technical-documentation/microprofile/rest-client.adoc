@@ -1,6 +1,6 @@
 = Eclipse Microprofile Rest Client API
 
-Payara Platform {version} provides MicroProfile Rest Client {mpRestClientVersion}
+Payara Platform {release-id} provides MicroProfile Rest Client {mpRestClientVersion}
 
 [#background]
 == Background

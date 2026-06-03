@@ -23,7 +23,7 @@ plugins {
 [source, groovy, subs=attributes+]
 ----
 payaraMicro {
-    payaraVersion = '{version}'
+    payaraVersion = '{release-id}'
     deployWar = false
     useUberJar = true
     daemon = false
@@ -53,8 +53,8 @@ payaraMicro {
 |Absolute path to the java executable
 
 |`payaraVersion`
-|{version}
-|By default `microBundle` task fetches payara-micro with version {version}
+|{release-id}
+|By default `microBundle` task fetches payara-micro with version {release-id}
 |=== 
 
 [#start]
@@ -79,8 +79,8 @@ payaraMicro {
 |Absolute path to payara-micro executable.
 
 |`payaraVersion`
-|{version}
-|By default `microStart` task fetches Payara Micro with version {version}.
+|{release-id}
+|By default `microStart` task fetches Payara Micro with version {release-id}.
 
 |`daemon`
 |false

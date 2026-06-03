@@ -46,7 +46,7 @@ To start with Jakarta MVC, you will need to add the specification API to your ap
             <dependency>
                 <groupId>fish.payara.api</groupId>
                 <artifactId>payara-bom</artifactId>
-                <version>{version}</version>
+                <version>{release-id}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

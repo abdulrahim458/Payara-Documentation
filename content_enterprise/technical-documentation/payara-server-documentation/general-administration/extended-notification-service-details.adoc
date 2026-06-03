@@ -318,7 +318,7 @@ mv newrelic as-install/domains/domain1
 
     # Set the name of your application as you'd like it to show up in New Relic.
     # ...
-    app_name: Payara Server {version}
+    app_name: Payara Server {release-id}
 
     # ...
 ----
@@ -341,11 +341,11 @@ If the installation was successful, the output of the agent's installer will sho
 ***** ( ( o))  New Relic Java Agent Installer
 ***** Installing version 3.39.1 ...
 
-* Backed up start script to /opt/{version}/glassfish/domains/domain1/config/domain.xml.20170613_180108
-* Added agent switch to start script /opt/{version}/glassfish/domains/domain1/config/domain.xml
+* Backed up start script to /opt/{release-id}/glassfish/domains/domain1/config/domain.xml.20170613_180108
+* Added agent switch to start script /opt/{release-id}/glassfish/domains/domain1/config/domain.xml
 
 * No need to create New Relic configuration file because:
- A config file already exists: /opt/{version}/glassfish/domains/domain1/newrelic/newrelic.yml
+ A config file already exists: /opt/{release-id}/glassfish/domains/domain1/newrelic/newrelic.yml
 
 ***** Install successful
 
@@ -380,8 +380,8 @@ Also, make sure that the directory where the _newrelic.jar_ resides also contain
 +
 [source, log, subs=attributes+]
 ----
-INFO: New Relic Agent: Loading configuration file "/opt/{version}/glassfish/domains/domain1/newrelic/newrelic.yml"
-INFO: New Relic Agent: Writing to log file: /opt/{version}/glassfish/domains/domain1/newrelic/logs/newrelic_agent.log
+INFO: New Relic Agent: Loading configuration file "/opt/{release-id}/glassfish/domains/domain1/newrelic/newrelic.yml"
+INFO: New Relic Agent: Writing to log file: /opt/{release-id}/glassfish/domains/domain1/newrelic/logs/newrelic_agent.log
 ----
 
 . After some minutes with the server working, you can log in back to the New Relic portal and on the *APM* dashboard you can see a new entry for recently configured server:

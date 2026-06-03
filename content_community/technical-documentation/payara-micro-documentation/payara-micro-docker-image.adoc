@@ -22,7 +22,7 @@ Keep in mind the following:
 .Using a specific version
 [source,text]
 ----
-docker run -p 8080:8080 payara/micro:{version}
+docker run -p 8080:8080 payara/micro:{release-id}
 ----
 
 AMD64 & ARM64 compatible images are provided. The Docker client should automatically download the appropriate image for your architecture.

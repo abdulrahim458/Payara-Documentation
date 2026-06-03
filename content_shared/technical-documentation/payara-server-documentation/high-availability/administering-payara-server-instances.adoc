@@ -951,7 +951,7 @@ Here is an example of how to create a Docker instance using this method:
 
 [source, shell, subs=attributes+]
 ----
-docker container create --network host --mount type=bind,source="/app/passwordfile-docker.txt",target="/pathInDocker/passwordfile.txt",readonly -e PAYARA_DAS_HOST=payaraDas -e PAYARA_DAS_PORT=4848 -e PAYARA_PASSWORD_FILE=/pathInDocker/passwordfile.txt payara/server-node:{version}
+docker container create --network host --mount type=bind,source="/app/passwordfile-docker.txt",target="/pathInDocker/passwordfile.txt",readonly -e PAYARA_DAS_HOST=payaraDas -e PAYARA_DAS_PORT=4848 -e PAYARA_PASSWORD_FILE=/pathInDocker/passwordfile.txt payara/server-node:{release-id}
 994e6d5db276304843481601932857fa224dfd9f9cda8578f3b09f8f11bf6004
 
 docker start 994e6d5db276
@@ -1060,7 +1060,7 @@ separated using a comma `,`
 [#reserved-environment-properties]
 ==== Reserved Environment Properties
 
-The following Docker Environment properties are used by the default Docker image, `payara/server-node:{version}`, which you may wish to override to match your configuration (particularly if creating containers directly from Docker):
+The following Docker Environment properties are used by the default Docker image, `payara/server-node:{release-id}`, which you may wish to override to match your configuration (particularly if creating containers directly from Docker):
 
 |===
 |Environment Property| Use| Default Value
@@ -1196,8 +1196,8 @@ e7803ce3ec96        payara/server-node:mytag   "/opt/payara/entrypo…"   7 minu
 
 docker images payara/server-node
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
-payara/server-node   custom-{version}       386a996b3649        About an hour ago   511MB
-payara/server-node   {version}              f5cf02e10dc2        4 weeks ago         525MB
+payara/server-node   custom-{release-id}       386a996b3649        About an hour ago   511MB
+payara/server-node   {release-id}              f5cf02e10dc2        4 weeks ago         525MB
 payara/server-node   latest              f5cf02e10dc2        4 weeks ago         525MB
 payara/server-node   mytag               f5cf02e10dc2        4 weeks ago         525MB
 

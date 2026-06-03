@@ -15,7 +15,7 @@ The Payara Server Remote Arquillian container adapter can be found on link:https
 <dependency>
   <groupId>fish.payara.arquillian</groupId>
   <artifactId>arquillian-payara-server-remote</artifactId>
-  <version>${version}</version>
+  <version>${release-id}</version>
 </dependency>
 ----
 

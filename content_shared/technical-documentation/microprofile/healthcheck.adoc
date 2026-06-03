@@ -1,6 +1,6 @@
 = Eclipse Microprofile Health Check API
 
-The Payara Platform {version} provides MicroProfile HealthCheck {mpHealthVersion}
+The Payara Platform {release-id} provides MicroProfile HealthCheck {mpHealthVersion}
 
 [#background]
 == Background

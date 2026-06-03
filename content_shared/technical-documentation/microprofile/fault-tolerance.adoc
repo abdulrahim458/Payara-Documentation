@@ -1,6 +1,6 @@
 = Eclipse Microprofile Fault Tolerance API
 
-The Payara Platform {version} provides MicroProfile Fault Tolerance {mpFaultToleranceVersion}
+The Payara Platform {release-id} provides MicroProfile Fault Tolerance {mpFaultToleranceVersion}
 
 == Background
 

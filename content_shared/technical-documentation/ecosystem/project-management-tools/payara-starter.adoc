@@ -91,7 +91,7 @@ Available options:
 * 17
 * 21
 
-WARNING: Keep in mind that versions older than `11` are not supported in Payara Platform {version}
+WARNING: Keep in mind that versions older than `11` are not supported in Payara Platform {release-id}
 
 | `jakartaEEVersion`
 | `10`
@@ -104,7 +104,7 @@ Valid options:
 * 9.1
 * 10
 
-WARNING: For compatibility with the Payara Platform {version}, versions older than `10` are not supported.
+WARNING: For compatibility with the Payara Platform {release-id}, versions older than `10` are not supported.
 
 | `profile`
 | `full`
@@ -120,7 +120,7 @@ Options include:
 * `micro` for Payara Micro.
 
 | `payaraVersion`
-| `{version}`
+| `{release-id}`
 | Sets the targeted Payara version. Retrieved from Maven Central.
 
 | `addConcurrentApi`

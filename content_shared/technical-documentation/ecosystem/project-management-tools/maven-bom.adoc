@@ -23,7 +23,7 @@ Add following snippet to your Maven project:
         <dependency>
             <groupId>fish.payara.api</groupId>
             <artifactId>payara-bom</artifactId>
-            <version>{version}</version>
+            <version>{release-id}</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>

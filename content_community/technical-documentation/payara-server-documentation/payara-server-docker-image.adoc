@@ -23,7 +23,7 @@ Keep in mind the following:
 .Using a specific version
 [source,text]
 ----
-docker run -p 8080:8080 payara/server-full:{version}
+docker run -p 8080:8080 payara/server-full:{release-id}
 ----
 
 AMD64 & ARM64 compatible images are provided. The Docker client should automatically download the appropriate image for your architecture.
@@ -82,7 +82,7 @@ The following sample command will launch a new Payara Server container and deplo
 
 [source, shell, subs=attributes+]
 ----
-docker run -p 8080:8080 -v ~/payara/apps:/opt/payara/deployments payara/server-full:{version}
+docker run -p 8080:8080 -v ~/payara/apps:/opt/payara/deployments payara/server-full:{release-id}
 ----
 
 [#deploy-using-custom-image]

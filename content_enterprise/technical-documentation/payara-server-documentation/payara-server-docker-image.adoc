@@ -25,7 +25,7 @@ IMPORTANT: It is recommended to specify the tag of the correct Payara Enterprise
 .Using a specific version
 [source,text]
 ----
-docker run -p 8080:8080 nexus.payara.fish:5000/payara/server-full:{version}
+docker run -p 8080:8080 nexus.payara.fish:5000/payara/server-full:{release-id}
 ----
 
 AMD64 & ARM64 compatible images are provided. The Docker client should automatically download the appropriate image for your architecture.
@@ -52,7 +52,7 @@ To access the DAS' administration interface (either by remote asadmin commands o
 
 [source, shell, subs=attributes+]
 ----
-docker run -p 4848:4848 -p 8080:8080 nexus.payara.fish:5000/payara/server-full:{version}
+docker run -p 4848:4848 -p 8080:8080 nexus.payara.fish:5000/payara/server-full:{release-id}
 ----
 
 By default, the admin service will be secure-enabled, meaning that HTTPS communication will be used exclusively.
@@ -84,7 +84,7 @@ The following sample command will launch a new Payara Server container and deplo
 
 [source, shell, subs=attributes+]
 ----
-docker run -p 8080:8080 -v ~/payara/apps:/opt/payara/deployments nexus.payara.fish:5000/payara/server-full:{version}
+docker run -p 8080:8080 -v ~/payara/apps:/opt/payara/deployments nexus.payara.fish:5000/payara/server-full:{release-id}
 ----
 
 [#deploy-using-custom-image]
@@ -96,7 +96,7 @@ The following sample _Dockerfile_ can be used to prepare a custom Payara Server 
 
 [source, Docker, subs=attributes+]
 ----
-FROM nexus.payara.fish:5000/payara/server-full:{version}
+FROM nexus.payara.fish:5000/payara/server-full:{release-id}
 COPY myapplication.war $DEPLOY_DIR
 ----
 
@@ -155,14 +155,14 @@ For example, the following sample command will execute all commands listed in th
 
 [source, shell, subs=attributes+]
 ----
-docker run -p 8080:8080 -v /local/path/with/boot/file:/config -e POSTBOOT_COMMANDS=/config/post-boot-commands.asadmin nexus.payara.fish:5000/payara/server-full:{version}
+docker run -p 8080:8080 -v /local/path/with/boot/file:/config -e POSTBOOT_COMMANDS=/config/post-boot-commands.asadmin nexus.payara.fish:5000/payara/server-full:{release-id}
 ----
 
 Alternatively, the same outcome can be achieved by defining a custom Docker image:
 
 [source, Docker, subs=attributes+]
 ----
-FROM nexus.payara.fish:5000/payara/server-full:{version}
+FROM nexus.payara.fish:5000/payara/server-full:{release-id}
 COPY post-boot-commands.asadmin $POSTBOOT_COMMANDS
 ----
 
@@ -179,7 +179,7 @@ Alternatively, you can redirect the container logs to a file when running the co
 
 [source, shell]
 
-docker run -p 8080:8080 nexus.payara.fish:5000/payara/server-full:{version} > payara-logs.txt 2>&1
+docker run -p 8080:8080 nexus.payara.fish:5000/payara/server-full:{release-id} > payara-logs.txt 2>&1
 
 [#executing-custom-scripts-before-domain-startup]
 === Executing Custom Scripts before Domain Startup
@@ -210,7 +210,7 @@ You can override the default entrypoint if needed to test or browse the containe
 
 [source, shell, subs=attributes+]
 ----
-docker run -p 8080:8080 -it nexus.payara.fish:5000/payara/server-full:{version} bash
+docker run -p 8080:8080 -it nexus.payara.fish:5000/payara/server-full:{release-id} bash
 ----
 
 [#read-only]
@@ -225,5 +225,5 @@ Here is an example `run` command for a read-only Docker container which will del
 
 [source, shell, subs=attributes+]
 ----
-docker run -p 8080:8080 -p 4848:4848 --read-only --rm -v /opt/payara -v /tmp nexus.payara.fish:5000/payara/server-full:{version}
+docker run -p 8080:8080 -p 4848:4848 --read-only --rm -v /opt/payara -v /tmp nexus.payara.fish:5000/payara/server-full:{release-id}
 ----

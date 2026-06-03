@@ -1,6 +1,6 @@
 = Eclipse Microprofile JWT Authentication API
 
-The Payara Platform {version} provides MicroProfile JWT Authentication {mpJWTVersion}.
+The Payara Platform {release-id} provides MicroProfile JWT Authentication {mpJWTVersion}.
 
 [#background]
 == Background

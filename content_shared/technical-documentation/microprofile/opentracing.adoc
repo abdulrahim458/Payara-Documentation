@@ -1,6 +1,6 @@
 = Eclipse Microprofile Opentracing
 
-Payara Platform {version} provides MicroProfile OpenTracing {mpOpenTracingVersion}
+Payara Platform {release-id} provides MicroProfile OpenTracing {mpOpenTracingVersion}
 
 [#background]
 == Background

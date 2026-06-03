@@ -1,6 +1,6 @@
 = Eclipse Microprofile Openapi API
 
-The Payara Platform {version} provides MicroProfile OpenAPI {mpOpenAPIVersion}
+The Payara Platform {release-id} provides MicroProfile OpenAPI {mpOpenAPIVersion}
 
 [#background]
 == Background

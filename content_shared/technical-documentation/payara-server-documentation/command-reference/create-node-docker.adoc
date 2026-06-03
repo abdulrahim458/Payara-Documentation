@@ -56,7 +56,7 @@ Please note, that this path should be the path to the file on the *remote* machi
 *`--dockerImage`*:
 The Docker image to use for creating the container.
 +
-Defaults to `payara/server-node:{version}`.
+Defaults to `payara/server-node:{release-id}`.
 *`--dockerPort`*:
 The port where the Docker engine's REST API endpoint is exposed.
 +

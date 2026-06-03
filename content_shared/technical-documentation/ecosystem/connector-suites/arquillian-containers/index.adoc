@@ -23,7 +23,7 @@ The Payara Arquillian container adapters are freely available in Maven Central u
 <dependency>
     <groupId>fish.payara.arquillian</groupId>
     <artifactId>arquillian-payara-${container-name}</artifactId>
-    <version>${version}</version>
+    <version>${release-id}</version>
 </dependency>
 ----
 

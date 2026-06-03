@@ -739,7 +739,7 @@ then the local version is displayed along with a warning message.
 [source,shell, subs=attributes+]
 ----
 asadmin> version
-Version = Payara Server {version} #badassfish (build 00)
+Version = Payara Server {release-id} #badassfish (build 00)
 Command version executed successfully.
 ----
 

@@ -13,7 +13,7 @@ The Payara Server Embedded Arquillian container adapter can be found on link:htt
 <dependency>
   <groupId>fish.payara.arquillian</groupId>
   <artifactId>arquillian-payara-server-embedded</artifactId>
-  <version>${version}</version>
+  <version>${release-id}</version>
 </dependency>
 ----
 

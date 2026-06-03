@@ -16,7 +16,7 @@ The Payara Server Managed Arquillian container adapter can be found on link:http
 <dependency>
   <groupId>fish.payara.arquillian</groupId>
   <artifactId>arquillian-payara-server-managed</artifactId>
-  <version>${version}</version>
+  <version>${release-id}</version>
 </dependency>
 ----
 

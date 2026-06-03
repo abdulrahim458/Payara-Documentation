@@ -1544,7 +1544,7 @@ This example shows the JSON representation of the resource for log file details.
       "recordNumber":475,
       "loggedDateTimeInMS":1300743782815,
       "loggedLevel":"INFO",
-      "productName":"Payara Server {version}",
+      "productName":"Payara Server {release-id}",
       "loggerName":"org.glassfish.admingui",
       "nameValuePairs": "_ThreadID=25;_ThreadName=Thread-1;",
       "messageID":"",
@@ -1554,7 +1554,7 @@ This example shows the JSON representation of the resource for log file details.
       "recordNumber":474,
       "loggedDateTimeInMS":1300728893368,
       "loggedLevel":"INFO",
-      "productName":"Payara {version}",
+      "productName":"Payara {release-id}",
       "loggerName":"java.enterprise.system.core.com.sun.enterprise.v3.admin.adapter",
       "nameValuePairs":"_ThreadID=238;_ThreadName=Thread-1;",
       "messageID":"",
@@ -1564,7 +1564,7 @@ This example shows the JSON representation of the resource for log file details.
       "recordNumber":473,
       "loggedDateTimeInMS":1300728893367,
       "loggedLevel":"INFO",
-      "productName":"Payara {version}",
+      "productName":"Payara {release-id}",
       "loggerName":"jakarta.enterprise.system.core.com.sun.enterprise.v3.server",
       "nameValuePairs":"_ThreadID=238;_ThreadName=Thread-1;",
       "messageID":"CORE10010",
@@ -1627,9 +1627,9 @@ This example shows the XML representation of the resource for log file details. 
 [source, xml, subs=attributes+]
 ----
 <records>
- <record loggedDateTimeInMS="1300743782815" loggedLevel="INFO" loggerName="org.glassfish.admingui" messageID="" nameValuePairs="_ThreadID=25;_ThreadName=Thread-1;" productName="Payara {version}" recordNumber="475"/>
- <record loggedDateTimeInMS="1300728893368" loggedLevel="INFO" loggerName="jakarta.enterprise.system.core.com.sun.enterprise.v3.admin.adapter" messageID="" nameValuePairs="_ThreadID=238;_ThreadName=Thread-1;" productName="Payara {version}" recordNumber="474"/>
- <record loggedDateTimeInMS="1300728893367" loggedLevel="INFO" loggerName="jakarta.enterprise.system.core.com.sun.enterprise.v3.server" messageid="core10010" nameValuePairs="_ThreadID=238;_ThreadName=Thread-1;" productName="Payara {version}" recordNumber="473"/>
+ <record loggedDateTimeInMS="1300743782815" loggedLevel="INFO" loggerName="org.glassfish.admingui" messageID="" nameValuePairs="_ThreadID=25;_ThreadName=Thread-1;" productName="Payara {release-id}" recordNumber="475"/>
+ <record loggedDateTimeInMS="1300728893368" loggedLevel="INFO" loggerName="jakarta.enterprise.system.core.com.sun.enterprise.v3.admin.adapter" messageID="" nameValuePairs="_ThreadID=238;_ThreadName=Thread-1;" productName="Payara {release-id}" recordNumber="474"/>
+ <record loggedDateTimeInMS="1300728893367" loggedLevel="INFO" loggerName="jakarta.enterprise.system.core.com.sun.enterprise.v3.server" messageid="core10010" nameValuePairs="_ThreadID=238;_ThreadName=Thread-1;" productName="Payara {release-id}" recordNumber="473"/>
 </records>
 ----
 

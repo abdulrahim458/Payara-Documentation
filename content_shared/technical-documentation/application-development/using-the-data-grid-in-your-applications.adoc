@@ -24,7 +24,7 @@ Here's the Maven dependency:
 <dependency>
   <groupId>fish.payara.api</groupId>
   <artifactId>payara-api</artifactId>
-  <version>${version}</version>
+  <version>${release-id}</version>
 </dependency>
 ----
 

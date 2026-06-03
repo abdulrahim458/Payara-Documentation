@@ -6,7 +6,7 @@ The following is an up-to-date compatibility matrix that list the compatible ver
 [cols="a,a,a", options="header"]
 |===
 |Payara Server & Micro Version |OpenTracing.io API Version |OpenTelemetry API Version
-| 6.0.0 - {version}
+| 6.0.0 - {release-id}
 | 0.33
 | {openTelemetryVersion}
 | 5.36.0+

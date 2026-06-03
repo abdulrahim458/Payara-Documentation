@@ -13,7 +13,7 @@ The Regex Profile Activator Maven Extension can be found on Maven Central and ca
 <dependency>
     <groupId>fish.payara.maven.extensions</groupId>
     <artifactId>regex-profile-activator</artifactId>
-    <version>${version}</version>
+    <version>${release-id}</version>
 </dependency>
 ----
 
