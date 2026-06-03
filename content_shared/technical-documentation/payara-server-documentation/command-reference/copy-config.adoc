@@ -1,4 +1,4 @@
-= copy-config
+= Copy-Config
 
 Copies an existing named configuration to create another configuration.
 

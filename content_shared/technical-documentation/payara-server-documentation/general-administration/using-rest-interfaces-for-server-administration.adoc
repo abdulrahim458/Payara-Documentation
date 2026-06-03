@@ -16,14 +16,14 @@ It allows execution of administration commands in a similar way as the `asadmin`
 * Look at the domain's log entries.
 
 [[using-rest-urls-to-administer-payara-server]]
-==  Using REST URLs to Administer Payara Server
+== Using REST Urls to Administer Payara Server
 
 Each object in the configuration and monitoring object trees is represented as a REST resource that is accessible through an HTTP uniform resource locator (URL).
 
 Access to REST resources for Payara Server monitoring and configuration data requires a running DAS.
 
 [[rest-urls-to-resources-for-configuration-and-monitoring-objects]]
-=== REST URLs to Resources for Configuration and Monitoring Objects
+=== REST Urls to Resources for Configuration and Monitoring Objects
 
 The formats of the URLs to resources that represent objects in the configuration and monitoring object trees are as follows:
 
@@ -53,7 +53,7 @@ The following figure shows the web page for the REST resource for managing a dom
 image:administration/rest-management.png[alt=""REST resource for managing a domain."",width=600px]
 
 [[rest-urls-for-accessing-the-log-file]]
-=== REST URLs for Accessing the Log File
+=== REST Urls for Accessing the Log File
 
 The `server.log` file of the DAS is represented as a child that is named `view-log` of the resource for managing the domain. A child of the resource for the `server.log` file represents the log file details
 
@@ -110,7 +110,7 @@ NOTE: REST requests that add, update, or delete objects must specify the `X-Requ
 The `GET` method determines the methods and method parameters that an object in the tree supports and provides additional information about the object. For details, see xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#to-retrieve-data-for-an-object-in-the-tree[To Retrieve Data for an Object in the Tree].
 
 [[to-determine-the-methods-and-method-parameters-that-an-object-in-the-tree-supports]]
-=== To Determine the Methods and Method Parameters That an Object in the Tree Supports
+=== To Determine the Methods and Method Parameters that an Object in the Tree Supports
 
 The methods and method parameters that an object in the tree supports depend on the REST resource that represents the object:
 
@@ -440,7 +440,7 @@ jdbc-resource/jdbc%2Fmyjdbcresource
 ----
 
 [[to-delete-an-object-from-the-tree]]
-=== To Delete an Object From the Tree
+=== To Delete an Object from the Tree
 
 . Ensure that the server is running. Operations on REST resources for Payara Server data require a running server.
 . Confirm that the object can be deleted. For information about how to perform this step, see xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#to-determine-the-methods-and-method-parameters-that-an-object-in-the-tree-supports[To Determine the Methods and Method Parameters That an Object in the Tree Supports].
@@ -529,7 +529,7 @@ curl -X GET -H "Accept: application/json" http://localhost:4848/management/domai
 ----
 
 [[resources-for-asadmin-subcommands-that-perform-non-crud-operations]]
-=== Resources for `asadmin` Subcommands That Perform Non-CRUD Operations
+=== Resources for `asadmin` Subcommands that Perform Non-CRUD Operations
 
 The Payara Server REST interfaces also support operations other than create, read, update, and delete (CRUD) operations, for example:
 
@@ -556,7 +556,7 @@ The Payara Server REST interfaces support the following authentication schemes f
 When security is enabled, you must specify `HTTPS` as the protocol in the URLs to REST resources and provide a username and password.
 
 [[setting-up-basic-authentication-over-a-secure-connection]]
-=== *Setting Up Basic Authentication Over a Secure Connection*
+=== *Setting up Basic Authentication over a Secure Connection*
 
 Setting up basic authentication over a secure connection to secure Payara Server REST interfaces involves the following sequence of tasks:
 
@@ -1544,7 +1544,7 @@ This example shows the JSON representation of the resource for log file details.
       "recordNumber":475,
       "loggedDateTimeInMS":1300743782815,
       "loggedLevel":"INFO",
-      "productName":"Payara Server {page-version}",
+      "productName":"Payara Server {version}",
       "loggerName":"org.glassfish.admingui",
       "nameValuePairs": "_ThreadID=25;_ThreadName=Thread-1;",
       "messageID":"",
@@ -1554,7 +1554,7 @@ This example shows the JSON representation of the resource for log file details.
       "recordNumber":474,
       "loggedDateTimeInMS":1300728893368,
       "loggedLevel":"INFO",
-      "productName":"Payara {page-version}",
+      "productName":"Payara {version}",
       "loggerName":"java.enterprise.system.core.com.sun.enterprise.v3.admin.adapter",
       "nameValuePairs":"_ThreadID=238;_ThreadName=Thread-1;",
       "messageID":"",
@@ -1564,7 +1564,7 @@ This example shows the JSON representation of the resource for log file details.
       "recordNumber":473,
       "loggedDateTimeInMS":1300728893367,
       "loggedLevel":"INFO",
-      "productName":"Payara {page-version}",
+      "productName":"Payara {version}",
       "loggerName":"jakarta.enterprise.system.core.com.sun.enterprise.v3.server",
       "nameValuePairs":"_ThreadID=238;_ThreadName=Thread-1;",
       "messageID":"CORE10010",
@@ -1627,9 +1627,9 @@ This example shows the XML representation of the resource for log file details. 
 [source, xml, subs=attributes+]
 ----
 <records>
- <record loggedDateTimeInMS="1300743782815" loggedLevel="INFO" loggerName="org.glassfish.admingui" messageID="" nameValuePairs="_ThreadID=25;_ThreadName=Thread-1;" productName="Payara {page-version}" recordNumber="475"/>
- <record loggedDateTimeInMS="1300728893368" loggedLevel="INFO" loggerName="jakarta.enterprise.system.core.com.sun.enterprise.v3.admin.adapter" messageID="" nameValuePairs="_ThreadID=238;_ThreadName=Thread-1;" productName="Payara {page-version}" recordNumber="474"/>
- <record loggedDateTimeInMS="1300728893367" loggedLevel="INFO" loggerName="jakarta.enterprise.system.core.com.sun.enterprise.v3.server" messageid="core10010" nameValuePairs="_ThreadID=238;_ThreadName=Thread-1;" productName="Payara {page-version}" recordNumber="473"/>
+ <record loggedDateTimeInMS="1300743782815" loggedLevel="INFO" loggerName="org.glassfish.admingui" messageID="" nameValuePairs="_ThreadID=25;_ThreadName=Thread-1;" productName="Payara {version}" recordNumber="475"/>
+ <record loggedDateTimeInMS="1300728893368" loggedLevel="INFO" loggerName="jakarta.enterprise.system.core.com.sun.enterprise.v3.admin.adapter" messageID="" nameValuePairs="_ThreadID=238;_ThreadName=Thread-1;" productName="Payara {version}" recordNumber="474"/>
+ <record loggedDateTimeInMS="1300728893367" loggedLevel="INFO" loggerName="jakarta.enterprise.system.core.com.sun.enterprise.v3.server" messageid="core10010" nameValuePairs="_ThreadID=238;_ThreadName=Thread-1;" productName="Payara {version}" recordNumber="473"/>
 </records>
 ----
 

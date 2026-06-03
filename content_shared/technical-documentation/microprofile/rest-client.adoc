@@ -1,6 +1,6 @@
-= Eclipse MicroProfile Rest Client API
+= Eclipse Microprofile Rest Client API
 
-Payara Platform {page-version} provides MicroProfile Rest Client {mpRestClientVersion}
+Payara Platform {version} provides MicroProfile Rest Client {mpRestClientVersion}
 
 [[background]]
 == Background
@@ -72,12 +72,12 @@ On a per-client basis, or via Microprofile Configuration properties, the followi
 Programmatically it is also possible to provide an implementation of the `javax.net.ssl.SSLContext` class to have major control over all aspects of this secure communication channel.
 
 [[ssl-context-configuration]]
-=== SSL Context configuration
+=== SSL Context Configuration
 
 You can define the certificate alias rest client will use with one of the following approaches:
 
 [[during-rest-client-call]]
-==== During REST client call
+==== During REST Client Call
 
 [cols="1,1,1", options="header"]
 |===
@@ -105,7 +105,7 @@ public class Component{
 ----
 
 [[on-microprofile-configuration]]
-==== On MicroProfile Configuration
+==== On Microprofile Configuration
 
 [cols="1,1,1", options="header"]
 |===
@@ -129,7 +129,7 @@ If you wish to make use of this feature, you must perform a number of steps to c
 Below are instructions for how to configure Payara Server to make use of Apache HTTP Client connector.
 
 [[create-restclientlistener]]
-=== Create a RestClientListener
+=== Create a Restclientlistener
 
 To configure Jersey to use Apache HTTP Client as its connector, a `RestClientListener` must be used to register the connector for each new client. You can add one to your application by simply registering as a custom JAX-RS provider.
 

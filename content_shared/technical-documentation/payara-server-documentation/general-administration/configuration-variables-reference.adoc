@@ -23,7 +23,7 @@ Values of system properties can be specified by:
 When custom properties are specified, their value can also contain other variable references. It is therefore possible to define a system property using other system properties or environment variables.
 
 [[references-to-environment-variables]]
-== References to environment variables
+== References to Environment Variables
 
 Environment variable references are used like system property references, but contain an extra `ENV` qualifier and equals sign before the variable name. An example of a reference to an environment variable `HOME` then looks like:
 
@@ -36,7 +36,7 @@ ${ENV=MAYBE_AVAILABLE:default}
 Environment variables need to be specified in the environment before a Payara instance is started. By adding a colon after the variable name, you may append a default value if the variable has not been set.
 
 [[password-aliases]]
-== References to password aliases
+== References to Password Aliases
 
 References to password aliases are used to refer to a password which is stored securely in the domain's keystore. They are treated in a special way and cannot be mixed with other variable references and with other characters in the same configuration value. They are only supposed to be used as a value anywhere a password is expected in the configuration.
 
@@ -50,7 +50,7 @@ admin-password="${ALIAS=cluster-password}"
 ------
 
 [[references-to-microprofile-properties]]
-== Reference to MicroProfile Config Properties
+== Reference to Microprofile Config Properties
 
 MicroProfile Configuration variable references can be used exactly like an environment variable reference, but using the `MPCONFIG` qualifier. An example of a reference to a MicroProfile Configuration variable called `foo` would look like:
 
@@ -65,18 +65,18 @@ MicroProfile Configuration variables must be declared in one of the Payara Platf
 NOTE: By adding a colon (:) after the property name, you may append a default value if the variable has not been set.
 
 [[using-variable-references]]
-== Using variable references
+== Using Variable References
 
 A variable can be referenced anywhere inside a string value of a property which supports variable references. Multiple references to system properties and environment variables can be used within the same configuration value, concatenating any number of variable references and plain text chunks. When a reference to a password alias is used, it has to expand to the whole property value and cannot be combined with any other text or variable references.
 
-== Variable references in the domain configuration
+== Variable References in the Domain Configuration
 
 Variable references can be used inside text values in the following configuration files within the domain directory:
 
 * domain.xml (inside attribute values or inside text nodes that contain a configuration value)
 * logging.properties (inside property values)
 
-== Variable references in deployed applications
+== Variable References in Deployed Applications
 
 Variable references can be used inside text values also in the following places within deployed applications and modules:
 
@@ -101,7 +101,7 @@ Variable references can be used inside text values also in the following places 
 Here are several examples of where you can use variable references:
 
 [[examples-annotation]]
-=== Within an annotation
+=== Within an Annotation
 
 [source,java]
 ----
@@ -115,7 +115,7 @@ Here are several examples of where you can use variable references:
 ----
 
 [[examples-web-xml]]
-=== Within a `web.xml` descriptor
+=== Within a `web.xml` Descriptor
 
 [source,xml]
 ----
@@ -131,7 +131,7 @@ Here are several examples of where you can use variable references:
 ----
 
 [[examples-multi]]
-=== Multiple variable references combined in a single value withing the `domain.xml`
+=== Multiple Variable References Combined in a Single Value Withing the `domain.xml`
 
 [source,xml]
 ----
@@ -139,7 +139,7 @@ Here are several examples of where you can use variable references:
 ----
 
 [[examples-boot]]
-=== Within a pre or post boot command file
+=== Within a Pre or Post Boot Command File
 
 [source,bash]
 ----
@@ -148,7 +148,7 @@ set configs.config.server-config.network-config.protocols.protocol.http-listener
 ----
 
 [[examples-logging]]
-=== Within a `logging.properties` file
+=== Within a `logging.properties` File
 
 [source,properties]
 ----
@@ -157,7 +157,7 @@ handlerServices=${ENV=SYS-LOG-HANDLER}
 ----
 
 [[examples-ver-ref]]
-=== Within a `payara-expression-config.properties` file
+=== Within a `payara-expression-config.properties` File
 
 NOTE: The `payara-expression-config.properties` config source is only available in Payara Server
 

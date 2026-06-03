@@ -1,4 +1,4 @@
-= rotate-log
+= Rotate-Log
 
 Rotates the log file.
 

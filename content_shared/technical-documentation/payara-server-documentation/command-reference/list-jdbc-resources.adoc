@@ -1,4 +1,4 @@
-= list-jdbc-resources
+= List-Jdbc-Resources
 
 Lists all JDBC resources.
 

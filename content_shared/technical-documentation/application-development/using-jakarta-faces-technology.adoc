@@ -31,7 +31,7 @@ The functionality provided by a Jakarta Faces application is similar to that of 
 * _(Optional)_ A set of custom tags for representing custom or complex objects on the page.
 
 [[configurable-jsf-options]]
-== Configurable JSF options
+== Configurable JSF Options
 
 This section documents specific configuration settings that are not available in the standard deployment descriptors or configuration files described above as part of the Jakarta Faces API.
 

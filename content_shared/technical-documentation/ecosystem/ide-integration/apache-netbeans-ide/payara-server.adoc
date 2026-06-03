@@ -1,4 +1,4 @@
-= Payara Server Apache NetBeans IDE Support
+= Payara Server Apache Netbeans IDE Support
 :ordinal: 1
 
 The Apache NetBeans IDE has built-in integration with Payara Server and allows you to easily perform the following tasks:
@@ -9,7 +9,7 @@ The Apache NetBeans IDE has built-in integration with Payara Server and allows y
 * Auto Publish & Hot Deploy your application
 
 [[adding-payara-server-netbeans]]
-== Adding Payara Server to Apache NetBeans IDE 
+== Adding Payara Server to Apache Netbeans IDE
 Open the project you want to deploy to Payara Server. Go to the Server tab and right click to add a new server.
 
 *image*: apache-netbeans/payara-server/netbeans-add-server-payara6.png[Add Payara Server,align="center"]
@@ -35,7 +35,7 @@ The following details are configurable on the next screen:
 *image*: apache-netbeans/payara-server/netbeans-configure-instance-payara6.png[Configure Payara Server,align="center"]
 
 [[managing-payara-server-netbeans]]
-== Managing Payara Server from Apache NetBeans IDE
+== Managing Payara Server from Apache Netbeans IDE
 
 Once the configuration is complete, you can manage your Payara Server directly from Apache NetBeans. By right-clicking on the previously-configured server, we can do the following actions:
 
@@ -49,7 +49,7 @@ Once the configuration is complete, you can manage your Payara Server directly f
 Exploding the server dropdown will list Applications, Resources and Web Services. This allows you to view and manage certain Payara Server configurations, from the NetBeans interface.
 
 [[deploying-application-payara-netbeans]]
-== Deploying Applications to Payara Server from Apache NetBeans IDE
+== Deploying Applications to Payara Server from Apache Netbeans IDE
 
 An application can be deployed and un-deployed easily from within Apache NetBeans. First, the application run settings need to be configured to use Payara Server. Go to Properties on a project and then the Run section of this window. This menu lists the configuration for deploying the application.
 
@@ -80,7 +80,7 @@ This mapping should align with the exploded application path or parent path of e
 +
 [source, shell]
 ----
-docker run -p 8080:8080 -p 4848:4848 -p 9009:9009 -v HOST_PATH:CONTAINER_PATH  payara/server-full:{page-version}
+docker run -p 8080:8080 -p 4848:4848 -p 9009:9009 -v HOST_PATH:CONTAINER_PATH  payara/server-full:{version}
 ----
 +
 Replace `HOST_PATH` with the actual host path and `CONTAINER_PATH` with the desired container path.

@@ -19,14 +19,14 @@ An action based web framework is one in which the application code creates an ex
 Component based web frameworks on the other hand, have the controllers owned and managed by the framework itself. The controller is transparent to the developer in a component based framework.
 
 [[what-is-jakarta-mvc]]
-=== What is Jakarta MVC?
+=== What Is Jakarta MVC?
 
 Jakarta MVC is an action based web application development framework built on top of Jakarta REST. It is an alternative way to build traditional web applications on the Jakarta EE Platform. Jakarta MVC is an optional standalone specification that is not part of Jakarta EE by default.
 
 As a Jakarta REST based framework, it makes all the features and options for developing REST services available for developing much more traditional web applications.
 
 [[action-vs-component-based-frameworks]]
-=== Action Vs Component Based Frameworks
+=== Action vs Component Based Frameworks
 
 An action based web framework is one in which the application code creates an explicit controller that accepts requests and maps them to actions.
 
@@ -46,7 +46,7 @@ To start with Jakarta MVC, you will need to add the specification API to your ap
             <dependency>
                 <groupId>fish.payara.api</groupId>
                 <artifactId>payara-bom</artifactId>
-                <version>{page-version}</version>
+                <version>{version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

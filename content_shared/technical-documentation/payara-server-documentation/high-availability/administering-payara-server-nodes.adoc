@@ -14,7 +14,7 @@ The following topics are addressed here:
 * xref:updating-and-changing-the-type-of-a-node[Updating and Changing the Type of a Node]
 
 [[types-of-payara-server-nodes]]
-== Types of payara Server Nodes
+== Types of Payara Server Nodes
 
 Each Payara Server node is one of the following types of node:
 
@@ -139,7 +139,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help list-nodes-ssh`
 
 [[to-test-if-an-ssh-node-is-reachable]]
-=== To Test if an `SSH` Node is Reachable
+=== To Test If an `SSH` Node Is Reachable
 
 Use the `ping-node-ssh` subcommand in remote mode to test if an `SSH` node is reachable.
 
@@ -423,7 +423,7 @@ Docker nodes do have some unique configuration properties however:
 Please note, that this path should be the path to the file on the *remote* machine. This file should be a standard Payara Server password file as you would use with asadmin. This must be specified, as Docker instances require secure admin to be enabled to start.
 * TLS - Whether or not to use HTTPS to communicate with the Docker engine or not.
 * Docker Port - The port that the Docker engine is listening on. Defaults to `2376`.
-* Docker Image - The Docker image to use. Payara Server will default to using the `payara/server-node:{page-version}` image.
+* Docker Image - The Docker image to use. Payara Server will default to using the `payara/server-node:{version}` image.
 
 The configuration options of CONFIG nodes are also available, namely `nodehost`, `nodedir`, and `installdir`. Specifying the `nodehost` option remains mandatory, but for docker nodes the `installdir` and `nodedir` options can safely be left as their defaults unless you're specifying your own Docker image.
 

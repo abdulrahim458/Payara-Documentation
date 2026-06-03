@@ -1,4 +1,4 @@
-= set-asadmin-recorder-configuration
+= Set-Asadmin-Recorder-Configuration
 
 Configures the Asadmin Recorder service.
 

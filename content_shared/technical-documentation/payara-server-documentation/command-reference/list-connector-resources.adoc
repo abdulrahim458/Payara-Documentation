@@ -1,4 +1,4 @@
-= list-connector-resources
+= List-Connector-Resources
 
 Lists all connector resources.
 

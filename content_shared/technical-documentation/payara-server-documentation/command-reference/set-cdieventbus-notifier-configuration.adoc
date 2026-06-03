@@ -1,4 +1,4 @@
-= set-cdieventbus-notifier-configuration
+= Set-Cdieventbus-Notifier-Configuration
 
 Configures the settings of the CDI Event Bus notifier
 

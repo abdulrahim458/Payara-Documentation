@@ -1,4 +1,4 @@
-= create-protocol-finder
+= Create-Protocol-Finder
 
 Adds a new protocol finder.
 

@@ -1,4 +1,4 @@
-= delete-virtual-server
+= Delete-Virtual-Server
 
 Removes a virtual server.
 

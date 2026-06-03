@@ -24,7 +24,7 @@ Use the following commands to configure and get the current settings of this con
 * xref:technical-documentation/payara-server-documentation/command-reference/get-config-dir.adoc#get-config-dir[`get-config-dir`]
 
 [[using-boot-scripts]]
-=== Using Pre-boot and/or Postboot Scripts
+=== Using Pre-Boot And/or Postboot Scripts
 
 When running a Payara Platform distribution in a container, there is no way to restart a running instance after configuring via an `asadmin` command without losing the changes to the domain configuration.
 
@@ -40,7 +40,7 @@ Usually this config source is used to map secrets mounted by Kubernetes or Docke
 Once you configured a directory to read a config (secrets) from, you need to make sure file names correspond to properties in your codebase.
 
 [[map-properties-flat-file-hierarchy]]
-=== Map property names to flat file hierarchy
+=== Map Property Names to Flat File Hierarchy
 
 . Say you have two properties `property1` and `foo.bar.property2`.
 . Payara is configured with secret directory `/home/payara/secrets`
@@ -50,7 +50,7 @@ IMPORTANT: Remember that the files may only contain the secret or other configur
 Plaintext files only, no file extensions allowed.
 
 [[map-properties-subdir-structure]]
-=== Map property names to a subdirectory structure
+=== Map Property Names to a Subdirectory Structure
 
 . Say you have two properties `property1` and `foo.bar.property2`.
 . Payara is configured with secret directory `/home/payara/secrets`
@@ -61,7 +61,7 @@ Restrictions on the files content are the same as with the flat hierarchy.
 Updates to files and subdirectories are picked up at runtime. Retrieving the config property again will use the updated values. This allows for clearing a value by removing the file, too.
 
 [[dots-usage-directories]]
-==== Dots usage and depicting directories and file name
+==== Dots Usage and Depicting Directories and File Name
 
 Dots in property names are used to reflect scopes, for example to distinguish different applications, modules, etc.
 

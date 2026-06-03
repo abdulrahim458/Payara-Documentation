@@ -1,4 +1,4 @@
-= list-batch-job-executions
+= List-Batch-Job-Executions
 
 Lists batch job executions and execution details.
 

@@ -1,4 +1,4 @@
-= create-managed-thread-factory
+= Create-Managed-Thread-Factory
 
 Creates a managed thread factory resource.
 

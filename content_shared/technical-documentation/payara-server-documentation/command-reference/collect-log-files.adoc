@@ -1,4 +1,4 @@
-= collect-log-files
+= Collect-Log-Files
 
 Creates a ZIP archive of all available log files.
 

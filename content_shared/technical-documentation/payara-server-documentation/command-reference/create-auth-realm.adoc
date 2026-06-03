@@ -1,4 +1,4 @@
-= create-auth-realm
+= Create-Auth-Realm
 
 Adds the named authentication realm.
 

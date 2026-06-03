@@ -24,6 +24,6 @@ These methods are used for firing CDI Events across running instances.
 NOTE: This feature has been available in Payara Micro long before it was available in Payara Server.
 
 [[manual-initialization-of-the-event-bus]]
-== Manual initialization of the Event Bus
+== Manual Initialization of the Event Bus
 
 On prior releases, it was necessary to initialize the event bus using `ClusteredCDIEventBus.initialize()` manually upon startup. Although this method is still available in the API, it is not necessary anymore, since the event bus is automatically initialized after an application is started.

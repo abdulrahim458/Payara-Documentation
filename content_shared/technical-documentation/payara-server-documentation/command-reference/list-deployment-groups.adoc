@@ -1,4 +1,4 @@
-= list-deployment-groups
+= List-Deployment-Groups
 
 List all deployment groups registered in an existing server domain.
 

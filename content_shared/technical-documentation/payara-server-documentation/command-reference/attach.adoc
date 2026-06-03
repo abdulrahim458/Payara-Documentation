@@ -1,4 +1,4 @@
-= attach
+= Attach
 
 Attaches to subcommands that were started using `asadmin --detach` or that contain progress information.
 

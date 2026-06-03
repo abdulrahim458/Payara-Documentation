@@ -35,7 +35,7 @@ http://server:port/context-root/servlet-mapping?name=value
 
 In this example, `localhost` is the host name, `MortPages` is the context root, and `calcMortgage` is the servlet mapping.
 
-=== *Example 6-1 Invoking a Servlet With a URL*
+=== *Example 6-1 Invoking a Servlet with a URL*
 [source,text]
 ----
 http://localhost:8080/MortPages/calcMortgage?rate=8.0&per=360&bal=180000
@@ -43,7 +43,7 @@ http://localhost:8080/MortPages/calcMortgage?rate=8.0&per=360&bal=180000
 
 To invoke a servlet from within a JSP file, you can use a relative path. For example:
 
-==== *Example 6-2 Invoking a Servlet From Within a JSP File*
+==== *Example 6-2 Invoking a Servlet from within a JSP File*
 [source,text]
 ----
 <jsp:forward page="TestServlet"/><jsp:include page="TestServlet"/>
@@ -162,7 +162,7 @@ http-thread-pool.max-thread-pool-size=value
 . To apply your changes, restart Payara Server. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 [[example-6-4]]
-==== *Example 6-4 `httpd.conf` File for `mod_jk`*
+==== *Example 6-4 `httpd.conf` File for `Mod_jk`*
 
 This example shows an `httpd.conf` file that is set for `mod_jk`. In this example, `mod_jk` used as a simple pass-through.
 
@@ -187,7 +187,7 @@ JkMount /glassfish-test/* worker1
 ----
 
 [[example-6-5]]
-==== *Example 6-5 `workers.properties` File for `mod_jk`*
+==== *Example 6-5 `workers.properties` File for `Mod_jk`*
 
 This example shows a `workers.properties` that is set for `mod_jk`. This `workers.properties` file is referenced in the second line of xref:technical-documentation/payara-server-documentation/general-administration/administering-web-applications.adoc#example-6-4[Example 6-4].
 
@@ -276,7 +276,7 @@ worker.loadbalancer.balance_workers=worker1,worker2
 ----
 
 [[to-enable-ssl-between-the-mod_jk-load-balancer-and-the-browser]]
-=== To Enable SSL Between the `mod_jk` Load Balancer and the Browser
+=== To Enable SSL between the `mod_jk` Load Balancer and the Browser
 
 To activate security for `mod_jk` on Payara Server, you must first generate a Secure Socket Layer (SSL) self-signed certificate on the Apache HTTP Server with the `mod_ssl` module. The tasks include generating a private key, a Certificate Signing Request (CSR), a self-signed certificate, and configuring SSL-enabled virtual hosts.
 
@@ -340,7 +340,7 @@ JkMount /* worker1
 ----
 
 [[to-enable-ssl-between-the-mod_jk-load-balancer-and-payara-server]]
-=== To Enable SSL Between the `mod_jk` Load Balancer and Payara Server
+=== To Enable SSL between the `mod_jk` Load Balancer and Payara Server
 
 This procedure does not enable SSL transfer between `mod_jk` and Payara Server. It enables `mod_jk` to forward SSL-encrypted information from the browser to Payara Server.
 

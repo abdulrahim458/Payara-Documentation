@@ -1,4 +1,4 @@
-= list-jms-resources
+= List-Jms-Resources
 
 Lists the JMS resources.
 

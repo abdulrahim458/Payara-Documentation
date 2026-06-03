@@ -1,4 +1,4 @@
-= Connector Suites/Arquillian Containers/Ecosystem/Connector Suites/Arquillian Containers
+= Connector Suites/arquillian Containers/ecosystem/connector Suites/arquillian Containers
 
 The Payara Foundation not only provides application servers in the form of Payara
 Server and Payara Micro; there are also satellite projects

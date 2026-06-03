@@ -1,4 +1,4 @@
-= set-log-file-format
+= Set-Log-File-Format
 
 Sets the formatter to be used for the server log file.
 

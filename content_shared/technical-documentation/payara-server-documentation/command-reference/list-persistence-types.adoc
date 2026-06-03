@@ -1,4 +1,4 @@
-= list-persistence-types
+= List-Persistence-Types
 
 Lists registered persistence types for HTTP sessions and SFSB instances.
 

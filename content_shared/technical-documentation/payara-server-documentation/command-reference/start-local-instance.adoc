@@ -1,4 +1,4 @@
-= start-local-instance
+= Start-Local-Instance
 
 Starts a Payara Server instance on the host where the subcommand is run.
 

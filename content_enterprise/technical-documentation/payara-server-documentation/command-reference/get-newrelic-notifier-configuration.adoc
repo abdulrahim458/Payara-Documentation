@@ -1,4 +1,4 @@
-= get-newrelic-notifier-configuration
+= Get-Newrelic-Notifier-Configuration
 
 Retrieves the settings of the New Relic notifier.
 

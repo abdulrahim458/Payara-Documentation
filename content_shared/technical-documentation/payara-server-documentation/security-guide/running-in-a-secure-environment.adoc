@@ -58,7 +58,7 @@ NOTE: Imposing a heightened level of security is optional.
 See xref:technical-documentation/payara-server-documentation/security-guide/managing-administrative-security.adoc#managing-administrative-security[Managing Administrative Security] for information on enabling the secure administration feature.
 
 [[run-on-the-web-profile-if-possible]]
-== Run on the Web Profile if Possible
+== Run on the Web Profile If Possible
 
 If your applications can run without issues on Payara Server's Web Profile, use that instead of the Full Profile. As the web profile is a subset of the full feature set of the Payara Platform, it has fewer features that require extra considerations for security (like ORB listeners, Web Services, Message Queue Brokers) which reduces the overall risks of the server's installation.
 

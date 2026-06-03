@@ -1,4 +1,4 @@
-= list-timers
+= List-Timers
 
 Lists all persistent timers owned by server instance(s).
 

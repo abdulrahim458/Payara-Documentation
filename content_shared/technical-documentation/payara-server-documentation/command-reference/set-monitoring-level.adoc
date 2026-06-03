@@ -1,4 +1,4 @@
-= set-monitoring-level
+= Set-Monitoring-Level
 
 This command can be used to set the monitoring level of a module.
 

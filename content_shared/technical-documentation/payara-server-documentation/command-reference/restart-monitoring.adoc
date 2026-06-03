@@ -1,4 +1,4 @@
-= restart-monitoring
+= Restart-Monitoring
 
 This command can be used to set restart/reset the monitoring levels of the server
 

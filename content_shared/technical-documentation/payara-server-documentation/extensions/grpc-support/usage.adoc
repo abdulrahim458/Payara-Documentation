@@ -1,11 +1,11 @@
-= Using gRPC Support Module
+= Using Grpc Support Module
 
 WARNING: The gRPC extension has not yet been updated to support Payara Platform {pageSiteEditionCapitalised} {payaraVersionMajor}
 
 This page documents how to use gRPC support in web applications.
 
 [[preparing-grpc-service-in-a-web-application]]
-== Preparing a gRPC Service in a Web Application.
+== Preparing a Grpc Service in a Web Application.
 
 To prepare the service gRPC application you need the following:
 
@@ -20,7 +20,7 @@ To prepare the service gRPC application you need the following:
 . Deploy service application.
 
 [[create-sample-web-application]]
-=== Create a sample web application
+=== Create a Sample Web Application
 
 Create a sample web application project using the following Maven archetype:
 
@@ -31,7 +31,7 @@ mvn archetype:generate -DgroupId=fish.payara.samples -DartifactId=payara-web -Da
 ----
 
 [[include-configuration-for-empty-context-root]]
-=== Include configuration for empty context root
+=== Include Configuration for Empty Context Root
 
 You need to create a Maven web application with empty context-root `/`. You can add the following `payara-web.xml` deployment descriptor to the `WEB-INF` folder of your application:
 
@@ -46,7 +46,7 @@ You need to create a Maven web application with empty context-root `/`. You can 
 IMPORTANT: gRPC services must be deployed under the context-root `/`, since this is a constraint of the gRPC style programming as standard clients expect no base path on HTTP requests.
 
 [[create-the-protobuf-service-definition-file]]
-=== Create the `protobuf` service definition file
+=== Create the `protobuf` Service Definition File
 
 You need to use the `protobuf` protocol in order to define your service. Here's a sample "Hello World" snippet:
 
@@ -80,7 +80,7 @@ The `protobuf` file should be added under the following folder:
 NOTE: The name of the file is irrelevant, it only matters that its extension is `.proto`.
 
 [[include-build-dependencies]]
-=== Include build dependencies
+=== Include Build Dependencies
 
 It is needed to declare the following dependencies to build the service and generate its stubs:
 
@@ -111,7 +111,7 @@ Example:
 * The `grpc-stub` artifact is used to resolve internal types for the stub classes.
 
 [[configure-build-section]]
-=== Configure the build section
+=== Configure the Build Section
 
 The build section is needed to generate the stubs and service implementation.
 
@@ -172,7 +172,7 @@ The stubs should be generated with similar structure like the following:
 *target/generated-sources/protobuf/java/fish.payara.samples.grpc*: Here you can see the types associated to the service
 
 [[extend-service-implementation]]
-=== Extending service implementation class
+=== Extending Service Implementation Class
 
 To implement the service's endpoint you'll have to extend the implementation base class that is nested inside the recently compiled gRPC stub class located under `/target/generated-sources/protobuf/grpc-java`:
 
@@ -205,12 +205,12 @@ public class PayaraService extends PayaraServiceGrpc.PayaraServiceImplBase {
 Our example is a simple "echo" service that will print a "Hello World" message. We can see that the  `communicate` method receives the `PayaraReq` and the `StreamObserver<fish.payara.samples.grpc.PayaraResp>` parameters which are needed to process the incoming request with the 'Hello World' message and create the response using the same message.
 
 [[rebuild-service]]
-=== Rebuild service
+=== Rebuild Service
 
 After doing the previous steps, you need to rebuild the project to include the service implementation.
 
 [[deploy-service-application]]
-=== Deploy service application
+=== Deploy Service Application
 
 The final step is to deploy the application in a Payara Server domain. We can do this by using the Admin Console or the Asadmin CLI:
 
@@ -224,7 +224,7 @@ Here's an example running the Asadmin CLI equivalent from the command line:
 ----
 
 [[creating-sample-grpc-client-application]]
-== Creating a sample gRPC client application
+== Creating a Sample Grpc Client Application
 
 After deploying the service we'll proceed to create a client. To achieve this let's follow these steps:
 
@@ -235,7 +235,7 @@ After deploying the service we'll proceed to create a client. To achieve this le
 . Execution of the `HelloWorld` application 
 
 [[create-client-application]]
-=== Create the client application 
+=== Create the Client Application
 
 We can create a client application using the following Maven archetype:
 
@@ -245,7 +245,7 @@ mvn archetype:generate -DgroupId=fish.payara.samples -DartifactId=payara-client 
 ----
 
 [[copy-stubs-files-client-source-folder]]
-=== Copy stubs files to the client source folder
+=== Copy Stubs Files to the Client Source Folder
 
 Now, we'll manually copy the service stub files that were generated in the previous section to the following locations in the client application's source directories: 
 
@@ -257,7 +257,7 @@ cp ${server app folder}/target/generated-sources/protobuf/java/fish.payara.sampl
 ----
 
 [[add-client-dependencies]]
-=== Add Client dependencies
+=== Add Client Dependencies
 
 The following Maven dependencies are needed to build and run the client application: 
 
@@ -287,7 +287,7 @@ Example:
 * The `grpc-stub` artifact is used to resolve internal types for the stub classes.
 
 [[create-client-implementation]]
-=== Create client implementation
+=== Create Client Implementation
 
 Finally, here is the client code to call the gRPC service deployed in Payara Server:
 
@@ -365,7 +365,7 @@ public class GrpcClient {
 ----
 
 [[execution-of-helloworld-application]]
-=== Execution of the "HelloWorld" application
+=== Execution of the "Helloworld" Application
 
 To execute the client application, build the project and run the following command:
 

@@ -6,7 +6,7 @@ This chapter describes EclipseLink, the default persistence provider in Payara S
 This chapter also tells how to set the default persistence provider in Payara Server and how to use persistence-related features specific to the Payara Platform such as automatic schema generation.
 
 [[eclipselink-overview]]
-== EclipseLink Overview
+== Eclipselink Overview
 
 EclipseLink is the default persistence provider in the Payara Platform. It is a comprehensive standards-based object-persistence and object-transformation framework that provides APIs, schemas, and run-time services for the persistence layer of an application.
 
@@ -39,7 +39,7 @@ For information about developing, deploying, and configuring EclipseLink, and ap
 * https://wiki.eclipse.org/EclipseLink/Examples/JPA[EclipseLink JPA Examples^]
 
 [[using-eclipselink-in-payara-server]]
-== Using EclipseLink in Payara Server
+== Using Eclipselink in Payara Server
 
 To run EclipseLink JPA applications in Payara Server, you must configure the server and coordinate certain server and application settings. These are described in the following steps:
 
@@ -402,7 +402,7 @@ Or specify an explicit column name for the `upperCaseColumnName` field.
 Column or table names specified in SQL queries must be in accordance with the expected case. For example, MySQL requires column names in the `SELECT` clause of JDBC queries to be uppercase, while PostgreSQL and Sybase require table names to be uppercase in all JDBC queries.
 
 [[postgresql-case-sensitivity]]
-==== PostgreSQL Case Sensitivity
+==== Postgresql Case Sensitivity
 
 PostgreSQL stores column and table names in lower case. JDBC queries on PostgreSQL retrieve column or table names in lowercase unless the names are quoted. For example:
 
@@ -426,7 +426,7 @@ com.sybase.jdbc2.jdbc.SybSQLException: Implicit conversion from datatype 'TEXT' 
 To avoid this error, make sure the finder method input is less than 255 characters.
 
 [[mysql-database-restrictions]]
-=== MySQL Database Restrictions
+=== Mysql Database Restrictions
 
 The following restrictions apply when you use a MySQL database with Payara Server in conjunction with JPA.
 
@@ -501,7 +501,7 @@ delete from Employee where empId = 1;
 This can be done only if the foreign key field is allowed to be `null`.
 
 [[jpa-cache-coordination]]
-== Using the Hazelcast EclipseLink Cache Coordination Protocol
+== Using the Hazelcast Eclipselink Cache Coordination Protocol
 
 If necessary, your can configure the Data Grid (implemented via Hazelcast) as the coordination mechanism for the application's L2 cache (if enabled). To do so, configure the `persistence.xml` deployment descriptor as follows:
 

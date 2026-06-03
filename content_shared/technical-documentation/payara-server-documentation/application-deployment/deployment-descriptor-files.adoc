@@ -86,7 +86,7 @@ Specifying a different file is optional.
 IMPORTANT: Deployment descriptors whose names start with the `glassfish-` prefix are referred as "original" deployment descriptor files from Eclipse GlassFish, since these files names and DTDs were created while supporting Eclipse GlassFish and their support has been inherited by the Payara Platform.
 
 [[the-payara-application.xml-file]]
-== The payara-application.xml File
+== The Payara-application.xml File
 
 IMPORTANT: glassfish-application.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-application.xml instead.
@@ -559,7 +559,7 @@ DTD Payara Application Server 7 EJB 4.0//EN"
 ----
 
 [[the-payara-application-client.xml-file]]
-== The `payara-application-client.xml` file
+== The `payara-application-client.xml` File
 
 IMPORTANT: glassfish-application-client.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-application-client.xml instead.
@@ -708,7 +708,7 @@ IMPORTANT: The elements marked as `(*)` are only supported in the payara-resourc
 . A sample `payara-resources.xml`
 [source,xml,subs=attributes+]
 ----
-<!DOCTYPE resources PUBLIC "-//Payara.fish//DTD Payara Server {page-version} Resource Definitions//EN" "{payaraResourcesDtd}">
+<!DOCTYPE resources PUBLIC "-//Payara.fish//DTD Payara Server {version} Resource Definitions//EN" "{payaraResourcesDtd}">
 <resources>
     <!-- Connects to MySql database called 'test' on a server called 'database' -->
     <jdbc-connection-pool name="jdbc/testConnPool"
@@ -728,7 +728,7 @@ IMPORTANT: The elements marked as `(*)` are only supported in the payara-resourc
 ----
 
 [[the-sun-acc.xml-file]]
-== The sun-acc.xml File
+== The Sun-acc.xml File
 
 The `sun-acc.xml` file configures the Application Client Container. This is more of a configuration file than a deployment descriptor.
 

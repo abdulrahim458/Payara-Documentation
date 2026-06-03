@@ -1,4 +1,4 @@
-= get-healthcheck-configuration
+= Get-Healthcheck-Configuration
 
 Lists the current Healthcheck service settings.
 

@@ -1,4 +1,4 @@
-= package-appclient
+= Package-Appclient
 
 Packs the application client container libraries and jar files.
 

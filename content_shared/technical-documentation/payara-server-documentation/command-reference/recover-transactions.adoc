@@ -1,4 +1,4 @@
-= recover-transactions
+= Recover-Transactions
 
 Manually recovers pending transactions.
 

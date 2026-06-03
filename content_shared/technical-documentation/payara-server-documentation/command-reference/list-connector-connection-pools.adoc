@@ -1,4 +1,4 @@
-= list-connector-connection-pools
+= List-Connector-Connection-Pools
 
 Lists the existing connector connection pools.
 

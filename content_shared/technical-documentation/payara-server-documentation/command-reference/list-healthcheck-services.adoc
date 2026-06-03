@@ -1,4 +1,4 @@
-= list-healthcheck-services
+= List-Healthcheck-Services
 
 Lists the names of all available Healthcheck services.
 

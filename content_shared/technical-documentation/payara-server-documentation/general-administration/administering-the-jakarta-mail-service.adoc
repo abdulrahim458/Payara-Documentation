@@ -71,7 +71,7 @@ Command create-javamail-resource executed successfully.
 This example creates a Jakarta Mail resource named `mail/MyMailSession`. The escape character (\) is used in the `--fromaddress` option to distinguish the dot (.) and at sign (@).
 
 [[to-list-javamail-resources]]
-=== To List JavaMail Resources
+=== To List Javamail Resources
 
 Use the `list-javamail-resources` subcommand in remote mode to list the existing JavaMail session resources.
 
@@ -128,7 +128,7 @@ Command delete-javamail-resource executed successfully.
 This example deletes the Jakarta Mail session resource named `mail/MyMailSession`.
 
 [[from-the-admin-console]]
-== Configure a Jakarta Mail session from the Admin Console
+== Configure a Jakarta Mail Session from the Admin Console
 
 Jakarta Mail sessions are added from the `Resources` tab on the left pane of the Admin Console.
 

@@ -1,4 +1,4 @@
-= list-system-properties
+= List-System-Properties
 
 Lists the system properties of the domain, configuration, cluster, or server instance.
 

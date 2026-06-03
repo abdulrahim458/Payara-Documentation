@@ -1,4 +1,4 @@
-= Transform Maven Projects or Files From Java EE 8 to Jakarta EE 10
+= Transform Maven Projects or Files from Java EE 8 to Jakarta EE 10
 
 Using the `Payara IntelliJ Ultimate Tools` and `Payara IntelliJ Community Tools` plugins, you can transform whole projects or just a file from Java EE 8 to Jakarta EE 10.
 

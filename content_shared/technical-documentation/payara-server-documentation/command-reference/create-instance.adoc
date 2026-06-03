@@ -1,4 +1,4 @@
-= create-instance
+= Create-Instance
 
 Creates a Payara instance.
 

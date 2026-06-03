@@ -98,7 +98,7 @@ The Maven dependency to add to your application to get access to the `@Traced` a
 ----
 
 [[using-the-tracer-class]]
-== Using the OpenTracing `Tracer` class
+== Using the Opentracing `Tracer` Class
 
 The OpenTracing `Tracer` class allows you to manually start, finish, and add information to Spans.
 
@@ -158,7 +158,7 @@ public class TracedResource{
 The `Tracer` class also gives you access to the `inject` and `extract` methods, which you can use for tracing across threads and processes. It is recommended however that you simply use a Managed Executor Service for your asynchronous tasks and the default JAX-RS client implementation or MicroProfile REST Client for JAX-RS calls as these will automatically do this for you.
 
 [[disabling-automatic-tracing]]
-== Disabling Automatic Tracing of JAX-RS Methods and MicroProfile REST Client Calls
+== Disabling Automatic Tracing of JAX-RS Methods and Microprofile REST Client Calls
 By default, calls to JAX-RS methods and any calls by a MicroProfile REST Client are traced.
 
 [[disabling-jaxrs-tracing]]
@@ -201,7 +201,7 @@ mp.opentracing.server.skip-pattern=/foo|/bar.*
 ----
 
 [[disabling-microprofile-rest-client-tracing]]
-=== Disabling Automatic Tracing of MicroProfile REST Client
+=== Disabling Automatic Tracing of Microprofile REST Client
 
 To disable tracing of MicroProfile REST Client calls, annotate the client interface or method with `@Traced(false)`.
 

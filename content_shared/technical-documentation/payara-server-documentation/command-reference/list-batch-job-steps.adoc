@@ -1,4 +1,4 @@
-= list-batch-job-steps
+= List-Batch-Job-Steps
 
 Lists steps for a specific batch job execution.
 

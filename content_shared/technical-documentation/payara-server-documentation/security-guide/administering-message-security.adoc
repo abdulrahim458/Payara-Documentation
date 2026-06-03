@@ -343,7 +343,7 @@ To not specify a request or response policy, leave the element with no content:
 ----
 
 [[administering-non-default-message-security-providers]]
-== Administering Non-default Message Security Providers
+== Administering Non-Default Message Security Providers
 
 [[to-create-a-message-security-provider]]
 === To Create a Message Security Provider

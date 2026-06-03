@@ -1,4 +1,4 @@
-= list-managed-executor-services
+= List-Managed-Executor-Services
 
 Lists managed executor service resources.
 

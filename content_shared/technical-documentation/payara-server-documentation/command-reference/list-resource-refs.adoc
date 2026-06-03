@@ -1,4 +1,4 @@
-= list-resource-refs
+= List-Resource-Refs
 
 Lists existing resource references.
 

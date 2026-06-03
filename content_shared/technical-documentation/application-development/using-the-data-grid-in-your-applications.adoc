@@ -1,10 +1,10 @@
-= Using the Data Grid in your Applications
+= Using the Data Grid in Your Applications
 :ordinal: 21
 
 This section details how to use the underlying Data Grid Hazelcast instance in Payara Server within application code.
 
 [[accessing-the-jndi-registered-hazelcast-instance]]
-== Accessing the Hazelcast instance via JNDI
+== Accessing the Hazelcast Instance via JNDI
 
 By default, the JNDI name of the hazelcast instance is `payara/Hazelcast`, though this can be altered using the xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[set-hazelcast-configuration] command. You will need to import the following packages into your Java class:
 
@@ -24,7 +24,7 @@ Here's the Maven dependency:
 <dependency>
   <groupId>fish.payara.api</groupId>
   <artifactId>payara-api</artifactId>
-  <version>${page-version}</version>
+  <version>${version}</version>
 </dependency>
 ----
 
@@ -51,7 +51,7 @@ WARNING: It is recommended to wrap this block in a `try-catch` clause, since a `
 Hazelcast can be used as the persistence provider for both the Web and EJB containers.
 
 [[setting-hazelcast-as-the-persistence-provider-through-the-admin-console]]
-=== Setting Hazelcast as the Persistence provider through the Admin Console
+=== Setting Hazelcast as the Persistence Provider through the Admin Console
 
 NOTE: Payara Server's initial configuration has the `hazelcast` option as the default setting.
 
@@ -81,7 +81,7 @@ To set up Hazelcast for persistence:
 . Save the changes.
 
 [[setting-hazelcast-as-the-persistence-provider-using-asadmin]]
-=== Setting Hazelcast as the Persistence provider from the Command Line
+=== Setting Hazelcast as the Persistence Provider from the Command Line
 
 To configure the persistence provider with the _asadmin_ CLI, you have to use the _set_ command.
 

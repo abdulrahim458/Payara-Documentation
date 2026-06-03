@@ -1,4 +1,4 @@
-= restart-cluster
+= Restart-Cluster
 
 Restarts all instances in a cluster.
 

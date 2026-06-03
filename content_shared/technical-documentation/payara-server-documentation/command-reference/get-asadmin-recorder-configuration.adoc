@@ -1,4 +1,4 @@
-= get-asadmin-recorder-configuration
+= Get-Asadmin-Recorder-Configuration
 
 Returns the current configuration of the Asadmin Recorder service.
 

@@ -1,4 +1,4 @@
-= undeploy
+= Undeploy
 
 Removes a deployed component.
 

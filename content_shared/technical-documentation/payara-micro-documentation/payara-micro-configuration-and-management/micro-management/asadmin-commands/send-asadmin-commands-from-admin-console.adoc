@@ -3,7 +3,7 @@
 Asadmin commands can be sent from the Domain Administration Server (DAS) to Payara Micro instances that are running within the same data grid as the DAS.
 
 [[sending-asadmin-commands-using-the-admin-console]]
-== How to Send Asadmin Commands To Payara Micro using the Admin Console
+== How to Send Asadmin Commands to Payara Micro Using the Admin Console
 
 Sending an Asadmin command is performed through the Domain Data Grid. This Data Grid is powered by Hazelcast and is enabled by default. You can verify if it actived by looking under the _server-config_ configuration under the _Data Grid_ item.
 

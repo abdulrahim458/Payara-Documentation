@@ -1,4 +1,4 @@
-= remove-expired-certificates
+= Remove-Expired-Certificates
 
 Removes all expired certificates from the target instance or listener's keystores and truststores.
 

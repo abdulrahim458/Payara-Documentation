@@ -174,12 +174,12 @@ Command set-batch-runtime-configuration executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help set-batch-runtime-configuration` at the command line.
 
 [[defining-a-schema-name]]
-=== Defining a Schema name
+=== Defining a Schema Name
 
 Payara Server allows the ability to define the name of the _database schema_ that will hold all batch job tables. This can be set via the Admin Console or using Asadmin CLI commands.
 
 [[defining-a-schema-name-through-the-admin-console]]
-=== Defining a Schema name through the Admin Console
+=== Defining a Schema Name through the Admin Console
 
 . Click on the instance or cluster to move to its configuration page.
 . Select the _Batch_ tab, and from there click on the _Configuration_ sub-tab.
@@ -187,7 +187,7 @@ Payara Server allows the ability to define the name of the _database schema_ tha
 . Save your changes
 
 [[defining-a-schema-name-using-asadmin]]
-==== Defining a Schema name using the Asadmin CLI
+==== Defining a Schema Name Using the Asadmin CLI
 
 It's possible to set the schema using the `set-batch-runtime-configuration` command.
 
@@ -215,14 +215,14 @@ If you specify a blank schema name, then the schema name will depend on what dat
 NOTE: This behavior only applies if you explicitly specify the schema name as blank; the schema name will still default to `APP` if not overwritten.
 
 [[setting-a-table-prefix-andor-suffix]]
-=== Setting a Table Prefix and/or Suffix
+=== Setting a Table Prefix And/or Suffix
 
 Payara Server allows you to set the prefix and/or the suffix of the batch table name. This can be set via the Admin Console, or using Asadmin CLI commands.
 
 IMPORTANT: The table prefix and suffix settings may be ignored by non-RDBMS based datastores.
 
 [[setting-a-table-prefix-andor-suffix-using-admin-console]]
-==== Setting a Table Prefix and/or Suffix on the Admin Console
+==== Setting a Table Prefix And/or Suffix on the Admin Console
 
 . Click on the instance or cluster to move to its configuration page.
 . Select the _Batch_ tab, and the _Configuration_ sub-tab should load.
@@ -230,7 +230,7 @@ IMPORTANT: The table prefix and suffix settings may be ignored by non-RDBMS base
 . Save your changes
 
 [[setting-a-table-prefix-andor-suffix-using-asadmin]]
-==== Setting a Table Prefix and/or Suffix using the Asadmin CLI
+==== Setting a Table Prefix And/or Suffix Using the Asadmin CLI
 
 It's possible to set the table prefix and/or suffix is set using the `set-batch-runtime-configuration` command. The command requires you to specify the `Executor` or `DataSource` lookup name, which you can do with the `-x` or `-d` options respectively.
 
@@ -290,7 +290,7 @@ The Jakarta Batch runtime will not create internally more than one set of JBatch
 However since the table constraint names already exist for the existing JBatch tables in the same schema, table creation will fail. One can of course run a_SQL_ script to create the relevant JBatch schema objects under different names.
 
 [[mysql-specifics]]
-==== MySQL Specifics
+==== Mysql Specifics
 
 For MySQL (5/8) database use, it is recommended the following additional property be set:
 

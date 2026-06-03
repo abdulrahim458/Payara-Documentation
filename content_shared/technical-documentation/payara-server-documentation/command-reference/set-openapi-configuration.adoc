@@ -1,4 +1,4 @@
-= set-openapi-configuration
+= Set-Openapi-Configuration
 
 Configures the settings of the MicroProfile OpenAPI service.
 

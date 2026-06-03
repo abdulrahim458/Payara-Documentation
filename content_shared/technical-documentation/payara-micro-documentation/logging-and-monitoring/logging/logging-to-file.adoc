@@ -1,10 +1,10 @@
-= Logging to a file
+= Logging to a File
 :ordinal: 1
 
 This section describes how to print all the Payara Micro log messages into a file.
 
 [[logging-to-a-file-from-the-command-line]]
-== Logging to a file from the Command Line
+== Logging to a File from the Command Line
 
 To print all of the Payara Micro log messages into a file from the command line,  you will need to use the `--logToFile` option, followed by either a path to where you want to put the log file or by giving the name of a file you want to print the logs into. If a file name is not given, a default file called _payara-server.log_ is generated.
 
@@ -14,7 +14,7 @@ java -jar payara-micro.jar --logToFile /home/user/PayaraMicro.log
 ----
 
 [[logging-to-a-file-programmatically]]
-== Logging to a file Programmatically
+== Logging to a File Programmatically
 
 To print all the Payara Micro log messages into a file programmatically, you will need to use `setUserLogFile(String filePath)` method.
 

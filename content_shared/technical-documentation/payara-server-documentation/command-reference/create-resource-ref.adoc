@@ -1,4 +1,4 @@
-= create-resource-ref
+= Create-Resource-Ref
 
 Creates a reference to a resource.
 

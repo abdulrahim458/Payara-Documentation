@@ -3,7 +3,7 @@
 Overview of the usage and details of the official Payara Micro Community Docker image.
 
 [[quickstart]]
-== Quick start
+== Quick Start
 
 Launch a new Payara Micro instance running in a container listening in port `8080` with the following command:
 
@@ -22,13 +22,13 @@ Keep in mind the following:
 .Using a specific version
 [source,text]
 ----
-docker run -p 8080:8080 payara/micro:{page-version}
+docker run -p 8080:8080 payara/micro:{version}
 ----
 
 AMD64 & ARM64 compatible images are provided. The Docker client should automatically download the appropriate image for your architecture.
 
 [[ports]]
-== Exposed ports
+== Exposed Ports
 
 The default ports that are exposed by this image are:
 
@@ -75,7 +75,7 @@ docker run -p 8080:8080 -v ~/payara-micro/applications:/opt/payara/deployments p
 NOTE: Make sure to prefix the artefact names with the absolute path to the local deployment directory.
 
 [[deploy-using-custom-image]]
-=== Deploy Applications using a Custom Image
+=== Deploy Applications Using a Custom Image
 
 You can also prepare a custom image based on the official Payara Micro Docker image and copy all application artefacts to the `$DEPLOY_DIR` directory. This way, you can re-package your applications in a simple distributable unit.
 

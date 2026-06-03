@@ -1,4 +1,4 @@
-= create-node-ssh
+= Create-Node-Ssh
 
 Creates a node that is enabled for communication over SSH.
 

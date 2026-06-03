@@ -1,4 +1,4 @@
-= install-node
+= Install-Node
 
 Installs Payara Server software on specified SSH-enabled hosts
 

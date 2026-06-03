@@ -1,4 +1,4 @@
-= Maven Bill Of Materials Artifact
+= Maven Bill of Materials Artifact
 :ordinal: 1
 
 The Payara Platform consists of many artifacts and it depends on lots of APIs as well as their implementations. Having matching versions of these dependencies will prevent classloading issues at runtime. To this effect, the Payara Platform's Bill Of Materials (BOM) artifact collects all of these versions for the following categories:
@@ -23,7 +23,7 @@ Add following snippet to your Maven project:
         <dependency>
             <groupId>fish.payara.api</groupId>
             <artifactId>payara-bom</artifactId>
-            <version>{page-version}</version>
+            <version>{version}</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -134,7 +134,7 @@ Distribution artifacts do not define a Maven scope and are therefore imported in
 |===
 
 [[standard-apis]]
-=== Standard APIs
+=== Standard Apis
 
 Standard APIs are defined in `provided` scope, as they already include classes that are present in the server's runtime.
 
@@ -272,7 +272,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 |===
 
 [[api-implementation]]
-=== Libraries and API implementations
+=== Libraries and API Implementations
 
 This is a non-exhaustive list of dependencies. By default all are declared in their respective default scopes, but it is more correct to use them with scope `provided` if they are already present in the server's internal modules.
 

@@ -1,4 +1,4 @@
-= list-supported-cipher-suites
+= List-Supported-Cipher-Suites
 
 Enables administrators to list the cipher suites that are supported and available to a specified Payara Server target.
 

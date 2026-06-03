@@ -247,17 +247,17 @@ In some cases, application developers will want to include a different version o
 Unfortunately, due to the way the default class loading hierarchy works, this will not be possible, and all libraries included with the server libraries will take precedence.
 
 [[disable-classloading-delegation]]
-=== Disable Classloading delegation
+=== Disable Classloading Delegation
 
 As detailed in xref:#configuring-delegation[Configuring Delegation], it is possible to invert/disable the way that delegation works as per the requirements of the Jakarta Servlet specification. The Payara Platform introducers greater delegation disabling mechanisms, detailed in the following sections.
 
 [[disable-classloading-delegation-globally]]
-==== Disable Classloading delegation globally
+==== Disable Classloading Delegation Globally
 
 To disable class loading delegation globally, you can set the system property `fish.payara.classloading.delegate` to `false`.
 
 [[disable-classloading-delegation-locally]]
-==== Disable Classloading delegation locally
+==== Disable Classloading Delegation Locally
 
 It's possible to disable class loading delegation directly at the application level. This can be done for both WAR and EAR applications.
 

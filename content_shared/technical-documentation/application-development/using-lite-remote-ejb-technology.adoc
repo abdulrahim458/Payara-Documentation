@@ -18,7 +18,7 @@ IMPORTANT: TX Propagation and Security Propagation is *not supported* by EJB Rem
 WARNING: In the current version of this feature, not all remote EJB features are implemented yet.
 
 [[configuring-http-for-remote-ejb]]
-== Configuring HTTP(S) for Remote EJBs
+== Configuring HTTP(S) for Remote Ejbs
 
 HTTP(S) for EJB remoting in Payara Server makes use of a special web endpoint on which is located by default on the path `/ejb-invoker`.
 
@@ -36,7 +36,7 @@ Client applications that wish to use HTTP(S) as the transport protocol when call
 <dependency>
     <groupId>fish.payara.extras</groupId>
     <artifactId>ejb-http-client</artifactId>
-    <version>{page-version}</version>
+    <version>{version}</version>
 </dependency>
 ----
 
@@ -231,7 +231,7 @@ The JNDI customization options listed above as well the environment variables de
 That means it will not override an environment variable that is already present but would be used in the case that it is not defined when `InitialContextFactory.getInitialContext` is invoked.
 
 [[client-side-adapter]]
-== Client-side adapter
+== Client-Side Adapter
 
 EJB Lite connector is, in its current form, suited for invoking stateless remote EJBs.
 However, if you're using the connector with existing clients, those may depend on stateful interactions, like invoking stateful EJBs or accessing application server data sources and connection factories.
@@ -257,7 +257,7 @@ public interface ClientAdapter {
 To make use of the adapter, put an instance of `ClientAdapter` into JNDI context property `fish.payara.clientAdapter`. Every JNDI lookup will be  first passed to the adapter instance in such case. If adapter returns a non-empty `Optional` value, tit will be passed back to the client.
 
 [[composing-multiple-adapters]]
-=== Composing multiple adapters
+=== Composing Multiple Adapters
 
 Client side emulation might require stubbing diverse JNDI names and return types, and handling all of that in a single ClientAdapter implementation would result in not very maintainable code. Therefore, the client library offers two classes that help with composition of multiple Client adapters into the parent instance to be passed to `RemoteEJBContextFactory`:
 
@@ -269,7 +269,7 @@ Most used method of customizer is `matchPrefix`, which will only call downstream
 NOTE: This prefix is stripped before invoking the downstream adapter.
 
 [[composite-client-adapter-example]]
-==== Composite Client Adapter example
+==== Composite Client Adapter Example
 
 [source,java]
 ----

@@ -1,4 +1,4 @@
-= unfreeze-transaction-service
+= Unfreeze-Transaction-Service
 
 Resumes all suspended transactions.
 

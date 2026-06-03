@@ -1,4 +1,4 @@
-= list-log-levels
+= List-Log-Levels
 
 Lists the loggers and their log levels.
 

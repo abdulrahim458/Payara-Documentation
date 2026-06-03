@@ -1,4 +1,4 @@
-= Create-resource-adapter-config
+= Create-Resource-Adapter-Config
 
 Creates the configuration information for the connector module.
 

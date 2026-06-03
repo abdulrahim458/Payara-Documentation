@@ -34,22 +34,22 @@ NOTE: Concurrent deployment of CDI Beans is enabled by default with 2 pre-loader
 WARNING: There are no equivalent configuration views for these commands in the Web admin console. They'll be reserved for a future release.
 
 [[legacy-mode-of-empty-beans.xml]]
-== Legacy mode of empty beans.xml
+== Legacy Mode of Empty beans.xml
 
 Starting with CDI 4.0, bean archives with empty beans.xml have discovery mode `annotated`. It is possible to activate the legacy mode option to switch this back to `all` discovery mode.
 
 [[enable-legacy-mode-of-empty-beans.xml]]
-=== Enable legacy mode of empty beans.xml
+=== Enable Legacy Mode of Empty beans.xml
 
 The legacy mode of empty beans.xml can be enabled using the following mechanisms:
 
 [[legacy-mode-via-asadmin-cli]]
-==== Via asadmin CLI
+==== Via Asadmin CLI
 
 Using the asadmin CLI it is possible to enable legacy mode for a single application or for ALL deployed applications.
 
 [[legacy-mode-asadmin-enabling-single-application]]
-===== Enabling for a single application
+===== Enabling for a Single Application
 
 The legacy mode can be enabled for a single application with the `deploy` command. Add the `emptyBeansXmlModeALL=true` property to the `--properties` argument's value of the `deploy` command.
 

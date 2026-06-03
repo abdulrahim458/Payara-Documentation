@@ -1,4 +1,4 @@
-= create-jms-resource
+= Create-Jms-Resource
 
 Creates a JMS resource.
 

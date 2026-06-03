@@ -1,4 +1,4 @@
-= list-context-services
+= List-Context-Services
 
 Lists context service resources.
 

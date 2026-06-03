@@ -1,4 +1,4 @@
-= redeploy
+= Redeploy
 
 Redeploys the specified component.
 

@@ -1,4 +1,4 @@
-= get-rest-monitoring-configuration
+= Get-Rest-Monitoring-Configuration
 
 Retrieves the REST monitoring service general settings.
 

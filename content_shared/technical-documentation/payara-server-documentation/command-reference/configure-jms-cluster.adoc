@@ -1,4 +1,4 @@
-= configure-jms-cluster
+= Configure-Jms-Cluster
 
 Configures the Message Queue cluster providing JMS services to a Payara Server cluster.
 

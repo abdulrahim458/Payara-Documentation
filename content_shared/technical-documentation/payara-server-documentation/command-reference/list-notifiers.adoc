@@ -1,4 +1,4 @@
-= list-notifiers
+= List-Notifiers
 
 List all available notifiers to the server.
 

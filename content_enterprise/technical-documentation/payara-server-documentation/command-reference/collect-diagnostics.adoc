@@ -1,4 +1,4 @@
-= collect-diagnostics
+= Collect-Diagnostics
 
 Collects data used for the diagnostics and troubleshooting of Payara Server incidents.
 

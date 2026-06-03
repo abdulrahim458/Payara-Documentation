@@ -1,4 +1,4 @@
-= update-node-config
+= Update-Node-Config
 
 Updates the configuration data of a node.
 

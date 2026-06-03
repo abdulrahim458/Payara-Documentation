@@ -1,4 +1,4 @@
-= Building Payara IntelliJ Tools
+= Building Payara Intellij Tools
 
 The process of building and testing the IntelliJ IDEA IDE Plugin, is the same for both the Ultimate and Community versions of the plugin. After cloning the appropriate repository, the following steps can be applied to either plugin.
 
@@ -15,7 +15,7 @@ Before building the Payara IntelliJ Tools, you will need to configure your local
 * *Install Gradle*: Gradle is the build tool for the Payara IntelliJ Tools. You can either download and configure Gradle locally or use the Gradle wrapper in the source code.
 
 [[building-intellij-plugin]]
-== Build Payara IntelliJ Tools
+== Build Payara Intellij Tools
 To build the Payara IntelliJ Tools, run the following command from the root directory where the project was cloned:
 
 *If you installed Gradle*
@@ -29,7 +29,7 @@ To build the Payara IntelliJ Tools, run the following command from the root dire
 After a successful build, the final ZIP distribution will be located in the `/build/distributions` directory. This ZIP file can be installed into IntelliJ IDEA.
 
 [[install-compiled-intellij-plugin]]
-=== Install Payara Tools into IntelliJ IDEA
+=== Install Payara Tools into Intellij IDEA
 After the Payara Tools plugin has been built, you can install it in IntelliJ IDEA as follows:
 
 . Open the **Settings** menu (`Ctrl + Alt + S`)
@@ -40,7 +40,7 @@ After the Payara Tools plugin has been built, you can install it in IntelliJ IDE
 *image*: intellij-plugin/building-plugin/install-compiled-plugin.png[Install Compiled Plugin]
 
 [[remove-compiled-intellij-plugin]]
-=== Removing Payara Tools from IntelliJ IDEA
+=== Removing Payara Tools from Intellij IDEA
 To uninstall the plugin:
 
 . Open the **Settings** menu (`Ctrl + Alt + S`)

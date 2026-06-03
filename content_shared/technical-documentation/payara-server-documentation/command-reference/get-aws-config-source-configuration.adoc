@@ -1,4 +1,4 @@
-= get-aws-config-source-configuration
+= Get-Aws-Config-Source-Configuration
 
 Gets the configuration for the AWS Secrets configuration source.
 

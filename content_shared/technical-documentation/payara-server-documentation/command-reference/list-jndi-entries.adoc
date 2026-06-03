@@ -1,4 +1,4 @@
-= list-jndi-entries
+= List-Jndi-Entries
 
 Browses and queries the JNDI tree.
 

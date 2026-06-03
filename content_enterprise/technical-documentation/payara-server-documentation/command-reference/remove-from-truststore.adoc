@@ -1,4 +1,4 @@
-= remove-from-truststore
+= Remove-From-Truststore
 
 Removes a certificate entry from the specified server truststore.
 

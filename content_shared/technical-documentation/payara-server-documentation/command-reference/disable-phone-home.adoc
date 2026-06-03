@@ -1,4 +1,4 @@
-= disable-phone-home
+= Disable-Phone-Home
 
 Disables the phone home services.
 

@@ -1,4 +1,4 @@
-= add-to-truststore
+= Add-To-Truststore
 
 Adds the specified certificate to a target domain truststore.
 

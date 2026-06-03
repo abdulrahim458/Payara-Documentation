@@ -1,4 +1,4 @@
-= delete-transport
+= Delete-Transport
 
 Removes a transport.
 

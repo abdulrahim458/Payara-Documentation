@@ -1,4 +1,4 @@
-= update-node-ssh
+= Update-Node-Ssh
 
 Updates the configuration data of a SSH node.
 

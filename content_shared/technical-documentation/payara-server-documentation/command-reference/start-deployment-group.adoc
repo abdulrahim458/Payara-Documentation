@@ -1,4 +1,4 @@
-= start-deployment-group
+= Start-Deployment-Group
 
 Starts all the instances in a Payara Server deployment group.
 

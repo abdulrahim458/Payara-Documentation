@@ -1,4 +1,4 @@
-= list-protocol-finders
+= List-Protocol-Finders
 
 Lists the existing protocol finders.
 

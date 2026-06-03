@@ -1,4 +1,4 @@
-= delete-http
+= Delete-Http
 
 Removes HTTP parameters from a protocol.
 

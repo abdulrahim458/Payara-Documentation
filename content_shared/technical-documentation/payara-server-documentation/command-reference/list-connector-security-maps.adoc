@@ -1,4 +1,4 @@
-= list-connector-security-maps
+= List-Connector-Security-Maps
 
 Lists the security maps belonging to the specified connector connection pool.
 

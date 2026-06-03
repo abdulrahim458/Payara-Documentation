@@ -1,4 +1,4 @@
-= ping-connection-pool
+= Ping-Connection-Pool
 
 Tests if a connection pool is usable.
 

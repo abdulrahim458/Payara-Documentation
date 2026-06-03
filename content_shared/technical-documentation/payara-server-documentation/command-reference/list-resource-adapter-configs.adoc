@@ -1,4 +1,4 @@
-= list-resource-adapter-configs
+= List-Resource-Adapter-Configs
 
 Lists the names of the current resource adapter configurations.
 

@@ -1,4 +1,4 @@
-= get-azure-config-source-configuration
+= Get-Azure-Config-Source-Configuration
 
 Gets the configuration settings of an Azure Secrets configuration source.
 

@@ -1,4 +1,4 @@
-= multimode
+= Multimode
 
 Allows multiple subcommands to be run while preserving environment settings and remaining in the asadmin utility.
 

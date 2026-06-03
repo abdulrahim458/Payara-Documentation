@@ -11,7 +11,7 @@ These keystores are protected with the Master Password of your domain.
 TIP: Azul Payara provides the link:{enterpriseDocsPageRootUrl}/Technical Documentation/Payara Server Documentation/Server Configuration And Management/Configuration Options/certificate-management.html[Integrated Certificate Management] feature. This allows creating, installing and managing SSL/TLS certificates without external tools like keytool or OpenSSL, just using **asadmin** commands or **Admin Console**. This simplifies the processes documented below and makes it much less risky to perform tasks like renewing certificates, deleting expired certificates, etc.
 
 [[add-certificate]]
-== Adding a new SSL Certificate
+== Adding a New SSL Certificate
 
 To add your SSL Certificate to the Payara Server configuration files, you need:
 
@@ -81,7 +81,7 @@ In a default installation, the `http-listener-2` listener is responsible for han
 The information can also be entered in the Web Administration console, by navigating to the page Configurations -> `server-config` -> HTTP Service -> HTTP Listeners -> `http-listener-2`.
 
 [[loading-certificates-from-multiple-keystores]]
-== Loading Certificates From Multiple Keystores
+== Loading Certificates from Multiple Keystores
 
 IMPORTANT: All additional keystores must have the same password as your domain master password.
 

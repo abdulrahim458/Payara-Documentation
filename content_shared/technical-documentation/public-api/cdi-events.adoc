@@ -1,4 +1,4 @@
-= Firing and Listening for remote CDI Events
+= Firing and Listening for Remote CDI Events
 
 Payara Server is able to listen to and fire CDI events across the Hazelcast cluster. The CDI events can be fired and listened to by applications on Payara Server instances as well as Payara Micro instances provided that they are connected to the same cluster.
 
@@ -8,12 +8,12 @@ Payara Server is able to listen to and fire CDI events across the Hazelcast clus
 Hazelcast must be enabled for all Payara Server instances and they must be able to connect to the same Hazelcast cluster. See the xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc[Data Grid] section for more details.
 
 [[initializing-the-event-bus]]
-== Initializing the event bus
+== Initializing the Event Bus
 
 The event bus is initialized automatically after an application is started. No additional configuration is necessary to fire and listen to remote events.
 
 [[firing-remote-cdi-events]]
-== Firing remote CDI events
+== Firing Remote CDI Events
 
 In order to fire a CDI event remotely, mark it with the `@Outbound` annotation:
 
@@ -39,7 +39,7 @@ instance, but in a different thread. Therefore the call doesn't block the curren
 TIP: It's possible to use additional qualifiers to match event with observers. Any additional qualifier used with `@Outbound` will mean that the event will be matched with an `@Inbound` listener that accepts the qualifiers.
 
 [[observing-remote-cdi-events]]
-== Observing remote CDI events
+== Observing Remote CDI Events
 
 Outbound events are observed by every CDI bean with a listener method that is marked with the `@Inbound` qualifier:
 
@@ -54,7 +54,7 @@ The observers may reside in any application running on one or more instances in 
 An event will be matched with observers by the payload class, using the same rules as usual CDI events. Observers will receive events that are assignable to the observed class.
 
 [[additional-options]]
-== Additional options
+== Additional Options
 
 [[qualifiers]]
 === Using CDI Qualifiers
@@ -82,7 +82,7 @@ public void receiveEvent(@Observes @Inbound @MyQualifier String message) {
 ----
 
 [[event-name]]
-=== Event name
+=== Event Name
 
 It is possible to tag a remote event with a name. In that case, only observers that listen to events of the same name will receive such events.
 To fire an event with a name:
@@ -103,7 +103,7 @@ public void receiveEvent(@Observes @Inbound("MyEvent") String message) {
 ----
 
 [[instance-name]]
-=== Instance name
+=== Instance Name
 
 By default, all remote instances in the same cluster will receive an outbound event, which matches the observed class and event name. If you want to target specific instances in the cluster, it is possible to define one or more target instances for an outbound event:
 
@@ -140,7 +140,7 @@ Event<String> event;
 ----
 
 [[dynamic-configuration]]
-== Dynamic configuration
+== Dynamic Configuration
 
 If required, events can also be fired programmatically, not only using the static `@Outbound` annotation next to the injection point. Although there is no special API to support it, CDI already supports programmatic configuration of events.
 

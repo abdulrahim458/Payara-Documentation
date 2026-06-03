@@ -1,4 +1,4 @@
-= asadmin-recorder-enabled
+= Asadmin-Recorder-Enabled
 
 Returns whether the Asadmin Recorder service is enabled .
 

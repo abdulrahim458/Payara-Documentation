@@ -1,4 +1,4 @@
-= list-iiop-listeners
+= List-Iiop-Listeners
 
 Lists the existing IIOP listeners.
 

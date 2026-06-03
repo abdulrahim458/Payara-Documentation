@@ -1,4 +1,4 @@
-= set-web-context-param
+= Set-Web-Context-Param
 
 Sets a servlet context-initialization parameter of a deployed web application or module.
 

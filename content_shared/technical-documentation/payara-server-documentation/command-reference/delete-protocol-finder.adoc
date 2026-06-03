@@ -1,4 +1,4 @@
-= delete-protocol-finder
+= Delete-Protocol-Finder
 
 Removes a protocol finder.
 

@@ -1,4 +1,4 @@
-= delete-network-listener
+= Delete-Network-Listener
 
 Removes a network listener.
 

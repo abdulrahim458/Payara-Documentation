@@ -1,4 +1,4 @@
-= add-instance-to-deployment-group
+= Add-Instance-To-Deployment-Group
 
 Adds a standalone instance to an existing deployment group.
 

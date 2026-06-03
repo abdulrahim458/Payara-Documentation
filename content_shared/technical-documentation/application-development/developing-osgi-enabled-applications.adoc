@@ -1,10 +1,10 @@
-= Developing OSGi-enabled Jakarta EE Applications
+= Developing Osgi-Enabled Jakarta EE Applications
 :ordinal: 15
 
 This chapter describes the features and interfaces that Payara Server provides to develop OSGi-enabled Enterprise applications.
 
 [[overview-of-osgi-application-and-payara-server]]
-== Overview of OSGi Application and Payara Server
+== Overview of Osgi Application and Payara Server
 
 Payara Server is a certified Jakarta EE implementation, so it provides the latest Jakarta EE APIs and frameworks. It is built using OSGi technology, and includes as its OSGi module management subsystem the http://felix.apache.org[Apache Felix OSGi framework^], which is a fully-compliant implementation of the OSGi Service Platform R7 specification. Payara Server supports deployment of OSGi-based applications using this framework.
 
@@ -19,7 +19,7 @@ OSGi applications are deployed as one or more OSGi bundles, and the Payara Serve
 * EJB Application Bundles, see xref:#developing-ejb-application-bundles[Developing EJB Application Bundles].
 
 [[benefits-of-using-osgi-in-enterprise-jakarta-applications]]
-=== Benefits of Using OSGi in Enterprise Jakarta Applications
+=== Benefits of Using Osgi in Enterprise Jakarta Applications
 
 Enterprise applications typically need transactional, secured access to data stores, messaging systems and other such enterprise information systems, and have to cater to a wide variety of clients such as web browsers and desktop applications, and so on. Jakarta EE makes development of such applications easier with a rich set of APIs and frameworks. It also provides a scalable, reliable and easy to administer runtime to host such applications.
 
@@ -35,7 +35,7 @@ The service-oriented approach and dynamic module system used together allow a sy
 With Payara Server, you do not have to chose one of the two platforms. A hybrid approach like OSGi enabling your Jakarta EE applications allows new capabilities to applications hitherto unavailable to applications built using just one of the two platforms.
 
 [[developing-osgi-application-bundles-for-payara-server]]
-== Developing OSGi Application Bundles for Payara Server
+== Developing Osgi Application Bundles for Payara Server
 
 Payara Server enables interaction between OSGi components and Jakarta EE components.
 
@@ -44,7 +44,7 @@ OSGi services managed by the OSGi framework can invoke Jakarta EE components man
 Similarly, Jakarta EE components can locate OSGi services provided by plain OSGi bundles and use them as well. Payara Server extends the Jakarta EE Context and Dependency Injection (CDI) framework to make it easier for Jakarta EE components to consume dynamic OSGi services in a type-safe manner.
 
 [[developing-plain-osgi-bundles]]
-=== Developing Plain OSGi Bundles
+=== Developing Plain Osgi Bundles
 
 Jakarta EE components (like an EJB or Servlet) can look up Jakarta EE platform services using JNDI names in the associated Jakarta EE naming context. Such code can rely on the Jakarta EE container to inject the required services as well. Unfortunately, neither of them works when the code runs outside a Jakarta EE context.
 
@@ -219,7 +219,7 @@ Web-ContextPath: /foo
 ----
 
 [[how-wabs-consume-osgi-services]]
-==== How WABs Consume OSGi Services
+==== How Wabs Consume Osgi Services
 
 Since a WAB has a valid `Bundle-Context`, it can consume OSGi services.
 Although you are free to use any OSGi API to locate OSGi services, Payara Server makes it easy for WAB users to use OSGi services by virtue of extending the Context and Dependency Injection (CDI) framework. Here's an example of the injection of an OSGi Service into a Servlet:
@@ -236,7 +236,7 @@ public class MyServlet extends HttpServlet {
 ----
 
 [[osgi-cdi-extension-for-wabs]]
-==== OSGi CDI Extension for WAB
+==== Osgi CDI Extension for WAB
 
 Payara Server includes a CDI extension that enables web applications, such as servlets, that are part of WABs to express a type-safe dependency on an OSGi service using CDI APIs.
 
@@ -311,7 +311,7 @@ Import-Package: jakarta.ejb; version=[3.0, 4.0), com.acme; version=[1.0, 1.1)
 ----
 
 [[how-ejb-bundles-consume-osgi-services]]
-==== How EJB Bundles Consume OSGi Services
+==== How EJB Bundles Consume Osgi Services
 
 Since an EJB has a valid Bundle-Context, it can consume OSGi services. Although you are free to use any OSGi API to locate OSGi services, Payara Server makes it easy to use OSGi services by virtue of extending the Context and Dependency Injection (CDI) framework.
 
@@ -329,7 +329,7 @@ public class MyEJB {
 ----
 
 [[using-the-osgi-cdi-extension-with-ejb-bundles]]
-==== *Using the OSGi CDI Extension With EJB Bundles*
+==== *Using the Osgi CDI Extension with EJB Bundles*
 
 Payara Server includes a CDI extension that enables EJB application bundles to express a type-safe dependency on an OSGi Service using CDI APIs.
 
@@ -344,6 +344,6 @@ The following `@OsgiService` attributes are currently available:
 * `dynamic` — Dynamically obtain a service reference (`true`/`false`).
 
 [[deploying-osgi-bundles-in-payara-server]]
-== Deploying OSGi Bundles in Payara Server
+== Deploying Osgi Bundles in Payara Server
 
 For instruction on deploying OSGi bundle, see "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#osgi-bundle-deployment-guidelines[OSGi Bundle Deployment Guidelines]" in the Payara Server Application Deployment section.

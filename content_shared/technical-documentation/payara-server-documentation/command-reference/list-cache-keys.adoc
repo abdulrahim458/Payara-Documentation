@@ -1,4 +1,4 @@
-= list-cache-keys
+= List-Cache-Keys
 
 Lists all keys in a Hazelcast cache.
 

@@ -1,4 +1,4 @@
-= get-eventbus-notifier-configuration
+= Get-Eventbus-Notifier-Configuration
 
 Retrieves the settings of the Event Bus notifier
 

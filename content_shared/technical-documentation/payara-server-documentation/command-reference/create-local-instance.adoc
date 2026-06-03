@@ -1,4 +1,4 @@
-= create-local-instance
+= Create-Local-Instance
 
 Creates a Payara Server instance on the host where the subcommand is run.
 

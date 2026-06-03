@@ -1,4 +1,4 @@
-= rollback-transaction
+= Rollback-Transaction
 
 Rolls back the named transaction.
 

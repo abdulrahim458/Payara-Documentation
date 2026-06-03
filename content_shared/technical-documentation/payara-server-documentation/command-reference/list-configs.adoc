@@ -1,4 +1,4 @@
-== list-configs
+== List-Configs
 
 Lists named configurations.
 

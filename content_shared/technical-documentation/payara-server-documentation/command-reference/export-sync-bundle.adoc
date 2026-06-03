@@ -1,4 +1,4 @@
-= export-sync-bundle
+= Export-Sync-Bundle
 
 Exports the configuration data of a cluster or standalone instance to an archive file.
 

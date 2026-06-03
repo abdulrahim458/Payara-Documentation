@@ -1,4 +1,4 @@
-= delete-jmsdest
+= Delete-Jmsdest
 
 Removes a JMS physical destination.
 

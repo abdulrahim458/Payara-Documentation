@@ -1,4 +1,4 @@
-= create-threadpool
+= Create-Threadpool
 
 Adds a thread pool.
 

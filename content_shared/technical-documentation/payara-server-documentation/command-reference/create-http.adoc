@@ -1,4 +1,4 @@
-= create-http
+= Create-Http
 
 Sets HTTP parameters for a protocol.
 

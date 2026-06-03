@@ -1,4 +1,4 @@
-= list-libraries
+= List-Libraries
 
 Lists library JAR files on Payara Server.
 

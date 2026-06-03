@@ -1,4 +1,4 @@
-= create-jms-host
+= Create-Jms-Host
 
 Creates a JMS host.
 

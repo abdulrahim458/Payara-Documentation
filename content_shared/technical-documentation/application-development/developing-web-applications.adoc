@@ -125,7 +125,7 @@ IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a futu
 It is recommended to use payara-web.xml instead.
 
 [[the-cachekeygenerator-interface]]
-==== The CacheKeyGenerator Interface
+==== The Cachekeygenerator Interface
 
 The built-in default `CacheHelper` implementation allows web applications to customize the key generation. An application component (in a servlet or JSP) can set up a custom `CacheKeyGenerator` implementation as an attribute in the `ServletContext`.
 
@@ -278,7 +278,7 @@ See xref:#caching-scope[Caching Scope].
 |===
 
 [[example-of-cache]]
-==== Example of `cache` tag annotation usage
+==== Example of `cache` Tag Annotation Usage
 
 The following example represents a cached JSP file:
 
@@ -582,7 +582,7 @@ The Payara Platform includes the Grizzly HTTP Engine, which enables asynchronous
 With Java NIO, Grizzly enables greater performance and scalability by avoiding the limitations experienced by traditional web servers that must run a thread for each request. Instead, Grizzly's ARP mechanism makes efficient use of a thread pool system and also keeps the state of requests so that it can keep requests alive without holding a single thread for each of them.
 
 [[client-technologies-to-use-with-comet]]
-==== Client Technologies to Use With Comet
+==== Client Technologies to Use with Comet
 
 In addition to creating a web component that uses the Comet APIs, you need to enable your client to accept asynchronous updates from the web component. To accomplish this, you can use Iframes, plain JavaScript, or a robust JavaScript framework, such as the http://dojotoolkit.org[Dojo Toolkit^].
 
@@ -843,7 +843,7 @@ For more information about virtual server properties, see xref:#virtual-server-p
 NOTE: Not all context definitions are supported by the Payara Platform.
 
 [[enabling-webdav]]
-==== Enabling WebDav
+==== Enabling Webdav
 
 To enable WebDav in Payara Server, you edit the `web.xml` and `glassfish-web.xml`/`payara-web.xml` files as follows.
 

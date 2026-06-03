@@ -186,7 +186,7 @@ Create a custom resource in one of these ways:
 * To create a custom resource, use the `asadmin create-custom-resource` command.
 
 [[built-in-factories-for-custom-resources]]
-=== Built-in Factories for Custom Resources
+=== Built-In Factories for Custom Resources
 
 Payara Server provides built-in factories for the following types of custom resources:
 
@@ -201,7 +201,7 @@ IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in 
 It is recommended to use payara-resources.xml instead.
 
 [[javabeanfactory]]
-==== *JavaBeanFactory*
+==== *Javabeanfactory*
 
 To create a custom resource that provides instances of a JavaBean class, follow these steps:
 
@@ -214,7 +214,7 @@ For example, if the JavaBean class has a method named `setAccount`, specify a pr
 For example, you can place the JavaBean class in the `as-install/lib` directory.
 
 [[propertiesfactory]]
-==== PropertiesFactory
+==== Propertiesfactory
 
 To create a custom resource that provides configuration properties to applications, set the custom resource's factory class to `org.glassfish.resources.custom.factory.PropertiesFactory`, then specify one or both of the following:
 
@@ -231,7 +231,7 @@ If both the `fileName` property and other properties are specified, the resultin
 If the same property is defined in the file and directly in the custom resource, the value of the latter takes precedence.
 
 [[primitivesandstringfactory]]
-==== PrimitivesAndStringFactory
+==== Primitivesandstringfactory
 
 To create a custom resource that provides Java primitives to applications, follow these steps:
 
@@ -253,7 +253,7 @@ To create a custom resource that provides Java primitives to applications, follo
 For example, If the application requires a `double` of value `22.1`, create a property with the name `value` and the value `22.1`.
 
 [[urlfactory]]
-==== URLFactory
+==== Urlfactory
 
 To create a custom resource that provides URL instances to applications, follow these steps:
 

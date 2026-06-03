@@ -204,7 +204,7 @@ CAUTION: Disabling the Data Grid in a configuration object will disable the Data
 If this is a problem, ensure not to select the dynamic option and restart each affected instance manually in turn.
 
 [[enabling-hazelcast-asadmin]]
-=== Disabling DataGrid using Asadmin CLI
+=== Disabling Datagrid Using Asadmin CLI
 
 The xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] asadmin command can be used to enable or disable Hazelcast and therefore the Data Grid.
 
@@ -232,7 +232,7 @@ asadmin> set-hazelcast-configuration --enabled=false --dynamic=false
 ----
 
 [[hazelcast-settings]]
-== Domain Data Grid's Hazelcast settings
+== Domain Data Grid's Hazelcast Settings
 
 Payara Server supports configuring Hazelcast through the Admin Console and asadmin commands. The Hazelcast configuration file can also be directly edited, but will not be covered in depth in this section.
 
@@ -254,7 +254,7 @@ This is by design, implemented to avoid a https://github.com/payara/Payara/issue
 * xref:configuring-hazelcast-cp-subsystem[Configuring the Hazelcast CP Subsystem]
 
 [[setting-hazelcast-configuration-file]]
-=== Setting a custom Hazelcast Configuration File
+=== Setting a Custom Hazelcast Configuration File
 
 A custom Hazelcast configuration file can be either set using Admin Console or asadmin CLI.
 
@@ -270,7 +270,7 @@ To set the Hazelcast configuration from a Hazelcast Configuration file:
 *image*: hazelcast/hazelcast-admin-console-set-configuration-file.png[Hazelcast Set Configuration File]
 
 [[setting-hazelcast-configuration-file-asadmin]]
-==== Setting a Hazelcast Configuration File using asadmin
+==== Setting a Hazelcast Configuration File Using Asadmin
 
 The xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] command can be used to set the configuration file:
 
@@ -363,7 +363,7 @@ It is possible to configure the port used by Hazelcast to bind the corresponding
 The `--dataGridStartPort` option can be used with the xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc[`create-instance`] or the xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc[`create-local-instance`] commands to specify config Specific Data Grid Start Port when an instance is created.
 
 [[configuring-data-grid-start-port-After-instance-creation]]
-==== Configuring Data Grid Start Port After Instance Creation
+==== Configuring Data Grid Start Port after Instance Creation
 
 You can configure the start port used by an instance after its creation by either using the Admin Console or the asadmin CLI.
 
@@ -376,7 +376,7 @@ You can configure the start port used by an instance after its creation by eithe
 *image*: hazelcast/hazelcast-admin-console-config-data-grid-start-port.png[Data Grid Start Port Option]
 
 [[setting-data-grid-start-port-with-the-asadmin-cli]]
-===== *Setting Data Grid Start Port using asadmin CLI*
+===== *Setting Data Grid Start Port Using Asadmin CLI*
 
 The xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] command can be used to set the Data Grid start port:
 
@@ -416,7 +416,7 @@ Selected the **Data Grid** menu option from the domain menu in the sidebar and s
 image:hazelcast/hazelcast-admin-console-view-cluster-members-from-domain.png[alt="Domain Cluster Members",width=600px]
 
 [[viewing-cluster-members-asadmin]]
-=== Viewing Cluster Members via asadmin
+=== Viewing Cluster Members via Asadmin
 
 To view the current cluster members from the command line, run either the xref:technical-documentation/payara-server-documentation/command-reference/list-hazelcast-members.adoc[`list-hazelcast-members`] or the xref:technical-documentation/payara-server-documentation/command-reference/list-hazelcast-cluster-members.adoc[`list-hazelcast-cluster-members`] asadmin commands:
 
@@ -548,12 +548,12 @@ asadmin> set configs.config.server-config.availability-service.ejb-container-ava
 No additional actions necessary.
 
 [[healthcheck-configuration]]
-==== HealthCheck Configuration
+==== Healthcheck Configuration
 
 No additional actions necessary.
 
 [[hazelcast-phonehome]]
-== The Hazelcast PhoneHome Service
+== The Hazelcast Phonehome Service
 
 In a similar manner to the server's xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#phone-home[Phone Home] service,  Hazelcast Community Edition also comes with an link:https://docs.hazelcast.com/hazelcast/5.3/phone-homes[internal service^] that makes all instances that belong to the DataGrid send phone data regularly.
 
@@ -565,7 +565,7 @@ asadmin create-jvm-options --target server-config "-Dhazelcast.phone.home.enable
 ----
 
 [[see-also]]
-== See also
+== See Also
 
 * xref:technical-documentation/payara-server-documentation/high-availability/administering-deployment-groups.adoc[Deployment Groups],
 * xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`],

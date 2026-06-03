@@ -275,7 +275,7 @@ This example deletes an external JNDI resource:
 ----
 
 [[to-disable-payara-server-v2-vendor-specific-jndi-names]]
-==== *To Disable payara Server v2 Vendor-Specific JNDI Names*
+==== *To Disable Payara Server v2 Vendor-Specific JNDI Names*
 
 The EJB 3.1 specification supported by Payara Server 5.0 defines portable EJB JNDI names. Because of this, there is less need to continue to use older vendor-specific JNDI names.
 

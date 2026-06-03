@@ -1,4 +1,4 @@
-= create-module-config
+= Create-Module-Config
 
 Adds the default configuration of a module to `domain.xml`.
 

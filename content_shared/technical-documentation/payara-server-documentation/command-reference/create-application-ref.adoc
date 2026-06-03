@@ -1,4 +1,4 @@
-= create-application-ref
+= Create-Application-Ref
 
 Creates a reference to an application.
 

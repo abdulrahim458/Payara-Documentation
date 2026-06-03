@@ -1,4 +1,4 @@
-= delete-managed-thread-factory
+= Delete-Managed-Thread-Factory
 
 Removes a managed thread factory resource with the specified JNDI name.
 

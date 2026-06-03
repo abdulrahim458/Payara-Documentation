@@ -1,4 +1,4 @@
-= restart-http-listeners
+= Restart-Http-Listeners
 
  Restarts all HTTP network listener of the targeted instance(s).
 

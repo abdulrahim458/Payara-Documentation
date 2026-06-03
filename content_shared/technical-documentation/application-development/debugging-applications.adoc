@@ -44,7 +44,7 @@ You can attach any JPDA compliant debugger to Payara Server, including that of a
 You can enable debugging even when Payara Server is started without the `--debug` option. This is useful in development environments where you want to make sure that debugging is always turned on.
 
 [[to-set-the-server-to-automatically-start-up-in-debug-mode]]
-==== To Set the Server to Automatically Start Up in Debug Mode
+==== To Set the Server to Automatically Start up in Debug Mode
 
 . Use the Administration Console. Select the _JVM Settings_ component under the relevant configuration.
 . Check the _Debug Enabled_ box.

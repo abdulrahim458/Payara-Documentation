@@ -1,4 +1,4 @@
-= create-node-config
+= Create-Node-Config
 
 Creates a node that is not enabled for remote communication.
 

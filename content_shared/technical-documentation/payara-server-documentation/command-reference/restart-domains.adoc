@@ -1,4 +1,4 @@
-= restart-domains
+= Restart-Domains
 
 Restarts the Domain Administration Server(DAS) of the specified domains.
 

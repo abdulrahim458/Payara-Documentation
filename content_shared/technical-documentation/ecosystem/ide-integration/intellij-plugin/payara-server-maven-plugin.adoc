@@ -1,4 +1,4 @@
-= Payara Server Maven Plugin Tools in IntelliJ IDEA
+= Payara Server Maven Plugin Tools in Intellij IDEA
 :ordinal: 1
 
 Using the Payara Tools and Payara Server Maven Plugin, you can integrate Payara Server within the IntelliJ IDEA to streamline development workflows. This integration allows you to:
@@ -9,7 +9,7 @@ Using the Payara Tools and Payara Server Maven Plugin, you can integrate Payara 
 - Configure pre-launch Maven tasks for automatic build and deployment
 
 [[managing-payara-server-from-intellij]]
-== Managing Payara Server using Maven Plugin from IntelliJ IDEA
+== Managing Payara Server Using Maven Plugin from Intellij IDEA
 . To manage Payara Server using the Maven plugin from IntelliJ IDEA, first create the new *Payara Server configuration* by selecting the *Edit Configuration* option:
 *image*: intellij-plugin/payara-server-maven-plugin/create-configuration.png[Create Configuration]
 

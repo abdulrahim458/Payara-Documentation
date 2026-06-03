@@ -1,4 +1,4 @@
-= start-domains
+= Start-Domains
 
 Starts the Domain Administration Server(DAS) of the specified domains.
 

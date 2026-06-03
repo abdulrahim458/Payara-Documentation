@@ -201,7 +201,7 @@ SHA-256: `92babb604b4e346f8d19929979c1d6aaf013fdf990b5e97bdd95502ad7db5b4c`
 Apache Derby, Linux, Ubuntu 20.04 LTS +
 
 
-== Test results
+== Test Results
 
 ### activation
 

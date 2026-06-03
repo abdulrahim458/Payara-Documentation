@@ -1,4 +1,4 @@
-= generate-jvm-report
+= Generate-Jvm-Report
 
 Shows the JVM machine statistics for a given target instance.
 

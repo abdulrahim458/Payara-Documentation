@@ -1,4 +1,4 @@
-= update-connector-security-map
+= Update-Connector-Security-Map
 
 Modifies a security map for the specified connector connection pool.
 

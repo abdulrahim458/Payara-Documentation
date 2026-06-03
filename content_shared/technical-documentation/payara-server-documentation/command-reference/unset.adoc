@@ -1,4 +1,4 @@
-= unset
+= Unset
 
 Removes one or more variables from the multimode environment.
 

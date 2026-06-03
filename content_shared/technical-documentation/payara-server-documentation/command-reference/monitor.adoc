@@ -1,4 +1,4 @@
-= monitor
+= Monitor
 
 Displays monitoring data for commonly used components and services.
 

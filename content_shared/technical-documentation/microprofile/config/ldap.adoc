@@ -38,7 +38,7 @@ Command get-config-property executed successfully.
 NOTE: Currently, the LDAP config source only supports the `get-config-property` command and doesn't support the `set-config-property` and `delete-config-property` commands.
 
 [[finding-user-specific-properties]]
-== Finding User specific properties
+== Finding User Specific Properties
 
 If search filter and search base are not specified then properties fetched from the direct binding of `bindDn`.
 
@@ -83,7 +83,7 @@ Command get-config-property executed successfully.
 ----
 
 [[finding-group-specific-properties]]
-== Finding Group specific properties
+== Finding Group Specific Properties
 
 To find properties from the group of users search filter is mandatory to specify. For e.g, In the following configuration `objectClass` is used as group filter.
 

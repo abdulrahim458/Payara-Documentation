@@ -1,4 +1,4 @@
-= set-requesttracing-configuration
+= Set-Requesttracing-Configuration
 
 Configures the Request Tracing service.
 

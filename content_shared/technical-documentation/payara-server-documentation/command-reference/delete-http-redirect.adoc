@@ -1,4 +1,4 @@
-= delete-http-redirect
+= Delete-Http-Redirect
 
 Removes an HTTP redirect.
 

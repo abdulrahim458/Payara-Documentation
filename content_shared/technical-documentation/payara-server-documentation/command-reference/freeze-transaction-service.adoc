@@ -1,4 +1,4 @@
-= freeze-transaction-service
+= Freeze-Transaction-Service
 
 Freezes the transaction subsystem.
 

@@ -1,4 +1,4 @@
-= get-health
+= Get-Health
 
 Provides information on the cluster health.
 

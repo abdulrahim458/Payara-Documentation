@@ -1,4 +1,4 @@
-= get-config-dir
+= Get-Config-Dir
 
 Gets the settings of the Directory configuration settings.
 

@@ -1,4 +1,4 @@
-= get-monitoring-service-configuration
+= Get-Monitoring-Service-Configuration
 
 Retrieves the monitoring service general settings.
 

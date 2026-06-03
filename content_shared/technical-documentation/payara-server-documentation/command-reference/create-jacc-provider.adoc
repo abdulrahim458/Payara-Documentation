@@ -1,4 +1,4 @@
-= create-jacc-provider
+= Create-Jacc-Provider
 
 Enables administrators to create a JACC provider that can be used by third-party authorization modules for applications running in Payara Server.
 

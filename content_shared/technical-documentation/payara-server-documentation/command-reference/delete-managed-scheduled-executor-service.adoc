@@ -1,4 +1,4 @@
-= delete-managed-scheduled-executor-service
+= Delete-Managed-Scheduled-Executor-Service
 
 Removes a managed scheduled executor service resource with the specified JNDI name.
 

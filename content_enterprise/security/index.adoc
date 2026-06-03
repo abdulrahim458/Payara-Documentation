@@ -40,7 +40,7 @@ In general, Payara follows the CVE Program's link:https://www.cve.org/ResourcesS
 * Payara Enterprise customers can request security fixes to be back-ported to any supported releases (if allowed by their corresponding Enterprise support lifecycle) used on their environments.
 
 [[third-party-components-vulnerabilities]]
-=== Vulnerabilities on Third-party Components
+=== Vulnerabilities on Third-Party Components
 
 As the Payara Platform depends on third-party components of other software packages like Apache Guava, Jackson, Smack, etc. Vulnerabilities on specific versions of these components may be reported as well. Payara is committed to analysing any reported vulnerabilities and upgrading them to a patched version whether applicable.
 

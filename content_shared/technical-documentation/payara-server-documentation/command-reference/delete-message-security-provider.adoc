@@ -1,4 +1,4 @@
-= delete-message-security-provider
+= Delete-Message-Security-Provider
 
 Enables administrators to delete a message security provider.
 

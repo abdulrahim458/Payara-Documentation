@@ -1,4 +1,4 @@
-= set-microprofile-healthcheck-configuration
+= Set-Microprofile-Healthcheck-Configuration
 
 Configures the settings of the MicroProfile HealthCheck service.
 

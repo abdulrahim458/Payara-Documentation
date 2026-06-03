@@ -1,4 +1,4 @@
-= list-custom-resources
+= List-Custom-Resources
 
 Gets all custom resources.
 

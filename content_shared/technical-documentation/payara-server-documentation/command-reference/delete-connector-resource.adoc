@@ -1,4 +1,4 @@
-= delete-connector-resource
+= Delete-Connector-Resource
 
 Removes the connector resource with the specified JNDI name.
 

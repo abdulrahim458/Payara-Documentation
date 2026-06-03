@@ -1,4 +1,4 @@
-= generate-self-signed-certificate
+= Generate-Self-Signed-Certificate
 
 Generates a new self-signed certificate in the specified server configuration.
 

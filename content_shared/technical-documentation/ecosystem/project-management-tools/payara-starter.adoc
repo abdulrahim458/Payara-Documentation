@@ -31,7 +31,7 @@ Payara Starter supports various Jakarta EE profiles:
 * Core Profile: `jakarta.platform:jakarta.jakartaee-core-api`
 
 [[generating-a-new-app-using-payara-tarter]]
-== Generating a New App using Payara Starter
+== Generating a New App Using Payara Starter
 
 You can generate a new application using Payara Starter in two ways:
 
@@ -91,7 +91,7 @@ Available options:
 * 17
 * 21
 
-WARNING: Keep in mind that versions older than `11` are not supported in Payara Platform {page-version}
+WARNING: Keep in mind that versions older than `11` are not supported in Payara Platform {version}
 
 | `jakartaEEVersion`
 | `10`
@@ -104,7 +104,7 @@ Valid options:
 * 9.1
 * 10
 
-WARNING: For compatibility with the Payara Platform {page-version}, versions older than `10` are not supported.
+WARNING: For compatibility with the Payara Platform {version}, versions older than `10` are not supported.
 
 | `profile`
 | `full`
@@ -120,7 +120,7 @@ Options include:
 * `micro` for Payara Micro.
 
 | `payaraVersion`
-| `{page-version}`
+| `{version}`
 | Sets the targeted Payara version. Retrieved from Maven Central.
 
 | `addConcurrentApi`
@@ -205,7 +205,7 @@ Available choices:
 |===
 
 
-=== Web application at `start.payara.fish`
+=== Web Application at `start.payara.fish`
 
 Visit https://start.payara.fish[start.payara.fish^] to use the web application for generating applications via a graphical interface.
 
@@ -301,7 +301,7 @@ The Payara Starter website includes default ER diagrams, stored in https://merma
 
 Payara Starter automates ER diagram generation by leveraging Generative AI based on user-provided descriptions. Users can create accurate and well-structured diagrams with minimal effort.
 
-==== Real-time Diagram Design via Free-text Support
+==== Real-Time Diagram Design via Free-Text Support
 
 Through *Real-time Diagram Design via Free-text Support*, users can interact with Generative AI to refine and enlarge existing diagrams based on their specific requirements. This feature allows users to quickly modify or create new diagrams using free-form text commands.
 
@@ -369,7 +369,7 @@ Once finalized, Payara Starter uses the ER diagram to automatically generate cor
 [[using-the-er-diagram-feature]]
 === Using the ER Diagram
 
-==== Open the existing or Generate a new ER Diagram:
+==== Open the Existing or Generate a New ER Diagram
 
 Open the ER Diagram panel within the Payara Starter application interface. Select from the default diagrams or start a new diagram by pressing the **Diagram Builder & Live Preview** button and entering a description.
 

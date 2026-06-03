@@ -1,4 +1,4 @@
-= uptime
+= Uptime
 
 Returns the length of time that the DAS has been running.
 

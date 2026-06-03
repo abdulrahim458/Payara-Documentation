@@ -1,4 +1,4 @@
-= set-healthcheck-configuration
+= Set-Healthcheck-Configuration
 
 Configures the Healthcheck service.
 

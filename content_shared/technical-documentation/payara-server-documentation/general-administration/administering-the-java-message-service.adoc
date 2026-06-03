@@ -414,7 +414,7 @@ Command list-jmsdest executed successfully.
 This example lists the physical destinations for the default server instance.
 
 [[to-purge-messages-from-a-physical-destination]]
-=== To Purge Messages From a Physical Destination
+=== To Purge Messages from a Physical Destination
 
 Use the `flush-jmsdest` subcommand in remote `asadmin` mode to purge the messages from a physical destination in the specified target's JMS service configuration.
 
@@ -422,7 +422,7 @@ Use the `flush-jmsdest` subcommand in remote `asadmin` mode to purge the message
 . Purge messages from the JMS physical destination by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/flush-jmsdest.adoc[`flush-jmsdest`] subcommand.
 . If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see  xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
-==== *Example 17-12 Flushing Messages From a JMS Physical Destination*
+==== *Example 17-12 Flushing Messages from a JMS Physical Destination*
 [source,shell]
 ----
 asadmin> flush-jmsdest --desttype queue PhysicalQueue
@@ -484,12 +484,12 @@ asadmin set domain1.jms-service.reconnect-interval-in-seconds=5
 ----
 
 [[using-activemq-with-payara-server]]
-== Using ActiveMQ with Payara Server
+== Using Activemq with Payara Server
 
 Payara Server comes with its own message queue broker: OpenMQ. However, ActiveMQ is also an option for a message queue broker. This section describes how to use ActiveMQ with Payara Server.
 
 [[installing-activemq]]
-=== Installing ActiveMQ
+=== Installing Activemq
 The latest version of ActiveMQ can be downloaded from here: https://activemq.apache.org/components/classic/download/[ActiveMQ Downloads^]
 
 Once downloaded, unzip the file and navigate to /bin folder and run the following command in order to start ActiveMQ:
@@ -506,7 +506,7 @@ This is going to start the ActiveMQ broker at http://127.0.0.1:8161
 After accessing the web console and logged in with the default credentials (`admin/admin`), you can create a new queue or topic by clicking on the Queues tab, inputting a name to Queue Name text box and clicking on "Create" button. For the purpose of this example we will create a queue named `TESTQ`.
 
 [[deploying-the-activemq-rar-to-payara-server]]
-=== Deploy the ActiveMQ RAR to Payara Serve
+=== Deploy the Activemq RAR to Payara Serve
 In order to use ActiveMQ with Payara Server, you need to deploy the ActiveMQ RAR to Payara Server. You can download the ActiveMQ RAR from here: https://mvnrepository.com/artifact/org.apache.activemq/activemq-rar/5.17.4[ActiveMQ RAR^]
 
 The rar needs then to be deployed to Payara Server. This can be done by using the Payara Admin Console or by using the following asadmin command:
@@ -516,7 +516,7 @@ asadmin deploy --type rar activemq-rar-5.17.4.rar
 ----
 
 [[configuring-the-activemq-connector]]
-=== Configuring the ActiveMQ Connector
+=== Configuring the Activemq Connector
 The first thing to do is to create a new JMS Resource Adapter Config. This can be done by using the Payara Admin Console or by using the following asadmin command:
 
 [source,shell]
@@ -575,7 +575,7 @@ asadmin create-admin-object --raname activemq-rar-5.17.4 --restype javax.jms.Que
 ----
 
 [[testing-the-activemq-configuration-via-mdb]]
-=== Testing the ActiveMQ Configuration via MDB
+=== Testing the Activemq Configuration via MDB
 
 Below shows the code for an MDB that listens on the queue configured in this blog within ActiveMQ. We can see that both the resource adapter, the physical name of the queue and the JNDI name are set as Activation Properties of the MDB.
 

@@ -1,4 +1,4 @@
-= restart-local-instance
+= Restart-Local-Instance
 
 Restarts a running Payara Server instance on the host where the subcommand is running.
 

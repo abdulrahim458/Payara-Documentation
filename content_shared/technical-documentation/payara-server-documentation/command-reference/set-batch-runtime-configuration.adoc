@@ -1,4 +1,4 @@
-= set-batch-runtime-configuration
+= Set-Batch-Runtime-Configuration
 
 Configures the batch runtime.
 

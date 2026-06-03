@@ -1,4 +1,4 @@
-= set-web-env-entry
+= Set-Web-Env-Entry
 
 Sets an environment entry for a deployed web application or module.
 

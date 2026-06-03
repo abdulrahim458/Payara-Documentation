@@ -1,4 +1,4 @@
-= get-metrics-configuration
+= Get-Metrics-Configuration
 
 Gets the configuration settings of the MicroProfile Metrics service.
 

@@ -1,4 +1,4 @@
-= add-library
+= Add-Library
 
 Adds one or more library JAR files to Payara Server
 

@@ -186,7 +186,7 @@ During transaction recovery, non-persistent messages might be lost. If the broke
 A message that is not saved to a persistent store is not available for transaction recovery.
 
 [[using-the-configurabletransactionsupport-interface]]
-=== Using the ConfigurableTransactionSupport Interface
+=== Using the Configurabletransactionsupport Interface
 
 The Jakarta Connectors specification allows a resource adapter to use the `transaction-support` attribute to specify the level of transaction support that the resource adapter handles.
 

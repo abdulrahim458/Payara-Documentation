@@ -1,4 +1,4 @@
-= Installing gRPC Server Support Module
+= Installing Grpc Server Support Module
 
 WARNING: The gRPC extension has not yet been updated to support Payara Platform {pageSiteEditionCapitalised} {payaraVersionMajor}
 

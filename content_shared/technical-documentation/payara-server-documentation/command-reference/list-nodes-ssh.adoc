@@ -1,4 +1,4 @@
-= list-nodes-ssh
+= List-Nodes-Ssh
 
 lists all Payara Server nodes that support communication over SSH in a domain.
 

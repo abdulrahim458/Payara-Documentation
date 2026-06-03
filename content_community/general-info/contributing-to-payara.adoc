@@ -60,7 +60,7 @@ git push origin master
 ----
 
 [[working-on-an-issue]]
-== Working on an issue
+== Working on an Issue
 
 To start working on an issue, create a new branch in your local Git repository with the following command:
 
@@ -107,7 +107,7 @@ In order to debug Payara, first build the server with your changes. Run it in _d
 From within your IDE you can then attach a debugger to the default port of *9009*.
 
 [[pushing-commits-to-your-github-remote-repository]]
-== Pushing commits to your GitHub Remote Repository
+== Pushing Commits to Your Github Remote Repository
 
 When you are finished working on your issue, add the files to your Git with a comment describing the addressed issue and the GitHub issue number if there is one:
 
@@ -145,12 +145,12 @@ git push origin <YourBranchName>:<YourBranchName>
 Once you have it within your remote GitHub repository, you are then able to request that your code be merged into Payara via a pull request on GitHub.
 
 [[feature-requests-and-issues]]
-== Feature requests and issues
+== Feature Requests and Issues
 
 A large portion of our work is prompted by the actions of the community. If you have an issue which you have found with Payara, or a feature which you would like to be implemented we welcome the raising of GitHub issues. Please fill in the template when creating a new issue, so that we can evaluate the problem as efficiently as possible.
 
 [[reporting-bugs]]
-=== Reporting bugs
+=== Reporting Bugs
 
 If you find a bug within Payara, please post it as a GitHub issue. GitHub is our main repository for community found issues with Payara and our support team frequently monitor it for new issues. As with submitting issues, a concise title which clearly explains the issue combined with a comment explaining what the found issue is and either how it arose and a stack trace of the issue.
 

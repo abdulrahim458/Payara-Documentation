@@ -1,4 +1,4 @@
-= list-phone-home
+= List-Phone-Home
 
 List the current status of the Phone Home service.
 

@@ -1,4 +1,4 @@
-= delete-jacc-provider
+= Delete-Jacc-Provider
 
 Enables administrators to delete JACC providers defined for a domain.
 

@@ -1,4 +1,4 @@
-= get-jms-notifier-configuration
+= Get-Jms-Notifier-Configuration
 
 Retrieves the settings of the JMS notifier
 

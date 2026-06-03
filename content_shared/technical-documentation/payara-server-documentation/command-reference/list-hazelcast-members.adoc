@@ -1,4 +1,4 @@
-= list-hazelcast-members
+= List-Hazelcast-Members
 
 List the Data Grid (Hazelcast) current members.
 

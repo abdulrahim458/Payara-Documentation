@@ -1,4 +1,4 @@
-= create-custom-resource
+= Create-Custom-Resource
 
 Creates a custom resource.
 

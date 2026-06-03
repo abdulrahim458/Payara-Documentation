@@ -1,4 +1,4 @@
-= get-cdieventbus-notifier-configuration
+= Get-Cdieventbus-Notifier-Configuration
 
 Retrieves the settings of the Event Bus notifier
 

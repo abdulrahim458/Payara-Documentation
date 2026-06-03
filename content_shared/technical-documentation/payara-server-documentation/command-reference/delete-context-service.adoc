@@ -1,4 +1,4 @@
-= delete-context-service
+= Delete-Context-Service
 
 Removes a context service resource with the specified JNDI name.
 

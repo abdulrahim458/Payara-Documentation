@@ -1,4 +1,4 @@
-= list-batch-jobs
+= List-Batch-Jobs
 
 Lists batch jobs details.
 

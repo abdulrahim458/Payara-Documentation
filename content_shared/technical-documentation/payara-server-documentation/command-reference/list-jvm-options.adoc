@@ -1,4 +1,4 @@
-= list-jvm-options
+= List-Jvm-Options
 
 Lists options for the Java application launcher.
 

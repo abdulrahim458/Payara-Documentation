@@ -1,4 +1,4 @@
-= debug-asadmin
+= Debug-Asadmin
 
 Variant of the `asadmin` utility for performing administrative tasks for Payara Server. This variant
 is useful for debugging local admin commands the launching of Payara Server. It suspends immediately waiting for a debug connection to port 9008.

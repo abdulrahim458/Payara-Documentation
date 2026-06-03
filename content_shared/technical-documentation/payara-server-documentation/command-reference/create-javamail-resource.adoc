@@ -1,4 +1,4 @@
-= create-javamail-resource
+= Create-Javamail-Resource
 
 Creates a JavaMail session resource.
 

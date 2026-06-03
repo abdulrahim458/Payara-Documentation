@@ -1,4 +1,4 @@
-= restart-deployment-group
+= Restart-Deployment-Group
 
 Restarts all the instances in a Payara Server deployment group.
 

@@ -1,4 +1,4 @@
-= create-jndi-resource
+= Create-Jndi-Resource
 
 Registers a JNDI resource.
 

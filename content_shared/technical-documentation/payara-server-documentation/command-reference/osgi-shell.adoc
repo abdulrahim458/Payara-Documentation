@@ -1,4 +1,4 @@
-= osgi-shell
+= Osgi-Shell
 
 Provides interactive access to the Apache Felix Gogo remote shell for the execution of OSGi shell commands.
 

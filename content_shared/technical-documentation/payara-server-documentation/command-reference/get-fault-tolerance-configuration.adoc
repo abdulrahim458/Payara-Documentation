@@ -1,4 +1,4 @@
-= get-fault-tolerance-configuration
+= Get-Fault-Tolerance-Configuration
 
 Retrieves the configuration settings of the MicroProfile Fault Tolerance service.
 

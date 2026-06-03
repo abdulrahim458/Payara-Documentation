@@ -1,4 +1,4 @@
-= show-component-status
+= Show-Component-Status
 
 Displays the status of the deployed component.
 

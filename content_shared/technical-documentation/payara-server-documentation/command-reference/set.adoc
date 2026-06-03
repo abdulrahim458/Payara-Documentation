@@ -1,4 +1,4 @@
-= set
+= Set
 
 Sets the values of configurable attributes.
 

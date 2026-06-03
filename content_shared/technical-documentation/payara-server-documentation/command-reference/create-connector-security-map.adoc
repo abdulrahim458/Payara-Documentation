@@ -1,4 +1,4 @@
-= create-connector-security-map
+= Create-Connector-Security-Map
 
 Creates a security map for the specified connector connection pool.
 

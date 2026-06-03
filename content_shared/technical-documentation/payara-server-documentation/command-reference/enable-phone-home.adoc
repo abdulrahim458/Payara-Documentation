@@ -1,4 +1,4 @@
-= enable-phone-home
+= Enable-Phone-Home
 
 Enables the phone home services.
 

@@ -150,7 +150,7 @@ public class NotificationConsumer implements MessageListener {
 ==== Asadmin Commands
 
 [[set-the-jms-notifier-configuration]]
-===== Set the JMS notifier configuration
+===== Set the JMS Notifier Configuration
 
 To set the JMS notifier configuration, the following asadmin command will reflect the configuration done in the previous section:
 
@@ -167,7 +167,7 @@ asadmin set-jms-notifier-configuration --dynamic=true --enabled=true
 ----
 
 [[get-the-jms-notifier-configuration]]
-===== Get the JMS notifier configuration
+===== Get the JMS Notifier Configuration
 
 To get the JMS notifier configuration using the Asadmin CLI, run the following command:
 
@@ -357,7 +357,7 @@ to select multiple notifiers, and then click `Add >`.
 image:jmx-monitoring-service/jmx-add-notifiers.png[alt="Add JMX Notifiers",width=600px]
 
 [[adding-notifiers-via-asadmin]]
-=== Adding Notifiers via asadmin
+=== Adding Notifiers via Asadmin
 
 For each notifier you wish to enable use the following command:
 

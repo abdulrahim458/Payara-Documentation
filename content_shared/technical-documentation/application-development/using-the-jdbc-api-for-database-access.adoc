@@ -100,7 +100,7 @@ Payara Server provides support for custom SQL Trace Listeners. A *SQL Trace List
 SQL Trace Listeners allows developers to track all calls to the database and can be used to develop custom auditing, error handling or monitoring components. SQL Trace Listeners can be enabled globally on a data source if the class that implements it is on the server's _classpath_, or can be enabled on application specific data sources by including them in the application's WAR or EAR.
 
 [[sql-trace-listener-interface]]
-=== SQL Trace listener Interface
+=== SQL Trace Listener Interface
 
 The SQL Trace Listener interface is shown below:
 
@@ -193,7 +193,7 @@ SQL traces are logged as `FINE` messages along with the module name to enable ea
 
 [source, log, subs=attributes+]
 ----
-[#|2009-11-27T15:46:52.202+0530|FINE|Payara Server {page-version}|jakarta.enterprise.resource.sqltrace.com.sun.gjc.util
+[#|2009-11-27T15:46:52.202+0530|FINE|Payara Server {version}|jakarta.enterprise.resource.sqltrace.com.sun.gjc.util
 |_ThreadID=29;_ThreadName=Thread-1;ClassName=com.sun.gjc.util.SQLTraceLogger;MethodName=sqlTrace;
 |ThreadID=77 | ThreadName=p: thread-pool-1; w: 6 | TimeStamp=1259317012202
 | ClassName=com.sun.gjc.spi.jdbc40.PreparedStatementWrapper40 | MethodName=executeUpdate
@@ -425,7 +425,7 @@ You can specify the _Wrap JDBC Objects_ option in the following ways:
 * Specify the `--wrapjdbcobjects` option in the `asadmin create-jdbc-connection-pool` command.
 
 [[obtaining-a-physical-connection-from-a-wrapped-connection]]
-=== Obtaining a Physical Connection From a Wrapped Connection
+=== Obtaining a Physical Connection from a Wrapped Connection
 
 The default `DataSource` implementation in Payara Server provides a `getConnection` method that retrieves the JDBC driver's `SQLConnection` from Payara Server's `Connection` wrapper.
 

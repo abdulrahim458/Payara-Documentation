@@ -1,4 +1,4 @@
-= list-protocol-filters
+= List-Protocol-Filters
 
 Lists the existing protocol filters.
 

@@ -22,7 +22,7 @@ To verify that the resulting file is valid you'll have to open it using either V
 *image*: vscode-extension/transform-to-jakartaee10/file-transform-open-resulting-file.png[Open transformed file]
 
 [[transform-single-file-same-location]]
-== Transform a Single File in the same Location
+== Transform a Single File in the Same Location
 
 It is possible to save the transformed file in the same location where the original resides.
 
@@ -35,7 +35,7 @@ Once the file has been transformed, it will override the current file in the IDE
 *image*: vscode-extension/transform-to-jakartaee10/file-transform-same-folder-result.png[Result of overridden original file]
 
 [[transform-all-files-folder]]
-== Transform all files in a Folder
+== Transform All Files in a Folder
 
 To transform all source code files located in a folder, select the folder, right click and select the *Transform to Jakarta EE 10* option.
 
@@ -56,7 +56,7 @@ To verify that the resulting files in the new folder are valid, open it from wit
 *image*: vscode-extension/transform-to-jakartaee10/folder-transform-open-new-folder.png[Open newly transformed folder]
 
 [[transform-folder-same-location]]
-== Transform all files in a Folder in the same Location
+== Transform All Files in a Folder in the Same Location
 
 It is possible to save all transformed files in the same location where the originals reside, effectively overriding them.
 

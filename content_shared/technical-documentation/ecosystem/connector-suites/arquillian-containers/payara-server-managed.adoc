@@ -195,7 +195,7 @@ This is how you can do it with the maven `surefire` plugin (`my.admin.password` 
 ----
 
 [[automatic-download-example]]
-=== Downloading Payara Server automatically from Maven
+=== Downloading Payara Server Automatically from Maven
 
 You can configure your Maven project to automatically download and install the Payara Server version required by the container adapter.
 

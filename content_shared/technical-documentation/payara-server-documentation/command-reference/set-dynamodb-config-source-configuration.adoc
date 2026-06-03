@@ -1,4 +1,4 @@
-= set-dynamodb-config-source-configuration
+= Set-Dynamodb-Config-Source-Configuration
 
 Sets the configuration for the DynamoDB Config Source.
 

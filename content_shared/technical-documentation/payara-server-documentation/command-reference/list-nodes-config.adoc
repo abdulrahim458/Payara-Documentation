@@ -1,4 +1,4 @@
-= list-nodes-config
+= List-Nodes-Config
 
 Lists all Payara Server nodes that do not support remote communication in a domain.
 

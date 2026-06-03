@@ -1,4 +1,4 @@
-= update-node-docker
+= Update-Node-Docker
 
 Updates the configuration data of a DOCKER node.
 
@@ -53,7 +53,7 @@ Please note, that this path should be the path to the file on the *remote* machi
 *`--dockerImage`*:
 The Docker image to use for creating the Docker container.
 +
-Defaults to `payara/server-node:{page-version}`.
+Defaults to `payara/server-node:{version}`.
 *`--dockerPort`*:
 The port where the Docker engine's REST API endpoint is exposed.
 +

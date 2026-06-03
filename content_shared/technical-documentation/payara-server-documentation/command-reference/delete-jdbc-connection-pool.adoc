@@ -1,4 +1,4 @@
-= delete-jdbc-connection-pool
+= Delete-Jdbc-Connection-Pool
 
 Removes the specified JDBC connection pool.
 

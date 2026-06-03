@@ -38,7 +38,7 @@ For example, if you want to define the property `mail.from` in a Jakarta Mail `S
 * Value: `john.doe@sun.com`
 
 [[looking-up-a-jakarta-mail-session]]
-== Looking Up a Jakarta Mail Session
+== Looking up a Jakarta Mail Session
 
 The standard Java Naming and Directory Interface (JNDI) subcontext for Jakarta Mail sessions is `java:comp/env/mail`.
 

@@ -1,4 +1,4 @@
-= get-ejb-invoker-configuration
+= Get-Ejb-Invoker-Configuration
 
 Retrieves the `ejb-invoker` application settings.
 

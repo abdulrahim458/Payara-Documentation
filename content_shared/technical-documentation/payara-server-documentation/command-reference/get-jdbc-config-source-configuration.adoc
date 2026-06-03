@@ -1,4 +1,4 @@
-= get-jdbc-config-source-configuration
+= Get-Jdbc-Config-Source-Configuration
 
 Gets the settings of the JDBC configuration source.
 

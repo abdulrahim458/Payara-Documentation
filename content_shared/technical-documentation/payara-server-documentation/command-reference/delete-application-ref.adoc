@@ -1,4 +1,4 @@
-= delete-application-ref
+= Delete-Application-Ref
 
 Removes a reference to an application.
 

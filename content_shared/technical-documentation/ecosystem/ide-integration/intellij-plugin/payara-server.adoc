@@ -1,4 +1,4 @@
-= Payara Server Tools in IntelliJ IDEA
+= Payara Server Tools in Intellij IDEA
 :ordinal: 1
 
 IMPORTANT: This is only available in the `Payara IntelliJ Ultimate Tools` plugin which is exclusive to IntelliJ IDEA Ultimate
@@ -10,7 +10,7 @@ Using the Payara IntelliJ Ultimate Tools plugin, you can integrate Payara Server
 - Deploy an application from within the IDE
 
 [[managing-payara-server-from-intellij]]
-== Managing Payara Server from the IntelliJ IDE
+== Managing Payara Server from the Intellij IDE
 To manage Payara Server from the IntelliJ idea, first create the new *Payara Server configuration* by selecting the *Edit Configuration* option:
 
 *image*: intellij-plugin/payara-server/create-configuration.png[Create Configuration]
@@ -40,7 +40,7 @@ TIP: You can filter logs by level with the dropdown menu on the right of the `Pa
 *image*: intellij-plugin/payara-server/server-log.png[Payara Server log]
 
 [[deploying-application-payara-server-from-intellij]]
-== Deploying an Application to Payara Server from IntelliJ
+== Deploying an Application to Payara Server from Intellij
 To deploy an application to Payara Server you must further edit the run configuration you are using to run Payara Server from IntelliJ.
 
 . Select the Run Configurations drop down menu
@@ -63,7 +63,7 @@ The Payara Server tools for IntelliJ IDEA include Docker integration, making it 
 +
 [source, shell]
 ----
-docker run -p 8080:8080 -p 4848:4848 -p 9009:9009 -v HOST_PATH:CONTAINER_PATH  payara/server-full:{page-version}
+docker run -p 8080:8080 -p 4848:4848 -p 9009:9009 -v HOST_PATH:CONTAINER_PATH  payara/server-full:{version}
 ----
 +
 Replace `HOST_PATH` with the actual host path and `CONTAINER_PATH` with the desired container path that must be the exploded application path or parent path of application.

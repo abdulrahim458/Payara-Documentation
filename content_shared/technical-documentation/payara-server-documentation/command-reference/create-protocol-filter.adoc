@@ -1,4 +1,4 @@
-= create-protocol-filter
+= Create-Protocol-Filter
 
 Adds a new protocol filter.
 

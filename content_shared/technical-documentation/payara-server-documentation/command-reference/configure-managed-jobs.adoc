@@ -1,4 +1,4 @@
-= configure-managed-jobs
+= Configure-Managed-Jobs
 
 Configures how long information about subcommands that were started using `asadmin --detach` or that contain progress information is kept.
 

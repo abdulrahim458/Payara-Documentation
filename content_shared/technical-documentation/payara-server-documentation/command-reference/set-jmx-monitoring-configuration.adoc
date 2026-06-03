@@ -1,4 +1,4 @@
-= set-jmx-monitoring-configuration
+= Set-Jmx-Monitoring-Configuration
 
 Configures the JMX monitoring service subsystem.
 

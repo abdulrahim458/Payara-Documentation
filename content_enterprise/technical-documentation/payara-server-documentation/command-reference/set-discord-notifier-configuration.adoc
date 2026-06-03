@@ -1,4 +1,4 @@
-= set-discord-notifier-configuration
+= Set-Discord-Notifier-Configuration
 
 Configures the settings of the Discord notifier.
 

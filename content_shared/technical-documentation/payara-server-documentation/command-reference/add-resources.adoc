@@ -1,4 +1,4 @@
-= add-resources
+= Add-Resources
 
 Creates the resources specified in an XML file.
 

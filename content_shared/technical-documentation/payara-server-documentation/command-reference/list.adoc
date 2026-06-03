@@ -1,4 +1,4 @@
-= list
+= List
 
 Lists configurable or monitorable elements.
 

@@ -1,4 +1,4 @@
-= list-managed-thread-factories
+= List-Managed-Thread-Factories
 
 Lists managed thread factory resources.
 

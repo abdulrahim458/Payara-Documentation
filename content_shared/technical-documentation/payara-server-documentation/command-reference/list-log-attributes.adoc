@@ -1,4 +1,4 @@
-= list-log-attributes
+= List-Log-Attributes
 
 Lists all logging attributes defined for a specified target in a domain.
 

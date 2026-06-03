@@ -1,4 +1,4 @@
-= setup-ssh
+= Setup-Ssh
 
 Sets up an SSH key on specified hosts.
 

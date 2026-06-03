@@ -1,4 +1,4 @@
-= OpenID Connect Support
+= Openid Connect Support
 
 The Payara API provides a `@OpenIdAuthenticationDefinition` annotation that creates an authorization mechanism for OpenID Connect support. This works in the same way as other authorization mechanisms in the Java EE Security API.
 
@@ -287,7 +287,7 @@ IMPORTANT: By default, the EL expressions are evaluated only once after the appl
 If you need to dynamically modify the configuration during the lifetime of the application, follow the next section about multi-tenancy support.
 
 [[multitenancy]]
-== Multi-tenancy Support (Session-scoped Configuration)
+== Multi-Tenancy Support (Session-Scoped Configuration)
 
 By default, the same configuration of the OpenID connector is applied for the whole application, for all authentication attempts. This is for performance reasons. The OpenID connector also supports re-evaluating the configuration for each user session, before each authentication attempt.
 
@@ -300,7 +300,7 @@ With this enabled, it's possible to use EL expressions to dynamically adjust the
 IMPORTANT: It's not possible to use a different configuration for just a subset of secured resources. Once a user is authenticated, the authentication information is saved in the HTTP session. All secured resources will be accessed using the same user, having the same roles, until the user logs out.
 
 [[example-multitenant]]
-=== Example of Multi-tenant Authentication
+=== Example of Multi-Tenant Authentication
 
 This example should showcase the following steps:
 
@@ -373,7 +373,7 @@ public class SecurityBean {
 ----
 
 [[logout]]
-=== Logout functionality
+=== Logout Functionality
 
 With the `logout` parameter of the `OpenIdAuthenticationDefinition` you can define the behavior when the user logs out of the application and defines how the RP session is managed.
 
@@ -416,7 +416,7 @@ If `fish.payara.security.annotations.LogoutDefinition#notifyProvider` is set to 
 It will also ask the user whether they want to log out from the OP as well. After successful logout, the End-User's User Agent redirects back to the RP's `_post_redirect_uri_` configured via the `fish.payara.security.annotations.LogoutDefinition#redirectURI` property.
 
 [[proxy-support]]
-=== Proxy Definition 
+=== Proxy Definition
 
 Using the `proxyDefinition` parameter of the `@OpenIdAuthenticationDefinition` annotation you can specify details regarding proxy mapping within the OpenID Connect client configuration. It contains attributes to specify the `hostName` and `port` of the proxied server. This addition facilitates the configuration of proxy mapping for requests traversing through reverse web proxies.
 
@@ -634,7 +634,7 @@ In this case, the access token presented to the resource service is an JWT token
 Obtaining the token is specific to the OAuth provider and the application. The usual approach is using link:https://datatracker.ietf.org/doc/html/rfc6749#section-4.4[Client Credentials Grant^], where an application posts its clientId and secret to identity provider and receives access and refresh tokens in return.
 
 [[passing-token]]
-=== Passing Token To The Resource Service
+=== Passing Token to the Resource Service
 
 The obtained access token is passed with every request to the resource service by adding it into the `Authorization` HTTP header:
 

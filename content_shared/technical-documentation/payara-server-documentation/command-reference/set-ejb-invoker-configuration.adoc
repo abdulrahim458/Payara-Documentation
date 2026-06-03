@@ -1,4 +1,4 @@
-= set-ejb-invoker-configuration
+= Set-Ejb-Invoker-Configuration
 
 Enables or disables the endpoint that allows HTTP(S) transport based communication for remote EJBs.
 

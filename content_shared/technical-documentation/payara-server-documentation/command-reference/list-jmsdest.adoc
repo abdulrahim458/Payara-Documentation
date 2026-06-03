@@ -1,4 +1,4 @@
-= list-jmsdest
+= List-Jmsdest
 
 Lists the existing JMS physical destinations.
 

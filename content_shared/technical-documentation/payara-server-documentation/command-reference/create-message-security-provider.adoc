@@ -1,4 +1,4 @@
-= create-message-security-provider
+= Create-Message-Security-Provider
 
 Enables administrators to create a message security provider, which specifies how SOAP messages will be secured.
 

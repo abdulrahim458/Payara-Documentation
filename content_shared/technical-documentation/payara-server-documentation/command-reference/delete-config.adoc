@@ -1,4 +1,4 @@
-= delete-config
+= Delete-Config
 
 Deletes an existing named configuration.
 

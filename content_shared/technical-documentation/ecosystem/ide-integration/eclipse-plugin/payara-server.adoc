@@ -1,4 +1,4 @@
-= Payara Server tools in Eclipse IDE
+= Payara Server Tools in Eclipse IDE
 :ordinal: 1
 
 Using the Payara Tools Eclipse plugin, you can integrate Payara Server within the Eclipse IDE and perform the following tasks:
@@ -88,7 +88,7 @@ This mapping should align with the exploded application path or parent path of e
 +
 [source, shell]
 ----
-docker run -p 8080:8080 -p 4848:4848 -p 9009:9009 -v HOST_PATH:CONTAINER_PATH  payara/server-full:{page-version}
+docker run -p 8080:8080 -p 4848:4848 -p 9009:9009 -v HOST_PATH:CONTAINER_PATH  payara/server-full:{version}
 ----
 +
 Replace `HOST_PATH` with the actual host path and `CONTAINER_PATH` with the desired container path.

@@ -1,4 +1,4 @@
-= delete-jms-host
+= Delete-Jms-Host
 
 Removes a JMS host.
 

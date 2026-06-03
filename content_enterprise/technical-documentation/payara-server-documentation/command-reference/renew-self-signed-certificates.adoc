@@ -1,4 +1,4 @@
-= renew-self-signed-certificates
+= Renew-Self-Signed-Certificates
 
 Renews all self-signed certificates in the specified server's keystore.
 

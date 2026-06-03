@@ -1,4 +1,4 @@
-= get
+= Get
 
 Gets the values of configurable or monitorable attributes.
 

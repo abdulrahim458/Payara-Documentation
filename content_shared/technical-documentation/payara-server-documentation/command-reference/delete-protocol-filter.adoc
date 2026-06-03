@@ -1,4 +1,4 @@
-= delete-protocol-filter
+= Delete-Protocol-Filter
 
 Removes a protocol filter.
 

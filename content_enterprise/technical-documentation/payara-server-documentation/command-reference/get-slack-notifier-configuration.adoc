@@ -1,4 +1,4 @@
-= get-slack-notifier-configuration
+= Get-Slack-Notifier-Configuration
 
 Retrieves the settings of the Slack notifier.
 

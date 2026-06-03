@@ -62,7 +62,7 @@ At a high level, the steps to configure the email notifier are:
 . Create the notifier using the `asadmin` command or through the Admin Console
 
 [[email-notifier-admin-console]]
-===== Using the admin console
+===== Using the Admin Console
 
 You will need a `JavaMail` session to send the notifications; instructions on setting up a `JavaMail` session can be found xref:technical-documentation/payara-server-documentation/general-administration/administering-the-jakarta-mail-service.adoc[in this section].
 
@@ -318,7 +318,7 @@ mv newrelic as-install/domains/domain1
 
     # Set the name of your application as you'd like it to show up in New Relic.
     # ...
-    app_name: Payara Server {page-version}
+    app_name: Payara Server {version}
 
     # ...
 ----
@@ -341,11 +341,11 @@ If the installation was successful, the output of the agent's installer will sho
 ***** ( ( o))  New Relic Java Agent Installer
 ***** Installing version 3.39.1 ...
 
-* Backed up start script to /opt/{page-version}/glassfish/domains/domain1/config/domain.xml.20170613_180108
-* Added agent switch to start script /opt/{page-version}/glassfish/domains/domain1/config/domain.xml
+* Backed up start script to /opt/{version}/glassfish/domains/domain1/config/domain.xml.20170613_180108
+* Added agent switch to start script /opt/{version}/glassfish/domains/domain1/config/domain.xml
 
 * No need to create New Relic configuration file because:
- A config file already exists: /opt/{page-version}/glassfish/domains/domain1/newrelic/newrelic.yml
+ A config file already exists: /opt/{version}/glassfish/domains/domain1/newrelic/newrelic.yml
 
 ***** Install successful
 
@@ -380,8 +380,8 @@ Also, make sure that the directory where the _newrelic.jar_ resides also contain
 +
 [source, log, subs=attributes+]
 ----
-INFO: New Relic Agent: Loading configuration file "/opt/{page-version}/glassfish/domains/domain1/newrelic/newrelic.yml"
-INFO: New Relic Agent: Writing to log file: /opt/{page-version}/glassfish/domains/domain1/newrelic/logs/newrelic_agent.log
+INFO: New Relic Agent: Loading configuration file "/opt/{version}/glassfish/domains/domain1/newrelic/newrelic.yml"
+INFO: New Relic Agent: Writing to log file: /opt/{version}/glassfish/domains/domain1/newrelic/logs/newrelic_agent.log
 ----
 
 . After some minutes with the server working, you can log in back to the New Relic portal and on the *APM* dashboard you can see a new entry for recently configured server:
@@ -641,7 +641,7 @@ Once you have completed these requirements, you can configure an link:https://ap
 An _Incoming Webhook_ is the simplest integration mechanism that Slack provides, in that they make use of normal HTTP requests with a _JSON_ payload that includes the message text and additional options to format incoming messages to the channel.
 
 [[configure-incoming-webhook]]
-===== Configure Incoming WebHook
+===== Configure Incoming Webhook
 
 . First, access the developer portal's application directory located at https://payara.slack.com/apps.
 +

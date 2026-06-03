@@ -1,4 +1,4 @@
-= set-aws-config-source-configuration
+= Set-Aws-Config-Source-Configuration
 
 Sets the configuration for the AWS Secrets configuration source.
 

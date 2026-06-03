@@ -1,4 +1,4 @@
-= Planning your Deployment
+= Planning Your Deployment
 :ordinal: 2
 
 Before deploying Payara Server, first determine the performance and availability goals, and then make decisions about the hardware, network, and storage requirements accordingly.
@@ -96,7 +96,7 @@ Therefore, the response time is two seconds.
 After the system's response time has been calculated, particularly at peak load, compare it to the acceptable response time for the application. Response time, along with throughput, is one of the main factors critical to Payara Server performance.
 
 [[requests-per-minute]]
-==== *Requests Per Minute*
+==== *Requests per Minute*
 
 If you know the number of concurrent users at any given time, the response time of their requests, and the average user think time, then you can calculate the number of requests per minute. Typically, start by estimating the number of concurrent users that are on the system.
 
@@ -340,7 +340,7 @@ The JMS Hosts node under the Java Message Service node contains a list of JMS ho
 In `REMOTE` mode, configure the JMS Hosts list to contain all the Message Queue brokers in the cluster. For example, to set up a cluster containing three Message Queue brokers, add a JMS host within the Java Message Service for each one. Message Queue clients use the configuration information in the Jakarta Messaging system to communicate with the Message Queue broker.
 
 [[managing-jms-with-asadmin]]
-==== *Managing JMS with asadmin*
+==== *Managing JMS with Asadmin*
 
 In addition to the Administration Console, you can use the `asadmin` command-line utility to manage the Java Message Service and JMS hosts. Use the following `asadmin` commands:
 

@@ -1,4 +1,4 @@
-= delete-connector-work-security-map
+= Delete-Connector-Work-Security-Map
 
 Deletes a work security map for the specified resource adapter.
 

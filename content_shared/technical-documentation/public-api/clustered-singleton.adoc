@@ -30,7 +30,7 @@ Since there are no default locks for CDI, `@Clustered` CDI `@ApplicationScoped` 
 It is highly recommended to enable distributed locks for CDI Clustered beans: `@Clustered(lock = DistributedLockType.LOCK)` so there is no chance of race condition / data corruption for CDI Clustered beans.
 
 [[requirementss]]
-== Requirements and assumption
+== Requirements and Assumption
 
 . Hazelcast is required to be enabled (default)
 . `@Clustered` only works with `@ApplicationScoped` or `@Singleton` annotation, and in no other circumstance

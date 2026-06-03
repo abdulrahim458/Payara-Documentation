@@ -1,4 +1,4 @@
-= set-gcp-config-source-configuration
+= Set-Gcp-Config-Source-Configuration
 
 Sets the configuration for the GCP secrets configuration source.
 

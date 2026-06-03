@@ -1,4 +1,4 @@
-= list-admin-objects
+= List-Admin-Objects
 
 Gets all the administered objects.
 

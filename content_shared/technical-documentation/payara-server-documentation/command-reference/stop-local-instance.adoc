@@ -1,4 +1,4 @@
-= stop-local-instance
+= Stop-Local-Instance
 
 Stops a Payara Server instance on the machine where the subcommand is run.
 

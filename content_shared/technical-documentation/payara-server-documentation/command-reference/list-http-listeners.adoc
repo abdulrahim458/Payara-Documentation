@@ -1,4 +1,4 @@
-= list-http-listeners
+= List-Http-Listeners
 
 Lists the existing network listeners.
 

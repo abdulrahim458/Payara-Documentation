@@ -34,14 +34,14 @@ The Request Tracing service has the concept of sample rates, affording you extra
 An option to perform this sampling before or after the threshold checks is offered, allowing you to either determine if a trace should be sampled at its inception, or only after determining that a trace has breached your configured thresholds respectively.
 
 [[opentelemetry-support]]
-== OpenTelemetry Support
+== Opentelemetry Support
 
 As Payara Platform offers support for MicroProfile Telemetry, it is possible to manually instrument your application code for creating spans.
 
 For the full details, see the xref:technical-documentation/microprofile/opentelemetry-and-opentracing.adoc#opentelemetry-and-opentracing[OpenTelemetry support] in the Payara Platform Application Development section.
 
 [[opentracing-support]]
-== OpenTracing Support
+== Opentracing Support
 
 In-line with Payara Platform's support for xref:technical-documentation/microprofile/opentracing.adoc[MicroProfile OpenTracing], there's added support for http://opentracing.io/[OpenTracing.io^] code instrumentation.
 

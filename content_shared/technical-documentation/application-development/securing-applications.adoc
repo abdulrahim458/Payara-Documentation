@@ -825,7 +825,7 @@ Follow this procedure.
 . Compile and deploy the corresponding application.
 
 [[programmatic-login-using-the-programmaticlogin-class]]
-== Programmatic Login Using the ProgrammaticLogin Class
+== Programmatic Login Using the Programmaticlogin Class
 
 Programmatic login allows a deployed Jakarta EE application or module to invoke a *login* method. If the login is successful, a `SecurityContext` is established as if the client had authenticated using any of the conventional Jakarta EE mechanisms.
 
@@ -947,7 +947,7 @@ All `logout` method variants return `true` if the logout process succeeded, `fal
 If the `errors` parameter is set to `true`, any exceptions encountered during the logout process are propagated to the caller. If set to `false`, exceptions will be thrown.
 
 [[user-authentication-for-single-sign-on]]
-== User Authentication for Single Sign-on
+== User Authentication for Single Sign-On
 
 The single sign-on feature of the Payara Server allows multiple web applications deployed to the same virtual server to share the user authentication state.
 
@@ -1017,7 +1017,7 @@ Jakarta Security  defines several annotations, with names that end with the `Def
 TIP: Jakarta Security also supports the use of Jakarta Expression Language in these annotations to allow dynamic configuration.
 
 [[built-in-authentication-mechanisms-and-identity-stores]]
-==== Built-in Authentication Mechanisms and Identity Stores
+==== Built-In Authentication Mechanisms and Identity Stores
 
 An application packages its own `HttpAuthenticationMechanism` by including in a bean archive that is a part of the application. Alternatively, it may select and configure one of the built-in mechanisms using the corresponding annotation, as listed below:
 
@@ -1146,7 +1146,7 @@ public class MyAuthenticationMechanism implements HttpAuthenticationMechanism {
 ----
 
 [[multiple-httpauthenticationmechanism-ear]]
-=== Multiple HttpAuthenticationMechanisms in EAR Application
+=== Multiple Httpauthenticationmechanisms in EAR Application
 
 Within the Security API specification, an `HttpAuthenticationMechanism` can be defined to retrieve the user credentials from the HTTP Request. These credentials are then used by any configured identity stores to validate the user.
 
@@ -1511,7 +1511,7 @@ Not all DN parts are supported. The following is the list of all parts that are 
 |===
 
 [[advanced-groups-conf-using-admin-console]]
-=== Configuration using the Admin Console
+=== Configuration Using the Admin Console
 
 This feature can be configured on the default certificate realm with the following steps:
 
@@ -1521,7 +1521,7 @@ This feature can be configured on the default certificate realm with the followi
 . Set the property _Name_ to be `dn-parts-used-for-groups` and set the _Value_ to a comma separated list of OID names.
 
 [[advanced-groups-conf-using-asadmin-cli]]
-=== Configuration using the Asadmin CLI
+=== Configuration Using the Asadmin CLI
 
 You can also use the following asadmin command to set the value of the property in the security realm:
 
@@ -1605,7 +1605,7 @@ To configure this behaviour, the `common-name-as-principal-name` property can be
 NOTE: The `common-name-as-principal-name` property is set to false by default if no configuration is provided.
 
 [[advanced-principal-conf-using-admin-console]]
-=== Configuration using the Admin Console
+=== Configuration Using the Admin Console
 
 This feature can be configured on the default certificate realm as follows on the Admin Console:
 
@@ -1617,7 +1617,7 @@ This feature can be configured on the default certificate realm as follows on th
 image:security/common-name-as-principal-name.png[alt="Common Name As Principal Name Setting",width=600px]
 
 [[advanced-principal-conf-using-asadmin-cli]]
-=== Configuration using the Asadmin CLI
+=== Configuration Using the Asadmin CLI
 
 You can also use the following asadmin command to set the value of the property:
 
@@ -1684,7 +1684,7 @@ To have the `ClientCertificateValidator` interface available in your application
 <dependency>
     <groupId>fish.payara.api</groupId>
     <artifactId>payara-api</artifactId>
-    <version>{page-version}</version>
+    <version>{version}</version>
     <scope>provided</scope>
 </dependency>
 ----
@@ -1723,7 +1723,7 @@ NOTE: You can @Inject CDI and EJB beans in your validator implementation, howeve
 By default, certificate expiration validation is enabled. This validation checks if the certificates in the trust store haven't expired yet. If the client certificate has expired or is not valid yet, a warning message will be printed in the server logs.
 
 [[certificate-expiration-val-config-the-asadmin-cli]]
-==== Configuration using the Asadmin CLI
+==== Configuration Using the Asadmin CLI
 
 You can use the following asadmin command to set the value of the property through:
 
@@ -1733,7 +1733,7 @@ asadmin> set configs.config.${YOUR_INSTANCE_CONFIG}.security-service.auth-realm.
 ----
 
 [[certificate-expiration-val-config-using-the-admin-console]]
-==== Configuration using the Admin Console
+==== Configuration Using the Admin Console
 
 This feature can be configured on the default certificate realm as follows on the Admin Console:
 

@@ -1,6 +1,6 @@
-= Eclipse MicroProfile OpenTracing
+= Eclipse Microprofile Opentracing
 
-Payara Platform {page-version} provides MicroProfile OpenTracing {mpOpenTracingVersion}
+Payara Platform {version} provides MicroProfile OpenTracing {mpOpenTracingVersion}
 
 [[background]]
 == Background
@@ -28,7 +28,7 @@ The Payara Platform implementation of the `io.opentracing.Tracer` interface supp
 The Payara Platform's MicroProfile implementation supports tracing of requests that are handled by SOAP Web Services implemented via the JAX-WS API. Since JAX-WS is only supported on Payara Server Full Profile, this support is not covered on Payara Micro.
 
 [[opentracing-configuration]]
-== OpenTracing Configuration
+== Opentracing Configuration
 
 [[span-convention]]
 === Span Naming Convention
@@ -43,7 +43,7 @@ payara.telemetry.span-convention=opentracing-class-method
 All valid values for the property are documented in xref:technical-documentation/microprofile/opentelemetry-and-opentracing.adoc#span-convention-settings[OpenTelemetry Span Convention Settings]
 
 [[alternative-implementation]]
-== Using Alternate OpenTracing Implementations
+== Using Alternate Opentracing Implementations
 
 Currently, it is not possible to use other OpenTracing implementations in the Payara Platform.
 

@@ -1,4 +1,4 @@
-= set-hashicorp-config-source-configuration
+= Set-Hashicorp-Config-Source-Configuration
 
 Sets the configuration for the HashiCorp secrets Config Source.
 

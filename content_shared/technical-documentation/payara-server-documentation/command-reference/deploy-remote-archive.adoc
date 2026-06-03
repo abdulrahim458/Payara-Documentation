@@ -1,4 +1,4 @@
-= deploy-remote-archive
+= Deploy-Remote-Archive
 
 Deploys the specified component from a remote location.
 

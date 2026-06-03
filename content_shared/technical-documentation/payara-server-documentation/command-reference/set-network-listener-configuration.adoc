@@ -1,4 +1,4 @@
-= set-network-listener-configuration
+= Set-Network-Listener-Configuration
 
 Helps to modify an existing network listener.
 

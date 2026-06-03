@@ -1,4 +1,4 @@
-= get-teams-notifier-configuration
+= Get-Teams-Notifier-Configuration
 
 Retrieves the settings of the MS Teams notifier.
 

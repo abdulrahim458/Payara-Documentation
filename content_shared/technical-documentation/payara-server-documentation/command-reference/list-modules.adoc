@@ -1,4 +1,4 @@
-= list-modules
+= List-Modules
 
 Lists Payara Server modules.
 

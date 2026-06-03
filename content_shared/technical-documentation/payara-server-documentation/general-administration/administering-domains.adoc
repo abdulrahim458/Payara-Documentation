@@ -72,7 +72,7 @@ Administration Console session enables you to configure and manage only one doma
 Administration Console session to manage each domain.
 
 [[creating-logging-in-to-and-deleting-a-domain]]
-== Creating, Logging In To, and Deleting a Domain
+== Creating, Logging in to, and Deleting a Domain
 
 [[to-create-a-domain]]
 === To Create a Domain
@@ -132,7 +132,7 @@ domain-root-dir`/mydomain`
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-domain` at the command line.
 
 [[to-create-a-domain-from-a-custom-template]]
-=== To Create a Domain From a Custom Template
+=== To Create a Domain from a Custom Template
 
 A custom template enables you to customize the configuration of any domain that you create from the template.
 
@@ -205,7 +205,7 @@ Command list-domains executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-domain` at the command line.
 
 [[to-log-in-to-a-domain]]
-=== To Log In to a Domain
+=== To Log in to a Domain
 
 All remote subcommands require that credentials be specified in terms of an administration user name and its password. By default, the domain is
 created with an identity that allows an `asadmin` user to perform administrative operations when no identity is explicitly or implicitly specified.
@@ -244,7 +244,7 @@ asadmin list-domains
 . Log in to the domain by using the xref:technical-documentation/payara-server-documentation/general-administration/subcommands-for-the-asadmin-cli.adoc#domain-subcommands[`login`] command.
 
 [[example-to-log-in-to-a-domain]]
-==== Example 3-3 Logging In To a Domain on a Remote Machine
+==== Example 3-3 Logging in to a Domain on a Remote Machine
 
 This example logs into a domain located on another machine. Options are specified before the `login` subcommand.
 
@@ -260,7 +260,7 @@ file will be used by asadmin commands to manage associated domain.
 ----
 
 [[example-to-log-in-to-a-domain-default-port]]
-==== Example 3-4 Logging In to a Domain on the Default Port of Localhost
+==== Example 3-4 Logging in to a Domain on the Default Port of Localhost
 
 This example logs into a domain on `myhost` on the default port. Options are specified before the login subcommand.
 
@@ -622,7 +622,7 @@ For information about administering the service, see the following Oracle Solari
 * http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5smf-security-5[`smf_security`^]
 
 [[to-prevent-service-shutdown-when-a-user-logs-out-on-windows]]
-=== To Prevent Service Shutdown When a User Logs Out on Windows
+=== To Prevent Service Shutdown When a User Logs out on Windows
 
 By default, the Java Virtual Machine (VM) receives signals from Windows that indicate that Windows is shutting down, or that a user is logging
 out of Windows, which causes the system to shut itself down cleanly. This behavior causes the Payara Server service to shut down. To
@@ -654,10 +654,10 @@ To set this option, edit the `asadmin.bat` file to add the `-Xrs` option to the 
 . If the Payara Server service is running, restart the service for your changes to take effect.
 
 [[backing-up-and-restoring-a-domain]]
-=== Backing Up and Restoring a Domain
+=== Backing up and Restoring a Domain
 
 [[to-back-up-a-domain]]
-=== To Back Up a Domain
+=== To Back up a Domain
 
 Use the `backup-domain` subcommand in local mode to make a backup of a specified domain.
 
@@ -676,7 +676,7 @@ The `backup-domain` subcommand operates only when the domain is stopped.
 Start or resume the domain.
 
 [[example-to-back-up-a-domain]]
-==== Example 3-14 Backing Up the Default Domain
+==== Example 3-14 Backing up the Default Domain
 
 This example makes a backup of the default domain, `domain1`, storing the backup file in `/net/backups.example.com/glassfish`:
 

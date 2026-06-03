@@ -1,4 +1,4 @@
-= flush-jmsdest
+= Flush-Jmsdest
 
 Purges messages in a JMS destination.
 

@@ -1,4 +1,4 @@
-= create-service
+= Create-Service
 
 configures the starting of a DAS or a Payara Server instance on an unattended boot
 

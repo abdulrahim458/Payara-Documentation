@@ -1,4 +1,4 @@
-= asadmin
+= Asadmin
 
 Utility for performing administrative tasks for Payara Server.
 
@@ -36,7 +36,7 @@ The subcommand identifies the operation or task that you are performing. Subcomm
 * A remote subcommand is always run by connecting to a DAS and running the subcommand there. A running DAS is required.
 
 [[asadmin-utility-options-and-subcommand-options]]
-== asadmin Utility Options and Subcommand Options
+== Asadmin Utility Options and Subcommand Options
 
 Options control the behavior of the `asadmin` utility and its subcommands. Options are also case-sensitive.
 
@@ -60,11 +60,11 @@ For example, the long form and the short form of the option for specifying terse
 
 Most options require argument values, except Boolean options, which toggle to enable or disable a feature.
 
-=== Operands of asadmin Subcommands
+=== Operands of Asadmin Subcommands
 
 Operands specify the items on which the subcommand is to act. Operands must follow the argument values of subcommand options, and are set off by a space, a tab, or double dashes (`--`). The `asadmin` utility treats anything that follows the subcommand options and their values as an operand.
 
-==== Escape Characters in Options for the asadmin Utility
+==== Escape Characters in Options for the Asadmin Utility
 
 Escape characters are required in options of the `asadmin` utility for the following types of characters:
 
@@ -170,11 +170,11 @@ The requirements for using the `--secure` option are as follows:
 +
 To set this attribute, use the `set` subcommand.
 
-=== Server Restart After Creation or Deletion
+=== Server Restart after Creation or Deletion
 
 When you use the `asadmin` subcommands to create or delete a configuration item, you must restart the DAS for the change to take effect. To restart the DAS, use the xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc#restart-domain[`restart-domain`] subcommand.
 
-=== Help Information for Subcommands and the asadmin Utility
+=== Help Information for Subcommands and the Asadmin Utility
 
 To obtain help information for an `asadmin` utility subcommand, specify the subcommand of interest as the operand of the `help` subcommand. For example, to obtain help information for the xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc#start-domain[`start-domain`] subcommand, type:
 

@@ -166,7 +166,7 @@ asadmin> start-cluster mycluster
 You can also view the full syntax and options of a subcommand by typing `asadmin help` subcommand at the command line.
 
 [[to-change-gms-settings-after-cluster-creation]]
-=== To Change GMS Settings After Cluster Creation
+=== To Change GMS Settings after Cluster Creation
 
 To avoid the need to restart the DAS and the cluster, configure GMS configuration settings before cluster creation as explained in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#to-preconfigure-nondefault-gms-configuration-settings[To Preconfigure Nondefault GMS Configuration Settings].
 
@@ -238,7 +238,7 @@ Command list-instances executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-instances` at the command line.
 
 [[using-the-multi-homing-feature-with-gms]]
-=== Using the Multi-Homing Feature With GMS
+=== Using the Multi-Homing Feature with GMS
 
 Multi-homing enables Payara Server clusters to be used in an environment that uses multiple Network Interface Cards (NICs). A multi-homed host has multiple network connections, of which the connections may or may not be the on same network.
 Multi-homing provides the following benefits:

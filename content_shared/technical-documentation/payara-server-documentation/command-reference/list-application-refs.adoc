@@ -1,4 +1,4 @@
-= list-application-refs
+= List-Application-Refs
 
 Lists the existing application references.
 

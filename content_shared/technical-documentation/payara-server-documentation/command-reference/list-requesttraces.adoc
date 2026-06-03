@@ -1,4 +1,4 @@
-= list-requesttraces
+= List-Requesttraces
 
 Retrieves a list of request tracing service traces.
 

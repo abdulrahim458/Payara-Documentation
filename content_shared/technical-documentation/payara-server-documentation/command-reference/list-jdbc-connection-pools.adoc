@@ -1,4 +1,4 @@
-= list-jdbc-connection-pools
+= List-Jdbc-Connection-Pools
 
 Lists all JDBC connection pools.
 

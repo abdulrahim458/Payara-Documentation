@@ -858,7 +858,7 @@ If the instance has become unresponsive and fails to stop, run the subcommand ag
 When this option is `true`, the subcommand uses functionality of the operating system to kill the instance process before restarting the instance.
 
 [[administering-docker-instances]]
-== Administering Docker instances
+== Administering Docker Instances
 
 A Docker instance is the term used to refer to an instance created on a Docker node.  These instances exist within their own Docker containers, with the lifecycle of Docker containers being tied to the instance it was created for.
 
@@ -951,7 +951,7 @@ Here is an example of how to create a Docker instance using this method:
 
 [source, shell, subs=attributes+]
 ----
-docker container create --network host --mount type=bind,source="/app/passwordfile-docker.txt",target="/pathInDocker/passwordfile.txt",readonly -e PAYARA_DAS_HOST=payaraDas -e PAYARA_DAS_PORT=4848 -e PAYARA_PASSWORD_FILE=/pathInDocker/passwordfile.txt payara/server-node:{page-version}
+docker container create --network host --mount type=bind,source="/app/passwordfile-docker.txt",target="/pathInDocker/passwordfile.txt",readonly -e PAYARA_DAS_HOST=payaraDas -e PAYARA_DAS_PORT=4848 -e PAYARA_PASSWORD_FILE=/pathInDocker/passwordfile.txt payara/server-node:{version}
 994e6d5db276304843481601932857fa224dfd9f9cda8578f3b09f8f11bf6004
 
 docker start 994e6d5db276
@@ -1060,7 +1060,7 @@ separated using a comma `,`
 [[reserved-environment-properties]]
 ==== Reserved Environment Properties
 
-The following Docker Environment properties are used by the default Docker image, `payara/server-node:{page-version}`, which you may wish to override to match your configuration (particularly if creating containers directly from Docker):
+The following Docker Environment properties are used by the default Docker image, `payara/server-node:{version}`, which you may wish to override to match your configuration (particularly if creating containers directly from Docker):
 
 |===
 |Environment Property| Use| Default Value
@@ -1099,10 +1099,10 @@ Once the instance joins the Deployment Group, all the application targeted at th
 IMPORTANT: The DAS expects to be able to reach each instance using the port listed in its configuration. Don't forget to ensure that the DAS and containers reside on the same network.
 
 [[other-examples-for-docker-instances]]
-==== Other examples for Docker Instances
+==== Other Examples for Docker Instances
 
 [[creating-docker-containter-using-rest-api]]
-===== Creating a container using the Docker REST API
+===== Creating a Container Using the Docker REST API
 
 NOTE: You can alternatively create a JSON file and then use curl syntax for sending files (i.e. `@create.json`).
 
@@ -1151,7 +1151,7 @@ Date: Mon, 04 Nov 2019 13:17:15 GMT
 ----
 
 [[creating-docker-container-set-instance-name]]
-===== Creating a container with a set instance name, resolving conflicts
+===== Creating a Container with a Set Instance Name, Resolving Conflicts
 
 [source, shell]
 -----
@@ -1196,8 +1196,8 @@ e7803ce3ec96        payara/server-node:mytag   "/opt/payara/entrypo…"   7 minu
 
 docker images payara/server-node
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
-payara/server-node   custom-{page-version}       386a996b3649        About an hour ago   511MB
-payara/server-node   {page-version}              f5cf02e10dc2        4 weeks ago         525MB
+payara/server-node   custom-{version}       386a996b3649        About an hour ago   511MB
+payara/server-node   {version}              f5cf02e10dc2        4 weeks ago         525MB
 payara/server-node   latest              f5cf02e10dc2        4 weeks ago         525MB
 payara/server-node   mytag               f5cf02e10dc2        4 weeks ago         525MB
 
@@ -1668,7 +1668,7 @@ This option can be enabled either by specifying `--extraterse` or simply `-T` on
 IMPORTANT: The `extraterse` option implicitly enables the terse option - this is true for *all* commands (not just `create-instance` and `create-local-instance`).
 
 [[ExtraTerse-example]]
-=== ExtraTerse Examples
+=== Extraterse Examples
 
 [source,shell]
 ----

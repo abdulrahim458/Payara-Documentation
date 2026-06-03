@@ -2,7 +2,7 @@
 :ordinal: 1
 
 [[deploying-an-application]]
-== Deploying an Application From the Command Line
+== Deploying an Application from the Command Line
 
 NOTE: If you wish to deploy multiple packages, you must specify the `--deploy` again, or point to a `--deploymentDir` with multiple applications.
 
@@ -34,7 +34,7 @@ file in the root directory and updating its timestamp.
 TIP: On a Linux OS host, a simple `touch .reload` command can update the timestamp of the file.
 
 [[deploying-applications-from-a-maven-repository]]
-=== Deploying Applications from a Maven repository
+=== Deploying Applications from a Maven Repository
 
 You can deploy an application directly from a Maven repository using the `--deployFromGAV` option. This option accepts a comma separated string denoting a Maven artefact's `groupId`, `artifactId`, and `version` attributes.
 
@@ -59,7 +59,7 @@ java -jar payara-micro.jar --deployFromGAV "fish.payara.examples,test,1.0-SNAPSH
 ----
 
 [[define-context-root]]
-== Define context root
+== Define Context Root
 
 The context root of an application can be specified using the option `--contextroot` or by appending the path to the war-file name given with the `--deploy` option.
 
@@ -100,7 +100,7 @@ NOTE: `--deploy example.war:` is identical to `--deploy example.war:/` and deplo
 IMPORTANT: It follows that leading `/` can be given but is not required. However, tailing `/` must not be given. Using `--deploy example.war:/foo/` will render the `<host>/foo/` endpoint inaccessible.
 
 [[define-global-context-root]]
-== Define global context root
+== Define Global Context Root
 
 The global context root for all applications can be specified using the option `--globalcontextroot`.
 

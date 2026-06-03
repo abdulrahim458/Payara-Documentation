@@ -1,4 +1,4 @@
-= delete-deployment-group
+= Delete-Deployment-Group
 
 Deletes a Payara Server deployment group.
 

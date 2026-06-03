@@ -1,4 +1,4 @@
-= backup-domain
+= Backup-Domain
 
 Performs a backup on the domain.
 

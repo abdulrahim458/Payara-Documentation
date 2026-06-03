@@ -1,4 +1,4 @@
-= list-threadpools
+= List-Threadpools
 
 Lists all the thread pools.
 

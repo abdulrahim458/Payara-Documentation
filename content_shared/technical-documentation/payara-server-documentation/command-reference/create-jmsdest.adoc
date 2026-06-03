@@ -1,4 +1,4 @@
-= create-jmsdest
+= Create-Jmsdest
 
 Creates a JMS physical destination.
 

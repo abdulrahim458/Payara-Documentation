@@ -12,7 +12,7 @@ Payara Server can be downloaded from http://www.payara.fish/downloads[the Payara
 
 [source, shell, subs=attributes+]
 ----
-unzip payara-{page-version}.zip
+unzip payara-{version}.zip
 ----
 
 By default, this will unzip the archive into `{CURRENT_DIR}/payara7`.
@@ -45,7 +45,7 @@ Once the server is up and running, type this URL `http://localhost:4848` in your
 In order for a web application to run, it must be first deployed on an application server such as Payara Server.
 
 [[deploying-using-asadmin]]
-=== Deploying using Asadmin
+=== Deploying Using Asadmin
 
 To deploy a WAR file, you need to use the `deploy option`, followed by the path to the application to deploy. See below for an example of deploying a WAR file:
 
@@ -55,7 +55,7 @@ $ {PAYARA_INSTALL_DIR}/bin/asadmin deploy your_application.war
 ----
 
 [[deploying-using-administration-console]]
-=== Deploying using Administration console
+=== Deploying Using Administration Console
 
 . Access the Administration Console by navigating to http://localhost:4848 (make sure a domain is running beforehand)
 . Click on Applications under the heading Common Tasks pane on the left side of the page.

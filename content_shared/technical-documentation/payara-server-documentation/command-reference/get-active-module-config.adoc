@@ -1,4 +1,4 @@
-= get-active-module-config
+= Get-Active-Module-Config
 
 Displays the current active configuration of a service or instance.
 

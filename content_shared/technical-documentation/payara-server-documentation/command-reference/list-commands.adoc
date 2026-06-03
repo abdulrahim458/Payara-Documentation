@@ -1,4 +1,4 @@
-= list-commands
+= List-Commands
 
 Lists available commands.
 

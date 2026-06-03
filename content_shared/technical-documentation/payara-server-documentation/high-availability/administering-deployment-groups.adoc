@@ -56,7 +56,7 @@ IMPORTANT: Instances created in this screen will be created alongside a correspo
 If you want these instances to reference an existing configuration object, it is better to create them from the _Instances_ screen and add them to the deployment group later.
 
 [[create-using-asadmin-cli]]
-==== Using Asadmin commands
+==== Using Asadmin Commands
 
 To create a new deployment group run the xref:technical-documentation/payara-server-documentation/command-reference/create-deployment-group.adoc[`create-deployment-group`] command:
 
@@ -84,7 +84,7 @@ To delete a deployment group using the Admin Console, follow these steps:
 image:deployment-groups/delete-deployment-group.png[alt="Delete a Deployment Group",width=600px]
 
 [[delete-using-asadmin-cli]]
-==== Using asadmin commands
+==== Using Asadmin Commands
 
 To delete a deployment group use the xref:technical-documentation/payara-server-documentation/command-reference/delete-deployment-group.adoc[`delete-deployment-group`] command:
 

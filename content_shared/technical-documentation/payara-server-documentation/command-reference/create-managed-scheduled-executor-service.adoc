@@ -1,4 +1,4 @@
-= create-managed-scheduled-executor-service
+= Create-Managed-Scheduled-Executor-Service
 
 Creates a managed scheduled executor service resource.
 

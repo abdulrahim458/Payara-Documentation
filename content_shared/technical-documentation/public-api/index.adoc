@@ -24,7 +24,7 @@ The Public API is released as a Maven artifact in *Payara Nexus*, in the `payara
         <dependency>
             <groupId>fish.payara.api</groupId>
             <artifactId>payara-bom</artifactId>
-            <version>{page-version}</version>
+            <version>{version}</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>

@@ -1,4 +1,4 @@
-= flush-connection-pool
+= Flush-Connection-Pool
 
 Reintializes all connections established in the specified connection pool.
 

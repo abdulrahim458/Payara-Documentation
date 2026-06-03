@@ -4,12 +4,12 @@
 This chapter describes how to configure HTTP load balancing on Payara Server.
 
 [[setting-up-http-load-balancing]]
-== Setting Up HTTP Load Balancing
+== Setting up HTTP Load Balancing
 
 This section describes how to set up load balancing for Payara Server.
 
 [[prerequisites-for-setting-up-http-load-balancing]]
-=== Prerequisites for Setting Up HTTP Load Balancing
+=== Prerequisites for Setting up HTTP Load Balancing
 
 Before configuring your load balancer, you must:
 

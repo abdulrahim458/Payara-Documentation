@@ -91,7 +91,7 @@ asadmin> start-local-instance --sync=full myInstance
 Read more about the
 xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc[Start Local Instance Command]
 
-== Considerations for OpenMQ
+== Considerations for Openmq
 If OpenMQ (Payara Server’s JMS broker) is being used, the default configuration is to use EMBEDDED mode, meaning that Payara Server will fully manage the JMS broker within the same JVM as the server instance and a file-based store is used for persistent messages.
 
 The alternative option of LOCAL allows for the use of an “enhanced” broker cluster, whereby the JMS broker instances are started as separate JVMs and use a database connection for storage. Assuming the database is highly available, this completely avoids any danger when needing to use --sync=full on the instance.

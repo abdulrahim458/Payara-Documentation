@@ -1,4 +1,4 @@
-= jms-ping
+= Jms-Ping
 
 Checks if the JMS service is up and running.
 

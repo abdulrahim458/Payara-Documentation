@@ -202,7 +202,7 @@ With this setting enabled, if the group name defined on Payara Server matches th
 Jakarta Authorization is the specification that defines an interface for pluggable policy providers. This enables you to set up third-party plug-in modules to perform authorization based on custom policies.
 
 [[working-with-the-server.policy-policy-file]]
-==== Working With the `server.policy` Policy File
+==== Working with the `server.policy` Policy File
 
 Each Payara Server domain has its own global Java policy file, located in `domain-dir/config`. The file is named `server.policy`.
 
@@ -420,7 +420,7 @@ A cipher is a cryptographic algorithm used for encryption or decryption. SSL and
 Some ciphers are stronger and more secure than others. Clients and servers can support different cipher suites. During a secure connection, the client and the server agree to use the strongest cipher that they both have enabled for communication, so it is usually sufficient to enable all ciphers.
 
 [[name-based-virtual-hosts]]
-==== Name-based Virtual Hosts
+==== Name-Based Virtual Hosts
 
 Using name-based virtual hosts for a secure application can be problematic. This is a design limitation of the SSL protocol itself. The SSL handshake, where the client browser accepts the server certificate, must occur before the HTTP request is accessed. As a result, the request information containing the virtual host name cannot be determined prior to authentication, and it is therefore not possible to assign multiple certificates to a single IP address.
 
@@ -585,7 +585,7 @@ Master password changed for domain44ps
 ----
 
 [[additional-considerations-when-starting-instances]]
-=== Additional Considerations when starting instances through CLI subcommands
+=== Additional Considerations When Starting Instances through CLI Subcommands
 
 If you change the master password for the DAS, the `start-domain` and `start-local-instance` subcommands allow you to provide it during domain
 or instance startup in one of three ways:
@@ -612,7 +612,7 @@ NOTE: The `start-instance`, `start-cluster` and `start-deployment-group` subcomm
 In this case, you must start the instances locally by using `start-local-instance` command.
 
 [[remotely-starting-an-instance-using-a-password-file]]
-=== Remotely starting an instance using a password file
+=== Remotely Starting an Instance Using a Password File
 
 Assume that you have changed the master password on the DAS and you want to make the same change for all instances.
 
@@ -711,7 +711,7 @@ Command change-admin-password executed successfully.
 ----
 
 [[to-set-a-password-from-a-file]]
-=== To Set a Password From a File
+=== To Set a Password from a File
 
 Instead of typing a specific password (like the admin password or the master password) at the command line, you can supply the password for a command from a text file such as `passwords.txt`.
 
@@ -865,7 +865,7 @@ Command update-password-alias executed successfully
 ----
 
 [[using-password-alias-admin-console]]
-=== Using a password alias within the Admin Console
+=== Using a Password Alias within the Admin Console
 
 To use a password alias, navigate to any configuration view where you would have previously entered a password in plaintext format:
 
@@ -881,7 +881,7 @@ In place of the password, you can enter an alias which corresponds to the passwo
 Here are instructions on managing password aliases through the web administration console.
 
 [[creating-password-alias]]
-==== Creating a password alias
+==== Creating a Password Alias
 
 . To create a new password alias for the domain, select *Domain* on the page tree, then select the *Password Aliases* tab and click the *New* button:
 +
@@ -896,14 +896,14 @@ Here are instructions on managing password aliases through the web administratio
 *image*: password-aliases/password-aliases-created.png[Password alias created]
 
 [[modifying-password-alias]]
-==== Modifying a password alias
+==== Modifying a Password Alias
 
 To modify an existing password alias, select it on the *Password Aliases* page. On the *Edit Password Alias* page you are able to change the entered password.
 
 *image*: password-aliases/password-aliases-modifying.png[Modifying password alias]
 
 [[deleting-password-alias]]
-==== Deleting a password alias
+==== Deleting a Password Alias
 
 To delete a password alias, go to the *Password Aliases page*, tick the checkbox of the password alias you wish to delete and then press the *Delete* button:
 
@@ -911,7 +911,7 @@ To delete a password alias, go to the *Password Aliases page*, tick the checkbox
 
 
 [[using-password-alias-microprofile]]
-=== MicroProfile Config support
+=== Microprofile Config Support
 
 Password aliases can also be accessed using MicroProfile Config, as detailed xref:technical-documentation/microprofile/config/index.adoc[here].
 
@@ -921,7 +921,7 @@ Password aliases can also be accessed using MicroProfile Config, as detailed xre
 The Java SE SDK ships with the `keytool` utility, which enables you to set up and work with Java Secure Socket Extension (JSSE) digital certificates and similar formats. You can administer public/private key pairs and associated certificates, and cache the public keys (in the form of certificates) of their communicating peers.
 
 [[to-generate-a-certificate-by-using-keytool]]
-=== To Generate a Certificate by Using the `keytool` utility
+=== To Generate a Certificate by Using the `keytool` Utility
 
 By default, the `keytool` utility creates a keystore file in the directory where the utility is run. The following are steps to generate a certificate using the `keytool` utility an import it in the domain's keystore and truststore. These commands should be run from the domain's configuration directory.
 
@@ -1116,7 +1116,7 @@ IMPORTANT: Payara Server includes a default JACC provider named `default` which 
 Payara Server allows Jakarta Authorization compliant JACC providers to be registered, so they can be used as third-party authorization modules for applications deployed on its corresponding domain.
 
 [[administering-jacc-providers-from-the-administration-console]]
-=== Administering JACC Providers From the Administration Console
+=== Administering JACC Providers from the Administration Console
 
 To use the Administration Console to administer JACC providers, perform the following steps:
 
@@ -1165,7 +1165,7 @@ Command list-jacc-providers executed successfully.
 ----
 
 [[how-to-install-a-custom-jacc-provider-per-server]]
-=== How to install a custom JACC provider per Server (Global)
+=== How to Install a Custom JACC Provider per Server (Global)
 
 Having coded a JACC provider, the first thing to do it is to make these classes available for the server. For that purpose, you need to put the implementation JAR, with all its dependencies, under the `as-install/lib` folder.
 
@@ -1191,7 +1191,7 @@ This will result in the following configuration element added to the _domain.xml
 As you can see on the XML excerpt, more JACC providers can be defined (by default, the `simple` and `default` providers are already defined), but only one will be used at runtime, specified by the `jacc` attribute on the `security-service` element.
 
 [[how-to-install-a-custom-jacc-provider-per-application]]
-=== How to install a custom JACC provider per Application (Local)
+=== How to Install a Custom JACC Provider per Application (Local)
 
 With a custom JACC provide per server, applications deployed to a single server can't have their own custom authorization contracts. In this case, having a custom JACC Provider per application makes more sense by using the `fish.payara.jacc.JaccConfigurationFactory` API.
 

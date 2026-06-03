@@ -1,4 +1,4 @@
-= create-system-properties
+= Create-System-Properties
 
 Adds one or more system property elements that can be referenced elsewhere in the configuration.
 

@@ -1,4 +1,4 @@
-= set-fault-tolerance-configuration
+= Set-Fault-Tolerance-Configuration
 
 Modifies the configuration settings of the MicroProfile Fault Tolerance service.
 

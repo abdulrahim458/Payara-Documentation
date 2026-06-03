@@ -1,4 +1,4 @@
-= list-containers
+= List-Containers
 
 Lists application containers.
 

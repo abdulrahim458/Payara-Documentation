@@ -1,4 +1,4 @@
-= list-javamail-resources
+= List-Javamail-Resources
 
 Lists the existing JavaMail session resources.
 

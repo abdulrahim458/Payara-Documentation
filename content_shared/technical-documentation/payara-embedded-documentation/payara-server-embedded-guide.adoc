@@ -72,7 +72,7 @@ Can be setup as a Maven dependency with the following GAV coordinates:
 <dependency>
     <groupId>fish.payara.extras</groupId>
     <artifactId>payara-embedded-all</artifactId>
-    <version>{page-version}</version>
+    <version>{version}</version>
     <type>jar</type>
 </dependency>
 ----
@@ -86,7 +86,7 @@ Can be setup as a Maven dependency with the following GAV coordinates:
 <dependency>
     <groupId>fish.payara.extras</groupId>
     <artifactId>payara-embedded-web</artifactId>
-    <version>{page-version}</version>
+    <version>{version}</version>
     <type>jar</type>
 </dependency>
 ----
@@ -307,12 +307,12 @@ public class EmbeddedRunner{
 As an alternative, you can use the `dispose` method to stop an embedded Payara Server and dispose of the temporary file system.
 
 [[deploying-and-undeploying-an-application-in-an-embedded-payara-server]]
-=== Deploying and Un-deploying an Application in an Embedded Payara Server
+=== Deploying and Un-Deploying an Application in an Embedded Payara Server
 
 Deploying an application installs the files that comprise the application into Embedded Payara Server and makes the application ready to run. By default, an application is enabled when it is deployed.
 
 [[to-deploy-an-application-from-an-archive-file-or-a-directory]]
-==== *To Deploy an Application From an Archive File or a Directory*
+==== *To Deploy an Application from an Archive File or a Directory*
 
 An archive file contains the resources, deployment descriptor, and classes of an application. The content of the file must be organized in the directory structure that the Jakarta EE specifications define for the type of archive that the file contains. For more information, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#deploying-applications[Deploying Applications] in the Payara Server Application Deployment section.
 
@@ -353,7 +353,7 @@ public class EmbeddedRunner{
 ----
 
 [[undeploying-an-application]]
-==== *Un-deploying an Application*
+==== *Un-Deploying an Application*
 
 Undeploy an application when the application is no longer required to run in Payara Server. For example, before stopping Payara Server, undeploy all applications that are running in Payara Server.
 
@@ -888,7 +888,7 @@ NOTE: If necessary, Payara Server also creates an instance root directory.
 Overview of some expected use cases of Payara Server Embedded.
 
 [[bundle-application]]
-=== Bundle your Application
+=== Bundle Your Application
 
 Where the installation of Payara Server and the deployment of the applications can't be done on a central infrastructure, you may opt to use Payara Embedded. In this case, you can bundle Payara Server with the application within a single application, which makes it easier for installing it.
 

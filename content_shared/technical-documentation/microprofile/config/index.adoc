@@ -1,6 +1,6 @@
-= Eclipse MicroProfile Config API
+= Eclipse Microprofile Config API
 
-The Payara Platform {page-version} provides MicroProfile Configuration {mpConfigVersion}
+The Payara Platform {version} provides MicroProfile Configuration {mpConfigVersion}
 
 [[background]]
 == Background

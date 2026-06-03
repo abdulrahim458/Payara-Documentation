@@ -397,7 +397,7 @@ about how to set this property, see xref:technical-documentation/payara-server-d
 This workaround is used unless explicitly disabled.
 
 [[delegated-recovery-after-server-crash-doesnt-work-on-mysql]]
-==== *Delegated Recovery After Server Crash Doesn't Work on MySQL*
+==== *Delegated Recovery after Server Crash Doesn't Work on Mysql*
 
 The MySQL database supports XA transaction recovery only when the database crashes. When a Payara Server instance crashes, MySQL rolls back prepared transactions.
 

@@ -1,6 +1,6 @@
-= Eclipse MicroProfile Health Check API
+= Eclipse Microprofile Health Check API
 
-The Payara Platform {page-version} provides MicroProfile HealthCheck {mpHealthVersion}
+The Payara Platform {version} provides MicroProfile HealthCheck {mpHealthVersion}
 
 [[background]]
 == Background
@@ -73,7 +73,7 @@ By default, HealthCheck endpoints bind to the root context application which is 
 If a user application is deployed in the empty context-root, then the security configuration of this application will be shared by the HealthCheck endpoints, so _exert extreme caution_ when making these changes.
 
 [[microprofile-upgrade]]
-== Upgrading from Eclipse MicroProfile 3.x to 4.x
+== Upgrading from Eclipse Microprofile 3.x to 4.x
 
 MicroProfile 4.0 brings with it a number of changes to MicroProfile Health. The main incompatible change brought in by this upgrade is the removal of the deprecated `@Health` annotation.
 

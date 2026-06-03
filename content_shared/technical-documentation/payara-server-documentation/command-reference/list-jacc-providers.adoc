@@ -1,4 +1,4 @@
-= list-jacc-providers
+= List-Jacc-Providers
 
 Enables administrators to list JACC providers defined for a domain.
 

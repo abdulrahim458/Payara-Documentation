@@ -1,4 +1,4 @@
-= set-snmp-notifier-configuration
+= Set-Snmp-Notifier-Configuration
 
 Configures the settings of the SNMP notifier.
 

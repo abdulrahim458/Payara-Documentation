@@ -1,4 +1,4 @@
-= MBeans Inventory
+= Mbeans Inventory
 :ordinal: 25
 
 Below is a non-exhaustive list of MBeans which are useful to monitor in any Payara Server environment.
@@ -6,7 +6,7 @@ Below is a non-exhaustive list of MBeans which are useful to monitor in any Paya
 Other MBeans not listed show static information or are JDK-specific.
 
 [[jvm-beans]]
-== JVM MBeans
+== JVM Mbeans
 
 [[class-loading]]
 === Class Loading
@@ -143,7 +143,7 @@ In JMX Monitoring logging set the value to `java.lang:type=Threading` to monitor
 |===
 
 [[payara-platform-mbeans]]
-== Payara Platform MBeans
+== Payara Platform Mbeans
 
 These MBeans are registered exclusively by Payara Server and provide additional information about current usage.
 
@@ -265,7 +265,7 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=deployment-mon,
 === EJB Security
 
 [[ejb-security-deployment-statistics]]
-==== EJB Security Deployment statistics
+==== EJB Security Deployment Statistics
 
 In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=ejb-security-mon,name=security/ejb` to monitor this MBean.
 
@@ -840,6 +840,6 @@ In JMX Logging set value to
 |===
 
 [[openmq-mbeans]]
-== OpenMQ MBeans
+== Openmq Mbeans
 
 Payara Server includes OpenMQ as a JMS broker, which includes its own MBeans.Documentation on them can be found in the official link:https://eclipse-ee4j.github.io/openmq/guides/mq-dev-guide-java/toc.html[Eclipse Open Message Queue Developer's Guide for Java Clients^].

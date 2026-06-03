@@ -1,4 +1,4 @@
-= create-virtual-server
+= Create-Virtual-Server
 
 Creates the named virtual server.
 

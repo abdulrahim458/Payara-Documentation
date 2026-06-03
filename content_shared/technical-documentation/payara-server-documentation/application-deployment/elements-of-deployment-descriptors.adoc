@@ -557,7 +557,7 @@ xref:technical-documentation/payara-server-documentation/application-deployment/
 The following table describes subelements for the `cache-helper` element.
 
 .`cache-helper` Subelements
-[cols=1,1,1,1,1,2,6",options="header"]
+[cols=1,1,1,1,1,1,1,2,6",options="header"]
 |===
 |Element |Required |Description
 
@@ -2597,7 +2597,7 @@ WARNING: When set using this property, this configuration will ALWAYS take effec
 |===
 
 [[payara-application-client]]
-=== payara-application-client
+=== Payara-Application-Client
 
 Defines the Payara Server specific configuration for an application client. This is the root element; there can only be one
 `payara-application-client` element in a `payara-application-client.xml` file. See xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-application-client.xml-file[The payara-application-client.xml file].
@@ -4929,7 +4929,7 @@ The following table describes attributes for the `principal-name` element.
 |===
 
 [[property-with-attributes]]
-== `property` (with attributes)
+== `property` (with Attributes)
 
 Specifies the name and value of a property. A property adds configuration information to its parent element that is one or both of the following:
 
@@ -5000,7 +5000,7 @@ The following table describes attributes for the `property` element.
 ----
 
 [[property-with-subelements]]
-== `property` (with subelements)
+== `property` (with Subelements)
 
 Specifies the name and value of a property. A property adds configuration information to its parent element that is one or both of the following:
 

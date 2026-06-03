@@ -1,4 +1,4 @@
-= Tracing APIs Compatibility Matrix
+= Tracing Apis Compatibility Matrix
 :ordinal: 24
 
 The following is an up-to-date compatibility matrix that list the compatible versions of OpenTelemetry and OpenTracing in the Payara Platform:
@@ -6,7 +6,7 @@ The following is an up-to-date compatibility matrix that list the compatible ver
 [cols="a,a,a", options="header"]
 |===
 |Payara Server & Micro Version |OpenTracing.io API Version |OpenTelemetry API Version
-| 6.0.0 - {page-version}
+| 6.0.0 - {version}
 | 0.33
 | {openTelemetryVersion}
 | 5.36.0+

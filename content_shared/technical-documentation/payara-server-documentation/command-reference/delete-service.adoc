@@ -1,4 +1,4 @@
-= _delete-service
+= _Delete-Service
 
 Deletes the init scripts created by the `create-service` subcommand.
 

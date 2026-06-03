@@ -1,4 +1,4 @@
-= disable-secure-admin
+= Disable-Secure-Admin
 
 Disables secure admin if it is already enabled.
 

@@ -1,4 +1,4 @@
-= get-ldap-config-source-configuration
+= Get-Ldap-Config-Source-Configuration
 
 Gets the settings of the LDAP configuration source.
 

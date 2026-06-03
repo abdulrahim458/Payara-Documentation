@@ -1,4 +1,4 @@
-= get-config-ordinal
+= Get-Config-Ordinal
 
 Returns the ordinal value for the given configuration source type.
 

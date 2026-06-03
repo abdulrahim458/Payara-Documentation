@@ -67,7 +67,7 @@ You can also use the `asadmin get-client-stubs` command to retrieve the `appclie
 This section describes the procedure to develop, assemble, and deploy client applications using the ACC.
 
 [[to-access-an-ejb-component-from-an-application-client]]
-=== To Access an EJB Component From an Application Client
+=== To Access an EJB Component from an Application Client
 
 . In your client code, reference the EJB component by using an `@EJB` annotation or by looking up the JNDI name as defined in the `ejb-jar.xml` file. +
 For more information about naming and lookups, see xref:technical-documentation/application-development/using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context]. +
@@ -120,7 +120,7 @@ xref:#using-java-web-start[Using Java Web Start] or xref:#running-an-application
 * For more information about RMI-IIOP load balancing and failover, see "xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#rmi-iiop-load-balancing-and-failover[RMI-IIOP Load Balancing and Failover]" in the Payara Server High Availability section.
 
 [[to-access-a-jms-resource-from-an-application-client]]
-=== To Access a JMS Resource From an Application Client
+=== To Access a JMS Resource from an Application Client
 
 . Create a JMS client.
 +
@@ -736,7 +736,7 @@ file to add the custom permissions that your application client needs.
 For more information about the permissions you can set in the `client.policy` file, see https://docs.oracle.com/en/java/javase/11/security/permissions-jdk1.html[Permissions in the JDK^].
 
 [[using-rmiiiop-over-ssl]]
-=== Using RMI/IIOP Over SSL
+=== Using RMI/IIOP over SSL
 
 You can configure RMI/IIOP over SSL in two ways: using a username and password, or using a client certificate.
 
@@ -804,7 +804,7 @@ export VMARGS="-Djavax.net.ssl.keyStore=${keystore.db.file}
 ----
 
 [[connecting-to-a-remote-ejb-module-through-a-firewall]]
-=== Connecting to a Remote EJB Module Through a Firewall
+=== Connecting to a Remote EJB Module through a Firewall
 
 To deploy and run an application client that connects to an EJB module on a Payara Server instance that is behind a firewall, you must set ORB Virtual Address Agent Implementation (*ORBVAA*) options. Use the `asadmin create-jvm-options` command as follows:
 
@@ -868,12 +868,12 @@ To use libraries with an application client, package the application client in a
 Then, either place the libraries in the `/lib` directory of the EAR file or specify their location in the application client JAR file's manifest `Class-Path`.
 
 [[developing-clients-without-the-acc]]
-== Developing Clients Without the ACC
+== Developing Clients without the ACC
 
 This section describes the procedure to create, assemble, and deploy a Java-based client that is not packaged using the Application Client Container (ACC).
 
 [[to-access-an-ejb-component-from-a-stand-alone-client]]
-=== To access an EJB component from a stand-alone client
+=== To Access an EJB Component from a Stand-Alone Client
 
 . In your client code, instantiate the `InitialContext`:
 +
@@ -947,7 +947,7 @@ If the `endpoints` list is changed dynamically in the code, the new list is used
 As long as the client environment is set appropriately and the JVM is compatible, you merely need to run the application's `main` class.
 
 [[to-access-an-ejb-component-from-a-server-side-module]]
-=== To access an EJB component from a server-side module
+=== To Access an EJB Component from a Server-Side Module
 
 A server-side module can be a servlet, another EJB component, or another type of module.
 
@@ -1013,7 +1013,7 @@ Here `ORBhost` is the Application Server hostname and `ORBport` is the ORB port 
 For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in Payara Server Application Deployment section.
 
 [[to-access-a-jms-resource-from-a-stand-alone-client]]
-=== To access a JMS resource from a stand-alone client
+=== To Access a JMS Resource from a Stand-Alone Client
 
 . Create a JMS client.
 +

@@ -1,4 +1,4 @@
-= get-requesttracing-configuration
+= Get-Requesttracing-Configuration
 
 Retrieves the Request Tracing service's configuration.
 

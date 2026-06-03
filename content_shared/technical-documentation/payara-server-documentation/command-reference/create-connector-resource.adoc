@@ -1,4 +1,4 @@
-= create-connector-resource
+= Create-Connector-Resource
 
 Registers the connector resource with the specified JNDI name.
 

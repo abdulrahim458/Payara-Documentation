@@ -1,4 +1,4 @@
-= unset-web-env-entry
+= Unset-Web-Env-Entry
 
 Unsets an environment entry for a deployed web application or module.
 

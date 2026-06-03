@@ -1,4 +1,4 @@
-= enable-secure-admin-principal
+= Enable-Secure-Admin-Principal
 
 Instructs Payara Server, when secure admin is enabled, to accept admin requests from clients identified by the specified SSL certificate.
 

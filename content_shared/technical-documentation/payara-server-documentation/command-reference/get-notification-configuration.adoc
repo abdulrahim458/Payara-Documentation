@@ -1,4 +1,4 @@
-= get-notification-configuration
+= Get-Notification-Configuration
 
 Retrieves the notification service general settings.
 

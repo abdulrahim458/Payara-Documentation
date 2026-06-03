@@ -9,7 +9,7 @@ As a reminder, Payara Server uses the following PKCS12 keystore files to manage 
 These keystores are protected with the Master Password of your domain.
 
 [[add-certificate]]
-== Adding a new SSL Certificate
+== Adding a New SSL Certificate
 
 To add your SSL Certificate to the Payara Server configuration files, you need:
 
@@ -70,7 +70,7 @@ You can then enter the alias name and the path to the certificate bundle:
 image:certificate-management/CertificateManagementAddKeystoreEntry.png[alt="Add Keystore Entry",width=600px]
 
 [[import-keystore-via-keytool]]
-==== Using the `keytool` command
+==== Using the `keytool` Command
 
 You can also use the `keytool` command of the JDK:
 
@@ -106,7 +106,7 @@ And then specifying the `mycert.crt` file.
 image:certificate-management/CertificateManagementAddTruststoreEntry.png[alt="Add Truststore Entry",width=600px]
 
 [[via-keytool-command-2]]
-==== Using the `keytool` command
+==== Using the `keytool` Command
 
 You can also use the `keytool` command of the JDK:
 
@@ -138,7 +138,7 @@ NOTE: In a default installation, the `http-listener-2` listener is responsible f
 The information can also be entered in the Web Administration console, by navigating to the page Configurations -> `server-config` -> HTTP Service -> HTTP Listeners -> `http-listener-2`.
 
 [[loading-certificates-from-multiple-keystores]]
-== Loading Certificates From Multiple Keystores
+== Loading Certificates from Multiple Keystores
 
 IMPORTANT: All additional keystores must have the same password as your domain master password.
 
@@ -183,7 +183,7 @@ asadmin create-jvm-options "-Dfish.payara.ssl.additionalTrustStores=/path/to/tru
 NOTE: If you load multiple keystores with the same alias, the server will use the first keystore with that alias, starting with the default and then the additional keystores in the order they are listed in the JVM option.
 
 [[cetificate-expiration]]
-== Certificate expiration
+== Certificate Expiration
 
 All X.509 certificates have a validity period when they can be used. Once this validity period is passed, the users will see a warning or error message depending on the browser that the certificate is no longer valid.
 
@@ -192,7 +192,7 @@ Within the server log file, the expired certificates are listed when the system 
 NOTE: The log level of the expired certificates is of type **WARNING**.
 
 [[removing-expired]]
-=== Removing expired certificates
+=== Removing Expired Certificates
 
 [[via-asadmin-cli-5]]
 ==== Using Asadmin CLI

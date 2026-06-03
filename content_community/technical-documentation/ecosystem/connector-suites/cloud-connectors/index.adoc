@@ -10,7 +10,7 @@ The following connectors are available:
 * xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/azure-sb.adoc[Azure Service Bus]
 
 [[obtaining-connectors]]
-== Obtaining the connectors
+== Obtaining the Connectors
 
 Cloud Connectors can be built from source as follows:
 
@@ -44,7 +44,7 @@ The connectors can be found in the following locations as JCA RARs:
 * Azure Service Bus - ./AzureServiceBus/AzureSBRAR/target/azure-sb-rar-0.8.0.rar
 
 [[installing-a-connector]]
-== Installing a connector
+== Installing a Connector
 
 Installing Cloud Connectors for Payara Server and Payara Micro both require the Cloud Connector jar to be deployed. However, Payara Server requires some additional configuration to classloading.
 
@@ -101,7 +101,7 @@ java -jar payara-micro.jar --autobindhttp --deploy kafka-rar-0.8.0.rar --deploy 
 ----
 
 [[securing-credentials]]
-== Securing credentials
+== Securing Credentials
 
 In the documentation pages for the currently available cloud connectors, much of the configuration shown is done via annotations. This configuration
 contains credentials as well, which as a rule of thumb should not directly be placed in code. On Payara all properties can be replaced via System properties using the syntax ${system.property.name} or environment variables using the syntax `${ENV=evironment.property.name}` or password aliases using the syntax `${ALIAS=alias.name}`.

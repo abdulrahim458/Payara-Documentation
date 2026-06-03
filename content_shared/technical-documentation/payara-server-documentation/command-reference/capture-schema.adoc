@@ -1,4 +1,4 @@
-= capture-schema
+= Capture-Schema
 
 Stores the database metadata (schema) in a file for use in mapping and execution.
 

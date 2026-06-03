@@ -1,4 +1,4 @@
-= list-managed-scheduled-executor-services
+= List-Managed-Scheduled-Executor-Services
 
 Lists managed scheduled executor service resources.
 

@@ -1,4 +1,4 @@
-= stop-deployment-group
+= Stop-Deployment-Group
 
 Stops all the instances in a Payara Server deployment group.
 

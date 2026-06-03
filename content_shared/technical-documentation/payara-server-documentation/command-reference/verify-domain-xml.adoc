@@ -1,4 +1,4 @@
-= verify-domain-xml
+= Verify-Domain-Xml
 
 Verifies the contents of the domain.xml file.
 

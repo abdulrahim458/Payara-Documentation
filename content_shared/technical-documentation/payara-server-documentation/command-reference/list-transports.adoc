@@ -1,4 +1,4 @@
-= list-transports
+= List-Transports
 
 Lists the existing transports.
 

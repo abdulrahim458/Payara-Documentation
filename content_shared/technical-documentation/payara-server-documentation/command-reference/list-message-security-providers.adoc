@@ -1,4 +1,4 @@
-= list-message-security-providers
+= List-Message-Security-Providers
 
 Lists all security message providers for the given message layer.
 

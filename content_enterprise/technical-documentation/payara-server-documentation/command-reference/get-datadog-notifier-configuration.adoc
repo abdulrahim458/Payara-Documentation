@@ -1,4 +1,4 @@
-= get-datadog-notifier-configuration
+= Get-Datadog-Notifier-Configuration
 
 Retrieves the settings of the DataDog notifier.
 

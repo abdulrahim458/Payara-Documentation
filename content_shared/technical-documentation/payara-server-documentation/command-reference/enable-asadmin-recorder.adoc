@@ -1,4 +1,4 @@
-= enable-asadmin-recorder
+= Enable-Asadmin-Recorder
 
 Enables the asadmin recorder.
 

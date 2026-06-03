@@ -156,7 +156,7 @@ server.http-service
 An example dotted name under the virutal-server node might be `server.http-service.virtual-server1.request.requestcount`. For available statistics, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#http-service-statistics[HTTP Service Statistics].
 
 [[jmscontainer-service-tree-hierarchy]]
-==== *JMS/Container Service Tree Hierarchy*
+==== *Jms/container Service Tree Hierarchy*
 
 The `jms-service` tree holds monitorable attributes for connection factories (connection pools for resource adapters) and work management (for Message Queue resource adapters). The `jms-service` tree contains the following nodes:
 
@@ -310,7 +310,7 @@ server.web
 An example dotted name for the `servlet` node might be `server.web.servlet.activeservletsloadedcount`. For available statistics, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#web-module-common-statistics[Web Module Common Statistics].
 
 [[about-monitoring-for-add-on-components]]
-==== *About Monitoring for Add-on Components*
+==== *About Monitoring for Add-On Components*
 
 An add-on component typically generates statistics that Payara Server can gather at runtime. Adding monitoring capabilities enables an add-on component to provide statistics to Payara Server in the same way as components that are supplied in the Payara Server distributions. As a result, you can use the same administrative interfaces to monitor statistics from any installed Payara Server component, regardless of the origin of the component.
 
@@ -463,7 +463,7 @@ Command disable-monitoring executed successfully
 ----
 
 [[example-to-disable-monitoring-2]]
-==== *Example Disable Monitoring for specific modules*
+==== *Example Disable Monitoring for Specific Modules*
 
 This example disables monitoring for specific modules. Their monitoring levels are set to `OFF`.
 
@@ -1175,7 +1175,7 @@ The statistics available for Jersey are shown in the following table.
 
 
 [[jmsconnector-service-statistics]]
-==== *JMS/Connector Service Statistics*
+==== *Jms/connector Service Statistics*
 
 The JMS/Connector Service fits into the tree of objects as shown in xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#jmscontainer-service-tree-hierarchy[JMS/Container Service Tree Hierarchy].
 
@@ -2491,12 +2491,12 @@ The available web session statistics are shown in the following table.
 |===
 
 [[configuring-jconsole-to-view-payara-server-monitoring-data]]
-== Configuring JConsole to View Payara Server Monitoring Data
+== Configuring Jconsole to View Payara Server Monitoring Data
 
 Java SE provides tools to connect to an MBean Server and view the MBeans registered with the server. JConsole is one such popular JMX Connector Client and is available as part of the standard Java SE distribution.When you configure JConsole for use with Payara Server, Payara Server becomes the JMX Connector's server end and JConsole becomes the JMX connector's client end.
 
 [[to-connect-jconsole-to-payara-server]]
-=== To Connect JConsole to Payara Server
+=== To Connect Jconsole to Payara Server
 
 Java SE 6 enhances management and monitoring of the virtual machine by including a Platform MBean Server and by including managed beans (MBeans) to configure the virtual machine.
 
@@ -2589,12 +2589,12 @@ asadmin> set-jmx-monitoring-configuration --dynamic true --enabled true
 
 //TODO - Document how to configure notifiers by use of the --setNotifiers option.
 [[configure-jmx]]
-=== Setting The JMX Monitoring Configuration
+=== Setting the JMX Monitoring Configuration
 
 You can configure JMX Monitoring using the `set-jmx-monitoring-configuration` asadmin command.
 
 [[adding-the-monitoring-attribute]]
-==== Adding a monitoring attribute
+==== Adding a Monitoring Attribute
 
 To add the `HeapMemoryUsage` attribute to the list of MBean attributes to monitor using the service the following command can be used:
 
@@ -2617,7 +2617,7 @@ The second argument, `--enabled`, is the only required option for the `asadmin` 
 Under this scenario the monitoring service has not been configured yet so `false` was passed.
 
 [[dealing-with-composite-mbean-attributes]]
-==== Dealing with composite MBean attributes
+==== Dealing with Composite Mbean Attributes
 
 The **MBean** attribute added, `HeapMemoryUsage`, is a composite attribute.
 
@@ -2640,7 +2640,7 @@ asadmin set-jmx-monitoring-configuration --addattribute 'attributeName=HeapMemor
 ----
 
 [[setting-logging-frequency]]
-==== Setting Logging frequency
+==== Setting Logging Frequency
 
 There are two configuration attributes related to the frequency at which log messages are written: `logfrequency` and `logfrequencyunit`. The first is a numerical value used for the rate, while the second is the unit for the rate. The default configuration is set to have a message logged every _15 seconds_.
 
@@ -2659,7 +2659,7 @@ This section covers how to use the REST monitoring functionality in Payara Serve
 The REST monitoring is hosted on the admin-listener (port `4848`) on the default context root, `/rest-monitoring`.
 
 [[rest-monitoring-configuration]]
-=== Configuring REST monitoring
+=== Configuring REST Monitoring
 
 REST monitoring is configurable through several Asadmin CLI commands.
 
@@ -2673,7 +2673,7 @@ asadmin set-rest-monitoring-configuration --enabled true
 ----
 
 [[getting-rest-configuration]]
-==== Getting REST monitoring Configuration
+==== Getting REST Monitoring Configuration
 
 [source, shell]
 ----

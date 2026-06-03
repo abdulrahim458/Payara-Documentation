@@ -1,4 +1,4 @@
-= delete-node-docker
+= Delete-Node-Docker
 
 Deletes a Docker node
 

@@ -1,4 +1,4 @@
-= delete-jndi-resource
+= Delete-Jndi-Resource
 
 Removes a JNDI resource.
 

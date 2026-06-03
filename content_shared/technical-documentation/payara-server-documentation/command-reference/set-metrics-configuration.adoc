@@ -1,4 +1,4 @@
-= set-metrics-configuration
+= Set-Metrics-Configuration
 
 Modifies the configuration settings of the MicroProfile Metrics service.
 

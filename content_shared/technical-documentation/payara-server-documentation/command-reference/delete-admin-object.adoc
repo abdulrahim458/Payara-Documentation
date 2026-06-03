@@ -1,4 +1,4 @@
-= delete-admin-object
+= Delete-Admin-Object
 
 Removes the administered object with the specified JNDI name.
 

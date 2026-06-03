@@ -1,4 +1,4 @@
-= get-hazelcast-configuration
+= Get-Hazelcast-Configuration
 
 Retrieves the current Data Grid (Hazelcast) configuration.
 

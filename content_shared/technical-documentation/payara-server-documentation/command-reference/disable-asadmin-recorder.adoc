@@ -1,4 +1,4 @@
-= disable-asadmin-recorder
+= Disable-Asadmin-Recorder
 
 Disables the Asadmin recorder.
 

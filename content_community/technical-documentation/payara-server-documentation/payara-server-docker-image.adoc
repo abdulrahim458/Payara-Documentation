@@ -4,7 +4,7 @@
 Overview of the usage and details of the official Payara Server Community Docker image.
 
 [[quickstart]]
-== Quick start
+== Quick Start
 
 Launch a new Payara Server domain running in a container listening in port `8080` with the following command:
 
@@ -23,18 +23,18 @@ Keep in mind the following:
 .Using a specific version
 [source,text]
 ----
-docker run -p 8080:8080 payara/server-full:{page-version}
+docker run -p 8080:8080 payara/server-full:{version}
 ----
 
 AMD64 & ARM64 compatible images are provided. The Docker client should automatically download the appropriate image for your architecture.
 
 [[other-distributions]]
-== Other distributions
+== Other Distributions
 
 Besides the Full Profile version, the Payara Server Web Profile distribution is also available as a Docker Image under the `payara/server-web` name. The image for this distribution behaves the same as its Full Profile counterpart.
 
 [[ports]]
-== Exposed ports
+== Exposed Ports
 
 The default ports that are exposed by this image are:
 
@@ -82,11 +82,11 @@ The following sample command will launch a new Payara Server container and deplo
 
 [source, shell, subs=attributes+]
 ----
-docker run -p 8080:8080 -v ~/payara/apps:/opt/payara/deployments payara/server-full:{page-version}
+docker run -p 8080:8080 -v ~/payara/apps:/opt/payara/deployments payara/server-full:{version}
 ----
 
 [[deploy-using-custom-image]]
-=== Deploy Applications using a Custom Image
+=== Deploy Applications Using a Custom Image
 
 You can also prepare a custom image based on the official Payara Server Docker image and copy all application artifacts to the `$DEPLOY_DIR` directory. This way, you can re-package your applications in a simple distributable unit.
 

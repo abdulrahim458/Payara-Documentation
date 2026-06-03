@@ -1,4 +1,4 @@
-= create-managed-executor-service
+= Create-Managed-Executor-Service
 
 Creates a managed executor service resource.
 

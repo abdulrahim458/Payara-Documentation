@@ -4,7 +4,7 @@
 You can deploy applications onto Payara Micro programmatically via its API.
 
 [[deploying-applications-using-an-asadmin-command]]
-== Deploying Applications Using an asadmin Command
+== Deploying Applications Using an Asadmin Command
 
 Applications can be deployed using the equivalent administration (`asadmin`) commands present on Payara Server.
 
@@ -74,7 +74,7 @@ public class EmbeddedPayara{
 See the example for <<deploying-on-a-local-instance, deploying on local instance>> on how to use the `run` method on a subset of instances in a cluster.
 
 [[deploying-an-application-programmatically-during-bootstrap]]
-== Deploying an Application Programmatically during Bootstrap
+== Deploying an Application Programmatically During Bootstrap
 
 There are two methods you can use to deploy an application during Payara Micro's bootstrap process:
 
@@ -130,7 +130,7 @@ public class EmbeddedPayara{
 TIP: You can use this strategy to deploy multiple deployments by calling `addDeployment` multiple times, or use `setDeploymentDir` to point to a deployment directory that contains the applications to deploy.
 
 [[deploying-an-application-programmatically-after-bootstrap]]
-== Deploying an Application Programmatically After Bootstrap
+== Deploying an Application Programmatically after Bootstrap
 
 There are three methods available for deploying an application to a running instance:
 
@@ -139,12 +139,12 @@ There are three methods available for deploying an application to a running inst
 * `deploy(String name, String contextRoot, InputStream is)`
 
 [[deployfile-war]]
-=== `deploy(File war)`
+=== `Deploy(file War)`
 
 The first method works in the exact same way as the `addDeploymentFile` method described in the  <<deploying-an-application-programmatically-during-bootstrap, Deploying Programmatically during Bootstrap>> section.
 
 [[deploystring-name-inputstream-is]]
-=== `deploy(String name, InputStream is)`
+=== `Deploy(string Name, Inputstream Is)`
 
 This method allows you to deploy WAR files using an `InputStream`:
 
@@ -174,7 +174,7 @@ public class EmbeddedPayara {
 ----
 
 [[deploystring-name-string-contextroot-inputstream-is]]
-=== `deploy(String name, String contextRoot, InputStream is)`
+=== `Deploy(string Name, String Contextroot, Inputstream Is)`
 
 This method works in the same way as the previous one, but allows you to specify the context root of the application at the same time. The following example would deploy the `test` application to a context root of `/app`:
 

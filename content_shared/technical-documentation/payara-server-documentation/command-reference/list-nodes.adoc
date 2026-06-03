@@ -1,4 +1,4 @@
-= list-nodes
+= List-Nodes
 
 Lists all Payara Server nodes in a domain.
 

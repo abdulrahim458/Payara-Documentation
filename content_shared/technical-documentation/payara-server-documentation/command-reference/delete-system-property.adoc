@@ -1,4 +1,4 @@
-= delete-system-property
+= Delete-System-Property
 
 Removes a system property of the domain, configuration, cluster, or server instance, one at a time.
 

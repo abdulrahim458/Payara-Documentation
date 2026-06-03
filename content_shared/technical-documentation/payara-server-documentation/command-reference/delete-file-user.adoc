@@ -1,4 +1,4 @@
-= delete-file-user
+= Delete-File-User
 
 Removes the named file user.
 

@@ -1,4 +1,4 @@
-= OpenTelemetry and OpenTracing Support
+= Opentelemetry and Opentracing Support
 
 The Payara Platform natively supports OpenTelemetry APIs as well as export of traces over the OTLP protocol. Natively in this context means, that deployment of an OpenTelemetry Agent is not necessary and may lead to duplicate traces.
 
@@ -10,7 +10,7 @@ IMPORTANT: OpenTelemetry implementation only covers the tracing aspect of OpenTe
 Manual instrumentation is needed to enable these.
 
 [[enabling-opentelemetry]]
-== Enabling OpenTelemetry
+== Enabling Opentelemetry
 
 OpenTelemetry is enabled for a particular application when:
 
@@ -20,7 +20,7 @@ OpenTelemetry is enabled for a particular application when:
 * The `OTEL_SDK_DISABLED` Environment variable is set to `false`
 
 [[configuring-opentelemetry]]
-== Configuring OpenTelemetry
+== Configuring Opentelemetry
 
 When OpenTelemetry is enabled it proceeds to configure OpenTelemetry components by means of link:https://github.com/open-telemetry/opentelemetry-java/blob/v{openTelemetryVersion}/sdk-extensions/autoconfigure/README.md[autoconfiguration^], using the application's MicroProfile Config properties prefixed with `otel.` first, but also falling back to system properties and environment variables as described in the linked documentation.
 
@@ -129,7 +129,7 @@ Payara Platform provides the following APIs, and it is advised to mark them as `
 * `io.opentelemetry:opentelemetry-exporter-common`
 
 [[using-opentelemetry-manually]]
-=== Using OpenTelemetry Manually
+=== Using Opentelemetry Manually
 [source,java]
 ----
 import io.opentelemetry.api.trace.Tracer;
@@ -158,7 +158,7 @@ public class TracedComponent {
 ----
 
 [[using-opentracing-manually]]
-=== Using OpenTracing Manually
+=== Using Opentracing Manually
 
 [source,java]
 ----
@@ -183,29 +183,29 @@ public class TracedComponent {
 ----
 
 [[using-additional-components]]
-== Using additional components
+== Using Additional Components
 
 If your application requires OpenTracing components that are not shipped with the Payara Platform, it is possible to either put them in common libraries, or ship them with an application. Extension components can be even coded directly in the application code.
 
 [[provider-components-in-lib-directory]]
-=== Provider components in library directory
+=== Provider Components in Library Directory
 
 NOTE: Applies to Payara Server only.
 
 Autoconfiguration can pick up components, which are placed in directory `domain_dir/lib` for example by means of the `asadmin add-library` command.
 
-==== Example: adding export to log
+==== Example: Adding Export to Log
 
 . Download https://mvnrepository.com/artifact/io.opentelemetry/opentelemetry-exporter-logging[opentelemetry-exporter-logging.jar^]
 . Run `asadmin add-library opentelemetry-exporter-logging.jar`
 . Use the component by defining `otel.traces.exporter=logging`
 
 [[provider-components-in-application-code]]
-=== Provider components in application code
+=== Provider Components in Application Code
 
 Applications can declare and use their own OpenTelemetry components such as exporters or samplers by writing against https://www.javadoc.io/doc/io.opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/latest/index.html[autoconfiguration SPI^] and placing appropriate Service Loader resource in the application
 
-==== Example: Minimal logging exporter
+==== Example: Minimal Logging Exporter
 
 .src/main/resources/META-INF/services/io.opentelemetry.sdk.autoconfigure.spi.traces.ConfigurableSpanExporterProvider
 [source]

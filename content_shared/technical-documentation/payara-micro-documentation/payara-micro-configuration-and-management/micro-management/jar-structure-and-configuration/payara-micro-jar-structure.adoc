@@ -3,7 +3,7 @@
 
 This page details the structure of the currents Payara Micro JAR file.
 
-== Payara Micro JAR folder structure
+== Payara Micro JAR Folder Structure
 
 The following is an overview of the file structure for a Payara Micro JAR file:
 
@@ -48,11 +48,11 @@ Here's a brief summary of the folders and files that belong to the structure sho
 
 Payara Micro has two options for unpacking classes:
 
-=== Unpacking to File System (`--unpack`)
+=== Unpacking to File System (`--Unpack`)
 
 By default, Payara Micro will unpack the nested JARs into a temporary directory within the directory specified by either the system property `java.io.tmpdir` or the command line argument `--unpackdir`, and then load them as classes.
 
-=== Unpacking to Memory (`--nested`)
+=== Unpacking to Memory (`--Nested`)
 
 The `--nested` argument will load the classes directly from the nested JARs to the memory without unpacking the JARs into a folder, but may slow the booting process.
 

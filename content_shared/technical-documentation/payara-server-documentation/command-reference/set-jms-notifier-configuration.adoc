@@ -1,4 +1,4 @@
-= set-jms-notifier-configuration
+= Set-Jms-Notifier-Configuration
 
 Configures the settings of the JMS notifier
 

@@ -1,4 +1,4 @@
-= create-http-redirect
+= Create-Http-Redirect
 
 Adds a new HTTP redirect.
 

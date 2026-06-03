@@ -1,4 +1,4 @@
-= list-jms-hosts
+= List-Jms-Hosts
 
 Lists the existing JMS hosts.
 

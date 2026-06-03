@@ -1,4 +1,4 @@
-= list-virtual-servers
+= List-Virtual-Servers
 
 Lists the existing virtual servers.
 

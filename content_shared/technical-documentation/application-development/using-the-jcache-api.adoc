@@ -1,4 +1,4 @@
-= Using the JCache API
+= Using the Jcache API
 :ordinal: 22
 
 This chapter covers how to use the JCache functionality in the Payara Platform.
@@ -148,7 +148,7 @@ public class CacheBean {
 TIP: Keep in mind that this solution only works if your bean has one injected cache only. If you are in a situation where you must inject more than one cache into the bean then consider using the `@NamedCache` annotation to avoid name collisions.
 
 [[using-jcache-annotations]]
-== Using JCache Annotations
+== Using Jcache Annotations
 
 The Payara Platform supports cache definitions and operations on caches by using the standard set of annotations that are part of the JCache API:
 

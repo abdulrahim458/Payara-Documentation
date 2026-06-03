@@ -1,4 +1,4 @@
-= get-jmx-monitoring-configuration
+= Get-Jmx-Monitoring-Configuration
 
 Retrieves the JMX monitoring service general settings.
 

@@ -1,4 +1,4 @@
-= Payara Micro Apache NetBeans IDE Support
+= Payara Micro Apache Netbeans IDE Support
 :ordinal: 2
 
 Apache NetBeans has Payara Micro support built into the IDE, so there is no need to install a plugin to integrate and control Payara Micro from Apache NetBeans.
@@ -21,7 +21,7 @@ Apache NetBeans IDE supports Payara Micro out of the box. To create a Payara Mic
 *image*: apache-netbeans/payara-micro/netbeans-new-application-version-payara6.png[]
 
 [[deploy-payara-micro-project]]
-== Deploying the Payara Micro project
+== Deploying the Payara Micro Project
 
 To deploy the Payara Micro project, simply run the application using the Run Project option from the Run menu. The Payara Micro application will be deployed and the URL will be displayed in the _Output_ window:
 

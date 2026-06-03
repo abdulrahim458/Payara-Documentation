@@ -1,4 +1,4 @@
-= restart-hazelcast
+= Restart-Hazelcast
 
 Restarts the Data Grid/Hazelcast in an specific target.
 

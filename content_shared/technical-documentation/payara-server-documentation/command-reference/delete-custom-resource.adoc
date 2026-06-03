@@ -1,4 +1,4 @@
-= delete-custom-resource
+= Delete-Custom-Resource
 
 Removes a custom resource.
 

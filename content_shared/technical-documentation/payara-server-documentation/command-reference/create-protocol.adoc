@@ -1,4 +1,4 @@
-= create-protocol
+= Create-Protocol
 
 Adds a new protocol.
 

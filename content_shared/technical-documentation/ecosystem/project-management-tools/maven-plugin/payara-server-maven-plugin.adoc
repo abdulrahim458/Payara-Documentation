@@ -283,7 +283,7 @@ mvn payara-server:start -DautoDeploy=true -DliveReload=true -Dexploded=true -Dke
 ----
 
 [[dev-mode-features]]
-==== *Features in Dev Mode*:
+==== *Features in Dev Mode*
 
 . *Auto Deploy*: The AutoDeploy feature enables automatic compilation and deployment of the application upon saving files within the project structure. Enabled by setting `autoDeploy=true`.
 +

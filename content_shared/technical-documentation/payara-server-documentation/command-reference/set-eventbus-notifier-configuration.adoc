@@ -1,4 +1,4 @@
-= set-eventbus-notifier-configuration
+= Set-Eventbus-Notifier-Configuration
 
 Configures the settings of the Event Bus notifier
 

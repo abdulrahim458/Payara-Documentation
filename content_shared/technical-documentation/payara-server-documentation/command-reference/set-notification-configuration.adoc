@@ -1,4 +1,4 @@
-= set-notification-configuration
+= Set-Notification-Configuration
 
 Configures the notification service along with the log notifier.
 

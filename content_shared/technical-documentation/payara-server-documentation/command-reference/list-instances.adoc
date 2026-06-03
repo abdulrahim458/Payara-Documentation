@@ -1,4 +1,4 @@
-= list-instances
+= List-Instances
 
 Lists Payara Server instances in a domain.
 

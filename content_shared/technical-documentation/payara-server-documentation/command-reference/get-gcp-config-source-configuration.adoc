@@ -1,4 +1,4 @@
-= get-gcp-config-source-configuration
+= Get-Gcp-Config-Source-Configuration
 
 Gets the configuration for the GCP configuration source.
 

@@ -1,4 +1,4 @@
-= list-rest-endpoints
+= List-Rest-Endpoints
 
 Lists all the rest endpoints of a deployed web application
 

@@ -1,4 +1,4 @@
-= delete-jdbc-resource
+= Delete-Jdbc-Resource
 
 Removes a JDBC resource with the specified JNDI name.
 

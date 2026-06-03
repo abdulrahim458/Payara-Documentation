@@ -1,4 +1,4 @@
-= list-file-users
+= List-File-Users
 
 Lists the file users.
 

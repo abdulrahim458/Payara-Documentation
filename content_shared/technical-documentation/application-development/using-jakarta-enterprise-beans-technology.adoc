@@ -757,7 +757,7 @@ When tuning performance and resource usage, make sure to consider potential JMS 
 Refer to "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in the Payara Server General Administration section for information on how to get message-driven bean pool statistics.
 
 [[fine-tuning-with-the-activationconfigproperty-annotation]]
-==== Fine-tuning with the ActivationConfigProperty annotation
+==== Fine-Tuning with the Activationconfigproperty Annotation
 
 It is also possible to configure the MDB bean pool size with the `ActivationConfigProperty` annotation. Any bean annotated with `@MessageDriven` can use `@ActivationConfigProperty` to set property names and property values. For example:
 
@@ -836,7 +836,7 @@ Since persistent timers are shared, the `TimerService.getTimers()` method return
 TIP: EJB Timers are persistent by default.
 
 [[preconditions-for-persistent-timers]]
-==== Preconditions for using Persistent Timers in Deployment Groups
+==== Preconditions for Using Persistent Timers in Deployment Groups
 
 Because xref:technical-documentation/payara-server-documentation/high-availability/administering-deployment-groups.adoc[deployment groups] do not need to share configurations amongst their instances, there are several configuration and operational constraints that are not enforced by the server.
 
@@ -850,7 +850,7 @@ To ensure correct behaviour of persistent timers within a deployment group, the 
 EJB Timers may behave in unexpected ways if these conditions are not met.
 
 [[tracing-remote-ejbs]]
-== Tracing Remote EJBs
+== Tracing Remote Ejbs
 
 Remote calls to an EJB from a Java SE client will have their active OpenTelemetry span context automatically propagated to the server, with the server-side span being created as a child of this client call. This will allow users to trace EJB calls that are originated externally from the server, and the span context will be propagated internally to any traceable components.
 

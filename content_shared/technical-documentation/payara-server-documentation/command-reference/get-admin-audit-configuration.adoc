@@ -1,4 +1,4 @@
-= get-admin-audit-configuration
+= Get-Admin-Audit-Configuration
 
 Retrieves the current settings of the Admin Audit Service.
 

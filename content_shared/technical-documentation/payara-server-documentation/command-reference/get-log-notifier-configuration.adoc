@@ -1,4 +1,4 @@
-= get-log-notifier-configuration
+= Get-Log-Notifier-Configuration
 
 Retrieves the settings of the Log notifier
 

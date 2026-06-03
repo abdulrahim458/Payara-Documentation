@@ -1,4 +1,4 @@
-= set-jdbc-config-source-configuration
+= Set-Jdbc-Config-Source-Configuration
 
 Configures the JDBC configuration source.
 

@@ -224,7 +224,7 @@ IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a futu
 It is recommended to use payara-web.xml instead.
 
 [[configuring-replication-and-multi-threaded-concurrent-access-to-httpsessions]]
-=== Configuring DataGrid Replication and Multi-Threaded Concurrent Access to `HttpSessions`
+=== Configuring Datagrid Replication and Multi-Threaded Concurrent Access to `HttpSessions`
 
 If you are using data replication via the Data Grid (`hazelcast`) and your web application involves multiple client threads concurrently accessing the same session ID, then you may experience session loss even without any instance failure.
 
@@ -262,7 +262,7 @@ The following is an example snippet from a `payara-web.xml` file that illustrate
 ----
 
 [[using-single-sign-on-with-session-failover]]
-=== Using Single Sign-on with Session Failover
+=== Using Single Sign-On with Session Failover
 
 In a single application server instance, once a user is authenticated by an application,
 the user is not required to re-authenticate individually to other applications running on the same instance. This is called single sign-on (SSO).

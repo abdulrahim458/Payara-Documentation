@@ -1,4 +1,4 @@
-= get-email-notifier-configuration
+= Get-Email-Notifier-Configuration
 
 Retrieves the settings of the Email notifier
 

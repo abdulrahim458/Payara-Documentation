@@ -1,4 +1,4 @@
-= set-azure-config-source-configuration
+= Set-Azure-Config-Source-Configuration
 
 Sets the configuration for an Azure Secrets configuration source.
 

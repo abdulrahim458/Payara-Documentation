@@ -124,7 +124,7 @@ Notation for units is as follows:
 * `d`
 |===
 
-== Example usages
+== Example Usages
 
 *`*java -jar payara-micro.jar --enableRequestTracing*`*: Enable request tracing
 *`*java -jar payara-micro.jar --enableRequestTracing ns*`*: Enable request tracing and set threshold unit to nanoseconds (`_value_`

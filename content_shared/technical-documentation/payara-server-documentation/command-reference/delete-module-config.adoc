@@ -1,4 +1,4 @@
-= delete-module-config
+= Delete-Module-Config
 
 Removes the configuration of a module from `domain.xml`.
 

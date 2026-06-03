@@ -1,4 +1,4 @@
-= create-connector-connection-pool
+= Create-Connector-Connection-Pool
 
 Adds a connection pool with the specified connection pool name.
 

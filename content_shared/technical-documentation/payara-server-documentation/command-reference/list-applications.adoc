@@ -1,4 +1,4 @@
-= list-applications
+= List-Applications
 
 Lists deployed applications.
 

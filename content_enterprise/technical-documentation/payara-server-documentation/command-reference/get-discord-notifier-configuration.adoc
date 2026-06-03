@@ -1,4 +1,4 @@
-= get-discord-notifier-configuration
+= Get-Discord-Notifier-Configuration
 
 Retrieves the settings of the Discord notifier.
 

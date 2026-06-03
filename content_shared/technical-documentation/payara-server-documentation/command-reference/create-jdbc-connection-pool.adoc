@@ -1,4 +1,4 @@
-= create-jdbc-connection-pool
+= Create-Jdbc-Connection-Pool
 
 Registers a JDBC connection pool.
 

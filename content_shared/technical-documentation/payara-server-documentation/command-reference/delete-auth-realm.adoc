@@ -1,4 +1,4 @@
-= delete-auth-realm
+= Delete-Auth-Realm
 
 Removes the named authentication realm.
 

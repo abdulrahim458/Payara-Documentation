@@ -1,4 +1,4 @@
-= Persistent EJB timers
+= Persistent EJB Timers
 
 Payara Micro supports persistent EJB timers which are stored across Payara Micro instances within the cluster, backed by distributed Hazelcast cache.
 
@@ -11,7 +11,7 @@ The second requirement is to specify a name for every Payara Micro instance whic
 CAUTION: Persistent timers are **NOT** coordinated across a Payara Micro cluster. They are always executed on an instance with the same name that created the timers.
 
 [[requirements-to-setup-a-persistent-timer]]
-== Requirements to setup a persistent timer
+== Requirements to Setup a Persistent Timer
 
 . The timer has to be persistent, i.e. the value of `persistent` attribute is not forcibly set to `false`
 . A Payara Micro instance is given a unique name using `--name` argument
@@ -20,7 +20,7 @@ CAUTION: Persistent timers are **NOT** coordinated across a Payara Micro cluster
 NOTE: The Hazelcast cluster can be formed by other Payara Micro instances, Payara Server instances with Hazelcast turned on, or by standalone Hazelcast instances.
 
 [[how-ejb-timers-are-persisted]]
-== How EJB timers are persisted
+== How EJB Timers Are Persisted
 
 Once timers are scheduled, either by the `@Schedule` annotation or using the `TimerService`, the schedule is stored into the Hazelcast distributed cache. The schedule is given a key, which is the name of the Payara Micro instance that created the timer. If that instance goes down, the timer will be recreated on another instance with the same name once it joins the cluster. Until that time, the timer becomes inactive.
 

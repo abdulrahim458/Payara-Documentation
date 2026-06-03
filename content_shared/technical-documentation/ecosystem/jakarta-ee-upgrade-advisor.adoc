@@ -78,7 +78,7 @@ etc.
 The following are examples of the different severity levels of findings reported by the advisor tool:
 
 [[example-1-info-message]]
-=== Example INFO message
+=== Example INFO Message
 
 [source, log]
 ----
@@ -94,7 +94,7 @@ This issue won't affect your application.
 ----
 
 [[example-2-warning-message]]
-=== Example WARNING message
+=== Example WARNING Message
 
 [source, log]
 ----
@@ -108,7 +108,7 @@ This issue won't affect your application.
 ----
 
 [[example-3-error-message]]
-=== Example ERROR message
+=== Example ERROR Message
 
 [source, log]
 ----

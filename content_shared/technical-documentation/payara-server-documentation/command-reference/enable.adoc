@@ -1,4 +1,4 @@
-= enable
+= Enable
 
 Enables the component.
 

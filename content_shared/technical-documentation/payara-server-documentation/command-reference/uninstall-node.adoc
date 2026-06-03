@@ -1,4 +1,4 @@
-= uninstall-node
+= Uninstall-Node
 
 Uninstalls Payara Server software from specified hosts.
 

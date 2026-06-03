@@ -1,4 +1,4 @@
-= change-master-broker
+= Change-Master-Broker
 
 Changes the master broker in a Message Queue cluster providing JMS services for a Payara Server cluster.
 

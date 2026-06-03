@@ -1,4 +1,4 @@
-= list-web-env-entry
+= List-Web-Env-Entry
 
 Lists environment entries for a deployed web application or module.
 

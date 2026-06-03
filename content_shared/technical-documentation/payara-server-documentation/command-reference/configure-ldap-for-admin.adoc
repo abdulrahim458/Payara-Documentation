@@ -1,4 +1,4 @@
-= configure-ldap-for-admin
+= Configure-Ldap-For-Admin
 
 Configures the authentication realm named admin-realm for the given LDAP.
 

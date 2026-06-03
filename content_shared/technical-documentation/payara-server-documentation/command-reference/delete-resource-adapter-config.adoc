@@ -1,4 +1,4 @@
-= delete-resource-adapter-config
+= Delete-Resource-Adapter-Config
 
 Deletes the resource adapter configuration.
 

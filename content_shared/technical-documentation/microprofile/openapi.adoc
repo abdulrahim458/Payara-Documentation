@@ -1,6 +1,6 @@
-= Eclipse MicroProfile OpenAPI API
+= Eclipse Microprofile Openapi API
 
-The Payara Platform {page-version} provides MicroProfile OpenAPI {mpOpenAPIVersion}
+The Payara Platform {version} provides MicroProfile OpenAPI {mpOpenAPIVersion}
 
 [[background]]
 == Background
@@ -25,7 +25,7 @@ By default, the OpenAPI document is displayed in YAML format, although this can 
 For example, `http://localhost:8080/openapi?format=json`. The valid values are `json` and `yaml`.
 
 [[sources]]
-== OpenAPI Configuration Sources
+== Openapi Configuration Sources
 
 MicroProfile OpenAPI specifies several ways of configuring the data in the produced OpenAPI document. These are all provided by the OpenAPI API artifact:
 
@@ -91,7 +91,7 @@ In addition to the standard properties, the following properties have been added
 |===
 
 [[sources-model-reader]]
-=== OASModelReader
+=== Oasmodelreader
 
 `org.eclipse.microprofile.openapi.OASModelReader`
 
@@ -105,7 +105,7 @@ mp.openapi.model.reader=fish.payara.examples.OASModelReaderImpl
 This class will be called at the beginning of the OpenAPI document generation, and will create the initial OpenAPI document.
 
 [[sources-filter]]
-=== OASFilter
+=== Oasfilter
 
 `org.eclipse.microprofile.openapi.OASFilter`
 
@@ -265,7 +265,7 @@ components: {}
 ----
 
 [[openApi-configuration]]
-== OpenAPI Configuration
+== Openapi Configuration
 
 On Payara Server, MicroProfile OpenAPI settings can be configured by using the Admin Console or Asadmin CLI commands.
 
@@ -292,7 +292,7 @@ By default, the OpenAPI endpoint binds to the root context application which is 
 If a user application is deployed in the empty context-root, then the security configuration of this application will be shared by the OpenAPI endpoint, so exert extreme caution when making these changes.
 
 [[microprofile-4-upgrade]]
-== Upgrading from MicroProfile 3.x to 4.x
+== Upgrading from Microprofile 3.x to 4.x
 
 MicroProfile 4.0 brings with it a number of changes to MicroProfile OpenAPI, among these changes are some which break previous behaviour. The breaking changes are primarily to do with the removal of a number of methods previously marked as deprecated from the API, and only affect the use of OpenAPI programmatically (there are no breaking changes pertaining to the use of the annotations).
 

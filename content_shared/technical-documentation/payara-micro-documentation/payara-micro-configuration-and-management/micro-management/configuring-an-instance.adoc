@@ -55,7 +55,7 @@ java -Xshareclasses:name=payara-micro -jar payara-micro.jar --warmup
 ----
 
 [[read-configuration-from-a-file]]
-=== Read configuration from a file
+=== Read Configuration from a File
 
 With `--domainConfig` option, it is possible to define multiple options in a
 configuration file. This option would override the default Payara Micro configuration
@@ -331,7 +331,7 @@ Payara Micro supports the following system properties:
 |==================================================
 
 [[configuring-alternate-keystores-for-ssl]]
-== Configuring Alternate KeyStores for SSL
+== Configuring Alternate Keystores for SSL
 
 Payara Micro comes with Keystore files directly embedded within the JAR file.
 

@@ -1,4 +1,4 @@
-= stop-cluster
+= Stop-Cluster
 
 Stops a Payara Server cluster.
 

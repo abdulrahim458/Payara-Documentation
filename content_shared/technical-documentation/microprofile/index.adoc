@@ -1,21 +1,21 @@
-= Eclipse MicroProfile
+= Eclipse Microprofile
 
 [[what-is]]
-== What is Eclipse MicroProfile?
+== What Is Eclipse Microprofile?
 The MicroProfile project was launched in June 2016 as a collaborative effort between Java application server vendors and the enterprise Java community to enable fast innovation.
 
 MicroProfile is a specification which provides a set of APIs focused on microservices. The complete MicroProfile API is provided as a Bill Of Materials(BOM) which can be used by developers as a generic dependency provided by a vendor of their choice.
 
 Payara has been part of the MicroProfile project from its inception and, therefore, supports all specifications of the MicroProfile Umbrella project.
 
-== Payara Support for MicroProfile
+== Payara Support for Microprofile
 
 *Version 6.1*
 Version 6.1 of MicroProfile is a minor release that updates Metrics, Config and Telemetry. Also, this version aligns with Jakarta EE 10 Core Profile and continues with the `jakarta.*` namespace alignment and allows to be certified with Java SE 11 or higher.
 
 This is supported by Azul Payara Community starting from releases *7.2025.1* onwards
 
-== What does each specification contain?
+== What Does Each Specification Contain?
 [cols="1,3a,5a", options="header"]
 |===
 |Version

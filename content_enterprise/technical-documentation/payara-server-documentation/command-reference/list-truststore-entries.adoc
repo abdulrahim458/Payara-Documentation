@@ -1,4 +1,4 @@
-= list-truststore-entries
+= List-Truststore-Entries
 
 Displays entries in the specified domain trust store
 

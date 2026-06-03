@@ -1,4 +1,4 @@
-= get-snmp-notifier-configuration
+= Get-Snmp-Notifier-Configuration
 
 Retrieves the settings of the SNMP notifier
 

@@ -1,4 +1,4 @@
-= list-batch-runtime-configuration
+= List-Batch-Runtime-Configuration
 
 Displays the configuration of the batch runtime.
 

@@ -1,4 +1,4 @@
-= create-deployment-group
+= Create-Deployment-Group
 
 Creates a Payara Server deployment group.
 

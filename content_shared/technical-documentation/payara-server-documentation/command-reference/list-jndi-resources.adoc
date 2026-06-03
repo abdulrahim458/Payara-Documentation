@@ -1,4 +1,4 @@
-= list-jndi-resources
+= List-Jndi-Resources
 
 Lists all existing JNDI resources.
 

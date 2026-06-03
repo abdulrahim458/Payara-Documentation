@@ -1,4 +1,4 @@
-= list-auth-realms
+= List-Auth-Realms
 
 Lists the authentication realms.
 

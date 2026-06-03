@@ -1,4 +1,4 @@
-= get-config-property
+= Get-Config-Property
 
 Provides a way to get the value of a MicroProfile configuration property stored in a specific configuration source.
 

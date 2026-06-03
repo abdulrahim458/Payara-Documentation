@@ -1,4 +1,4 @@
-= restore-domain
+= Restore-Domain
 
 Restore files from backup.
 

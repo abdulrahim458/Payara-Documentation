@@ -3,7 +3,7 @@
 The Payara Platform supports exporting the JMX Beans and HealthCheck stats to the Vendor Metrics.
 
 [[JMX-MBeans]]
-== JMX MBeans
+== JMX Mbeans
 
 JMX MBeans can be exposed as **Custom Vendor Metrics** by the user by supplying a custom link:https://github.com/payara/Payara/blob/master/appserver/payara-appserver-modules/microprofile/metrics/src/main/resources/metrics.xml[metrics.xml^] file in the `domain-dir/config/` directory with the following format:
 
@@ -37,7 +37,7 @@ IMPORTANT: Payara Server has a more extensive range of MBeans available than Pay
 Each of these AMX MBeans are also lazily loaded so, for example, JDBC connection pool MBeans will not be visible until an application that uses the connection pool is deployed.
 
 [[templating-metrics-amx-mbeans]]
-=== Templating Metrics for AMX MBeans
+=== Templating Metrics for AMX Mbeans
 
 It is possible to create a template for a metric based on AMX MBeans properties for multiple resource configurations or similar objects (like JDBC connection pools for example).
 
@@ -167,7 +167,7 @@ vendor:jdbc_connection_pool_resources/_h2_pool_pool_numconncreated#count 0
 ----
 
 [[HealthCheck-Stats]]
-== HealthCheck Stats
+== Healthcheck Stats
 
 xref:technical-documentation/payara-server-documentation/general-administration/administering-the-healthcheck-service.adoc[HealthCheck Services] can be exposed as **Custom Vendor Metrics** by the user by supplying a custom link:https://github.com/payara/Payara/blob/master/appserver/payara-appserver-modules/microprofile/metrics/src/main/resources/metrics.xml[metrics.xml^] file in the `domain-dir/config/` directory as well.
 
@@ -211,7 +211,7 @@ vendor_thread_stuck_count 0
 IMPORTANT: Health Check services need to be enabled first
 
 [[templating-metrics-healthcheck-service]]
-=== Templating Metrics for HealthCheck Service
+=== Templating Metrics for Healthcheck Service
 
 It is possible to create a template for a metric for multiple resource, attributes or sub-attributes configurations.
 

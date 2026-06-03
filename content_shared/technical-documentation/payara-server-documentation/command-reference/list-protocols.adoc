@@ -1,4 +1,4 @@
-= list-protocols
+= List-Protocols
 
 Lists the existing protocols.
 

@@ -1,4 +1,4 @@
-= notification-configure
+= Notification-Configure
 
 Configures the notification service.
 

@@ -1,4 +1,4 @@
-= create-domain
+= Create-Domain
 
 Creates a domain.
 

@@ -1,4 +1,4 @@
-= set-monitoring-service-configuration
+= Set-Monitoring-Service-Configuration
 
 Configures the monitoring service.
 

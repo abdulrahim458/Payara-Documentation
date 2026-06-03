@@ -1,4 +1,4 @@
-= list-file-groups
+= List-File-Groups
 
 Lists file groups.
 

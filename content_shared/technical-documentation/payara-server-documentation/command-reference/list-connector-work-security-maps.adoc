@@ -1,4 +1,4 @@
-= list-connector-work-security-maps
+= List-Connector-Work-Security-Maps
 
 Lists the work security maps belonging to the specified resource adapter.
 

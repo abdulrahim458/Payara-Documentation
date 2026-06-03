@@ -1,4 +1,4 @@
-= validate-multicast
+= Validate-Multicast
 
 Validates that multicast transport is available for clusters.
 

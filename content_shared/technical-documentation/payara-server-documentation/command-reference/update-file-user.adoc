@@ -1,4 +1,4 @@
-= update-file-user
+= Update-File-User
 
 Updates a current file user as specified.
 

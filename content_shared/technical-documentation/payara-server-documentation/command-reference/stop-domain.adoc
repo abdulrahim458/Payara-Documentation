@@ -1,4 +1,4 @@
-= stop-domain
+= Stop-Domain
 
 Stops the Domain Administration Server(DAS) of the specified domain.
 

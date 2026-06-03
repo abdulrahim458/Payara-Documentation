@@ -1,4 +1,4 @@
-= deploy
+= Deploy
 
 Deploys the specified component.
 

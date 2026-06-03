@@ -1,4 +1,4 @@
-= Administering the HealthCheck Service
+= Administering the Healthcheck Service
 :ordinal: 9
 
 Payara Server includes a HealthCheck Service that is disabled by default. When enabled it can periodically check the following performance metrics:
@@ -23,11 +23,11 @@ If the xref:technical-documentation/payara-server-documentation/general-administ
 
 [source, log, subs=attributes+]
 ----
-[2016-05-24T03:52:28.690+0000] [Payara {page-version}] [INFO] [fish.payara.nucleus.healthcheck.HealthCheckService] [tid: _ThreadID=72 _ThreadName=healthcheck-service-3 [timeMillis: 1464061948690] [levelValue: 800] [[ CPUC:Health Check Result:[[status=WARNING, message='CPU%: 75.6, Time CPU used: 267 milliseconds'']']]]  [2016-05-24T21:11:36.579+0000] [Payara 4.1] [SEVERE] [fish.payara.nucleus.healthcheck.HealthCheckService] [tid: _ThreadID=71 _ThreadName=healthcheck-service-3] [timeMillis: 1464124296579] [levelValue: 1000] [[ HOGT:Health Check Result:[[status=CRITICAL, message='Thread with <id-name>: 145-testing-thread-1 is a hogging thread for the last 59 seconds 999 milliseconds'']']]]
+[2016-05-24T03:52:28.690+0000] [Payara {version}] [INFO] [fish.payara.nucleus.healthcheck.HealthCheckService] [tid: _ThreadID=72 _ThreadName=healthcheck-service-3 [timeMillis: 1464061948690] [levelValue: 800] [[ CPUC:Health Check Result:[[status=WARNING, message='CPU%: 75.6, Time CPU used: 267 milliseconds'']']]]  [2016-05-24T21:11:36.579+0000] [Payara 4.1] [SEVERE] [fish.payara.nucleus.healthcheck.HealthCheckService] [tid: _ThreadID=71 _ThreadName=healthcheck-service-3] [timeMillis: 1464124296579] [levelValue: 1000] [[ HOGT:Health Check Result:[[status=CRITICAL, message='Thread with <id-name>: 145-testing-thread-1 is a hogging thread for the last 59 seconds 999 milliseconds'']']]]
 ----
 
 [[configuration]]
-== HealthCheck Service Configuration
+== Healthcheck Service Configuration
 
 As with any other services available in Payara Server, the HealthCheck service can be configured by using the web console or by using administration commands.
 
@@ -74,7 +74,7 @@ You can configure the settings for each checker on the respective tab in the web
 image:healthcheck/cpu-usage-checker-configuration.png[alt="CPU Usage Checker Configuration in the Admin Console",width=600px]
 
 [[common-checker-configuration]]
-==== Common HealthCheck Service Checkers Configuration
+==== Common Healthcheck Service Checkers Configuration
 
 The following are the configurable attributes available to *ALL* the HealthCheck Service performance metric checkers:
 
@@ -99,7 +99,7 @@ The following are the configurable attributes available to *ALL* the HealthCheck
 The default value is **MINUTES**.
 
 [[threshold-range-configuration]]
-==== Threshold Range Configuration for HealthCheck Service Checkers
+==== Threshold Range Configuration for Healthcheck Service Checkers
 
 The following attributes are available to the *CPU Usage*, *Connection Pool*, *Heap Memory Usage*, *Machine Memory Usage* and *Garbage Collector* checkers:
 
@@ -117,7 +117,7 @@ Health Check notification with severity level: WARNING - CPUC:Health Check Resul
 -----
 
 [[special-checkers-configuration]]
-==== Special HealthCheck Service Checkers Configuration
+==== Special Healthcheck Service Checkers Configuration
 
 The *Hogging Threads* and the *Stuck Threads* checkers are special on their configuration.
 

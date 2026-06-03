@@ -1,4 +1,4 @@
-= list-domains
+= List-Domains
 
 Lists the domains in the specified directory.
 

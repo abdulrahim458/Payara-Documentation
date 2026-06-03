@@ -11,7 +11,7 @@ Documentation for the _Open Message Queue_ software can be found in the followin
 * link:https://eclipse-ee4j.github.io/openmq/guides/mq-admin-guide/toc.html[OpenMQ Administration Guide^]
 
 [[using-message-queue-broker-clusters-with-payara-server]]
-== Using Message Queue Broker Clusters With Payara Server
+== Using Message Queue Broker Clusters with Payara Server
 
 This section describes how the JMS service uses Message Queue broker clusters to support *high-availability* JMS messaging in Payara Server clusters and deployment groups. It describes the different cluster and broker types that are supported and how to configure them.
 
@@ -97,7 +97,7 @@ The instructions provided will also apply to *deployment groups* as well, howeve
 When running the commands listed in the respective instructions, instead of targeting a server cluster, you can target a deployment group instead.
 
 [[to-configure-a-payara-cluster-to-use-an-embedded-or-local-conventional-broker-cluster-with-master-broker]]
-=== To Configure a Payara Cluster to Use an Embedded or Local Conventional Broker Cluster With Master Broker
+=== To Configure a Payara Cluster to Use an Embedded or Local Conventional Broker Cluster with Master Broker
 
 Use the `configure-jms-cluster` subcommand in remote `asadmin` mode to configure a conventional broker cluster with master broker to service a Payara Server cluster that uses either `Embedded` or `Local` JMS hosts.
 
@@ -172,7 +172,7 @@ asadmin change-master-broker payara-clustered-instance-name
 You can also view the full syntax and options of the subcommand by typing `asadmin help change-master-broker` at the command line.
 
 [[to-migrate-between-types-of-embedded-or-local-conventional-broker-clusters]]
-=== To Migrate Between Types of Embedded or Local Conventional Broker Clusters
+=== To Migrate between Types of Embedded or Local Conventional Broker Clusters
 
 If the need arises to convert from a conventional broker cluster with master broker to a conventional broker cluster of peer brokers, or the reverse, follow the instructions in the *Managing Conventional Clusters* section of the OpenMQ Administration Guide.
 
@@ -290,7 +290,7 @@ For enhanced clusters, this field specifies the number of times the Java Message
 You can override these settings using JMS connection factory settings. For details, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-connection-factories-and-destinations[Administering JMS Connection Factories and Destinations]" in the Payara Server General Administration section.
 
 [[load-balanced-delivery-to-mdbs]]
-== Load-Balanced Delivery to MDBs
+== Load-Balanced Delivery to Mdbs
 
 When a message-driven bean (MDB) application is deployed to a Payara Server cluster, incoming messages are delivered randomly to MDBs without regard to the server cluster instances in which they are running.
 

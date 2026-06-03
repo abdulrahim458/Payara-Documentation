@@ -13,7 +13,7 @@ Azul Payara is available in 2 editions:
 *Azul Payara*: Designed for mission-critical projects in production environments
 *Azul Payara Community*: Designed for development projects, or when innovation is higher priority than security and stability
 
-=== Azul Payara exclusive Features
+=== Azul Payara Exclusive Features
 
 The following features are supported by Azul Payara but are not included in Azul Payara Community:
 

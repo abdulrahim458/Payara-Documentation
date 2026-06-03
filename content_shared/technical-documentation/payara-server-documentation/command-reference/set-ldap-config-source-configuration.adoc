@@ -1,4 +1,4 @@
-= set-ldap-config-source-configuration
+= Set-Ldap-Config-Source-Configuration
 
 Sets the LDAP Config Source
 

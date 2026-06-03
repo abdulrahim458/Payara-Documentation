@@ -1,6 +1,6 @@
-= Eclipse MicroProfile Fault Tolerance API
+= Eclipse Microprofile Fault Tolerance API
 
-The Payara Platform {page-version} provides MicroProfile Fault Tolerance {mpFaultToleranceVersion}
+The Payara Platform {version} provides MicroProfile Fault Tolerance {mpFaultToleranceVersion}
 
 == Background
 
@@ -73,7 +73,7 @@ Use the following commands to modify the configuration settings of the MicroProf
 * xref:technical-documentation/payara-server-documentation/command-reference/get-fault-tolerance-configuration.adoc#get-fault-tolerance-configuration[`get-fault-tolerance-configuration`]
 
 [[microprofile-upgrade]]
-== Upgrading from Eclipse MicroProfile 3.x to 4.x
+== Upgrading from Eclipse Microprofile 3.x to 4.x
 
 MicroProfile 4.0 brings with it a number of changes to MicroProfile Fault Tolerance. There are two incompatible changes with the previous version of MicroProfile Fault Tolerance.
 
@@ -106,7 +106,7 @@ base:ft.timeout.calls.total{method="<name>", timedOut="true"}
 ----
 
 [[lifecycle-specified]]
-=== Lifecycle of CircuitBreakers and Bulkheads Specified
+=== Lifecycle of Circuitbreakers and Bulkheads Specified
 
 In previous versions of MicroProfile Fault Tolerance, the lifecycle of `CircuitBreaker` and `Bulkhead`  annotations was not specified. These fault tolerance strategies hold state between invocations, so their lifecycle is important for correct functioning.
 

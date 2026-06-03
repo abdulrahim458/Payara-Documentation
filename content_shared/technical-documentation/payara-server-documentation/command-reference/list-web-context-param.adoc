@@ -1,4 +1,4 @@
-= list-web-context-param
+= List-Web-Context-Param
 
 Lists servlet context-initialization parameters of a deployed web application or module.
 

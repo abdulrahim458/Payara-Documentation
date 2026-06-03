@@ -1,4 +1,4 @@
-= set-config-property
+= Set-Config-Property
 
 Provides a way to set the value of a MicroProfile Configuration property in a specific configuration source.
 

@@ -1,4 +1,4 @@
-= create-file-user
+= Create-File-User
 
 Creates a new file user.
 

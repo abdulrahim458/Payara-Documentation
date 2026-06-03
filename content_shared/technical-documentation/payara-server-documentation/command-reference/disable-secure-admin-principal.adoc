@@ -1,4 +1,4 @@
-= disable-secure-admin-principal
+= Disable-Secure-Admin-Principal
 
 Disables the certificate for authorizing access in secure administration.
 

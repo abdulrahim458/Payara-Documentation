@@ -349,7 +349,7 @@ asadmin> set configs.config.config-name.network-config.protocols.protocol.listen
 By default, Payara Server uses the implementation `com.sun.enterprise.security.ssl.GlassfishSSLImpl` for the SSL protocol.
 
 [[delete-ssl-from-an-http-listener]]
-=== *Delete SSL From an HTTP Listener*
+=== *Delete SSL from an HTTP Listener*
 
 Use the `delete-ssl` subcommand in remote mode to delete the SSL element in the specified listener. This disables secure communications for the listener.
 
@@ -362,7 +362,7 @@ Remote subcommands require a running server.
 See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 [[example-to-delete-ssl-from-an-http-listener]]
-==== Example - Deleting SSL From an HTTP Listener
+==== Example - Deleting SSL from an HTTP Listener
 
 This example disables SSL for the HTTP listener named `http-listener-1`:
 
@@ -1045,7 +1045,7 @@ specified in the *HTTP Service*.
 |===
 
 [[additional-properties]]
-=== Additional properties
+=== Additional Properties
 
 Defines additional properties for the configuration of a virtual server.
 

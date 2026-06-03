@@ -1,4 +1,4 @@
-= get-hashicorp-config-source-configuration
+= Get-Hashicorp-Config-Source-Configuration
 
 Gets the configuration for the HashiCorp configuration source.
 

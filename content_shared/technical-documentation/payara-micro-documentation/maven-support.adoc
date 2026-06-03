@@ -15,19 +15,19 @@ To do this, use the following GAV coordinates:
 <dependency>
     <groupId>fish.payara.extras</groupId>
     <artifactId>payara-micro</artifactId>
-    <version>{page-version}</version>
+    <version>{version}</version>
 </dependency>
 ----
 
 IMPORTANT: The xref:technical-documentation/public-api/index.adoc[Public API] dependency must be also added to the project's POM when developing applications that use proprietary features (`@Clustered` or `@NamedCache` for example).
 
 [[run-payara-micro-using-the-maven-plugin]]
-== Run Payara Micro using the Maven Plugin
+== Run Payara Micro Using the Maven Plugin
 
 There is a maven plugin built specifically for use with Payara Micro. It has goals to `bundle` the application into an Uber JAR, `start` and `stop` Payara Micro. This plugin is xref:technical-documentation/ecosystem/project-management-tools/maven-plugin.adoc[fully documented in the Ecosystem section].
 
 [[run-payara-micro-using-netbeans]]
-== Run Payara Micro using the NetBeans IDE
+== Run Payara Micro Using the Netbeans IDE
 
 There is a Payara Platform tools plugin built for the Apache NetBeans IDE, specifically designed for Payara Micro to create and manage application actions (e.g., run, reload, and debug).
 

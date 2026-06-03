@@ -1,4 +1,4 @@
-= create-context-service
+= Create-Context-Service
 
 The `create-context-service` asadmin command creates a context service resource.
 
