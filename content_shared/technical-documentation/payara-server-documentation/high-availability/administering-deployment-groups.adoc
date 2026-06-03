@@ -52,13 +52,13 @@ To create a new deployment group using the Admin Console, follow these steps:
 +
 image:deployment-groups/deployment-group-new.png[alt="Create New Deployment Group",width=100%]
 +
-IMPORTANT: Instances created in this screen will be created alongside a corresponding xref:technical-documentation/payara-server-documentation/command-reference/configuration.adoc[configuration] object that is a copy of the `default-config` object. +
+IMPORTANT: Instances created in this screen will be created alongside a corresponding xref:../command-reference/configuration.adoc[configuration] object that is a copy of the `default-config` object. +
 If you want these instances to reference an existing configuration object, it is better to create them from the _Instances_ screen and add them to the deployment group later.
 
 [#create-using-asadmin-cli]
 ==== Using Asadmin Commands
 
-To create a new deployment group run the xref:technical-documentation/payara-server-documentation/command-reference/create-deployment-group.adoc[`create-deployment-group`] command:
+To create a new deployment group run the xref:../command-reference/create-deployment-group.adoc[`create-deployment-group`] command:
 
 [source, shell]
 ----
@@ -86,7 +86,7 @@ image:deployment-groups/delete-deployment-group.png[alt="Delete a Deployment Gro
 [#delete-using-asadmin-cli]
 ==== Using Asadmin Commands
 
-To delete a deployment group use the xref:technical-documentation/payara-server-documentation/command-reference/delete-deployment-group.adoc[`delete-deployment-group`] command:
+To delete a deployment group use the xref:../command-reference/delete-deployment-group.adoc[`delete-deployment-group`] command:
 
 [source, shell]
 ----
@@ -109,7 +109,7 @@ Existing standalone instances be assigned to an existing deployment group via th
 +
 image:deployment-groups/add-server-to-dg.png[alt="Add a Server to a Deployment Group",width=100%]
 
-The same result can be achieved from the command line by using the xref:technical-documentation/payara-server-documentation/command-reference/add-instance-to-deployment-group.adoc[`add-instance-to-deployment-group`] command:
+The same result can be achieved from the command line by using the xref:../command-reference/add-instance-to-deployment-group.adoc[`add-instance-to-deployment-group`] command:
 
 [source, shell]
 ----
@@ -129,7 +129,7 @@ If you want to remove an instance from a deployment group by using the Admin con
 +
 image:deployment-groups/remove-server-from-dg.png[alt="Remove a Server from a Deployment Group",width=100%]
 
-The same can be achieved using the Asadmin CLI by using the xref:technical-documentation/payara-server-documentation/command-reference/remove-instance-from-deployment-group.adoc[`remove-instance-from-deployment-group`] command:
+The same can be achieved using the Asadmin CLI by using the xref:../command-reference/remove-instance-from-deployment-group.adoc[`remove-instance-from-deployment-group`] command:
 
 [source, shell]
 ----
@@ -155,9 +155,9 @@ TIP: These commands are Data Grid safe and operated in a way as to minimize the 
 
 The same can be achieved from the command line by using the following Asadmin commands:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/start-deployment-group.adoc[`start-deployment-group`]
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-deployment-group.adoc[`stop-deployment-group`]
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-deployment-group.adoc[`restart-deployment-group`]
+* xref:../command-reference/start-deployment-group.adoc[`start-deployment-group`]
+* xref:../command-reference/stop-deployment-group.adoc[`stop-deployment-group`]
+* xref:../command-reference/restart-deployment-group.adoc[`restart-deployment-group`]
 
 Like this:
 
@@ -178,7 +178,7 @@ This can be done both on the _Applications_ tab of the corresponding deployment 
 
 image:deployment-groups/deploy-to-dg.png[alt="Deploy to a deployment group",width=100%]
 
-To deploy an application from the command line by using the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`] command, just specify the deployment group as a *target* like this:
+To deploy an application from the command line by using the xref:../command-reference/deploy.adoc[`deploy`] command, just specify the deployment group as a *target* like this:
 
 [source, shell]
 ----
@@ -190,11 +190,11 @@ NOTE: The same targeting also works for server resources (connection pools, mail
 [#see-also]
 == See Also
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc[Domain Data Grid],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-deployment-group.adoc[`create-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-deployment-group.adoc[`delete-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-deployment-group.adoc[`start-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-deployment-group.adoc[`stop-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-deployment-group.adoc[`restart-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/remove-instance-from-deployment-group.adoc[`remove-instance-from-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/add-instance-to-deployment-group.adoc[`add-instance-to-deployment-group`]
+* xref:administering-the-domain-data-grid.adoc[Domain Data Grid]
+* xref:../command-reference/create-deployment-group.adoc[`create-deployment-group`]
+* xref:../command-reference/delete-deployment-group.adoc[`delete-deployment-group`]
+* xref:../command-reference/start-deployment-group.adoc[`start-deployment-group`]
+* xref:../command-reference/stop-deployment-group.adoc[`stop-deployment-group`]
+* xref:../command-reference/restart-deployment-group.adoc[`restart-deployment-group`]
+* xref:../command-reference/remove-instance-from-deployment-group.adoc[`remove-instance-from-deployment-group`]
+* xref:../command-reference/add-instance-to-deployment-group.adoc[`add-instance-to-deployment-group`]
