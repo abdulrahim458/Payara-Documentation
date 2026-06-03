@@ -1,11 +1,11 @@
 = Documentation Overview
 
-This page provides some general information about the Payara Platform Community Edition.
+This page provides some general information about the Azul Payara Community Edition.
 
 [[release-strategy]]
 == Release Strategy
 
-The Payara Platform Community Edition project is released frequently (every 4 to 8 weeks on average). Each release incorporates new features, fixes, and enhancements from multiple sources.
+The Azul Payara Community Edition project is released frequently (every 4 to 8 weeks on average). Each release incorporates new features, fixes, and enhancements from multiple sources.
 
 [[versioning-scheme]]
 == Versioning Scheme

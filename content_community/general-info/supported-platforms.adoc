@@ -41,7 +41,7 @@ In general, any Payara Platform distribution runs on any system supported by at 
 Note (1): Payara will support Enterprise products when deployed in RHEL-compatible environments that are supported by SUSE through its Multi-Linux Support (MLS) offering
 
 == Third Party Collaborations
-Payara Platform Enterprise integrates with various other services that complement
+Azul Payara integrates with various other services that complement
 your Java deployment experience on the platform.
 
 === Azul Platform

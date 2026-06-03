@@ -2,20 +2,20 @@
 
 This is the documentation for Azul Payara Community, consisting of Azul Payara Server Community and Azul Payara Micro Community. The Community Edition of the software is targeted for developers looking to play with the latest features and APIs during development before potentially moving to Payara Enterprise in production.
 
-Payara Platform Community Edition provides a frequent release cycle to drive faster innovation. Payara Server Community and Payara Micro Community are dedicated to rapid change and innovation, giving developers a place to play with the latest features of the Payara Platform as soon as possible.
+Azul Payara Community Edition provides a frequent release cycle to drive faster innovation. Payara Server Community and Payara Micro Community are dedicated to rapid change and innovation, giving developers a place to play with the latest features of the Payara Platform as soon as possible.
 
 image:payara-community-bg.png[alt="payara-logo-blue.png",width=600px][alt="Payara Logo",width=600px]
 
-== Payara Platform Editions
+== Azul Payara Editions
 
-The Payara Platform is available in 2 editions:
+Azul Payara is available in 2 editions:
 
-*Payara Platform Community Edition*: Designed for development projects, or when innovation is higher priority than security and stability
-*Payara Platform Enterprise Edition*: Designed for mission-critical projects in production environments
+*Azul Payara*: Designed for mission-critical projects in production environments
+*Azul Payara Community*: Designed for development projects, or when innovation is higher priority than security and stability
 
-=== Payara Platform Enterprise exclusive Features
+=== Azul Payara exclusive Features
 
-The following features are supported by Payara Platform Enterprise but are not included in Payara Platform Community:
+The following features are supported by Azul Payara but are not included in Azul Payara Community:
 
 [cols="<,<a,<,<",options="header",]
 |=======================================================

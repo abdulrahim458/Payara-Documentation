@@ -39,10 +39,12 @@ The Payara Platform currently runs on the following Operating Systems in all the
 In general, any Payara Platform distribution runs on any system supported by at least one of the JVMs it runs on.
 
 == Third Party Collaborations
-Payara Platform Enterprise integrates with various other services that complement
+
+Azul Payara integrates with various other services that complement
 your Java deployment experience on the platform.
 
 === Azul Platform
+
 Payara’s partnership with Azul brings Azul Platform Core and Azul Platform Prime to
 your application deployment.
 

@@ -73,7 +73,7 @@ NOTE: If a report includes evidence of multiple **independently fixable** vulner
 [[disclosing-security-fixes]]
 === CVE Record Disclosure
 
-Once a security vulnerability is fixed and published in an official release of Payara Platform Community, the following will occur:
+Once a security vulnerability is fixed and published in an official release of Azul Payara Community, the following will occur:
 
 * The details of the vulnerability will be published in the release notes in this documentation site.
 * The CVE record will be officially published.

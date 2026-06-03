@@ -50,53 +50,29 @@ import java.util.stream.Stream;
  */
 public class ReplaceProductNames {
 
-    /**
-     * Replacement map for each content directory.
-     * Order within each map matters: entries are applied top-to-bottom.
-     * LinkedHashMap preserves insertion order.
-     */
-    static Map<String, Map<String, String>> DIR_REPLACEMENTS = new LinkedHashMap<>();
-
-    static {
-        Map<String, String> enterprise = new LinkedHashMap<>();
-        enterprise.put("Payara Platform Enterprise", "Azul Payara");
-        enterprise.put("Payara Micro",               "Azul Payara Micro");
-        enterprise.put("Payara Server",              "Azul Payara Server");
-        DIR_REPLACEMENTS.put("content_enterprise", enterprise);
-
-        Map<String, String> community = new LinkedHashMap<>();
-        community.put("Payara Platform Community",  "Azul Payara Community");
-        community.put("Payara Micro",               "Azul Payara Micro Community");
-        community.put("Payara Server",              "Azul Payara Server Community");
-        DIR_REPLACEMENTS.put("content_community", community);
-    }
-
     public static void main(String[] args) throws IOException {
         boolean apply = false;
         List<Path> contentDirs = new ArrayList<>();
+
         for (String arg : args) {
             if ("--apply".equals(arg)) apply = true;
             else if (!arg.startsWith("--")) contentDirs.add(Paths.get(arg));
         }
         if (contentDirs.isEmpty()) {
-            for (String key : DIR_REPLACEMENTS.keySet()) {
-                contentDirs.add(Paths.get(key));
-            }
+            contentDirs.add(Paths.get("content_enterprise"));
+            contentDirs.add(Paths.get("content_community"));
+            contentDirs.add(Paths.get("content_shared"));
         }
+
+        Map<String, String> replacements = new LinkedHashMap<>();
+        replacements.put("Payara Platform Enterprise", "Azul Payara");
+        replacements.put("Payara Platform Community",  "Azul Payara Community");
 
         for (Path contentDir : contentDirs) {
             Path content = contentDir.toAbsolutePath().normalize();
-            String dirName = content.getFileName().toString();
 
             if (!Files.isDirectory(content)) {
                 System.err.println("Not a directory: " + content + " — skipping");
-                continue;
-            }
-
-            Map<String, String> replacements = DIR_REPLACEMENTS.get(dirName);
-            if (replacements == null) {
-                System.err.println("No replacement map defined for: " + dirName + " — skipping");
-                System.err.println("Defined dirs: " + DIR_REPLACEMENTS.keySet());
                 continue;
             }
 
@@ -173,10 +149,22 @@ public class ReplaceProductNames {
     static List<Path> collect(Path root) throws IOException {
         List<Path> out = new ArrayList<>();
         try (Stream<Path> s = Files.walk(root)) {
-            s.filter(p -> Files.isRegularFile(p) && p.toString().endsWith(".adoc"))
+            s.filter(p -> Files.isRegularFile(p)
+                       && p.toString().endsWith(".adoc")
+                       && !isReleaseNotes(root, p))
              .sorted()
              .forEach(out::add);
         }
         return out;
+    }
+
+    /** Returns true if the path is inside a release-notes directory. */
+    static boolean isReleaseNotes(Path root, Path p) {
+        Path rel = root.relativize(p);
+        for (Path part : rel) {
+            String seg = part.toString().toLowerCase();
+            if (seg.equals("release-notes") || seg.equals("release_notes")) return true;
+        }
+        return false;
     }
 }

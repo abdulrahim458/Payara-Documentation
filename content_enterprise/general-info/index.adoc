@@ -1,11 +1,11 @@
 = Documentation Overview
 
-This page provides some general information about the Payara Platform Enterprise Edition.
+This page provides some general information about the Azul Payara Edition.
 
 [[release-strategy]]
 == Release Strategy
 
-The Payara Platform Enterprise Edition project is released each month. Each release incorporates fixes and enhancements from Platform engineering and Enterprise-only features.
+The Azul Payara Edition project is released each month. Each release incorporates fixes and enhancements from Platform engineering and Enterprise-only features.
 
 [[versioning-scheme]]
 == Versioning Scheme
