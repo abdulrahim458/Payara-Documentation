@@ -95,7 +95,7 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/add-to-keystore
               - file: technical-documentation/payara-server-documentation/command-reference/add-to-truststore
               - file: technical-documentation/payara-server-documentation/command-reference/appclient
-              - file: technical-documentation/payara-server-documentation/command-reference/apply-http-lb-changes
+              #- file: technical-documentation/payara-server-documentation/command-reference/apply-http-lb-changes
               - file: technical-documentation/payara-server-documentation/command-reference/asadmin-recorder-enabled
               - file: technical-documentation/payara-server-documentation/command-reference/asadmin
               - file: technical-documentation/payara-server-documentation/command-reference/attach
@@ -109,7 +109,7 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/collect-diagnostics
               - file: technical-documentation/payara-server-documentation/command-reference/collect-log-files
               - file: technical-documentation/payara-server-documentation/command-reference/configure-jms-cluster
-              - file: technical-documentation/payara-server-documentation/command-reference/configure-lb-weight
+              #- file: technical-documentation/payara-server-documentation/command-reference/configure-lb-weight
               - file: technical-documentation/payara-server-documentation/command-reference/configure-ldap-for-admin
               - file: technical-documentation/payara-server-documentation/command-reference/configure-managed-jobs
               - file: technical-documentation/payara-server-documentation/command-reference/copy-config
@@ -126,10 +126,10 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/create-deployment-group
               - file: technical-documentation/payara-server-documentation/command-reference/create-domain
               - file: technical-documentation/payara-server-documentation/command-reference/create-file-user
-              - file: technical-documentation/payara-server-documentation/command-reference/create-http-health-checker
-              - file: technical-documentation/payara-server-documentation/command-reference/create-http-lb-config
-              - file: technical-documentation/payara-server-documentation/command-reference/create-http-lb-ref
-              - file: technical-documentation/payara-server-documentation/command-reference/create-http-lb
+              #- file: technical-documentation/payara-server-documentation/command-reference/create-http-health-checker
+              #- file: technical-documentation/payara-server-documentation/command-reference/create-http-lb-config
+              #- file: technical-documentation/payara-server-documentation/command-reference/create-http-lb-ref
+              #- file: technical-documentation/payara-server-documentation/command-reference/create-http-lb
               - file: technical-documentation/payara-server-documentation/command-reference/create-http-listener
               - file: technical-documentation/payara-server-documentation/command-reference/create-http-redirect
               - file: technical-documentation/payara-server-documentation/command-reference/create-http
@@ -184,10 +184,10 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/delete-deployment-group
               - file: technical-documentation/payara-server-documentation/command-reference/delete-domain
               - file: technical-documentation/payara-server-documentation/command-reference/delete-file-user
-              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-health-checker
-              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-lb-config
-              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-lb-ref
-              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-lb
+              #- file: technical-documentation/payara-server-documentation/command-reference/delete-http-health-checker
+              #- file: technical-documentation/payara-server-documentation/command-reference/delete-http-lb-config
+              #- file: technical-documentation/payara-server-documentation/command-reference/delete-http-lb-ref
+              #- file: technical-documentation/payara-server-documentation/command-reference/delete-http-lb
               - file: technical-documentation/payara-server-documentation/command-reference/delete-http-listener
               - file: technical-documentation/payara-server-documentation/command-reference/delete-http-redirect
               - file: technical-documentation/payara-server-documentation/command-reference/delete-http
@@ -227,8 +227,8 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/deploy-remote-archive
               - file: technical-documentation/payara-server-documentation/command-reference/deploy
               - file: technical-documentation/payara-server-documentation/command-reference/disable-asadmin-recorder
-              - file: technical-documentation/payara-server-documentation/command-reference/disable-http-lb-application
-              - file: technical-documentation/payara-server-documentation/command-reference/disable-http-lb-server
+              #- file: technical-documentation/payara-server-documentation/command-reference/disable-http-lb-application
+              #- file: technical-documentation/payara-server-documentation/command-reference/disable-http-lb-server
               - file: technical-documentation/payara-server-documentation/command-reference/disable-monitoring
               - file: technical-documentation/payara-server-documentation/command-reference/disable-phone-home
               - file: technical-documentation/payara-server-documentation/command-reference/disable-secure-admin-internal-user
@@ -236,15 +236,15 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/disable-secure-admin
               - file: technical-documentation/payara-server-documentation/command-reference/disable
               - file: technical-documentation/payara-server-documentation/command-reference/enable-asadmin-recorder
-              - file: technical-documentation/payara-server-documentation/command-reference/enable-http-lb-application
-              - file: technical-documentation/payara-server-documentation/command-reference/enable-http-lb-server
+              #- file: technical-documentation/payara-server-documentation/command-reference/enable-http-lb-application
+              #- file: technical-documentation/payara-server-documentation/command-reference/enable-http-lb-server
               - file: technical-documentation/payara-server-documentation/command-reference/enable-monitoring
               - file: technical-documentation/payara-server-documentation/command-reference/enable-phone-home
               - file: technical-documentation/payara-server-documentation/command-reference/enable-secure-admin-internal-user
               - file: technical-documentation/payara-server-documentation/command-reference/enable-secure-admin-principal
               - file: technical-documentation/payara-server-documentation/command-reference/enable-secure-admin
               - file: technical-documentation/payara-server-documentation/command-reference/enable
-              - file: technical-documentation/payara-server-documentation/command-reference/export-http-lb-config
+              #- file: technical-documentation/payara-server-documentation/command-reference/export-http-lb-config
               - file: technical-documentation/payara-server-documentation/command-reference/export-sync-bundle
               - file: technical-documentation/payara-server-documentation/command-reference/export
               - file: technical-documentation/payara-server-documentation/command-reference/flush-connection-pool
@@ -329,8 +329,8 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/list-hazelcast-cluster-members
               - file: technical-documentation/payara-server-documentation/command-reference/list-hazelcast-members
               - file: technical-documentation/payara-server-documentation/command-reference/list-healthcheck-services
-              - file: technical-documentation/payara-server-documentation/command-reference/list-http-lb-configs
-              - file: technical-documentation/payara-server-documentation/command-reference/list-http-lbs
+              #- file: technical-documentation/payara-server-documentation/command-reference/list-http-lb-configs
+              #- file: technical-documentation/payara-server-documentation/command-reference/list-http-lbs
               - file: technical-documentation/payara-server-documentation/command-reference/list-http-listeners
               - file: technical-documentation/payara-server-documentation/command-reference/list-iiop-listeners
               - file: technical-documentation/payara-server-documentation/command-reference/list-instances

@@ -107,7 +107,7 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/clear-cache
               - file: technical-documentation/payara-server-documentation/command-reference/collect-log-files
               - file: technical-documentation/payara-server-documentation/command-reference/configure-jms-cluster
-              - file: technical-documentation/payara-server-documentation/command-reference/configure-lb-weight
+              #- file: technical-documentation/payara-server-documentation/command-reference/configure-lb-weight
               - file: technical-documentation/payara-server-documentation/command-reference/configure-ldap-for-admin
               - file: technical-documentation/payara-server-documentation/command-reference/configure-managed-jobs
               - file: technical-documentation/payara-server-documentation/command-reference/copy-config
@@ -124,7 +124,7 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/create-deployment-group
               - file: technical-documentation/payara-server-documentation/command-reference/create-domain
               - file: technical-documentation/payara-server-documentation/command-reference/create-file-user
-              - file: technical-documentation/payara-server-documentation/command-reference/create-http-health-checker
+              #- file: technical-documentation/payara-server-documentation/command-reference/create-http-health-checker
               - file: technical-documentation/payara-server-documentation/command-reference/create-http-listener
               - file: technical-documentation/payara-server-documentation/command-reference/create-http-redirect
               - file: technical-documentation/payara-server-documentation/command-reference/create-http
@@ -179,7 +179,7 @@ sections:
               - file: technical-documentation/payara-server-documentation/command-reference/delete-deployment-group
               - file: technical-documentation/payara-server-documentation/command-reference/delete-domain
               - file: technical-documentation/payara-server-documentation/command-reference/delete-file-user
-              - file: technical-documentation/payara-server-documentation/command-reference/delete-http-health-checker
+              #- file: technical-documentation/payara-server-documentation/command-reference/delete-http-health-checker
               - file: technical-documentation/payara-server-documentation/command-reference/delete-http-listener
               - file: technical-documentation/payara-server-documentation/command-reference/delete-http-redirect
               - file: technical-documentation/payara-server-documentation/command-reference/delete-http
