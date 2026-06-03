@@ -321,9 +321,9 @@ The following `asadmin` subcommands are provided for monitoring the ervices and 
 
 * The `enable-monitoring`, `disable-monitoring`, or the `get` and `set`subcommands are used to turn monitoring on or off. For instructions, see
 xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#configuring-monitoring[Configuring Monitoring].
-* The `monitor` `type` subcommand is used to display basic data for a
+* The `monitor type` subcommand is used to display basic data for a
 particular type of monitorable object. For instructions, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#viewing-common-monitoring-data[Viewing Common Monitoring Data].
-* The `list` `--monitor` subcommand is used to display the objects that can be monitored with the `monitor` subcommand. For guidelines and instructions, see
+* The `list --monitor` subcommand is used to display the objects that can be monitored with the `monitor` subcommand. For guidelines and instructions, see
 xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#guidelines-for-using-the-list-and-get-subcommands-for-monitoring[Guidelines for Using the `list` and `get` Subcommands for Monitoring].
 * The `get` subcommand is used to display comprehensive data, such as the attributes and values for a dotted name. The `get` subcommand used with a wildcard parameter displays all available attributes for any monitorable object. For additional information, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#guidelines-for-using-the-list-and-get-subcommands-for-monitoring[Guidelines for Using the `list` and `get` Subcommands for Monitoring].
 
@@ -674,7 +674,7 @@ For detailed information on dotted names, see the xref:technical-documentation/p
 [#to-view-comprehensive-monitoring-data]
 === To View Comprehensive Monitoring Data
 
-Although the `monitor` subcommand is useful in many situations, it does not offer the complete list of all monitorable objects. To work with comprehensive data for an object type, use the `list` `monitor` and the`get` `monitor` subcommands followed by the dotted name of a monitorable object.
+Although the `monitor` subcommand is useful in many situations, it does not offer the complete list of all monitorable objects. To work with comprehensive data for an object type, use the `list monitor` and the`get monitor` subcommands followed by the dotted name of a monitorable object.
 
 *Before You Begin*
 

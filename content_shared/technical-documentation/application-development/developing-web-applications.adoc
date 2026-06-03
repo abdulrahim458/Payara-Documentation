@@ -967,7 +967,7 @@ If the `mime-mapping` is not specified in `web.xml`, Payara Server attempts to d
 
 You can configure the following `init-param` values for the `SSIServlet`.
 
-.`SSIServlet` `init-param` Values
+.`SSIServlet init-param` Values
 [cols="1,1,2,4",options="header"]
 |===
 |init-param |Type |Default |Description

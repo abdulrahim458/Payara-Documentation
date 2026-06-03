@@ -231,7 +231,7 @@ Command redeploy executed successfully.
 ----
 
 [#example-redeploy-app-force]
-==== Example - Redeploying an Application by Using `Asadmin Deploy` `--Force`
+==== Example - Redeploying an Application by Using `asadmin deploy --force`
 
 The `--force` option is set to `false` by default. This example redeploys `newApp.ear` even if has been deployed or already exists.
 

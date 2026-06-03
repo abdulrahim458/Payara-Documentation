@@ -128,7 +128,7 @@ The following file names are allowed for this file. The file given must also be 
 
 |===
 | File Format | Allowed File Names
-| `yaml` | `openapi.yaml` `openapi.yml`
+| `yaml` | `openapi.yaml`, `openapi.yml`
 | `json` | `openapi.json`
 |===
 

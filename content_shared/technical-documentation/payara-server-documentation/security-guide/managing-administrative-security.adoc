@@ -85,7 +85,7 @@ NOTE: The domain creation process creates a default keystore and truststore, plu
 
 * Credentials or other sensitive information sent over the network are always encrypted if secure admin is enabled. No credentials are sent in the clear if secure admin is enabled. (If secure admin is disabled, credentials are sent in clear text.)
 +
-Messages between administration clients and the DAS, between the DAS and remote instances, and between local administration clients and instances are encrypted using SSL/TLS. This is true even if you explicitly set the `asadmin` `-—secure` option to `false`.
+Messages between administration clients and the DAS, between the DAS and remote instances, and between local administration clients and instances are encrypted using SSL/TLS. This is true even if you explicitly set the `asadmin -—secure` option to `false`.
 
 The following table shows which authentication methods are employed when secure admin is enabled or disabled.
 

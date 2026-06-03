@@ -104,7 +104,7 @@ automatic-timer-ejb <ejb>
 Command list-applications executed successfully.
 ----
 
-This example specifies the `--host` `asadmin` utility option with the `list-applications` subcommand in single mode.
+This example specifies the `--host asadmin` utility option with the `list-applications` subcommand in single mode.
 In this example, the DAS is running on the host `srvr1.example.com`.
 
 The example shows that the applications `basic-ezcomp`, `scrumtoys`, `ejb31-war`, and `automatic-timer-ejb` are deployed on the host `srvr1.example.com`.
@@ -120,7 +120,7 @@ ejb31-war <ejb, web>
 Command list-applications executed successfully.
 ----
 
-This example specifies the `--host` `asadmin` utility option and the `--type` subcommand option with the `list-applications` subcommand in single mode.
+This example specifies the `--host asadmin` utility option and the `--type` subcommand option with the `list-applications` subcommand in single mode.
 In this example, the DAS is running on the host `srvr1.example.com` and applications of type `web` are to be listed.
 
 [#to-display-help-information-for-the-asadmin-utility-or-a-subcommand]
@@ -309,7 +309,7 @@ The `commands_file.txt` file contains the `asadmin` utility subcommands to perfo
 . Stopping the domain `customdomain`
 . Deleting the domain `customdomain`
 
-This example runs the sequence of subcommands in the `commands_file.txt` file. Because the `--portbase` option is specified for the `create-domain` subcommand in the file, the `--port` `asadmin` utility option must also be set.
+This example runs the sequence of subcommands in the `commands_file.txt` file. Because the `--portbase` option is specified for the `create-domain` subcommand in the file, the `--port asadmin` utility option must also be set.
 
 [source,shell]
 ----
@@ -331,10 +331,10 @@ For more information about the subcommands in the preceding example, see the fol
 [#to-run-asadmin-subcommands-in---detach-mode]
 === To Run `asadmin` Subcommands in `--detach` Mode
 
-You can use the `--detach` option of the `asadmin` utility to detach `asadmin` subcommands and run them in the background in detach mode. The `asadmin` `--detach` option is useful for long-running subcommands and enables you to run several independent subcommands from one console or script.
+You can use the `--detach` option of the `asadmin` utility to detach `asadmin` subcommands and run them in the background in detach mode. The `asadmin --detach` option is useful for long-running subcommands and enables you to run several independent subcommands from one console or script.
 
 . Ensure that the server is running. Remote commands require a running server.
-. Detach and run the subcommand by using the `asadmin` `--detach` option.
+. Detach and run the subcommand by using the `asadmin --detach` option.
 
 ==== Example 2-10 Using the `--detach` Option in Single Mode
 
@@ -344,7 +344,7 @@ asadmin --detach create-cluster Cluster1
 Job ID: 1
 Command create-cluster started successfully.
 ----
-This example uses the `asadmin` `--detach` option in single mode to run the `create-cluster` subcommand.
+This example uses the `asadmin --detach` option in single mode to run the `create-cluster` subcommand.
 
 ==== Example 2-11 Using the `--detach` Option in Multimode
 
@@ -354,9 +354,9 @@ asadmin> create-cluster Cluster1 --detach
 Job ID: 1
 Command create-cluster started successfully.
 ----
-This example uses the `asadmin` `--detach` option in multimode to run the `create-cluster` subcommand.
+This example uses the `asadmin --detach` option in multimode to run the `create-cluster` subcommand.
 
-Job IDs are assigned to subcommands that are started using the `asadmin` `--detach` option or that contain progress information.
+Job IDs are assigned to subcommands that are started using the `asadmin --detach` option or that contain progress information.
 You can use the `list-jobs` subcommand to list jobs and their job IDs, the `attach` subcommand to reattach to a job and view its status, and the `configure-managed-jobs` subcommand to configure how long information about jobs is kept.
 
 ==== Example 2-12 Listing Jobs

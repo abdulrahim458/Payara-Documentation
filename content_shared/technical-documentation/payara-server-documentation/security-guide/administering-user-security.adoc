@@ -229,7 +229,7 @@ Creating a new `file` realm user is a dynamic event and does not require server 
 
 This example create user `jennifer` on the default realm `file` (no groups are specified).
 
-The `asadmin` `--passwordfile` option specifies the name of a file that contains the password entries in a specific format. The entry for a password must have the `AS_ADMIN_` prefix followed by the password name in uppercase letters, an equals sign, and the password. See the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`] documentation for more information.
+The `asadmin --passwordfile` option specifies the name of a file that contains the password entries in a specific format. The entry for a password must have the `AS_ADMIN_` prefix followed by the password name in uppercase letters, an equals sign, and the password. See the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`] documentation for more information.
 
 [source,shell]
 ----

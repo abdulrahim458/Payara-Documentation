@@ -26,7 +26,7 @@ This subcommand is supported in local mode only.
 
 *asadmin-options*:
   Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
-*`-h` `--help`*:
+*`-h --help`*:
   Displays the help text for the subcommand.
 *`--domaindir`*:
   Specifies the domain root directory, where the domains are located. The path must be accessible in the file system. The default is `as-install/domains`.

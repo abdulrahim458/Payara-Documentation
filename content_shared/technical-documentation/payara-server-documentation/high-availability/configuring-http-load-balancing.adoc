@@ -21,9 +21,9 @@ Before configuring your load balancer, you must:
 [#configuring-payara-server-with-apache-http-server-and-mod_jk]
 === Configuring Payara Server with Apache HTTP Server and `mod_jk`
 
-Payara Server can be configured for load balancing with Apache HTTP Server as a front end by enabling the Apache `mod_jk` connector module. To enable the `mod_jk` module in Payara Server, set the Payara Server `jk-enabled` `network-listener` attribute.
+Payara Server can be configured for load balancing with Apache HTTP Server as a front end by enabling the Apache `mod_jk` connector module. To enable the `mod_jk` module in Payara Server, set the Payara Server `jk-enabled network-listener` attribute.
 
-You can also create `jk-connectors` under different virtual-servers using the `jk-enabled` `network-listener` attribute.
+You can also create `jk-connectors` under different virtual-servers using the `jk-enabled network-listener` attribute.
 
 // TODO - These instructions need testing on Apache HTTP Server 2.4 (current version)
 
@@ -137,7 +137,7 @@ worker.loadbalancer.balance_workers=worker1,worker2
 
 Payara Server can be configured for load balancing with Apache HTTP Server as a front end by enabling the Apache `mod_proxy_ajp` connector module.
 
-To enable the `mod_proxy_ajp` module in Payara Server, set the Payara Server `jk-enabled` `network-listener` attribute. You can also create `jk-connectors` under different virtual-servers using the `jk-enabled` `network-listener` attribute.
+To enable the `mod_proxy_ajp` module in Payara Server, set the Payara Server `jk-enabled network-listener` attribute. You can also create `jk-connectors` under different virtual-servers using the `jk-enabled network-listener` attribute.
 
 [#to-configure-the-mod_proxy_ajp-connector-module]
 ==== To Configure the `mod_proxy_ajp` Connector Module

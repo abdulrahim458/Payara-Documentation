@@ -105,7 +105,7 @@ The value of each `redirect_n` property has two components which can be specifie
 * The second component, `url-prefix`, specifies the new URL prefix to return to the client. The from prefix is replaced by this URL prefix.
 
 
-This example redirects `from` `dummy` to `etude`:
+This example redirects `from dummy` to `etude`:
 
 === Example 6-3 Redirecting a URL
 [source,xml]

@@ -12,7 +12,7 @@ Applications can be deployed using the equivalent administration (`asadmin`) com
 === Deploying on a Local Instance
 
 It's possible to use the `run(Collection<InstanceDescriptor> members, String command, String... args )`
-method to run the `deploy` asadmin command. To deploy to a single instance, you must create a `members` `Collection` object only containing a single instance like in the following example:
+method to run the `deploy` asadmin command. To deploy to a single instance, you must create a `members Collection` object only containing a single instance like in the following example:
 
 [source, java]
 ----

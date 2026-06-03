@@ -41,7 +41,7 @@ The instance root directory, represented as `domain-dir`, is the parent director
 
 NOTE: If you have valid non-embedded Payara Server `as-install` and `domain-dir` directories, specify both in the `BootstrapProperties` and `GlassFishProperties` classes respectively as described in xref:creating-and-configuring-an-embedded-payara-server[Creating and Configuring an Embedded Payara Server].
 
-If domain-dir is not specified, Payara Server creates a directory named `gfembed` `random-number` `tmp` in a temporary directory, where random-number is a randomly generated 19-digit number. Payara Server then copies configuration files into this directory. The temporary directory is the value of the system property `java.io.tmpdir`. You can override this value by specifying the `glassfish.embedded.tmpdir` property in the `GlassFishProperties` class or as a system property.
+If domain-dir is not specified, Payara Server creates a directory named `gfembed random-number tmp` in a temporary directory, where random-number is a randomly generated 19-digit number. Payara Server then copies configuration files into this directory. The temporary directory is the value of the system property `java.io.tmpdir`. You can override this value by specifying the `glassfish.embedded.tmpdir` property in the `GlassFishProperties` class or as a system property.
 
 [#the-domainxml-file]
 === The `domain.xml` File

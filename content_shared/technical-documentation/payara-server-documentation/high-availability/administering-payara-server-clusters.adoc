@@ -267,8 +267,8 @@ To avoid having to restart the DAS or cluster, perform the following steps in th
 *To set up traffic separation, follow these steps:*
 
 . Create the system properties `EXTERNAL-ADDR` and `GMS-BIND-INTERFACE-ADDRESS-c1` for the DAS.
-* `asadmin create-system-properties` `target` `server EXTERNAL-ADDR=192.155.35.4`
-* `asadmin create-system-properties` `target` `server GMS-BIND-INTERFACE-ADDRESS-c1=10.12.152.20`
+* `asadmin create-system-properties target server EXTERNAL-ADDR=192.155.35.4`
+* `asadmin create-system-properties target server GMS-BIND-INTERFACE-ADDRESS-c1=10.12.152.20`
 . Create the cluster with the default settings. Use the following command:
 +
 [source,shell]
@@ -278,9 +278,9 @@ asadmin create-cluster c1
 A reference to a system property for GMS traffic is already set up by default in the `gms-bind-interface-address` cluster setting. The default value of this setting is `${GMS-BIND-INTERFACE-ADDRESS-`cluster-name`}`.
 . When creating the clustered instances, configure the external and GMS IP addresses. +
 Use the following commands:
-* `asadmin create-instance` `node` `localhost` `cluster` `c1` `systemproperties` `EXTERNAL-ADDR=192.155.35.5:GMS-BIND-INTERFACE-ADDRESS-c1=10.12.152.30 i101`
-* `asadmin create-instance` `node` `localhost` `cluster` `c1` `systemproperties` `EXTERNAL-ADDR=192.155.35.6:GMS-BIND-INTERFACE-ADDRESS-c1=10.12.152.40 i102`
-* `asadmin create-instance` `node` `localhost` `cluster` `c1` `systemproperties` `EXTERNAL-ADDR=192.155.35.7:GMS-BIND-INTERFACE-ADDRESS-c1=10.12.152.50 i103`
+* `asadmin create-instance node localhost cluster c1 systemproperties EXTERNAL-ADDR=192.155.35.5:GMS-BIND-INTERFACE-ADDRESS-c1=10.12.152.30 i101`
+* `asadmin create-instance node localhost cluster c1 systemproperties EXTERNAL-ADDR=192.155.35.6:GMS-BIND-INTERFACE-ADDRESS-c1=10.12.152.40 i102`
+* `asadmin create-instance node localhost cluster c1 systemproperties EXTERNAL-ADDR=192.155.35.7:GMS-BIND-INTERFACE-ADDRESS-c1=10.12.152.50 i103`
 . Set the address attribute of HTTP listeners to refer to the `EXTERNAL-ADDR` system properties. Use the following commands:
 +
 [source,shell]

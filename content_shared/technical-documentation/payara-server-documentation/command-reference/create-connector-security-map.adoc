@@ -24,7 +24,7 @@ enterprise information system (EIS) principal in container-managed authenticatio
 It can be a mainframe, a messaging system, a database system, or an application. One or more named security maps can be associated with a connector connection pool.
 The connector security map configuration supports the use of the wild card asterisk (`*`) to indicate all users or all user groups.
 
-To specify the EIS password, you can add the `AS_ADMIN_MAPPEDPASSWORD` entry to the password file, then specify the file by using the `--passwordfile` `asadmin` utility option.
+To specify the EIS password, you can add the `AS_ADMIN_MAPPEDPASSWORD` entry to the password file, then specify the file by using the `--passwordfile asadmin` utility option.
 
 For this subcommand to succeed, you must have first created a connector connection pool using the `create-connector-connection-pool` subcommand.
 
