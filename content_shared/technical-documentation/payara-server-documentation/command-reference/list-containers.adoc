@@ -2,7 +2,7 @@
 
 Lists application containers.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,14 +10,14 @@ Lists application containers.
 asadmin [asadmin-options] list-containers [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-containers` subcommand displays a list of application containers.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -26,10 +26,10 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Listing the Application Containers*
 
@@ -67,7 +67,7 @@ config
 Command list-containers executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

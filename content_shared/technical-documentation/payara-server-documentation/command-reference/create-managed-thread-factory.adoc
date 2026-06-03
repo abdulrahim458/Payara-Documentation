@@ -2,7 +2,7 @@
 
 Creates a managed thread factory resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -19,14 +19,14 @@ asadmin [asadmin-options] create-managed-thread-factory [--help]
         jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-managed-thread-factory` subcommand creates a managed thread factory resource.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -71,13 +71,13 @@ cluster.
 instance_name;;
 Creates the resource for the specified server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
 The JNDI name of this resource.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Managed Thread Factory Resource*
@@ -91,7 +91,7 @@ Managed thread factory concurrent/myThreadFactory created successfully.
 Command create-managed-thread-factory executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

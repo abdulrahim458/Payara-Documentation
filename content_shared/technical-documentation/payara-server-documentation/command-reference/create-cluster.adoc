@@ -2,7 +2,7 @@
 
 Creates a Payara Server cluster.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -18,7 +18,7 @@ asadmin [asadmin-options] create-cluster [--help]
 cluster-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-cluster` subcommand creates a Payara Server cluster. Initially the cluster contains no Payara Server instances, applications, or resources.
@@ -44,7 +44,7 @@ To associate applications and resources with all instances in the cluster, set t
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -186,7 +186,7 @@ To specify an address that is valid for all Payara Server instances in the clust
 +
 For example, use the `create-system-properties` subcommand to create the system property `GMS-BIND-INTERFACE-ADDRESS-` cluster-name. Then set the `--bindaddress` option of this subcommand to `${GMS-BIND-INTERFACE-ADDRESS-` cluster-name `}` to specify the system property. Finally, for each instance in the cluster, set the `GMS-BIND-INTERFACE-ADDRESS-` cluster-name system property to the required network interface address on the instance's machine.
 
-[[operands]]
+[#operands]
 == Operands
 
 *cluster-name*:
@@ -213,7 +213,7 @@ The name must meet the following requirements:
   * If `configstoretype` is set to `shareddb` in the xref:technical-documentation/payara-server-documentation/command-reference/configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`]
   subcommand, the name can be no longer than n–19 characters, where n is the maximum table name length allowed by the database.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Cluster*
@@ -275,7 +275,7 @@ GMS_LISTENER_PORT=9090' gencluster
 Command create-cluster executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

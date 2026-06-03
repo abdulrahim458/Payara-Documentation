@@ -2,7 +2,7 @@
 
 The Payara Platform {version} provides MicroProfile OpenAPI {mpOpenAPIVersion}
 
-[[background]]
+[#background]
 == Background
 
 OpenAPI was designed to provide a standard interface for documenting and exposing RESTful APIs. The MicroProfile OpenAPI API provides a set of interfaces and annotations to allow application developers to produce an OpenAPI document from their JAX-RS applications. OpenAPI is somewhat similar to the Swagger API, so many concepts in the API will be familiar.
@@ -13,7 +13,7 @@ Breaking changes introduced in MicroProfile OpenAPI {mpOpenAPIVersion} are liste
 
 IMPORTANT: Version {mpOpenAPIVersion} of the OpenAPI specification does not define the behaviour of implementations where multiple applications are deployed to the same container. This limitation will be addressed in a later version of the OpenAPI specification. Payara Server allows you to see multiple applications in the OpenAPI document, see <<deployed-endpoints, multiple applications>>.
 
-[[endpoint]]
+[#endpoint]
 == REST Endpoint
 
 MicroProfile OpenAPI specifies that an OpenAPI document should be published at the endpoint `/openapi` documenting a deployed application. For both Payara Server and Payara Micro, this means that the endpoint can be found on any HTTP port (e.g. `8080`) after deploying an application.
@@ -24,7 +24,7 @@ By default, the OpenAPI document is displayed in YAML format, although this can 
 
 For example, `http://localhost:8080/openapi?format=json`. The valid values are `json` and `yaml`.
 
-[[sources]]
+[#sources]
 == Openapi Configuration Sources
 
 MicroProfile OpenAPI specifies several ways of configuring the data in the produced OpenAPI document. These are all provided by the OpenAPI API artifact:
@@ -39,7 +39,7 @@ MicroProfile OpenAPI specifies several ways of configuring the data in the produ
 </dependency>
 ----
 
-[[sources-config]]
+[#sources-config]
 === Configuration Properties
 
 The OpenAPI document generation process can be configured through the xref:technical-documentation/microprofile/config/index.adoc[Config API]. The following are the standard configuration properties as presented by the specification:
@@ -90,7 +90,7 @@ In addition to the standard properties, the following properties have been added
 | `mp.openapi.extensions.scan.lib`  |  Configuration property that allows the server to scan packaged JAR files inside the WAR's library directory (`WEB-INF/lib`). If the WAR is inside EAR, the server also scans JAR files inside the EAR's `lib/` directory. Default value is `false`.
 |===
 
-[[sources-model-reader]]
+[#sources-model-reader]
 === Oasmodelreader
 
 `org.eclipse.microprofile.openapi.OASModelReader`
@@ -104,7 +104,7 @@ mp.openapi.model.reader=fish.payara.examples.OASModelReaderImpl
 
 This class will be called at the beginning of the OpenAPI document generation, and will create the initial OpenAPI document.
 
-[[sources-filter]]
+[#sources-filter]
 === Oasfilter
 
 `org.eclipse.microprofile.openapi.OASFilter`
@@ -119,7 +119,7 @@ mp.openapi.filter=fish.payara.examples.OASFilterImpl
 Each method in the implementation will be called on every appropriate element in the OpenAPI model. For example, the method `filterPathItem(PathItem pathItem)` will be called for every `PathItem` in the document.
 This class is called last, before the document is published.
 
-[[sources-static-document]]
+[#sources-static-document]
 === Static Document
 
 The MicroProfile OpenAPI supports using a static OpenAPI document to build from. This static file can be placed in either `META-INF` directory in a WAR file. Most often, this means putting the file in `src/main/resources/META-INF`.
@@ -132,12 +132,12 @@ The following file names are allowed for this file. The file given must also be 
 | `json` | `openapi.json`
 |===
 
-[[sources-annotations]]
+[#sources-annotations]
 === Annotations
 
 The MicroProfile OpenAPI API provides many annotations to use to augment the OpenAPI document. These are detailed in the https://download.eclipse.org/microprofile/microprofile-open-api-{mpOpenAPIVersion}/microprofile-openapi-spec-{mpOpenAPIVersion}.html#_annotations[OpenAPI Specification^]. These annotations are applied before the OASFilter.
 
-[[sources-annotation-example]]
+[#sources-annotation-example]
 ==== Example
 
 The following code could be used to give the corresponding operation an ID of "hello world".
@@ -187,7 +187,7 @@ endpoints:
 components: {}
 ----
 
-[[deployed-endpoints]]
+[#deployed-endpoints]
 ==== Deployed Endpoints
 
 When more than one application is deployed, a merge is done in the OpenAPI document. The resulting document will contain all application and path definitions present. To improve the its readability, an `endpoints` attribute which lists all deployed endpoints grouped by their application context roots has been added to the document.
@@ -264,19 +264,19 @@ endpoints:
 components: {}
 ----
 
-[[openApi-configuration]]
+[#openApi-configuration]
 == Openapi Configuration
 
 On Payara Server, MicroProfile OpenAPI settings can be configured by using the Admin Console or Asadmin CLI commands.
 
-[[using-the-admin-console]]
+[#using-the-admin-console]
 === Using the Admin Console
 
 To configure the OpenAPI in the Admin Console, go to Configuration -> [instance-configuration (like `server-config`)] -> MicroProfile -> OpenAPI:
 
 image:microprofile/openapi.png[alt="Set OpenAPI Configuration",width=600px]
 
-[[using-asadmin-commands]]
+[#using-asadmin-commands]
 === Using Asadmin Commands
 
 Use the following commands to configure the settings of the MicroProfile OpenAPI service:
@@ -284,14 +284,14 @@ Use the following commands to configure the settings of the MicroProfile OpenAPI
 * xref:technical-documentation/payara-server-documentation/command-reference/set-openapi-configuration.adoc#set-openapi-configuration[`set-openapi-configuration`]
 * xref:technical-documentation/payara-server-documentation/command-reference/get-openapi-configuration.adoc#get-openapi-configuration[`get-openapi-configuration`]
 
-[[security-configuration]]
+[#security-configuration]
 === Security Configuration
 
 By default, the OpenAPI endpoint binds to the root context application which is the `__default-web-module` (also known as `docroot`) system application and the `__default-web-module` application, which is secured under the default realm (`file`) of the server.
 
 If a user application is deployed in the empty context-root, then the security configuration of this application will be shared by the OpenAPI endpoint, so exert extreme caution when making these changes.
 
-[[microprofile-4-upgrade]]
+[#microprofile-4-upgrade]
 == Upgrading from Microprofile 3.x to 4.x
 
 MicroProfile 4.0 brings with it a number of changes to MicroProfile OpenAPI, among these changes are some which break previous behaviour. The breaking changes are primarily to do with the removal of a number of methods previously marked as deprecated from the API, and only affect the use of OpenAPI programmatically (there are no breaking changes pertaining to the use of the annotations).

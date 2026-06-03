@@ -2,7 +2,7 @@
 
  Restarts all HTTP network listener of the targeted instance(s).
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,14 +13,14 @@ asadmin [asadmin-options] restart-http-listeners
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `restart-http-listeners` subcommand restarts an HTTP network listener of the targeted instance(s).
 
 IMPORTANT: This command only restarts all HTTP listeners except `admin-listener`.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -33,13 +33,13 @@ IMPORTANT: This command only restarts all HTTP listeners except `admin-listener`
 *`--all`*:
 Applies the command to all instances. The default value is `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
 Name of the target instance, deployment group or cluster to which restart the corresponding HTTP listeners.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Restarting an HTTP Network Listener*
@@ -52,7 +52,7 @@ asadmin>restart-http-listeners i1
 Command restart-http-listeners executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

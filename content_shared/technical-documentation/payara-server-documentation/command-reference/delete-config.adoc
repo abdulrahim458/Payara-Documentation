@@ -2,7 +2,7 @@
 
 Deletes an existing named configuration.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] delete-config [--help]
 configuration-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-config` subcommand deletes an existing named configuration from the configuration of the domain administration server (DAS). You can delete a configuration only if no Payara Server instances or clusters refer to the configuration. A standalone configuration is automatically deleted when the instance or cluster that refers to it is deleted. You cannot delete the `default-config` configuration that is copied to create standalone configurations.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,13 +27,13 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *configuration-name*:
   The name of the configuration that you are deleting.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Named Configuration*
@@ -47,7 +47,7 @@ asadmin> delete-config pmdconfig
 Command delete-config executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

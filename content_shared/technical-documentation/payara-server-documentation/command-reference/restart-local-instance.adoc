@@ -2,7 +2,7 @@
 
 Restarts a running Payara Server instance on the host where the subcommand is running.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,7 +14,7 @@ asadmin [asadmin-options] restart-local-instance [--help]
 [instance-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `restart-local-instance` subcommand restarts a Payara Server instance on the host where the subcommand is run. This subcommand does not require secure shell (SSH) to be configured. You must run this command from the host where the instance resides.
@@ -36,7 +36,7 @@ If different synchronization behavior is required, the instance must be stopped 
 
 This subcommand is supported in local mode. However, to synchronize the instance with the DAS, this subcommand must be run in remote mode.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -72,13 +72,13 @@ This subcommand is supported in local mode. However, to synchronize the instance
   `true`;;
     The instance is killed. The subcommand uses functionality of the operating system to terminate the instance process.
 
-[[operands]]
+[#operands]
 == Operands
 
 *instance-name*:
   The name of the Payara Server instance to restart. If the instance is not running, the subcommand displays a warning message and attempts to start the instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Restarting an Instance Locally*
@@ -91,7 +91,7 @@ asadmin> restart-local-instance --node localhost-domain1 ymlsa1
 Command restart-local-instance executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

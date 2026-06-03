@@ -2,7 +2,7 @@
 
 Lists options for the Java application launcher.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-jvm-options [--help]
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-jvm-options` subcommand displays a list of command-line options that are passed to the Java application launcher when Payara Server is started.
@@ -20,7 +20,7 @@ The options are managed by using the JVM Options page of the Administration Cons
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,7 +40,7 @@ This subcommand is supported in remote mode only.
   configuration-name;;
     Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing the Java Application Launcher Options*
@@ -71,7 +71,7 @@ com.sun.aas.javaRoot}/jre/lib/ext${path.separator}${com.sun.aas.instanceRoot}
 Command list-jvm-options executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

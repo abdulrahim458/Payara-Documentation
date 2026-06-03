@@ -2,7 +2,7 @@
 
 List the current members of the Data Grid visible to the domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,12 +12,12 @@ asadmin [asadmin-options] list-hazelcast-cluster-members
 [--type type]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to list the current members of the Data Grid in a formatted table.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -28,7 +28,7 @@ Displays the help text for the subcommand.
 *`--type`*:
 Specifies the type of cluster members to list, which will be either `server` or `micro`. The default value is `both`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 List the current members of the Data Grid visible to the domain*
@@ -42,7 +42,7 @@ server         MicroShoal      DAS            /172.18.64.1  8080        8181    
 Command list-hazelcast-cluster-members executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

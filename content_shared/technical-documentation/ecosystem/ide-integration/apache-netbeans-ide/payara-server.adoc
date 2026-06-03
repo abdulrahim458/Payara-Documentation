@@ -8,7 +8,7 @@ The Apache NetBeans IDE has built-in integration with Payara Server and allows y
 * Deploy an application from within the IDE
 * Auto Publish & Hot Deploy your application
 
-[[adding-payara-server-netbeans]]
+[#adding-payara-server-netbeans]
 == Adding Payara Server to Apache Netbeans IDE
 Open the project you want to deploy to Payara Server. Go to the Server tab and right click to add a new server.
 
@@ -34,7 +34,7 @@ The following details are configurable on the next screen:
 
 *image*: apache-netbeans/payara-server/netbeans-configure-instance-payara6.png[Configure Payara Server,align="center"]
 
-[[managing-payara-server-netbeans]]
+[#managing-payara-server-netbeans]
 == Managing Payara Server from Apache Netbeans IDE
 
 Once the configuration is complete, you can manage your Payara Server directly from Apache NetBeans. By right-clicking on the previously-configured server, we can do the following actions:
@@ -48,7 +48,7 @@ Once the configuration is complete, you can manage your Payara Server directly f
 
 Exploding the server dropdown will list Applications, Resources and Web Services. This allows you to view and manage certain Payara Server configurations, from the NetBeans interface.
 
-[[deploying-application-payara-netbeans]]
+[#deploying-application-payara-netbeans]
 == Deploying Applications to Payara Server from Apache Netbeans IDE
 
 An application can be deployed and un-deployed easily from within Apache NetBeans. First, the application run settings need to be configured to use Payara Server. Go to Properties on a project and then the Run section of this window. This menu lists the configuration for deploying the application.
@@ -59,7 +59,7 @@ Select the Payara Server you have configured. You can also select a context path
 
 Deploying to Payara Server now only requires running the application like any other NetBeans project. Once it’s deployed, the Services view will then display the application under Payara Server, where you can undeploy, enable, disable and view the application in the browser.
 
-[[deploy-to-docker-container]]
+[#deploy-to-docker-container]
 == Deploy Applications in a Local Docker Container
 
 The Payara Server tools for Apache NetBeans include Docker integration, making it seamless to deploy exploded applications to a Payara Server instance running within a local Docker container.
@@ -89,7 +89,7 @@ The `HOST_PATH` points to the location on your host machine, and `CONTAINER_PATH
 
 . Create your web application and deploy it to the registered Payara Server instance.
 
-[[hot-deploy-and-auto-deploy-settings]]
+[#hot-deploy-and-auto-deploy-settings]
 == Hot Deploy and Auto Deploy Settings
 
 To enable the *Auto Deploy* features for Payara Server on the Apache NetBeans IDE, you must enable the *Compile on Save* and *Deploy on Save* features from the *Project Properties*.
@@ -106,6 +106,6 @@ To enable the *Hot Deploy* feature for Payara Server on the NetBeans IDE, you mu
 
 *image*: hot-auto-deploy/netbeans-hotdeploy.png[Hot Deploy]
 
-[[see-also]]
+[#see-also]
 == See Also
 xref:technical-documentation/ecosystem/ide-integration/hot-deploy-and-auto-deploy.adoc[Hot Deploy and Auto Deploy]

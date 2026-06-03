@@ -2,7 +2,7 @@
 
 Browses and queries the JNDI tree.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] list-jndi-entries [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 Use this subcommand to browse and query the JNDI tree.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -31,7 +31,7 @@ This subcommand is supported in remote mode only.
   The name of the JNDI context or subcontext. If context is not specified, all entries in the naming service are returned. If context
   (such as `ejb`) is specified, all those entries are returned.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -46,7 +46,7 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Browses the JNDI tree for the specified Payara Server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Browsing the JNDI Tree*
@@ -65,7 +65,7 @@ com.sun.enterprise.container.common.impl.util.InjectionManagerImpl
 Command list-jndi-entries executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

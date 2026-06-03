@@ -5,10 +5,10 @@ Payara Server provides a Maven plugin that can start and stop the server and dep
 
 The plugin requires JDK 17 or higher.
 
-[[goals]]
+[#goals]
 == Configurable Goals
 
-[[start-goal]]
+[#start-goal]
 === `start`
 
 *Aim*: This goal starts Payara Server with the specified configuration.
@@ -263,7 +263,7 @@ The following properties allow customization of deployments to remote instance.
 |===
 
 
-[[dev-goal]]
+[#dev-goal]
 === `dev`
 
 *Aim*: The dev goal is designed to streamline development by enabling `exploded`, `autoDeploy`, `liveReload`, `keepState`, and `trimLog` to true, 
@@ -282,7 +282,7 @@ The `dev` goal is an extended goal of `start` and is pre-configured for developi
 mvn payara-server:start -DautoDeploy=true -DliveReload=true -Dexploded=true -DkeepState -DtrimLog=true
 ----
 
-[[dev-mode-features]]
+[#dev-mode-features]
 ==== Features in Dev Mode
 
 . *Auto Deploy*: The AutoDeploy feature enables automatic compilation and deployment of the application upon saving files within the project structure. Enabled by setting `autoDeploy=true`.
@@ -304,7 +304,7 @@ The LiveReload feature automatically refreshes the browser upon redeployment.
 
 NOTE: All listed features are enabled by default in the `dev` mode.
 
-[[supported-keywords]]
+[#supported-keywords]
 == Supported Keywords
 
 The Payara Server Maven plugin provides a built-in CLI interface that accepts specific keywords 
@@ -336,7 +336,7 @@ to interact with a running Payara Server instance. These commands can be used vi
 
 NOTE: The predefined keywords (`asadmin`, `deploy`, `undeploy`, `exit`) will take precedence over AI interpretation if matched.
 
-[[ai-agent]]
+[#ai-agent]
 == AI Agent (Experimental)
 The AI Agent is an experimental feature in the Payara Server Maven plugin that brings intelligent automation and observability to Jakarta EE application development.
 It is enabled by default in `dev` mode and disabled in other modes for safety. 

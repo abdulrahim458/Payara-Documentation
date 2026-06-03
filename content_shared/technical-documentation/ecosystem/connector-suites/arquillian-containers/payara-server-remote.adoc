@@ -5,7 +5,7 @@ When using this adapter, the Payara Server container lifecycle is NOT managed by
 
 This gives you the flexibility to use any possible deployment scenarios having your servers either on many different physical or virtual nodes, or on the same one.
 
-[[usage]]
+[#usage]
 == Usage
 
 The Payara Server Remote Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-remote[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
@@ -19,7 +19,7 @@ The Payara Server Remote Arquillian container adapter can be found on link:https
 </dependency>
 ----
 
-[[configuration]]
+[#configuration]
 == Container Configuration
 
 The Payara Server container can be configured via the `arquillian.xml` file using the standard http://arquillian.org/arquillian-core/#container-configuration[Arquillian Container Configuration^] mechanism.
@@ -116,7 +116,7 @@ The same rule is applied for enterprise applications if there is no `application
 IMPORTANT: glassfish-web.xml and sun-web.xml are deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-[[examples]]
+[#examples]
 == Examples
 
 To configure the Arquillian Container options, you need to use an `arquillian.xml` file placed on the test classpath. Here's an example `arquillian.xml` file. It configures `adminPort` with a static value. It configures `adminPassword` as a value of a system property `my.admin.password`, which you can specify for example in the maven `surefire` plugin using the `systemPropertyVariables` option or on the command line like `mvn -Dmy.admin.password=mypassword test`.

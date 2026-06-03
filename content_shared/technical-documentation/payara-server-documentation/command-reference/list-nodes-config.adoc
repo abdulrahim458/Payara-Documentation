@@ -2,7 +2,7 @@
 
 Lists all Payara Server nodes that do not support remote communication in a domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-nodes-config [--help]
 [--long={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-nodes-config` subcommand lists all Payara Server nodes that do not support remote communication in a domain.
@@ -35,7 +35,7 @@ If the `--terse` option of the xref:technical-documentation/payara-server-docume
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -52,7 +52,7 @@ This subcommand is supported in remote mode only.
   `false`;;
     The nodes are listed in short format (default).
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Payara Server Nodes*
@@ -95,7 +95,7 @@ devnode             CONFIG   localhost   /export/payara7   pmdsa1
 Command list-nodes-config executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

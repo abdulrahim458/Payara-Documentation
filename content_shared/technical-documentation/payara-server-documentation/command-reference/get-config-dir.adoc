@@ -2,7 +2,7 @@
 
 Gets the settings of the Directory configuration settings.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,12 +10,12 @@ Gets the settings of the Directory configuration settings.
 asadmin [asadmin-options] get-config-dir [--help] [--target=<target[default:server]>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-config-dir` gets the value of the directory to be used for the directory config source.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -35,7 +35,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Getting the Config Directory.*
@@ -47,7 +47,7 @@ This example gets the directory to be used for the directory config source.
 asadmin get-config-dir --target=myAppCluster
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

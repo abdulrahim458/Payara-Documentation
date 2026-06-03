@@ -2,7 +2,7 @@
 
 Creates a JMS physical destination.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,14 +15,14 @@ asadmin [asadmin-options] create-jmsdest [--help]
 dest_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-jmsdest` subcommand creates a Java Message Service (JMS) physical destination. Typically, you use the `create-jms-resource` subcommand to create a JMS destination resource that has a `Name` property that specifies the physical destination. The physical destination is created automatically when you run an application that uses the destination resource. Use the `create-jmsdest` subcommand if you want to create a physical destination with non-default property settings.
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -94,13 +94,13 @@ To modify the value of these properties, you can use the  `as-install/mq/bin/imq
 *`--force`*:
   Specifies whether the subcommand overwrites the existing JMS physical destination of the same name. The default value is `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *dest_name*:
   A unique identifier for the JMS destination to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a JMS physical destination*
@@ -114,7 +114,7 @@ asadmin> create-jmsdest --desttype queue
 Command create-jmsdest executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

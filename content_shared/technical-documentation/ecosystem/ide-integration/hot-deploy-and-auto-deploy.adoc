@@ -6,21 +6,21 @@ The Payara Platform IDE ecosystem integrations fully support Hot Deployment and 
 
 CAUTION: Both features are not available yet in the IntelliJ IDEA ecosystem integrations.
 
-[[hot-deployment]]
+[#hot-deployment]
 == Hot Deployment
 
 The Payara Platform provides the *Hot Deployment* capability, which boosts the performance of the application redeployment operation and dynamically replaces the classloader of the application on each redeployment when the feature is turned on.
 
 TIP: Hot deploy is significantly faster than a vanilla redeployment, boosting developer productivity.
 
-[[auto-deployment]]
+[#auto-deployment]
 == Auto Deployment
 
 The Payara Platform also allows for a full redeployment of the application automatically via the *Auto Deployment* feature. It will un-deploy the application (if already deployed) and redeploy the new version of the application on every save action after making changes to the source code on your IDE of choice.
 
 WARNING: As the Auto Deploy feature performs a full redeploy of an application, it is slower than hot redeploy, which redeploys only the relevant updated components of the application in question.
 
-[[configuration]]
+[#configuration]
 == Configuration
 
 To configure the settings of these features on your IDE of choice, follow the instructions on the corresponding sections of each integration's documentation:

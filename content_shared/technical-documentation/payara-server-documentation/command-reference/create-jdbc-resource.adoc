@@ -2,7 +2,7 @@
 
 Creates a JDBC resource with the specified JNDI name.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,14 +16,14 @@ asadmin [asadmin-options] create-jdbc-resource [--help]
 jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-jdbc-resource` subcommand creates a new JDBC resource.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -52,13 +52,13 @@ This subcommand is supported in remote mode only.
 
 NOTE: The resource is always created for the domain as a whole, but the `resource-ref` for the resource is only created for the specified `--target`. This means that although the resource is defined at the domain level, it is only available at the specified target level. Use the `create-resource-ref` subcommand to refer to the resource in multiple targets if needed.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
   The JNDI name of this JDBC resource.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a JDBC Resource*
@@ -72,7 +72,7 @@ asadmin> create-jdbc-resource
 Command create-jdbc-resource executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Provides information on the cluster health.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] get-health [--help]
 cluster_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-health` subcommand gets information about the health of the cluster. Note that if the group management service (GMS) is not enabled, the basic information about whether the server instances in this cluster are running or not running is not returned. For each server instance, one of the following states is reported: `not started`, `started`, `stopped`, `rejoined`, or `failed`. This subcommand is available in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -25,13 +25,13 @@ The `get-health` subcommand gets information about the health of the cluster. No
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *cluster_name*:
   The name of the cluster for which you want the health information. This subcommand prompts you for the cluster name if you don't specify it.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Checking the health of server instances in a cluster*
@@ -44,7 +44,7 @@ instance2 started since Wed Sep 29 16:32:45 EDT 2010
 Command get-health executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

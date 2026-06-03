@@ -2,7 +2,7 @@
 
 Returns the ordinal value for the given configuration source type.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] get-config-ordinal [--help] [--target=server]
 [--source={domain|config|server|application|module|cluster}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-config-ordinal` returns ordinal value for the given ConfigSource type.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,7 +40,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Getting the ordinal value*
@@ -52,7 +52,7 @@ This example gets the ordinal value for the source 'cluster'.
 asadmin> get-config-ordinal --source=cluster
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

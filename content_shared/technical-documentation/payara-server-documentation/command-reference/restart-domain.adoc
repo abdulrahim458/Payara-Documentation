@@ -2,7 +2,7 @@
 
 Restarts the Domain Administration Server(DAS) of the specified domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,7 +15,7 @@ asadmin [asadmin-options] restart-domain [--help]
 [domain-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `restart-domain` subcommand stops and then restarts the domain administration server (DAS) of the specified domain. If a domain is not specified, the default domain is assumed. If the domains directory contains two or more domains, the domain-name operand must be specified. If the DAS is not already running, the subcommand attempts to start it.
@@ -24,7 +24,7 @@ The `restart-domain` subcommand does not exit until the subcommand has verified 
 
 This subcommand is supported in local or remote mode. If you specify a host name, the subcommand assumes you are operating in remote mode, which means you must correctly authenticate to the remote server. In local mode, you normally do not need to authenticate to the server as long as you are running the subcommand as the same user who started the server.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -61,13 +61,13 @@ Specifies how long to take for the domains to restart in seconds. If restarting 
 +
 The default value is `600`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-name*:
   The name of the domain you want to restart. Default is the name specified during installation, usually `domain1`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Restarting a Domain*
@@ -81,7 +81,7 @@ Successfully restarted the domain
 Command restart-domain executed successfully. 
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

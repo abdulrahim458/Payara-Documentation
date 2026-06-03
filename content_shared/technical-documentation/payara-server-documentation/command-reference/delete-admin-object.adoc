@@ -2,7 +2,7 @@
 
 Removes the administered object with the specified JNDI name.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] delete-admin-object [--help]
 [--target target] jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-admin-object` subcommand removes an administered object with the specified JNDI name.
 
 This subcommand is supported in remote mote only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -42,13 +42,13 @@ specified `--target`, and does not delete the resource from the domain as a whol
   instance_name;;
     Deletes the administered object for a particular server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
   JNDI name of the administered object to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting an Administered Object*
@@ -61,7 +61,7 @@ asadmin> delete-admin-object jms/samplequeue
 Command delete-admin-object executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

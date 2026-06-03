@@ -2,7 +2,7 @@
 
 Moves EJB timers when a clustered instance was stopped or has crashed.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] migrate-timers [--help]
 server_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `migrate-timers` subcommand moves EJB timers to a specified server when a server instance stops or crashes, if automatic timer migration is
@@ -20,7 +20,7 @@ not enabled in the cluster configuration.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -32,14 +32,14 @@ This subcommand is supported in remote mode only.
   This is the target server instance. If this option is not specified, then DAS will find a server instance or multiple server instances. A
   migration notification will be sent to the selected server instances.
 
-[[operands]]
+[#operands]
 == Operands
 
 *server_name*:
   This is the server instance on which the timers are currently located.
   This server instance should not be running during the migration process.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Migrating Timers*
@@ -52,7 +52,7 @@ asadmin> migrate-timers --target instance2 instance1
 This command was successfully executed.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

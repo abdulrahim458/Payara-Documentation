@@ -2,12 +2,12 @@
 
 WARNING: The gRPC extension has not yet been updated to support Payara Platform {pageSiteEditionCapitalised} {payaraVersionMajor}
 
-[[what-is-grpc]]
+[#what-is-grpc]
 == What Is Grpc?
 
 gRPC is a modern open-source high performance Remote Procedure Call (RPC) framework that use HTTP2 and simplifies the communication with protocol buffers to share data between client and server. By enabling gRPC Payara Server gives more options to create binary adaptable services.
 
-[[what-can-we-do-with-it]]
+[#what-can-we-do-with-it]
 == What Can We Do with It?
 
 * We can create services more efficient than REST.
@@ -17,7 +17,7 @@ gRPC is a modern open-source high performance Remote Procedure Call (RPC) framew
 
 gRPC supports the means for users to implement gRPC style service programming.
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * You can find detailed information about gRPC here: https://grpc.io/docs/what-is-grpc/introduction/

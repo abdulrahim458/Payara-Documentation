@@ -2,7 +2,7 @@
 
 Removes one or more options for the Java application launcher.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] delete-jvm-options [--help]
 (jvm-option-name[=jvm-option-value]) [:jvm-option-name[=jvm-option-name]]*
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-jvm-options` subcommand removes one or more command-line options for the Java application launcher. These options are removed from the Java configuration `java—config` element of the `domain.xml` file. To see the Java application launcher options that can be deleted, use the xref:technical-documentation/payara-server-documentation/command-reference/list-jvm-options.adoc#list-jvm-options[`list-jvm-options`] subcommand.
@@ -37,7 +37,7 @@ To restart the DAS, use the xref:technical-documentation/payara-server-documenta
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -57,7 +57,7 @@ This subcommand is supported in remote mode only.
   configuration-name;;
     Specifies a named configuration.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jvm-option-name*:
@@ -67,7 +67,7 @@ This subcommand is supported in remote mode only.
 
 NOTE: If an option name or option value contains a colon, the backslash (`\`) must be used to escape the colon in the name or value. Other characters might also require an escape character. For more information about escape characters in subcommand options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] man page.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting Java Application Launcher Options*
@@ -82,7 +82,7 @@ Command delete-jvm-options executed successfully
 ----
 
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

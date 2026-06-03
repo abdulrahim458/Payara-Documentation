@@ -2,7 +2,7 @@
 
 Adds one or more system property elements that can be referenced elsewhere in the configuration.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] create-system-property [--help]
 [name=value]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-system-property` subcommand adds or updates a single system property that can be referenced elsewhere on the server.
@@ -25,7 +25,7 @@ analogous to sending the elements as `-D` parameters on the Java command line.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,7 +36,7 @@ Displays the help text for the subcommand.
 *`--target`*:
 The target on which you are creating the system properties.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -55,7 +55,7 @@ Creates the property on a specified server instance.
 The name value pair of the system property to add to the specified target.
 If a system property was already defined, it is updated with the new value.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating System Property*
@@ -68,7 +68,7 @@ asadmin> create-system-property --target myserver http-listener-port=1088
 Command create-system-property executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

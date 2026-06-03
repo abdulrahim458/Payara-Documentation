@@ -2,7 +2,7 @@
 
 Stops the Domain Administration Server(DAS) of all current running domains on the server’s installation.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,12 +14,12 @@ asadmin stop-all-domains [--help]
 [--domainTimeout timeout]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `stop-all-domains` subcommand can be used to stop ALL current running domains on the server’s installation.
 
-[[options]]
+[#options]
 == Options
 
 *`--force`*:
@@ -42,7 +42,7 @@ Specifies how long to take for each domain to stop in seconds. If stopping the d
 +
 The default value is `600`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Stopping Domains*
@@ -64,7 +64,7 @@ Stopped domain
 Command stop-all-domains executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

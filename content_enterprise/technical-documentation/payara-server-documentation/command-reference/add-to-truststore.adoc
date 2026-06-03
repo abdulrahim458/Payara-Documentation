@@ -2,7 +2,7 @@
 
 Adds the specified certificate to a target domain truststore.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -19,7 +19,7 @@ asadmin add-to-truststore [--help]
 [alias]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command adds a certificate (e.g. `.cer`/`.pem` file) to the target instance or listener's trust store or listener's trust store using the provided alias.
@@ -28,7 +28,7 @@ If the instance or listener is configured to use the default trust store, the co
 
 IMPORTANT: This will overwrite an entry already present with the same alias.
 
-[[options]]
+[#options]
 == Options
 
 *`--help`*:
@@ -67,13 +67,13 @@ Defaults to `as-install/glassfish/nodes`
 *`--file`*:
 The certificate file to add to the target truststore.
 
-[[operands]]
+[#operands]
 == Operands
 
 *alias*:
 The alias name to store the certificate in the truststore under.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Add the specified certificate under the `mycert` alias*
@@ -83,7 +83,7 @@ The alias name to store the certificate in the truststore under.
 asadmin add-to-truststore --file mycert.pem mycert
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

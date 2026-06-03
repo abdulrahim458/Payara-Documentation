@@ -2,7 +2,7 @@
 
 Creates a ZIP archive of all available log files.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] collect-log-files [--help]
 [--retrieve={false|true}] [retrievefilepath]]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `collect-log-files` subcommand collects all available log files for
@@ -21,7 +21,7 @@ If a cluster is specified, the ZIP archive also contains the log file for the DA
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -52,17 +52,17 @@ log_yyyy-mm-dd_hh-min-sec.zip
 `cluster-name`;;
     The log files will be collected for the specified cluster and the DAS.
 
-[[operands]]
+[#operands]
 == Operands
 
 *retrievefilepath*:
   The name of the directory in which the ZIP archive will be created. If this operand is omitted, the ZIP archive will be created in the
   default directory. If the `--retrieve` option is `false`, this operand is ignored.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Collecting Log Files for the Default Server*
 
 This example generates a ZIP archive from the log files for the default server.
@@ -75,7 +75,7 @@ collected-logs/log_2010-12-15_15-46-23.zip.
 Command collect-log-files executed successfully.
 ----
 
-[[example-2]]
+[#example-2]
 *Example 2 Collecting Log Files for a Cluster*
 
 This example generates a ZIP archive from the log files for a cluster named `cluster1` and the two server instances running in the cluster.
@@ -90,7 +90,7 @@ collected-logs/log_2010-12-15_15-54-06.zip.
 Command collect-log-files executed successfully.
 ----
 
-[[example-3]]
+[#example-3]
 *Example 3 Collecting Log Files in a Directory Other Than the Default for a Cluster*
 
 This example generates a ZIP archive from the log files for a cluster named `cluster1` and its two server instances, and saves the archive in a directory named `/space/output`.
@@ -104,7 +104,7 @@ Created Zip file under /space/output/log_2010-12-15_15-55-54.zip.
 Command collect-log-files executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

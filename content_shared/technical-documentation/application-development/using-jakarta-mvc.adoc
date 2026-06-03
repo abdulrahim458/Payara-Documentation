@@ -9,7 +9,7 @@ The view or *V*, refers to the presentation of the model data to the user. Depen
 
 The controller, or *C*, refers to the unit that manages user input, connects that input to the model and returns output to the user. The returned output could be another view, a redirect, a file download, or anything at all, depending on the application. You can think of the controller as the central, coordinating piece of the application that liaises user actions to different parts of the application.
 
-[[introducing-jakarta-mvc]]
+[#introducing-jakarta-mvc]
 == Introducing Jakarta MVC
 
 Jakarta EE has action and component based frameworks for building web applications using the model view controller architecture pattern. Jakarta Faces is a component based framework while Jakarta MVC is an action based one.
@@ -18,21 +18,21 @@ An action based web framework is one in which the application code creates an ex
 
 Component based web frameworks on the other hand, have the controllers owned and managed by the framework itself. The controller is transparent to the developer in a component based framework.
 
-[[what-is-jakarta-mvc]]
+[#what-is-jakarta-mvc]
 === What Is Jakarta MVC?
 
 Jakarta MVC is an action based web application development framework built on top of Jakarta REST. It is an alternative way to build traditional web applications on the Jakarta EE Platform. Jakarta MVC is an optional standalone specification that is not part of Jakarta EE by default.
 
 As a Jakarta REST based framework, it makes all the features and options for developing REST services available for developing much more traditional web applications.
 
-[[action-vs-component-based-frameworks]]
+[#action-vs-component-based-frameworks]
 === Action vs Component Based Frameworks
 
 An action based web framework is one in which the application code creates an explicit controller that accepts requests and maps them to actions.
 
 Component based web frameworks on the hand, have the controllers owned and managed by the framework itself. The controller is transparent to the developer in a component based framework.
 
-[[setting-up]]
+[#setting-up]
 == Dependencies Setup
 
 To start with Jakarta MVC, you will need to add the specification API to your application dependencies. The current release can be obtained from the Payara API BOM. This setup is shown below.
@@ -68,7 +68,7 @@ To start with Jakarta MVC, you will need to add the specification API to your ap
 </project>
 ----
 
-[[the-controller]]
+[#the-controller]
 == The Controller
 
 A typical Jakarta MVC application has three parts - the view, the controller and a model. The model doesn't have to necessarily be a database entity.
@@ -123,7 +123,7 @@ public class RestConfiguration extends Application {
 
 The `Models` map instance is automatically available to the view and as such it can access all the values we put into it.
 
-[[the-view]]
+[#the-view]
 == The View
 
 There are two view technology options you can use with Jakarta MVC.
@@ -172,7 +172,7 @@ Accessing `http://localhost:8080/jakarta-mvc/mvc/app/` gives us the response sho
 
 *image*: mvc/mvc-1.png[Hello world example]
 
-[[models]]
+[#models]
 == Models
 
 So far we have seen how we can pass models, or data to the view for display through the `Models` map.
@@ -296,7 +296,7 @@ This way, the view has access to the model without explicitly using the `Models`
 
 *image*: mvc/mvc-2.png[Hello world example 2]
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * link:https://jakarta.ee/specifications/mvc/2.1/[Jakarta MVC Specification^]

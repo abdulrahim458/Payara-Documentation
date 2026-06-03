@@ -2,7 +2,7 @@
 
 Removes the named authentication realm.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,12 +12,12 @@ asadmin [asadmin-options] delete-auth-realm [--help]
 auth_realm-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-auth-realm` subcommand removes the named authentication realm. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,13 +36,13 @@ The `delete-auth-realm` subcommand removes the named authentication realm. This 
   instance_name;;
     Deletes the realm for a particular server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *auth_realm_name*:
   Name of the realm to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting an Authentication Realm*
@@ -55,7 +55,7 @@ asadmin> delete-auth-realm db
 Command delete-auth-realm executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

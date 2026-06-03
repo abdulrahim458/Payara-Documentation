@@ -1,12 +1,12 @@
 = Deploying Applications
 :ordinal: 1
 
-[[deploying-an-application]]
+[#deploying-an-application]
 == Deploying an Application from the Command Line
 
 NOTE: If you wish to deploy multiple packages, you must specify the `--deploy` again, or point to a `--deploymentDir` with multiple applications.
 
-[[deploying-an-application-package]]
+[#deploying-an-application-package]
 === Deploying an Application Package
 
 NOTE: All Payara Micro actions are run for the Payara Micro JAR, all in one command.
@@ -25,7 +25,7 @@ TIP: The `--deploy` option is optional if your deployment file ends with `.jar`,
 java -jar payara-micro.jar /home/user/example.war
 ----
 
-[[deploying-an-exploded-war]]
+[#deploying-an-exploded-war]
 === Deploying an Exploded War
 
 An exploded WAR can be deployed to a Payara Micro instance just by specifying the path to the exploded WAR root directory on the `--deploy` command line or programmatically via the API. The exploded WAR can be redeployed by creating an empty `.reload`
@@ -33,7 +33,7 @@ file in the root directory and updating its timestamp.
 
 TIP: On a Linux OS host, a simple `touch .reload` command can update the timestamp of the file.
 
-[[deploying-applications-from-a-maven-repository]]
+[#deploying-applications-from-a-maven-repository]
 === Deploying Applications from a Maven Repository
 
 You can deploy an application directly from a Maven repository using the `--deployFromGAV` option. This option accepts a comma separated string denoting a Maven artefact's `groupId`, `artifactId`, and `version` attributes.
@@ -58,7 +58,7 @@ To search through multiple additional repositories, you can use the option multi
 java -jar payara-micro.jar --deployFromGAV "fish.payara.examples,test,1.0-SNAPSHOT" --additionalRepository https://maven.java.net/content/repositories/promoted/ --additionalRepository https://nexus.payara.fish/repository/payara-artifacts
 ----
 
-[[define-context-root]]
+[#define-context-root]
 == Define Context Root
 
 The context root of an application can be specified using the option `--contextroot` or by appending the path to the war-file name given with the `--deploy` option.
@@ -99,7 +99,7 @@ NOTE: `--deploy example.war:` is identical to `--deploy example.war:/` and deplo
 
 IMPORTANT: It follows that leading `/` can be given but is not required. However, tailing `/` must not be given. Using `--deploy example.war:/foo/` will render the `<host>/foo/` endpoint inaccessible.
 
-[[define-global-context-root]]
+[#define-global-context-root]
 == Define Global Context Root
 
 The global context root for all applications can be specified using the option `--globalcontextroot`.
@@ -117,7 +117,7 @@ The complete context of the `example.war` application is now set to `/api/hello-
 
 IMPORTANT: It follows that leading `/` can be given but is not required. However, tailing `/` must not be given.
 
-[[using-rootdir]]
+[#using-rootdir]
 == Using Root Configuration Directory
 
 When a configuration root directory is reused across restarts (i.e. not running in a container), it is recommended not to set up a deployment each time a Payara Micro instance is started using that directory.
@@ -147,12 +147,12 @@ java -jar payara-micro.jar --rootdir micro-root --outputlauncher
 java -jar micro-root/launch-micro.jar
 ----
 
-[[payara-micro-post-boot-output]]
+[#payara-micro-post-boot-output]
 == Payara Micro Post Boot Output
 
 The following information about the output made by Payara Micro after its booting has completed will be available for examination:
 
-[[deployed-apps]]
+[#deployed-apps]
 === Deployed Apps
 
 After Payara Micro has booted, the log output will list data about the instance and all deployed applications, which includes:

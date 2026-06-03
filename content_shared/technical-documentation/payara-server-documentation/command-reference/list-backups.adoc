@@ -2,7 +2,7 @@
 
 Lists all backups.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,12 +15,12 @@ asadmin [asadmin-options] list-backups [--help]
 [domain-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-backups` subcommand displays information about domain backups.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -41,14 +41,14 @@ The `list-backups` subcommand displays information about domain backups.
 *`--backupconfig`*:
   Restricts the listing of backup files in the backup directory to those for the specified domain backup configuration.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-name*:
   Specifies the domain for which backups are listed. +
   This operand is optional if only one domain exists in the Payara Server installation.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Domain Backups*
@@ -81,7 +81,7 @@ Domain Directory          : /payara/glassfish/domains/domain1
 Command list-backups executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

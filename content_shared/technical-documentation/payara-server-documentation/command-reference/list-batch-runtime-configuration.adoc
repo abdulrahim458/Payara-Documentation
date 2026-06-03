@@ -2,7 +2,7 @@
 
 Displays the configuration of the batch runtime.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,13 +13,13 @@ asadmin [asadmin-options] list-batch-runtime-configuration [--help]
 [--header={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-batch-runtime-configuration` subcommand displays the configuration of the batch runtime. Batch runtime configuration data is
 stored in the `config` element in `domain.xml`.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -49,7 +49,7 @@ stored in the `config` element in `domain.xml`.
 *`-h`*:
   Specifies whether column headings are displayed when the `--long` option is used. The default value is `true`. To suppress the headings, set the `--header` option to `false`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Batch Runtime Configuration*
@@ -64,7 +64,7 @@ jdbc/_default            concurrent/__defaultManagedExecutorService
 Command list-batch-runtime-configuration executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Disables the phone home services.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source, shell]
@@ -10,14 +10,14 @@ Disables the phone home services.
 asadmin> disable-phone-home
 ----
 
-[[description]]
+[#description]
 == Description
 
 The phone home data is presently used to gather usage statistics about the corresponding distribution, such as how long users typically run instances, and what versions they use.
 The phone home service is enabled by default when starting a Payara Server and can be disabled by using this command. Make sure to restart Payara Server for the changes to take effect.
 
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Disable Phone Home Service*
@@ -30,7 +30,7 @@ Phone Home Service is disabled
 Command disable-phone-home executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

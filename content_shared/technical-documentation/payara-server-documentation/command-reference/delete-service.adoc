@@ -2,7 +2,7 @@
 
 Deletes the init scripts created by the `create-service` subcommand.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,7 +14,7 @@ asadmin _delete-service [--help]
 [domain-or-instance-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The _delete-service subcommand deletes init scripts created by the `create-script` subcommand.
@@ -25,7 +25,7 @@ The subcommand contains internal logic to smartly determine whether the supplied
 
 This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *`--help`*:
@@ -54,13 +54,13 @@ Specifies the node on which the instance resides. This option may be omitted onl
 +
 Otherwise, this option is required. If this option is specified, the operand must specify an instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-or-instance-name*:
 The name of the domain or instance to configure. If no operand is specified, the default domain is used.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example Deleting a Service on a Linux System using SystemD init*
@@ -75,7 +75,7 @@ asadmin _delete-service
 Command _delete-service executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

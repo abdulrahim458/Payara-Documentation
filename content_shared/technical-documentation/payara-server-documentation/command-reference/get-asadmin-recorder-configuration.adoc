@@ -2,7 +2,7 @@
 
 Returns the current configuration of the Asadmin Recorder service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,12 +10,12 @@ Returns the current configuration of the Asadmin Recorder service.
 asadmin [asadmin-options] get-asadmin-recorder-configuration [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-asadmin-recorder-configuration` command is used to retrieve the current configuration settings of the Asadmin Recorder feature in Payara Server.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -24,7 +24,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1*
@@ -39,7 +39,7 @@ true     true             /home/user/asadmin-commands.txt  version,_(.*),list(.*
 Command get-asadmin-recorder-configuration executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

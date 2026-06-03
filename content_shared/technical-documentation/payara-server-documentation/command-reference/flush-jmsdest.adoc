@@ -2,7 +2,7 @@
 
 Purges messages in a JMS destination.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,14 +13,14 @@ asadmin [asadmin-options] flush-jmsdest [--help]
 destname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `flush-jmsdest` subcommand purges the messages from a physical destination in the server's Java Message Service (JMS) configuration.
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -41,16 +41,16 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
   instance-name;;
     Purges messages from the physical destination for the specified server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *dest_name*:
   The unique identifier of the JMS destination to be purged.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Purging messages from a physical destination*
 
@@ -62,7 +62,7 @@ asadmin> flush-jmsdest --desttype queue PhysicalQueue
 Command flush-jmsdest executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

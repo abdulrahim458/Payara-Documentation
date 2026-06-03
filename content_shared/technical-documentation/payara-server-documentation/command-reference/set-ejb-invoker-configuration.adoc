@@ -2,7 +2,7 @@
 
 Enables or disables the endpoint that allows HTTP(S) transport based communication for remote EJBs.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -20,7 +20,7 @@ asadmin [asadmin-options] set-ejb-invoker-configuration [--help]
 [--virtualservers] virtualserver-list
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-ejb-invoker-configuration` can be used to configure the Remote EJB Lite HTTP endpoint settings.
@@ -28,7 +28,7 @@ The `set-ejb-invoker-configuration` can be used to configure the Remote EJB Lite
 IMPORTANT: The `set-ejb-invoker-configuration --enabled=true/false` commands actually deploy/undeploy an internal small WAR application that exposes the endpoint. +
 This application is shown in all overviews that show deployed applications that are currently enabled.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -77,7 +77,7 @@ If defined, the endpoint will be assigned to a list of *virtual servers* specifi
 +
 Otherwise, the endpoint will be assigned to all virtual servers available.
 
-[[examples]]
+[#examples]
 == Examples
 
 The following command will enable the endpoint on the DAS:
@@ -87,7 +87,7 @@ The following command will enable the endpoint on the DAS:
 asadmin> set-ejb-invoker-configuration --enabled=true
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

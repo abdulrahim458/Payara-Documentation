@@ -2,7 +2,7 @@
 
 Configures the authentication realm named admin-realm for the given LDAP.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,7 +10,7 @@ Configures the authentication realm named admin-realm for the given LDAP.
 asadmin [asadmin-options] configure-ldap-for-admin [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `configure-ldap-for-admin` subcommand configures the authentication realm named `admin-realm` for the given LDAP. The `configure-ldap-for-admin` subcommand is interactive.
@@ -18,7 +18,7 @@ The subcommand prompts the user for the `basedn` and `ldap-group` options.
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This command is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Configuring the LDAP Authentication Realm*
@@ -41,7 +41,7 @@ The LDAP Auth Realm admin-realm was configured correctly
 in admin server's configuration.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

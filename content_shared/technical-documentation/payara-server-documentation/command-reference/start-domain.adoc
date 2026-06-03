@@ -2,7 +2,7 @@
 
 Starts the Domain Administration Server(DAS) of the specified domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -20,7 +20,7 @@ asadmin [asadmin-options] start-domain [--help]
 [domain-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `start-domain` subcommand starts the domain administration server (DAS) of the specified domain. If a domain is not specified, the default domain is assumed. If the domains directory contains two or more domains, the domain-name operand must be specified.
@@ -34,7 +34,7 @@ Additionally, the admin user password must not be blank if secure administration
 To provide the new admin user password, you can use the `--passwordfile` utility option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] command
 after adding the entry `AS_ADMIN_NEWPASSWORD` to the password file.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -116,7 +116,7 @@ Specifies if the server will stop after setting configurations.
 +
 The default value is `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-name*:
@@ -124,7 +124,7 @@ The unique name of the domain you want to start.
 +
 This operand is optional if only one domain exists in the Payara Server installation.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Starting a Domain*
@@ -142,7 +142,7 @@ Admin port for the domain: 4848
 Command start-domain executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

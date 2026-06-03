@@ -2,7 +2,7 @@
 
 Updates the configuration data of a SSH node.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,7 +16,7 @@ asadmin [asadmin-options] update-node-ssh [--help]
 node-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `update-node-ssh` subcommand updates the configuration data of an SSH node. This subcommand requires secure shell (SSH) to be configured on the machine where the domain administration server (DAS) is running and on the machine where the node resides. You may run this subcommand from any machine that can contact the DAS.
@@ -33,7 +33,7 @@ By default, the subcommand fails and the node is not updated if the DAS cannot c
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -81,13 +81,13 @@ The default depends on whether this subcommand is run to enable SSH communicatio
   `true`;;
     The node is updated even if validation of the node's parameters fails.
 
-[[operands]]
+[#operands]
 == Operands
 
 *node-name*:
   The name of the node to update. The node must exist. Otherwise, an error occurs.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Updating the Host That a Node Represents*
@@ -115,7 +115,7 @@ Continuing with node update due to use of --force.
 Command update-node-ssh executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

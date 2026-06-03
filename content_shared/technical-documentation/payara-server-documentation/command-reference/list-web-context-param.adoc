@@ -2,7 +2,7 @@
 
 Lists servlet context-initialization parameters of a deployed web application or module.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-web-context-param [--help]
 [--name=context-param-name] application-name[/module]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-web-context-param` subcommand lists the servlet context-initialization parameters of one of the following items:
@@ -32,7 +32,7 @@ For each parameter, the following information is displayed:
 * The value of the `--ignoreDescriptorItem` option of the `set-web-context-param` subcommand that was specified when the parameter was set
 * The description of the parameter or `null` if no description was specified when the parameter was set
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -44,7 +44,7 @@ For each parameter, the following information is displayed:
   The name of the servlet context-initialization parameter that is to be listed. If this option is omitted, all parameters of the application
   that have previously been set are listed.
 
-[[operands]]
+[#operands]
 == Operands
 
 *application-name*:
@@ -68,7 +68,7 @@ For each parameter, the following information is displayed:
 ----
   The module would be specified as the operand of this command as `myApp/myWebModule.war`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Servlet Context-Initialization Parameters for a Web Application*
@@ -86,7 +86,7 @@ javax.faces.PROJECT_STAGE = null ignoreDescriptorItem=true //null
 Command list-web-context-param executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

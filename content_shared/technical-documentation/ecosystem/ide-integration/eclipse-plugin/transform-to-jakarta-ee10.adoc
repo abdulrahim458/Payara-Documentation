@@ -2,7 +2,7 @@
 
 Using the `Payara Tools plugin`, you can transform whole projects or single files from Java EE 8 to Jakarta EE 10.
 
-[[refactor-project]]
+[#refactor-project]
 == Refactor a Java EE 8 Project to Jakarta EE 10
 To refactor a Java EE 8 based *Maven* project right click on root project folder and choose *Payara Refactor->Transform to Jakarta EE 10*:
 
@@ -28,7 +28,7 @@ A maven `BUILD SUCCESS` message should be logged in the IDE's console.
 
 NOTE: When the whole project is transformed, the plugin adds `JakartaEE10` at the end of the project name. In our example, `demo-JakartaEE10` project was created from `demo` project.
 
-[[refactor-file]]
+[#refactor-file]
 == Transform a Single File
 
 To refactor a `Java EE 8 file` right click on it and choose *Payara Refactor->Transform to Jakarta EE 10* option:

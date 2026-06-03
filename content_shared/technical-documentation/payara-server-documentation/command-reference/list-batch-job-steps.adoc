@@ -2,7 +2,7 @@
 
 Lists steps for a specific batch job execution.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,12 +15,12 @@ asadmin [asadmin-options] list-batch-job-steps [--help]
 execution_id
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-batch-job-steps` subcommand lists steps for a specific batch job execution.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -65,13 +65,13 @@ The `list-batch-job-steps` subcommand lists steps for a specific batch job execu
 *`-h`*:
   Specifies whether column headings are displayed when the `--long` option is used. The default value is `true`. To suppress the headings, set the `--header` option to `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *execution_id*:
   The ID of the execution for which to list batch job steps and details.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Batch Job Steps*
@@ -96,7 +96,7 @@ process    8        COMPLETED     METRICNAME          VALUE
 Command list-batch-job-steps executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

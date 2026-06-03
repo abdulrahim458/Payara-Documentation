@@ -2,7 +2,7 @@
 
 Adds a new HTTP redirect.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,12 +14,12 @@ asadmin [asadmin-options] create-http-redirect [--help]
 protocol-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-http-redirect` subcommand creates an HTTP redirect. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -42,13 +42,13 @@ cluster-name;;
   standalone-instance-name;;
     Creates the HTTP redirect on the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *protocol-name*:
   The name of the protocol to which to apply the redirect.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

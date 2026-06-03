@@ -26,12 +26,12 @@ If the xref:technical-documentation/payara-server-documentation/general-administ
 [2016-05-24T03:52:28.690+0000] [Payara {version}] [INFO] [fish.payara.nucleus.healthcheck.HealthCheckService] [tid: _ThreadID=72 _ThreadName=healthcheck-service-3 [timeMillis: 1464061948690] [levelValue: 800] [[ CPUC:Health Check Result:[[status=WARNING, message='CPU%: 75.6, Time CPU used: 267 milliseconds'']']]]  [2016-05-24T21:11:36.579+0000] [Payara 4.1] [SEVERE] [fish.payara.nucleus.healthcheck.HealthCheckService] [tid: _ThreadID=71 _ThreadName=healthcheck-service-3] [timeMillis: 1464124296579] [levelValue: 1000] [[ HOGT:Health Check Result:[[status=CRITICAL, message='Thread with <id-name>: 145-testing-thread-1 is a hogging thread for the last 59 seconds 999 milliseconds'']']]]
 ----
 
-[[configuration]]
+[#configuration]
 == Healthcheck Service Configuration
 
 As with any other services available in Payara Server, the HealthCheck service can be configured by using the web console or by using administration commands.
 
-[[using-the-web-console]]
+[#using-the-web-console]
 === Using the Web Administration Console
 
 To configure the HealthCheck Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Healthcheck_:
@@ -56,7 +56,7 @@ IMPORTANT: Keep in mind that for HealthCheck events to be relayed to the active 
 TIP: You don't need to manually add each notifier on this screen. When enabling a notifier on its configuration screen, the server will **automatically** add it to the list of active notifiers for the HealthCheck service. +
 This same result occurs when enabling the notifier using the appropriate `asadmin` command.
 
-[[configuring-the-available-checkers]]
+[#configuring-the-available-checkers]
 ==== Configuring the Available Checkers
 
 Each of the available checkers that are used to determine the server's health can also be configured separately from each other on the admin console. The list of the available checkers is as follows:
@@ -73,7 +73,7 @@ You can configure the settings for each checker on the respective tab in the web
 
 image:healthcheck/cpu-usage-checker-configuration.png[alt="CPU Usage Checker Configuration in the Admin Console",width=600px]
 
-[[common-checker-configuration]]
+[#common-checker-configuration]
 ==== Common Healthcheck Service Checkers Configuration
 
 The following are the configurable attributes available to *ALL* the HealthCheck Service performance metric checkers:
@@ -98,7 +98,7 @@ The following are the configurable attributes available to *ALL* the HealthCheck
 +
 The default value is **MINUTES**.
 
-[[threshold-range-configuration]]
+[#threshold-range-configuration]
 ==== Threshold Range Configuration for Healthcheck Service Checkers
 
 The following attributes are available to the *CPU Usage*, *Connection Pool*, *Heap Memory Usage*, *Machine Memory Usage* and *Garbage Collector* checkers:
@@ -116,7 +116,7 @@ For example, if the *CPU Usage* checker is configured with the default threshold
 Health Check notification with severity level: WARNING - CPUC:Health Check Result:[[status=WARNING, message='CPU%: 76.8, Time CPU used: 171 milliseconds'']']
 -----
 
-[[special-checkers-configuration]]
+[#special-checkers-configuration]
 ==== Special Healthcheck Service Checkers Configuration
 
 The *Hogging Threads* and the *Stuck Threads* checkers are special on their configuration.
@@ -143,7 +143,7 @@ The following are the attributes used to configure this checker:
 
 //TODO - This section should be expanded on how to configure MP Health and Metrics settings of the service in the Admin console.
 
-[[from-the-command-line]]
+[#from-the-command-line]
 === From the Command Line
 
 You can configure the HealthCheck Service by using the corresponding Asadmin CLI commands.

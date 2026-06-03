@@ -5,7 +5,7 @@ Payara Micro has a Gradle plugin which can start and stop Payara Micro and creat
 
 NOTE: The plugin requires JDK 8 or higher and the latest plugin version is currently `1.1.0`
 
-[[installation]]
+[#installation]
 == Installation
 
 To use it, simply add the following script to your `build.gradle`:
@@ -17,7 +17,7 @@ plugins {
 }
 ----
 
-[[configuration-example]]
+[#configuration-example]
 == Configuration Example
 
 [source, groovy, subs=attributes+]
@@ -32,10 +32,10 @@ payaraMicro {
 }
 ----
 
-[[plugin-tasks]]
+[#plugin-tasks]
 == Plugin Tasks
 
-[[bundle]]
+[#bundle]
 === `microBundle`
 
 *Aim*: This task bundles the attached project's artifact into an Uber JAR with the specified configurations.
@@ -57,7 +57,7 @@ payaraMicro {
 |By default `microBundle` task fetches payara-micro with version {version}
 |=== 
 
-[[start]]
+[#start]
 === `microStart`
 
 *Aim*: This task starts Payara Micro with the specified configuration.
@@ -111,7 +111,7 @@ payaraMicro {
 |Enables the hot reload mode.
 |===
 
-[[stop]]
+[#stop]
 === `microStop`
 
 *Aim*: This task stops Payara Micro with the specified configuration. By default this task tries to find out currently executing Payara Micro instance based on project GAV. If `processId` is defined, it will take precedence and the given `processId` will immediately kill the executing Payara Micro instance.
@@ -133,7 +133,7 @@ payaraMicro {
 |Use created uber-jar that resides in build\libs folder. The name of the jar artifact will be resolved automatically by evaluating its final name.
 |===
 
-[[reload]]
+[#reload]
 === `microReload`
 *Aim*: This task reloads the Payara Micro application with the specified configuration. By default, this task performs the vanilla deployment of the application without restarting the Payara Micro instance. If `hotDeploy` is set to true then the Hot Reload functionality will be enabled. 
 *Usage*: `gradle microReload`
@@ -162,7 +162,7 @@ to be reloaded via the Hot Reload feature.
 
 |===
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * https://plugins.gradle.org/plugin/fish.payara.micro-gradle-plugin[Plugin page on Gradle Plugins Website^]

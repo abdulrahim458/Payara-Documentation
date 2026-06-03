@@ -2,7 +2,7 @@
 
 Shows the JVM machine statistics for a given target instance.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,7 +10,7 @@ Shows the JVM machine statistics for a given target instance.
 generate-jvm-report [--help] [--type=jvm-statistic-type] [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `generate-jvm-report` subcommand creates a report that shows the threads (dump of stack trace), classes, memory, or loggers for a given target instance, including the domain administration server (DAS). If a type is not specified, a summary report is generated. This subcommand only provides statistics for the Payara Server instance processes. This subcommand provides an alternative to sending Ctrl+Break or `kill -3` signals to Payara Server processes to obtain a stack trace for processes that are hanging.
@@ -27,7 +27,7 @@ If the JRE software cannot provide this information, the report contains the tex
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -59,10 +59,10 @@ This subcommand is supported in remote mode only.
   `log`;;
     Provides information about the loggers that are registered in the Virtual Machine for the Java platform (Java Virtual Machine or JVM machine).xref:footnote-1[^Foot1^]
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Obtaining Summary Information for the JVM Machine*
 
@@ -93,7 +93,7 @@ user.timezone = US/Pacific
 Command generate-jvm-report executed successfully
 ----
 
-[[example-2]]
+[#example-2]
 
 *Example 2 Obtaining Information for a Particular JVM Machine Type*
 
@@ -113,7 +113,7 @@ Total time spent in compilation: 0 Hours 0 Minutes 4 Seconds
 Command generate-jvm-report executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:
@@ -130,7 +130,7 @@ Command generate-jvm-report executed successfully.
 
 '''''
 
-[[footnote-1]]
+[#footnote-1]
 Footnote 1: The terms "Java Virtual Machine" and "JVM" mean a Virtual Machine for the Java platform. +
 
 

@@ -2,7 +2,7 @@
 
 Lists managed scheduled executor service resources.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-managed-scheduled-executor-services [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-managed-scheduled-executor-services` subcommand lists managed scheduled executor service resources.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -42,7 +42,7 @@ Lists the resources on all server instances in the specified cluster.
 instance-name;;
 Lists the resources on a specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Managed Scheduled Executor Service Resources*
@@ -58,7 +58,7 @@ concurrent/ScheduledExecutor2
 Command list-managed-scheduled-executor-services executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

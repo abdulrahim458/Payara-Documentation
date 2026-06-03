@@ -2,7 +2,7 @@
 
 Configures the notification service along with the log notifier.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -18,14 +18,14 @@ asadmin [asadmin-options] set-notification-configuration
 [--useseparatelogfile={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to set the configuration of the Notification Service and the Log Notifier at the same time.
 
 It functions as a combination of the `notification-configure` and `set-log-notifier-configuration` Asadmin commands.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -56,7 +56,7 @@ Defaults to `WARNING`. The notifier only responds to events at or above this lev
 *`--useseparatelogfile`*:
 Defaults to `false`. Whether to use a separate log file to store notifications.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enables the notification service*
@@ -66,7 +66,7 @@ Defaults to `false`. Whether to use a separate log file to store notifications.
 asadmin set-notification-configuration --enabled=true --dynamic=true --notifierEnabled=true --notifierDynamic=true --useSeparateLogfile=false
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

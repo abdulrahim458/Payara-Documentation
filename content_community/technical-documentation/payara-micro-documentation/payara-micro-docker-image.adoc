@@ -2,7 +2,7 @@
 
 Overview of the usage and details of the official Payara Micro Community Docker image.
 
-[[quickstart]]
+[#quickstart]
 == Quick Start
 
 Launch a new Payara Micro instance running in a container listening in port `8080` with the following command:
@@ -27,7 +27,7 @@ docker run -p 8080:8080 payara/micro:{version}
 
 AMD64 & ARM64 compatible images are provided. The Docker client should automatically download the appropriate image for your architecture.
 
-[[ports]]
+[#ports]
 == Exposed Ports
 
 The default ports that are exposed by this image are:
@@ -35,14 +35,14 @@ The default ports that are exposed by this image are:
 * 8080 - HTTP listener
 * 6900 - Datagrid's Hazelcast port
 
-[[installation-details]]
+[#installation-details]
 == Installation Details
 
 The Payara Micro JAR file is located in the `/opt/payara/` directory (identified by the `HOME_DIR` environment variable), which also is the default work directory of the image.
 
 IMPORTANT: The directory name is deliberately free of any versioning so that any scripts written to work with one version can be seamlessly migrated to the latest docker image.
 
-[[application-deployment]]
+[#application-deployment]
 == Application Deployment
 
 Payara Micro will deploy applications at startup time, depending on how you prefer to instruct the instance to execute the deployments. However, you have to make sure that the container has access to your application artefacts.
@@ -53,7 +53,7 @@ You can instruct the container to deploy applications using the following mechan
 * Prepare a custom Docker image that includes your application artefacts.
 * Deploy your applications from a remote Maven repository.
 
-[[deploy-from-directory]]
+[#deploy-from-directory]
 === Deploy Applications from a Directory
 
 You can instruct the container to deploy all application artefacts that belong to a directory that is mounted as Docker volume mapped to the `/opt/payara/deployments` (which is defined as the value of the `$DEPLOY_DIR` environment variable) local directory.
@@ -74,7 +74,7 @@ docker run -p 8080:8080 -v ~/payara-micro/applications:/opt/payara/deployments p
 
 NOTE: Make sure to prefix the artefact names with the absolute path to the local deployment directory.
 
-[[deploy-using-custom-image]]
+[#deploy-using-custom-image]
 === Deploy Applications Using a Custom Image
 
 You can also prepare a custom image based on the official Payara Micro Docker image and copy all application artefacts to the `$DEPLOY_DIR` directory. This way, you can re-package your applications in a simple distributable unit.
@@ -87,7 +87,7 @@ FROM payara/micro
 COPY myapplication.war $DEPLOY_DIR
 ----
 
-[[deploy-from-maven-repo]]
+[#deploy-from-maven-repo]
 === Deploy Applications from a Maven Repository
 
 If your application's artefact is already available in a Maven repository, you can instruct the container to download and deploy it directly. To do this, you'll have to pass the `--deployFromGAV` argument with the GAV coordinates of your artefact to the run command used to launch the container.
@@ -101,10 +101,10 @@ docker run -p 8080:8080 payara/micro --deployFromGAV "fish.payara.examples:my-ap
 
 Notice that the example also uses the `--additionalRepository` argument to specify the URL of the repository where the artefact lives since by default, Payara Micro will only look for artefacts in the Maven Central repository.
 
-[[configuration]]
+[#configuration]
 == Configuration
 
-[[context-root]]
+[#context-root]
 === Context Root Configuration
 
 By default, the context root of each deployed application corresponds to the artefact's file name. You can override this setting by using the `--contextroot` startup argument.
@@ -136,7 +136,7 @@ COPY myapplication.war $DEPLOY_DIR
 CMD ["--deploymentDir", "/opt/payara/deployments", "--contextroot", "my"]
 ----
 
-[[disabling-data-grid]]
+[#disabling-data-grid]
 === Disable the Data Grid
 
 Payara Micro will start in "clustering" mode by booting up the xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/clustering.adoc[Data Grid], allowing other instances reachable in the network to join the grid automatically. 
@@ -150,7 +150,7 @@ To disable the Data Grid, you can pass the `--noHazelcast` argument to the entry
 docker run -p 8080:8080 -v ~/payara-micro/applications:/opt/payara/deployments payara/micro --noHazelcast
 ----
 
-[[disabling-clustering]]
+[#disabling-clustering]
 === Disable Clustering
 
 By default, Payara Micro will start with hazelcast enabled, allowing other instances reachable in the network to join the datagrid automatically and cluster.
@@ -164,7 +164,7 @@ To disable clustering, you can pass the `--noCluster` argument to the entry poin
 docker run -p 8080:8080 -v ~/payara-micro/applications:/opt/payara/deployments payara/micro --noCluster
 ----
 
-[[using-environment-variables]]
+[#using-environment-variables]
 === Using Environment Variables
 
 The following environment variables can be used to configure multiple settings of the Payara Micro instance. They can be either specified in a custom image's `Dockerfile` or passed to the `docker run` command via the `--env` or `--env-file` arguments:
@@ -185,7 +185,7 @@ The following is a list of variables used by the Docker image to set up the Paya
 |`HOME_DIR` |The directory containing the Payara Micro JAR binary and the scripts used to run the instance.| `/opt/payara`|
 |===
 
-[[read-only]]
+[#read-only]
 === Read Only Support Considerations
 
 The Payara Micro Docker image requires write access to the `HOME_DIR`, and `/tmp` directories to function.

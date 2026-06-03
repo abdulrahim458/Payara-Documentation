@@ -2,7 +2,7 @@
 
 Adds a standalone instance to an existing deployment group.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] add-instance-to-deployment-group [--help]
 [--deploymentgroup deploymentGroupName]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `add-instance-to-deployment-group` subcommand will add the referenced instance to the referenced deployment group.
@@ -21,7 +21,7 @@ This command will only work with standalone instances (see xref:technical-docume
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ The name of the standalone instance that will be added to the deployment group. 
 *`--deploymentGroup`*:
 The name of the deployment group to which the standalone instance will be added. The command will fail if the name doesn't match to an existing deployment group.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Add an instance to a Deployment Group*
@@ -51,7 +51,7 @@ asadmin add-instance-to-deployment-group --instance=test-instance-1 --deployment
 Command add-instance-to-deployment-group executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Enables or disables the Healthcheck of a specific performance metric service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -28,7 +28,7 @@ asadmin [asadmin-options] set-healthcheck-service-configuration
 [--delete-metric=metricName]
 ----
 
-[[description]]
+[#description]
 == Description
 
 Enables and disables the monitoring of a HealthCheck performance metric service. The command also configures the frequency of monitoring for that metric.
@@ -37,7 +37,7 @@ The command can also be used to configures performance metric specific propertie
 
 WARNING: If this command is run before running the `set-healthcheck-configuration` command, it will succeed and the configuration will be saved, but the Healthcheck service will not be enabled until the command is used.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -143,7 +143,7 @@ Takes a string of the format `'metricName=MetricName description=Description'`, 
 *`--delete-metric`*:
 Removes a metric exposed by MicroProfile Metrics that has been added to monitor. Takes a string of the format `'metricName=MetricName'`, where `metricName` is required.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Basic Configuration*
@@ -201,7 +201,7 @@ The following example configures the Microprofile Metrics Checker to add  `base_
 asadmin set-healthcheck-service-configuration --service=mp-metrics --enabled=true --dynamic=true --add-to-microprofile-health=true --add-metric='metricName=base_thread_max_count'
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

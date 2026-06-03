@@ -2,7 +2,7 @@
 
 Configures the settings of the SNMP notifier.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -19,7 +19,7 @@ asadmin [asadmin-options] set-snmp-notifier-configuration [--help]
 [--version version]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the SNMP notifier in Payara Server.
@@ -27,7 +27,7 @@ This command can be used to configure the behaviour of the SNMP notifier in Paya
 IMPORTANT: This command is available as long as the SNMP notifier's core module is installed in the server. +
 This notifier's extension is installed by default on Payara Server Enterprise.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -62,7 +62,7 @@ The community string used in the SNMP query. Will be set to a default value if n
 *`--oid`*:
 The Object ID used in the SNMP query. Will be set to a default value if not set by the user.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enable the SNMP notifier and configure the SNMP trap settings*
@@ -72,7 +72,7 @@ The Object ID used in the SNMP query. Will be set to a default value if not set 
 asadmin set-snmp-notifier-configuration --enabled=true --dynamic=true --hostname=localhost --snmpPort=162 --community=public --oid=".1.3.6.1.2.1.1.8" --version=v2c
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -9,7 +9,7 @@ Instructions for accomplishing the tasks in this chapter by using the Administra
 
 For information about database connectivity, see xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc[Administering Database Connectivity].
 
-[[about-eis-connectivity]]
+[#about-eis-connectivity]
 == About EIS Connectivity
 
 Enterprise information system (EIS) refers to any system that holds the data of an organization. It can be a mainframe, a messaging system, a database system, or an application. Connection resources are used by applications and modules to Create an Administered Object applications and modules to access EIS software.
@@ -46,12 +46,12 @@ asadmin help create-connector-connection-pool
 ----
 --
 
-[[administering-connector-connection-pools]]
+[#administering-connector-connection-pools]
 == Administering Connector Connection Pools
 
 After a connector module has been deployed, you are ready to create a connector connection pool for it.
 
-[[to-create-a-connector-connection-pool]]
+[#to-create-a-connector-connection-pool]
 === To Create a Connector Connection Pool
 
 Use the `create-connector-connection-pool` subcommand in remote mode to create a connector connection pool for a deployed connector module. When you are building the connector connection pool, certain data specific to the EIS will be required. The value in the mandatory `--connectiondefintion` option provides the EIS info.
@@ -81,7 +81,7 @@ Command create-connector-connection-pool executed successfully
 ----
 
 
-[[to-list-connector-connection-pools]]
+[#to-list-connector-connection-pools]
 === To List Connector Connection Pools
 
 Use the `list-connector-connection-pools` subcommand in remote mode to list the pools that have been created.
@@ -98,7 +98,7 @@ jms/qConnPool
 Command list-connector-connection-pools executed successfully
 ----
 
-[[to-connect-to-ping-or-reset-flush-a-connector-connection-pool]]
+[#to-connect-to-ping-or-reset-flush-a-connector-connection-pool]
 === To Connect to (Ping) or Reset (Flush) a Connector Connection Pool
 
 Use the `ping-connection-pool` or `flush-connection-pool` subcommands in remote mode to perform these tasks on a connection pools. See xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#to-contact-ping-a-connection-pool[To Contact (Ping) a Connection Pool] or xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#to-reset-flush-a-connection-pool[To Reset (Flush) a Connection Pool] for instructions.
@@ -107,7 +107,7 @@ Use the `ping-connection-pool` or `flush-connection-pool` subcommands in remote 
 
 . Connect to or reset a connector connection pool by using the xref:technical-documentation/payara-server-documentation/command-reference/flush-connection-pool.adoc[`flush-connection-pool`] subcommand or the xref:technical-documentation/payara-server-documentation/command-reference/ping-connection-pool.adoc[`ping-connection-pool`] subcommand.
 
-[[to-update-a-connector-connection-pool]]
+[#to-update-a-connector-connection-pool]
 === To Update a Connector Connection Pool
 
 Use the `get` and `set` subcommands to view and change the values of the connector connection pool properties.
@@ -132,7 +132,7 @@ asadmin> set domain.resources.connector-connection-pool
 
 . If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
-[[to-delete-a-connector-connection-pool]]
+[#to-delete-a-connector-connection-pool]
 === To Delete a Connector Connection Pool
 
 Use the `delete-connector-connection-pool` subcommand in remote mode to remove a connector connection pool.
@@ -152,12 +152,12 @@ asadmin> delete-connector-connection-pool --cascade=false jms/qConnPool
 Command delete-connector-connection-pool executed successfully
 ----
 
-[[administering-connector-resources]]
+[#administering-connector-resources]
 == Administering Connector Resources
 
 A connector resource provides an application or module with the means of connecting to an EIS. Typically, you create a connector resource for each EIS that is accessed by the applications deployed in the domain.
 
-[[to-create-a-connector-resource]]
+[#to-create-a-connector-resource]
 === To Create a Connector Resource
 
 Use the `create-connector-resource` subcommand in remote mode to register a new connector resource with its JNDI name.
@@ -180,7 +180,7 @@ asadmin> create-connector-resource --poolname jms/qConnPool
 Command create-connector-resource executed successfully
 ----
 
-[[to-list-connector-resources]]
+[#to-list-connector-resources]
 === To List Connector Resources
 
 Use the `list-connector-resources` subcommand in remote mode to list the connector resources that have been created.
@@ -197,7 +197,7 @@ jms/qConnFactory
 Command list-connector-resources executed successfully
 ----
 
-[[to-update-a-connector-resource]]
+[#to-update-a-connector-resource]
 === To Update a Connector Resource
 
 Use the `get` and `set` subcommands to view and change the values of the connector resource properties.
@@ -221,7 +221,7 @@ asadmin> set domain.resources.connector-resource.jms/qConnFactory.enabled=true
 
 . If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
-[[to-delete-a-connector-resource]]
+[#to-delete-a-connector-resource]
 === To Delete a Connector Resource
 
 Use the `delete-connector-resource` subcommand in remote mode to remove a connector resource by specifying the JNDI name.
@@ -243,10 +243,10 @@ asadmin> delete-connector-resource jms/qConnFactory
 Command delete-connector-resources executed successfully
 ----
 
-[[administering-the-resource-adapter-configuration]]
+[#administering-the-resource-adapter-configuration]
 == Administering the Resource Adapter Configuration
 
-[[to-create-configuration-information-for-a-resource-adapter]]
+[#to-create-configuration-information-for-a-resource-adapter]
 === To Create Configuration Information for a Resource Adapter
 
 Use the `create-resource-adapter-config` subcommand in remote mode to create configuration information for a resource adapter, also known as a connector module. You can run the subcommand before deploying a resource adapter, so that the configuration information is available at the time of deployment. The resource adapter configuration can also be created after the resource adapter is deployed. In this situation, the resource adapter is restarted with the new configuration.
@@ -263,7 +263,7 @@ asadmin> create-resource-adapter-config --property foo=bar
 Command create-resource-adapter-config executed successfully
 ----
 
-[[to-list-resource-adapter-configurations]]
+[#to-list-resource-adapter-configurations]
 === To List Resource Adapter Configurations
 
 Use the `list-resource-adapter-configs` subcommand in remote mode to list the configuration information contained in the domain configuration file (`domain.xml`) for the specified resource adapter (connector module).
@@ -281,7 +281,7 @@ ra2
 Command list-resource-adapter-configs executed successfully
 ----
 
-[[to-update-a-resource-adapter-configuration]]
+[#to-update-a-resource-adapter-configuration]
 === To Update a Resource Adapter Configuration
 
 Use the `get` and `set` subcommands to view and change the values of the resource adapter configuration properties.
@@ -304,7 +304,7 @@ asadmin>get domain.resources.resource-adapter-config.ra1.*
 asadmin> set domain.resources.resource-adapter-config.ra1.raSpecificProperty=value
 ----
 
-[[to-delete-a-resource-adapter-configuration]]
+[#to-delete-a-resource-adapter-configuration]
 === To Delete a Resource Adapter Configuration
 
 Use the `delete-resource-adapter-config` subcommand in remote mode to delete the configuration information contained in the domain configuration file (`domain.xml`) for a specified resource adapter (connector module).
@@ -322,14 +322,14 @@ asadmin> delete-resource-adapter-config ra1
 Command delete-resource-adapter-config executed successfully
 ----
 
-[[administering-connector-security-maps]]
+[#administering-connector-security-maps]
 == Administering Connector Security Maps
 
 The EIS is any system that holds the data of an organization. It can be a mainframe, a messaging system, a database system, or an application. The connector security map is used to map the application's credentials to the EIS credentials.
 
 A security map applies to a particular connector connection pool. One or more named security maps can be associated with a connector connection pool.
 
-[[to-create-a-connector-security-map]]
+[#to-create-a-connector-security-map]
 === To Create a Connector Security Map
 
 Use the `create-connector-security-map` subcommand in remote mode to create a security map for the specified connector connection pool. If the security map is not present, a new one is created. You can specify back-end EIS principals or back-end EIS user groups. The connector security map configuration supports the use of the wild card asterisk `(*)` to indicate all users or all user groups.
@@ -353,7 +353,7 @@ asadmin> create-connector-security-map --poolname connector-pool1
 Command create-connector-security-map executed successfully
 ----
 
-[[to-list-connector-security-maps]]
+[#to-list-connector-security-maps]
 === To List Connector Security Maps
 
 Use the `list-connector-security-maps` subcommand in remote mode to list the existing security maps belonging to the specified connector connection pool. You can get a simple listing of the connector security maps for a connector connection pool, or you can get a more comprehensive listing that shows the principals of the map.
@@ -392,7 +392,7 @@ principal1
 Command list-connector-security-maps executed successfully.
 ----
 
-[[to-update-a-connector-security-map]]
+[#to-update-a-connector-security-map]
 === To Update a Connector Security Map
 
 Use the `update-connector-security-map` subcommand in remote mode to create or modify a security map for the specified connector connection pool.
@@ -415,7 +415,7 @@ asadmin> update-connector-security-map --poolname connector-pool1
 Command update-connector-security-map executed successfully.
 ----
 
-[[to-delete-a-connector-security-map]]
+[#to-delete-a-connector-security-map]
 === To Delete a Connector Security Map
 
 Use the `delete-connector-security-map` subcommand in remote mode to delete a security map for the specified connector connection pool.
@@ -433,14 +433,14 @@ asadmin> delete-connector-security-map --poolname connector-pool1 securityMap1
 Command delete-connector-security-map executed successfully
 ----
 
-[[administering-connector-work-security-maps]]
+[#administering-connector-work-security-maps]
 == Administering Connector Work Security Maps
 
 The EIS is any system that holds the data of an organization. It can be a mainframe, a messaging system, a database system, or an application. The connector work security map is used to is used to map the EIS credentials to the credentials of Payara Server security domain.
 
 A security map applies to a particular connector connection pool. One or more named security maps can be associated with a connector connection pool.
 
-[[to-create-a-connector-work-security-map]]
+[#to-create-a-connector-work-security-map]
 === To Create a Connector Work Security Map
 
 Use the `create-connector-work-security-map` subcommand in remote mode to map the caller identity of the work submitted by the connector module (resource adapter) EIS principal or EIS user group to a suitable principal or user group in the Payara Server security domain. One or more work security maps can be associated with a connector module.
@@ -471,7 +471,7 @@ Command create-connector-work-security-map executed successfully
 The following examples create `workSecurityMap1` and `workSecurityMap2`
 for `my-resource-adapter-name`.
 
-[[to-list-connector-work-security-maps]]
+[#to-list-connector-work-security-maps]
 === To List Connector Work Security Maps
 
 Use the `list-connector-work-security-maps` subcommand in remote mode to list the work security maps that belong to a specific connector module.
@@ -491,7 +491,7 @@ generic-ra-principals-map: EIS principal=eis-foo, mapped principal=foo
 Command list-connector-work-security-maps executed successfully.
 ----
 
-[[to-update-a-connector-work-security-map]]
+[#to-update-a-connector-work-security-map]
 === To Update a Connector Work Security Map
 
 Use the `update-connector-work-security-map` subcommand in remote to modify a work security map that belongs to a specific resource adapter (connector module).
@@ -512,7 +512,7 @@ asadmin> update-connector-work-security-map --raname generic-ra
 Command update-connector-work-security-map executed successfully.
 ----
 
-[[to-delete-a-connector-work-security-map]]
+[#to-delete-a-connector-work-security-map]
 === To Delete a Connector Work Security Map
 
 Use the `delete-connector-work-security-map` subcommand in remote mode to delete a work security map that belongs to a specific connector module (resource adapter).
@@ -530,12 +530,12 @@ asadmin> delete-connector-work-security-map --raname my_ra worksecuritymap1
 Command delete-connector-work-security-map executed successfully.
 ----
 
-[[administering-administered-objects]]
+[#administering-administered-objects]
 == Administering Administered Objects
 
 Packaged within a connector module, an administered object provides specialized functionality for an application. For example, an administered object might provide access to a parser that is specific to the connector module and its associated EIS.
 
-[[to-create-an-administered-object]]
+[#to-create-an-administered-object]
 === To Create an Administered Object
 
 Use the `create-admin-object` subcommand to create an administered object resource. When creating an administered object resource, name-value pairs are created, and the object is associated to a JNDI name.
@@ -556,7 +556,7 @@ asadmin> create-admin-object --restype jakarta.jms.Queue --raname jmsra
 Command create-admin-object executed successfully
 ----
 
-[[to-list-administered-objects]]
+[#to-list-administered-objects]
 === To List Administered Objects
 
 Use the `list-admin-object` subcommand in remote mode to list the existing administered objects.
@@ -573,7 +573,7 @@ jms/samplequeue
 Command list-admin-objects executed successfully
 ----
 
-[[to-update-an-administered-object]]
+[#to-update-an-administered-object]
 === To Update an Administered Object
 
 Use the `get` and `set` subcommands to view and change the values of the administered objects properties.
@@ -599,7 +599,7 @@ asadmin> set domain.resources.admin-object-resource.jms/samplequeue.enabled=fals
 . If needed, restart the server. Some properties require server restart. See see xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If
 your server needs to be restarted, see see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
-[[to-delete-an-administered-object]]
+[#to-delete-an-administered-object]
 === To Delete an Administered Object
 
 Use the `delete-admin-object` subcommand to delete an administered objects.

@@ -2,7 +2,7 @@
 
 Creates the configuration information for the connector module.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,7 +14,7 @@ asadmin [asadmin-options] create-resource-adapter-config [--help]
 raname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-resource-adapter-config` subcommand creates configuration information for the connector module. This subcommand can be run before
@@ -25,7 +25,7 @@ You must first create a thread pool, using the `create-threadpool` subcommand, a
 This subcommand is supported in remote mode only.
 
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -41,13 +41,13 @@ This subcommand is supported in remote mode only.
   Keyword-value pairs that specify additional configuration properties of the resource adapter Java bean. The keyword-value pairs are
   separated by a colon (`:`). The properties are the names of setter methods of the class that is referenced by the `resourceadapter-class` element in the `ra.xml` file.
 
-[[operands]]
+[#operands]
 == Operands
 
 *raname*:
   Indicates the connector module name. It is the value of the `resource-adapter-name` in the `domain.xml` file.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Resource Adapter Con figuration*
@@ -61,7 +61,7 @@ mycustomerthreadpool ra1
 Command create-resource-adapter-config executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

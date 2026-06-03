@@ -2,7 +2,7 @@
 
 Lists all keys in a Hazelcast cache.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,12 +13,12 @@ asadmin [asadmin-options] list-cache-keys
 [--name name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to list all keys in a Hazelcast (Data Grid) cache.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ Name of the cache to query.
 +
 TIP: If omitted, this command will be executed for all available caches in the corresponding target.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Lists all keys in all available caches.*
@@ -61,7 +61,7 @@ Cache payara.micro.applications.store
 Command list-cache-keys executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

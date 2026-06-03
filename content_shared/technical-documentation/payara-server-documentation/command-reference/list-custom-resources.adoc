@@ -2,7 +2,7 @@
 
 Gets all custom resources.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-custom-resources [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-custom-resources` subcommand lists the custom resources.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -41,10 +41,10 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Lists the resources for a particular server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Listing Custom Resources*
 
@@ -58,7 +58,7 @@ sample_custom_resource02
 Command list-custom-resources executed successfully.
 ----
 
-[[example-2]]
+[#example-2]
 
 *Example 2 Using the list-custom-resources command with a target*
 
@@ -74,7 +74,7 @@ sample_custom_resource04
 Command list-custom-resources executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

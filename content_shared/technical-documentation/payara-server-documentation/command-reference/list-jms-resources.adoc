@@ -2,7 +2,7 @@
 
 Lists the JMS resources.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] list-jms-resources [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-jms-resources` subcommand lists the existing Java Message Service (JMS) resources (destination and connection factory resources).
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -30,7 +30,7 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
 *`--restype`*:
   The JMS resource type can be `jakarta.jms.Topic`, `jakarta.jms.Queue`, `jakarta.jms.ConnectionFactory`, `jakarta.jms.TopicConnectionFactory`, or `jakarta.jms.QueueConnectionFactory`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -44,7 +44,7 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
   instance-name;;
     Lists the resources for the specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing all JMS resources*
@@ -73,7 +73,7 @@ jms/DurableConnectionFactory
 Command list-jms-resources executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

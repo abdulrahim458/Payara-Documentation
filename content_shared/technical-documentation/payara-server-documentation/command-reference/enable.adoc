@@ -2,7 +2,7 @@
 
 Enables the component.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] enable [--help]
 [--target target_name] component_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `enable` subcommand enables the specified deployed component. If the component is already enabled, then it is re-enabled. If it has not been deployed, then an error message is returned.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Enables a particular clustered or stand-alone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *component_name*:
@@ -45,7 +45,7 @@ This subcommand is supported in remote mode only.
   The name can include an optional version identifier, which follows the name and is separated from the name by a colon (`:`). The version identifier must begin with a letter or number. It can contain alphanumeric characters plus underscore (`_`), dash (`-`), and period (`.`) characters. For more information about module and application versions, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#module-and-application-versions[Module and Application Versions]" in Payara Server Application Deployment section. +
   At most one version of a module or application can be enabled on a server instance. All other versions are disabled. Enabling one version automatically disables all others.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enabling a Component*
@@ -58,7 +58,7 @@ asadmin> enable sampleApp
 Command enable executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

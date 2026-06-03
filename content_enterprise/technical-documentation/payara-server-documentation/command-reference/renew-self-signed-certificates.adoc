@@ -2,7 +2,7 @@
 
 Renews all self-signed certificates in the specified server's keystore.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,14 +17,14 @@ asadmin renew-self-signed-certificates [--help]
 [--target=instanceName]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `renew-self-signed-certificates` subcommand renews all self-signed certificates in a keystore using the old distinguished name and alias.
 
 These certificates are then placed in the key and trust stores of the target instance or listener, replacing the old ones.
 
-[[options]]
+[#options]
 == Options
 
 *`--help`*:
@@ -60,7 +60,7 @@ The path to the directory containing the target node.
 +
 Defaults to `as-install/glassfish/nodes`
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Renews all self-signed certificates on the default domain*
@@ -70,7 +70,7 @@ Defaults to `as-install/glassfish/nodes`
 asadmin renew-self-signed-certificates
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

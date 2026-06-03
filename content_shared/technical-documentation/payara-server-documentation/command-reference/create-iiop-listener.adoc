@@ -2,7 +2,7 @@
 
 Adds an IIOP listener.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,12 +14,12 @@ asadmin [asadmin-options] create-iiop-listener [--help]
 [--target target] listener_id
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-iiop-listener` subcommand creates an IIOP listener. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -59,13 +59,13 @@ Whether to lazily initialise the listener. The default value is `false`.
   stand-alone_instance_name;;
     Creates the listener for a particular standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *listener_id*:
   A unique identifier for the IIOP listener to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating an IIOP Listener*
@@ -90,7 +90,7 @@ asadmin> create-iiop-listener --listeneraddress 0.0.0.0 --iiopport 1401
 Command create-iiop-listener executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

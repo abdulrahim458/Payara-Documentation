@@ -2,7 +2,7 @@
 
 Lists information about subcommands that were started using `asadmin --detach` or that contain progress information.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-jobs [--help]
 [job_id]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-jobs` subcommand lists information about subcommands that were started using the `asadmin` utility option `--detach` or that contain
@@ -19,7 +19,7 @@ progress information. The `--detach` option detaches long-running subcommands an
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -28,13 +28,13 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *job_id*:
   The ID of the job for which you want to list information.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Checking Job Status*
@@ -50,7 +50,7 @@ JOB ID     COMMAND           STATE       EXIT CODE TIME OF COMPLETION
 Command list-jobs executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

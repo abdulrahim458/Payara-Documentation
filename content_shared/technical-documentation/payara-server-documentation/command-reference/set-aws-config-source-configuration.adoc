@@ -2,7 +2,7 @@
 
 Sets the configuration for the AWS Secrets configuration source.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,12 +15,12 @@ asadmin [asadmin-options] set-aws-config-source-configuration [--help]
 [--enabled={true|false}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-aws-config-source-configuration` provides configuration options for the config source which fetches data from AWS Secrets Manager. Make sure that the password aliases `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` are registered first.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -52,7 +52,7 @@ Configure the config source dynamically, which will not require a restart.
 *`--enabled`*:
 Enables or disables the config source, which fetches data from AWS Secrets Manager
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting the configuration of the AWS secrets*
@@ -64,7 +64,7 @@ This example configures the AWS Secrets Cloud Config Source.
 asadmin set-aws-config-source-configuration --dynamic true --enabled true --secretName payara/test/key --regionName eu-west-2
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

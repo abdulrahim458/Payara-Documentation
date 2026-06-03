@@ -7,12 +7,12 @@ This chapter describes using high-availability features for remote EJB reference
 * xref:initialcontext-load-balancing[InitialContext Load Balancing]
 * xref:per-request-load-balancing-prlb[Per-Request Load Balancing (PRLB)]
 
-[[overview]]
+[#overview]
 == Overview
 
 With RMI-IIOP load balancing, IIOP client requests are distributed to different server instances or name servers. The goal is to spread the load evenly across the cluster, thus providing scalability. IIOP load balancing combined with EJB clustering and availability also provides EJB failover.
 
-[[general-requirements-for-configuring-load-balancing]]
+[#general-requirements-for-configuring-load-balancing]
 === General Requirements for Configuring Load Balancing
 
 Payara Server provides high availability of remote EJB references and `NameService` objects over RMI-IIOP, provided all the following apply:
@@ -27,7 +27,7 @@ See xref:technical-documentation/payara-server-documentation/high-availability/r
 
 CAUTION: Payara Server does not support RMI-IIOP load balancing and failover over secure sockets layer (SSL).
 
-[[load-balancing-models]]
+[#load-balancing-models]
 === Load Balancing Models
 
 Payara Server supports two general models for load balancing:
@@ -42,10 +42,10 @@ Per Request Load Balancing (PRLB) is a method for load balancing stateless EJBs 
 +
 NOTE: PRLB chooses the first node in a cluster to use on each request. PRLB is configured on a per-EJB basis.
 
-[[initialcontext-load-balancing]]
+[#initialcontext-load-balancing]
 == `InitialContext` Load Balancing
 
-[[initialcontext-summary]]
+[#initialcontext-summary]
 === `InitialContext` Summary
 
 When `InitialContext` load balancing is used, the client calls the `InitialContext()` method to create a new `InitialContext` (IC) object that is associated with a particular server instance. JNDI lookups are then performed on that IC object, and all lookup requests made using that IC object are sent to the same server instance.
@@ -60,7 +60,7 @@ If the Payara Server instance on which the application client is deployed partic
 
 However, a client should have at least two endpoints specified for bootstrapping purposes, in case one of the endpoints has failed.
 
-[[initialcontext-algorithm]]
+[#initialcontext-algorithm]
 === `InitialContext` Algorithm
 
 Payara Server uses a randomization and round-robin algorithm for RMI-IIOP load balancing and failover.
@@ -79,12 +79,12 @@ The other IIOP endpoints in the cluster are designated as alternate endpoints. I
 
 You can configure RMI-IIOP load balancing and failover to work with applications running in the ACC.
 
-[[enabling-rmi-iiop-hardware-load-balancing-and-failover]]
+[#enabling-rmi-iiop-hardware-load-balancing-and-failover]
 === Enabling RMI-IIOP Hardware Load Balancing and Failover
 
 You can enable RMI-IIOP load balancing and failover for applications running in the application client container (ACC). Weighted round-robin load balancing is also supported.
 
-[[to-enable-rmi-iiop-hardware-load-balancing-for-the-application-client-container]]
+[#to-enable-rmi-iiop-hardware-load-balancing-for-the-application-client-container]
 ==== To Enable RMI-IIOP Hardware Load Balancing for the Application Client Container
 
 This procedure provides an overview of the steps necessary to enable RMI-IIOP load balancing and failover with the application client container (ACC). For additional information on the ACC, see "xref:technical-documentation/application-development/developing-java-clients.adoc#developing-clients-using-the-acc[Developing Clients Using the ACC]" in Payara Server Application Development section.
@@ -212,7 +212,7 @@ To test load balancing, use multiple clients and see how the load gets distribut
 
 See xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#enabling-the-high-availability-session-persistence-service[Enabling the High Availability Session Persistence Service] for instructions on enabling the session availability service for a cluster or for a Web, EJB, or JMS container running in a cluster.
 
-[[per-request-load-balancing-prlb]]
+[#per-request-load-balancing-prlb]
 == Per-Request Load Balancing (PRLB)
 
 Per Request Load Balancing (PRLB) is a method for load balancing stateless EJBs that enables load-balancing for each request to an EJB instance. *PRLB* chooses the first node in a cluster to use on each request. By contrast, `InitialContext` (hardware) load balancing chooses the first node to use when the `InitialContext` is created, and each request thereafter uses the same node unless a failure occurred.
@@ -221,12 +221,12 @@ PRLB is enabled by means of the boolean `per-request-load-balancing` property in
 
 IMPORTANT: PRLB is only supported for stateless session beans. Using PRLB with any other bean types will result in a deployment error.
 
-[[enabling-per-request-load-balancing]]
+[#enabling-per-request-load-balancing]
 === Enabling Per-Request Load Balancing
 
 You can enable Per-Request Load Balancing (PRLB) by setting the boolean `per-request-load-balancing` property to `true` in the `glassfish-ejb-jar.xml` deployment descriptor file for the EJB. On the client side, the `initContext.lookup` method is used to access the stateless EJB.
 
-[[to-enable-rmi-iiop-per-request-load-balancing-for-a-stateless-ejb]]
+[#to-enable-rmi-iiop-per-request-load-balancing-for-a-stateless-ejb]
 ==== To Enable RMI-IIOP Per-Request Load Balancing for a Stateless EJB
 
 This procedure describes how to enable PRLB for a stateless EJB that is deployed to clustered Payara Server instances. This procedure also provides a client-side example for accessing a stateless EJB that uses PRLB.
@@ -293,7 +293,7 @@ public class EJBClient {
 }
 ----
 
-[[see-also]]
+[#see-also]
 == See Also
 
 See xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#enabling-the-high-availability-session-persistence-service[Enabling the High Availability Session Persistence Service] for instructions on enabling the session availability service for a cluster or for a Web, EJB, or JMS container running in a cluster.

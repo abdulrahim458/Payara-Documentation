@@ -2,7 +2,7 @@
 
 Updates a current file user as specified.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,7 +14,7 @@ asadmin [asadmin-options] update-file-user [--help]
 username
 ----
 
-[[description]]
+[#description]
 == Description
 
 Th `update-file-user` subcommand updates an existing entry in the keyfile using the specified user name, password and groups. Multiple
@@ -22,7 +22,7 @@ groups can be entered by separating them, with a colon (:).
 
 If a new password is not provided, this subcommand fails if secure administration is enabled and the user being updated is an administrative user.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -43,13 +43,13 @@ If a new password is not provided, this subcommand fails if secure administratio
   instance_name;;
     Updates the file user on a specified sever instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *username*:
   This is the name of the file user to be updated.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Updating a User's Information in a File Realm*
@@ -63,7 +63,7 @@ asadmin> update-file-user
 Command update-file-user executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

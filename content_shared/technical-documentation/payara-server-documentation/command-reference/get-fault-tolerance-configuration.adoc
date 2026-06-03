@@ -2,7 +2,7 @@
 
 Retrieves the configuration settings of the MicroProfile Fault Tolerance service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] get-fault-tolerance-configuration [--help]
 [--target=server-config]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-fault-tolerance-configuration` returns the current configuration options for the MicroProfile Fault Tolerance service on the specified target.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Getting MicroProfile Fault Tolerance configuration*
@@ -49,7 +49,7 @@ This example gets the current configuration of the Fault Tolerance service.
 asadmin get-fault-tolerance-configuration --target=instance1
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

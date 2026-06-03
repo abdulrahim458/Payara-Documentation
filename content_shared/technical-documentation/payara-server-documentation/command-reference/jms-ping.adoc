@@ -2,7 +2,7 @@
 
 Checks if the JMS service is up and running.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] jms-ping [--help]
 [-- target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `jms-ping` subcommand checks if the Java Message Service (JMS) service (also known as the JMS provider) is up and running. When you
@@ -21,7 +21,7 @@ The `jms-ping` subcommand pings only the default JMS host within the JMS service
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,7 +40,7 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
   instance-name;;
     Pings the JMS service for the specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Verifying that the JMS service is running*
@@ -55,7 +55,7 @@ Connector resoure test_jms_adapter created.
 Command jms-ping executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

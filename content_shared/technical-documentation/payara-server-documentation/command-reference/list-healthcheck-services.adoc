@@ -2,7 +2,7 @@
 
 Lists the names of all available Healthcheck services.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] list-healthcheck-services
 [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 Prints a detailed list of all available Healthcheck services (as in, individual services that generate healthcheck events based on performance metrics) in the current server installation.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -25,7 +25,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 List current Healthcheck services*
@@ -50,7 +50,7 @@ healthcheck-mp          Checks that all instances are responding to Microprofile
 Command list-healthcheck-services executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

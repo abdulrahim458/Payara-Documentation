@@ -2,7 +2,7 @@
 
 Removes the connector resource with the specified JNDI name.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] delete-connector-resource [--help]
 [--target target] jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-connector-resource` subcommand removes the connector resource with the specified JNDI name.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,13 +40,13 @@ NOTE: Resources are always created for a domain as a whole but are only active f
   instance_name;;
     Deletes the connector resource from a specified server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
   The JNDI name of this connector resource.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Connector Resource*
@@ -61,7 +61,7 @@ Command delete-connector-resource executed successfully
 
 Where `jms/qConnFactory` is the connector resource that is removed.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

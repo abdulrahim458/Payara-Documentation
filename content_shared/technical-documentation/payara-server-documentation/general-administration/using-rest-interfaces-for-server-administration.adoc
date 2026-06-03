@@ -15,14 +15,14 @@ It allows execution of administration commands in a similar way as the `asadmin`
 * Retrieve monitoring statistics
 * Look at the domain's log entries.
 
-[[using-rest-urls-to-administer-payara-server]]
+[#using-rest-urls-to-administer-payara-server]
 == Using REST Urls to Administer Payara Server
 
 Each object in the configuration and monitoring object trees is represented as a REST resource that is accessible through an HTTP uniform resource locator (URL).
 
 Access to REST resources for Payara Server monitoring and configuration data requires a running DAS.
 
-[[rest-urls-to-resources-for-configuration-and-monitoring-objects]]
+[#rest-urls-to-resources-for-configuration-and-monitoring-objects]
 === REST Urls to Resources for Configuration and Monitoring Objects
 
 The formats of the URLs to resources that represent objects in the configuration and monitoring object trees are as follows:
@@ -52,7 +52,7 @@ The following figure shows the web page for the REST resource for managing a dom
 .*Web Page for the REST Resource for Managing a Domain*
 image:administration/rest-management.png[alt=""REST resource for managing a domain."",width=600px]
 
-[[rest-urls-for-accessing-the-log-file]]
+[#rest-urls-for-accessing-the-log-file]
 === REST Urls for Accessing the Log File
 
 The `server.log` file of the DAS is represented as a child that is named `view-log` of the resource for managing the domain. A child of the resource for the `server.log` file represents the log file details
@@ -77,7 +77,7 @@ The resource for the log file returns the HTTP header `X-Text-Append-Next`, whic
 
 For example, by testing the value of the `X-Text-Append-Next` header in a client thread every 10 seconds, you can monitor the log entries that were added in the last 10 seconds.
 
-[[using-rest-resource-methods-to-administer-payara-server]]
+[#using-rest-resource-methods-to-administer-payara-server]
 == Using REST Resource Methods to Administer Payara Server
 
 The Payara Server REST interfaces support methods for accessing objects in the monitoring and configuration object trees.
@@ -109,7 +109,7 @@ NOTE: REST requests that add, update, or delete objects must specify the `X-Requ
 
 The `GET` method determines the methods and method parameters that an object in the tree supports and provides additional information about the object. For details, see xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#to-retrieve-data-for-an-object-in-the-tree[To Retrieve Data for an Object in the Tree].
 
-[[to-determine-the-methods-and-method-parameters-that-an-object-in-the-tree-supports]]
+[#to-determine-the-methods-and-method-parameters-that-an-object-in-the-tree-supports]
 === To Determine the Methods and Method Parameters that an Object in the Tree Supports
 
 The methods and method parameters that an object in the tree supports depend on the REST resource that represents the object:
@@ -182,7 +182,7 @@ curl -X GET -H "Accept: application/json" http://localhost:4848/management/domai
 }
 ----
 
-[[to-retrieve-data-for-an-object-in-the-tree]]
+[#to-retrieve-data-for-an-object-in-the-tree]
 === To Retrieve Data for an Object in the Tree
 
 Retrieving data for an object in the tree obtains the following information about the REST resource that represents the object:
@@ -246,7 +246,7 @@ curl -X GET -H "Accept: application/json" http://localhost:4848/management/domai
 }
 ----
 
-[[to-add-an-object-to-the-tree]]
+[#to-add-an-object-to-the-tree]
 === To Add an Object to the Tree
 
 . Ensure that the server is running. Operations on REST resources for Payara Server data require a running server.
@@ -339,7 +339,7 @@ jdbc-resource/jdbc%2Fmyjdbcresource
 }
 ----
 
-[[to-update-an-object-in-the-tree]]
+[#to-update-an-object-in-the-tree]
 === To Update an Object in the Tree
 
 . Ensure that the server is running.
@@ -439,7 +439,7 @@ jdbc-resource/jdbc%2Fmyjdbcresource
 }
 ----
 
-[[to-delete-an-object-from-the-tree]]
+[#to-delete-an-object-from-the-tree]
 === To Delete an Object from the Tree
 
 . Ensure that the server is running. Operations on REST resources for Payara Server data require a running server.
@@ -528,7 +528,7 @@ curl -X GET -H "Accept: application/json" http://localhost:4848/management/domai
 }
 ----
 
-[[resources-for-asadmin-subcommands-that-perform-non-crud-operations]]
+[#resources-for-asadmin-subcommands-that-perform-non-crud-operations]
 === Resources for `asadmin` Subcommands that Perform Non-CRUD Operations
 
 The Payara Server REST interfaces also support operations other than create, read, update, and delete (CRUD) operations, for example:
@@ -545,7 +545,7 @@ For example, the resource that represents a node provides child resources for th
 * `update-node-config`
 * `update-node-ssh`
 
-[[securing-payara-server-rest-interfaces]]
+[#securing-payara-server-rest-interfaces]
 == Securing Payara Server REST Interfaces
 
 The Payara Server REST interfaces support the following authentication schemes for securing the REST interfaces:
@@ -555,7 +555,7 @@ The Payara Server REST interfaces support the following authentication schemes f
 
 When security is enabled, you must specify `HTTPS` as the protocol in the URLs to REST resources and provide a username and password.
 
-[[setting-up-basic-authentication-over-a-secure-connection]]
+[#setting-up-basic-authentication-over-a-secure-connection]
 === Setting up Basic Authentication over a Secure Connection
 
 Setting up basic authentication over a secure connection to secure Payara Server REST interfaces involves the following sequence of tasks:
@@ -574,7 +574,7 @@ For information about how to perform these tasks by using the Administration Con
 * To Add a User to the Admin Realm
 * To Edit SSL Settings for a Protocol
 
-[[to-secure-rest-interfaces-by-using-session-tokens]]
+[#to-secure-rest-interfaces-by-using-session-tokens]
 === To Secure REST Interfaces by Using Session Tokens
 
 Basic authentication requires a REST client to cache a user's credentials to enable the client to pass the credentials with each request. If you require a REST client not to cache credentials, your client must use session tokens for authentication.
@@ -589,7 +589,7 @@ Payara Server uses basic authentication to authenticate the client, generates a 
 
 CAUTION: If a client does not explicitly retire a token, the token is retired after 30 minutes of inactivity.
 
-[[formats-for-resource-representation-of-configuration-objects]]
+[#formats-for-resource-representation-of-configuration-objects]
 == Formats for Resource Representation of Configuration Objects
 
 The Payara Server REST interfaces represent resources for configuration objects in the following formats:
@@ -612,7 +612,7 @@ Payara Server enables you to specify the resource representation through the fil
 ** For XML, specify `-H "Accept: application/xml"`.
 ** For HTML, omit the `-H` option.
 
-[[json-resource-representation-for-configuration-objects]]
+[#json-resource-representation-for-configuration-objects]
 === JSON Resource Representation for Configuration Objects
 
 The general format for the JSON representation of a resource for a configuration object is as follows:
@@ -652,7 +652,7 @@ access the parent of the resource.
 url;;
 The URL to the child resource.
 
-[[json-representation-of-a-command-in-a-command-list]]
+[#json-representation-of-a-command-in-a-command-list]
 ==== JSON Representation of a Command in a Command List
 
 The JSON representation of a command in a command list is as follows:
@@ -675,7 +675,7 @@ The name of the command as displayed in client applications that access the reso
 *rest-method*:
 The REST resource method that the command invokes when the command is run. The method is `GET`, `POST`, or `DELETE`.
 
-[[json-representation-of-a-method-in-a-method-list]]
+[#json-representation-of-a-method-in-a-method-list]
 ==== JSON Representation of a Method in a Method List
 
 The JSON representation of a method in a method list is as follows:
@@ -702,7 +702,7 @@ Zero or more metadata sets separated by a comma (`,`) that represent the message
 *query-parameter-list*:
 Zero or more metadata sets separated by a comma (`,`) that represent the query parameters that are allowed for the method. For the format of each metadata set, see xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#json-representation-of-a-message-parameter-or-a-query-parameter[JSON Representation of a Message Parameter or a Query Parameter].
 
-[[json-representation-of-a-message-parameter-or-a-query-parameter]]
+[#json-representation-of-a-message-parameter-or-a-query-parameter]
 ==== JSON Representation of a Message Parameter or a Query Parameter
 
 The JSON representation of a message parameter or a query parameter is as follows:
@@ -747,7 +747,7 @@ Indicates whether the parameter is optional.
 `key`;;
 Indicates whether the parameter is a key parameter.
 
-[[example-json-resource-representation-for-a-configuration-object]]
+[#example-json-resource-representation-for-a-configuration-object]
 ==== Example JSON Resource Representation for a Configuration Object
 
 This example shows the JSON representation of the resource for the node `sj01`. In this example, the DAS is running on the local host and the HTTP port for administration is 4848. The URL to the resource in this example is `http://localhost:4848/management/domain/nodes/node/sj01`.
@@ -794,7 +794,7 @@ This example shows the JSON representation of the resource for the node `sj01`. 
 }
 ----
 
-[[xml-resource-representation-for-configuration-objects]]
+[#xml-resource-representation-for-configuration-objects]
 === XML Resource Representation for Configuration Objects
 
 The general format for the XML representation of a resource for a configuration object is as follows:
@@ -863,7 +863,7 @@ The result of the attempt to get the resource.
 *resource*:
 The name of the resource.
 
-[[xml-representation-of-a-resource-method]]
+[#xml-representation-of-a-resource-method]
 ==== XML Representation of a Resource Method
 
 The XML representation of a method in a method list is as follows:
@@ -890,7 +890,7 @@ Zero or more XML elements that represent the message parameters that are allowed
 *query-parameter-list*:
 Zero or more XML elements that represent the query parameters that are allowed for the method. For the format of each element, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#xml-representation-of-a-message-parameter-or-a-query-parameter[XML Representation of a Message Parameter or a Query Parameter].
 
-[[xml-representation-of-a-command]]
+[#xml-representation-of-a-command]
 ==== XML Representation of a Command
 
 The XML representation of a command is as follows:
@@ -913,7 +913,7 @@ The relative path to REST resource that represents the command. This path is rel
 *rest-method*:
 The REST resource method that the command invokes when the command is run. The method is `GET`, `POST`, or `DELETE`.
 
-[[xml-representation-of-a-message-parameter-or-a-query-parameter]]
+[#xml-representation-of-a-message-parameter-or-a-query-parameter]
 ==== XML Representation of a Message Parameter or a Query Parameter
 
 The XML representation of a message parameter or a query parameter is as follows:
@@ -957,7 +957,7 @@ Indicates whether the parameter is optional. If `true`, the parameter is optiona
 `key`;;
 Indicates whether the parameter is key. If `true`, the parameter is key. If `false`, the parameter is not key.
 
-[[example-xml-resource-representation]]
+[#example-xml-resource-representation]
 ==== Example XML Resource Representation
 
 This example shows the XML representation of the resource for the node `sj01`. In this example, the DAS is running on the local host and the HTTP port for administration is `4848`. The URL to the resource in this example is `http://localhost:4848/management/domain/nodes/node/sj01`.
@@ -1066,7 +1066,7 @@ This example shows the XML representation of the resource for the node `sj01`. I
 </map>
 ----
 
-[[html-resource-representation-for-configuration-objects]]
+[#html-resource-representation-for-configuration-objects]
 === HTML Resource Representation for Configuration Objects
 
 The format for the HTML representation of a resource for a configuration object is a web page that provides the following information about the resource:
@@ -1078,7 +1078,7 @@ Each method and its parameters are presented as a field of the appropriate type 
 * A list of hypertext links to the children of the resource.
 * A list of hypertext links to resources that represent `asadmin` subcommands for non-CRUD operations on the resource.
 
-[[formats-for-resource-representation-of-monitoring-objects]]
+[#formats-for-resource-representation-of-monitoring-objects]
 == Formats for Resource Representation of Monitoring Objects
 
 The Payara Server REST interfaces represent resources for monitoring data in the following formats:
@@ -1087,7 +1087,7 @@ The Payara Server REST interfaces represent resources for monitoring data in the
 * XML
 * HTML
 
-[[json-resource-representation-for-monitoring-objects]]
+[#json-resource-representation-for-monitoring-objects]
 === JSON Resource Representation for Monitoring Objects
 
 The general format for the JSON representation of a resource for a monitoring object is as follows:
@@ -1120,7 +1120,7 @@ The name of the resource as displayed in client applications that access the par
 url;;
 The URL to the child resource.
 
-[[json-representation-of-a-statistic-in-a-statistics-list]]
+[#json-representation-of-a-statistic-in-a-statistics-list]
 ==== JSON Representation of a Statistic in a Statistics List
 
 The JSON representation of a counter statistic in a statistics list is as follows:
@@ -1192,7 +1192,7 @@ The name of the statistic as displayed in client applications that access the re
 *start-time*:
 The time in UNIX time at which monitoring of the statistic began.
 
-[[example-json-resource-representation-for-a-monitoring-object]]
+[#example-json-resource-representation-for-a-monitoring-object]
 ==== Example JSON Resource Representation for a Monitoring Object
 
 This example shows the JSON representation of the monitoring object that provides class loader statistics for the virtual machine for the Java platform. In this example, the DAS is running on the local host and the HTTP port for administration is `4848`. The URL to the resource in this example is `http://localhost:4848/monitoring/domain/server/jvm/class-loading-system`.
@@ -1234,7 +1234,7 @@ This example shows the JSON representation of the monitoring object that provide
 }
 ----
 
-[[xml-resource-representation-for-monitoring-objects]]
+[#xml-resource-representation-for-monitoring-objects]
 === XML Resource Representation for Monitoring Objects
 
 The general format for the XML representation of a resource for a monitoring object is as follows:
@@ -1281,7 +1281,7 @@ The URL to the child resource.
 *code*:
 The result of the attempt to get the resource.
 
-[[xml-representation-of-a-statistic]]
+[#xml-representation-of-a-statistic]
 ==== XML Representation of a Statistic
 
 The XML representation of a counter statistic is as follows:
@@ -1374,7 +1374,7 @@ The name of the statistic as displayed in client applications that access the re
 *last-sample-time*:
 The time in UNIX time at which the statistic was last sampled.
 
-[[example-xml-resource-representation-for-a-monitoring-object]]
+[#example-xml-resource-representation-for-a-monitoring-object]
 ==== Example XML Resource Representation for a Monitoring Object
 
 This example shows the XML representation of the monitoring object that provides class loader statistics for the virtual machine for the Java platform.
@@ -1451,7 +1451,7 @@ In this example, the DAS is running on the local host and the HTTP port for admi
 </map>
 ----
 
-[[html-resource-representation-for-monitoring-objects]]
+[#html-resource-representation-for-monitoring-objects]
 ==== HTML Resource Representation for Monitoring Objects
 
 The format for the HTML representation of a resource for a monitoring object is a web page that provides the following information about the resource:
@@ -1466,7 +1466,7 @@ The following figure shows the web page for the REST resource that provides clas
 *Web Page for the REST Resource That Provides Class Loader Statistics*
 image:administration/rest-monitoring.png[alt=""REST resource that provides class loader statistics."",width=600px]
 
-[[formats-for-resource-representation-of-log-file-details]]
+[#formats-for-resource-representation-of-log-file-details]
 == Formats for Resource Representation of Log File Details
 
 The Payara Server REST interfaces represent resources for log file details in the following formats:
@@ -1474,7 +1474,7 @@ The Payara Server REST interfaces represent resources for log file details in th
 * JSON
 * XML
 
-[[json-resource-representation-for-log-file-details]]
+[#json-resource-representation-for-log-file-details]
 === JSON Resource Representation for Log File Details
 
 The general format for the JSON representation of a resource for log file details is as follows:
@@ -1489,7 +1489,7 @@ The general format for the JSON representation of a resource for log file detail
 
 The replaceable item in this format is a record list array, which is one or more metadata sets separated by a comma (`,`) that represent the log records in the log file. For the format of each metadata set, see xref:technical-documentation/payara-server-documentation/general-administration/using-rest-interfaces-for-server-administration.adoc#json-representation-of-a-log-record-in-a-record-list[JSON Representation of a Log Record in a Record List].
 
-[[json-representation-of-a-log-record-in-a-record-list]]
+[#json-representation-of-a-log-record-in-a-record-list]
 ==== JSON Representation of a Log Record in a Record List
 
 The JSON representation of a log record in a record list is as follows:
@@ -1531,7 +1531,7 @@ A unique identifier for the message. For messages from Payara Server, this ident
 *message-text*:
 The text of the log message.
 
-[[example-json-resource-representation-for-log-file-details]]
+[#example-json-resource-representation-for-log-file-details]
 .Example JSON Resource Representation for Log File Details
 
 This example shows the JSON representation of the resource for log file details. In this example, the DAS is running on the local host and the HTTP port for administration is `4848`. The URL to the resource in this example is `http://localhost:4848/management/domain/view-log/details`.
@@ -1574,7 +1574,7 @@ This example shows the JSON representation of the resource for log file details.
 }
 ----
 
-[[xml-resource-representation-for-log-file-details]]
+[#xml-resource-representation-for-log-file-details]
 === XML Resource Representation for Log File Details
 
 The general format for the XML representation of a resource for log file details is as follows:
@@ -1588,7 +1588,7 @@ The general format for the XML representation of a resource for log file details
 
 The replaceable item in this format is the records, which is one or more XML elements that represent the log records in the log file. For the format of each element, see xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#xml-representation-of-a-log-record[XML Representation of a Log Record].
 
-[[xml-representation-of-a-log-record]]
+[#xml-representation-of-a-log-record]
 ==== XML Representation of a Log Record
 
 The XML representation of a log record is as follows:
@@ -1619,7 +1619,7 @@ The current name and version of the server runtime.
 *record-number*:
 A serial number in the form of a decimal integer that uniquely identifies the log record.
 
-[[example-xml-resource-representation-for-log-file-details]]
+[#example-xml-resource-representation-for-log-file-details]
 ==== Example XML Resource Representation for Log File Details
 
 This example shows the XML representation of the resource for log file details. In this example, the DAS is running on the local host and the HTTP port for administration is 4848. The URL to the resource in this example is `http://localhost:4848/management/domain/view-log/details`.
@@ -1633,7 +1633,7 @@ This example shows the XML representation of the resource for log file details. 
 </records>
 ----
 
-[[supported-content-types-in-requests-to-rest-resources]]
+[#supported-content-types-in-requests-to-rest-resources]
 == Supported Content Types in Requests to REST Resources
 
 The Payara Server REST interfaces support the following types in the content-type header of a client request:

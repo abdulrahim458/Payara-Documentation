@@ -1,7 +1,7 @@
 = Payara Micro Tools in Intellij IDEA
 :ordinal: 2
 
-[[run-micro-project]]
+[#run-micro-project]
 == Run Payara Micro from Intellij
 To run Payara Micro from IntelliJ, you need to first configure Payara Micro as a run configuration.
 
@@ -19,7 +19,7 @@ IMPORTANT: Due to a known issue within the IntelliJ IDEA Payara plugin, you must
 
 To run Payara Micro with your application compiled and deployed, just click *Run*. You can view the Payara Micro log in the *Run* window then select your run configurations name.
 
-[[intellij-debugging-payara-micro-application]]
+[#intellij-debugging-payara-micro-application]
 === Debugging the Payara Micro Application
 
 Instead of pressing the *Run* button, you can instead click *Debug* to automatically start the micro instance and attach the debugger to the application

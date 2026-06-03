@@ -3,7 +3,7 @@
 
 The Maven Regex Profile Activation extension allows activating profiles by checking that a property matches a given regular expression, rather than an exact value.
 
-[[usage]]
+[#usage]
 == Usage
 
 The Regex Profile Activator Maven Extension can be found on Maven Central and can be included in your project using the following Maven coordinates:
@@ -19,7 +19,7 @@ The Regex Profile Activator Maven Extension can be found on Maven Central and ca
 
 You can find the latest artifact version https://mvnrepository.com/artifact/fish.payara.maven.extensions/regex-profile-activator[from here^].
 
-[[example]]
+[#example]
 == Example
 
 This extension is now active in your build, and you can activate profiles using a regex string beginning and ending with a `/`.

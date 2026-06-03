@@ -2,7 +2,7 @@
 
 Retrieves a list of request tracing service traces.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] list-requesttraces [--help]
 [--historicTraces={true|false}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to list a number of previous request trace messages from either the current or historic trace stores of the Request Tracing Service.
@@ -126,7 +126,7 @@ The request tracing messages are in JSON format, so can be parsed by log parsing
 }
 ----
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -139,7 +139,7 @@ Defaults to `false`. A limit for the number of Request Tracing messages to retur
 *`--historicTraces`*:
 Defaults to `true`. Whether to get the traces from the historic trace store or not.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Retrieve Non-historic traces*
@@ -161,7 +161,7 @@ Occurring Time            Elapsed Time  Traced Message
 ]}
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

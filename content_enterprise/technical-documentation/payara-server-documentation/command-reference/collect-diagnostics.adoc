@@ -2,7 +2,7 @@
 
 Collects data used for the diagnostics and troubleshooting of Payara Server incidents.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -23,7 +23,7 @@ asadmin [asadmin-options] collect-diagnostics [--help]
 [domainName]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command will collect useful information for diagnosing incidents within a Payara Server domain. It can collect from both remote and local instances.
@@ -40,7 +40,7 @@ Among the data collected is the following information:
 
 NOTE: The data collected is stored in a ZIP file in your user home directory, the output directory by default.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -84,7 +84,7 @@ Whether to collect the JVM report. Defaults to `true`
 *`--obfuscate`*:
 Whether to obfuscate data in `domain.xml`. Defaults to `true`
 
-[[operands]]
+[#operands]
 == Operands
 
 *domainName*:
@@ -92,7 +92,7 @@ The name of the domain that will be scanned.
 +
 Defaults to `domain1`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Collect Diagnostics*
@@ -141,7 +141,7 @@ Collecting Heap Dump from instance1
 Command collect-diagnostics executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

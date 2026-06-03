@@ -2,7 +2,7 @@
 
 Sets the formatter to be used for the server log file.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] set-log-file-format [--help]
 [formatter]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-log-file-format` subcommand sets the formatter to be used for the server log file for the specified target.
@@ -25,7 +25,7 @@ containing the formatter implementation installed in `glassfish/modules`.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,14 +37,14 @@ This subcommand is supported in remote mode only.
   Specifies the target for which the formatter is being set. Specify the name of the server domain, instance, or cluster. If this option is
   omitted, logger attributes are set for the default server.
 
-[[operands]]
+[#operands]
 == Operands
 
 *formatter*:
   Specifies the fomatter to be used for the server log file. Valid values are ULF, ODL, or the fully qualified name of the custom
   formatter class to be used to render the log files. The default value is ODL.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Setting the Log File Format*
@@ -57,7 +57,7 @@ asadmin> set-log-file-format --target server1 ULF
 Command set-log-file-format executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

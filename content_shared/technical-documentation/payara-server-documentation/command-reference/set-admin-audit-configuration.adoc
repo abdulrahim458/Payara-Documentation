@@ -2,7 +2,7 @@
 
 Configures the Administrative Audit Service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,13 +17,13 @@ asadmin [asadmin-options] set-admin-audit-configuration [--help]
 [--setnotifiers=setnotifiers]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-admin-audit-configuration` subcommand can be used to set the configuration settings of the Admin Audit Configuration.
 
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -47,7 +47,7 @@ Sets the auditing level. One of:
 *--setnotifiers*: Configures notification services, specifying event types and settings.
 
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1*
@@ -59,7 +59,7 @@ asadmin> set-admin-audit-configuration --dynamic --enabled --auditlevel=MODIFIER
 Command set-admin-audit-configuration executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

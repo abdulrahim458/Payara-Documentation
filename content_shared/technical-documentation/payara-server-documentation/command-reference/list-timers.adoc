@@ -2,7 +2,7 @@
 
 Lists all persistent timers owned by server instance(s).
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-timers [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-timers` subcommand lists the persistent timers owned by a specific server instance or a cluster of server instances.
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This command is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -35,7 +35,7 @@ This command is supported in remote mode only.
   the instance is listed. If the target is a cluster, then the number of timers owned by each instance in the cluster is listed. The default
   target is `server`, the default server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Current Timers in a Server Instance*
@@ -50,7 +50,7 @@ asadmin> list-timers server
 The list-timers command was executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

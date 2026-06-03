@@ -2,7 +2,7 @@
 
 List the current status of the Phone Home service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source, shell]
@@ -10,14 +10,14 @@ List the current status of the Phone Home service.
 asadmin> list-phone-home
 ----
 
-[[description]]
+[#description]
 == Description
 
 The phone home data is presently used to gather usage statistics about the corresponding distribution, such as how long users typically run instances, and what versions they use.
 This command shows whether the phone home service is enabled or disabled.
 
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 List Phone Home Service*
@@ -30,7 +30,7 @@ Phone Home Service is enabled
 Command list-phone-home executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

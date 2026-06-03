@@ -10,7 +10,7 @@ These keystores are protected with the Master Password of your domain.
 
 TIP: Azul Payara provides the link:{enterpriseDocsPageRootUrl}/Technical Documentation/Payara Server Documentation/Server Configuration And Management/Configuration Options/certificate-management.html[Integrated Certificate Management] feature. This allows creating, installing and managing SSL/TLS certificates without external tools like keytool or OpenSSL, just using **asadmin** commands or **Admin Console**. This simplifies the processes documented below and makes it much less risky to perform tasks like renewing certificates, deleting expired certificates, etc.
 
-[[add-certificate]]
+[#add-certificate]
 == Adding a New SSL Certificate
 
 To add your SSL Certificate to the Payara Server configuration files, you need:
@@ -22,7 +22,7 @@ You can find detailed steps of adding a self-signed certificate  link:https://bl
 
 The private key can be stored in various formats. We assume that the key is in a format which can be read by the Java key tool program, such as PKCS12.
 
-[[combine-private-key-and-certificate]]
+[#combine-private-key-and-certificate]
 === Combine the Private Key with the Certificate.
 
 First, you'll have to combine the Private key and the Certificate you generated into a single file.  This file can then be used to merge our data into the files used by the server.
@@ -42,7 +42,7 @@ openssl pkcs12 -export -in mycert.crt -inkey mycert.key -out mycert.p12 -name my
 
 The resulting file, `mycert.p12` is also encrypted with a password that is requested during the execution of the command.
 
-[[importing-into-keystore]]
+[#importing-into-keystore]
 === Import into the Keystore
 
 The information needs to be imported into the `keystore.p12` file of your Payara Domain which will use it.
@@ -54,7 +54,7 @@ This is performed using the _keytool_ command of the JDK:
 keytool -importkeystore -destkeystore keystore.p12 -srckeystore mycert.p12 -srcstoretype PKCS12 -alias mydomain_certificate
 ----
 
-[[importing-into-cacerts]]
+[#importing-into-cacerts]
 === Import into the Truststore
 
 A similar command is used to import the information into the Trust Store file so that our certificate is trusted by the JVM.
@@ -64,7 +64,7 @@ A similar command is used to import the information into the Trust Store file so
 keytool -importcert -trustcacerts -destkeystore cacerts.p12 -file mycert.crt -alias mydomain_certificate
 ----
 
-[[update-http-listener]]
+[#update-http-listener]
 === Update HTTP Listeners
 
 The last step you have to perform is to configure which certificate needs to be used when the server receives an SSL/TLS request. This can be done by specifying the alias name we have used when we integrated the required information into the key store files of the domain.
@@ -80,7 +80,7 @@ In a default installation, the `http-listener-2` listener is responsible for han
 
 The information can also be entered in the Web Administration console, by navigating to the page Configurations -> `server-config` -> HTTP Service -> HTTP Listeners -> `http-listener-2`.
 
-[[loading-certificates-from-multiple-keystores]]
+[#loading-certificates-from-multiple-keystores]
 == Loading Certificates from Multiple Keystores
 
 IMPORTANT: All additional keystores must have the same password as your domain master password.
@@ -99,7 +99,7 @@ The new JVM properties used to add additional keystores are:
 -Dfish.payara.ssl.additionalTrustStores
 ----
 
-[[multiple-keystores-via-admin-console]]
+[#multiple-keystores-via-admin-console]
 === Using the Admin Console
 
 To configure the additional keystore locations in the admin console, head to the *Configurations -> <instance configuration> -> JVM Settings* and on the *JVM Options* tab click *Add JVM Option*.
@@ -108,7 +108,7 @@ You can add the new JVM property and the relative paths to your keystores or tru
 
 image:docs::ssl/add-additional-keystores-admin-console.png[alt="Configure additional keystores and truststores in Admin Console",width=600px]
 
-[[multiple-keystores-via-asadmin-cli]]
+[#multiple-keystores-via-asadmin-cli]
 === Using the Asadmin CLI
 
 JVM options can be configured using the `create-jvm-options` Asadmin command, you can configure your additional keystore and truststore files using this command. If you are loading in multiple additional keystores via asadmin commands, you will need to prefix the appropriate delimiter for your OS with `\` to avoid creating multiple JVM options.
@@ -127,7 +127,7 @@ asadmin create-jvm-options "-Dfish.payara.ssl.additionalTrustStores=/path/to/tru
 
 NOTE: If you load multiple keystores with the same alias, the server will use the first keystore with that alias, starting with the default and then the additional keystores in the order they are listed in the JVM option.
 
-[[certificate-expiration]]
+[#certificate-expiration]
 == Certificate Expiration
 
 All X.509 certificates have a validity period when they can be used. Once this validity period is passed, the users will see a warning or error message depending on the browser that the certificate is no longer valid.

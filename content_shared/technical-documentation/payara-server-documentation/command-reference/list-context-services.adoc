@@ -2,7 +2,7 @@
 
 Lists context service resources.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-context-services [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-context-services` subcommand lists context service resources.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -43,7 +43,7 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Lists the resources on a specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Context Service Resources*
@@ -59,7 +59,7 @@ concurrent/myContextService2
 Command list-context-services executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Removes the specified JDBC connection pool.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] delete-jdbc-connection-pool [--help]
 jdbc_connection_pool_id
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-jdbc-connection-pool` subcommand deletes a JDBC connection pool. Before running this subcommand, all associations to the JDBC connection pool must be removed.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -30,13 +30,13 @@ This subcommand is supported in remote mode only.
 *`--cascade`*:
   If the option is set to true, all the JDBC resources associated with the pool, apart from the pool itself, are deleted. When set to false, the deletion of pool fails if any resources are associated with the pool. Resources must be deleted explicitly or the option must be set to true. The default value is false.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jdbc_connection_pool_id*:
   The name of the JDBC resource to be removed.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a JDBC Connection Pool*
@@ -49,7 +49,7 @@ asadmin> delete-jdbc-connection-pool --cascade=false sample_derby_pool
 Command delete-jdbc-connection-pool executed correctly.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

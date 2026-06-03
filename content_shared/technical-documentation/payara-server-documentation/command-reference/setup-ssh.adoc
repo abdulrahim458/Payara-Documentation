@@ -2,7 +2,7 @@
 
 Sets up an SSH key on specified hosts.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,7 +14,7 @@ asadmin [asadmin-options] setup-ssh [--help]
 host-list
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `setup-ssh` subcommand sets up a secure shell (SSH) key on the hosts that are specified as the operand of the subcommand. This key enables
@@ -66,7 +66,7 @@ passphrase is also required. By default, the subcommand prompts the user for the
 ** If a passphrase is required, ensure that the file that `--passwordfile` option of the `asadmin` utility specifies also contains an entry for `AS_ADMIN_SSHKEYPASSPHRASE`. +
 If public key authentication is already set up on a host, the subcommand informs the user that public key authentication is already set up and does not distribute the key to the host.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -111,13 +111,13 @@ If public key authentication is already set up on a host, the subcommand informs
     ** If the `--interactive` option is `false`, the subcommand fails. +
     This value is the default.
 
-[[operands]]
+[#operands]
 == Operands
 
 *host-list*:
   A space-separated list of the names of the hosts where an SSH key is to be set up.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Setting Up an SSH Key*
@@ -153,7 +153,7 @@ Successfully connected to gfuser@sua02 using keyfile /home/gfuser/.ssh/id_rsa
 Command setup-ssh executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

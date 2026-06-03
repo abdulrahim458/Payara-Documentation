@@ -11,7 +11,7 @@ In a JVM implementation, the class loaders dynamically load a specific Java clas
 
 For information about class loader debugging, see xref:technical-documentation/application-development/debugging-applications.adoc#class-loader-debugging[Class Loader Debugging].
 
-[[standard-classloading]]
+[#standard-classloading]
 == Standard Classloading
 
 In a JVM implementation, the class loaders dynamically load a specific Java class file needed for resolving a dependency. For example, when an instance of `java.util.Enumeration` needs to be created, one of the class loaders loads the relevant class into the environment.
@@ -20,7 +20,7 @@ For information about class loader debugging, see xref:technical-documentation/a
 
 Class loaders in Payara Server follow a delegation hierarchy by default.
 
-[[classloader-hierarchy]]
+[#classloader-hierarchy]
 === The Class Loader Hierarchy
 
 Class loaders in the Payara Server runtime follow a delegation hierarchy that is illustrated in the following table:
@@ -83,7 +83,7 @@ Here, you can see that:
 * Classes in installed libraries have higher priority than classes provided by an application
 * To install a library with a higher priority than classes provided by Payara Server, it should be installed with the `ext` type.
 
-[[configuring-delegation]]
+[#configuring-delegation]
 === Configuring Delegation
 
 The Jakarta Servlet specification recommends that a web module's class loader look in the local class loader before delegating to its parent.
@@ -98,7 +98,7 @@ For a number of packages, including `java.\*` and `jakarta.\*`, symbol resolutio
 
 The delegation hierarchy can also be tweaked using the xref:#enhanced-classloading[enhanced classloading] features. For example, it's possible to give the classes provided by an application the highest priority (by disabling classloading delegation), or completely hide (isolate) classes provided by Payara Server from a deployed application.
 
-[[class-loader-universes]]
+[#class-loader-universes]
 === Class Loader Universes
 
 Access to components within applications and modules installed on the server occurs within the context of isolated class loader universes, each of which has its own _Applib_ and _Archive_ classloaders.
@@ -119,7 +119,7 @@ module-name/WEB-INF/classes
 module-name/WEB-INF/lib
 ----
 
-[[installing-libraries]]
+[#installing-libraries]
 === Installing Libraries in a Domain
 
 Since each application or individually deployed module class loader universe is isolated, an application or module cannot load classes from another application or module. _This prevents two similarly named classes in different applications or modules from interfering with each other._
@@ -139,7 +139,7 @@ This command accepts the `--type` argument, which accepts the following options:
 *`war`*: the library is installed as a WAR library into the `lib/warlibs` directory in the Payara Server domain
 *endif*: []
 
-[[common-libraries]]
+[#common-libraries]
 ==== Common Libraries
 
 Common libraries are available to all applications or modules deployed on servers with the same configuration. There are several levels of common libraries:
@@ -150,7 +150,7 @@ Common libraries are available to all applications or modules deployed on server
 
 NOTE: Only libraries shared by applications in the same domain can be installed by the `add-library` asadmin command. All other types have to be installed manually by copying the libraries into the particular locations.
 
-[[extension-libraries]]
+[#extension-libraries]
 ==== Extension Libraries
 
 Application developers can use libraries installed as extension libraries to extend the functionality of the core Payara Server platform. For example, an Oracle Database JDBC driver should be installed as an extension library if it's going to be used via JPA to use Oracle-specific JPA features.
@@ -167,7 +167,7 @@ Extension libraries are added to the system classpath at the beginning of the cl
 
 Since defining the `java.ext.dirs` on Java 11+ leads to an error, this JVM option cannot be used with Java 11+ and extension libraries are automatically added as classpath elements.
 
-[[Application-Specific-libraries]]
+[#Application-Specific-libraries]
 ==== Application Specific Libraries
 
 You can specify module or application-specific library classes in one of the following ways:
@@ -193,7 +193,7 @@ NOTE: If you see an access control error message when you try to use a library, 
 
 *ifeval*: ["{page-site-edition}" == "community"]
 
-[[War-libraries]]
+[#War-libraries]
 ==== WAR Libraries
 
 Libraries stored in this directory allows a developer to create and deploy skinny WARs, because they are subject to additional annotation and extension scanning as well as processing for CDI, EJB, Servlet, and more.
@@ -203,7 +203,7 @@ These libraries are only used by applications that are deployed with the `warlib
 
 *endif*: []
 
-[[packaging-the-client-jar-for-one-application-in-another-application]]
+[#packaging-the-client-jar-for-one-application-in-another-application]
 === Packaging the Client JAR for One Application in Another Application
 
 By packaging the client JAR for one application in a second application, you allow a Jakarta EE component in the second application to call an EJB component in the first (dependent) application, without making either of them accessible to any other application or module.
@@ -227,12 +227,12 @@ NOTE: For most applications, packaging the client JAR file with the calling EJB 
 
 . Deploy the "client" application. The calling EJB or web component must specify in its `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` or `payara-web.xml` file the JNDI name of the EJB component in the dependent application. Using an `ejb-link` mapping does not work when the EJB component being called resides in another application.
 
-[[enhanced-classloading]]
+[#enhanced-classloading]
 == Enhanced Classloading
 
 This sections below cover the enhanced class loading functionality provided by the Payara Platform.
 
-[[default-class-and-library-loading]]
+[#default-class-and-library-loading]
 === Default Class and Library Loading
 
 Payara Server has included many standard Java libraries and packages, for example *Jackson*, *Nimbus JOSE*, *Logback*, and others to use. These libraries are located on the `as-install/modules` directory.
@@ -246,22 +246,22 @@ In some cases, application developers will want to include a different version o
 
 Unfortunately, due to the way the default class loading hierarchy works, this will not be possible, and all libraries included with the server libraries will take precedence.
 
-[[disable-classloading-delegation]]
+[#disable-classloading-delegation]
 === Disable Classloading Delegation
 
 As detailed in xref:#configuring-delegation[Configuring Delegation], it is possible to invert/disable the way that delegation works as per the requirements of the Jakarta Servlet specification. The Payara Platform introducers greater delegation disabling mechanisms, detailed in the following sections.
 
-[[disable-classloading-delegation-globally]]
+[#disable-classloading-delegation-globally]
 ==== Disable Classloading Delegation Globally
 
 To disable class loading delegation globally, you can set the system property `fish.payara.classloading.delegate` to `false`.
 
-[[disable-classloading-delegation-locally]]
+[#disable-classloading-delegation-locally]
 ==== Disable Classloading Delegation Locally
 
 It's possible to disable class loading delegation directly at the application level. This can be done for both WAR and EAR applications.
 
-[[disabling-classloading-delegation-on-webapps]]
+[#disabling-classloading-delegation-on-webapps]
 For *Web* applications, you can include `<class-loader delegate="false"/>` element in the `payara-web.xml`/`glassfish-web.xml` deployment descriptor.
 
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
@@ -278,7 +278,7 @@ Here's an example:
 </payara-web-app>
 ----
 
-[[disabling-classloading-delegation-on-ears]]
+[#disabling-classloading-delegation-on-ears]
 For *EAR* applications, you can include the `<classloading-delegate>false</classloading-delegate>` element in the `payara-application.xml` deployment descriptor.
 
 Here is an example:
@@ -292,7 +292,7 @@ Here is an example:
 </payara-application>
 ----
 
-[[extreme-classloading-isolation]]
+[#extreme-classloading-isolation]
 === Extreme Classloading Isolation
 
 It's possible to configure an extreme isolation level on the class loading delegation for deployed applications. With this extreme isolation behavior, a deployed application can force the server to load only classes and resources from libraries included on the server that belong to *whitelisted packages* defined on its deployment descriptors.
@@ -319,7 +319,7 @@ The whitelist syntax is simple: Define the name of the package which contains th
 
 IMPORTANT: To enable this extreme isolation behavior, at least one `whitelist-package` element must be defined in the appropriate descriptor.
 
-[[default-whitelisted-classes]]
+[#default-whitelisted-classes]
 ==== Default Whitelisted Classes
 
 Certain classes are whitelisted automatically, meaning they will always be loaded from the server libraries and follow the default classloading hierarchy, even if this feature is turned on.

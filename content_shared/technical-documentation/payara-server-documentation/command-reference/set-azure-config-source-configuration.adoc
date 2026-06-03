@@ -2,7 +2,7 @@
 
 Sets the configuration for an Azure Secrets configuration source.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -18,12 +18,12 @@ asadmin [asadmin-options] set-azure-config-source-configuration [--help]
 [--enabled={true|false}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-azure-config-source-configuration` provides configuration options for the config source which fetches secrets from Azure Key Vault.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -64,7 +64,7 @@ Configure the config source dynamically, which will not require a restart.
 *`--enabled`*:
 Enables or disables the config source, which fetches data from Azure Key Vault.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting the configuration of the Azure secrets*
@@ -76,7 +76,7 @@ This example configures the Azure Secrets Config Source.
 asadmin set-azure-config-source-configuration --dynamic true --enabled true --keyVaultName demo-secret-key-vault --tenantID 22b3bb26-e046-42df-9c96-65dbd72c1c81 --clientID 22b3bb26-e046-42df-9c96-65dbd72c1c81 --thumbprint 84E05C1D98BCE3A5421D225B140B36E86A3D5534 --privateKeyPath path/to/privatekey.pem
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

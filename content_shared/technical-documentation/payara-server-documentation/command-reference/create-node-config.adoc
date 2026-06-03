@@ -2,7 +2,7 @@
 
 Creates a node that is not enabled for remote communication.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] create-node-config [--help]
 [--installdir as-install-parent] [--nodedir node-dir] node-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-node-config` subcommand creates a node that is not enabled for remote communication. The `create-node-config` subcommand does not require the secure shell (SSH) to be configured to create the node.
@@ -33,7 +33,7 @@ or xref:technical-documentation/payara-server-documentation/command-reference/st
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -50,7 +50,7 @@ This subcommand is supported in remote mode only.
   The path to the directory that is to contain Payara Server instances that are created on the node. If a relative path is specified, the path is relative to the as-install directory.
   If this option is omitted, no directory for instances is specified for the node.
 
-[[operands]]
+[#operands]
 == Operands
 
 *node-name*:
@@ -68,7 +68,7 @@ This subcommand is supported in remote mode only.
   * The name must be unique in the domain and must not be the name of another node, a cluster, a named configuration, or a Payara Server instance.
   * The name must not be `domain`, `server`, or any other keyword that is reserved by Payara Server.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Node That Is Not Enabled for Remote Communication*
@@ -82,7 +82,7 @@ asadmin> create-node-config --nodehost sj03.example.com sj03
 Command create-node-config executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

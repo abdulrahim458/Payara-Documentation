@@ -2,19 +2,19 @@
 
 The LDAP configuration source reads properties from a predefined LDAP directory.
 
-[[configuration]]
+[#configuration]
 == Configuration
 
 The LDAP Config Source can be configured by using the Admin Console or `asadmin` commands.
 
-[[from-admin-console]]
+[#from-admin-console]
 === From the Admin Console
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `LDAP`.
 
 image:microprofile/config/ldap/admin-console-example.png[alt="Payara Server Administration Console configuration route",width=600px]
 
-[[using-asadmin-commands]]
+[#using-asadmin-commands]
 === Using the Asadmin Commands
 
 The following administration commands can be used to configure the MicroProfile LDAP config source:
@@ -23,7 +23,7 @@ The following administration commands can be used to configure the MicroProfile 
 
 * xref:technical-documentation/payara-server-documentation/command-reference/get-ldap-config-source-configuration.adoc#get-ldap-config-source-configuration[`get-ldap-config-source-configuration`].
 
-[[usage]]
+[#usage]
 == Usage
 
 Once all required options are configured, you should be able to read configuration properties from the LDAP directory.
@@ -37,7 +37,7 @@ Command get-config-property executed successfully.
 
 NOTE: Currently, the LDAP config source only supports the `get-config-property` command and doesn't support the `set-config-property` and `delete-config-property` commands.
 
-[[finding-user-specific-properties]]
+[#finding-user-specific-properties]
 == Finding User Specific Properties
 
 If search filter and search base are not specified then properties fetched from the direct binding of `bindDn`.
@@ -82,7 +82,7 @@ Tesla
 Command get-config-property executed successfully.
 ----
 
-[[finding-group-specific-properties]]
+[#finding-group-specific-properties]
 == Finding Group Specific Properties
 
 To find properties from the group of users search filter is mandatory to specify. For e.g, In the following configuration `objectClass` is used as group filter.

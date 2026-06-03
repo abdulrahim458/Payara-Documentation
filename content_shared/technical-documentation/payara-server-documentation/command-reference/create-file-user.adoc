@@ -2,7 +2,7 @@
 
 Creates a new file user.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] create-file-user [--help]
 [--groups user_groups[:user_groups]*] user_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-file-user` subcommand creates an entry in the keyfile with the specified username, password, and groups.
@@ -27,7 +27,7 @@ If a password is not provided, this subcommand fails if secure administration is
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -42,13 +42,13 @@ This subcommand is supported in remote mode only.
 *`--authrealmname`*:
   The name of the realm in which the new user is created. If you do not specify this option, the user is created in the "file" realm.
 
-[[operands]]
+[#operands]
 == Operands
 
 *user_name*:
   This is the name of file user to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a User in the File Realm*
@@ -63,7 +63,7 @@ asadmin> create-file-user
 Command create-file-user executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

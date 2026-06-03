@@ -2,7 +2,7 @@
 
 Installs Payara Server software on specified SSH-enabled hosts.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,7 +17,7 @@ asadmin [asadmin-options] install-node-ssh [--help]
 host-list
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `install-node-ssh` subcommand installs Payara Server software on the hosts that are specified as the operand of the subcommand. This
@@ -49,7 +49,7 @@ The subcommand does not modify the configuration of the DAS.
 
 This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -103,13 +103,13 @@ This subcommand is supported in local mode only.
   `true`;;
     The existing installation is overwritten.
 
-[[operands]]
+[#operands]
 == Operands
 
 *host-list*:
   A space-separated list of the names of the hosts where the Payara Server software is to be installed.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Installing Payara Server Software at the Default Location*
@@ -137,7 +137,7 @@ Fixing file permissions of all files under sj04.example.com:/export/payara7/bin
 Command install-node-ssh executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

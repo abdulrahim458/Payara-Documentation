@@ -2,7 +2,7 @@
 
 Enables administrators to create a message security provider, which specifies how SOAP messages will be secured.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -19,14 +19,14 @@ asadmin [asadmin-options] create-message-security-provider [--help]
 provider_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-message-security-provider` subcommand enables the administrator to create a message security provider for the security service which specifies how SOAP messages will be secured.
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
@@ -76,13 +76,13 @@ If an option has a short option name, then the short option precedes the long op
   `signature.key.alias`;;
     Specifies the signature key used by the provider. The key is identified by its keystore alias. The default value is `s1as`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *provider_name*:
   The name of the provider used to reference the `provider-config` element.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Message Security Provider*
@@ -96,7 +96,7 @@ asadmin> create-message-security-provider
 --providertype client mySecurityProvider
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

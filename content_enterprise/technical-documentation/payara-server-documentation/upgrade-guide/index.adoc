@@ -13,7 +13,7 @@ xref:technical-documentation/payara-server-documentation/upgrade-guide/domain-an
 . Using the Payara Upgrade Tool.
 xref:technical-documentation/payara-server-documentation/upgrade-guide/upgrade-tool.adoc[Read Payara Upgrade Tool Method]
 
-[[jdk-11-upgrade-considerations]]
+[#jdk-11-upgrade-considerations]
 == JDK 11: Upgrade Considerations
 
 IMPORTANT: Applies when upgrading to Payara Server 5.192 and superior releases
@@ -43,7 +43,7 @@ The following `jvm-options` have to be removed:
 <jvm-options>-Djava.ext.dirs=${com.sun.aas.javaRoot}/lib/ext${path.separator}${com.sun.aas.javaRoot}/jre/lib/ext${path.separator}${com.sun.aas.instanceRoot}/lib/ext</jvm-options>
 ----
 
-[[jdk-17-21-upgrade-considerations]]
+[#jdk-17-21-upgrade-considerations]
 == JDK 17 and 21: Upgrade Considerations
 
 IMPORTANT: Applies when upgrading to Payara Enterprise 5.39.0 and superior releases
@@ -65,6 +65,6 @@ If older, pre-5.39.0, domains are being upgraded to Payara Server 5.39.0 or abov
 <jvm-options>[17|]--add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED</jvm-options>
 ----
 
-[[migration-5-to-6-considerations]]
+[#migration-5-to-6-considerations]
 == Payara Server 5 to Payara Server 6 Migration Considerations
 Package names for Corba classes have changed from `com.sun` to `org.glassfish`, therefore if you use the `java.naming.factory.initial` system property you should set it to `org.glassfish.jndi.cosnaming.CNCtxFactory` for Payara Server 6.

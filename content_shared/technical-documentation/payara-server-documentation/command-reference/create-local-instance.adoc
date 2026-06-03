@@ -2,7 +2,7 @@
 
 Creates a Payara Server instance on the host where the subcommand is run.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -20,7 +20,7 @@ asadmin [asadmin-options] create-local-instance [--help]
 instance-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-local-instance` subcommand creates a Payara Server instance on the node that represents the host where the subcommand is run. This subcommand does not require the secure shell (SSH) to be configured.
@@ -60,7 +60,7 @@ The subcommand assigns these ports on the basis of an algorithm that is internal
 
 When creating an instance, the subcommand retrieves the files that are required for secure synchronization with the domain administration server (DAS). The instance is synchronized with the DAS when the instance is started
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -153,7 +153,7 @@ If set to `0` the Domain wide start port will be used instead.
 +
 The default value is `0`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *instance-name*:
@@ -173,7 +173,7 @@ The name must meet the following requirements:
 * The name must be unique in the domain and must not be the name of another Payara Server instance, a cluster, a named configuration, or a node.
 * The name must not be `domain`, `server`, or any other keyword that is reserved by Payara Server.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Standalone Payara Server Instance*
@@ -250,7 +250,7 @@ IIOP_LISTENER_PORT=23701
 Command create-local-instance executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Enables monitoring for the server or for specific monitorable modules.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,7 +16,7 @@ asadmin [asadmin-options] enable-monitoring [--help]
 [--options options]]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `enable-monitoring` subcommand is used to turn on monitoring for Payara Server or for particular modules during runtime. Changes are dynamic, that is, server restart is not required.
@@ -29,7 +29,7 @@ An alternative method for enabling monitoring is to use the `set` subcommand. In
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -60,7 +60,7 @@ This subcommand is supported in remote mode only.
   `debug`;;
     Enables debugging for BTrace. Default value is false.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enabling the Monitoring Service for Payara Server*
@@ -93,7 +93,7 @@ asadmin> enable-monitoring --options debug=true
 Command enable-monitoring executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

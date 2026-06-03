@@ -2,7 +2,7 @@
 
 Configures the JDBC configuration source.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,12 +15,12 @@ asadmin [asadmin-options] set-jdbc-config-source-configuration [--help]
 [--target=server]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-jdbc-config-source-configuration` provides configuration options to set the properties required by JDBC config source to read the values from the configured database.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -46,7 +46,7 @@ Specifies a Payara Server instance.
 cluster-name;;
 Specifies a cluster.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Configuring the JDBC Config Source.*
@@ -58,7 +58,7 @@ This example configures the JDBC config source.
 asadmin set-jdbc-config-source-configuration --jndiName jndi-name --tableName Books --keyColumnName ISBN --valueColumnName Title
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

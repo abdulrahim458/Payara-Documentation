@@ -2,7 +2,7 @@
 
 Lists the certificates for which Payara Server accepts admin requests from clients.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,12 +14,12 @@ asadmin [asadmin-options] list-secure-admin-principals [--help]
 [name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-secure-admin-principals` subcommand lists the certificates for which Payara Server accepts admin requests from clients.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -42,14 +42,14 @@ The `list-secure-admin-principals` subcommand lists the certificates for which P
   Specifies whether column headings are displayed when the `--long` option is used. The default value is `true`. To suppress the headings,
   set the `--header` option to `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *name*:
   The distinguished name of the certificate, specified as a comma-separated list in quotes. For example:
   `"CN=system.amer.oracle.com,OU=GlassFish,O=Oracle Corporation,L=Santa Clara,ST=California,C=US"`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing the Certificates*
@@ -64,7 +64,7 @@ CN=localhost-instance,OU=Payara,O=Payara Foundation,L=Great Malvern,ST=Worcester
 Command list-secure-admin-principals executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

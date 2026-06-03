@@ -2,7 +2,7 @@
 
 Configures the notification service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,12 +14,12 @@ asadmin [asadmin-options] notification-configure
 [--dynamic={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the log notifier in Payara Server.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,7 +40,7 @@ Defaults to `false`. Enables or disables the notification service
 *`--dynamic`*:
 Defaults to `false`. When set to `true`, applies the changes without a server restart.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enables the notification service*
@@ -50,7 +50,7 @@ Defaults to `false`. When set to `true`, applies the changes without a server re
 asadmin> notification-configure --enabled=true --dynamic=true
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

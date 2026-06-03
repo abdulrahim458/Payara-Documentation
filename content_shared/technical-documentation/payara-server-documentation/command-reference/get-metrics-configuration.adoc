@@ -2,7 +2,7 @@
 
 Gets the configuration settings of the MicroProfile Metrics service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] get-metrics-configuration [--help]
 [--target <instance-name>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-metrics-configuration` returns the current configuration options for the metrics service on the targeted configuration.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Getting the configuration of the metrics service*
@@ -49,7 +49,7 @@ This example get the metrics service configuration of the `dg1` deployment group
 asadmin get-metrics-configuration --target dg1
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

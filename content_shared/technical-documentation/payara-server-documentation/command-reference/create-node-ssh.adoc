@@ -2,7 +2,7 @@
 
 Creates a node that is enabled for communication over SSH.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,7 +17,7 @@ asadmin [asadmin-options] create-node-ssh [--help]
 node-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-node-ssh` subcommand creates a node that is enabled for communication over secure shell (SSH).
@@ -32,7 +32,7 @@ created in the DAS configuration even if the host cannot be contacted through SS
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -90,7 +90,7 @@ The default is the a key file in the user's `.ssh` directory. If multiple key fi
   `--install` is `true`, the subcommand creates a ZIP archive of the Payara Server software from the installation where this subcommand
   is run. The archive does not contain the `domains` directory or the `nodes` directory.
 
-[[operands]]
+[#operands]
 == Operands
 
 *node-name*:
@@ -108,7 +108,7 @@ The default is the a key file in the user's `.ssh` directory. If multiple key fi
   * The name must be unique in the domain and must not be the name of another node, a cluster, a named configuration, or a Payara Server instance.
   * The name must not be `domain`, `server`, or any other keyword that is reserved by Payara Server.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Node*
@@ -141,7 +141,7 @@ Continuing with node creation due to use of --force.
 Command create-node-ssh executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

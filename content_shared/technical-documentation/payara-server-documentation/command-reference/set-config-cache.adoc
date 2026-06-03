@@ -2,7 +2,7 @@
 
 Provides a way to set the value of the cache duration of Eclipse MicroProfile configuration properties.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] set-config-cache [--help]
 [--target=<target[default:server]>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-config-cache` sets the value of the cache duration of Eclipse MicroProfile configuration properties in the targeted instances.
 
 TIP: A value of zero (`0`) disables caching for MicroProfile configuration properties.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -41,7 +41,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Disable Caching*
@@ -61,7 +61,7 @@ This example sets the cache TTL (time to live) for configuration properties to `
 asadmin> set-config-cache --duration=30 --target=myAppCluster
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

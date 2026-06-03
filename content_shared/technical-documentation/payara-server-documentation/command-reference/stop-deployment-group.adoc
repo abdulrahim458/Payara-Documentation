@@ -2,7 +2,7 @@
 
 Stops all the instances in a Payara Server deployment group.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,7 +15,7 @@ asadmin [asadmin-options] stop-deployment-group [--help]
 name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `sop-deployment-group` subcommand sop all instances that belong to a Payara Server deployment group. Initially the deployment group contains no Payara Server instances, applications, or resources.
@@ -24,7 +24,7 @@ Internally this command works in the same manner that the xref:technical-documen
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -50,13 +50,13 @@ The default value is `600`.
 *`--kill`*:
 Whether to kill the instance processes if they do not stop gracefully. Defaults to `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *name*:
 The name of the deployment group. If there are no deployment groups that match the name the command will exit with an error.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Stop a Deployment Group*
@@ -81,7 +81,7 @@ asadmin stop-deployment-group --instanceTimeout 30 test-dgroup
 Command stop-deployment-group executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

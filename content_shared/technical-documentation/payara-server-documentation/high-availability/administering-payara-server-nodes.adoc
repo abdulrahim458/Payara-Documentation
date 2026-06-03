@@ -13,7 +13,7 @@ The following topics are addressed here:
 * xref:creating-listing-and-deleting-docker-nodes[Creating, Listing, and Deleting DOCKER Nodes]
 * xref:updating-and-changing-the-type-of-a-node[Updating and Changing the Type of a Node]
 
-[[types-of-payara-server-nodes]]
+[#types-of-payara-server-nodes]
 == Types of Payara Server Nodes
 
 Each Payara Server node is one of the following types of node:
@@ -31,7 +31,7 @@ A Docker node is similar to the existing SSH and CONFIG nodes in that it is a vi
 +
 Where it differs from these existing node types is that instances created against it are actually housed in Docker containers, and so also contains details on how to communicate with the Docker engine of the remote machine.
 
-[[to-create-an-ssh-node]]
+[#to-create-an-ssh-node]
 === To Create an `SSH` Node
 
 Use the `create-node-ssh` subcommand in remote mode to create an `SSH` node.
@@ -71,7 +71,7 @@ asadmin> create-node-ssh --nodehost sj01.example.com sj01
 Command create-node-ssh executed successfully.
 ----
 
-[[create-node-ssh-troubleshooting]]
+[#create-node-ssh-troubleshooting]
 ==== Troubleshooting
 
 The `create-node-ssh` subcommand might fail to create the node and report the error `Illegal sftp packet len`. If this error occurs, ensure that no the startup file on the remote host displays text for noninteractive shells. Examples of startup files are `.bashrc`, `.cshrc`, `.login`, and `.profile`.
@@ -91,7 +91,7 @@ After creating a node, you can create instances on the node as explained in the 
 * xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally]
 * xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
 
-[[to-list-ssh-nodes-in-a-domain]]
+[#to-list-ssh-nodes-in-a-domain]
 === To List `SSH` Nodes in a Domain
 
 Use the `list-nodes-ssh` subcommand in remote mode to obtain information about existing `SSH` nodes in a domain.
@@ -138,7 +138,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help list-nodes`
 * `asadmin help list-nodes-ssh`
 
-[[to-test-if-an-ssh-node-is-reachable]]
+[#to-test-if-an-ssh-node-is-reachable]
 === To Test If an `SSH` Node Is Reachable
 
 Use the `ping-node-ssh` subcommand in remote mode to test if an `SSH` node is reachable.
@@ -174,7 +174,7 @@ xref:ROOT:technical-documentation/payara-server-documentation/command-reference/
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help ping-node-ssh` at the command line.
 
-[[to-delete-an-ssh-node]]
+[#to-delete-an-ssh-node]
 === To Delete an `SSH` Node
 
 Use the `delete-node-ssh` subcommand in remote mode to delete an `SSH` node.
@@ -229,7 +229,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help delete-node-ssh`
 * `asadmin help list-nodes-ssh`
 
-[[creating-listing-and-deleting-config-nodes]]
+[#creating-listing-and-deleting-config-nodes]
 == Creating, Listing, and Deleting `CONFIG` Nodes
 
 A `CONFIG` node does not support remote communication. If SSH is set, up and you plan to administer your instances locally, the instances can reside on `CONFIG` nodes. You cannot use `CONFIG` nodes for instances that you plan to administer centrally.
@@ -242,7 +242,7 @@ The following topics are addressed here:
 * xref:to-list-config-nodes-in-a-domain[To List CONFIG Nodes in a Domain]
 * xref:to-delete-a-config-node[To Delete a CONFIG Node]
 
-[[to-create-a-config-node]]
+[#to-create-a-config-node]
 === To Create a `CONFIG` Node
 
 Use the `create-node-config` command in remote mode to create a `CONFIG` node.
@@ -287,7 +287,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 After creating a node, you can create instances on the node as explained in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
 
-[[to-list-config-nodes-in-a-domain]]
+[#to-list-config-nodes-in-a-domain]
 === To List `CONFIG` Nodes in a Domain
 
 Use the `list-nodes-config` subcommand in remote mode to obtain information about existing `CONFIG` nodes in a domain.
@@ -336,7 +336,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help list-nodes`
 * `asadmin help list-nodes-config`
 
-[[to-delete-a-config-node]]
+[#to-delete-a-config-node]
 === To Delete a `CONFIG` Node
 
 Use the `delete-node-config` subcommand in remote mode to delete a `CONFIG` node.
@@ -390,14 +390,14 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help delete-node-config`
 * `asadmin help list-nodes-config`
 
-[[creating-listing-and-deleting-docker-nodes]]
+[#creating-listing-and-deleting-docker-nodes]
 == Creating, Listing and Deleting Docker Nodes
 
 As previously explained, a Docker node shares similarities with existing SSH and CONFIG nodes as it serves as a virtual representation of a Payara Server installation.
 
 IMPORTANT: The Docker engine must expose its REST admin service on an HTTP port that is reacheable by the DAS to configure a DOCKER node.
 
-[[exposing-the-docker-rest-admin-service]]
+[#exposing-the-docker-rest-admin-service]
 === Exposing the Docker REST Admin Service
 
 To expose the REST admin service of the Docker engine, you need to specify the `-H` option in your `DOCKER_OPTS` environment variable, or otherwise specify it in the command that starts the docker service.
@@ -411,7 +411,7 @@ DOCKER_OPTS="-H=0.0.0.0:2376"
 
 You can test that it is exposed by navigating to it with your browser (assuming you're exposing the port in the example above): `http://localhost:2376/info`
 
-[[creating-a-docker-node]]
+[#creating-a-docker-node]
 === Creating a Docker Node
 
 Creating a Docker node is done in a similar manner to creating an SSH or CONFIG node, either by asadmin command, or by the Nodes page of the admin console.
@@ -464,7 +464,7 @@ asadmin create-node-docker --nodehost localhost --dockerPasswordFile /opt/passwo
 
 TIP: The admin console page for creating Docker nodes is the same as creating the other node types: simply select `DOCKER` as the node type from the dropdown.
 
-[[configuring-tls]]
+[#configuring-tls]
 ==== Configuring TLS
 
 As Docker must expose an HTTP port, it is recommended that it be protected using TLS outside of development environments.
@@ -491,7 +491,7 @@ asadmin create-node-docker --nodehost localhost --useTls true --dockerPasswordFi
 
 IMPORTANT: Please ensure that the `useTLS` option of the node matches whether or not you have configured TLS for the Docker engine, as otherwise any communication with the Docker engine will fail.
 
-[[to-delete-a-docker-node]]
+[#to-delete-a-docker-node]
 === To Delete a DOCKER Node
 
 Use the `delete-node-docker` subcommand in remote mode to delete a DOCKER node.
@@ -515,12 +515,12 @@ asadmin> delete-node-docker node-name
 *node-name*:
 The name of the node that you are deleting.
 
-[[updating-and-changing-the-type-of-a-node]]
+[#updating-and-changing-the-type-of-a-node]
 == Updating and Changing the Type of a Node
 
 Payara Server enables you to update the configuration data of any node and to change the type of a node.
 
-[[to-update-an-ssh-node]]
+[#to-update-an-ssh-node]
 === To Update an `SSH` Node
 
 Use the `update-node-ssh` subcommand in remote mode to update an `SSH` node.
@@ -561,7 +561,7 @@ xref:ROOT:technical-documentation/payara-server-documentation/command-reference/
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help update-node-ssh` at the command line.
 
-[[to-update-a-config-node]]
+[#to-update-a-config-node]
 === To Update a `CONFIG` Node
 
 Use the `update-node-config` subcommand in remote mode to update a `CONFIG` node.
@@ -598,7 +598,7 @@ xref:technical-documentation/payara-server-documentation/command-reference/updat
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help update-node-config` at the command line.
 
-[[to-change-the-type-of-a-node]]
+[#to-change-the-type-of-a-node]
 === To Change the Type of a Node
 
 The subcommands for updating a node can also be used to change the type of a node.

@@ -2,7 +2,7 @@
 
 The Payara Tools Eclipse IDE Plugin source code is available in the https://github.com/payara/ecosystem-eclipse-plugin[Eclipse Plugin repository^].
 
-[[building-eclipse-plugin-requisites]]
+[#building-eclipse-plugin-requisites]
 == Prerequisites
 Before building the Payara Tools Eclipse plugin, you will need to configure your local environment. Subsequent builds will not require these steps.
 
@@ -10,7 +10,7 @@ Before building the Payara Tools Eclipse plugin, you will need to configure your
 * *Set the `JAVA_HOME` environment variable*: An environment variable named JAVA_HOME must be created and point to a valid JDK 17 installation.
 * *Install Apache Maven*: Apache Maven is the build tool for the Payara Tools Eclipse IDE Plugin and must be configured locally. Visit https://maven.apache.org/install.html[Apache Maven Installation^] to install Maven.
 
-[[building-eclipse-plugin]]
+[#building-eclipse-plugin]
 == Build Payara Tools
 To build Payara Tools for Eclipse, navigate to the root directory of the cloned repository and run the following command:
 
@@ -21,7 +21,7 @@ This command will initiate the build process for the Payara Tools Eclipse plugin
 
 The build job will create both a zip and exploded-directory format. The zip format of this build can be found in the `[project_root]/releng/fish.payara.eclipse.update/target` directory, and the exploded-directory format can be found in the `[project_root]/releng/fish.payara.eclipse.update/target/repository` directory.
 
-[[install-compiled-eclipse-plugin]]
+[#install-compiled-eclipse-plugin]
 === Install Payara Tools into Eclipse
 After Payara Tools for Eclipse has been compiled successfully, you need to add it into the Eclipse IDE.
 
@@ -36,7 +36,7 @@ After Payara Tools for Eclipse has been compiled successfully, you need to add i
 
 *image*: eclipse-plugin/Install Payara Tools.gif[Installing Payara Tools]
 
-[[remove-compiled-eclipse-plugin]]
+[#remove-compiled-eclipse-plugin]
 === Removing Payara Tools from Eclipse
 Removing Payara Tools from Eclipse after installing using the method above is the same as removing any plugin from Eclipse.
 

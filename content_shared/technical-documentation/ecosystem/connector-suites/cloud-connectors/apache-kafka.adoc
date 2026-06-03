@@ -2,14 +2,14 @@
 
 Apache Kafka is an open-source stream processing platform. It is based on a massively scalable publish/subscribe message queue architected as a distributed transaction log.
 
-[[versioning]]
+[#versioning]
 == Versioning
 The tags below are for the https://github.com/payara/Cloud-Connectors[Cloud Connectors repository^]. You should use the one corresponding to the Jakarta version you require.
 
 https://github.com/payara/Cloud-Connectors/releases/tag/0.8.0[0.8.0^]:: Kafka Connector using JakartaEE 8 and the `javax` namespace
 https://github.com/payara/Cloud-Connectors/releases/tag/Kafka-1.0.0[Kafka-1.0.0^]:: Kafka Connector using JakartaEE 10 and the `jakarta` namespace
 
-[[usage]]
+[#usage]
 == Usage
 
 IMPORTANT: If you have selected to use Kafka Connector 1.0.0, replace all occurunces of `0.8.0` with `1.0.0` for the following example.
@@ -38,7 +38,7 @@ In order to make use of this connector in an application, the following Maven de
 
 Note that this dependency has scope `provided` since the types within this dependency are globally available to every application deployed to Payara Micro after the `kafka-rar-0.8.0.rar` was deployed.
 
-[[sending-messages]]
+[#sending-messages]
 == Sending Messages
 Sending messages to Apache Kafka can be done via the JCA and a Kafka specific API. In order to start using this API to send messages, a resource has to be defined via the JCA API; a connection factory.
 
@@ -77,7 +77,7 @@ public class SendKafkaMessage {
 }
 ----
 
-[[receiving-messages]]
+[#receiving-messages]
 == Receiving Messages
 Messages can be received from Apache Kafka by creating an MDB (Message Driven Bean) that implements the `fish.payara.cloud.connectors.kafka.api.KafkaListener` marker interface and has one or more methods annotated with `@OnRecord` and the method signature `void method(ConsumerRecord record)`, or `@OnRecords` and the method signature `void method(ConsumerRecords records)`
 

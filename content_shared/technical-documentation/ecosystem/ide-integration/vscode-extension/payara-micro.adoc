@@ -5,7 +5,7 @@ Using the Payara Tools VS Code extension, you can integrate Payara Micro within 
 
 The extension also allows you to use the Hot Deploy and AutoDeploy features for a better developer experience.
 
-[[create-micro-maven-project]]
+[#create-micro-maven-project]
 == Creating New Payara Micro Maven Application
 
 . Open the command pallet using `Ctrl + Shift + P`.
@@ -24,7 +24,7 @@ The extension also allows you to use the Hot Deploy and AutoDeploy features for 
 +
 *image*: vscode-extension/payara-micro/add-to-current-workspace.png[Application created]
 
-[[run-micro-project]]
+[#run-micro-project]
 == Run Payara Micro Application
 
 To run the Payara Micro application from the VS Code IDE, go to the explorer sidebar or Payara activity bar, expand Payara Micro Instances, right-click on the listed Payara Micro instance and select *Start*.
@@ -37,7 +37,7 @@ To redeploy the application, right-click on the listed Payara Micro instance and
 
 *image*: vscode-extension/payara-micro/project-redeploy.png[Application redeploy]
 
-[[see-also]]
+[#see-also]
 == See Also
 
 xref:technical-documentation/ecosystem/ide-integration/hot-deploy-and-auto-deploy.adoc[Hot Deploy and Auto Deploy]

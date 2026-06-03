@@ -1,7 +1,7 @@
 = Payara Server Tools in VS Code
 :ordinal: 1
 
-[[adding-server]]
+[#adding-server]
 == Adding Payara Server to VS Code
 
 . Open the command pallet using *Ctrl + Shift + P*, type *Payara* and select the *Add Payara Server* option.
@@ -11,7 +11,7 @@
 
 *image*: vscode-extension/payara-server/Add Payara Server VS Code.gif[Add Payara Server]
 
-[[managing-server]]
+[#managing-server]
 == Managing Payara Server from VS Code
 
 Once Payara Server is added to VS Code it can be found under the Payara Servers explorer panel with the configured name. Right-clicking on the server lets you perform any of the following actions:
@@ -27,7 +27,7 @@ Once Payara Server is added to VS Code it can be found under the Payara Servers 
 
 *image*: vscode-extension/payara-server/start-payara-server.png[Start Payara Server]
 
-[[manage-applications]]
+[#manage-applications]
 == Managing Applications on Payara Server
 
 === Deploying Applications
@@ -42,13 +42,13 @@ Alternatively, an application can be deployed from the *Java Projects* interface
 
 *image*: vscode-extension/payara-server/java-projects-deploy.png[Deploy application]
 
-[[undeploy-applications]]
+[#undeploy-applications]
 === Undeploying Applications
 Deployed applications can be opened in the browser, undeployed or disabled by right-clicking on the application in the *Payara Servers* interface:
 
 *image*: vscode-extension/payara-server/list-application.png[Open application homepage]
 
-[[deploy-to-docker-container]]
+[#deploy-to-docker-container]
 == Deploy Applications in a Local Docker Container
 
 The Payara Server tools for the VS Code extension includes Docker integration, making it seamless to deploy exploded applications to a Payara Server instance running within a local Docker container.
@@ -75,7 +75,7 @@ Replace `HOST_PATH` with the actual host path and `CONTAINER_PATH` with the desi
 
 . Create your web application and deploy it to the registered Payara Server instance.
 
-[[deploy-applications-in-wsl]]
+[#deploy-applications-in-wsl]
 == Deploy Applications in a WSL Environment
 
 Another noteworthy feature is the integration of the Payara Server Tools with Windows Subsystem for Linux (WSL).
@@ -121,7 +121,7 @@ Here's how you can make use of this feature:
 
 . Create your web application and deploy it to the registered Payara Server instance.
 
-[[hot-deploy-and-auto-deploy-settings]]
+[#hot-deploy-and-auto-deploy-settings]
 == Hot Deploy and Auto Deploy Settings
 
 *Hot Deploy* and *Auto Deploy* can be enabled in Visual Studio Code IDE from the *Deployment Settings* of Payara Server:
@@ -129,6 +129,6 @@ Here's how you can make use of this feature:
 *image*: hot-auto-deploy/vscode-deployment-settings.png[Deployment Settings]
 *image*: hot-auto-deploy/vscode-deployment-settings-options.png[Enable Hot Deploy]
 
-[[see-also]]
+[#see-also]
 == See Also
 xref:technical-documentation/ecosystem/ide-integration/hot-deploy-and-auto-deploy.adoc[Hot Deploy and Auto Deploy]

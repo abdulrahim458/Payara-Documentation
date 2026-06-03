@@ -2,7 +2,7 @@
 
 Lists named configurations.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-configs [--help]
 [target]
 ----
 
-[[desciption]]
+[#desciption]
 == Description
 
 The `list—configs` subcommand lists named configurations in the configuration of the domain administration server (DAS). The list can be filtered by cluster, instance, or named configuration.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -41,10 +41,10 @@ This subcommand is supported in remote mode only.
   configuration-name;;
     Lists the specified named configuration. Use this option to determine whether a named configuration exits.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Listing All Named Configurations in a Domain*
 
@@ -65,7 +65,7 @@ il2-config
 Command list-configs executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Performs a backup on the domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,14 +16,14 @@ asadmin [asadmin-options] backup-domain [--help]
 [domain_name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `backup-domain` subcommand backs up files under the named domain.
 
 To complete the command, however, *the domain must be stopped first*. This will mean that any application deployed to the DAS is unavailable while the backup takes place.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -58,7 +58,7 @@ The default value is `as-install/domains`.
 +
 The default value is `as-install/domains/domain-dir/backups`. If the domain is not in the default location, the location is `domain-dir/backups`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-name*:
@@ -66,7 +66,7 @@ Specifies the name of the domain to be backed up.
 +
 This operand is optional if only one domain exists in the Payara Server installation.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

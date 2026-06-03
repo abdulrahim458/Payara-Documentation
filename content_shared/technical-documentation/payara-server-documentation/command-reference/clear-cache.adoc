@@ -2,7 +2,7 @@
 
 Clears a Hazelcast or JCache IMap.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] clear-cache
 [--cachename cachename]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to clear a Hazelcast or JCache IMap.
@@ -21,7 +21,7 @@ This command can be used to clear a Hazelcast or JCache IMap.
 WARNING: Use of this command removes all data from a cache and therefore can result in unexpected behaviour if a system cache is cleared. +
 Clearing a cache containing web session data will result in all users losing their sessions, for example.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -38,7 +38,7 @@ Applies to a specified server instance.
 *`--cachename`*:
 Name of the cache/map to clear.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Clears a Hazelcast or JCache IMap*
@@ -50,7 +50,7 @@ Cleared Cache payara.instance.store
 Command clear-cache executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

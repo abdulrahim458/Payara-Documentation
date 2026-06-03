@@ -2,7 +2,7 @@
 
 Displays the current active configuration of a service or instance.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,14 +13,14 @@ asadmin [asadmin-options] get-active-module-config [--help]
 [service_name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-active-module-config` subcommand displays the current active configuration of a service or instance.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -43,16 +43,16 @@ This subcommand is supported in remote mode only.
   Displays all current active configurations. +
   The default value is `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *service_name*:
   The name of the module for which you want to display the current active configuration.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Displaying the Current Active Configuration*
 
 This example displays the current active configuration for the JMS service in `server-config` (the default configuration).
@@ -67,7 +67,7 @@ At location: domain/configs/config[server-config]
 Command get-active-module-config executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

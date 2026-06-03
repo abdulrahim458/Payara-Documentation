@@ -3,7 +3,7 @@
 
 This chapter describes how to use the Jakarta Data API, which provides an API for easier data access.
 
-[[introducing-jakarta-data]]
+[#introducing-jakarta-data]
 == Introducing Jakarta Data
 
 The Jakarta Data specification defines an API that simplifies data access in Java applications. It allows developers to focus on the domain model while delegating persistence and query management to the framework. Jakarta Data provides standard repository interfaces, query-by-method capabilities, and pagination strategies such as offset and cursor-based navigation.
@@ -19,7 +19,7 @@ The main components of Jakarta Data include:
 
 For more information, see the https://jakarta.ee/specifications/data[Jakarta Data specification^].
 
-[[multiple-persistence-units]]
+[#multiple-persistence-units]
 == Multiple Persistence Units
 When using the Jakarta Data API with multiple persistence units, specify which one to use by setting the property `fish.payara.jakarta.data.usePU` to `true` in the desired persistence unit configuration.
 

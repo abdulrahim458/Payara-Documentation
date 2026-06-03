@@ -2,7 +2,7 @@
 
 Lists the names of the current resource adapter configurations.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-resource-adapter-configs [--help]
 [--raname raname] [--verbose {false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command lists the configuration information in the `domain.xml` for the connector module. It lists an entry called `resource-adapter-config`
@@ -19,7 +19,7 @@ in the `domain.xml` file. If the `--raname` option is specified, only the resour
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -32,7 +32,7 @@ This command is supported in remote mode only.
 *`--verbose`*:
   Lists the properties that are configured. Default value is false.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing the Resource Adapter Configurations*
@@ -47,7 +47,7 @@ ra2
 Command list-resource-adapter-configs executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

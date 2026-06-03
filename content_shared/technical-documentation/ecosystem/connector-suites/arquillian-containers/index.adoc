@@ -13,7 +13,7 @@ In this context, the following container adapters have been implemented within t
 * For Payara Micro:
 ** xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-micro-managed.adoc[Payara Micro Managed (`micro-managed`)]
 
-[[getting-the-adapters]]
+[#getting-the-adapters]
 == Where Can I Get the Adapters?
 
 The Payara Arquillian container adapters are freely available in Maven Central under the following GAV coordinates :
@@ -33,7 +33,7 @@ TIP: All adapters share the same version as part of their connector suite.
 
 NOTE: For Payara Platform 7.x, adapters in version `4.x` are compatible.
 
-[[general-usage]]
+[#general-usage]
 == General Usage
 
 An example application demonstrating how to create a test suite that runs the tests inside various Payara Platform distributions using Arquillian can be seen in the https://github.com/payara/Payara-Examples[Payara Examples^] repository.

@@ -2,7 +2,7 @@
 
 Registers a JDBC connection pool.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -50,7 +50,7 @@ asadmin [asadmin-options] create-jdbc-connection-pool [--help]
 connectionpoolid
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-jdbc-connection-pool` subcommand registers a new Java Database Connectivity ("JDBC") software connection pool with the specified JDBC connection pool name.
@@ -59,7 +59,7 @@ A JDBC connection pool with authentication can be created either by using a `--p
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -221,13 +221,13 @@ NOTE: If an attribute name or attribute value contains a colon, the backslash (`
 
 NOTE: Skipping client info validation may improve the performance of persistent operations when pooling is disabled and managed by the JDBC driver.
 
-[[operands]]
+[#operands]
 == Operands
 
 *connectionpoolid*:
   The name of the JDBC connection pool to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a JDBC Connection Pool*
@@ -245,7 +245,7 @@ Command create-jdbc-connection-pool executed successfully
 
 The escape character backslash (`\`) is used in the `--property` option to distinguish the semicolon (`;`). Two backslashes (`\\`) are used to distinguish the equal sign (`=`).
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

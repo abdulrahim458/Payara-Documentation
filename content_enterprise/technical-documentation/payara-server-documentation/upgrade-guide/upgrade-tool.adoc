@@ -5,7 +5,7 @@ This tool can be used to upgrade an existing Payara Server installation to a new
 
 TIP: The upgrade tool can be manually upgraded to a newer version in case it is needed. To do so, download the latest 2.x JAR release from Nexus using https://nexus.payara.fish/#browse/browse:payara-enterprise-downloadable-artifacts:fish%2Fpayara%2Fextras%2Fpayara-upgrade-tool[this link^] and then replace the older version into your Payara Server installation under the `${PAYARA_SERVER_INSTALL}/glassfish/lib/asadmin` folder.
 
-[[payara-server-7-upgrade]]
+[#payara-server-7-upgrade]
 == Upgrading to Payara Server 7
 
 It is possible to upgrade a Payara Server `6.x` domain to version `7.x`. The process should not be any different as to upgrading between different Payara 6 minor versions, though with the following caveats:
@@ -14,12 +14,12 @@ It is possible to upgrade a Payara Server `6.x` domain to version `7.x`. The pro
 
 IMPORTANT: It is recommended that users should run the latest version of Payara Server 6.x before attempting to upgrade to version 7.x.
 
-[[commands]]
+[#commands]
 == Asadmin CLI Commands
 
 The following are the Asadmin CLI commands available to the upgrade tool.
 
-[[upgrade-server-command]]
+[#upgrade-server-command]
 === Upgrade Server Command
 
 **Usage**: `asadmin> upgrade-server`
@@ -29,7 +29,7 @@ This command can be used to upgrade Payara Server to the specified distribution 
 
 The command will also back up the old version and domains in the default location (`payara7/glassfish/domains`) or the location specified using the `--domaindir` option to allow for rolling back.
 
-[[command-options-1]]
+[#command-options-1]
 ==== Command Options
 
 [cols="2,1,4,1,1",options="header",]
@@ -44,7 +44,7 @@ The command will also back up the old version and domains in the default locatio
 |`--nodes` |String |Specifies the nodes to upgrade if you want to selectively upgrade certain nodes. Provide as a comma-separated list of node names. |All nodes in the cluster| No
 |=======================================================================
 
-[[upgrade-example]]
+[#upgrade-example]
 ==== Example
 
 This example upgrades a Payara Web distribution to version 7.1.0
@@ -62,7 +62,7 @@ This example upgrades the domain administration server and one remote node, leav
 asadmin> upgrade-server --username example-user --version 7.1.0 --nodes localhost-domain1,remotehost1-node1
 ----
 
-[[rollback-server-command]]
+[#rollback-server-command]
 === Rollback Server Command
 
 **Usage**: `asadmin> rollback-server`
@@ -71,7 +71,7 @@ asadmin> upgrade-server --username example-user --version 7.1.0 --nodes localhos
 
 WARNING: This command is not supported on Windows OS, please use the `rollbackUpgrade.bat` script instead.
 
-[[command-options-2]]
+[#command-options-2]
 ==== Command Options
 
 [cols="1,1,4,1,1",options="header",]
@@ -81,12 +81,12 @@ WARNING: This command is not supported on Windows OS, please use the `rollbackUp
 |`--nodes` |String |Specifies the nodes to rollback if you want to selectively rollback certain nodes. Provide as a comma-separated list of node names. |All nodes in the cluster| No
 |=======================================================================
 
-[[staged-upgrades]]
+[#staged-upgrades]
 == Staged Upgrades
 
 When the `upgrade-server` command is either used on Windows or with the `--stage` option enabled, the new server files are installed next to the current installation in various _.new_ directories (e.g. `payara7/glassfish/bin.new`). The following helper scripts are available to interact with staged upgrades.
 
-[[apply-staged-upgrades]]
+[#apply-staged-upgrades]
 === Apply Staged Upgrade Script
 
 **Usage**:
@@ -97,7 +97,7 @@ This script is used to apply an upgrade staged using the `upgrade-server` comman
 It will move the current installation into _.old_ directories, and the staged _.new_ installation into the expected "current" location.
 It will then upgrade the nodes of the domains in the default domain dir, or the domains in the directory provided using `--domaindir`
 
-[[command-options-3]]
+[#command-options-3]
 ==== Command Options
 
 [cols="1,1,4,1,1",options="header",]
@@ -107,7 +107,7 @@ It will then upgrade the nodes of the domains in the default domain dir, or the 
 |`--nodes` |String |Specifies the nodes to upgrade if you want to selectively upgrade certain nodes. Provide as a comma-separated list of node names. |All nodes in the cluster| No
 |=======================================================================
 
-[[rollback-upgrade-script]]
+[#rollback-upgrade-script]
 === Rollback Upgrade Script
 
 **Usage**:
@@ -118,7 +118,7 @@ This script is used to rollback a server upgrade applied using the `applyStagedU
 It will move the _.old_ installation back into the expected "current" location, and the applied upgrade back into _.new_ directories.
 It will then rollback the nodes of the domains in the default domain dir, or the domains in the directory provided using `--domaindir`
 
-[[command-options-4]]
+[#command-options-4]
 ==== Command Options
 
 [cols="1,1,4,1,1",options="header",]
@@ -128,7 +128,7 @@ It will then rollback the nodes of the domains in the default domain dir, or the
 |`--nodes` |String |Specifies the nodes to rollback if you want to selectively rollback certain nodes. Provide as a comma-separated list of node names. |All nodes in the cluster| No
 |=======================================================================
 
-[[cleanup-upgrade]]
+[#cleanup-upgrade]
 === Cleanup Upgrade Script
 
 **Usage**:
@@ -139,7 +139,7 @@ This script is used to clean up any leftovers from a staged upgrade: any _.old_ 
 
 WARNING: Use of this script will prevent you from rolling back or applying a staged upgrade.
 
-[[configure-logging-levels]]
+[#configure-logging-levels]
 == Configure Logging Levels
 
 The upgrade tool commands and helper scripts will print a set of minimum details of the operations executed (upgrade, staging, rollback). For troubleshooting scenarios, or if wanting to review in detail all executed actions, the following 2 environment variables are available to control the level of logging done by the Upgrade tool:
@@ -165,14 +165,14 @@ exec "$JAVA" -DAS_DEBUG=true  -XX:+IgnoreUnrecognizedVMOptions -jar "$AS_INSTALL
 
 IMPORTANT: Remember to turn off these logger level settings after executing a server upgrade, as this setting will affect all future executions of any Asadmin CLI commands, which will cause them to print out more information than usual.
 
-[[downtime-upgrade]]
+[#downtime-upgrade]
 == Zero Downtime Upgrade
 
 IMPORTANT: This feature requires payara-upgrade-tool.jar from Payara v5.83.0 or v6.34.0 and above and assumes you are running a minimum of two SSH nodes.
 
 By default, upgrading Payara requires that the domain and all SSH nodes are stopped. This feature allows the upgrading of individual SSH nodes, eliminating downtime. Only upgrades in the same major version are supported 6.x to 6.x, 7.x to 7.x. Zero Downtime upgrades between 6.x and 7.x are not supported however it is possible to achieve if you can avoid restarting any of the 6.x nodes while running 7.x DAS.
 
-[[steps-to-upgrade]]
+[#steps-to-upgrade]
 === Steps to Upgrade
 
 stop the DAS 
@@ -212,7 +212,7 @@ TIP: Use the `_list-node-versions` subcommand to help keep track of the current 
 WARNING: the upgrade can cause issues if the nodes are forming a cluster with Hazelcast. When 2 versions of Payara use different versions of Hazelcast, the upgraded node will fail to start as long as nodes using the older versions are running. If the upgraded node/DAS fails to start, you may have to upgrade everything else before restarting the nodes and the DAS. Alternatively, you can avoid these issues by disabling the data grid for every nodes.
 Below are the known combinations causing issues:
 
-[[known-upgrade-issues]]
+[#known-upgrade-issues]
 === Known Upgrade Issues
 
 [cols="1,1,4",options="header",separator=¦]

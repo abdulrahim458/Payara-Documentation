@@ -2,7 +2,7 @@
 
 Creates a custom resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,7 +14,7 @@ asadmin [asadmin-options] create-custom-resource [--help]
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-custom-resource` subcommand creates a custom resource.
@@ -22,7 +22,7 @@ A custom resource specifies a custom server-wide resource object factory that im
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -58,13 +58,13 @@ Use the `create-resource-ref` subcommand to refer to the resource in multiple ta
 *`--property`*:
   Optional attribute name/value pairs for configuring the resource.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi-name*:
   The JNDI name of this resource.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Custom Resource*
@@ -79,7 +79,7 @@ Custom Resource mycustomresource created.
 Command create-custom-resource executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

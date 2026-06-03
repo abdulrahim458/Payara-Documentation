@@ -2,12 +2,12 @@
 
 This page provides some general information about the Azul Payara Edition.
 
-[[release-strategy]]
+[#release-strategy]
 == Release Strategy
 
 The Azul Payara Edition project is released each month. Each release incorporates fixes and enhancements from Platform engineering and Enterprise-only features.
 
-[[versioning-scheme]]
+[#versioning-scheme]
 == Versioning Scheme
 
 The general format of a Payara Platform version number is:
@@ -40,7 +40,7 @@ For example if a customer specific hotfix is provided for a bugfix identified wi
 
 TIP: Customers should not expect to change their applications and configuration scripts to move to a patch version.
 
-[[versioning-scheme-examples]]
+[#versioning-scheme-examples]
 === Examples
 
 NOTE: The examples shown below are used only to showcase possible future releases and are not be followed up as a release plan when planning updates on your organization.

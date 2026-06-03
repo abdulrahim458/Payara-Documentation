@@ -2,7 +2,7 @@
 
 The HashiCorp Secrets Config Source takes configuration properties from HashiCorp Vault. You can learn more about HashiCorp on: https://www.vaultproject.io/
 
-[[prerequisite]]
+[#prerequisite]
 == Prerequisite
 
 This documentation assumes the following:
@@ -13,14 +13,14 @@ This documentation assumes the following:
 
 IMPORTANT: Hashicorp config source only supports the Vault KV Secrets Engine.
 
-[[configuration]]
+[#configuration]
 == Configuration in Payara Server
 
 You can configure HashiCorp Secrets Config Source either via the admin console or the _asadmin_ utility. You'll need a client token, the KV Secrets Engine API version, Vault's address represented as URL and port, the path where the KV Secrets Engine is enabled and the path where your secrets are stored.
 
 NOTE: By default, the KV Secrets Engine is enabled at the `/secret` path in Vault.
 
-[[from-admin-console]]
+[#from-admin-console]
 === From the Admin Console
 
 To configure the `HASHICORP_VAULT_TOKEN` password alias from the admin console, refer to the xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases Admin Console configuration] guide.
@@ -33,7 +33,7 @@ From here you can select the KV Secrets Engine API version you want to use, conf
 
 You can also decide whether to apply these changes dynamically or on the next server restart. If the config source is enabled or disabled dynamically it will take effect across the server immediately.
 
-[[from-command-line]]
+[#from-command-line]
 === From the Command Line
 
 To configure the `HASHICORP_VAULT_TOKEN` password alias from the admin console, refer to the xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases Admin Console configuration] guide.
@@ -44,7 +44,7 @@ To configure the HashiCorp Secrets Config Source from the command line, use thes
 
 * xref:technical-documentation/payara-server-documentation/command-reference/get-hashicorp-config-source-configuration.adoc#get-hashicorp-config-source-configuration[`get-hashicorp-config-source-configuration`]
 
-[[usage]]
+[#usage]
 == Usage
 
 Provided that all of the above sections are configured correctly, the secrets can be injected into any applicable MicroProfile Config injection point as with any other Config Source. The secrets can also be fetched, created and deleted using the asadmin utility.

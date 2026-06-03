@@ -2,7 +2,7 @@
 
 deletes a Payara Server cluster
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] delete-cluster [--help]
 cluster-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-cluster` subcommand deletes a Payara Server cluster. A cluster can be deleted only if the cluster contains no Payara Server
@@ -23,7 +23,7 @@ cluster-name`-config`, where cluster-name is the name of the cluster.
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -32,13 +32,13 @@ This command is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *cluster-name*:
   The name of the cluster to delete.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Payara Server Cluster*
@@ -51,7 +51,7 @@ asadmin> delete-cluster adccluster
 Command delete-cluster executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

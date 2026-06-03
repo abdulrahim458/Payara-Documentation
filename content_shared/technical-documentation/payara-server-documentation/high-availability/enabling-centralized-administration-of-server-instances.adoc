@@ -20,12 +20,12 @@ However, the DAS cannot connect to an instance to perform operations on an insta
 
 For these operations, the DAS uses SSH to contact a remote host and administer instances there. SSH provides confidentiality and security for data that is exchanged between the DAS and remote hosts.
 
-[[about-centralized-administration-of-payara-server-instances]]
+[#about-centralized-administration-of-payara-server-instances]
 == About Centralized Administration of Payara Server Instances
 
 The use of SSH to enable centralized administration of remote instances is optional and is required only for specific operations. Instances local to the DAS can be administered without SSH. If SSH is not a possibility in your environment, you can administer remote instances locally instead.
 
-[[determining-whether-to-enable-centralized-administration]]
+[#determining-whether-to-enable-centralized-administration]
 === Determining Whether to Enable Centralized Administration
 
 Before setting up a Payara Server cluster or deployment group, use the following considerations to determine whether to enable centralized administration of remote instances:
@@ -51,7 +51,7 @@ How you administer instances and the nodes on which they reside varies depending
 
 |=======================================================================
 
-[[considerations-for-using-ssh-for-centralized-administration]]
+[#considerations-for-using-ssh-for-centralized-administration]
 === Considerations for Using SSH for Centralized Administration
 
 In a typical Payara Server deployment, the DAS acts as the SSH client, and hosts where instances reside act as SSH servers. The SSH Server Daemon `sshd` must be running on hosts where instances reside, but is not required to be running on the DAS host.
@@ -63,7 +63,7 @@ The requirements for SSH configuration and user management are different for eac
 
 On UNIX and Linux systems, SSH is typically installed and preconfigured, and requires minimal additional setup. On Windows systems, additional setup is required to install and configure an SSH provider.
 
-[[obtaining-ssh-software]]
+[#obtaining-ssh-software]
 ==== Obtaining SSH Software
 
 On UNIX and Linux systems, SSH software is typically installed as part of the base operating system.
@@ -73,7 +73,7 @@ However, on Windows systems, you must install one of the following SSH providers
 * http://www.cygwin.com/[Cygwin^]
 * http://www.mkssoftware.com[MKS Toolkit for Developers^]
 
-[[determining-the-ssh-user]]
+[#determining-the-ssh-user]
 ==== Determining the SSH User
 
 Before setting up SSH, decide which SSH user Payara Server will use when connecting to remote hosts.
@@ -83,7 +83,7 @@ For the following reasons, administration is simplest if the SSH user is the use
 * Remote instances are started as the SSH user.
 * By default, the DAS assumes that the SSH user is the user that is running the DAS.
 
-[[requirements-for-the-ssh-users-environment]]
+[#requirements-for-the-ssh-users-environment]
 ==== Requirements for the SSH User's Environment
 
 The SSH user's environment on a host is set by the environment set-up files that are run when the user uses SSH to run a command on the host. You must ensure that these files set up the SSH user's environment correctly.
@@ -92,7 +92,7 @@ The files that are run when the user uses SSH to run a command are different fro
 
 Therefore, in the bash shell, you must ensure that `.bashrc` contains the required environment settings for the SSH user.
 
-[[file-access-permissions-on-uac-enabled-windows-systems]]
+[#file-access-permissions-on-uac-enabled-windows-systems]
 ==== File Access Permissions on UAC-Enabled Windows Systems
 
 WARNING: The http://technet.microsoft.com/en-us/library/cc709691%28WS.10%29.aspx[User
@@ -102,12 +102,12 @@ You might be using a UAC-enabled Windows system and choose to store files for Pa
 
 You can also configure the system to grant such access to other users. For more information, see the documentation for the Windows operating system.
 
-[[setting-up-cygwin-ssh-on-windows]]
+[#setting-up-cygwin-ssh-on-windows]
 == Setting up Cygwin SSH on Windows
 
 Set up Cygwin SSH on the DAS host and on all hosts where instances in your Deployment Groups or clusters will reside.
 
-[[download-and-install-cygwin]]
+[#download-and-install-cygwin]
 === Download and Install Cygwin
 
 For centralized Payara Server administration, a basic Cygwin installation that includes the SSH client and the SSH server daemon `sshd` is sufficient. The default installation options are sufficient to create such a basic installation.
@@ -142,7 +142,7 @@ The packages are installed.
 
 For detailed information about installing Cygwin, see "http://cygwin.com/cygwin-ug-net/setup-net.html#internet-setup[Internet Setup^]" in Cygwin User's Guide (`http://cygwin.com/cygwin-ug-net/setup-net.html#internet-setup`).
 
-[[to-set-the-path-for-windows-and-for-the-cygwin-shell]]
+[#to-set-the-path-for-windows-and-for-the-cygwin-shell]
 === To Set the Path for Windows and for the Cygwin Shell
 
 To enable Payara Server tools to find commands for SSH, each user's path for Windows and for the Cygwin shell must contain the following directories:
@@ -158,7 +158,7 @@ Logging in as a user with Administrator privileges ensures that the change appli
 * The Cygwin `bin` directory, for example `C:\cygwin\bin`
 * The `bin` directory of the JDK software installation
 
-[[to-set-the-home-directory-for-the-cygwin-ssh-user]]
+[#to-set-the-home-directory-for-the-cygwin-ssh-user]
 === To Set the Home Directory for the Cygwin SSH User
 
 The SSH Server Daemon `sshd` locates a user's home directory from the configuration in the user database, not from environment variables such as `HOME`. To ensure that all Payara Server commands can run without errors, each SSH user must be configured to have a home directory.
@@ -174,7 +174,7 @@ To simplify the setup of SSH, configure each user's home directory for SSH and W
 . Log in as a user with Administrator privileges.
 . In the `c:\cygwin\etc\passwd` file, edit the home directory setting for the SSH user to specify the user's home directory for Windows.
 
-[[to-configure-and-start-the-cygwin-ssh-server-daemon-sshd]]
+[#to-configure-and-start-the-cygwin-ssh-server-daemon-sshd]
 === To Configure and Start the Cygwin SSH Server Daemon `sshd`
 
 *Before You Begin*
@@ -236,12 +236,12 @@ $ cygrunsrv --query sshd
 After you have completed the setup of SSH on a host, test the setup on
 the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
-[[setting-up-the-mks-toolkit-on-windows]]
+[#setting-up-the-mks-toolkit-on-windows]
 == Setting up the MKS Toolkit on Windows
 
 Set up the MKS Toolkit on the DAS host and on all hosts where instances in your Deployment Groups will reside.
 
-[[to-install-the-mks-toolkit]]
+[#to-install-the-mks-toolkit]
 === To Install the MKS Toolkit
 
 For centralized Payara Server administration, the default installation of the MKS Toolkit is sufficient.
@@ -252,7 +252,7 @@ Follow the instructions in the MKS Toolkit product documentation to install Open
 
 For detailed information about installing MKS Toolkit, see "http://www.mkssoftware.com/docs/rn/relnotes_tk94.asp#install[Installing MKS Toolkit^]" in the MKS Toolkit v9.4 Release Notes (`http://www.mkssoftware.com/docs/rn/relnotes_tk94.asp#install`).
 
-[[to-set-the-path-for-windows-and-for-the-mks-toolkit-shell]]
+[#to-set-the-path-for-windows-and-for-the-mks-toolkit-shell]
 === To Set the Path for Windows and for the MKS Toolkit Shell
 
 To enable Payara Server tools to find commands for SSH, each user's path for Windows and for the MKS Toolkit shell must contain the following directories:
@@ -268,7 +268,7 @@ Logging in as a user with Administrator privileges ensures that the change appli
 . In the System Information control panel, click Advanced>Environment Variables.
 . Add the `bin` directory of the JDK software to the Path environment variable.
 
-[[to-set-the-home-directory-for-the-mks-toolkit-ssh-user]]
+[#to-set-the-home-directory-for-the-mks-toolkit-ssh-user]
 === To Set the Home Directory for the MKS Toolkit SSH User
 
 The SSH Server Daemon `sshd` locates a user's home directory from the configuration in the user database, not from environment variables such as `HOME`. To ensure that all Payara Server commands can run without errors, each SSH user must be configured to have a home directory.
@@ -338,7 +338,7 @@ The following example sets the home directory for the MKS Toolkit user `Administ
 $ userinfo -u -fHomeDirDrive:"C:" -fHomeDir:"\Documents and Settings\Administrator" Administrator
 ----
 
-[[to-configure-and-start-the-mks-toolkit-ssh-server-daemon-sshd]]
+[#to-configure-and-start-the-mks-toolkit-ssh-server-daemon-sshd]
 === To Configure and Start the MKS Toolkit SSH Server Daemon `sshd`
 
 NOTE: Do not set the command shell to `cmd.exe`. The use of SSH for centralized Payara Server administration requires a shell in the style of a UNIX shell.
@@ -378,14 +378,14 @@ Service Start Name:     LocalSystem
 
 After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
-[[setting-up-ssh-on-unix-and-linux-systems]]
+[#setting-up-ssh-on-unix-and-linux-systems]
 == Setting up SSH on UNIX and Linux Systems
 
 Setting up SSH on UNIX and Linux systems involves verifying that the SSH server daemon `sshd` is running and, if necessary, starting this daemon. Set up SSH on the DAS host and on all hosts where instances in your Deployment Groups will reside.
 
 On UNIX and Linux systems, SSH software is typically installed as part of the base operating system. If SSH is not installed, download and install the appropriate http://www.openssh.com/[OpenSSH^] (`http://www.openssh.com/`) SSH package for your operating system.
 
-[[to-set-up-ssh-on-oracle-solaris-systems]]
+[#to-set-up-ssh-on-oracle-solaris-systems]
 === To Set up SSH on Oracle Solaris Systems
 
 . Ensure that the following options in the configuration file `/etc/ssh/sshd_config` are set to `yes`:
@@ -423,7 +423,7 @@ http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1svcs-1[`svcs`(1)^]
 
 After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
-[[to-set-up-ssh-on-macos-systems]]
+[#to-set-up-ssh-on-macos-systems]
 === To Set up SSH on Macos Systems
 
 .  Open _System Preferences_ and click _Sharing_.
@@ -454,7 +454,7 @@ $ sudo launchctl start com.openssh.sshd
 
 After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
-[[to-set-up-ssh-on-linux-systems]]
+[#to-set-up-ssh-on-linux-systems]
 === To Set up SSH on Linux Systems
 
 . Ensure that the following options in the configuration file `/etc/ssh/sshd_config` are set to `yes`:
@@ -487,14 +487,14 @@ openssh-daemon (pid  2373) is running...
 
 After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
-[[testing-the-ssh-setup-on-a-host]]
+[#testing-the-ssh-setup-on-a-host]
 == Testing the SSH Setup on a Host
 
 After setting up SSH on a host, test the setup to ensure that you can use SSH to contact the host from another host. Testing the SSH setup on a host verifies that the SSH server daemon `sshd` is running and that the SSH user has a valid user account on the host.
 
 If you cannot use SSH to contact the host, troubleshoot the SSH setup before setting up SSH user authentication.
 
-[[to-test-the-ssh-setup-on-a-host]]
+[#to-test-the-ssh-setup-on-a-host]
 === To Test the SSH Setup on a Host
 
 . From another host, use SSH to log in into the host that you are testing as the SSH user.
@@ -527,7 +527,7 @@ If your connection is accepted, but you cannot log in, ensure that the SSH user 
 
 After testing the SSH setup, set up SSH user authentication to enable SSH to authenticate users without prompting for a password. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-user-authentication[Setting Up SSH User Authentication].
 
-[[setting-up-ssh-user-authentication]]
+[#setting-up-ssh-user-authentication]
 == Setting up SSH User Authentication
 
 When a Payara Server subcommand uses SSH to log in to a remote host, Payara Server must be able to authenticate the SSH user. Setting up SSH user authentication ensures that this requirement is met.
@@ -554,7 +554,7 @@ File access permissions for key files and the directory that contains the key fi
 |For each SSH user, Payara Server password aliases are required for the SSH password.
 |=======================================================================
 
-[[to-set-up-public-key-authentication-without-encryption]]
+[#to-set-up-public-key-authentication-without-encryption]
 === To Set up Public Key Authentication without Encryption
 
 Use the `setup-ssh` subcommand in local mode to set up public key authentication without encryption. This subcommand enables you to set up public key authentication on multiple hosts in a single operation.
@@ -636,7 +636,7 @@ If you have set the file access permissions in the SSH user's home directory cor
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help setup-ssh` at the command line.
 
-[[to-set-up-encrypted-public-key-authentication]]
+[#to-set-up-encrypted-public-key-authentication]
 === To Set up Encrypted Public Key Authentication
 
 Encrypted key file authentication uses an encrypted private key file that is protected with a passphrase. This passphrase must be provided to use the private key to unlock the public key.
@@ -784,7 +784,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help create-password-alias`
 * `asadmin help setup-ssh`
 
-[[to-set-up-password-authentication]]
+[#to-set-up-password-authentication]
 === To Set up Password Authentication
 
 To use SSH to log in to a remote host, Payara Server requires the SSH user's password. To provide this password securely to Payara Server, create a Payara Server password alias to represent the password and store this alias in a password file that is passed to the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] utility.
@@ -853,7 +853,7 @@ AS_ADMIN_SSHPASSWORD=${ALIAS=ssh-password}
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-password-alias` at the command line.
 
-[[installing-and-removing-payara-server-software-on-multiple-hosts]]
+[#installing-and-removing-payara-server-software-on-multiple-hosts]
 == Installing and Removing Payara Server Software on Multiple Hosts
 
 Payara Server software must be installed on all hosts where Payara Server will run. How to install Payara Server software on multiple hosts depends on the degree of control that you require over the installation on each host.
@@ -863,7 +863,7 @@ Payara Server software must be installed on all hosts where Payara Server will r
 
 Payara Server also enables you to remove Payara Server software from multiple hosts in a single operation. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#to-remove-payara-server-software-from-multiple-hosts[To Remove Payara Server Software From Multiple Hosts].
 
-[[to-copy-a-payara-server-installation-to-multiple-hosts]]
+[#to-copy-a-payara-server-installation-to-multiple-hosts]
 === To Copy a Payara Server Installation to Multiple Hosts
 
 Use the `install-node-ssh` subcommand in local mode to copy an installation of Payara Server software to multiple hosts.
@@ -917,7 +917,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 
 * `asadmin help install-node-ssh`
 
-[[to-remove-payara-server-software-from-multiple-hosts]]
+[#to-remove-payara-server-software-from-multiple-hosts]
 === To Remove Payara Server Software from Multiple Hosts
 
 Use the `uninstall-node-ssh` subcommand in local mode to remove Payara Server software from multiple hosts.

@@ -2,7 +2,7 @@
 
 Deletes records of Jakarta Batch job executions.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,12 +13,12 @@ asadmin [asadmin-options] clean-jbatch-repository
 [job_name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `clean-jbatch-repository` subcommand will remove the history of all job records related to an specific Jakarta Batch execution job.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,13 +37,13 @@ The number of days previous that the end time of the job execution must be to ge
 +
 Defaults to `1` day
 
-[[operands]]
+[#operands]
 == Operands
 
 *job_name*:
 The name of the Jakarta Batch job that will be cleared in the repository.
 
-[[examples]]
+[#examples]
 == Examples
 
 The following command will delete all job records for the `testjob` job that were executed before 7 days ago.
@@ -53,7 +53,7 @@ The following command will delete all job records for the `testjob` job that wer
 asadmin > clean-jbatch-repository --status=ALL --days=7 testjob
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Removes the specified connector connection pool.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] delete-connector-connection-pool [--help]
 [--cascade={false|true}] poolname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-connector-connection-pool` subcommand removes the specified connector connection pool.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -29,13 +29,13 @@ This subcommand is supported in remote mode only.
 *`--cascade`*:
   When set to true, all connector resources associated with the pool, and the pool itself, are deleted. When set to false, the deletion of pool fails if any resources are associated with the pool. The resource must be deleted explicitly or the option must be set to true. Default is false.
 
-[[operands]]
+[#operands]
 == Operands
 
 *poolname*:
   The name of the connection pool to be removed.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Connector Connection Pool*
@@ -49,7 +49,7 @@ asadmin> delete-connector-connection-pool
 Command delete-connector-connection-pool executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Displays monitoring data for commonly used components and services.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,7 +14,7 @@ asadmin [asadmin-options] monitor [--help]
 instance-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `monitor` subcommand displays statistics for commonly monitored Payara Server components and services. The `--type` option must be used to specify the object for which statistics are to be displayed.Data is displayed continuously in a tabular form, or the data can be displayed at a particular time interval by using the `--interval` option.
@@ -25,7 +25,7 @@ The monitor subcommand has options for filtering the results and capturing the o
 
 NOTE: This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -91,13 +91,13 @@ NOTE: This subcommand is supported in local mode only.
   Do not specify this option. This option is retained for compatibility with earlier releases. If you specify this option, a syntax error does
   not occur. Instead, the subcommand runs successfully and displays a warning message that the option is ignored.
 
-[[operands]]
+[#operands]
 == Operands
 
 *instance-name*:
   The server instance for which to view monitoring data. The default value is `server`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Displaying Monitoring Statistics by Interval*
@@ -168,7 +168,7 @@ To see the legend for the table headings, type `h`.
 ******************************************************************************************
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

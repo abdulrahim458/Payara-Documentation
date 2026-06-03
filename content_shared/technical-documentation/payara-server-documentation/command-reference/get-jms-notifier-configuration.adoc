@@ -2,7 +2,7 @@
 
 Retrieves the settings of the JMS notifier
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] get-log-notifier-configuration [--help]
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to retrieves the current settings of the JMS notifier in Payara Server Full Profile.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -33,7 +33,7 @@ Applies to every server instance in the cluster.
 instance_name;;
 Applies to on a specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Retrieve the settings for the JMS notifier in the DAS*
@@ -47,7 +47,7 @@ true     WARNING  com.sun.enterprise.naming.SerialInitContextFactory  jms/__defa
 Command get-jms-notifier-configuration executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Enables or disables the AMX monitoring subsystem.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,12 +14,12 @@ asadmin [asadmin-options] set-amx-enabled
 [--dynamic={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the boot AMX at startup or independently of the JMX Monitoring service.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,7 +40,7 @@ Defaults to `false`. Enables or disables the monitoring service
 *`--dynamic`*:
 Defaults to `false`. When set to `true`, applies the changes without a server restart.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enables the AMX subsystem immediately for the DAS*
@@ -50,7 +50,7 @@ Defaults to `false`. When set to `true`, applies the changes without a server re
 asadmin set-amx-enabled --enabled=true --dynamic=true --target=server
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

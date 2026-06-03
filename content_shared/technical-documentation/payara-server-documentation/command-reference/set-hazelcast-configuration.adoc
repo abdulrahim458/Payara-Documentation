@@ -2,7 +2,7 @@
 
 Configures the underlying Data Grid (Hazelcast) instance.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -44,12 +44,12 @@ asadmin [asadmin-options] set-hazelcast-configuration
 [--encryptDatagrid={true|false}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the settings of the underlying Data Grid (Hazelcast) instance.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -181,7 +181,7 @@ Enables or disables encryption of data stored in the xref:technical-documentatio
 +
 The default value is `false`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Basic configuration of the Data Grid settings*
@@ -194,7 +194,7 @@ asadmin> set-hazelcast-configuration --enabled=true --target=cluster1 --dynamic=
 Command set-hazelcast-configuration executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

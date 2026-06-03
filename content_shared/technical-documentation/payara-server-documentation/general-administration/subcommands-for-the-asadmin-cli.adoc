@@ -5,7 +5,7 @@ For information and instructions on using the `asadmin` application deployment s
 
 NOTE: Online help for the `asadmin` subcommands can be invoked on the command line, for example, `asadmin create-domain`  `--help`.
 
-[[general-administration-subcommands]]
+[#general-administration-subcommands]
 == General Administration Subcommand
 
 [header, cols="2,8"]
@@ -92,7 +92,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[batch-jobs-subcommands]]
+[#batch-jobs-subcommands]
 == Batch Jobs Subcommands
 
 [header, cols="2,8"]
@@ -116,7 +116,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[concurrent-resources-subcommands]]
+[#concurrent-resources-subcommands]
 == Concurrent Resources Subcommands
 
 [header, cols="2,8"]
@@ -161,7 +161,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[connectivity-subcommands]]
+[#connectivity-subcommands]
 == Connectivity Subcommands
 
 [header, cols="2,8"]
@@ -254,7 +254,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[domain-subcommands]]
+[#domain-subcommands]
 == Domain Subcommands
 
 [header, cols="2,8"]
@@ -296,7 +296,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[internet-connectivity-subcommands]]
+[#internet-connectivity-subcommands]
 == Internet Connectivity Subcommands
 
 [header, cols="2,8"]
@@ -362,7 +362,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[javamail-subcommands]]
+[#javamail-subcommands]
 == Javamail Subcommands
 
 [header, cols="2,8"]
@@ -380,7 +380,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[jms-subcommands]]
+[#jms-subcommands]
 == JMS Subcommands
 
 [header, cols="2,8"]
@@ -422,7 +422,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[jndi-subcommands]]
+[#jndi-subcommands]
 == JNDI Subcommands
 
 [header, cols="2,8"]
@@ -453,7 +453,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 |===
 
 
-[[jvm-subcommands]]
+[#jvm-subcommands]
 == JVM Subcommands
 
 [header, cols="2,8"]
@@ -474,7 +474,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[logging-and-monitoring-subcommands]]
+[#logging-and-monitoring-subcommands]
 == Logging and Monitoring Subcommands
 
 [header, cols="2,8"]
@@ -516,7 +516,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[orb-subcommands]]
+[#orb-subcommands]
 == ORB Subcommands
 
 [header, cols="2,8"]
@@ -535,7 +535,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 |===
 
 
-[[thread-pool-subcommands]]
+[#thread-pool-subcommands]
 == Thread Pool Subcommands
 
 [header, cols="2,8"]
@@ -553,7 +553,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 
 |===
 
-[[transaction-service-subcommands]]
+[#transaction-service-subcommands]
 == Transaction Service Subcommands
 
 [header, cols="2,8"]

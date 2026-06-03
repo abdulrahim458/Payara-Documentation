@@ -8,7 +8,7 @@ The following topics are addressed here:
 * xref:how-payara-server-provides-high-availability[How Payara Server Provides High Availability]
 * xref:recovering-from-failures[Recovering from Failures]
 
-[[overview-of-high-availability]]
+[#overview-of-high-availability]
 == Overview of High Availability
 
 High availability applications and services provide their functionality continuously, regardless of hardware and software failures.
@@ -23,13 +23,13 @@ Payara Server provides the following high availability features:
 * xref:high-availability-java-message-service[High Availability Java Message Service]
 * xref:rmi-iiop-load-balancing-and-failover[RMI-IIOP Load Balancing and Failover]
 
-[[load-balancing-with-the-apache-mod_jk-or-mod_proxy_ajp-module]]
+[#load-balancing-with-the-apache-mod_jk-or-mod_proxy_ajp-module]
 === Load Balancing with the Apache `mod_jk` or `mod_proxy_ajp` Module
 
 A common load balancing configuration for Payara Server is to use the Apache HTTP Server as the web server front-end, and the Apache `mod_jk` or `mod_proxy_ajp` module as the connector between the web server and Payara Server.
 See xref:technical-documentation/payara-server-documentation/high-availability/configuring-http-load-balancing.adoc#configuring-payara-server-with-apache-http-server-and-mod_jk[Configuring Payara Server with Apache HTTP Server and `mod_jk`] and xref:technical-documentation/payara-server-documentation/high-availability/configuring-http-load-balancing.adoc#configuring-payara-server-with-apache-http-server-and-mod_proxy_ajp[Configuring Payara Server with Apache HTTP Server and `mod_proxy_ajp`] for more information.
 
-[[high-availability-session-persistence]]
+[#high-availability-session-persistence]
 === High Availability Session Persistence
 
 Payara Server provides high availability of HTTP requests and session data (both HTTP session data and stateful session bean data).
@@ -44,7 +44,7 @@ For more information about in-memory session replication in Payara Server, see x
 For detailed instructions on configuring high availability session persistence,
 see xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#configuring-high-availability-session-persistence-and-failover[Configuring High Availability Session Persistence and Failover].
 
-[[high-availability-java-message-service]]
+[#high-availability-java-message-service]
 === High Availability Java Message Service
 
 Payara Server supports the Java Message Service (JMS) API and JMS messaging through its built-in `jmsra` resource adapter communicating with Open Message Queue as the JMS provider. This combination is often called the *JMS Service*.
@@ -63,7 +63,7 @@ The use of Message Queue broker clusters allows connection failover in the event
 +
 For more information about JMS connection failover, see xref:technical-documentation/payara-server-documentation/high-availability/configuring-jms-high-availability.adoc#connection-failover[Connection Failover].
 
-[[rmi-iiop-load-balancing-and-failover]]
+[#rmi-iiop-load-balancing-and-failover]
 === RMI-IIOP Load Balancing and Failover
 
 With RMI-IIOP load balancing, IIOP client requests are distributed to different server instances or name servers, which spreads the load evenly across the cluster, providing scalability. IIOP load balancing combined with EJB clustering and availability also provides EJB failover.
@@ -74,7 +74,7 @@ IIOP Load balancing and failover happens transparently. No special steps are nee
 
 For more information on RMI-IIOP load balancing and failover, see xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#rmi-iiop-load-balancing-and-failover[RMI-IIOP Load Balancing and Failover].
 
-[[how-payara-server-provides-high-availability]]
+[#how-payara-server-provides-high-availability]
 == How Payara Server Provides High Availability
 
 Payara Server provides high availability through the following subcomponents and features:
@@ -82,14 +82,14 @@ Payara Server provides high availability through the following subcomponents and
 * xref:technical-documentation/payara-server-documentation/high-availability/index.adoc#storage-for-session-state-data[Storage for Session State Data]
 * xref:technical-documentation/payara-server-documentation/high-availability/index.adoc#highly-available-clusters[Highly Available Clusters]
 
-[[storage-for-session-state-data]]
+[#storage-for-session-state-data]
 === Storage for Session State Data
 
 Storing session state data enables the session state to be recovered after the failover of a server instance in a cluster. Recovering the session state enables the session to continue without loss of information. Payara Server supports in-memory session replication on other servers in the cluster for maintaining HTTP session and stateful session bean data.
 
 In-memory session replication is implemented in Payara Server via the use of the Data Grid (implemented using Hazelcast Community Edition). As such, to use this feature the Data Grid has to be enabled in the domain first.
 
-[[highly-available-clusters]]
+[#highly-available-clusters]
 === Highly Available Clusters
 
 A highly available cluster integrates a state replication service with clusters and load balancer.
@@ -98,7 +98,7 @@ IMPORTANT: When implementing a highly available cluster solution, use a load bal
 
 // TODO - Add considerations for deployment groups and the data grid
 
-[[clusters-instances-sessions-and-load-balancing]]
+[#clusters-instances-sessions-and-load-balancing]
 ==== Clusters, Instances, Sessions, and Load Balancing
 
 Clusters, server instances, load balancers, and sessions are related as follows:
@@ -113,7 +113,7 @@ The cluster thus acts as a safe boundary for session failover for the server ins
 
 // TODO - Docker nodes should be documented here.
 
-[[protocols-for-centralized-cluster-administration]]
+[#protocols-for-centralized-cluster-administration]
 ==== Protocols for Centralized Cluster Administration
 
 Payara Server uses the secure shell (SSH) to ensure that clusters that span multiple hosts can be administered centrally. To perform administrative operations on Payara Server instances that are remote from the domain administration server (DAS), the DAS must be able to communicate with those instances. If an instance is running, the DAS connects to the running instance directly. For example, when you deploy an application to an instance, the DAS connects to the instance and deploys the application to the instance.
@@ -124,7 +124,7 @@ TIP: The use of SSH to enable centralized administration of remote instances is 
 
 For more information, see xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#enabling-centralized-administration-of-payara-server-instances[Enabling Centralized Administration of Payara Server Instances].
 
-[[recovering-from-failures]]
+[#recovering-from-failures]
 == Recovering from Failures
 
 You can use various techniques to manually recover individual subcomponents after hardware failures such as disk crashes.
@@ -135,7 +135,7 @@ The following topics are addressed here:
 * xref:recovering-payara-server-instances[Recovering Payara Server Instances]
 * xref:recovering-message-queue[Recovering Message Queue]
 
-[[recovering-the-domain-administration-server]]
+[#recovering-the-domain-administration-server]
 === Recovering the Domain Administration Server
 
 Loss of the Domain Administration Server (DAS) affects only administration. Payara Server clusters and standalone instances, and the applications deployed to them, continue to run as before, even if the DAS is not reachable
@@ -146,12 +146,12 @@ Use any of the following methods to recover the DAS:
 * Put the domain installation and configuration on a shared and robust file system (NFS for example). If the primary DAS host fails, a second host is brought up with the same IP address and will take over with manual intervention or user supplied automation.
 * Zip the Payara Server installation and domain root directory. Restore it on the new host, assigning it the same network identity.
 
-[[recovering-payara-server-instances]]
+[#recovering-payara-server-instances]
 === Recovering Payara Server Instances
 
 Payara Server provide tools for backing up and restoring Payara Server instances. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-offline[To Resynchronize an Instance and the DAS Offline].
 
-[[recovering-message-queue]]
+[#recovering-message-queue]
 === Recovering Message Queue
 
 When a Message Queue broker becomes unavailable, the method you use to restore the broker to operation depends on the nature of the failure that caused the broker to become unavailable:
@@ -165,7 +165,7 @@ Additionally, the urgency of restoring an unavailable broker to operation depend
 *Broker in a Conventional Cluster*: When a broker in a conventional cluster becomes unavailable, service availability continues to be provided by the other brokers in the cluster. However, data availability of the persistent data stored by the unavailable broker is interrupted. Restore the broker to operation to restore availability of its persistent data.
 *Broker in an Enhanced Cluster*: When a broker in an enhanced cluster becomes unavailable, service availability and data availability continue to be provided by the other brokers in the cluster. Restore the broker to operation to return the cluster to its previous capacity.
 
-[[recovering-from-power-failure-and-failures-other-than-disk-storage]]
+[#recovering-from-power-failure-and-failures-other-than-disk-storage]
 ==== Recovering from Power Failure and Failures Other than Disk Storage
 
 When a host is affected by a power failure or failure of a non-disk component such as memory, processor or network card, restore Message Queue brokers on the affected host by starting the brokers after the failure has been remedied.
@@ -174,7 +174,7 @@ To start brokers serving as `EMBEDDED` or `LOCAL` JMS hosts, start the Payara in
 
 To start brokers serving as `REMOTE` JMS hosts, use the `imqbrokerd` Message Queue utility.
 
-[[recovering-from-failure-of-disk-storage]]
+[#recovering-from-failure-of-disk-storage]
 ==== Recovering from Failure of Disk Storage
 
 Message Queue uses disk storage for software, configuration files and persistent data stores. In a default Payara Server installation, all three of these are generally stored on the same disk: the Message Queue software in `as-install-parent/mq`, and broker configuration files and persistent data stores (except for the persistent data stores of enhanced clusters, which are housed in highly available databases) in `domain-dir/imq`. If this disk fails, restoring brokers to operation is impossible unless you have previously created a backup of these items.
@@ -182,14 +182,14 @@ Message Queue uses disk storage for software, configuration files and persistent
 To create such a backup, use a utility such as `zip`, `gzip` or `tar` to create archives of
 these directories and all their content. When creating the backup, you should first quiesce all brokers and physical destinations, as described in the Open Message Queue Administration Guide, respectively. Then, after the failed disk is replaced and put into service, expand the backup archive into the same location.
 
-[[restoring-persistent-data-store-from-backup]]
+[#restoring-persistent-data-store-from-backup]
 ==== Restoring the Persistent Data Store from Backup.
 
 For many messaging applications, restoring a persistent data store from backup does not produce the desired results because the backed up store does not represent the content of the store when the disk failure occurred. In some applications, the persistent data changes rapidly enough to make backups obsolete as soon as they are created.
 
 To avoid issues in restoring a persistent data store, consider using a RAID or SAN data storage solution that is fault-tolerant, especially for data stores in production environments.
 
-[[see-also]]
+[#see-also]
 == See Also
 
 For information about planning a high-availability deployment, including assessing hardware requirements, planning network configuration, and selecting a topology, see the xref:technical-documentation/payara-server-documentation/deployment-planning/index.adoc[Payara Server Deployment Planning section]. This manual also provides a high-level introduction to concepts such as:

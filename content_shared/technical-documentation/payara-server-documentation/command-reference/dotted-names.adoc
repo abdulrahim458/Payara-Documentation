@@ -3,7 +3,7 @@
 
 Syntax for using periods to separate name elements.
 
-[[description]]
+[#description]
 == Description
 
 A dotted name is an identifier for a particular Payara Server element, such as a configurable or a monitorable object. A dotted name uses the period (`.`), known as dot, as a delimiter to separate the parts of an element name. The period in a dotted name is similar to the slash (`/`) character that delimits the levels in the absolute path name of a file in the UNIX file system.
@@ -61,10 +61,10 @@ For example, the following dotted name returns the context root of the web appli
 server.applications.web-module.JSPWiki.context-root
 ----
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Listing All Configurable Elements*
 
 This example lists all the configurable elements.

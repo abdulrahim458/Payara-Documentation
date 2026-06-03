@@ -2,7 +2,7 @@
 
 Removes a deployed component.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] undeploy [--help]
 [--cascade={false|true}] name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `undeploy` subcommand uninstalls a deployed application or module and removes it from the repository.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -44,7 +44,7 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Undeploys the component from a particular stand-alone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *name*:
@@ -55,7 +55,7 @@ This subcommand is supported in remote mode only.
   application versions, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#module-and-application-versions[Module and Application
   Versions] in Payara Server Application Deployment section.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Undeploying an Enterprise Application*
@@ -78,7 +78,7 @@ asadmin> undeploy --cascade=true jdbcra
 Command undeploy executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

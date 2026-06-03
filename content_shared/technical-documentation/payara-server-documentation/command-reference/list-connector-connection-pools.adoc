@@ -2,7 +2,7 @@
 
 Lists the existing connector connection pools.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,14 +10,14 @@ Lists the existing connector connection pools.
 asadmin [asadmin-options] list-connector-connection-pools [--help]
 ----
 
-[[desciption]]
+[#desciption]
 == Description
 
 The `list-connector-connection-pools` subcommand list connector connection pools that have been created.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -26,10 +26,10 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Listing the Connector Connection Pools*
 
@@ -42,7 +42,7 @@ jms/qConnPool
 Command list-connector-connection-pools executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

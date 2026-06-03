@@ -2,7 +2,7 @@
 
 Lists environment entries for a deployed web application or module.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-web-env-entry [--help]
 [--name=env-entry-name] application-name[/module]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-web-env-entry` subcommand lists the environment entries for one of the following items:
@@ -32,7 +32,7 @@ For each entry, the following information is displayed:
 * The value of the `--ignoreDescriptorItem` option of the `set-web-env-entry` subcommand that was specified when the entry was set
 * The description of the entry or `null` if no description was specified when the entry was set
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -44,7 +44,7 @@ For each entry, the following information is displayed:
   The name of the environment entry that is to be listed. The name is a JNDI name relative to the `java:comp/env` context. The name must be
   unique within a deployment component. If this option is omitted, all environment entries that have previously been set for the application are listed.
 
-[[operands]]
+[#operands]
 == Operands
 
 *application-name*:
@@ -67,7 +67,7 @@ For each entry, the following information is displayed:
 ----
   The module would be specified as the operand of this command as `myApp/myWebModule.war`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Environment Entries for a Web Application*
@@ -85,7 +85,7 @@ Hello Port (java.lang.Integer) = null ignoreDescriptorItem=true //null
 Command list-web-env-entry executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Rotates the log file.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,7 +10,7 @@ Rotates the log file.
 asadmin [asadmin-options] rotate-log [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `rotate-log` subcommand rotates the server log by renaming the file with a timestamp name in the format `server.log_`date-and-time, and creating a new log file. Changes take effect dynamically, that is,server restart is not required.
@@ -19,7 +19,7 @@ The size of the log queue is configurable through the `logging.properties` file.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -30,7 +30,7 @@ This subcommand is supported in remote mode only.
 *`--target`*:
   The server, cluster, or server instance for which logs will be rotated. If this option is omitted, logs are rotated for the default server.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -39,7 +39,7 @@ This subcommand is supported in remote mode only.
   * cluster_name - The name of a target cluster.
   * instance_name - The name of a target server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Rotating the Server Log*
@@ -52,7 +52,7 @@ asadmin> rotate-log
 Command rotate-log executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

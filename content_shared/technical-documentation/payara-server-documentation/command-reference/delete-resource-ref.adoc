@@ -2,7 +2,7 @@
 
 Removes a reference to a resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] delete-resource-ref [--help]
 [--target target] reference_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-resource-ref` subcommand removes from a cluster or an unclustered server instance a reference to a resource (for example, a JDBC resource). This effectively results in the removal of the resource from the JNDI tree of the targeted instance or cluster.
@@ -22,7 +22,7 @@ Removal of the reference does not result in removal of the resource from the dom
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -39,16 +39,16 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Removes the resource reference from the named unclustered server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *reference_name*:
   The name or JNDI name of the resource.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Removing a Reference to a Resource*
 
 This example removes a reference to the JMS destination resource `jms/Topic` on the cluster `cluster1`.
@@ -60,7 +60,7 @@ resource-ref jms/Topic deleted successfully.
 Command delete-resource-ref executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

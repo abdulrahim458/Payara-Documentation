@@ -2,7 +2,7 @@
 
 Removes a JMS host.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] delete-jms-host [--help]
 jms_host_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-jms-host` subcommand removes the specified Java Message Service (JMS) host.
@@ -21,7 +21,7 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
 
 Deleting the default JMS host, named `default_JMS_host`, is not recommended.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,13 +40,13 @@ Deleting the default JMS host, named `default_JMS_host`, is not recommended.
   instance-name;;
     Deletes the JMS host from the specified server instance.
 
-[[operandds]]
+[#operandds]
 == Operands
 
 *jms_host_name*:
   The name of the host to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a JMS host*
@@ -59,7 +59,7 @@ asadmin> delete-jms-host MyNewHost
 Command delete-jms-host executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

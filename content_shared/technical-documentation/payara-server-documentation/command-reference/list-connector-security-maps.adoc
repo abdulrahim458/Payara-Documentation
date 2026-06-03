@@ -2,7 +2,7 @@
 
 Lists the security maps belonging to the specified connector connection pool.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] list-connector-security-maps [--help]
 pool-name
 ----
 
-[[desciption]]
+[#desciption]
 == Description
 
 The `list-connector-security-maps` subcommand lists the security maps belonging to the specified connector connection pool.
@@ -22,7 +22,7 @@ For this subcommand to succeed, you must have first created a connector connecti
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -35,16 +35,16 @@ This subcommand is supported in remote mode only.
 *`--verbose`*:
   If set to `true`, returns a list including the identity, principals, and security name. The default is `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *pool-name*:
   Name of the connector connection pool for which you want to list security maps.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Listing the Connector Security Maps*
 
@@ -57,7 +57,7 @@ securityMap1
 Command list-connector-security-maps executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

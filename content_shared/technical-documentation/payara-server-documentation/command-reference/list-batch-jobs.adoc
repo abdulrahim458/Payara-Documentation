@@ -2,7 +2,7 @@
 
 Lists batch jobs details.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,12 +17,12 @@ asadmin [asadmin-options] list-batch-jobs [--help]
 [job_name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-batch-jobs` subcommand lists batch jobs and job details.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -73,13 +73,13 @@ Sets the number of rows of batch jobs to skip
 *`-h`*:
   Specifies whether column headings are displayed when the `--long` option is used. The default value is `true`. To suppress the headings, set the `--header` option to `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *job_name*:
   The name of the job for which to list details.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Batch Jobs*
@@ -95,7 +95,7 @@ bonus    6
 Command list-batch-jobs executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

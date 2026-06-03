@@ -2,7 +2,7 @@
 
 The GCP (Google Cloud Platform) Cloud config source takes configuration properties from the GCP Secret Manager.
 
-[[gcp-service-account]]
+[#gcp-service-account]
 == GCP Service Account
 
 In order to connect to GCP Secret Manager you need to know your project name as well as have a service account access token. Assuming you already have a GCP project and a secret created in GCP Secrets Manager, you need to create a service account which Payara Server will use to access your GCP Secrets.
@@ -48,14 +48,14 @@ image:microprofile/config/cloud/gcp/json-key-type.png[alt="JSON Access Key",widt
 
 This downloaded file can now be used by Payara Server to access GCP Secrets.
 
-[[configuration]]
+[#configuration]
 == Configuration
 
 You can configure GCP Secrets either via the admin console or the _asadmin_ utility. You'll need the JSON key file created from the GCP console in the previous section, as well as the name of the project that you intend to use. Make sure that the GCP Secret Manager has been enabled for the specified project.
 
 NOTE: The JSON key file will be copied into the Payara Server `config/` directory, so it isn't required after passing it to the GCP Config Source configuration.
 
-[[from-admin-console]]
+[#from-admin-console]
 === From the Admin Console
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `GCP Secrets`.
@@ -66,7 +66,7 @@ From here you can pass the absolute path to the json key file downloaded in the 
 
 If the config source is enabled or disabled dynamically it will take effect across the server immediately.
 
-[[from-command-line]]
+[#from-command-line]
 === From the Command Line
 
 To configure the GCP Secrets Cloud Config Source from the command line, use these commands:
@@ -75,7 +75,7 @@ To configure the GCP Secrets Cloud Config Source from the command line, use thes
 
 * xref:technical-documentation/payara-server-documentation/command-reference/get-gcp-config-source-configuration.adoc#get-gcp-config-source-configuration[`get-gcp-config-source-configuration`]
 
-[[usage]]
+[#usage]
 == Usage
 
 Provided the required roles have been assigned to the Service Account in the GCP console, the secrets can be injected into any applicable MicroProfile Config injection point as with any other Config Source. The secrets can also be fetched, created and deleted from the `asadmin` utility.

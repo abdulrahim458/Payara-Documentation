@@ -2,7 +2,7 @@
 
 Imports the configuration data of a clustered instance or standalone instance from an archive file.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] import-sync-bundle [--help]
 file-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `import-sync-bundle` subcommand imports the configuration data of a clustered instance or standalone instance from an archive file that was created by the xref:technical-documentation/payara-server-documentation/command-reference/export-sync-bundle.adoc#export-sync-bundle[`export-sync-bundle`] subcommand.
@@ -36,7 +36,7 @@ The `import-sync-bundle` subcommand does not contact the DAS to determine the no
 
 This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -51,13 +51,13 @@ This subcommand is supported in local mode only.
 *`--node`*:
   The node on which the instance resides. If this option is omitted, the subcommand determines the node from the DAS configuration in the archive file.
 
-[[operands]]
+[#operands]
 == Operands
 
 *file-name*:
   The name of the file, including the path, that contains the archive file to import. This operand is required.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Importing Configuration Data for a Clustered Instance*
@@ -73,7 +73,7 @@ sj02# asadmin --host sr04 import-sync-bundle --node sj02 --instance ymli2
 Command import-sync-bundle executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

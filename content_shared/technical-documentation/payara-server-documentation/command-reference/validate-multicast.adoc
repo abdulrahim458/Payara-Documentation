@@ -2,7 +2,7 @@
 
 Validates that multicast transport is available for clusters.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,7 +17,7 @@ asadmin [asadmin-options] validate-multicast [--help]
 [--verbose={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `validate-multicast` subcommand validates that multicast transport is available for clusters. You should run this subcommand at the same time on each of the hosts to be validated. This subcommand is available in local mode.
@@ -31,7 +31,7 @@ each other, set the `--bindaddress` option explicitly to ensure that all machine
 `--timetolive` option from the default of `4`. If these changes fail to resolve the multicast issues, ask the network administrator to verify
 that the network is configured so the multicast messages can be seen between all the machines used to run the cluster.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -60,7 +60,7 @@ that the network is configured so the multicast messages can be seen between all
 *`--verbose`*:
   If used without a value or set to `true`, provides additional debugging information. The default is `false`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Validating multicast transport*
@@ -101,7 +101,7 @@ Exiting after 20 seconds. To change this timeout, use the --timeout command line
 Command validate-multicast executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

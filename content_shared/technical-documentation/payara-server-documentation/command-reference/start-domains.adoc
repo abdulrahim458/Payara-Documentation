@@ -2,7 +2,7 @@
 
 Starts the Domain Administration Server(DAS) of the specified domains.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,14 +13,14 @@ asadmin start-domains [--help]
 [domain-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `start-domains` subcommand can be used to start the specified list of domains in the operand. This list must be specified as a comma separated string of values.
 
 NOTE: The domains will be started assuming default values for all options you would specify when running the start-domain command against one domain (default domain directory, debug mode off, verbose mode off, etc.)
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,13 +36,13 @@ Specifies how long to take for each domain to start in seconds. If starting the 
 +
 The default value is `600`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-names*:
 The list of unique names of the domains you want to start.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Starting multiple Domains*
@@ -67,7 +67,7 @@ Started domain testy
 Command start-domains executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Retrieves the REST monitoring service general settings.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,12 +12,12 @@ asadmin [asadmin-options] get-rest-monitoring-configuration
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to view the current configuration of the JMX monitoring service.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -34,7 +34,7 @@ Applies to every server instance in the cluster.
 instance_name;;
 Applies to a specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Get current REST monitoring service configuration*
@@ -46,7 +46,7 @@ Rest Monitoring Enabled  Rest Monitoring Application Name  Context Root      Sec
 false                    __restmonitoring                  /rest-monitoring  false
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

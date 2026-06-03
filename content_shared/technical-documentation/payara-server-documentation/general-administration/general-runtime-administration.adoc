@@ -3,17 +3,17 @@
 
 This chapter provides instructions for performing general administration tasks in the Payara Server environment by using the `asadmin` command-line utility.
 
-[[using-the-asadmin-utility]]
+[#using-the-asadmin-utility]
 == Using the `asadmin` Utility
 
 Use the `asadmin` utility to perform administrative tasks for Payara Server from the command line or from a script. You can use this utility instead of the Administration Console interface.
 
-[[path-to-the-asadmin-utility]]
+[#path-to-the-asadmin-utility]
 === Path to the `asadmin` Utility
 
 The `asadmin` utility is located in the `as-install/bin` directory. To run the `asadmin` utility without specifying the path, ensure that this directory is in your path.
 
-[[asadmin-utility-syntax]]
+[#asadmin-utility-syntax]
 === `asadmin` Utility Syntax
 
 The syntax for running the `asadmin` utility is as follows:
@@ -25,7 +25,7 @@ asadmin [asadmin-util-options] [subcommand [subcommand-options] [operands]]
 
 The replaceable items in this syntax are described in the subsections that follow.
 
-[[subcommands-of-the-asadmin-utility]]
+[#subcommands-of-the-asadmin-utility]
 ==== Subcommands of the `asadmin` Utility
 
 The subcommand identifies the operation or task that you are performing. Subcommands are case-sensitive. Each subcommand is either a local subcommand or a remote subcommand.
@@ -33,7 +33,7 @@ The subcommand identifies the operation or task that you are performing. Subcomm
 * A local subcommand can be run without a running domain administration server (DAS). However, to run the subcommand and have access to the installation directory and the domain directory, the user must be logged in to the machine that hosts the domain.
 * A remote subcommand is always run by connecting to a DAS and running the subcommand there. A running DAS is required.
 
-[[asadmin-utility-options-and-subcommand-options]]
+[#asadmin-utility-options-and-subcommand-options]
 ==== `Asadmin` Utility Options and Subcommand Options
 
 Options control the behavior of the `asadmin` utility and its subcommands. Options are case-sensitive.
@@ -62,12 +62,12 @@ For example, the short form and the long form of the option for specifying terse
 
 TIP: Most options require argument values, except `Boolean` options, which toggle to enable or disable a feature.
 
-[[operands-of-asadmin-utility-subcommands]]
+[#operands-of-asadmin-utility-subcommands]
 ==== Operands of `asadmin` Utility Subcommands
 
 Operands specify the items on which the subcommand is to act. Operands must follow the argument values of subcommand options, and are set off by a space, a tab, or double dashes (`--`). The `asadmin` utility treats anything that follows the subcommand options and their values as an operand.
 
-[[to-run-an-asadmin-utility-subcommand-in-single-mode]]
+[#to-run-an-asadmin-utility-subcommand-in-single-mode]
 === To Run an `asadmin` Utility Subcommand in Single Mode
 
 In single mode, you must type a separate `asadmin` command for each subcommand that you want to use. After the subcommand has run, you are returned to the operating system's command shell. Any `asadmin` utility options must be specified in each separate `asadmin` command that you run.
@@ -123,7 +123,7 @@ Command list-applications executed successfully.
 This example specifies the `--host` `asadmin` utility option and the `--type` subcommand option with the `list-applications` subcommand in single mode.
 In this example, the DAS is running on the host `srvr1.example.com` and applications of type `web` are to be listed.
 
-[[to-display-help-information-for-the-asadmin-utility-or-a-subcommand]]
+[#to-display-help-information-for-the-asadmin-utility-or-a-subcommand]
 === To Display Help Information for the `asadmin` Utility or a Subcommand
 
 Payara Server provides help information about the syntax, purpose, and options of the `asadmin` utility and its subcommands.
@@ -154,7 +154,7 @@ This example displays the help information for the `create-jdbc-resource` subcom
 
 To display the available subcommands, use the xref:technical-documentation/payara-server-documentation/command-reference/list-commands.adoc[`list-commands`] subcommand. Local subcommands are displayed before remote subcommands. If the server is not running, only local subcommands are displayed.
 
-[[to-start-a-multimode-session]]
+[#to-start-a-multimode-session]
 === To Start a Multimode Session
 
 The `asadmin` utility can be used in multiple command mode, or multimode. In multimode, you run the `asadmin` utility once to start a multimode session.During the session, the `asadmin` utility continues to accept subcommands until you end the session and return to the operating system's command shell.
@@ -211,7 +211,7 @@ running the `multimode` subcommand from within the existing session.
 After you end the second multimode session, you return to your original
 multimode session.
 
-[[to-end-a-multimode-session]]
+[#to-end-a-multimode-session]
 === To End a Multimode Session
 
 At the `asadmin>` prompt, type one of the following commands or key combinations:
@@ -225,7 +225,7 @@ CAUTION: Do not type `Ctrl-C` to end a multimode session. If a domain or Payara 
 
 You are returned to the operating system's command shell and the `asadmin>` prompt is no longer displayed. If the `asadmin>` prompt is still displayed, you might have opened a multimode session within a multimode session. In this situation, repeat this procedure to end the remaining multimode session.
 
-[[enable-asadmin-cli-multimode-event-designators]]
+[#enable-asadmin-cli-multimode-event-designators]
 === To Enable Multimode Session Event Designators
 
 This feature allows the use of **Bash Event Designators** when using Payara Server's Asadmin CLI in multimode.
@@ -236,12 +236,12 @@ IMPORTANT: This feature is disabled by default in Payara Server and has to be en
 
 WARNING: If this feature is enabled, all occurrences of the `\` character will be escaped and thus, removed before running the corresponding command. You'll have to escape these characters and turn them into `\\` for any commands to be properly parsed.
 
-[[enabling-jline-event]]
+[#enabling-jline-event]
 ==== Enabling Jline Event Expansion
 
 To enable support for JLine event designators just set the `AS_ADMIN_DISABLE_EVENT_EXPANSION` environment variable to `false`. Follow these steps depending on your operating system:
 
-[[in-linux]]
+[#in-linux]
 ===== Linux and *Nix Variants
 . Open the Terminal
 . Type the following command
@@ -258,7 +258,7 @@ export AS_ADMIN_DISABLE_EVENT_EXPANSION=false
 echo $AS_ADMIN_DISABLE_EVENT_EXPANSION
 ----
 
-[[in-windows]]
+[#in-windows]
 ===== Windows
 . Open Command Prompt as an Administrator
 . Type the following commands
@@ -276,7 +276,7 @@ set AS_ADMIN_DISABLE_EVENT_EXPANSION=false
 echo %AS_ADMIN_DISABLE_EVENT_EXPANSION%
 ----
 
-[[to-run-a-set-of-asadmin-subcommands-from-a-file]]
+[#to-run-a-set-of-asadmin-subcommands-from-a-file]
 === To Run a Set of `asadmin` Subcommands from a File
 
 Running a set of `asadmin` subcommands from a file enables you to automate repetitive tasks.
@@ -328,7 +328,7 @@ For more information about the subcommands in the preceding example, see the fol
 //TODO - Review if these features are working properly in Payara Server: attach, detach, managed jobs
 //Also, update documentation on related commands
 
-[[to-run-asadmin-subcommands-in---detach-mode]]
+[#to-run-asadmin-subcommands-in---detach-mode]
 === To Run `asadmin` Subcommands in `--detach` Mode
 
 You can use the `--detach` option of the `asadmin` utility to detach `asadmin` subcommands and run them in the background in detach mode. The `asadmin` `--detach` option is useful for long-running subcommands and enables you to run several independent subcommands from one console or script.
@@ -397,12 +397,12 @@ For the full syntax and options of the subcommands in the preceding examples, se
 * xref:technical-documentation/payara-server-documentation/command-reference/configure-managed-jobs.adoc[`configure-managed-jobs`]
 * xref:technical-documentation/payara-server-documentation/command-reference/list-jobs.adoc[`list-jobs`]
 
-[[administering-system-properties]]
+[#administering-system-properties]
 == Administering System Properties
 
 Shared server instances will often need to override attributes defined in their referenced configuration. Any configuration attribute can be overridden through a system property of the corresponding name.
 
-[[to-create-system-properties]]
+[#to-create-system-properties]
 === To Create System Properties
 
 Use the `create-system-properties` subcommand in remote mode to create or update one or more system properties of the domain or configuration. Any configuration attribute can be overwritten through a system property of the corresponding name.
@@ -419,7 +419,7 @@ Command create-system-properties executed successfully.
 ----
 This example creates a system property associated with `http-listener-port=1088` on `localhost`.
 
-[[to-list-system-properties]]
+[#to-list-system-properties]
 === To List System Properties
 
 Use the `list-system-properties` subcommand in remote mode to list the system properties that apply to a domain, cluster, or server instance or configuration.
@@ -439,7 +439,7 @@ Command list-system-properties executed successfully.
 ----
 This example lists the system properties on host `localhost`.
 
-[[to-delete-a-system-property]]
+[#to-delete-a-system-property]
 === To Delete a System Property
 
 Use the `delete-system-property` subcommand in remote mode to delete system properties.
@@ -458,7 +458,7 @@ Command delete-system-property executed successfully.
 ----
 This example deletes a system property named `http-listener-port` from `localhost`.
 
-[[list-of-system-properties]]
+[#list-of-system-properties]
 === System Properties Inventory
 
 The following properties are used exclusively by Payara Server to configure specific settings across multiple features:
@@ -630,14 +630,14 @@ Defaults to `true`.
 
 //TODO - Not sure what this feature is for and how it works or it is properly supported.
 
-[[using-configuration-modularity]]
+[#using-configuration-modularity]
 == Using Configuration Modularity
 
 With configuration modularity in Payara Server, new modules can be added to Payara Server distributions without modifying the global `domain.xml` configuration file. Default configuration data for modules is stored in the modules themselves, rather than in `domain.xml`, and loaded when needed.
 
 Module configuration elements are stored in `domain.xml` only when the default configuration included in the module is changed or when module configuration elements are added to `domain.xml` using the `create-module-config` subcommand. The `delete-module-config` subcommand removes module configuration elements from `domain.xml`, and the `get-active-module-config` subcommand displays the current active configuration of a module.
 
-[[to-add-the-default-configuration-of-a-module-to-domain.xml]]
+[#to-add-the-default-configuration-of-a-module-to-domain.xml]
 === To Add the Default Configuration of a Module to `domain.xml`
 
 Use the `create-module-config` subcommand to add the default configuration of a module to `domain.xml`.
@@ -655,7 +655,7 @@ Command create-module-config executed successfully.
 This example adds the default configuration of the web container module to `domain1` in `server-config` (the default configuration).
 Use the `--dryrun` option to preview the configuration before it is added.
 
-[[to-remove-the-configuration-of-a-module-from-domain.xml]]
+[#to-remove-the-configuration-of-a-module-from-domain.xml]
 === To Remove the Configuration of a Module from `domain.xml`
 
 Use the `delete-module-config` subcommand to remove the configuration of a module from `domain.xml` and cause the module to
@@ -673,7 +673,7 @@ Command delete-module-config executed successfully.
 ----
 This example deletes the configuration of the web container module from `domain1` in `server-config` (the default configuration).
 
-[[to-display-the-current-active-configuration-of-a-module]]
+[#to-display-the-current-active-configuration-of-a-module]
 === To Display the Current Active Configuration of a Module
 
 Use the `get-active-module-config` subcommand to display the current active configuration of a module.
@@ -694,12 +694,12 @@ Command get-active-module-config executed successfully.
 ----
 This example displays the current active configuration of the JMS service in `server-config` (the default configuration).
 
-[[administering-resources]]
+[#administering-resources]
 == Administering Resources
 
 This section contains instructions for integrating resources into the Payara Server environment.Information about administering specific resources, such as JDBC, is contained in other chapters.
 
-[[to-add-resources-from-an-xml-file]]
+[#to-add-resources-from-an-xml-file]
 === To Add Resources from an XML File
 
 Use the `add-resources` subcommand in remote mode to create the resources named in the specified XML file.
@@ -722,10 +722,10 @@ Command add-resources executed successfully.
 ----
 This example creates resources using the contents of the `resource.xml` file on `localhost`.
 
-[[listing-various-system-elements]]
+[#listing-various-system-elements]
 == Listing Various System Elements
 
-[[to-display-the-payara-server-version]]
+[#to-display-the-payara-server-version]
 === To Display the Payara Server Version
 
 Use the `version` subcommand in remote mode to display information about the Payara Server version for a particular server. If the subcommand cannot communicate with the server by using the specified login (user/password) and target (host/port) information,
@@ -745,7 +745,7 @@ Command version executed successfully.
 
 This example displays the version of Payara Server on the local host.
 
-[[to-list-applications]]
+[#to-list-applications]
 === To List Applications
 
 Use the `list-applications` subcommand in remote mode to list the deployed applications. If the `--type` option is not specified, all applications are listed.
@@ -763,7 +763,7 @@ Command list-applications executed successfully.
 ----
 This example lists the web applications on `localhost`.
 
-[[to-list-containers]]
+[#to-list-containers]
 === To List Containers
 
 Use the `list-containers` subcommand in remote mode to list application containers.
@@ -805,7 +805,7 @@ Command list-containers executed successfully.
 ----
 This example lists the containers on `localhost`.
 
-[[to-list-modules]]
+[#to-list-modules]
 === To List Modules
 
 Use the `list-modules` subcommand in remote mode to list the modules that are accessible to the Payara Server module subsystem.
@@ -940,7 +940,7 @@ OSGiModuleImpl:: Bundle = [fish.payara.server.internal.webservices.jsr109-impl [
 Command list-modules executed successfully.
 ----
 
-[[to-list-subcommands]]
+[#to-list-subcommands]
 === To List Subcommands
 
 Use the `list-commands` subcommand in remote mode to list the deployed `asadmin` subcommands.
@@ -970,7 +970,7 @@ Command list-commands executed successfully.
 ----
 This example lists only local subcommands.
 
-[[to-list-timers]]
+[#to-list-timers]
 === To List Timers
 
 The timer service is a persistent and transactional notification service that is provided by the enterprise bean container and is used to schedule notifications or events used by enterprise beans. All enterprise beans except stateful session beans can receive notifications from the timer service.
@@ -993,7 +993,7 @@ The list-timers command was executed successfully.
 ----
 This example lists the timers in a particular standalone server instance. There is one currently active timer set.
 
-[[to-show-component-status]]
+[#to-show-component-status]
 === To Show Component Status
 
 Use the `show-component-status` subcommand in remote mode to get the status (either enabled or disabled) of the specified deployed component.
@@ -1015,6 +1015,6 @@ This example shows the status of the `MEjbApp` component.
 
 The implementation of the Payara Server REST interfaces is based on https://eclipse-ee4j.github.io/jersey[project Jersey^]. Project Jersey is the reference implementation of https://jakarta.ee/specifications/restful-ws/[Jakarta RESTful Web Services^].
 
-[[see-also]]
+[#see-also]
 ==== See Also
 * https://www.gnu.org/software/bash/manual/html_node/Event-Designators.html[Event Designators^]

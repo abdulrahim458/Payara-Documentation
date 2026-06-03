@@ -2,7 +2,7 @@
 
 lists all Payara Server nodes that support communication over SSH in a domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-nodes-ssh [--help]
 [--long={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-nodes-ssh` subcommand lists all Payara Server nodes that support communication over secure shell (SSH) in a domain.
@@ -36,7 +36,7 @@ If the `--terse` option of the xref:technical-documentation/payara-server-docume
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -53,7 +53,7 @@ This subcommand is supported in remote mode only.
   `false`;;
     The nodes are listed in short format (default).
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Payara Server Nodes*
@@ -95,7 +95,7 @@ sj01        SSH    sj01.example.com   /export/payara7   pmd-i-sj01, yml-i-sj01
 Command list-nodes-ssh executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

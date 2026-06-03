@@ -2,7 +2,7 @@
 
 Retrieves the `ejb-invoker` application settings.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] set-ejb-invoker-configuration [--help]
 [--target] target
 ----
 
-[[description]]
+[#description]
 == Description
 
 Returns the current configuration options for the `ejb-invoker` application on the targeted configuration.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -35,7 +35,7 @@ Retrieves the configuration for the EJB invoker endpoint configured for every se
 instance-name;;
 Retrieves the configuration for the EJB invoker endpoint configured for a particular server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 The following command returns the current configuration options from the deployment group `test-dg`:
@@ -45,7 +45,7 @@ The following command returns the current configuration options from the deploym
 asadmin> get-ejb-invoker-configuration --target test-dg
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Retrieves the current Data Grid (Hazelcast) configuration.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,12 +13,12 @@ asadmin [asadmin-options] get-hazelcast-configuration
 [--checkEncrypted={true|false}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to retrieve the current Data Grid (Hazelcast) configuration settings.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -35,7 +35,7 @@ Applies to a specified server instance.
 *`--checkEncrypted`*:
 This option helps check if encryption of data stored in the xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc[Domain Data Grid] store is enabled or disabled.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Retrieves the current Hazelcast configuration.*
@@ -78,7 +78,7 @@ Config Specific Data Grid Start Port                          Config
 Command get-hazelcast-configuration executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

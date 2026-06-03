@@ -2,7 +2,7 @@
 
 Removes a system property of the domain, configuration, cluster, or server instance, one at a time.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] delete-system-property [--help]
 [property_name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-system-property` subcommand deletes a system property of a domain, configuration, cluster, or server instance. Make sure that the
@@ -20,7 +20,7 @@ system property is not referenced elsewhere in the configuration before deleting
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -32,13 +32,13 @@ This subcommand is supported in remote mode only.
   This option specifies the target on which you are deleting the system properties. The valid targets for this subcommand are instance,
   cluster, configuration, domain, and server. Server is the default option.
 
-[[operands]]
+[#operands]
 == Operands
 
 *property_name*:
   The name of the system property to remove.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a System Property*
@@ -51,7 +51,7 @@ asadmin> delete-system-property http-listener-port
 Command delete-system-property executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

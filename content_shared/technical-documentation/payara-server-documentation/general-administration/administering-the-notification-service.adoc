@@ -3,7 +3,7 @@
 
 Payara Server comes with a general Notification service that can be used to log events which come from other services, such as the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc[Monitoring Service], the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-healthcheck-service.adoc[HealthCheck service] or the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-request-tracing-service.adoc[Request Tracing Service].
 
-[[notification-service-command-reference]]
+[#notification-service-command-reference]
 == Notification Service Configuration Commands
 
 The following Asadmin CLI subcommands can be used to configure the notification service in general:
@@ -13,12 +13,12 @@ The following Asadmin CLI subcommands can be used to configure the notification 
 * xref:technical-documentation/payara-server-documentation/command-reference/get-notification-configuration.adoc[`get-notification-configuration`]
 * xref:technical-documentation/payara-server-documentation/command-reference/set-notification-configuration.adoc[`set-notification-configuration`]
 
-[[notifiers]]
+[#notifiers]
 == Notifiers
 
 The Notification service provides the ability to disseminate notification events through various channels or **notifiers**, which relay them to different destinations.
 
-[[filtering]]
+[#filtering]
 === Filtering
 
 All notifiers make use of a filtering system to accept or ignore notification events. Events are emitted with a severity level of `INFO`, `WARNING`, or `SEVERE`. Notifiers may be individually configured to filter out events which are below a certain severity level.
@@ -27,7 +27,7 @@ NOTE: A notifier with a filter level of `WARNING` (the default) will disregard e
 
 The following is a list of the default set of notifiers available in Payara Server.
 
-[[log-notifier]]
+[#log-notifier]
 === Log Notifier
 
 The log notifier is the only notifier that is enabled by default when the notification service is activated.
@@ -36,7 +36,7 @@ The default output for the log notifier is the configured instance's log file, w
 
 NOTE: The log notifier only handles the output of notifications from the notification service sent to the log and is not responsible for any other log output.
 
-[[log-configuration]]
+[#log-configuration]
 ==== Configuration
 
 Because the log notifier is the default notifier for the notification service it can be configured on the same page as the notification service, as shown in the image below:
@@ -65,12 +65,12 @@ Command get-log-notifier-configuration executed successfully.
 
 See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#notification-logging[Notification Logging] for more information on how to configure specific details of the server logging settings.
 
-[[jms-notifier]]
+[#jms-notifier]
 === JMS Notifier
 
 The JMS notifier makes use of a JMS queue to send notification events via standard Java messages. These messages can then be consumed by a Message Driven Bean or any other JMS compatible client implementation.
 
-[[jms-requirements]]
+[#jms-requirements]
 ==== Requirements
 
 To use JMS as a notification target, you will need the following a JMS-compatible message broker.
@@ -79,7 +79,7 @@ IMPORTANT: The Payara Server Web Profile distribution does not come with JMS cap
 
 NOTE: The easiest way to configure the JMS notifier is to use the embedded OpenMQ broker, since Payara Server already comes with it by default.
 
-[[jms-configuration]]
+[#jms-configuration]
 ==== JMS Notifier Configuration
 
 The notifier configuration requires following a few steps:
@@ -108,7 +108,7 @@ To make this change via the Asadmin CLI, use the following command which mirrors
 asadmin set-jms-notifier-configuration --dynamic=true --enabled=true --contextFactoryClass=com.sun.enterprise.naming.SerialInitContextFactory --target=server-config --queueName=notifierQueue --url=localhost:7676 --connectionFactoryName=jms/_defaultConnectionFactory
 ----
 
-[[verify-the-configuration]]
+[#verify-the-configuration]
 ==== Verifying the Configuration
 
 For verification purposes, it may be useful to enable a service to push notifications through the JMS notifier to demonstrate that it is working. To do this, you will also need to set up a Message-Driven Bean (MDB) to consume the notifications and demonstrate that they are being stored in the queue.
@@ -146,10 +146,10 @@ public class NotificationConsumer implements MessageListener {
 [2017-02-24T14:25:02.380+0000] [INFO] [] [] [tid: _ThreadID=50 _ThreadName=p: thread-pool-1; w: 5] [timeMillis: 1487946302380] [levelValue: 800] [[Message received: Health Check notification with severity level: SEVERE. (host:mike-payara, server:server, domain:domain1,instance:server) CPUC:Health Check Result:[[status=CRITICAL, message='CPU%: 109.71, Time CPU used: 7 milliseconds'']']]]
 ----
 
-[[asadmin-commands]]
+[#asadmin-commands]
 ==== Asadmin Commands
 
-[[set-the-jms-notifier-configuration]]
+[#set-the-jms-notifier-configuration]
 ===== Set the JMS Notifier Configuration
 
 To set the JMS notifier configuration, the following asadmin command will reflect the configuration done in the previous section:
@@ -166,7 +166,7 @@ asadmin set-jms-notifier-configuration --dynamic=true --enabled=true
   --target=server-config
 ----
 
-[[get-the-jms-notifier-configuration]]
+[#get-the-jms-notifier-configuration]
 ===== Get the JMS Notifier Configuration
 
 To get the JMS notifier configuration using the Asadmin CLI, run the following command:
@@ -180,7 +180,7 @@ true     WARNING  com.sun.enterprise.naming.SerialInitContextFactory  jms/__defa
 Command get-jms-notifier-configuration executed successfully.
 ----
 
-[[troubleshooting]]
+[#troubleshooting]
 ==== Troubleshooting
 
 When you have correctly configured the JMS notifier, it can be used to push notifications to your configured queue.
@@ -193,7 +193,7 @@ If you do not see any notifications, check the following:
 * Is the service using the notifier configured to send notifications frequently enough to observe?
 * Is the service using the notifier correctly configured and also enabled?
 
-[[event-bus-notifier]]
+[#event-bus-notifier]
 === Event Bus Notifier
 
 The Event Bus Notifier provides a way to send notifications from the notification service into the internal Payara Server event bus, which is based on Hazelcast distributed topics.
@@ -203,7 +203,7 @@ Currently, no built-in internal components consume event bus notifications yet a
 
 NOTE: The Data Grid must be enabled for the Event Bus to be available.
 
-[[event-bus-notifier-configuration]]
+[#event-bus-notifier-configuration]
 ==== Event Bus Notifier Configuration
 
 This notifier provides only one configuration option, the **Topic Name**, which is mandatory.
@@ -233,7 +233,7 @@ false    WARNING  payara.notification.event
 Command get-eventbus-notifier-configuration executed successfully.
 ----
 
-[[cdi-event-bus-notifier]]
+[#cdi-event-bus-notifier]
 === CDI Event Bus Notifier
 
 The CDI Event Bus notifier provides a way to send notifications from the notification service into the internal Payara Server's CDI Event bus.
@@ -242,7 +242,7 @@ These notifications consist of CDI asynchronous events that can be consumed by u
 
 NOTE: The Data Grid must be enabled for the CDI Event Bus to be available.
 
-[[cdi-event-bus-notifier-configuration]]
+[#cdi-event-bus-notifier-configuration]
 ==== CDI Event Bus Notifier Configuration
 
 You can configure the CDI Event Bus notifier from the Admin Console like this:
@@ -273,7 +273,7 @@ false    WARNING  false
 Command get-cdieventbus-notifier-configuration executed successfully.
 ----
 
-[[observing-events]]
+[#observing-events]
 ==== Observing Notification Events
 
 Any application deployed to any instance in the Data Grid can observe notification events triggered by the CDI Event bus notifier.
@@ -305,19 +305,19 @@ public class ObserverBean{
 
 IMPORTANT: For an application to use the `Inbound` annotation and `EventbusMessage` class, it will have to define the xref:technical-documentation/public-api/index.adoc[Payara Public API] as a project dependency.
 
-[[monitoring-notification-configuration]]
+[#monitoring-notification-configuration]
 == Monitoring Service Notifiers Configuration
 
 The Monitoring service can be configured to send notifications using the notification service. This allows you to forward data from exposed MBeans to your configured notifiers.
 
-[[monitoring-configuration]]
+[#monitoring-configuration]
 === Configuration
 
 The Monitoring service configuration page can be found under *Configurations* -> `<config-name>` -> *Monitoring*.
 
 The JMX page allows you to specify the time between notifications, how notifications will be delivered, and the MBeans which will be included within the message.
 
-[[enabling-monitoring-service]]
+[#enabling-monitoring-service]
 === Enabling Monitoring Service
 
 To configure notification settings for JMX Monitoring, you will need to enable it. Have a look at xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#to-enable-monitoring[How To Enable JMX Monitoring]
@@ -326,7 +326,7 @@ NOTE: You will need some MBean attributes configured for anything to be logged b
 
 JMX monitoring notifications can be done through the Admin Console or asadmin commands.
 
-[[configuring-time-via-admin-console]]
+[#configuring-time-via-admin-console]
 === Configuring JMX Monitoring Time via the Admin Console
 
 To configure the frequency of logged data, enter both the intended frequency
@@ -336,7 +336,7 @@ For example, to log every 30 milliseconds:
 
 image:jmx-monitoring-service/jmx-log-frequency.png[alt="JMX Log Frequency",width=600px]
 
-[[configuring-time-via-asadmin]]
+[#configuring-time-via-asadmin]
 === Configuring JMX Monitoring Time via Asadmin CLI
 
 To configure the data logging frequency via asadmin, use the following command:
@@ -346,7 +346,7 @@ To configure the data logging frequency via asadmin, use the following command:
 asadmin> set-jmx-monitoring-configuration --logfrequency <frequency> --logfrequencyunit NANOSECONDS|MICROSECONDS|MILLISECONDS|SECONDS|MINUTES|HOURS|DAYS
 ----
 
-[[adding-notifiers-via-admin-console]]
+[#adding-notifiers-via-admin-console]
 === Adding Notifiers via the Admin Console
 
 Before you receive notifications from your chosen notifier, please ensure that you have configured the notification service beforehand.
@@ -356,7 +356,7 @@ to select multiple notifiers, and then click `Add >`.
 
 image:jmx-monitoring-service/jmx-add-notifiers.png[alt="Add JMX Notifiers",width=600px]
 
-[[adding-notifiers-via-asadmin]]
+[#adding-notifiers-via-asadmin]
 === Adding Notifiers via Asadmin
 
 For each notifier you wish to enable use the following command:
@@ -370,7 +370,7 @@ By using the `setNotifiers` option, you can set the current list of notifiers up
 
 TIP: You can get the list of all available notifiers by using the `list-notifiers` asadmin command.
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc[Logging Configuration]

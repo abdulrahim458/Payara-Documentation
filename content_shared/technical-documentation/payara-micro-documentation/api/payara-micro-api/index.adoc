@@ -6,7 +6,7 @@ found https://javadoc.io/doc/fish.payara.extras/payara-micro[here^].
 `PayaraMicro.class` methods are used during the bootstrap
 process, whereas `PayaraMicroRuntime.class` methods are used on running instances.
 
-[[configuration-methods]]
+[#configuration-methods]
 == Configuration Methods
 
 Configuration Methods of `PayaraMicro.class` are detailed here. 
@@ -121,7 +121,7 @@ Configuration Methods of `PayaraMicro.class` are detailed here.
 |`--autoBindRange`
 |=======================================================================
 
-[[operation-methods]]
+[#operation-methods]
 == Operation Methods
 
 The other methods of the Payara Micro API that operate Payara
@@ -136,13 +136,13 @@ The list of methods in the API:
 * xref:#get-methods[Get Methods]
 * xref:#library-methods[Library Methods]
 
-[[deployment-methods]]
+[#deployment-methods]
 === Deployment Methods
 
 Deployment methods are used for the deployment of applications to Payara Micro
 instances.
 
-[[payaramicro.class-methods]]
+[#payaramicro.class-methods]
 ==== `PayaraMicro.class` Methods
 
 [cols=",,",options="header"]
@@ -159,7 +159,7 @@ deployed upon starting the instance.
 |`--deploy`
 |=======================================================================
 
-[[payaramicroruntime.class-methods]]
+[#payaramicroruntime.class-methods]
 ==== `PayaraMicroRuntime.class` Methods
 
 [cols=",",options="header",]
@@ -177,12 +177,12 @@ context root.
 |Un-deploys the specified application.
 |=======================================================================
 
-[[setup-and-shutdown-methods]]
+[#setup-and-shutdown-methods]
 === Setup and Shutdown Methods
 
 These methods are required for setting up and cleaning Payara Micro instances.
 
-[[payaramicro.class-methods-1]]
+[#payaramicro.class-methods-1]
 ==== `PayaraMicro.class` Methods
 
 [cols=",",options="header",]
@@ -201,7 +201,7 @@ returns _null_.
 |Stops and shuts down the Payara Micro instance.
 |=======================================================================
 
-[[payaramicroruntime.class-methods-1]]
+[#payaramicroruntime.class-methods-1]
 ==== `PayaraMicroRuntime.class` Methods
 
 [cols=",",options="header",]
@@ -211,7 +211,7 @@ returns _null_.
 |Stops and shuts down the Payara Micro instance.
 |=======================================================================
 
-[[cdi-methods]]
+[#cdi-methods]
 === CDI Methods
 
 These methods are used for firing CDI Events across running instances.
@@ -231,7 +231,7 @@ These methods are used for firing CDI Events across running instances.
 |Publishes a CDI Event.
 |=======================================================================
 
-[[run-methods]]
+[#run-methods]
 === Run Methods
 
 These methods are used for running `asadmin` commands or `Callable`
@@ -250,7 +250,7 @@ objects on bootstrapped instances.
 |Runs a Callable object on specified members of a Payara Micro Cluster.
 |=======================================================================
 
-[[get-methods]]
+[#get-methods]
 === Get Methods
 
 These methods are used for getting information on running Payara Micro instances.
@@ -271,7 +271,7 @@ in a cluster.
 |Returns the instance descriptor of the instance the method is run on.
 |=======================================================================
 
-[[library-methods]]
+[#library-methods]
 === Library Methods
 
 These methods are used for configuring additional libraries to the instance's

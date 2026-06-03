@@ -2,7 +2,7 @@
 
 Utility for performing administrative tasks for Payara Server.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -23,7 +23,7 @@ asadmin
 [subcommand [options] [operands]]
 ----
 
-[[description]]
+[#description]
 == Description
 
 Use the `asadmin` utility to perform administrative tasks for Payara Server. You can use this utility instead of the Administration Console interface.
@@ -35,7 +35,7 @@ The subcommand identifies the operation or task that you are performing. Subcomm
 * A local subcommand can be run without a running domain administration server (DAS). However, to run the subcommand and have access to the installation directory and the domain directory, the user must be logged in to the machine that hosts the domain.
 * A remote subcommand is always run by connecting to a DAS and running the subcommand there. A running DAS is required.
 
-[[asadmin-utility-options-and-subcommand-options]]
+[#asadmin-utility-options-and-subcommand-options]
 == Asadmin Utility Options and Subcommand Options
 
 Options control the behavior of the `asadmin` utility and its subcommands. Options are also case-sensitive.
@@ -187,7 +187,7 @@ If you run the `help` subcommand without an operand, this help information for t
 
 To obtain a listing of available `asadmin` subcommands, use the xref:technical-documentation/payara-server-documentation/command-reference/list-commands.adoc#list-commands[`list-commands`] subcommand.
 
-[[options]]
+[#options]
 == Options
 
 *`--host`*:
@@ -306,10 +306,10 @@ Default to `false`.
 *`--help`*:
 *`-?`*: Displays the help text for the `asadmin` utility.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Running an `asadmin` Utility Subcommand in Single Mode*
 
 This example runs the xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`] subcommand in single mode. In this example, the default values for all options are used.
@@ -324,7 +324,7 @@ hello <web>
 Command list-applications executed successfully.
 ----
 
-[[example-2]]
+[#example-2]
 *Example 2 Specifying an `asadmin` Utility Option With a Subcommand*
 
 This example specifies the `--host` `asadmin` utility option with the list-applications` subcommand in single mode. In this example, the DAS is running on the host `srvr1.example.com`.
@@ -343,7 +343,7 @@ automatic-timer-ejb <ejb>
 Command list-applications executed successfully.
 ----
 
-[[example-3]]
+[#example-3]
 *Example 3 Specifying an `asadmin` Utility Option and a Subcommand Option*
 
 This example specifies the `--host` `asadmin` utility option and the `--type` subcommand option with the `list-applications` subcommand in single mode. In this example, the DAS is running on the host `srvr1.example.com` and applications of type `web` are to be listed.
@@ -359,7 +359,7 @@ ejb31-war <ejb, web>
 Command list-applications executed successfully.
 ----
 
-[[example-4]]
+[#example-4]
 *Example 4 Escaping a Command-Line Argument With Single Quote Characters*
 
 The commands in this example specify the backslash (`\`) UNIX operating system meta character and the colon (`:`) option delimiter in the property value `c:\extras\pmdapp`.
@@ -384,7 +384,7 @@ Application deployed with name pmdapp.
 Command deploy executed successfully
 ----
 
-[[example-5]]
+[#example-5]
 *Example 5Specifying a UNIX Operating System Meta Character in an Option*
 
 The commands in this example specify the backslash (`\`) UNIX operating system meta character in the option argument `Test\Escape\Character`.
@@ -404,7 +404,7 @@ For the Windows operating system in single mode, no escape character is required
 asadmin --user admin --passwordfile gfpass create-jdbc-connection-pool --datasourceclassname sampleClassName --description Test\Escape\Character sampleJDBCConnectionPool
 ----
 
-[[example-6]]
+[#example-6]
 *Example 6 Specifying a Command-Line Argument That Contains a Space*
 
 The commands in this example specify spaces in the operand `C:\Documents and Settings\gfuser\apps\hello.war`.
@@ -439,7 +439,7 @@ Application deployed with name hello.
 Command deploy executed successfully.
 ----
 
-[[example-7]]
+[#example-7]
 *Example 7 Specifying a Meta Character and an Option Delimiter Character in a Property*
 
 The commands in this example specify the backslash (`\`) UNIX operating system meta character and the colon (:) option delimiter character in the `--property`option of the xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`] subcommand.
@@ -482,7 +482,7 @@ For all operating systems, the need to escape the colon (`:`) in a value can be 
 asadmin --user admin --passwordfile gfpass create-jdbc-connection-pool --datasourceclassname org.h2.jdbcx.JdbcDataSource --property user=dbuser:passwordfile=dbpasswordfile:DatabaseName=\"jdbc:h2\":server=\"http://localhost:9092\" h2-pool
 ----
 
-[[example-8]]
+[#example-8]
 *Example 8 Specifying an Option Delimiter and an Escape Character in a JVM Machine Option*
 
 The commands in this example specify the following characters in the `-Dlocation=c:\payara\appserver` JVM machine option:
@@ -509,7 +509,7 @@ For the Windows operating system in single mode, a backslash (`\`) is required t
 asadmin create-jvm-options --target test-server -e -Dlocation=c\:\\payara\\appserver
 ----
 
-[[example-9]]
+[#example-9]
 *Example 9 Specifying an Option That Contains an Escape Character*
 
 The commands in this example specify the backslash (`\`) character and the double quote (`"`) characters in the `description` argument.
@@ -528,7 +528,7 @@ For the Windows operating system in single mode, a backslash (`\`) is required t
 asadmin set-web-env-entry --name="Hello User" --type=java.lang.String --value=techscribe --description=\"Hello\App\"\authentication hello
 ----
 
-[[environmental-variables]]
+[#environmental-variables]
 == Environment Variables
 
 Environment variables modify the default values of `asadmin` utility options as shown in the following table.

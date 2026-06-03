@@ -2,7 +2,7 @@
 
 Configures the settings of the MicroProfile OpenAPI service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,7 +17,7 @@ asadmin [asadmin-options] set-openapi-configuration [--help]
 [--virtualservers=<virtualserver-list>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command enables or disables the OpenAPI service.
@@ -25,7 +25,7 @@ This command enables or disables the OpenAPI service.
 NOTE: When the OpenAPI service is disabled, the `/openapi` endpoint will always return a `403` error and any applications deployed during this period will *not* have an OpenAPI document built. +
 Enabling the service again will not cause a documents to be built for any currently deployed applications.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -67,7 +67,7 @@ If defined, the `/openapi` endpoint will be assigned to the list of virtual serv
 +
 Otherwise, the endpoint will be assigned to all virtual servers available.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Configures OpenAPI service*
@@ -79,7 +79,7 @@ This example configures OpenAPI service with CORS headers enabled, security enab
 asadmin set-openapi-configuration --enabled=true --corsHeaders=true --securityEnabled=true --roles=ADMIN --endpoint=myapi --target=server --virtualservers=myapp
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

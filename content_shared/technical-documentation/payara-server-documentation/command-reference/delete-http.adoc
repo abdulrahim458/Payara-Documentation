@@ -2,7 +2,7 @@
 
 Removes HTTP parameters from a protocol.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,12 +12,12 @@ asadmin [asadmin-options] delete-http [--help]
 protocol-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-http` subcommand removes the specified HTTP parameter set from a protocol. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,13 +36,13 @@ The `delete-http` subcommand removes the specified HTTP parameter set from a pro
   standalone-instance-name;;
     Deletes the HTTP parameter set from the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *protocol-name*:
   The name of the protocol from which to delete the HTTP parameter set.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting an HTTP Parameter Set*
@@ -55,7 +55,7 @@ asadmin> delete-http http-1
 Command delete-http executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

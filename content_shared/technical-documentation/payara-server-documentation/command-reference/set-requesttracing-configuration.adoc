@@ -2,7 +2,7 @@
 
 Configures the Request Tracing service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -27,12 +27,12 @@ asadmin [asadmin-options] set-requesttracing-configuration [--help]
 [--historicTraceStoreTimeout] timeout
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure several aspects of the Request Tracing service.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -101,7 +101,7 @@ This field is specified in the format `%d %h %m %s` where `%` is an integer. Any
 +
 NOTE: This option is ignored when reservoir sampling is enabled.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Configure the Request Tracing Service Threshold and Historic Trace Storage*
@@ -120,7 +120,7 @@ asadmin> set-requesttracing-configuration
     --historicTraceStoreTimeout='1d 2h 3m 30s'
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

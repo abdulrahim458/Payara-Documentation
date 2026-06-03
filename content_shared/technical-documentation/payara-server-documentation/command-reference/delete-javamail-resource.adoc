@@ -2,7 +2,7 @@
 
 Removes a JavaMail session resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] delete-javamail-resource [--help]
 [--target target] jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-javamail-resource` subcommand removes the specified JavaMail session resource. Ensure that you remove all references to this resource before running this subcommand.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,13 +37,13 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Deletes the resource from a particular server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
   The JNDI name of the JavaMail session resource to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a JavaMail Resource*
@@ -56,7 +56,7 @@ asadmin> delete-javamail-resource mail/MyMailSession
 Command delete-javamail-resource executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

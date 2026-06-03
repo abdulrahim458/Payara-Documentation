@@ -2,7 +2,7 @@
 
 Enables the asadmin recorder.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,12 +10,12 @@ Enables the asadmin recorder.
 asadmin [asadmin-options] enable-asadmin-recorder [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `enable-asadmin-recorder` subcommand activates the Asadmin Recorder feature, allowing for the capture and logging of all asadmin commands executed through the Admin Console.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -24,7 +24,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enabling asadmin Recorder*
@@ -38,7 +38,7 @@ asadmin enable-asadmin-recorder
 Command enable-asadmin-recorder executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

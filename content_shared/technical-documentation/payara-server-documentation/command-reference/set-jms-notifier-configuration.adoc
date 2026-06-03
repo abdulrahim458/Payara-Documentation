@@ -2,7 +2,7 @@
 
 Configures the settings of the JMS notifier
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -20,12 +20,12 @@ asadmin [asadmin-options] set-jms-notifier-configuration [--help]
 [--password password]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the JMS notifier in Payara Server Full Profile.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -66,7 +66,7 @@ Defines the user that will authentication to the JMS broker server (if required)
 *`--password`*:
 Defines the password credential of the user that will authentication to the JMS broker server (if required).
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enable the JMS Notifier and Configure it using OpenMQ*
@@ -78,7 +78,7 @@ This example enables the JMS notifier and sets it up to connect to the default, 
 asadmin set-jms-notifier-configuration --dynamic=true --enabled=true --contextFactoryClass=com.sun.enterprise.naming.SerialInitContextFactory --connectionFactoryName=jms/__defaultConnectionFactory --queueName=testQueue --url=localhost:7676 --username=testUser --password=******** --target=server-config
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

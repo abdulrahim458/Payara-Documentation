@@ -2,7 +2,7 @@
 
 Lists the authentication realms.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,13 +11,13 @@ asadmin [asadmin-options] list-auth-realms [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-auth-realms` subcommand lists the authentication realms. This
 subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -42,7 +42,7 @@ subcommand is supported in remote mode only.
   instance_name;;
     Lists the realms for a particular server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing authentication realms*
@@ -60,7 +60,7 @@ Command list-auth-realms executed successfully
 Where file, ldap, certificate, and db are the available authentication
 realms.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

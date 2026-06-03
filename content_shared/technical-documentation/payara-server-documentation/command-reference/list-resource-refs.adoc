@@ -2,7 +2,7 @@
 
 Lists existing resource references.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-resource-refs [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-resource-refs` subcommand lists all resource references in a cluster or an unclustered server instance. This effectively lists all
@@ -21,7 +21,7 @@ The target instance or instances in the cluster need not be running or available
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -30,7 +30,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -42,7 +42,7 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Lists the resource references for the named unclustered server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Resource References for a Cluster*
@@ -56,7 +56,7 @@ jms/Topic
 Command list-resource-refs executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

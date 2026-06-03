@@ -5,7 +5,7 @@ Payara Server includes the Jakarta Mail API along with Jakarta Mail service prov
 
 Instructions for accomplishing the tasks in this chapter by using the Administration Console are contained in the Administration Console online help.
 
-[[about-javamail]]
+[#about-javamail]
 == About Jakarta Mail
 
 The Jakarta Mail API is a set of abstract APIs that model a mail system. The Jakarta Mail API provides a platform-independent and protocol-independent framework to build mail and messaging applications and provide facilities for reading and sending electronic messages. Service providers implement particular protocols.
@@ -18,7 +18,7 @@ The Jakarta Mail API is implemented as an optional package in the Jakarta platfo
 
 To learn more about the Jakarta Mail API, consult the https://jakarta.ee/specifications/mail/2.0/jakarta-mail-spec-2.0.html[Jakarta Mail specification^].
 
-[[administering-javamail-resources]]
+[#administering-javamail-resources]
 == Administering Jakarta Mail Resources
 
 When you create a mail session, the server-side components and applications are enabled to access Jakarta Mail services with JNDI, using the session properties you assign for them. When creating a mail session, you can designate the mail hosts, the transport and store protocols, and the default mail user so that components that use Jakarta Mail do not have to set these properties. Applications that are heavy email users benefit because Payara Server creates a single session object and makes the session available to any component that needs it.
@@ -50,7 +50,7 @@ The name must be resolvable to an actual host name.
 
 |===
 
-[[to-create-a-javamail-resource]]
+[#to-create-a-javamail-resource]
 === To Create a Jakarta Mail Resource
 
 Use the `create-javamail-resource` subcommand in remote mode to create a Jakarta Mail session resource. The JNDI name for a Jakarta Mail session resource customarily includes the mail/ naming subcontext, For example: `mail/MyMailSession.`
@@ -70,7 +70,7 @@ Command create-javamail-resource executed successfully.
 ----
 This example creates a Jakarta Mail resource named `mail/MyMailSession`. The escape character (\) is used in the `--fromaddress` option to distinguish the dot (.) and at sign (@).
 
-[[to-list-javamail-resources]]
+[#to-list-javamail-resources]
 === To List Javamail Resources
 
 Use the `list-javamail-resources` subcommand in remote mode to list the existing JavaMail session resources.
@@ -88,7 +88,7 @@ Command list-javamail-resources executed successfuly.
 ----
 This example lists the Jakarta Mail resources on `localhost`.
 
-[[to-update-a-javamail-resource]]
+[#to-update-a-javamail-resource]
 === To Update a Jakarta Mail Resource
 
 . List the Jakarta Mail resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommand.
@@ -105,7 +105,7 @@ Command set executed successfully.
 ----
 This example changes `joeserver` to `joe`.
 
-[[to-delete-a-javamail-resource]]
+[#to-delete-a-javamail-resource]
 === To Delete a Jakarta Mail Resource
 
 Use the `delete-javamail-resource` subcommands in remote mode to delete a Jakarta Mail session resource.
@@ -127,7 +127,7 @@ Command delete-javamail-resource executed successfully.
 
 This example deletes the Jakarta Mail session resource named `mail/MyMailSession`.
 
-[[from-the-admin-console]]
+[#from-the-admin-console]
 == Configure a Jakarta Mail Session from the Admin Console
 
 Jakarta Mail sessions are added from the `Resources` tab on the left pane of the Admin Console.

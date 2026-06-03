@@ -2,7 +2,7 @@
 
 Configures the settings of the MicroProfile HealthCheck service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,14 +16,14 @@ asadmin [asadmin-options] set-microprofile-healthcheck-configuration [--help]
 [--virtualservers=<virtualserver-list>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-microprofile-healthcheck-configuration` enables or disables the MicroProfile healthcheck service and configures the endpoint where all registered health checks are exposed.
 
 IMPORTANT: Changes made with this command will only be applied when the server or instance is restarted.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -60,7 +60,7 @@ If defined, the `/health`` endpoint will be assigned to the list of virtual serv
 +
 Otherwise, the endpoint will be assigned to all virtual servers available.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Configure the MicroProfile HealthCheck service*
@@ -78,7 +78,7 @@ asadmin set-microprofile-healthcheck-configuration \
     --virtualservers=myapp
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

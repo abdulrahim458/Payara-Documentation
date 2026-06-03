@@ -2,7 +2,7 @@
 
 Rolls back the named transaction.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] rollback-transaction [--help]
 transaction_id
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `rollback-transaction` subcommand rolls back the named transaction.
@@ -35,7 +35,7 @@ asadmin> get --monitor inst1.server.transaction-service.activeids-current
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -46,13 +46,13 @@ This subcommand is supported in remote mode only.
 *`--target`*:
   This option specifies the target on which you are rolling back the transactions. Valid values are `server` or any other clustered or stand-alone instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *transaction_id*:
   Identifier for the transaction to be rolled back.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Using rollback-transaction command*
@@ -63,7 +63,7 @@ This subcommand is supported in remote mode only.
 Command rollback-transaction executed succeessfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

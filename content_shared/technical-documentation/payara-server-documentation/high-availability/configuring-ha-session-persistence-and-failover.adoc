@@ -3,7 +3,7 @@
 
 This chapter explains how to enable and configure high availability session persistence.
 
-[[overview-of-session-persistence-and-failover]]
+[#overview-of-session-persistence-and-failover]
 == Overview of Session Persistence and Failover
 
 Payara Server provides high availability session persistence through failover of HTTP session data and stateful session bean (SFSB) session data. Failover means that in the event of a server instance or hardware failure, another server instance in a Cluster takes over a distributed session.
@@ -12,7 +12,7 @@ For example, Jakarta EE applications typically have significant amounts of sessi
 
 NOTE: When using high availability session persistence together with a load balancer, use a load balancer that includes session-based stickiness as part of its load-balancing algorithm. Otherwise, session data can be misdirected or lost.
 
-[[requirements]]
+[#requirements]
 === Requirements
 
 A distributed session can run in multiple Payara Server instances, if:
@@ -33,7 +33,7 @@ If server instances in a cluster are located on different hosts, ensure that the
 * The web application uses high-availability session persistence. If a non-distributable web application is configured to use high-availability session persistence, the server writes an error to the log file.
 * The web application must be deployed using the `deploy` subcommand with the `--availabilityenabled` option set to `true`. For more information on these subcommands, see xref:ROOT:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`].
 
-[[restrictions]]
+[#restrictions]
 === Restrictions
 
 When configuring session persistence and failover, note the following restrictions:
@@ -72,7 +72,7 @@ However, if the instance that fails is never restarted, any prepared global tran
 +
 In general, for these objects, failover will not work. However, failover might work in some cases, if for example the object is serializable.
 
-[[scope]]
+[#scope]
 === Scope
 
 The availability service can be enabled for the following scopes, ranging from highest to lowest:
@@ -94,12 +94,12 @@ For example, if the `availability-service` property is set to `true` for an EJB 
 
 Conversely, to enable availability at a given scope, you must enable it at all higher levels as well. For example, to enable availability at the application level, you must also enable it at the cluster or server instance and container levels.
 
-[[enabling-the-high-availability-session-persistence-service]]
+[#enabling-the-high-availability-session-persistence-service]
 == Enabling the High Availability Session Persistence Service
 
 This section explains how to configure and enable the high availability session persistence service.
 
-[[to-enable-availability-for-a-cluster-standalone-instance-or-container]]
+[#to-enable-availability-for-a-cluster-standalone-instance-or-container]
 === To Enable Availability for a Cluster, Standalone Instance or Container
 
 This procedure explains how to enable high availability for a cluster as a whole, or for Web, EJB, or JMS containers that run in a cluster, or for a standalone instance that may belong to a deployment group.
@@ -192,7 +192,7 @@ See Also
 * xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#configuring-availability-for-individual-web-applications[Configuring Availability for Individual Web Applications]
 * xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#using-single-sign-on-with-session-failover[Using Single Sign-on with Session Failover]
 
-[[configuring-availability-for-individual-web-applications]]
+[#configuring-availability-for-individual-web-applications]
 === Configuring Availability for Individual Web Applications
 
 To enable and configure availability for an individual web application, edit the application deployment descriptor file (`glassfish-web.xml` or `payara-web.xml`).
@@ -223,7 +223,7 @@ It must be set to `hazelcast` (as this is the default persistence mode) to enabl
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-[[configuring-replication-and-multi-threaded-concurrent-access-to-httpsessions]]
+[#configuring-replication-and-multi-threaded-concurrent-access-to-httpsessions]
 === Configuring Datagrid Replication and Multi-Threaded Concurrent Access to `HttpSessions`
 
 If you are using data replication via the Data Grid (`hazelcast`) and your web application involves multiple client threads concurrently accessing the same session ID, then you may experience session loss even without any instance failure.
@@ -261,7 +261,7 @@ The following is an example snippet from a `payara-web.xml` file that illustrate
 </payara-web-app>
 ----
 
-[[using-single-sign-on-with-session-failover]]
+[#using-single-sign-on-with-session-failover]
 === Using Single Sign-On with Session Failover
 
 In a single application server instance, once a user is authenticated by an application,
@@ -280,7 +280,7 @@ For example, use the `set` command as follows, where `config1` is the configurat
 asadmin> set config-1.availability-service.web-container-availability.sso-failover-enabled="true"
 ----
 
-[[single-sign-on-groups]]
+[#single-sign-on-groups]
 ==== Single Sign-On Groups
 
 Applications that can be accessed through a single name and password combination constitute a *single sign-on group*.
@@ -302,7 +302,7 @@ If single sign-on is enabled and you invalidate one of the sessions using `HttpS
 
 If you try to access any application belonging to the single sign-on group, you are required to authenticate again, and a new session is created for the client accessing the application.
 
-[[stateful-session-bean-failover]]
+[#stateful-session-bean-failover]
 == Stateful Session Bean Failover
 
 Stateful session beans (SFSBs) contain client-specific state. There is a one-to-one relationship between clients and the stateful session beans. At creation, the EJB container gives each SFSB a unique session ID that binds it to a client.
@@ -322,7 +322,7 @@ If an SFSB that uses session persistence is un-deployed while the Payara Server 
 
 To prevent this, undeploy the SFSB while the Payara Server instance is running.
 
-[[configuring-availability-for-the-ejb-container]]
+[#configuring-availability-for-the-ejb-container]
 === Configuring Availability for the EJB Container
 
 To enable availability for the EJB container use the `asadmin set` command to set the following three properties for the configuration:
@@ -342,12 +342,12 @@ asadmin> set config1.availability-service.ejb-container-availability.sfsb-persis
 asadmin> set config1.availability-service.ejb-container-availability.sfsb-ha-persistence-type="hazelcast"
 ----
 
-[[configuring-the-sfsb-session-store-when-availability-is-disabled]]
+[#configuring-the-sfsb-session-store-when-availability-is-disabled]
 ==== Configuring the SFSB Session Store When Availability Is Disabled
 
 If availability is disabled, the local file system is used for SFSB state passivation, but not persistence. To change where the SFSB state is stored, change the *Session Store Location* setting in the EJB container.
 
-[[configuring-availability-for-an-individual-application-or-ejb-module]]
+[#configuring-availability-for-an-individual-application-or-ejb-module]
 === Configuring Availability for an Individual Application or EJB Module
 
 You can enable SFSB availability for an individual application or EJB module during deployment:
@@ -357,7 +357,7 @@ You can enable SFSB availability for an individual application or EJB module dur
 +
 For more information, see xref:ROOT:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`].
 
-[[configuring-availability-for-an-individual-bean]]
+[#configuring-availability-for-an-individual-bean]
 === Configuring Availability for an Individual Bean
 
 To enable availability and select methods to be checkpointed for an individual SFSB, use the `glassfish-ejb-jar.xml` deployment descriptor file. To enable high availability session persistence, set `availability-enabled=true` in the `ejb` element, like this:
@@ -373,7 +373,7 @@ To enable availability and select methods to be checkpointed for an individual S
 </glassfish-ejb-jar>
 ----
 
-[[specifying-methods-to-be-checkpointed]]
+[#specifying-methods-to-be-checkpointed]
 === Specifying Methods to Be Checkpointed
 
 If enabled, checkpointing generally occurs after the bean completes any transaction, even if the transaction rolls back.

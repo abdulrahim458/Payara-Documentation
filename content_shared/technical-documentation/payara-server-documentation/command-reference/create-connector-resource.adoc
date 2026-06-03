@@ -2,7 +2,7 @@
 
 Registers the connector resource with the specified JNDI name.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,14 +17,14 @@ asadmin [asadmin-options] create-connector-resource [--help]
 jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-connector-resource` subcommand registers the connector resource with the specified JNDI name.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -65,13 +65,13 @@ NOTE: The resource is always created for the domain as a whole, but the
 `resource-ref` for the resource is only created for the specified `--target`. This means that although the resource is defined at the
 domain level, it is only available at the specified target level. Use the `create-resource-ref` subcommand to refer to the resource in multiple targets if needed.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
   The JNDI name of this connector resource.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Connector Resource*
@@ -98,7 +98,7 @@ Command create-connector-resource executed successfully
 
 Where `jms/qConnFactory` is the sample connector resource that is created.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

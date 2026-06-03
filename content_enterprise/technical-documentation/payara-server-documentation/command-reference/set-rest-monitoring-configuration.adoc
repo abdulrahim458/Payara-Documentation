@@ -2,7 +2,7 @@
 
 Configures the REST monitoring service subsystem.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,12 +16,12 @@ asadmin [asadmin-options] set-rest-monitoring-configuration
 [--applicationName name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the settings of the REST Monitoring subsystem.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -46,7 +46,7 @@ Defaults to `/rest-monitoring`. The context root of the REST Monitoring applicat
 *`--applicationName`*:
 Defaults to `__restmonitoring`. The name of the REST Monitoring application.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enables REST monitoring service on the `/rest-mon` context root*
@@ -56,7 +56,7 @@ Defaults to `__restmonitoring`. The name of the REST Monitoring application.
 asadmin set-rest-monitoring-configuration --enabled=true --contextRoot /rest-mon --target=server
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

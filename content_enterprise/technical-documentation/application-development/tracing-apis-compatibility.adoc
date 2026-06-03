@@ -24,7 +24,7 @@ The following is an up-to-date compatibility matrix that list the compatible ver
 | -
 |===
 
-[[features-not-currently-support]]
+[#features-not-currently-support]
 == Features Not Currently Supported
 
 The Payara Platform currently does not offer the following OpenTracing features:

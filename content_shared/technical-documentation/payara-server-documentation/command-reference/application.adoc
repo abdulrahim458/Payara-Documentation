@@ -3,7 +3,7 @@
 
 Server-side Jakarta EE applications and web services.
 
-[[description]]
+[#description]
 == Description
 
 The Jakarta EE platform enables applications to access systems that are outside of the application server. Applications connect to these systems through resources.

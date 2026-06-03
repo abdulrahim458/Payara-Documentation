@@ -2,7 +2,7 @@
 
 Creates a Payara instance.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,7 +17,7 @@ asadmin [asadmin-options] create-instance [--help]
 instance-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-instance` subcommand creates a Payara instance. This subcommand requires the secure shell (SSH) to be configured on the host where the domain administration server (DAS) is running and on the host that is represented by the node where the instance is to reside.
@@ -56,7 +56,7 @@ Use the `--systemproperties` option to resolve port conflicts for additional ins
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -123,7 +123,7 @@ If set to `0` the Domain wide start port will be used instead.
 +
 The default value is `0`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *instance-name*:
@@ -143,7 +143,7 @@ The name must meet the following requirements:
 * The name must be unique in the domain and must not be the name of another Payara instance, a cluster, a named configuration, or a node.
 * The name must not be `domain`, `server`, or any other keyword that is reserved by Payara Server.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Standalone Payara Instance*
@@ -257,7 +257,7 @@ The instance, instance1, was created on host localhost
 Command create-instance executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

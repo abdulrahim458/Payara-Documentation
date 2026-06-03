@@ -2,7 +2,7 @@
 
 Displays version information for Payara Server.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] version [--help]
 [--local={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `version` subcommand displays version information for Payara Server. By default, if the subcommand cannot contact the domain administration server (DAS), the subcommand retrieves the version information locally and displays a warning message.
 
 This subcommand is supported in remote mode and local mode.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -35,7 +35,7 @@ If this option is set to `true`, the subcommand obtains the version locally from
 +
 If this option is set to `false` (default), the subcommand attempts to contact the DAS to obtain the version. If the attempt to contact the DAS fails, the subcommand retrieves the version locally and displays a warning message.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Obtaining Version Information From a Running DAS*
@@ -60,7 +60,7 @@ Version = Payara Server {version} #badassfish (build 00)
 Command version executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

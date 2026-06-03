@@ -2,7 +2,7 @@
 
 Gets the settings of the TOML configuration source.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,12 +10,12 @@ Gets the settings of the TOML configuration source.
 asadmin [asadmin-options] get-toml-config-source-configuration [--help] [--target=server]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-toml-config-source-configuration` retrieves the current configuration for the TOML Config Source
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -33,7 +33,7 @@ Specifies a Payara Server instance.
 cluster-name;;
 Specifies a cluster.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Retrieving the toml Config Source configurations.*
@@ -47,7 +47,7 @@ Enabled  Path                               Depth
 true     /Users/payara/workspace/test.TOML  5
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

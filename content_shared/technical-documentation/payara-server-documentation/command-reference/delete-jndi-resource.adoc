@@ -2,7 +2,7 @@
 
 Removes a JNDI resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] delete-jndi-resource [--help]
 [--target target] jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-jndi-resource` subcommand removes the specified JNDI resource. You must remove all associations to the JNDI resource before running this subcommand.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,13 +40,13 @@ NOTE: Resources are always created for a domain as a whole but are only active f
   instance_name;;
     Deletes the resource from the specified server instance
 
-[[operandds]]
+[#operandds]
 == Operands
 
 *jndi_name*:
   The name of the JNDI resource to be removed.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a JNDI Resource*
@@ -59,7 +59,7 @@ asadmin> delete-jndi-resource sample_jndi_resource
 Command delete-jndi-resource executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

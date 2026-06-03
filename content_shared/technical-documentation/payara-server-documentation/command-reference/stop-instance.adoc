@@ -2,7 +2,7 @@
 
 Stops a running Payara Server instance.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] stop-instance [--help]
 instance-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `stop-instance` subcommand stops a running Payara Server instance.
@@ -23,7 +23,7 @@ instance that was created by using the xref:technical-documentation/payara-serve
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -46,13 +46,13 @@ This command is supported in remote mode only.
   `true`;;
     The instance is killed. The subcommand uses functionality of the operating system to terminate the instance process.
 
-[[operands]]
+[#operands]
 == Operands
 
 *instance-name*:
   This is the name of the Payara Server instance to stop.
 
-[[examples]]
+[#examples]
 == Examples
 
 This example stops the Payara Server instance `yml-i-sj01`.
@@ -66,7 +66,7 @@ The instance, yml-i-sj01, was stopped.
 Command stop-instance executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

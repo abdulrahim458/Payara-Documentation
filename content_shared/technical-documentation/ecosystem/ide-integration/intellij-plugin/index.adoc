@@ -6,7 +6,7 @@ If you are developing an application on IntelliJ IDEA Community Edition, you sho
 
 IMPORTANT: If you are using IntelliJ IDEA Ultimate, you should only install the `Payara IntelliJ Ultimate Tools` plugin. This contains support for both Payara Server and Payara Micro.
 
-[[installing-plugin]]
+[#installing-plugin]
 == Installing Payara Tools
 
 . Open IntelliJ IDEA and navigate to *File > Settings > Plugins*
@@ -17,7 +17,7 @@ IMPORTANT: If you are using IntelliJ IDEA Ultimate, you should only install the 
 
 image:intellij-plugin/install-plugin.png[alt="Install IntelliJ Plugin",width=600px]
 
-[[intellij-tools-features]]
+[#intellij-tools-features]
 == Payara Intellij Tools Features
 
 * xref:technical-documentation/ecosystem/ide-integration/intellij-plugin/payara-server.adoc[Payara Server] - The Payara IntelliJ Ultimate Tools enables developers to easily configure Payara Server and manage applications from IntelliJ IDEA.

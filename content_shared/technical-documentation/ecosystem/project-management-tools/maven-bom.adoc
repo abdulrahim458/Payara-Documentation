@@ -9,7 +9,7 @@ The Payara Platform consists of many artifacts and it depends on lots of APIs as
 * Arquillian Container Adapters
 * Implementations and libraries included in Payara Server (see the list below)
 
-[[quick-start]]
+[#quick-start]
 == Quick Start
 
 To make use of the BOM, you need to list the artifact in `dependencyManagement` section of your project in scope `import`. Some of the artifacts are Payara-specific patch versions which are available in our repository https://nexus.payara.fish/repository/payara-artifacts/[payara-artifacts^].
@@ -50,12 +50,12 @@ Add following snippet to your Maven project:
 
 An example application utilizing the BOM can be seen in repository https://github.com/payara/Payara-Examples[Payara Examples^]/. See the https://github.com/payara/Payara-Examples/tree/master/ecosystem/payara-bom/bom-import[ecosystem/payara-bom/bom-import/^] subproject for more details.
 
-[[bom-contents]]
+[#bom-contents]
 == BOM Contents
 
 The following is a summary of all dependencies included in the BOM, grouped by category.
 
-[[payara-distributions]]
+[#payara-distributions]
 === Payara Platform Distributions
 
 Distribution artifacts do not define a Maven scope and are therefore imported in `compile` scope.
@@ -133,7 +133,7 @@ Distribution artifacts do not define a Maven scope and are therefore imported in
 
 |===
 
-[[standard-apis]]
+[#standard-apis]
 === Standard Apis
 
 Standard APIs are defined in `provided` scope, as they already include classes that are present in the server's runtime.
@@ -178,7 +178,7 @@ Standard APIs are defined in `provided` scope, as they already include classes t
 
 |===
 
-[[test-and-other-tools]]
+[#test-and-other-tools]
 === Test Frameworks and Other Tools
 
 Arquillian is the recommended way to run integration tests written for Payara Server. Payara Platform provides multiple connectors fitting the deployment scenarios. These artifacts are declared in scope `test`.
@@ -271,7 +271,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 ----
 |===
 
-[[api-implementation]]
+[#api-implementation]
 === Libraries and API Implementations
 
 This is a non-exhaustive list of dependencies. By default all are declared in their respective default scopes, but it is more correct to use them with scope `provided` if they are already present in the server's internal modules.

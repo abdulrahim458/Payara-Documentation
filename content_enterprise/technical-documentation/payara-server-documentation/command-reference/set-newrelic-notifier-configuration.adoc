@@ -2,7 +2,7 @@
 
 Configures the settings of the New Relic notifier.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,7 +16,7 @@ asadmin [asadmin-options] set-newrelic-notifier-configuration [--help]
 [--key key]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the New Relic notifier in Payara Server.
@@ -24,7 +24,7 @@ This command can be used to configure the behaviour of the New Relic notifier in
 IMPORTANT: This command is available as long as the New Relic notifier's core module is installed in the server. +
 This notifier's extension is installed by default on Payara Server Enterprise.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -53,7 +53,7 @@ Defines the New Relic account Id.
 *`--key`*:
 Defines the license key to be used by the notifier.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enable the New Relic and set its license and account configuration*
@@ -63,7 +63,7 @@ Defines the license key to be used by the notifier.
 asadmin set-newrelic-notifier-configuration --dynamic=true --enabled=true --accountId=1658989 --key=b5815wdxj6lF_tmMBljQa5y1603JTiLh
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

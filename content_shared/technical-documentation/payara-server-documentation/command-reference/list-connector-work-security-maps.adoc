@@ -2,7 +2,7 @@
 
 Lists the work security maps belonging to the specified resource adapter.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] list-connector-work-security-maps [--help]
 resource_adapter_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-connector-work-security-maps` subcommand lists the work security maps belonging to the specified resource adapter.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -30,16 +30,16 @@ This subcommand is supported in remote mode only.
 *`--securitymap`*:
   Specifies the name of the security map contained within the resource adapter from which the identity and principals should be listed.
 
-[[operands]]
+[#operands]
 == Operands
 
 *resource_adapter_name*:
   The name of the resource adapter for which you want to list security maps.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Listing Connector Work Security Maps*
 
@@ -55,7 +55,7 @@ workSecurityMap2: EIS principal=eis-principal-1, mapped principal=server-princip
 Command list-connector-work-security-maps executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

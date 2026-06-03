@@ -2,7 +2,7 @@
 
 Adds a new protocol.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,12 +13,12 @@ asadmin [asadmin-options] create-protocol [--help]
 protocol-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-protocol` subcommand creates a protocol. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,13 +40,13 @@ The `create-protocol` subcommand creates a protocol. This subcommand is supporte
   standalone-instance-name;;
     Creates the protocol on the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *protocol-name*:
   The name of the protocol.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Protocol*
@@ -59,7 +59,7 @@ asadmin> create-protocol --securityenabled=true http-1
 Command create-protocol executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

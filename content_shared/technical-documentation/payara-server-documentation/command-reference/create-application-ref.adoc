@@ -2,7 +2,7 @@
 
 Creates a reference to an application.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] create-application-ref [--help]
 [--lbenabled=true] reference_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-application-ref` subcommand creates a reference from a cluster or an unclustered server instance to a previously deployed application element (for example, a Java EE application, a Web module, or an enterprise bean module). This effectively results in the application element being deployed and made available on the targeted instance or cluster.
@@ -22,7 +22,7 @@ The target instance or instances making up the cluster need not be running or av
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -44,7 +44,7 @@ This subcommand is supported in remote mode only.
 *`--lbenabled`*:
   Controls whether the deployed application is available for load balancing. The default is true.
 
-[[operands]]
+[#operands]
 == Operands
 
 *reference_name*:
@@ -54,10 +54,10 @@ This subcommand is supported in remote mode only.
   references to multiple disabled versions by using an asterisk (`*`) as a wildcard character. For more information about module and application versions, see
   "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#module-and-application-versions[Module and Application Versions]" in Payara Server Application Deployment section.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Creating an Application Reference*
 
 The following example creates a reference to the Web module `MyWebApp` on the unclustered server instance `NewServer`.
@@ -68,7 +68,7 @@ asadmin> create-application-ref --target NewServer MyWebApp
 Command create-application-ref executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:
@@ -76,7 +76,7 @@ Command create-application-ref executed successfully.
 *1*:
   error in executing the command
 
-[[sthref130]]
+[#sthref130]
 
 *See Also*
 

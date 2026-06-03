@@ -2,7 +2,7 @@
 
 Lists file groups.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] list-file-groups [--help]
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-file-groups` subcommand lists the file users and groups supported by the file realm authentication. This subcommand lists available groups in the file user. If the `--name` option is not specified, all groups are listed.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,7 +40,7 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Lists the file groups for a particular instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Groups in all File Realms*
@@ -55,7 +55,7 @@ manager
 Command list-file-groups executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

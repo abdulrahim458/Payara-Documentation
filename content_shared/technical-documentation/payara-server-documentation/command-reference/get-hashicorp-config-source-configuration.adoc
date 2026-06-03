@@ -2,7 +2,7 @@
 
 Gets the configuration for the HashiCorp configuration source.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] get-hashicorp-config-source-configuration [--help]
 [--target=server]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-hashicorp-config-source-configuration` retrieves the current configuration for the HashiCorp Config Source.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Getting the configuration of the HashiCorp secrets*
@@ -52,7 +52,7 @@ Enabled  API Version  Secrets Engine Path  Secrets Path  Vault Address
 true     2            secret               my-secret     https://127.0.0.1:8200
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

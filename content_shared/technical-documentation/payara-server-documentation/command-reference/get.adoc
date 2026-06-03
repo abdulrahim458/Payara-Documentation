@@ -2,7 +2,7 @@
 
 Gets the values of configurable or monitorable attributes.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] get [--help]
 (dotted-attribute--name)+
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get` subcommand uses dotted names to get the names and values of configurable or monitorable attributes for Payara Server elements.
@@ -38,7 +38,7 @@ The following list shows common usage of the `get` subcommand with the * (asteri
 *`get *.*.*.*`*:
   Gets all values on all dotted names that have four parts.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -53,16 +53,16 @@ The following list shows common usage of the `get` subcommand with the * (asteri
 *`-c`*:
   Aggregates monitoring data for all Payara Server instances in a cluster. The default value is `false`.
 
-[[Operands]]
+[#Operands]
 == Operands
 
 *dotted-attribute-name*:
   Identifies the attribute name in the dotted notation. At least one dotted name attribute is required. The dotted notation is the syntax used to access attributes of configurable entities.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Getting the Attributes of a Configurable Element*
 
@@ -86,7 +86,7 @@ server.http-service.http-listener.http-listener-1.server-name =
 Command get executed successfully.
 ----
 
-[[example-2]]
+[#example-2]
 
 *Example 2 Getting Monitorable Objects*
 
@@ -110,7 +110,7 @@ server.monitoring-service.module-monitoring-levels.web-container=OFF
 Command get executed successfully.
 ----
 
-[[example-3]]
+[#example-3]
 
 *Example 3 Getting Attributes and Values for a Monitorable Object*
 
@@ -138,7 +138,7 @@ server.jvm.UpTime_Unit = milliseconds
 Command get executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Creates the resources specified in an XML file.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] add-resources [--help]
 [--upload={false|true}] xml-file-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `add-resources` subcommand creates the resources named in the specified XML file. The resources that can be created with this subcommand are listed in S
@@ -25,7 +25,7 @@ The xml-file-name operand is the path to the XML file that contains the resource
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -56,7 +56,7 @@ This subcommand is supported in remote mode only.
   * If the DAS is on the host where the subcommand is run, the default is `false`.
   * If the DAS is on a remote host, the default is `true`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *xml-file-name*:
@@ -92,7 +92,7 @@ This subcommand is supported in remote mode only.
 </resources>
 ----
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Adding Resources*
@@ -111,7 +111,7 @@ Command : JDBC resource jdbc/__defaultA created successfully.
 Command add-resources executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

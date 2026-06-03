@@ -2,7 +2,7 @@
 
 Changes the master broker in a Message Queue cluster providing JMS services for a Payara Server cluster.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] change-master-broker [--help]
 clustered-instance-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `change-master-broker` subcommand changes the master broker in a Message Queue cluster that is the JMS provider for a Payara Server
@@ -19,7 +19,7 @@ cluster. By default, the master broker is the one associated with the first inst
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -28,14 +28,14 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *clustered-instance-name*:
   The name of the server instance whose Message Queue broker is to become the master broker of the Message Queue cluster. This server instance must be an instance in a
   Payara Server cluster.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Changing the master broker*
@@ -49,7 +49,7 @@ asadmin> change-master-broker clustinst3
 Command change-master-broker executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

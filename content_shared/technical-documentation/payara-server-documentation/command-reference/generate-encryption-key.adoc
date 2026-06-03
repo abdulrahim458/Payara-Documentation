@@ -2,7 +2,7 @@
 
 Generates an encryption key for Data Grid secure communication.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,14 +14,14 @@ asadmin [asadmin-options] generate-encryption-key
 [domain-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to generate an encryption key used by Payara Server to perform encryption and decryption of the data stored within the Data Grid.
 
 For more information on the Data Grid mechanism, see xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc#datagrid-encryption[Data Grid Encryption].
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,13 +36,13 @@ The default value is `false`.
 *`--domaindir`*:
 The path to the directory containing the target domain. The default domain directory is `as-install/domains`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-name*:
 The name of the domain to target. The default is `domain1`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Generates an encryption key.*
@@ -56,7 +56,7 @@ Enter the current master password>
 Command generate-encryption-key executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

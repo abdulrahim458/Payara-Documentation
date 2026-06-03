@@ -2,7 +2,7 @@
 
 Retrieves the configuration settings of the MicroProfile HealthCheck service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] get-microprofile-healthcheck-configuration [--help]
 [--target=server-config]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-microprofile-healthcheck-configuration` returns the current configuration options for the MicroProfile Health Check service on the specified target.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Getting MicroProfile Health Check configuration*
@@ -53,7 +53,7 @@ true     health                    false             microprofile
 Command get-microprofile-healthcheck-configuration executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

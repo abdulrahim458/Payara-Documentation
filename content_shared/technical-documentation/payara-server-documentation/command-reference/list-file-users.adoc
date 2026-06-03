@@ -2,7 +2,7 @@
 
 Lists the file users.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] list-file-users [--help]
 [--authrealmname auth_realm_name] [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-file-users` subcommand displays a list of file users supported by file realm authentication.
 
-[[options]]
+[#options]
 == Options
 
 *`--help`*:
@@ -25,7 +25,7 @@ The `list-file-users` subcommand displays a list of file users supported by file
 *`--authrealmname`*:
   Lists only the users in the specified authentication realm.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -40,10 +40,10 @@ The `list-file-users` subcommand displays a list of file users supported by file
   instance_name;;
     Lists the file users on a specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Listing Users in a Specific File Realm*
 
@@ -58,7 +58,7 @@ sample_user12
 Command list-file-users executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,12 +2,12 @@
 
 The Payara API provides a `@OAuth2AuthorisationMechanism` annotation that creates an authorisation mechanism for OAuth2 support. This works in the same way as other authorisation mechanisms in the Java EE Security API.
 
-[[usage]]
+[#usage]
 == Usage
 
 The OAuth2 authentication mechanism is defined through the `@OAuth2AuthorisationMechanism` annotation. Specifying this in a valid place as defined by the Java EE Security API will create the mechanism. Often this may mean that any class is a valid position.
 
-[[usage-example]]
+[#usage-example]
 === Example
 
 Here's an example that configures a Google OAuth2 endpoint:
@@ -54,7 +54,7 @@ public class CallbackServlet extends HttpServlet {
 
 IMPORTANT: OAuth2 authorization support require the use of HTTP/2, so make sure to use the appropriate HTTP network listener when preparing your application.
 
-[[configuration]]
+[#configuration]
 == Configuration
 
 The `@OAuth2AuthenticationDefinition` annotation has several configuration options.
@@ -101,7 +101,7 @@ They are detailed below.
 | Must be in the form `"key=value"`.
 |===
 
-[[el-support]]
+[#el-support]
 === Expression Language Support
 
 Additionally, the `@OAuth2AuthenticationDefinition` supports the use of expression language (EL) notation for dynamic configuration scenarios. This means that you can use any CDI bean properties to set the OAuth2 configuration like this:
@@ -119,7 +119,7 @@ public class SecurityBean {
 }
 ----
 
-[[secret-alias]]
+[#secret-alias]
 === Client Secret Aliasing
 
 The client secret can be input directly, or for added security it can be aliased using any of the following features:
@@ -128,7 +128,7 @@ The client secret can be input directly, or for added security it can be aliased
 * xref:technical-documentation/payara-server-documentation/general-administration/configuration-variables-reference.adoc[Environment Variables / System Properties]
 * xref:technical-documentation/microprofile/config/index.adoc[Config API]
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * link:https://oauth.net/2/[OAuth v2 Official site^]

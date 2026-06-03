@@ -3,7 +3,7 @@
 
 This chapter describes the features and interfaces that Payara Server provides to develop OSGi-enabled Enterprise applications.
 
-[[overview-of-osgi-application-and-payara-server]]
+[#overview-of-osgi-application-and-payara-server]
 == Overview of Osgi Application and Payara Server
 
 Payara Server is a certified Jakarta EE implementation, so it provides the latest Jakarta EE APIs and frameworks. It is built using OSGi technology, and includes as its OSGi module management subsystem the http://felix.apache.org[Apache Felix OSGi framework^], which is a fully-compliant implementation of the OSGi Service Platform R7 specification. Payara Server supports deployment of OSGi-based applications using this framework.
@@ -18,7 +18,7 @@ OSGi applications are deployed as one or more OSGi bundles, and the Payara Serve
 * Web Application Bundles (or WABs) , see xref:#developing-web-application-bundles[Developing Web Application Bundles].
 * EJB Application Bundles, see xref:#developing-ejb-application-bundles[Developing EJB Application Bundles].
 
-[[benefits-of-using-osgi-in-enterprise-jakarta-applications]]
+[#benefits-of-using-osgi-in-enterprise-jakarta-applications]
 === Benefits of Using Osgi in Enterprise Jakarta Applications
 
 Enterprise applications typically need transactional, secured access to data stores, messaging systems and other such enterprise information systems, and have to cater to a wide variety of clients such as web browsers and desktop applications, and so on. Jakarta EE makes development of such applications easier with a rich set of APIs and frameworks. It also provides a scalable, reliable and easy to administer runtime to host such applications.
@@ -34,7 +34,7 @@ The service-oriented approach and dynamic module system used together allow a sy
 
 With Payara Server, you do not have to chose one of the two platforms. A hybrid approach like OSGi enabling your Jakarta EE applications allows new capabilities to applications hitherto unavailable to applications built using just one of the two platforms.
 
-[[developing-osgi-application-bundles-for-payara-server]]
+[#developing-osgi-application-bundles-for-payara-server]
 == Developing Osgi Application Bundles for Payara Server
 
 Payara Server enables interaction between OSGi components and Jakarta EE components.
@@ -43,7 +43,7 @@ OSGi services managed by the OSGi framework can invoke Jakarta EE components man
 
 Similarly, Jakarta EE components can locate OSGi services provided by plain OSGi bundles and use them as well. Payara Server extends the Jakarta EE Context and Dependency Injection (CDI) framework to make it easier for Jakarta EE components to consume dynamic OSGi services in a type-safe manner.
 
-[[developing-plain-osgi-bundles]]
+[#developing-plain-osgi-bundles]
 === Developing Plain Osgi Bundles
 
 Jakarta EE components (like an EJB or Servlet) can look up Jakarta EE platform services using JNDI names in the associated Jakarta EE naming context. Such code can rely on the Jakarta EE container to inject the required services as well. Unfortunately, neither of them works when the code runs outside a Jakarta EE context.
@@ -57,7 +57,7 @@ Thus, an OSGi bundle deployed in Payara Server can access these services using O
 * JDBC Data Source Service
 * JMS Resource Service
 
-[[http-service]]
+[#http-service]
 ==== HTTP Service
 
 The Payara Server web container is made available as a service for OSGi users who do not use OSGi Web Application Bundles (WABs).
@@ -86,7 +86,7 @@ HttpService httpService = getHttpService(); // Obtain HttpService
 httpService.registerServlet(httpService.registerServlet("/helloworld", new HelloWorldServlet(), null, ctx);
 ----
 
-[[transaction-service]]
+[#transaction-service]
 === Transaction Service
 
 The Jakarta Transaction API (JTA) defines three interfaces to interact with the transaction management system: `UserTransaction`, `TransactionManager`, and `TransactionSynchronizationRegistry`. They all belong to the `jakarta.transaction` package. `TransactionManager`and `TransactionSynchronizationRegistry` are intended for system level code, such as a persistence provider. Whereas, `UserTransaction` is the entity that you should use to control user-managed transactions.
@@ -122,7 +122,7 @@ var txRef = context.getServiceReference(UserTransaction.class.getName());
 var utx = (UserTransaction)context.getService(txRef);
 ----
 
-[[jdbc-data-source-service]]
+[#jdbc-data-source-service]
 ==== JDBC Data Source Service
 
 Any JDBC data source created in Payara Server is automatically made available as an OSGi Service; therefore, OSGi bundles can track  availability of JDBC data sources using the `ServiceTracking` facility of the OSGi platform.
@@ -140,7 +140,7 @@ Here is a code sample that looks up a data source service:
 private DataSource ds;
 ----
 
-[[jms-resource-service]]
+[#jms-resource-service]
 ==== JMS Resource Service
 
 Like JDBC data sources, JMS administered objects, such as destinations and connection factories, are also automatically made available as OSGi services.
@@ -167,7 +167,7 @@ The actual service interface depends on which type of connection factory was cre
 
 |===
 
-[[developing-web-application-bundles]]
+[#developing-web-application-bundles]
 === Developing Web Application Bundles
 
 When a web application is packaged and deployed as an OSGi bundle, it is called a *Web Application Bundle (WAB)*. WAB support is based on the OSGi Web Application specification, which is part of the OSGi Service Platform, Enterprise Specification, Release 7. A WAB is packaged as an OSGi bundle, so all the OSGi packaging rules apply to WAB packaging.
@@ -182,7 +182,7 @@ When a WAB is not packaged like a WAR, the OSGi Web Container of Payara Server m
 
 TIP: We strongly recommend that you package the WAB exactly like a WAR, with only additional OSGi metadata to prevent triggering any conflicts with the rules mentioned above.
 
-[[required-wab-metadata]]
+[#required-wab-metadata]
 ==== WAB Metadata
 
 In addition to the standard OSGi metadata, the main attributes of the `META-INF/MANIFEST.MF` of the WAB must have an additional attribute called `Web-ContextPath`.
@@ -218,7 +218,7 @@ Bundle-ClassPath: WEB-INF/classes, WEB-INF/lib/lib1.jar, WEB-INF/lib/lib2.jar
 Web-ContextPath: /foo
 ----
 
-[[how-wabs-consume-osgi-services]]
+[#how-wabs-consume-osgi-services]
 ==== How Wabs Consume Osgi Services
 
 Since a WAB has a valid `Bundle-Context`, it can consume OSGi services.
@@ -235,7 +235,7 @@ public class MyServlet extends HttpServlet {
 }
 ----
 
-[[osgi-cdi-extension-for-wabs]]
+[#osgi-cdi-extension-for-wabs]
 ==== Osgi CDI Extension for WAB
 
 Payara Server includes a CDI extension that enables web applications, such as servlets, that are part of WABs to express a type-safe dependency on an OSGi service using CDI APIs.
@@ -275,7 +275,7 @@ public class BarServlet extends HttpServlet{
 }
 ----
 
-[[developing-ejb-application-bundles]]
+[#developing-ejb-application-bundles]
 ===  EJB Application Bundles
 
 Another type of hybrid application bundle is the EJB Application Bundle.
@@ -283,7 +283,7 @@ When an EJB Jar is packaged with additional OSGi metadata and deployed as an OSG
 
 Payara Server supports only packaging the OSGi bundle as a simple JAR file with the required OSGi metadata, just as you would package an `ejb-jar` file.
 
-[[required-ejb-metadata]]
+[#required-ejb-metadata]
 ==== Required EJB Metadata
 
 An EJB Application Bundle must have a manifest metadata attribute called `Export-EJB` in order to be considered as an EJB Bundle. Here's an example of an EJB Application Bundle with this metadata attribute:
@@ -310,7 +310,7 @@ Export-Package: com.acme; version=1.0
 Import-Package: jakarta.ejb; version=[3.0, 4.0), com.acme; version=[1.0, 1.1)
 ----
 
-[[how-ejb-bundles-consume-osgi-services]]
+[#how-ejb-bundles-consume-osgi-services]
 ==== How EJB Bundles Consume Osgi Services
 
 Since an EJB has a valid Bundle-Context, it can consume OSGi services. Although you are free to use any OSGi API to locate OSGi services, Payara Server makes it easy to use OSGi services by virtue of extending the Context and Dependency Injection (CDI) framework.
@@ -328,7 +328,7 @@ public class MyEJB {
 }
 ----
 
-[[using-the-osgi-cdi-extension-with-ejb-bundles]]
+[#using-the-osgi-cdi-extension-with-ejb-bundles]
 ==== Using the Osgi CDI Extension with EJB Bundles
 
 Payara Server includes a CDI extension that enables EJB application bundles to express a type-safe dependency on an OSGi Service using CDI APIs.
@@ -343,7 +343,7 @@ The following `@OsgiService` attributes are currently available:
 * `waitTimeout` — Waits for specified duration for a service to appear in the OSGi service registry.
 * `dynamic` — Dynamically obtain a service reference (`true`/`false`).
 
-[[deploying-osgi-bundles-in-payara-server]]
+[#deploying-osgi-bundles-in-payara-server]
 == Deploying Osgi Bundles in Payara Server
 
 For instruction on deploying OSGi bundle, see "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#osgi-bundle-deployment-guidelines[OSGi Bundle Deployment Guidelines]" in the Payara Server Application Deployment section.

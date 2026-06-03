@@ -2,7 +2,7 @@
 
 Generates a new CSR (certificate signing request).
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,14 +17,14 @@ asadmin generate-csr [--help]
 [alias]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can generate a certificate signing request (CSR) for an instance or listener's self-signed certificate, placing the resultant CSR file in the `as-install/glassfish/tls` directory, using the alias name as the generated file name for the CSR.
 
 IMPORTANT: The command overwrite a CSR with the same name already present in the directory.
 
-[[options]]
+[#options]
 == Options
 
 *`--help`*:
@@ -58,13 +58,13 @@ The path to the directory containing the target node.
 +
 Defaults to `as-install/glassfish/nodes`
 
-[[operands]]
+[#operands]
 == Operands
 
 *alias*:
 The alias name to use when generating the CSR for the corresponding self-signed certificate.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Generate a new CSR for the certificate with the `test-cert` alias*
@@ -74,7 +74,7 @@ The alias name to use when generating the CSR for the corresponding self-signed 
 asadmin generate-csr --listener http-listener-2 --target instance-1 test_cert
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Retrieves the settings of the Email notifier
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] get-email-notifier-configuration [--help]
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to retrieves the current settings of the Email notifier in Payara Server.
@@ -19,7 +19,7 @@ This command can be used to retrieves the current settings of the Email notifier
 IMPORTANT: This command is available as long as the Email notifier's core module is installed in the server. +
 This notifier's extension is installed by default on Payara Server Enterprise.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,7 +36,7 @@ Applies to every server instance in the cluster.
 instance_name;;
 Applies to on a specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Retrieve the settings for the Email notifier in the DAS*
@@ -49,7 +49,7 @@ Enabled  JNDI Name                  Recipient
 true     mail/sampleSession         notifications@example.com
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

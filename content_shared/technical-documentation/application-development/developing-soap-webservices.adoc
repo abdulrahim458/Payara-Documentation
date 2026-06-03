@@ -15,7 +15,7 @@ The Fast Infoset standard specifies a binary format based on the XML Information
 * https://github.com/eclipse-ee4j/jaxb-fi[Fast Infoset Project^]
 * https://www.w3.org/TR/xml-infoset/[XML Information Set^]
 
-[[deploying-a-web-service]]
+[#deploying-a-web-service]
 == Deploying a Web Service
 
 You deploy a web service endpoint to Payara Server just as you would any servlet, stateless session bean (SLSB), or application.
@@ -29,7 +29,7 @@ It is recommended to use payara-web.xml instead.
 
 The test page feature is enabled by default and described in xref:#the-web-service-uri-wsdl-file-and-test-page[The Web Service URI, WSDL File, and Test Page].
 
-[[the-web-service-uri-wsdl-file-and-test-page]]
+[#the-web-service-uri-wsdl-file-and-test-page]
 == The Web Service URI, WSDL File, and Test Page
 
 Clients can run a deployed web service by accessing its service endpoint address URI, which has the following format:
@@ -75,7 +75,7 @@ WARNING: The tester webpage works only for WS-I compliant web services. This mea
 The Web Service tester application is enabled by default. You can disable the test page for a web service by setting the value of the
 `debugging-enabled` element in the `glassfish-web.xml`/`payara-web.xml` and `glassfish-ejb-jar.xml`/payara-ejb-jar.xml` deployment descriptor to `false`.
 
-[[the-databinding-provider]]
+[#the-databinding-provider]
 == The Databinding Provider
 
 To specify the Jakarta XML Binding provider implementation for the server runtime, set the `com.sun.xml.ws.spi.db.BindingContextFactory` JVM property to one of the following values:
@@ -127,14 +127,14 @@ public class MyWebService{
 
 IMPORTANT: To configure these features in your application at compile time you'll have to configure explicit dependencies to the Eclipse EE4J Metro and EclipseLink's projects.
 
-[[scanning-locations]]
+[#scanning-locations]
 == Additional Scanning Locations
 
 Payara Server scans for specific JAX-WS files in locations further to those specified in the *JAX-WS* specification.
 
 Additional directories and sources are scanned are documented here.
 
-[[jax-ws-catalog]]
+[#jax-ws-catalog]
 === `jax-ws-catalog.xml`
 
 The Jakarta XML Web Services specification states that the `jax-ws-catalog.xml` file should be searched for in the `META-INF` directory of a deployed `WAR` file relative to the classpath.

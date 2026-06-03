@@ -2,7 +2,7 @@
 
 Retrieves the current settings of the Environment Warning feature in the Admin Console
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,12 +10,12 @@ Retrieves the current settings of the Environment Warning feature in the Admin C
 asadmin [asadmin-options] get-environment-warning-configuration [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `get-environment-warning-configuration` subcommand gets the current environment warning configuration.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -24,7 +24,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example*
@@ -37,7 +37,7 @@ true     Caution, this is on production  #ff00ff            #00ff00
 Command get-environment-warning-configuration executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -3,7 +3,7 @@
 
 Auto naming is an `asadmin` feature added to help with the naming of instances, deployment groups, and other resources by resolving name conflicts and auto-generating names for dynamic resources.
 
-[[usage]]
+[#usage]
 == Usage
 
 The `autoname` option is enabled either by specifying `--autoname` or `-a` on the command line before or after the command name. This is technically an `asadmin` option rather than a command parameter so should be specified before the command name - it will however still accept being specified after the command name (see examples below).
@@ -20,7 +20,7 @@ WARNING: This checkbox does not currently allow you to generate an instance name
 
 It should be stressed that these options are optional and disabled by default - if you wish to retain the original behaviour of prompting for a name or refusing to create an instance due to a name conflict, no action is necessary.
 
-[[examples]]
+[#examples]
 === Examples
 
 *Example 1 - Name generation:*

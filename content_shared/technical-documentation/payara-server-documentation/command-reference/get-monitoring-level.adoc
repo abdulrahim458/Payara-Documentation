@@ -2,7 +2,7 @@
 
 Retrieves the level configuration of a monitoring service's server module.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,12 +13,12 @@ asadmin [asadmin-options] get-monitoring-level
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to get monitoring level of a module.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ Applies to a specified server instance.
 *`--module`*:
 The name of the module. If omitted, the command will return the configuration of all registered modules.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Get the monitoring level set for the JVM Module*
@@ -85,7 +85,7 @@ Command get-monitoring-level executed successfully.
 
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

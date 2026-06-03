@@ -2,7 +2,7 @@
 
 Sets the LDAP Config Source
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -23,12 +23,12 @@ asadmin [asadmin-options] set-ldap-config-source-configuration [--help]
 [--target=<target[default:server]>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-ldap-config-source-configuration` provides a way to configure the MicroProfile LDAP configuration source.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -85,7 +85,7 @@ Specifies a Payara Server instance.
 cluster-name;;
 Specifies a cluster.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting the LDAP configuration*
@@ -97,7 +97,7 @@ This example enables and configures LDAP authentication on the Payara Server ins
 asadmin set-ldap-config-source-configuration --enabled=true --dynamic=true --url=ldap://ldap.forumsys.com:389 --authType=simple --bindDnPassword=password --bindDn=cn=read-only-admin,dc=example,dc=com
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

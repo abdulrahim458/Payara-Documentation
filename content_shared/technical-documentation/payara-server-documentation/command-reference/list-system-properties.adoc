@@ -2,7 +2,7 @@
 
 Lists the system properties of the domain, configuration, cluster, or server instance.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-system-properties [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 Shared or clustered server instances will often need to override attributes defined in their referenced configuration. Any configuration
@@ -20,7 +20,7 @@ subcommand lists the system properties of a domain, configuration, cluster, or s
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -29,7 +29,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -44,7 +44,7 @@ This subcommand is supported in remote mode only.
     Lists the system properties defined for the named server instance as
     well as those the server inherits from its cluster (if the instance is clustered), its configuration, and the domain.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing System Properties*
@@ -58,7 +58,7 @@ http-listener-port=1088
 Command list-system-properties executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

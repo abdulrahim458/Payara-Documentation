@@ -10,7 +10,7 @@ Using the Payara Tools Eclipse plugin, you can integrate Payara Server within th
 - View the server logs from the IDE
 - Auto Publish & Hot Deploy your application
 
-[[adding-server-eclipse]]
+[#adding-server-eclipse]
 == Adding Payara Server to Eclipse IDE
 
 . Open the *Servers* view (if not visible, it should be under menu *Window -> Show View -> Servers*).
@@ -33,7 +33,7 @@ Using the Payara Tools Eclipse plugin, you can integrate Payara Server within th
 +
 *image*: eclipse-plugin/payara-server/new-server-resources.png[New Server Resources]
 
-[[adding-resources-eclipse]]
+[#adding-resources-eclipse]
 == Adding Resources to Server
 
 . First import or create some project, deployable to the *Payara Server*. Here we use one of the https://github.com/javaee-samples/javaee7-samples[Java EE 7 Samples^] .
@@ -56,7 +56,7 @@ Using the Payara Tools Eclipse plugin, you can integrate Payara Server within th
 +
 *image*: eclipse-plugin/payara-server/add-resource-admin-2.png[Admin Console]
 
-[[runtime-reconfiguration]]
+[#runtime-reconfiguration]
 == Runtime Reconfiguration
 
 . In the *Servers* view double-click the server you want to reconfigure. The *Server Overview* will open.
@@ -68,7 +68,7 @@ WARNING: Changing the runtime may result in unusable state of the server because
 +
 *image*: eclipse-plugin/payara-server/reconfig-runtime.png[Runtime Configuration]
 
-[[deploy-to-docker-container]]
+[#deploy-to-docker-container]
 == Deploy Applications in a Local Docker Container
 
 The Payara Server tools for Apache NetBeans include Docker integration, making it seamless to deploy exploded applications to a Payara Server instance running within a local Docker container.
@@ -97,7 +97,7 @@ The `HOST_PATH` points to the location on your host machine, and `CONTAINER_PATH
 
 . Create your web application and deploy it to the registered Payara Server instance.
 
-[[deploy-applications-in-wsl]]
+[#deploy-applications-in-wsl]
 == Deploy Applications in a WSL Environment
 
 Another noteworthy feature is the integration of the Payara Server Tools with Windows Subsystem for Linux (WSL).
@@ -144,7 +144,7 @@ Here's how you can make use of this feature:
 
 . Create your web application and deploy it to the registered Payara Server instance.
 
-[[hot-deploy-and-auto-deploy-settings]]
+[#hot-deploy-and-auto-deploy-settings]
 == Hot Deploy and Auto Deploy Settings
 
 To enable *Auto Deploy* from the Eclipse IDE, open The *Server* panel, double-click the server name and expand the *Publishing* section to reconfigure the setting.
@@ -155,6 +155,6 @@ To enable *Auto Deploy* from the Eclipse IDE, open The *Server* panel, double-cl
 
 *image*: hot-auto-deploy/eclipse-payara-hot-deploy.png[Payara Server Hot Deploy]
 
-[[see-also]]
+[#see-also]
 == See Also
 xref:technical-documentation/ecosystem/ide-integration/hot-deploy-and-auto-deploy.adoc[Hot Deploy and Auto Deploy]

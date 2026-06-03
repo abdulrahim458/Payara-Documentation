@@ -2,7 +2,7 @@
 
 Adds a new protocol finder.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,12 +15,12 @@ asadmin [asadmin-options] create-protocol-finder [--help]
 protocol-finder-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-protocol-finder` subcommand creates a protocol finder for a protocol. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -45,13 +45,13 @@ The `create-protocol-finder` subcommand creates a protocol finder for a protocol
   standalone-instance-name;;
     Creates the protocol finder on the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *protocol-finder-name*:
   The name of the protocol finder.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -11,7 +11,7 @@ Once deployed, a message similar to this one should be printed out to the server
 [fish.payara.cloud.connectors.amazonsqs.api.inbound.AmazonSQSResourceAdapter] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1495398495490] [levelValue: 800] Amazon SQS Resource Adapter Started..
 ----
 
-[[sending-messages]]
+[#sending-messages]
 == Sending Messages
 
 Sending messages to Amazon SQS can be done via the JCA and an Amazon specific API. In order to start using this API to send messages, a resource has to be defined via the JCA API; a connection factory.
@@ -60,7 +60,7 @@ public class SendSQSMessage {
 }
 ----
 
-[[receiving-messages]]
+[#receiving-messages]
 == Receiving Messages
 
 Messages can be received from Amazon SQS by creating an MDB (Message Driven Bean) that implements the `fish.payara.cloud.connectors.amazonsqs.api.AmazonSQSListener` marker interface and has a single method annotated with `@OnSQSMessage` and the method signature `void method(Message message)`.
@@ -85,14 +85,14 @@ public class ReceiveSQSMessage implements AmazonSQSListener {
 }
 ----
 
-[[large-message-support]]
+[#large-message-support]
 == Large Message Support
 
 By default, the AWS Java SDK has a message size limitation of `256KB`, which can be restrictive for certain use cases.
 
 To address this limitation, the Payara Cloud Connector offers enhanced support for sending and receiving larger messages, surpassing the `256KB` restriction by leveraging Amazon S3 storage. To enable this feature, configure the S3 bucket name using the `s3BucketName` property.
 
-[[prerequisites-for-larger-message-support]]
+[#prerequisites-for-larger-message-support]
 === Prerequisites for Larger Message Support
 
 Before testing the larger message support feature, ensure the following prerequisites are met:
@@ -104,7 +104,7 @@ Before testing the larger message support feature, ensure the following prerequi
 - Add `AmazonS3FullAccess` or related permissions to the IAM role associated with your application.
 - This permission ensures that your application has the necessary access to the S3 bucket for storing and retrieving larger messages.
 
-[[sending-large-messages]]
+[#sending-large-messages]
 === Sending Large Messages
 
 To send messages larger than `256KB`, include the `s3BucketName` property in the connection factory definition. Specify the desired AWS S3 bucket name to store these larger messages.
@@ -127,7 +127,7 @@ public class SendSQSMessage {
 
 After configuring the connection factory with the S3 bucket name, you can send larger messages using the provided Amazon SQS API, as demonstrated in the previous examples.
 
-[[receiving-large-messages]]
+[#receiving-large-messages]
 === Receiving Large Messages
 
 To receive larger messages, update the Message Driven Bean (MDB) configuration with the `s3BucketName` property:
@@ -154,7 +154,7 @@ public class ReceiveSQSMessage implements AmazonSQSListener {
 
 Configure the `s3BucketName` property along with other properties to specify the AWS S3 bucket where larger messages are stored.
 
-[[config-properties]]
+[#config-properties]
 == Configuration Properties
 
 The full list of configuration properties is given below:

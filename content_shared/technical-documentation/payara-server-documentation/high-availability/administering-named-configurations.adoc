@@ -5,13 +5,13 @@ A named configuration is a set of configuration information for Payara Server in
 
 Payara Server enables you to create configurations for use by clusters and instances. Payara Server creates configurations automatically for clusters and instances that do not reference an existing configuration. You can modify any existing named configuration regardless of how the configuration was created.
 
-[[about-named-configurations]]
+[#about-named-configurations]
 == About Named Configurations
 
 Configurations exist in a domain. Multiple Payara Server instances or clusters in the domain can reference the same configuration, or they can have separate configurations.
 To ensure that the environment in a cluster's instances is homogenous, all instances in the cluster inherit the cluster's configuration.
 
-[[types-of-named-configurations]]
+[#types-of-named-configurations]
 === Types of Named Configurations
 
 Each named configuration is one of the following types of configuration:
@@ -28,12 +28,12 @@ The type of un-clustered instances is determined by the type of the configuratio
 
 For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#types-of-payara-server-instances[Types of Payara Server Instances].
 
-[[the-default-config-configuration]]
+[#the-default-config-configuration]
 === The `default-config` Configuration
 
 The `default-config` configuration is a special configuration that acts as a template for creating new named configurations. Clusters and instances cannot refer to the `default-config` configuration. The `default-config` configuration can only be copied to create configurations.
 
-[[automatically-created-configurations]]
+[#automatically-created-configurations]
 === Automatically Created Configurations
 
 When you create a cluster or an instance, you can choose whether to specify an existing configuration that the new cluster or instance will reference. If you choose to create a cluster or an instance without specifying an existing configuration, Payara Server automatically creates a configuration for the cluster or instance.
@@ -52,7 +52,7 @@ Payara Server assigns the name `<cluster-or-instance>-config` to an automaticall
 
 The `server-config` configuration is automatically created for the domain administration server (DAS) when the domain is created.
 
-[[directory-for-configuration-synchronization]]
+[#directory-for-configuration-synchronization]
 === Directory for Configuration Synchronization
 
 When a named configuration is created, Payara Server creates a configuration directory on the domain administration server (DAS) at `domain-dir/config/config-name`.
@@ -64,12 +64,12 @@ When a named configuration is created, Payara Server creates a configuration dir
 
 This contents of this directory are synchronized to all instances that inherit or reference the configuration.
 
-[[creating-listing-and-deleting-named-configurations]]
+[#creating-listing-and-deleting-named-configurations]
 == Creating, Listing, and Deleting Named Configurations
 
 Payara Server enables you to create configurations for use by clusters and instances, obtain information about configurations, and delete configurations that are no longer required.
 
-[[to-create-a-named-configuration]]
+[#to-create-a-named-configuration]
 === To Create a Named Configuration
 
 Use the `copy-config` subcommand in remote mode to create a named configuration by copying an existing configuration. Payara Server requires you to create a configuration by copying a configuration because a configuration contains many required settings.
@@ -114,7 +114,7 @@ Command copy-config executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help copy-config` at the command line.
 
-[[to-list-the-named-configurations-in-a-domain]]
+[#to-list-the-named-configurations-in-a-domain]
 === To List the Named Configurations in a Domain
 
 Use the `list-configs` subcommand in remote mode to list existing named configurations in a domain.
@@ -144,7 +144,7 @@ xref:ROOT:technical-documentation/payara-server-documentation/command-reference/
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-configs` at the command line.
 
-[[to-list-the-targets-of-a-named-configuration]]
+[#to-list-the-targets-of-a-named-configuration]
 === To List the Targets of a Named Configuration
 
 Use the `list-clusters` subcommand and the `list-instances` subcommand in remote mode to list the targets of a named configuration.
@@ -195,7 +195,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help list-clusters`
 * `asadmin help list-instances`
 
-[[to-delete-a-named-configuration]]
+[#to-delete-a-named-configuration]
 === To Delete a Named Configuration
 
 Use the `delete-config` subcommand in remote mode to delete an existing named configuration from the configuration of the DAS.
@@ -269,14 +269,14 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help list-clusters`
 * `asadmin help list-instances`
 
-[[modifying-properties-for-named-configurations-and-instances]]
+[#modifying-properties-for-named-configurations-and-instances]
 == Modifying Properties for Named Configurations and Instances
 
 The properties in a named configuration define port numbers for un-clustered instances that reference the configuration or clustered instances that inherit the configuration. An instance initially obtains port numbers from the configuration that the instance references or inherits.
 
 CAUTION: To avoid port conflicts, edit the properties of named configurations and instances.
 
-[[properties-for-port-numbers-in-a-named-configuration]]
+[#properties-for-port-numbers-in-a-named-configuration]
 === Properties for Port Numbers in a Named Configuration
 
 The default configuration `default-config` contains properties that define the initial values of port numbers in a configuration that is copied from `default-config`. When an instance or a cluster that references the configuration is created, these properties are set for the instance.
@@ -320,7 +320,7 @@ TIP: Valid port values are `1-65535`.
 
 WARNING: On UNIX operating systems, creating sockets that listen on ports `1-1024` requires superuser privileges.
 
-[[to-modify-a-named-configurations-properties]]
+[#to-modify-a-named-configurations-properties]
 === To Modify a Named Configuration's Properties
 
 Use the `get` subcommand and the `set` subcommand in remote mode to modify a named configuration's properties.
@@ -380,7 +380,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help get`
 * `asadmin help set`
 
-[[to-modify-port-numbers-of-an-instance]]
+[#to-modify-port-numbers-of-an-instance]
 === To Modify Port Numbers of an Instance
 
 Use the `get` subcommand and the `set` subcommand in remote mode to modify the port numbers of an instance.

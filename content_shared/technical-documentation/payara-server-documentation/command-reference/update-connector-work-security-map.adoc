@@ -2,7 +2,7 @@
 
 Modifies a work security map for the specified resource adapter.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,14 +16,14 @@ asadmin [asadmin-options] update-connector-work-security-map [--help]
 mapname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `update-connector-work-security-map` subcommand modifies a security map for the specified resource adapter.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -42,13 +42,13 @@ This subcommand is supported in remote mode only.
 *`--raname`*:
   Indicates the connector module name with which the work security map is associated.
 
-[[operands]]
+[#operands]
 == Operands
 
 *mapname*:
   The name of the work security map to be updated.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Updating a Connector Work Security Map*
@@ -62,7 +62,7 @@ asadmin> update-connector-work-security-map
 Command update-connector-work-security-map executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

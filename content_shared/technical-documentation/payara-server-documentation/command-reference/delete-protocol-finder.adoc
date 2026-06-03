@@ -2,7 +2,7 @@
 
 Removes a protocol finder.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,12 +13,12 @@ asadmin [asadmin-options] delete-protocol-finder [--help]
 protocol-finder-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-protocol-finder` subcommand removes the specified protocol finder. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -39,13 +39,13 @@ The `delete-protocol-finder` subcommand removes the specified protocol finder. T
   standalone-instance-name;;
     Deletes the protocol finder from the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *protocol-finder-name*:
   The name of the protocol finder to be deleted.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

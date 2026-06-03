@@ -51,7 +51,7 @@ Learn more about Payara Enterprise: https://www.payara.fish/enterprise/
 
 Payara Server began life in 2014, derived from Open Source GlassFish Edition version 4.1. Since then, Payara Server has been refined with bug fixes, enhanced with new features, and has grown a strong community following. The documentation here will be updated with all the significant changes made with each new release.
 
-[[tech-documentation-structure]]
+[#tech-documentation-structure]
 == Technical Documentation Structure
 
 xref:technical-documentation/payara-server-documentation/index.adoc[Payara Server Documentation]::

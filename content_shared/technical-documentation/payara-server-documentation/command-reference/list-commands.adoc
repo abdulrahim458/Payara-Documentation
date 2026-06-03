@@ -2,7 +2,7 @@
 
 Lists available commands.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] list-commands [--help]
 pattern-list
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-commands` subcommand lists the `asadmin` subcommands.
@@ -23,7 +23,7 @@ that only remote subcommands or only local subcommands are listed and that only 
 
 This subcommand is supported in local mode and remote mode.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -39,14 +39,14 @@ This subcommand is supported in local mode and remote mode.
   If this option is set to true, only remote commands are listed. Default is false. +
   If this option is set to true, the `--localonly` option must be set to false. Otherwise, an error occurs.
 
-[[operands]]
+[#operands]
 == Operands
 
 *pattern-list*:
   A space-separated list of text strings on which to filter the list of
   subcommands. Only the subcommands that contain any one of the specified text strings is listed.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing the Local Subcommands*
@@ -171,7 +171,7 @@ delete-admin-object                     list-logger-levels
 ...
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Lists the existing JMS physical destinations.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] list-jmsdest [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-jmsdest` subcommand lists the Java Message Service (JMS) physical destinations.
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -30,7 +30,7 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
 *`--desttype`*:
   The type of JMS destination to be listed. Valid values are `topic` and `queue`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -44,7 +44,7 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
   instance-name;;
     Lists the physical destinations for the specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing all physical destinations*
@@ -70,7 +70,7 @@ PhysicalTopic
 Command list-jmsdest executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

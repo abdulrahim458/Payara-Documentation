@@ -2,7 +2,7 @@
 
 Deletes a node that is enabled for communication over SSH.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] delete-node-ssh [--help]
 node-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-node-ssh` subcommand deletes a node that is enabled for communication over secure shell (SSH) from the domain. This subcommand does not require SSH to be configured.
@@ -27,7 +27,7 @@ No Payara Server instances must reside on the node that is being deleted. Otherw
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -51,16 +51,16 @@ This subcommand is supported in remote mode only.
     The subcommand uninstalls the Payara Server software from the host even if a user-defined node resides on the host. +
     If the `--force` option is `true`, the subcommand removes the entire content of the parent of the base installation directory.
 
-[[operands]]
+[#operands]
 == Operands
 
 *node-name*:
   The name of the node to delete. The node must be enabled for communication over SSH. Otherwise, an error occurs.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Deleting a Node That Is Enabled for Communication Over SSH*
 
@@ -72,7 +72,7 @@ asadmin> delete-node-ssh eg1
 Command delete-node-ssh executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

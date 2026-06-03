@@ -2,7 +2,7 @@
 
 Deletes a work security map for the specified resource adapter.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] delete-connector-work-security-map [--help]
 mapname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-connector-work-security-map` subcommand deletes a security map associated with the specified resource adapter. For this subcommand to succeed, you must have first created and deployed the specified resource adapter.
@@ -21,7 +21,7 @@ The enterprise information system (EIS) is any system that holds the data of an 
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -32,13 +32,13 @@ This subcommand is supported in remote mode only.
 *`--raname`*:
   Indicates the connector module name with which the work security map is associated.
 
-[[operands]]
+[#operands]
 == Operands
 
 *mapname*:
   The name of the work security map to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Connector Work Security Map*
@@ -52,7 +52,7 @@ asadmin delete-connector-work-security-map
 Command delete-connector-work-security-map executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

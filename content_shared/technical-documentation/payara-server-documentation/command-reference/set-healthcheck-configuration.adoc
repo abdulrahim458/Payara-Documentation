@@ -2,7 +2,7 @@
 
 Configures the Healthcheck service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -20,14 +20,14 @@ asadmin [asadmin-options] set-healthcheck-configuration
 [--disable-notifiers notifiers]
 ----
 
-[[description]]
+[#description]
 == Description
 
 Enables and disables the HealthCheck service. This includes configuration for tracing historic health check events for later inspection.
 
 This command can also be used to configure which notifiers will be used to broadcast notification events from the Healthcheck service.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -74,7 +74,7 @@ Use the option to disable one or more notifiers for the Healthcheck service.
 +
 A comma-separated list can be used to represent multiple notifiers.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Basic Configuration*
@@ -88,7 +88,7 @@ It sets the log notifier and JMS notifiers and the historical trace store to ret
 asadmin set-healthcheck-configuration --enabled=true --dynamic=false --historic-trace-enabled=true --historic-trace-store-size=20 --set-notifiers=log-notifier,jms-notifier
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

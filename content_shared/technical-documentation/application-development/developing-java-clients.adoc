@@ -8,7 +8,7 @@ The full Payara Server supports the entire EJB 4.0 specification. For details, s
 Accordingly, the Application Client Container is supported only in the Full Profile, not in the Web Profile. +
 JMS resources are supported only in the Full Profile, not in the Web Profile. See xref:technical-documentation/application-development/using-jakarta-messaging.adoc#using-jakarta-messaging[Using the Java Message Service].
 
-[[introducing-the-application-client-container]]
+[#introducing-the-application-client-container]
 == Introducing the Application Client Container
 
 The Application Client Container (ACC) includes a set of Java classes, libraries, and other files that are required for and distributed with Java client programs that execute in their own Java Virtual Machine (JVM). The ACC manages the execution of Jakarta EE application client components (application clients), which are used to access a variety of Jakarta EE services (such as JMS resources, EJB components, web services, security, and so on.) from a JVM **outside** Payara Server.
@@ -21,7 +21,7 @@ For information about debugging application clients, see xref:technical-document
 
 IMPORTANT: Interoperability between application clients and Payara Servers running under different Payara Platform major versions is not supported. The same can be said if both server and client are running under different major Java versions.
 
-[[acc-security]]
+[#acc-security]
 === ACC Security
 
 The ACC determines when authentication is needed. This typically occurs when the client refers to an EJB component that requires authorization or when annotations in the client's `main` class trigger resource injection which,
@@ -37,36 +37,36 @@ The class must implement the `javax.security.auth.callback.CallbackHandler` inte
 
 Application clients can use a programmatic login mechanism by xref:technical-documentation/application-development/securing-applications.adoc#programmatic-login-using-the-programmaticlogin-class[using the `ProgrammaticLogin` Class].
 
-[[acc-naming]]
+[#acc-naming]
 === ACC Naming
 
 The client container enables the application clients to use the Java Naming and Directory Interface (JNDI) to look up Jakarta EE services
 (such as JMS resources, EJB components, web services, security, and so on.) and to reference configurable parameters set at the time of deployment.
 
-[[application-client-annotation]]
+[#application-client-annotation]
 === Application Client Annotation
 
 Annotation is supported for the main class and the optional callback handler class in application clients. For more information, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#deployment-descriptors-and-annotations[Deployment Descriptors and Annotations]" in the Payara Server Application Deployment section.
 
-[[java-web-start]]
+[#java-web-start]
 === Java Web Start
 
 IMPORTANT: Java Web Start is no longer part of the Java SDK since Java 11 and is no longer a recommended solution to distribute application client binaries from the server. Using Java Web Start is not a supported solution, so consider using it at your own risk.
 
 Java Web Start allows your application client to be easily launched and automatically downloaded and updated. It is enabled for all application clients by default. For more information, see xref:#using-java-web-start[Using Java Web Start].
 
-[[application-client-jar-file]]
+[#application-client-jar-file]
 === Application Client JAR File
 
 When copying the downloaded application client to another location, make sure to include the JAR files containing the dependent classes as well.
 You can also use the `asadmin get-client-stubs` command to retrieve the `appclient` and all associated application JAR files and place them in another location.
 
-[[developing-clients-using-the-acc]]
+[#developing-clients-using-the-acc]
 == Developing Clients Using the ACC
 
 This section describes the procedure to develop, assemble, and deploy client applications using the ACC.
 
-[[to-access-an-ejb-component-from-an-application-client]]
+[#to-access-an-ejb-component-from-an-application-client]
 === To Access an EJB Component from an Application Client
 
 . In your client code, reference the EJB component by using an `@EJB` annotation or by looking up the JNDI name as defined in the `ejb-jar.xml` file. +
@@ -119,7 +119,7 @@ xref:#running-an-application-client-using-the-appclient-script[Running an Applic
 xref:#using-java-web-start[Using Java Web Start] or xref:#running-an-application-client-using-the-appclient-script[Running an Application Client Using the `appclient` Script].
 * For more information about RMI-IIOP load balancing and failover, see "xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#rmi-iiop-load-balancing-and-failover[RMI-IIOP Load Balancing and Failover]" in the Payara Server High Availability section.
 
-[[to-access-a-jms-resource-from-an-application-client]]
+[#to-access-a-jms-resource-from-an-application-client]
 === To Access a JMS Resource from an Application Client
 
 . Create a JMS client.
@@ -149,7 +149,7 @@ For more information, see xref:#using-the-package-appclient-script[Using the `pa
 +
 See xref:#using-java-web-start[Using Java Web Start] or xref:#running-an-application-client-using-the-appclient-script[Running an Application Client Using the `appclient` Script].
 
-[[using-java-web-start]]
+[#using-java-web-start]
 === Using Java Web Start
 
 IMPORTANT: Java Web Start is no longer part of the JDK since Java 11 and is no longer a recommended solution to distribute application client binaries. +
@@ -158,7 +158,7 @@ _Using Java Web Start is not a supported solution, so consider using it at your 
 
 Java Web Start allows your application client to be easily launched and automatically downloaded and updated.
 
-[[enabling-and-disabling-java-web-start]]
+[#enabling-and-disabling-java-web-start]
 ==== Enabling and Disabling Java Web Start
 
 NOTE: Java Web Start is enabled for all application clients by default.
@@ -183,7 +183,7 @@ asadmin set applications.application.module-name.property.java-web-start-enabled
 
 Setting `java-web-start-enabled="true"` re-enables Java Web Start for an eligible application client.
 
-[[downloading-and-launching-an-application-client]]
+[#downloading-and-launching-an-application-client]
 ==== Downloading and Launching an Application Client
 
 If Java Web Start is enabled for your deployed application client, you can launch it for testing.
@@ -203,7 +203,7 @@ On other machines, you can download and launch the application client using Java
 Whenever you launch an application client, Java Web Start contacts the server to see if a newer client version is available.
 This means you can redeploy an application client without having to worry about whether client machines have the latest version.
 
-[[the-application-client-url]]
+[#the-application-client-url]
 ==== The Application Client URL
 
 The default URL for an application or module generally is as follows:
@@ -255,7 +255,7 @@ Ideally, you should build your production application clients with user-friendly
 
 Command-line argument support is useful in a development environment and for existing application clients that depend on it.
 
-[[signing-jar-files-used-in-java-web-start]]
+[#signing-jar-files-used-in-java-web-start]
 ==== Signing JAR Files Used in Java Web Start
 
 Java Web Start enforces a security sandbox. By default, it grants any application, including application clients, only minimal privileges.
@@ -274,7 +274,7 @@ The other type is a generated application client JAR file. As part of deployment
 
 A JAR file can be signed automatically or manually.
 
-[[automatically-signing-jar-files]]
+[#automatically-signing-jar-files]
 ==== Automatically Signing JAR Files
 
 Payara Server automatically creates a signed version of the required JAR file if none exists. When a Java Web Start request for the `gf-client.jar` file arrives, the Payara Server looks for the `domain-dir/java-web-start/gf-client.jar` file. When a request for an application's generated application client JAR file arrives, the Payara Server looks in the  `domain-dir/java-web-start/app-name` directory for a file with the same name as the generated JAR file created during deployment.
@@ -318,7 +318,7 @@ After you perform these steps, the first time a user launches an application cli
 
 Even though the application client is now signed using a trusted certificate, users will again be asked whether to trust the downloaded application and can choose to skip that prompt for future launches.
 
-[[using-the-jar-signing-alias-deployment-property]]
+[#using-the-jar-signing-alias-deployment-property]
 ==== Using the `jar-signing-alias` Deployment Property
 
 The `asadmin deploy` command property `jar-signing-alias` specifies the alias for the security certificate with which the application client container JAR file is signed.
@@ -334,14 +334,14 @@ Next, deploy your application using the `jar-signing-alias` property. For exampl
 asadmin deploy --property jar-signing-alias=MyAlias MyApp.ear
 ----
 
-[[error-handling]]
+[#error-handling]
 ==== Error Handling
 
 When an application client is launched using Java Web Start, any error that the application client logic does not catch and handle is written to `System.err` and displayed in a dialog box.
 
 This display appears if an error occurs even before the application client logic receives control. It also appears if the application client code does not catch and handle errors itself.
 
-[[vendor-icon-splash-screen-and-text]]
+[#vendor-icon-splash-screen-and-text]
 ==== Vendor Icon, Splash Screen, and Text
 
 To specify a vendor-specific icon, splash screen, text string, or a combination of these for Java Web Start download and launch screens, use the `vendor`element in the `payara-application-client.xml` file. The complete format of this element's data is as follows:
@@ -383,14 +383,14 @@ NOTE: The default value is the text string `Application Client`.
 
 You can also specify a vendor-specific icon, splash screen, text string, or a combination by using a custom JNLP file; see xref:#creating-a-custom-jnlp-file[Creating a Custom JNLP File].
 
-[[creating-a-custom-jnlp-file]]
+[#creating-a-custom-jnlp-file]
 ==== Creating a Custom JNLP File
 
 You can partially customize the Java Network Launching Protocol (JNLP) file that Payara Server uses for Java Web Start.
 
 For more information about JNLP, see the https://jcp.org/en/jsr/detail?id=56[JNLP Specification and API Documentation^].
 
-[[specifying-the-jnlp-file-in-the-deployment-descriptor]]
+[#specifying-the-jnlp-file-in-the-deployment-descriptor]
 ==== Specifying the JNLP File in the Deployment Descriptor
 
 To specify a custom JNLP file for Java Web Start, use the `jnlp-doc` element in the `payara-application-client.xml` file. If `none` is specified, a default JNLP file is generated.
@@ -424,7 +424,7 @@ For example, if the JNLP file is in a JAR file at `other/myLib.jar`, the element
 
 For more information about the `payara-application-client.xml` file, see the Payara Server Application Deployment section.
 
-[[referring-to-jar-files-from-the-jnlp-file]]
+[#referring-to-jar-files-from-the-jnlp-file]
 ==== Referring to JAR Files from the JNLP File
 
 As with any JNLP document, the custom JNLP file can refer to JAR files the application client requires.
@@ -437,7 +437,7 @@ Therefore, relative `href` references correspond directly to the relative path t
 
 Neither the Jakarta EE specification nor Payara Server supports packaging JAR files inside the application client JAR file itself. Nothing prevents this, but Payara Server does no special processing of such JAR files. They do not appear in the runtime class path, and they cannot be referenced from the custom JNLP file as well.
 
-[[referring-to-other-jnlp-files]]
+[#referring-to-other-jnlp-files]
 ==== Referring to Other JNLP Files
 
 The JNLP file can also refer to other custom JNLP files using `<extension href="..."/>` elements. To be consistent with relative `href` references to JAR files, the relative `href` references to JNLP files are resolved within the EAR file. You can place these JNLP files directly in the EAR file or inside JAR files that the EAR file contains.
@@ -456,7 +456,7 @@ Note that these formats are not equivalent to the format of the `jnlp-doc` eleme
 WARNING: These formats follow the standard entry-within-a-JAR URI syntax and semantics. +
 Support for this syntax comes from the automated Java Web Start support in Payara Server. This is not a feature of Java Web Start or the JNLP standard.
 
-[[combining-custom-and-automatically-generated-content]]
+[#combining-custom-and-automatically-generated-content]
 ==== Combining Custom and Automatically Generated Content
 
 Payara Server recognizes these types of content in the JNLP file:
@@ -659,7 +659,7 @@ a|
 
 |===
 
-[[using-the-embeddable-acc]]
+[#using-the-embeddable-acc]
 === Using the Embeddable ACC
 
 You can embed the ACC into your application client. If you place the `as-install/lib/gf-client.jar` file in your runtime classpath, your application creates the ACC after your application code has started, then requests that the ACC start the application client portion. The basic model for coding with the embeddable ACC is as follows:
@@ -715,17 +715,17 @@ The shutdown handling is also run automatically at VM shutdown if the code has n
 
 WARNING: The ACC does not prevent the calling application from creating or running more than one ACC instance during a single execution of the application either serially or concurrently. However, other services used by the ACC (transaction manager, security, ORB, and so on) might or might not support such serial or concurrent reuse.
 
-[[running-an-application-client-using-the-appclient-script]]
+[#running-an-application-client-using-the-appclient-script]
 === Running an Application Client Using the `appclient` Script
 
 To run an application client, you can launch the ACC using the `appclient` script, whether Java Web Start is enabled. This script is located in the `as-install/glassfish/bin` directory.
 
-[[using-the-package-appclient-script]]
+[#using-the-package-appclient-script]
 === Using the `package-appclient` Script
 
 You can package the Payara Server system files required to launch application clients on remote systems into a single JAR file using the `package-appclient` script. This script is located in the `as-install/glassfish/bin` directory.
 
-[[the-client.policy-file]]
+[#the-client.policy-file]
 === The `client.policy` File
 
 The `client.policy` file is the policy file used by the application client. Each application client has a `client.policy` file.
@@ -735,7 +735,7 @@ file to add the custom permissions that your application client needs.
 
 For more information about the permissions you can set in the `client.policy` file, see https://docs.oracle.com/en/java/javase/11/security/permissions-jdk1.html[Permissions in the JDK^].
 
-[[using-rmiiiop-over-ssl]]
+[#using-rmiiiop-over-ssl]
 === Using RMI/IIOP over SSL
 
 You can configure RMI/IIOP over SSL in two ways: using a username and password, or using a client certificate.
@@ -803,7 +803,7 @@ export VMARGS="-Djavax.net.ssl.keyStore=${keystore.db.file}
 -Djavax.net.ssl.trustStorePassword=${ssl.password}"
 ----
 
-[[connecting-to-a-remote-ejb-module-through-a-firewall]]
+[#connecting-to-a-remote-ejb-module-through-a-firewall]
 === Connecting to a Remote EJB Module through a Firewall
 
 To deploy and run an application client that connects to an EJB module on a Payara Server instance that is behind a firewall, you must set ORB Virtual Address Agent Implementation (*ORBVAA*) options. Use the `asadmin create-jvm-options` command as follows:
@@ -820,7 +820,7 @@ Set the `ORBVAAHost` and `ORBVAAPort` options to the host and port of the public
 
 NOTE:  The `ORBUserConfigurators` value doesn't matter.Together, these options create an ORB that in turn creates `Object` references (the underlying implementation of remote EJB references) containing the public address, while the ORB listens on the private address specified for the IIOP port in the Payara Server configuration.
 
-[[specifying-a-splash-screen]]
+[#specifying-a-splash-screen]
 === Specifying a Splash Screen
 
 Java SE offers splash screen support, either through a Java command-line option or a manifest entry in the application's JAR file.
@@ -844,7 +844,7 @@ During application (EAR file) deployment, the Payara Server generates facade JAR
 
 The `appclient` script supports splash screens inside the application client JAR only if you launch an application client facade or appclient client JAR. If you launch the facade for an application or the un-deployed application itself, the `appclient` script cannot take advantage of the splash screen feature.
 
-[[setting-login-retries]]
+[#setting-login-retries]
 === Setting Login Retries
 
 You can set a JVM option using the `appclient` script that determines the number of login retries allowed. This option is `-Dorg.glassfish.appclient.acc.maxLoginRetries=n` where `n` is a positive integer. The default number of retries is `3`.
@@ -855,7 +855,7 @@ If instead of annotations your client uses the `InitialContext` explicitly to lo
 
 TIP: In this case, you could write logic to catch an exception around the lookup and retry explicitly.
 
-[[using-libraries-with-application-clients]]
+[#using-libraries-with-application-clients]
 === Using Libraries with Application Clients
 
 The Libraries field in the Administration Console's deployment page and the `--libraries` option of the `asadmin deploy` command do not apply to application clients.
@@ -867,12 +867,12 @@ These apply only to applications and modules deployed to the server. For more in
 To use libraries with an application client, package the application client in an application (EAR file).
 Then, either place the libraries in the `/lib` directory of the EAR file or specify their location in the application client JAR file's manifest `Class-Path`.
 
-[[developing-clients-without-the-acc]]
+[#developing-clients-without-the-acc]
 == Developing Clients without the ACC
 
 This section describes the procedure to create, assemble, and deploy a Java-based client that is not packaged using the Application Client Container (ACC).
 
-[[to-access-an-ejb-component-from-a-stand-alone-client]]
+[#to-access-an-ejb-component-from-a-stand-alone-client]
 === To Access an EJB Component from a Stand-Alone Client
 
 . In your client code, instantiate the `InitialContext`:
@@ -946,7 +946,7 @@ If the `endpoints` list is changed dynamically in the code, the new list is used
 +
 As long as the client environment is set appropriately and the JVM is compatible, you merely need to run the application's `main` class.
 
-[[to-access-an-ejb-component-from-a-server-side-module]]
+[#to-access-an-ejb-component-from-a-server-side-module]
 === To Access an EJB Component from a Server-Side Module
 
 A server-side module can be a servlet, another EJB component, or another type of module.
@@ -1012,7 +1012,7 @@ Here `ORBhost` is the Application Server hostname and `ORBport` is the ORB port 
 +
 For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in Payara Server Application Deployment section.
 
-[[to-access-a-jms-resource-from-a-stand-alone-client]]
+[#to-access-a-jms-resource-from-a-stand-alone-client]
 === To Access a JMS Resource from a Stand-Alone Client
 
 . Create a JMS client.

@@ -2,7 +2,7 @@
 
 Stops a running H2 database server.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] stop-database [--help]
 [--dbhost host] [--dbport port-no]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `stop-database` subcommand stops a running H2 database server process. The database is typically started with the xref:technical-documentation/payara-server-documentation/command-reference/start-database.adoc#start-database[`start-database`] subcommand.
@@ -20,7 +20,7 @@ A single host can have multiple database server processes running on different p
 
 This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,7 +36,7 @@ This subcommand is supported in local mode only.
 *`--dbport`*:
   The port number where the H2 database server listens for client connections.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Stopping Java DB*
@@ -50,7 +50,7 @@ asadmin> stop-database --dbhost host1 --dbport 5001
 Command stop-database executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 The exit status applies to errors in executing the `asadmin` utility. For information on database errors, see the `h2.log` file. This file is located in the directory you specify by using the `--dbhome` option when you run the `start-database` subcommand.

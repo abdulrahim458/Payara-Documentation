@@ -2,7 +2,7 @@
 
 Unsets a servlet context-initialization parameter of a deployed web application or module.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] unset-web-context-param [--help]
 --name=context-param-name application-name[/module]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `unset-web-context-param` subcommand unsets a servlet context-initialization parameter of one of the following items:
@@ -33,7 +33,7 @@ descriptors and repackage and redeploy the application.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -45,7 +45,7 @@ This subcommand is supported in remote mode only.
   The name of the servlet context-initialization parameter that is to be unset. This parameter must have previously been set by using the
   `set-web-context-param` subcommand. Otherwise, an error occurs.
 
-[[operands]]
+[#operands]
 == Operands
 
 *application-name*:
@@ -69,7 +69,7 @@ This subcommand is supported in remote mode only.
 ----
   The module would be specified as the operand of this command as `myApp/myWebModule.war`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Unsetting a Servlet Context-Initialization Parameter for a Web Application*
@@ -85,7 +85,7 @@ asadmin> unset-web-context-param
 Command unset-web-context-param executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

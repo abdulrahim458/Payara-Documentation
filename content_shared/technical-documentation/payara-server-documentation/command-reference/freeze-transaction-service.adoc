@@ -2,7 +2,7 @@
 
 Freezes the transaction subsystem.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] freeze-transaction-service [--help]
 [--target target]
 ----
 
-[[descroiption]]
+[#descroiption]
 == Description
 
 The `freeze-transaction-service` subcommand freezes the transaction subsystem, preventing the transaction manager from starting, completing, or changing the state of all in-flight transactions. Invoke this command before rolling back any in-flight transactions. Invoking this subcommand on an already frozen transaction subsystem has no effect. Restarting the server unfreezes the transaction subsystem. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -35,7 +35,7 @@ The `freeze-transaction-service` subcommand freezes the transaction subsystem, p
   instance_name;;
     Freezes the transaction service for a particular server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Using freeze-transaction-service*
@@ -46,7 +46,7 @@ The `freeze-transaction-service` subcommand freezes the transaction subsystem, p
 Command freeze-transaction-service executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

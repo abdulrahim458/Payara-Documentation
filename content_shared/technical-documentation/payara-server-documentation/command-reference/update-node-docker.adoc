@@ -2,7 +2,7 @@
 
 Updates the configuration data of a DOCKER node.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,7 +17,7 @@ asadmin [asadmin-options] update-node-docker [--help]
 node-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 //TODO - There's a big question on how this command behaves if the node is already running? Does it recreate the containers and any instances living in them? What happens if a new image name is used? This should be clarified and recommendations on how to use this command should be added.
@@ -28,7 +28,7 @@ The setup of a Docker node is more involved that other types of nodes, so it is 
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -61,13 +61,13 @@ Defaults to `2376`.
 *`--useTls`*:
 Specifies whether the Docker engine's REST API endpoint is contacted through secure communication, as recommended in most environments. Defaults to `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *node-name*:
 The name of the node to update. The node must exist. Otherwise, an error occurs.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Updating the Host where the Docker Engine REST API is hosted*
@@ -80,7 +80,7 @@ asadmin update-node-docker --nodehost test.payara.fish docker-node-1
 Command update-node-docker executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

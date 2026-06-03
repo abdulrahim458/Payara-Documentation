@@ -2,7 +2,7 @@
 
 Stores the database metadata (schema) in a file for use in mapping and execution.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ capture-schema -username name -password password
 -out filename]
 ----
 
-[[description]]
+[#description]
 == Description
 
 Stores the database metadata (schema) in a file.
@@ -26,7 +26,7 @@ When running `capture-schema` against an Oracle database, you should
 grant the database user running the `capture-schema` command the
 `ANALYZE ANY TABLE` privilege.
 
-[[options]]
+[#options]
 == Options
 
 *`-username`*:
@@ -48,7 +48,7 @@ grant the database user running the `capture-schema` command the
 *`-out`*:
   name of the output file. This option is required. If the specified output file does not contain the .dbschema suffix, it will be appended to the filename.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Using the `capture-schema` command*

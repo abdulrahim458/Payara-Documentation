@@ -2,7 +2,7 @@
 
 Lists the loggers and their log levels.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-log-levels [--help]
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-log-levels` subcommand lists the current Payara Server loggers and their log levels. This subcommand reports on all the loggers
@@ -19,7 +19,7 @@ that are listed in the `logging.properties` file. In some cases, loggers that ha
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -30,7 +30,7 @@ This subcommand is supported in remote mode only.
 *`--target`*:
   The server, cluster or server instance for which log levels will be listed.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -39,7 +39,7 @@ This subcommand is supported in remote mode only.
   * cluster_name - The name of a target cluster.
   * instance_name - The name of a target server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing the Log Levels*
@@ -95,7 +95,7 @@ org.jvnet.hk2.osgiadapter       <INFO>
 Command list-log-levels executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

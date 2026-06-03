@@ -2,7 +2,7 @@
 
 Attaches to subcommands that were started using `asadmin --detach` or that contain progress information.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] attach [--help]
 job_id
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `attach` subcommand attaches to subcommands that were started using the `asadmin` utility option `--detach` or that contain progress information. The `--detach` option detaches long-running subcommands and executes them in the background in detach mode.
@@ -20,7 +20,7 @@ Job IDs are assigned to the subcommands (jobs), and can be used to view the stat
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -29,13 +29,13 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *job_id*:
   The ID of the job for which you want to view status and output.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1: Attaching to a Subcommand and Checking Its Status*
@@ -49,7 +49,7 @@ Finished execution of deploy
 Command attach executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

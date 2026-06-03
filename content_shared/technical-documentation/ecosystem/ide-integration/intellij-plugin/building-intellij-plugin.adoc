@@ -6,7 +6,7 @@ The Payara IntelliJ Community Tools source code is available in the https://gith
 
 The Payara IntelliJ Ultimate Tools source code is available in the https://github.com/payara/ecosystem-intellij-ultimate-plugin[Ecosystem IntelliJ Ultimate repository^].
 
-[[building-intellij-plugin-prequisites]]
+[#building-intellij-plugin-prequisites]
 == Prerequisites
 Before building the Payara IntelliJ Tools, you will need to configure your local environment. Subsequent builds will not require these steps.
 
@@ -14,7 +14,7 @@ Before building the Payara IntelliJ Tools, you will need to configure your local
 * *JDK 11*: JDK 11 is required to build and test the IntelliJ IDEA plugin.
 * *Install Gradle*: Gradle is the build tool for the Payara IntelliJ Tools. You can either download and configure Gradle locally or use the Gradle wrapper in the source code.
 
-[[building-intellij-plugin]]
+[#building-intellij-plugin]
 == Build Payara Intellij Tools
 To build the Payara IntelliJ Tools, run the following command from the root directory where the project was cloned:
 
@@ -28,7 +28,7 @@ To build the Payara IntelliJ Tools, run the following command from the root dire
 
 After a successful build, the final ZIP distribution will be located in the `/build/distributions` directory. This ZIP file can be installed into IntelliJ IDEA.
 
-[[install-compiled-intellij-plugin]]
+[#install-compiled-intellij-plugin]
 === Install Payara Tools into Intellij IDEA
 After the Payara Tools plugin has been built, you can install it in IntelliJ IDEA as follows:
 
@@ -39,7 +39,7 @@ After the Payara Tools plugin has been built, you can install it in IntelliJ IDE
 
 *image*: intellij-plugin/building-plugin/install-compiled-plugin.png[Install Compiled Plugin]
 
-[[remove-compiled-intellij-plugin]]
+[#remove-compiled-intellij-plugin]
 === Removing Payara Tools from Intellij IDEA
 To uninstall the plugin:
 
@@ -50,7 +50,7 @@ To uninstall the plugin:
 
 *image*: intellij-plugin/building-plugin/remove-compiled-plugin.png[Remove Complied Plugin]
 
-[[testing-intellij-plugin]]
+[#testing-intellij-plugin]
 == Test Payara Tools
 
 Instead of manually installing the plugin each time, you can run a test instance of IntelliJ IDEA with the plugin pre-installed using the following:

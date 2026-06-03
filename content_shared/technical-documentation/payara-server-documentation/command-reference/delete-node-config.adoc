@@ -2,7 +2,7 @@
 
 Deletes a node that is not enabled for remote communication.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] delete-node-config [--help]
 node-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-node-config` subcommand deletes a node that is not enabled for remote communication from the domain. This subcommand does not require the secure shell (SSH) to be configured.
@@ -28,7 +28,7 @@ NOTE: The predefined node `localhost-` pdomain cannot be deleted.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,16 +37,16 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *node-name*:
   The name of the node to delete. The node must not be enabled for communication over SSH. Otherwise, an error occurs.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Deleting a Node That Is Not Enabled for Remote Communication*
 
 This example deletes the node `sj03`, which is not enabled for remote communication.
@@ -58,7 +58,7 @@ asadmin> delete-node-config sj03
 Command delete-node-config executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

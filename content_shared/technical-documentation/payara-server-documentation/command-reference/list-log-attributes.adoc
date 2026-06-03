@@ -2,7 +2,7 @@
 
 Lists all logging attributes defined for a specified target in a domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-log-attributes [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-log-attributes` subcommand lists all logging attributes currently defined for the specified Payara Server domain or target
@@ -19,7 +19,7 @@ within a domain. The values listed correspond to the values in the `logging.prop
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -28,7 +28,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -38,7 +38,7 @@ This subcommand is supported in remote mode only.
   * cluster_name - The name of a target cluster.
   * instance_name - The name of a target server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing the Logger Attributes for a Domain*
@@ -72,7 +72,7 @@ log4j.logger.org.hibernate.validator.util.Version <warn>
 Command list-log-attributes executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

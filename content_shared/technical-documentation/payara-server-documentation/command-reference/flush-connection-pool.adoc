@@ -2,7 +2,7 @@
 
 Reintializes all connections established in the specified connection pool.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] flush-connection-pool [--help]
 pool_name 
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `flush-connection-pool` subcommand resets a JDBC connection pool or a connector connection pool to its initial state. Any existing live connections are destroyed, which means that the transactions associated with these connections are lost. The subcommand then recreates the initial connections for the pool, and restores the pool to its steady pool size.
@@ -31,7 +31,7 @@ It is recommended to use payara-resources.xml instead.
 
 The `jndi-name` for application-scoped-resources or module-scoped-resources are specified using the format `java:app/`jdbc/myDataSource` or `java:module/`jdbc/myModuleLevelDataSource`. This naming scope is defined in the Jakarta EE Specification (`https://jakarta.ee/specifications/`).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -44,13 +44,13 @@ The `jndi-name` for application-scoped-resources or module-scoped-resources are 
 *`--modulename`*:
   Name of the module in which the module scoped resource is defined.
 
-[[operands]]
+[#operands]
 == Operands
 
 *pool_name*:
   Name of the connection pool to be reinitialized.
 
-[[flushing-a-connection-pool]]
+[#flushing-a-connection-pool]
 == Flushing a Connection Pool
 
 *This example reinitializes the JDBC connection pool named `__TimerPool`.*
@@ -61,7 +61,7 @@ asadmin> flush-connection-pool __TimerPool
 Command flush-connection-pool executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

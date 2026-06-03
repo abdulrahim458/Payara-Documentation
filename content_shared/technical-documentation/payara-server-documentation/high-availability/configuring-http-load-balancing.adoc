@@ -3,12 +3,12 @@
 
 This chapter describes how to configure HTTP load balancing on Payara Server.
 
-[[setting-up-http-load-balancing]]
+[#setting-up-http-load-balancing]
 == Setting up HTTP Load Balancing
 
 This section describes how to set up load balancing for Payara Server.
 
-[[prerequisites-for-setting-up-http-load-balancing]]
+[#prerequisites-for-setting-up-http-load-balancing]
 === Prerequisites for Setting up HTTP Load Balancing
 
 Before configuring your load balancer, you must:
@@ -18,7 +18,7 @@ Before configuring your load balancer, you must:
 * Create Payara Server clusters or server instances (in a deployment group) to participate in load balancing.
 * Deploy applications to these clusters or instances.
 
-[[configuring-payara-server-with-apache-http-server-and-mod_jk]]
+[#configuring-payara-server-with-apache-http-server-and-mod_jk]
 === Configuring Payara Server with Apache HTTP Server and `mod_jk`
 
 Payara Server can be configured for load balancing with Apache HTTP Server as a front end by enabling the Apache `mod_jk` connector module. To enable the `mod_jk` module in Payara Server, set the Payara Server `jk-enabled` `network-listener` attribute.
@@ -27,7 +27,7 @@ You can also create `jk-connectors` under different virtual-servers using the `j
 
 // TODO - These instructions need testing on Apache HTTP Server 2.4 (current version)
 
-[[to-configure-the-mod_jk-connector-module]]
+[#to-configure-the-mod_jk-connector-module]
 ==== To Configure the `mod_jk` Connector Module
 
 . Install https://httpd.apache.org/docs/[Apache HTTP Server^] and http://tomcat.apache.org/connectors-doc/webserver_howto/apache.html[mod_jk^].
@@ -132,14 +132,14 @@ worker.loadbalancer.type=lb
 worker.loadbalancer.balance_workers=worker1,worker2
 ----
 
-[[configuring-payara-server-with-apache-http-server-and-mod_proxy_ajp]]
+[#configuring-payara-server-with-apache-http-server-and-mod_proxy_ajp]
 === Configuring Payara Server with Apache HTTP Server and `mod_proxy_ajp`
 
 Payara Server can be configured for load balancing with Apache HTTP Server as a front end by enabling the Apache `mod_proxy_ajp` connector module.
 
 To enable the `mod_proxy_ajp` module in Payara Server, set the Payara Server `jk-enabled` `network-listener` attribute. You can also create `jk-connectors` under different virtual-servers using the `jk-enabled` `network-listener` attribute.
 
-[[to-configure-the-mod_proxy_ajp-connector-module]]
+[#to-configure-the-mod_proxy_ajp-connector-module]
 ==== To Configure the `mod_proxy_ajp` Connector Module
 
 . Install https://httpd.apache.org/docs/[Apache HTTP Server^].
@@ -182,12 +182,12 @@ asadmin> set configs.config.server-config.thread-pools.thread-pool.http-thread-p
 ----
 . Restart the Payara Server instances.
 
-[[http-load-balancer-deployments]]
+[#http-load-balancer-deployments]
 === HTTP Load Balancer Deployments
 
 You can configure your load balancer in different ways, depending on your goals and environment, as described in the following sections:
 
-[[using-clustered-server-instances]]
+[#using-clustered-server-instances]
 ==== Using Clustered Server Instances
 
 The most common way to deploy the load balancer is with a cluster or clusters of server instances. By default, all the instances in a cluster have the same configuration and the same applications deployed to them. The load balancer distributes the workload between the server instances and requests fail over from an unhealthy instance to a healthy one.
@@ -195,7 +195,7 @@ If you've configured HTTP session persistence, session information persists when
 
 If you have multiple clusters, requests can be load balanced across clusters but are only failed over between the instances in a single cluster. Use multiple clusters in a load balancer to easily enable *rolling upgrades* of applications.
 
-[[using-multiple-standalone-instances]]
+[#using-multiple-standalone-instances]
 ==== Using Multiple Standalone Instances
 
 It is also possible to configure your load balancer to use multiple standalone instances, and load balance and failover requests between them. However, in this configuration, you must manually ensure that the standalone instances have homogenous environments and the same applications deployed to them.

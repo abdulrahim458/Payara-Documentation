@@ -2,7 +2,7 @@
 
 Configures the settings of the Slack notifier.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,7 +17,7 @@ asadmin [asadmin-options] set-slack-notifier-configuration [--help]
 [--token3 token]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the Slack notifier in Payara Server.
@@ -25,7 +25,7 @@ This command can be used to configure the behaviour of the Slack notifier in Pay
 IMPORTANT: This command is available as long as the Slack notifier's core module is installed in the server. +
 This notifier's extension is installed by default on Payara Server Enterprise.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -56,7 +56,7 @@ The second token required to authenticate to the corresponding Slack channel.
 *`--token3`*:
 The third token required to authenticate to the corresponding Slack channel.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enable the Slack notifier and set its required tokens*
@@ -66,7 +66,7 @@ The third token required to authenticate to the corresponding Slack channel.
 asadmin set-slack-notifier-configuration --enabled=true --dynamic=true --token1=T43CHENUC --token2=B441EFQB1 --token3=Jas8P3jCZ4wK8Y2m88dCxGkn
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

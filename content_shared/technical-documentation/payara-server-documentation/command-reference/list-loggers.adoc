@@ -2,7 +2,7 @@
 
 Lists existing loggers.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,7 +10,7 @@ Lists existing loggers.
 asadmin [asadmin-options] list-loggers [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-loggers` subcommand lists the existing Payara Server loggers. Internal loggers are not listed. The `list-loggers` subcommand
@@ -18,7 +18,7 @@ lists the logger name, subsystem, and description.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing the Loggers*
@@ -47,7 +47,7 @@ jakarta.enterprise.system.tools.admin    ADMIN             Administration Servic
 Command list-loggers executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -5,12 +5,12 @@ This chapter provides procedures for administering domains in the Payara Server 
 
 Instructions for accomplishing the tasks in this chapter by using the Administration Console are contained in the Administration Console online help.
 
-[[about-administering-domains]]
+[#about-administering-domains]
 == About Administering Domains
 
 A domain contains a group of Payara Server instances that are administered together. Each domain has a domain administration server (DAS) that hosts administrative applications.
 
-[[payara-server-instances]]
+[#payara-server-instances]
 === Payara Server Instances
 
 A Payara Server instance is a single Virtual Machine for the Java platform (Java Virtual Machine or JVM machine) on a single node in which
@@ -33,7 +33,7 @@ like a dedicated web server, but without the hardware and basic web server maint
 
 For more information about virtual servers, see xref:technical-documentation/payara-server-documentation/general-administration/administering-http-connectivity.adoc#administering-virtual-servers[Administering Virtual Servers].
 
-[[domains-for-administering-payara-server]]
+[#domains-for-administering-payara-server]
 === Domains for Administering Payara Server
 
 A domain is an administrative boundary that contains a group of Payara Server instances that are administered together. Each instance
@@ -50,7 +50,7 @@ When a domain is created, you are prompted for the administration username and p
 created without password. To reset the administration password,
 see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#to-change-an-administration-password[To Change an Administration Password] in Payara Server Security Guide.
 
-[[domain-administration-server-das]]
+[#domain-administration-server-das]
 === Domain Administration Server (DAS)
 
 The domain administration server (DAS) is a specially designated Payara Server instance that hosts administrative applications. The
@@ -71,10 +71,10 @@ The graphical Administration Console communicates with a specific DAS to adminis
 Administration Console session enables you to configure and manage only one domain. If you create multiple domains, you must start a separate
 Administration Console session to manage each domain.
 
-[[creating-logging-in-to-and-deleting-a-domain]]
+[#creating-logging-in-to-and-deleting-a-domain]
 == Creating, Logging in to, and Deleting a Domain
 
-[[to-create-a-domain]]
+[#to-create-a-domain]
 === To Create a Domain
 
 After installing Payara Server and creating the default domain (`domain1`), you can create additional domains by using the local
@@ -92,7 +92,7 @@ Information about the options for this subcommand is included in this help page.
 . Type an admin user name and password for the domain. +
 To avoid setting up an admin login, you can accept the default `admin`, with no password. Pressing Return also selects the default.
 
-[[example-to-create-a-domain]]
+[#example-to-create-a-domain]
 ==== Example 3-1 Creating a Domain
 
 This example creates a domain named `domain1` . When you type the command, you might be prompted for login information.
@@ -131,7 +131,7 @@ domain-root-dir`/mydomain`
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-domain` at the command line.
 
-[[to-create-a-domain-from-a-custom-template]]
+[#to-create-a-domain-from-a-custom-template]
 === To Create a Domain from a Custom Template
 
 A custom template enables you to customize the configuration of any domain that you create from the template.
@@ -178,7 +178,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help create-domain`
 * `asadmin help verify-domain-xml`
 
-[[to-list-domains]]
+[#to-list-domains]
 === To List Domains
 
 Use the `list-domains` subcommand to display a list of domains and their statuses. If the domain directory is not specified, the contents of the
@@ -188,7 +188,7 @@ To list domains that were created in other directories, specify the `--domaindir
 
 List domains by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand.
 
-[[example-to-list-domains]]
+[#example-to-list-domains]
 ==== Example 3-2 Listing Domains
 
 This example lists the domains in the default domain root directory:
@@ -204,7 +204,7 @@ Command list-domains executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-domain` at the command line.
 
-[[to-log-in-to-a-domain]]
+[#to-log-in-to-a-domain]
 === To Log in to a Domain
 
 All remote subcommands require that credentials be specified in terms of an administration user name and its password. By default, the domain is
@@ -243,7 +243,7 @@ asadmin list-domains
 ----
 . Log in to the domain by using the xref:technical-documentation/payara-server-documentation/general-administration/subcommands-for-the-asadmin-cli.adoc#domain-subcommands[`login`] command.
 
-[[example-to-log-in-to-a-domain]]
+[#example-to-log-in-to-a-domain]
 ==== Example 3-3 Logging in to a Domain on a Remote Machine
 
 This example logs into a domain located on another machine. Options are specified before the `login` subcommand.
@@ -259,7 +259,7 @@ Make sure that this file remains protected. Information stored in this
 file will be used by asadmin commands to manage associated domain.
 ----
 
-[[example-to-log-in-to-a-domain-default-port]]
+[#example-to-log-in-to-a-domain-default-port]
 ==== Example 3-4 Logging in to a Domain on the Default Port of Localhost
 
 This example logs into a domain on `myhost` on the default port. Options are specified before the login subcommand.
@@ -282,7 +282,7 @@ asadmin commands to manage associated domain.
 You can also view the full syntax and options of the subcommand by typing `asadmin help login` at the command line. For additional
 information about passwords, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-passwords[Administering Passwords] in Payara Server Security Guide.
 
-[[to-delete-a-domain]]
+[#to-delete-a-domain]
 === To Delete a Domain
 
 Use the `delete-domain` subcommand to delete an existing domain from a server. Only the root user or the operating system user who is
@@ -298,7 +298,7 @@ A domain must be stopped before it can be deleted.
 If needed, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-stop-a-domain[To Stop a Domain].
 . Delete the domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-domain.adoc[`delete-domain`] subcommand.
 
-[[example-to-delete-a-domain]]
+[#example-to-delete-a-domain]
 ==== Example 3-5 Deleting a Domain
 
 This example deletes a domain named `domain1` from the location specified.
@@ -312,10 +312,10 @@ Command delete-domain executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help delete-domain` at the command line.
 
-[[starting-and-stopping-a-domain]]
+[#starting-and-stopping-a-domain]
 == Starting and Stopping a Domain
 
-[[to-start-a-domain]]
+[#to-start-a-domain]
 === To Start a Domain
 
 When you start a domain or server, the domain administration server (DAS) is started. After startup, the DAS runs constantly, listening for
@@ -328,7 +328,7 @@ This subcommand is supported in local mode only.
 
 Start a domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`] subcommand.
 
-[[example-to-start-a-domain]]
+[#example-to-start-a-domain]
 ==== Example 3-6 Starting a Domain
 
 This example starts `domain2` in the default domain directory.
@@ -350,7 +350,7 @@ Admin port for the domain: [4848].
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help start-domain` at the command line.
 
-[[to-stop-a-domain]]
+[#to-stop-a-domain]
 === To Stop a Domain
 
 Stopping a domain or server shuts down its domain administration server (DAS). When stopping a domain, the DAS stops accepting new connections
@@ -362,7 +362,7 @@ server. For more controlled situations, you can use the xref:ROOT:technical-docu
 . If necessary, notify users that you are going to stop the domain.
 . Stop the domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`] subcommand.
 
-[[example-to-stop-a-domain]]
+[#example-to-stop-a-domain]
 ==== Example 3-7 Stopping a Domain (or Server)
 
 This example stops `domain1` in the default directory, where `domain1` is the only domain present in the directory.
@@ -376,7 +376,7 @@ Command stop-domain executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help stop-domain` at the command line.
 
-[[to-restart-a-domain]]
+[#to-restart-a-domain]
 === To Restart a Domain
 
 Use the `restart-domain` subcommand in remote mode to restart the Domain Administration Server (DAS) of the specified host. When restarting a
@@ -393,7 +393,7 @@ subcommand followed by the xref:ROOT:technical-documentation/payara-server-docum
 Remote subcommands require a running server.
 . Restart the domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc[`restart-domain`] subcommand.
 
-[[example-to-restart-a-domain]]
+[#example-to-restart-a-domain]
 ==== Example 3-8 Restarting a Domain (or Server)
 
 This example restarts `mydoimain4` in the default directory.
@@ -405,7 +405,7 @@ Waiting for the domain to restart ...........
 Command restart-domain executed successfully.
 ----
 
-[[example-to-restart-a-domain-in-browser]]
+[#example-to-restart-a-domain-in-browser]
 ==== Example 3-9 Restarting a Domain in a Browser
 
 This example invokes the `restart-domain` subcommand in a browser.
@@ -417,7 +417,7 @@ http://yourhost:4848/__asadmin/restart-domain
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help restart-domain` at the command line.
 
-[[configuring-a-das-or-a-payara-server-instance-for-automatic-restart]]
+[#configuring-a-das-or-a-payara-server-instance-for-automatic-restart]
 == Configuring a DAS or a Payara Server Instance for Automatic Restart
 
 Use the `create-service` subcommand in local mode to configure your system to automatically restart a domain administration server (DAS) or
@@ -429,7 +429,7 @@ a Payara Server instance. Payara Server enables you to configure a DAS or an ins
 
 To ensure that automatic restart functions correctly on Windows, you must prevent service shutdown when a user logs out.
 
-[[to-configure-a-das-or-an-instance-for-automatic-restart-on-windows]]
+[#to-configure-a-das-or-an-instance-for-automatic-restart-on-windows]
 === To Configure a DAS or an Instance for Automatic Restart on Windows
 
 On Windows systems, the `create-service` subcommand creates a Windows service to represent the DAS or instance. The service is created in the
@@ -454,7 +454,7 @@ tool as follows:
 * To stop the service, use the `sc stop` command.
 * To uninstall the service, use the `sc delete` command.
 
-[[example-to-configure-a-das-or-an-instance-for-automatic-restart-on-windows]]
+[#example-to-configure-a-das-or-an-instance-for-automatic-restart-on-windows]
 ==== Example 3-10 Creating a Service to Restart a DAS Automatically on Windows
 
 This example creates a service for the default domain on a system that is running Windows.
@@ -486,7 +486,7 @@ root directory
 Command create-service executed successfully.
 ----
 
-[[example-query-the-service-for-automatic-restart-on-windows]]
+[#example-query-the-service-for-automatic-restart-on-windows]
 ==== Example 3-11 Querying the Service to Restart a DAS Automatically on Windows
 
 This obtains information about the service for the default domain on a system that is running Windows.
@@ -504,7 +504,7 @@ SERVICE_NAME: domain1
         WAIT_HINT          : 0x0
 ----
 
-[[to-configure-a-das-or-an-instance-for-automatic-restart-on-linux]]
+[#to-configure-a-das-or-an-instance-for-automatic-restart-on-linux]
 === To Configure a DAS or an Instance for Automatic Restart on Linux
 
 On Linux systems, the `create-service` subcommand creates a System-V-style initialization script
@@ -522,7 +522,7 @@ The `create-service` subcommand must be run as the OS-level root user.
 
 Create the service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-service.adoc[`create-service`] subcommand.
 
-[[example-to-configure-a-das-or-an-instance-for-automatic-restart-on-linux]]
+[#example-to-configure-a-das-or-an-instance-for-automatic-restart-on-linux]
 ==== Example 3-12 Creating a Service to Restart a DAS Automatically on Linux
 
 This example creates a service for the default domain on a system that is running Linux.
@@ -548,7 +548,7 @@ For your convenience this message has also been saved to this file:
 Command create-service executed successfully.
 ----
 
-[[to-configure-a-das-or-an-instance-for-automatic-restart-on-oracle-solaris]]
+[#to-configure-a-das-or-an-instance-for-automatic-restart-on-oracle-solaris]
 === To Configure a DAS or an Instance for Automatic Restart on Oracle Solaris
 
 On Oracle Solaris systems, the `create-service` subcommand creates an Oracle Solaris Service Management Facility (SMF) service that restarts a
@@ -583,7 +583,7 @@ For example, to enable the SMF service for the default domain, type:
 svacdm enable /appserver/domains/domain1
 ----
 
-[[example-to-configure-a-das-or-an-instance-for-automatic-restart-on-oracle-solaris]]
+[#example-to-configure-a-das-or-an-instance-for-automatic-restart-on-oracle-solaris]
 ==== Example  3-13 Creating a Service to Restart a Domain Automatically on Oracle Solaris
 
 This example creates a service for the default domain on a system that is running Oracle Solaris.
@@ -621,7 +621,7 @@ For information about administering the service, see the following Oracle Solari
 * http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5rbac-5[`rbac`^]
 * http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5smf-security-5[`smf_security`^]
 
-[[to-prevent-service-shutdown-when-a-user-logs-out-on-windows]]
+[#to-prevent-service-shutdown-when-a-user-logs-out-on-windows]
 === To Prevent Service Shutdown When a User Logs out on Windows
 
 By default, the Java Virtual Machine (VM) receives signals from Windows that indicate that Windows is shutting down, or that a user is logging
@@ -653,10 +653,10 @@ To set this option, edit the `asadmin.bat` file to add the `-Xrs` option to the 
 ----
 . If the Payara Server service is running, restart the service for your changes to take effect.
 
-[[backing-up-and-restoring-a-domain]]
+[#backing-up-and-restoring-a-domain]
 === Backing up and Restoring a Domain
 
-[[to-back-up-a-domain]]
+[#to-back-up-a-domain]
 === To Back up a Domain
 
 Use the `backup-domain` subcommand in local mode to make a backup of a specified domain.
@@ -675,7 +675,7 @@ The `backup-domain` subcommand operates only when the domain is stopped.
 . Restore the domain to its previous state, if necessary. +
 Start or resume the domain.
 
-[[example-to-back-up-a-domain]]
+[#example-to-back-up-a-domain]
 ==== Example 3-14 Backing up the Default Domain
 
 This example makes a backup of the default domain, `domain1`, storing the backup file in `/net/backups.example.com/glassfish`:
@@ -689,7 +689,7 @@ Command backup-domain executed successfully
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help backup-domain` at the command line.
 
-[[to-restore-a-domain]]
+[#to-restore-a-domain]
 === To Restore a Domain
 
 Use the `restore-domain` subcommand in local mode to use a backup file to restore the files and subdirectories in a specified domain's directory.
@@ -708,7 +708,7 @@ as described in xref:technical-documentation/payara-server-documentation/general
 . Verify that the restore has succeeded.
 . If necessary, notify users that the domain has been restored and is available.
 
-[[example-to-restore-a-domain]]
+[#example-to-restore-a-domain]
 ==== Example 3-15 Restoring the Default Domain
 
 This example restores files for the default domain, `domain1`, from the most recent backup stored in a specified backup directory:
@@ -722,7 +722,7 @@ Command restore-domain executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin restore-domain --help` at the command line.
 
-[[to-list-domain-backups]]
+[#to-list-domain-backups]
 === To List Domain Backups
 
 Use the `list-backups` subcommand in local mode to display information about backups of a specified domain stored in a specified backup directory.
@@ -732,7 +732,7 @@ backups are stored instead of the default domain-dir`/backups`.
 
 List backups by using the `list-backups` subcommand.
 
-[[example-to-list-domain-backups]]
+[#example-to-list-domain-backups]
 ==== Example 3-16 Listing Backups of the Default Domain
 
 This example lists the backups of the default domain, `domain1`, that are stored in the `/net/backups.example.com/glassfish` directory:
@@ -753,7 +753,7 @@ Note that this listing includes backups created automatically by a backup config
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-backups` at the command line.
 
-[[re-creating-the-domain-administration-server-das]]
+[#re-creating-the-domain-administration-server-das]
 == Re-Creating the Domain Administration Server (DAS)
 
 For mirroring purposes, and to provide a working copy of the DAS, you must have:
@@ -771,7 +771,7 @@ backup of the DAS using the automatic backups feature of Payara Server.
 NOTE: Payara Server includes `asadmin` subcommands that simplify this procedure. If you are using Payara Server, see
 xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-migrate-the-das[To Migrate the DAS].
 
-[[to-migrate-the-das]]
+[#to-migrate-the-das]
 === To Migrate the DAS
 
 The following steps are required to migrate the DAS from the first host (`olddashost`) to the third host (`newdashost`).
@@ -824,10 +824,10 @@ asadmin> list-instances --long
 ----
 . Decommission and discontinue use of the DAS on olddashost.
 
-[[additional-domain-tasks]]
+[#additional-domain-tasks]
 == Additional Domain Tasks
 
-[[to-display-domain-uptime]]
+[#to-display-domain-uptime]
 === To Display Domain Uptime
 
 Use the `uptime` subcommand in remote mode to display the length of time that the domain administration server (DAS) has been running since it was last started.
@@ -836,7 +836,7 @@ Use the `uptime` subcommand in remote mode to display the length of time that th
 Remote subcommands require a running server.
 . Display uptime by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/uptime.adoc[`uptime`] subcommand.
 
-[[example-to-display-domain-uptime]]
+[#example-to-display-domain-uptime]
 ==== Example 3-17 Displaying the DAS Uptime
 
 This example displays the length of time that the DAS has been running.
@@ -850,7 +850,7 @@ Command uptime executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help uptime` at the command line.
 
-[[to-switch-a-domain-to-another-supported-java-version]]
+[#to-switch-a-domain-to-another-supported-java-version]
 === To Switch a Domain to Another Supported Java Version
 
 Payara Server requires Java SE 11 as the underlying virtual machine for the Java platform (Java Virtual Machine or JVM machine).
@@ -879,7 +879,7 @@ In particular, you might need to change the `JAVA_HOME` environment variable. Fo
 as-install/bin/asadmin set "server.java-config.java-home=path-to-java-home"
 ----
 
-[[to-change-the-administration-port-of-a-domain]]
+[#to-change-the-administration-port-of-a-domain]
 === To Change the Administration Port of a Domain
 
 Use the `set` subcommand in remote mode to change the administration port of a domain.
@@ -929,7 +929,7 @@ $ start-domain [domain-name]
 ----
 The domain-name is the name of the domain to start. If only one domain subdirectory is contained in the `domains` directory, you may omit this option.
 
-[[example-to-change-the-administration-port-of-a-domain]]
+[#example-to-change-the-administration-port-of-a-domain]
 ==== Example 3-18 Changing the Administration Port of a Domain
 
 This example changes the administration port of the domain `domain1` from 4848 to 4849. The DAS is running on the host `xk01.example.com`.

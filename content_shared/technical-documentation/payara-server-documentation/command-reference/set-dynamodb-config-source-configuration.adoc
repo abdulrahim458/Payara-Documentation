@@ -2,7 +2,7 @@
 
 Sets the configuration for the DynamoDB Config Source.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -18,14 +18,14 @@ asadmin [asadmin-options] set-dynamodb-config-source-configuration [--help]
 [--enabled={true|false}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-dynamodb-config-source-configuration` provides configuration options to set the properties required by DynamoDB config source to retrieves data from the configured DynamoDB database table.
 
 TIP: Make sure that the password aliases `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` are created first.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -67,7 +67,7 @@ Configure the config source dynamically, which will not require a restart.
 *`--enabled`*:
 Enables or disables the config source.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting the configuration of the DynamoDB Config Source*
@@ -79,7 +79,7 @@ This example configures the DynamoDB Config Source.
 asadmin> set-dynamodb-config-source-configuration --enabled true --dynamic true --region-name eu-west-2 --table-name Books --key-column-name ISBN --value-column-name Title --limit 10
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

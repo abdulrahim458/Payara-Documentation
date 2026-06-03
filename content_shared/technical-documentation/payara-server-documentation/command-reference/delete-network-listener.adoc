@@ -2,7 +2,7 @@
 
 Removes a network listener.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,12 +12,12 @@ asadmin [asadmin-options] delete-network-listener [--help]
 listener-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-network-listener` subcommand removes the specified network listener. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,16 +37,16 @@ The `delete-network-listener` subcommand removes the specified network listener.
   standalone-instance-name;;
     Deletes the network listener from the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *listener-name*:
   The name of the network listener to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Deleting a Network Listener*
 
 The following command deletes the network listener named `sampleListener`:
@@ -57,7 +57,7 @@ asadmin> delete-network-listener sampleListener
 Command delete-network-listener executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

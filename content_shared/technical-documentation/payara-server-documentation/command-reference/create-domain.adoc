@@ -2,7 +2,7 @@
 
 Creates a domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -27,7 +27,7 @@ asadmin [asadmin-options] create-domain [--help]
 domain-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-domain` subcommand creates a Payara Server domain. A domain in Payara Server is an administrative namespace that complies
@@ -49,7 +49,7 @@ If the `--nopassword` option is set to false (the default), a username is requir
 You choose an appropriate profile for the domain, depending on the applications that you want to run on your new domain. You can choose the
 developer, cluster, or enterprise profile for the domain you create. This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -223,14 +223,14 @@ When auto-increment is turned off an occupied start port results in a startup fa
 +
 The default value is `5900`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-name*:
   The name of the domain to be created. The name may contain only ASCII
   characters and must be a valid directory name for the operating system on the host where the domain is created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Domain*
@@ -375,7 +375,7 @@ Domain testDomain allows admin login as user "admin" with no password.
 Command create-domain executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Configures the settings of the MS Teams notifier.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,7 +15,7 @@ asadmin [asadmin-options] set-teams-notifier-configuration [--help]
 [webhook-url]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the MS Teams notifier in Payara Server.
@@ -23,7 +23,7 @@ This command can be used to configure the behaviour of the MS Teams notifier in 
 IMPORTANT: This command is available as long as the Datadog notifier's core module is installed in the server. +
 This notifier's extension is installed by default on Payara Server Enterprise.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -48,13 +48,13 @@ Otherwise, a restart is required.
 *`--filter`*:
 Defaults to `WARNING`. The notifier only responds to events at or above this level. (INFO, WARNING, SEVERE)
 
-[[operands]]
+[#operands]
 == Operands
 
 *webhook-url*:
 The url of the MS Teams channel webhook to link the notifier to.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enable the MS Teams notifier and set its webhook URL*
@@ -64,7 +64,7 @@ The url of the MS Teams channel webhook to link the notifier to.
 asadmin set-teams-notifier-configuration --enabled=true --dynamic=true https://outlook.office.com/webhook/xyz
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

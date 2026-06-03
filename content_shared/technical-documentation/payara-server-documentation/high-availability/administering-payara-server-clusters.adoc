@@ -6,7 +6,7 @@ We do not recommend setting up highly-available architectures using traditional 
 
 A cluster is a collection of Payara Server instances that work together as one logical entity. A cluster provides a runtime environment for one or more Jakarta Platform, Enterprise Edition (Jakarta EE) applications. A cluster provides high availability through failure protection, scalability, and load balancing.
 
-[[about-payara-server-clusters]]
+[#about-payara-server-clusters]
 == About Payara Server Clusters
 
 A cluster is a named collection of Payara Server instances that share the same applications, resources, and configuration information.
@@ -27,14 +27,14 @@ To enable the user session state to be recovered, each instance in a cluster sen
 * Scalability. If increased capacity is required, you can add instances to a cluster with no disruption in service. When an instance is added or removed, the changes are handled automatically.
 * Load balancing. If instances in a cluster are distributed among different hosts, the workload can be distributed among the hosts to increase overall system throughput.
 
-[[group-management-service]]
+[#group-management-service]
 == Group Management Service
 
 The Group Management Service (GMS) is an infrastructure component that is enabled for the instances in a cluster. When GMS is enabled, if a clustered instance fails, the cluster and the Domain Administration Server (DAS) are aware of the failure and can take action when failure occurs.
 
 NOTE: GMS is a core service of the Shoal framework.
 
-[[about-gms-in-payar-server]]
+[#about-gms-in-payar-server]
 == About GMS in Payara Server
 
 In previous versions of Payara Server, specifically Payara Server 4.x, clusters were  implemented using the Group Management Service (GMS) and the Shoal framework to allow server instances to communicate between each other and coordinate high-availability features. GMS enables instances to participate in a cluster by detecting changes in cluster membership and notifying instances of the changes.
@@ -43,7 +43,7 @@ Starting in Payara Server 5, GMS has been replaced internally with the use of Ha
 
 To this effect, most of the configuration settings listed in the next section may not properly work as clusters have been effectively replaced by deployment groups.
 
-[[gms-configuration-settings]]
+[#gms-configuration-settings]
 === GMS Configuration Settings
 
 Payara Server has the following types of GMS settings:
@@ -86,7 +86,7 @@ The heartbeat frequency, maximum missed heartbeats, peer-to-peer connection-base
 
 For the dotted names for each of these GMS configuration settings, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#dotted-names-for-gms-settings[Dotted Names for GMS Settings]. For the steps to specify these settings, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#to-preconfigure-nondefault-gms-configuration-settings[To Preconfigure Nondefault GMS Configuration Settings].
 
-[[dotted-names-for-gms-settings]]
+[#dotted-names-for-gms-settings]
 === Dotted Names for GMS Settings
 
 Below are sample xref:ROOT:technical-documentation/payara-server-documentation/command-reference/get.adoc[`get`] subcommands to get all the GMS configuration settings (attributes associated with the referenced `mycfg` configuration) and GMS cluster settings (attributes and properties associated with a cluster named `mycluster`).
@@ -122,7 +122,7 @@ The last `get` subcommand displays only the properties that have been explicitly
 
 For the steps to specify these settings, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#to-preconfigure-nondefault-gms-configuration-settings[To Preconfigure Nondefault GMS Configuration Settings] and xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#to-change-gms-settings-after-cluster-creation[To Change GMS Settings After Cluster Creation].
 
-[[to-preconfigure-nondefault-gms-configuration-settings]]
+[#to-preconfigure-nondefault-gms-configuration-settings]
 === To Preconfigure Nondefault GMS Configuration Settings
 
 You can preconfigure GMS with values different than the defaults without requiring a restart of the DAS and the cluster.
@@ -165,7 +165,7 @@ asadmin> start-cluster mycluster
 
 You can also view the full syntax and options of a subcommand by typing `asadmin help` subcommand at the command line.
 
-[[to-change-gms-settings-after-cluster-creation]]
+[#to-change-gms-settings-after-cluster-creation]
 === To Change GMS Settings after Cluster Creation
 
 To avoid the need to restart the DAS and the cluster, configure GMS configuration settings before cluster creation as explained in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#to-preconfigure-nondefault-gms-configuration-settings[To Preconfigure Nondefault GMS Configuration Settings].
@@ -217,7 +217,7 @@ asadmin> start-cluster mycluster
 
 You can also view the full syntax and options of a subcommand by typing `asadmin help` subcommand at the command line.
 
-[[to-check-the-health-of-instances-in-a-cluster]]
+[#to-check-the-health-of-instances-in-a-cluster]
 === To Check the Health of Instances in a Cluster
 
 The `list-instances` is the quickest way to evaluate the health of a cluster and to detect if cluster is properly operating; that is, all members of the cluster are running and visible to DAS.
@@ -237,7 +237,7 @@ Command list-instances executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-instances` at the command line.
 
-[[using-the-multi-homing-feature-with-gms]]
+[#using-the-multi-homing-feature-with-gms]
 === Using the Multi-Homing Feature with GMS
 
 Multi-homing enables Payara Server clusters to be used in an environment that uses multiple Network Interface Cards (NICs). A multi-homed host has multiple network connections, of which the connections may or may not be the on same network.
@@ -248,7 +248,7 @@ Multi-homing provides the following benefits:
 * Binds to a specific IPv4 address and receives GMS messages in a system that has multiple IP addresses configured. The responses for GMS messages received on a particular interface will also go out through that interface.
 * Supports separation of external and internal traffic.
 
-[[traffic-separation-using-multi-homing]]
+[#traffic-separation-using-multi-homing]
 ==== Traffic Separation Using Multi-Homing
 
 You can separate the internal traffic resulting from GMS from the external traffic. Traffic separation enables you plan a network better and augment certain parts of the network, as required.
@@ -289,12 +289,12 @@ asadmin set c1-config.network-config.network-listeners.network-listener.http-1.a
 asadmin set c1-config.network-config.network-listeners.network-listener.http-2.address=\${EXTERNAL-ADDR}
 ----
 
-[[creating-listing-and-deleting-clusters]]
+[#creating-listing-and-deleting-clusters]
 == Creating, Listing, and Deleting Clusters
 
 Payara Server enables you to create clusters, obtain information about clusters, and delete clusters that are no longer required.
 
-[[to-create-a-cluster]]
+[#to-create-a-cluster]
 === To Create a Cluster
 
 Use the `create-cluster` subcommand in remote mode to create a cluster.
@@ -404,7 +404,7 @@ You can also view the full syntax and options of the subcommands by typing the f
 * `asadmin help create-cluster`
 * `asadmin help create-system-properties`
 
-[[to-list-all-clusters-in-a-domain]]
+[#to-list-all-clusters-in-a-domain]
 === To List All Clusters in a Domain
 
 Use the `list-clusters` subcommand in remote mode to obtain information about existing clusters in a domain.
@@ -442,7 +442,7 @@ xref:ROOT:technical-documentation/payara-server-documentation/command-reference/
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-clusters` at the command line.
 
-[[to-delete-a-cluster]]
+[#to-delete-a-cluster]
 === To Delete a Cluster
 
 Use the `delete-cluster` subcommand in remote mode to remove a cluster from the DAS configuration.

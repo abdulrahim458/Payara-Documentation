@@ -20,7 +20,7 @@ Payara Micro supports a number of commands to help you configure access logging.
 
 All options available for configuring Payara Micro can be seen by running the JAR with the `--help` option, or by consulting xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/command-line-options/command-line-options.adoc[Payara Micro Command Line Options]
 
-[[usage-examples]]
+[#usage-examples]
 == Usage Examples
 
 [cols=",,",options="header",]

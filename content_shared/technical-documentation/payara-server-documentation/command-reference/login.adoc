@@ -2,7 +2,7 @@
 
 Logs you into a domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,7 +10,7 @@ Logs you into a domain.
 asadmin [asadmin-options] login [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The purpose of the `login` subcommand is to ease domain administration by letting you log into a particular domain. If Payara Server domains are created on various machines (locally), you can run the `asadmin` utility from any of these machines and manage domains located elsewhere (remotely). This is especially useful when a particular machine is chosen as an administration client that manages multiple domains and servers.
@@ -24,7 +24,7 @@ Login information is saved permanently and can be used across multiple domain re
 There is no `logout` subcommand. If you want to log in to another domain, run the `login` subcommand and specify new values for the
 `asadmin` utility options `--host` and `--port`.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -33,7 +33,7 @@ There is no `logout` subcommand. If you want to log in to another domain, run th
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Logging Into a Domain on a Remote Machine*
@@ -74,7 +74,7 @@ Make sure that this file remains protected. Information stored in this
 file will be used by asadmin commands to manage associated domain.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

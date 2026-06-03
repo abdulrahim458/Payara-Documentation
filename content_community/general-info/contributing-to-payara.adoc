@@ -3,7 +3,7 @@
 
 As with many open source projects Payara is hosted on GitHub, allowing anyone to contribute code and help with its development. To make sure that development is coordinated and that changes are easily tracked, we have a series of steps that should be followed in order to get your code merged.
 
-[[legal-bits]]
+[#legal-bits]
 == Legal Bits
 
 Payara is an open source project; as part of this we have specific legal requirements concerning how we distribute code contributed to the project. Before any code contributed by our community is pulled into our repository, we must have a signed Contributor License Agreement from any contributor. This can be downloaded from the main repository at
@@ -16,7 +16,7 @@ As we must also comply with Oracle's license, the following line should be added
 Portions Copyright [{docyear}] Payara Foundation and/or its affiliates
 ----
 
-[[getting-the-payara-source-code]]
+[#getting-the-payara-source-code]
 == Getting the Payara Source Code
 
 You will need to create a personal GitHub account and fork the repository at https://github.com/payara/payara.git[GitHub^] to yourself. There are more detailed guides on GitHub in the https://guides.github.com/activities/forking/[guide to forking^] and https://guides.github.com/activities/contributing-to-open-source/[guide to contributing to open source projects^], but the commands below should get you started:
@@ -59,7 +59,7 @@ git pull upstream master
 git push origin master
 ----
 
-[[working-on-an-issue]]
+[#working-on-an-issue]
 == Working on an Issue
 
 To start working on an issue, create a new branch in your local Git repository with the following command:
@@ -80,7 +80,7 @@ git push origin YourBranch
 
 Please note that this will only push the branch as it stands - you will have to add your files and recommit after any changes you make!
 
-[[debugging-payara]]
+[#debugging-payara]
 == Debugging Payara
 
 To debug Payara the first step is to build it, to give you something to debug and hopefully catch any glaring issues. A guide to building Payara Server from source can be found xref:general-info/build-instructions.adoc[in our build instructions page]. Once you have built Payara Server, the full distribution will be available as a _.zip_ file within your local repository under the path:
@@ -106,7 +106,7 @@ In order to debug Payara, first build the server with your changes. Run it in _d
 
 From within your IDE you can then attach a debugger to the default port of *9009*.
 
-[[pushing-commits-to-your-github-remote-repository]]
+[#pushing-commits-to-your-github-remote-repository]
 == Pushing Commits to Your Github Remote Repository
 
 When you are finished working on your issue, add the files to your Git with a comment describing the addressed issue and the GitHub issue number if there is one:
@@ -144,19 +144,19 @@ git push origin <YourBranchName>:<YourBranchName>
 
 Once you have it within your remote GitHub repository, you are then able to request that your code be merged into Payara via a pull request on GitHub.
 
-[[feature-requests-and-issues]]
+[#feature-requests-and-issues]
 == Feature Requests and Issues
 
 A large portion of our work is prompted by the actions of the community. If you have an issue which you have found with Payara, or a feature which you would like to be implemented we welcome the raising of GitHub issues. Please fill in the template when creating a new issue, so that we can evaluate the problem as efficiently as possible.
 
-[[reporting-bugs]]
+[#reporting-bugs]
 === Reporting Bugs
 
 If you find a bug within Payara, please post it as a GitHub issue. GitHub is our main repository for community found issues with Payara and our support team frequently monitor it for new issues. As with submitting issues, a concise title which clearly explains the issue combined with a comment explaining what the found issue is and either how it arose and a stack trace of the issue.
 
 Bug reports should always contain a simple to follow scenario how to reproduce the bug on the latest release of Payara Community Edition. A reproducer should follow the SSCCE rules: http://www.sscce.org/
 
-[[responses]]
+[#responses]
 === Responses
 
 We continually check GitHub issues for bugs, feature requests, and assorted issues. If you have posted an issue, chances are it has been read by a member of staff. Requests for further information and labels are often posted in order to make it easier for the dev team to see issues. However if your issue has not received a comment or label, don't take this as it having not been read or acted upon!

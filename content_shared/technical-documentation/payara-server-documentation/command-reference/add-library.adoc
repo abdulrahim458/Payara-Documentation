@@ -2,7 +2,7 @@
 
 Adds one or more library JAR files to Payara Server
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 *ifeval*: ["{page-site-edition}" == "community"]
@@ -29,7 +29,7 @@ add-library
 ----
 *endif*: []
 
-[[description]]
+[#description]
 == Description
 
 The `add-library` subcommand adds one or more library archive files to Payara Server.
@@ -44,7 +44,7 @@ To add the libraries to other server instances, synchronize the instances with t
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -92,14 +92,14 @@ The default value depends on whether the DAS is on the host where the subcommand
 * If the DAS is on the host where the subcommand is run, the default is `false`.
 * If the DAS is on a remote host, the default is `true`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *library-file-path*:
 The paths to the archive files that contain the libraries that are to be added. You can specify an absolute path or a relative path. +
 If the `--upload` option is set to `true`, this is the path to the file on the local client machine. If the `--upload` option is set to `false`, this is the path to the file on the server machine.
 
-[[Examples]]
+[#Examples]
 == Examples
 
 *Example 1 Adding Libraries*
@@ -112,7 +112,7 @@ asadmin add-library --type app /tmp/mylib.jar
 Command add-library executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

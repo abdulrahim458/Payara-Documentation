@@ -2,7 +2,7 @@
 
 Provides interactive access to the Apache Felix Gogo remote shell for the execution of OSGi shell commands.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] osgi-shell [--help]
 [--encoding encoding]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `osgi-shell` subcommand provides interactive access to the Apache Felix Gogo remote shell for the execution of OSGi shell commands. The
@@ -28,7 +28,7 @@ A related subcommand is the `osgi` subcommand, which passes a single command to 
 This subcommand is supported in local mode only. Unlike other local subcommands, however, the domain administration server (DAS) and the
 server instance whose shell is being accessed must be running.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -44,7 +44,7 @@ server instance whose shell is being accessed must be running.
 *`--encoding`*:
   Specifies the character set for the file to be decoded. By default, the system character set is used.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Apache Felix Gogo Remote Shell Commands*
@@ -101,7 +101,7 @@ ID|State      |Level|Name
 gogo$
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

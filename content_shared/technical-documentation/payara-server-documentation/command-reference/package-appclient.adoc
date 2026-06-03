@@ -2,7 +2,7 @@
 
 Packs the application client container libraries and jar files.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,7 +10,7 @@ Packs the application client container libraries and jar files.
 package-appclient
 ----
 
-[[description]]
+[#description]
 == Description
 
 Use the `package-appclient` command to pack the application client container libraries and jar files into an `appclient.jar` file, which is
@@ -40,7 +40,7 @@ To use the newly installed application client container, you must do the followi
 * Obtain the application client files for your target application, including the generated yourAppClient.jar file.
 * Execute the `appclient` utility: `appclient -`client yourAppClient.jar
 
-[[attributes]]
+[#attributes]
 == Attributes
 
 See http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5attributes-5[`attributes`^] for descriptions of the following attributes:

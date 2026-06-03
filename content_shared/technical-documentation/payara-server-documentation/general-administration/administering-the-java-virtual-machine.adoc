@@ -5,12 +5,12 @@ The Java Virtual Machine is an interpretive computing engine responsible for run
 Java byte codes into the native instructions of the host machine. Payara Server, being a Java process, requires a virtual machine to run and support the
 Java applications running on it. JVM settings are part of an Payara Server configuration.
 
-[[administering-jvm-options]]
+[#administering-jvm-options]
 == Administering JVM Options
 
 The commands can be used to configure the JVM settings for Payara Server.
 
-[[to-create-jvm-options]]
+[#to-create-jvm-options]
 === To Create JVM Options
 
 Use the `create-jvm-options` subcommand in remote mode to create JVM options in the Java configuration element of the `domain.xml` file.
@@ -21,7 +21,7 @@ If the JVM option itself contains a colon (:), use the backslash (\) to offset t
 is included in this help page.
 . To apply your changes, restart Payara Server.
 
-[[creating-jvm-options-example]]
+[#creating-jvm-options-example]
 ==== Example 4-1 Creating JVM Options Example
 
 This example sets multiple Java system properties.
@@ -37,7 +37,7 @@ Command create-jvm-options executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-jvm-options` at the command line.
 
-[[to-list-jvm-options]]
+[#to-list-jvm-options]
 === To List JVM Options
 
 Use the `list-jvm-options` subcommand in remote mode to list the existing JVM options.
@@ -45,7 +45,7 @@ Use the `list-jvm-options` subcommand in remote mode to list the existing JVM op
 . Ensure that the server is running. Remote subcommands require a running server.
 . List JVM options by using the `list-jvm-options` subcommand.
 
-[[listinf-jvm-options-example]]
+[#listinf-jvm-options-example]
 ==== Example 4-2 Listing JVM Options
 
 This example lists all JVM options.
@@ -74,7 +74,7 @@ Command list-jvm-options executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-jvm-options` at the command line.
 
-[[to-delete-jvm-options]]
+[#to-delete-jvm-options]
 === To Delete JVM Options
 
 Use the `delete-jvm-options` subcommand in remote mode to delete JVM options from the Java configuration element of the `domain.xml` file.
@@ -85,7 +85,7 @@ Use the `delete-jvm-options` subcommand in remote mode to delete JVM options fro
 . Delete JVM options by using the `delete-jvm-options` subcommand. To remove more than one JVM option, use a colon (:) to separate the options. If the JVM option itself contains a colon, use the backslash (\) to offset the colon delimiter.
 . To apply your changes, restart Payara Server.
 
-[[deleting-a-jvm-option-example]]
+[#deleting-a-jvm-option-example]
 ==== Example 4-3 Deleting a JVM Option
 
 This example removes a single JVM option.
@@ -98,7 +98,7 @@ deleted 1 option(s)
 Command delete-jvm-options executed successfully.
 ----
 
-[[deleting-multiple-jvm-options]]
+[#deleting-multiple-jvm-options]
 ==== Example 4-4 Deleting Multiple JVM Options
 
 This example removes multiple JVM options.
@@ -113,19 +113,19 @@ Command delete-jvm-options executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help delete-jvm-options` at the command line.
 
 
-[[Payara-Platform-Proprietary-JVM-Options]]
+[#Payara-Platform-Proprietary-JVM-Options]
 === Payara Platform Proprietary JVM Options
 
 The following is a list of the proprietary JVM Options available for configuration:
 
-[[configfileencoding-option]]
+[#configfileencoding-option]
 ==== Config File Encoding
 
 **Property**: `fish.payara.configFileEncoding`
 **Aim**: Sets the domain.xml parser character encoding. The domain will fail to start if you are using characters not covered by UTF-8 in your configuration without this property configured.
 **Acceptable Values**: Any JDK supported file encoding charset
 
-[[configuring-jdk-versions-jvm-options]]
+[#configuring-jdk-versions-jvm-options]
 === Configuring JDK Versions for JVM Options
 
 It is possible to allow specific JVM options configured for a Payara Server instance to be applied only on specific JDK versions. The configuration is flexible since it allows the user to define minimum and maximum versions of all JDKs upon which each JVM option should be applied.
@@ -139,7 +139,7 @@ JDK versions must follow standard the standard JDK versioning scheme. The syntax
 
 NOTE: If no minimum and/or maximum JDK versions are set for a particular JVM option, it shall be applied no matter which JDK is being used to run the server's instance.
 
-[[using-admin-console]]
+[#using-admin-console]
 ==== Using the Admin Console
 
 To configure the JDK versions for JVM options in the admin console, head to the *Configurations -> <instance configuration> -> JVM Settings* and on the *JVM Options* tab specify the versions in the table:
@@ -148,7 +148,7 @@ To configure the JDK versions for JVM options in the admin console, head to the 
 
 NOTE: You can omit either the minimum or maximum versions by leaving the fields blank.
 
-[[using-asadmin-commands]]
+[#using-asadmin-commands]
 ==== Using Asadmin Commands
 
 
@@ -187,7 +187,7 @@ asadmin delete-jvm-options "XX\:NewRatio=3"
 asadmin delete-jvm-options "[1.8.0.160|1.8.0.200]XX\:NewRatio=3"
 ----
 
-[[to-generate-a-jvm-report]]
+[#to-generate-a-jvm-report]
 === To Generate a JVM Report
 
 Use the `generate-jvm-report` subcommand in remote mode to generate a JVM report showing the threads (dump of a stack trace), classes, memory, and
@@ -196,7 +196,7 @@ loggers for a specified instance, including the domain administration server (DA
 . Ensure that the server is running. Remote subcommands require a running server.
 . Generate the report by using the `generate-jvm-report` subcommand.
 
-[[generating-a-jvm-report-example]]
+[#generating-a-jvm-report-example]
 ==== Example 4-5 Generating a JVM Report
 
 This example displays summary information about the threads, classes, and memory.

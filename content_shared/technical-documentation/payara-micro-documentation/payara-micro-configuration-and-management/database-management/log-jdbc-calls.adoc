@@ -3,12 +3,12 @@
 Payara Micro supports SQL Tracing which brings powerful operational
 diagnostics to your microservices platform.
 
-[[enabling]]
+[#enabling]
 == Enabling Logging JDBC Calls
 
 To enable SQL Tracing of JDBC on applications deployed on Payara Micro, use can use the annotation or deployment descriptor methods described below.
 
-[[deployment]]
+[#deployment]
 === Application Deployment
 
 In Java EE 7+ applications, a JDBC data source can be deployed by adding the

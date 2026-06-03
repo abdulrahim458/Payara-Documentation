@@ -7,7 +7,7 @@ For general information about Jakarta EE security, see link:https://eclipse-ee4j
 
 NOTE: Payara Server's Web Profile supports the EJB 4.0+ specification, which allows enterprise beans within web applications, among other features. The Full Profile supports the entire EJB 4.0+ specification. For details, see https://jakarta.ee/specifications/enterprise-beans[Jakarta Enterprise Beans^].
 
-[[security-goals]]
+[#security-goals]
 == Security Goals
 
 In an enterprise computing environment, there are many security risks.
@@ -31,7 +31,7 @@ NOTE: For Solaris, OS platform authentication is supported in addition to these.
 * Support for declarative security through Payara Server specific XML-based role mapping.
 * Support for https://openid.net/connect/[OpenID Connect^] compatible security features (such as OAuth2).
 
-[[payara-server-specific-security-features]]
+[#payara-server-specific-security-features]
 == Payara Server Specific Security Features
 
 Payara Server supports the Jakarta EE Platform's security model (and added features courtesy of Eclipse MicroProfile APIs), as well as the following features which are specific to it:
@@ -41,7 +41,7 @@ Payara Server supports the Jakarta EE Platform's security model (and added featu
 * Programmatic login; see xref:#programmatic-login-using-the-programmaticlogin-class[Programmatic Login Using the ProgrammaticLogin Class]
 * OAuth2 integration support.
 
-[[container-security]]
+[#container-security]
 == Container Security
 
 The component containers are responsible for providing Jakarta EE application security. The container provides two security forms:
@@ -53,7 +53,7 @@ Annotations (also called metadata) enable a declarative style of programming, an
 
 When an application is deployed, this information can either be used by or overridden by the application or module deployment descriptors.
 
-[[declarative-security]]
+[#declarative-security]
 === Declarative Security
 
 Declarative security means that the security mechanism for an application is declared and handled externally to the application.
@@ -67,7 +67,7 @@ There are two levels of declarative security, as follows:
 * xref:#application-level-security[Application Level Security]
 * xref:#component-level-security[Component Level Security]
 
-[[application-level-security]]
+[#application-level-security]
 ==== Application Level Security
 
 For an application, roles used by any application must be defined in `@DeclareRoles` annotations in the code or `role-name` elements in the application deployment descriptor (`application.xml`).
@@ -86,7 +86,7 @@ Accordingly, the *Default Principal To Role Mapping* setting is enabled by defau
 
 TIP: This default role mapping definition is in effect if you do not define your own mapping in the deployment descriptor for your application as described in this section.
 
-[[component-level-security]]
+[#component-level-security]
 ==== Component Level Security
 
 Component level security encompasses web components and EJB components.
@@ -98,7 +98,7 @@ It is recommended to use payara-web.xml instead.
 
 The EJB container is responsible for authorizing access to a bean method by using the security policy laid out in the EJB XML deployment descriptors (`ejb-jar.xml` and `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` files).
 
-[[programmatic-security]]
+[#programmatic-security]
 === Programmatic Security
 
 Programmatic security involves an EJB component or servlet using method calls to the security API, as specified by the Jakarta EE security model, to make business logic decisions based on the caller or remote user's security role.
@@ -113,7 +113,7 @@ There is also a proprietary Payara API for programmatic login. See xref:#program
 
 For more information about programmatic security in web applications, see https://eclipse-ee4j.github.io/jakartaee-tutorial/#using-programmatic-security-with-web-applications[Using Programmatic Security with Web Applications^] in the Jakarta EE Tutorial.
 
-[[roles-principals-and-principal-to-role-mapping]]
+[#roles-principals-and-principal-to-role-mapping]
 == Roles, Principals, and Principal to Role Mapping
 
 By default, any groups that an authenticated user belongs to will be mapped to roles with the same names.
@@ -187,10 +187,10 @@ asadmin set server-config.security-service.mapped-principal-class=CustomPrincipa
 +
 Default principal to role mapping is enabled by default. To disable it, set the default principal to role mapping property to `false`.
 
-[[realm-configuration]]
+[#realm-configuration]
 == Realm Configuration
 
-[[supported-realms]]
+[#supported-realms]
 === Supported Security Realms
 
 The following security realms are supported:
@@ -209,7 +209,7 @@ For digest authentication, a JDBC realm should be created with `jdbcDigestRealm`
 +
 NOTE: This realm is only supported on the Solaris operating system, version 9 and above
 
-[[how-to-configure-a-realm]]
+[#how-to-configure-a-realm]
 === How to Configure a Security Realm
 
 You can configure a realm in one of these ways:
@@ -217,7 +217,7 @@ You can configure a realm in one of these ways:
 * In the Administration Console, open the _Security_ component under the relevant configuration and go to the _Realms_ page.
 * Use the `asadmin create-auth-realm` command to create a new security realms.
 
-[[how-to-set-a-realm-for-an-application-or-module]]
+[#how-to-set-a-realm-for-an-application-or-module]
 === How to Set a Realm for an Application or Module
 
 The following deployment descriptor elements have optional `realm` or `realm-name` data sub-elements or attributes that override the domain's default realm:
@@ -242,7 +242,7 @@ For example, a realm is specified in `payara-application.xml` as follows:
 
 For more information about the deployment descriptor files and elements, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors]" in the Payara Server Application Deployment section.
 
-[[creating-a-custom-realm]]
+[#creating-a-custom-realm]
 === Creating a Custom Realm
 
 You can create a custom security realm by providing a custom Jakarta Authentication login module class and a custom security realm class.
@@ -420,14 +420,14 @@ So the second time your custom realm executes it returns an array with `null` el
 
 Ideally, your custom realm should not return member variables from the `authenticate` method. It should return local variables  Your custom realm can create a local `String` array in its `authenticate` method, copy the values from the member variables, and return the `String` array.
 
-[[the-server.policy-file]]
+[#the-server.policy-file]
 == The `server.policy` File
 
 Each Payara Server domain has its own global Java policy file, located in `domain-dir/config`. The file is named `server.policy`.
 
 Payara Server is a Jakarta EE compliant application server. As such, it follows the requirements of the Jakarta EE specification, including the ability to run application components in the presence of a security manager (the internal Java component that enforces the policy) and a limited permission set for Jakarta EE application code.
 
-[[default-permissions]]
+[#default-permissions]
 === Default Permissions
 
 Internal server code is granted all permissions. These are covered by the `AllPermission` grant blocks to various parts of the server infrastructure code.
@@ -442,7 +442,7 @@ In some cases, deleting these permissions might be appropriate. For example, one
 
 CAUTION: Unless strictly required, do not modify the entries for the default permissions under any circumstance.
 
-[[system-properties]]
+[#system-properties]
 === System Properties
 
 The following predefined system properties, also called system variables, are available for use in the `server.policy` file.
@@ -478,7 +478,7 @@ WARNING: This property is not supported for *deployment groups*.
 
 WARNING: The `com.sun.aas.instanceName`, `com.sun.aas.clusterName` and `com.sun.aas.domainName` properties are not used in the default configuration, but can be used to customize configuration.
 
-[[changing-permissions-for-an-application]]
+[#changing-permissions-for-an-application]
 === Changing Permissions for an Application
 
 The default policy for each domain limits the permissions of Jakarta EE deployed applications to the minimal set of permissions required for these applications to operate correctly.
@@ -554,7 +554,7 @@ If this is not sufficient, you can add the `-Djava.security.debug=failure` JVM o
 asadmin create-jvm-options -Djava.security.debug=failure
 ----
 
-[[enabling-and-disabling-the-security-manager]]
+[#enabling-and-disabling-the-security-manager]
 === Enabling and Disabling the Security Manager
 
 IMPORTANT: The security manager is disabled by default.
@@ -601,7 +601,7 @@ grant codeBase "file:${com.sun.aas.instanceRoot}/applications/foo" {
 };
 ----
 
-[[configuring-message-security-for-web-services]]
+[#configuring-message-security-for-web-services]
 == Configuring Message Security for Web Services
 
 In message security, security information is applied at the message layer and travels along with the web services message. Web Services Security (WSS) is the use of XML Encryption and XML Digital Signatures to secure messages.
@@ -622,7 +622,7 @@ For more information about message security, see the following:
 * The http://www.ws-i.org/Profiles/BasicSecurityProfile-1.0.html[Web Services Interoperability Organization (WS-I) Basic Security Profile (BSP) specification^]
 * The Metro User's guide https://javaee.github.io/metro/doc/user-guide/ch12.html[WSIT Security documentation^].
 
-[[message-security-providers]]
+[#message-security-providers]
 === Message Security Providers
 
 By default, the `XWS_ClientProvider` and `XWS_ServerProvider` security message providers are configured but disabled. You can enable them in one of the following ways:
@@ -679,14 +679,14 @@ If `false`, the username and password for `wsse:UsernameToken(s)` is collected o
 
 |===
 
-[[message-security-responsibilities]]
+[#message-security-responsibilities]
 === Message Security Responsibilities
 
 In Payara Server, the system administrator and application deployer roles are expected to take primary responsibility for configuring message security.
 
 In some situations, the application developer may also contribute, although in the typical case either of the other roles may secure an existing application without changing its implementation and without involving the developer.
 
-[[application-developer-responsibilities]]
+[#application-developer-responsibilities]
 ==== Application Developer Responsibilities
 
 The application developer can turn on message security, but is not responsible for doing so. Message security can be set up by the system administrator so that all web services are secured, or set up by the application deployer when the provider or protection policy bound to the application must be different from that bound to the container.
@@ -696,7 +696,7 @@ The application developer is responsible for the following:
 * Determining if an application-specific message protection policy is required by the application. If so, ensuring that the required policy is specified at application assembly which may be accomplished by communicating with the application deployer.
 * Determining if message security is necessary at the server's level. If so, ensuring that this need is communicated to the system administrator, or taking care of implementing message security at the server's level.
 
-[[application-deployer-responsibilities]]
+[#application-deployer-responsibilities]
 ==== Application Deployer Responsibilities
 
 The application deployer is responsible for the following:
@@ -706,7 +706,7 @@ The application deployer is responsible for the following:
 
 These security tasks are discussed in xref:#application-specific-message-protection[Application-Specific Message Protection].
 
-[[system-administrator-responsibilities]]
+[#system-administrator-responsibilities]
 ==== System Administrator Responsibilities
 
 The system administrator is responsible for the following:
@@ -717,7 +717,7 @@ The system administrator is responsible for the following:
 
 A system administrator uses the Administration Console to manage server security settings and uses a command line tool to manage certificate databases. Certificates and private keys are stored in key stores and are managed with the `keytool` utility (and in the case of Payara Server Enterprise with its Integrated Certificate Management enhancements).
 
-[[application-specific-message-protection]]
+[#application-specific-message-protection]
 === Application-Specific Message Protection
 
 When the Payara Server provided configuration is insufficient for your security needs, and you want to override the default protection, you can apply application-specific message security to a web service.
@@ -730,14 +730,14 @@ For more information about message security providers, see xref:#message-securit
 
 For more details on message security binding for EJB web services,servlet web services, and clients, see the XML file descriptions in "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors]" in the Payara Server Application Deployment section.
 
-[[using-a-signature-to-enable-message-protection-for-all-methods]]
+[#using-a-signature-to-enable-message-protection-for-all-methods]
 ==== Using a Signature to Enable Message Protection for All Methods
 
 To enable message protection for all methods using digital signature, update the `message-security-binding` element for the EJB web service endpoint in the application's `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` file.
 
 To apply the same protection mechanisms for all methods, leave the method-name element blank. xref:#configuring-message-protection-for-a-specific-method-based-on-digital-signatures[Configuring Message Protection for a Specific Method Based on Digital Signatures] discusses listing specific methods or using wildcard characters.
 
-[[to-enable-message-protection-for-all-methods-using-digital-signature]]
+[#to-enable-message-protection-for-all-methods-using-digital-signature]
 ===== To Enable Message Protection for All Methods Using Digital Signature
 
 Follow this procedure:
@@ -769,7 +769,7 @@ Follow this procedure:
 
 . Compile and deploy the corresponding application.
 
-[[configuring-message-protection-for-a-specific-method-based-on-digital-signatures]]
+[#configuring-message-protection-for-a-specific-method-based-on-digital-signatures]
 ==== Configuring Message Protection for a Specific Method Based on Digital Signatures
 
 To enable message protection for a specific method, or for a set of
@@ -782,7 +782,7 @@ Add the `request-protection` and `response-protection` elements, which are analo
 
 The administration guide includes a table listing the set and order of security operations for different request and response policy configurations.
 
-[[to-enable-message-protection-for-a-particular-method-or-set-of-methods-using-digital-signature]]
+[#to-enable-message-protection-for-a-particular-method-or-set-of-methods-using-digital-signature]
 ==== To Enable Message Protection for a Particular Method or Set of Methods Using Digital Signature
 
 Follow this procedure.
@@ -824,7 +824,7 @@ Follow this procedure.
 
 . Compile and deploy the corresponding application.
 
-[[programmatic-login-using-the-programmaticlogin-class]]
+[#programmatic-login-using-the-programmaticlogin-class]
 == Programmatic Login Using the Programmaticlogin Class
 
 Programmatic login allows a deployed Jakarta EE application or module to invoke a *login* method. If the login is successful, a `SecurityContext` is established as if the client had authenticated using any of the conventional Jakarta EE mechanisms.
@@ -837,7 +837,7 @@ This section describes a proprietary Payara mechanism, but see also the standard
 
 NOTE: The `com.sun.enterprise.security.ee.auth.login.ProgrammaticLogin` class present in Payara Server is not part of any Jakarta EE APIs; therefore, it is not portable to other application servers.
 
-[[programmatic-login-precautions]]
+[#programmatic-login-precautions]
 === Programmatic Login Precautions
 
 Payara Server is not involved in how the login information (`user`, `password`) is obtained by the deployed application. Programmatic login places the burden on the application developer with respect to assuring that the resulting system meets security requirements. If the application code reads the authentication information across the network, the application determines whether to trust the user.
@@ -855,7 +855,7 @@ Lazy authentication is not supported for programmatic login. If an access check 
 
 One way to account for this occurrence is to catch the access control or security exception, perform a programmatic login, and repeat the request.
 
-[[granting-programmatic-login-permission]]
+[#granting-programmatic-login-permission]
 === Granting Programmatic Login Permission
 
 The `ProgrammaticLoginPermission` permission is required to invoke the programmatic login mechanism for an application if the security manager is enabled. For information about the security manager, see xref:#the-server.policy-file[The `server.policy` File].
@@ -873,7 +873,7 @@ grant codeBase "file:${jar-file-path}" {
 
 NOTE: `jar-file-path` is the path to the application's JAR file.
 
-[[the-programmaticlogin-class]]
+[#the-programmaticlogin-class]
 === The `ProgrammaticLogin` Class
 
 The `com.sun.enterprise.security.ee.auth.login.ProgrammaticLogin` class enables a user to perform login programmatically and in addition, logout of the existing security context when required.
@@ -946,7 +946,7 @@ All `logout` method variants return `true` if the logout process succeeded, `fal
 
 If the `errors` parameter is set to `true`, any exceptions encountered during the logout process are propagated to the caller. If set to `false`, exceptions will be thrown.
 
-[[user-authentication-for-single-sign-on]]
+[#user-authentication-for-single-sign-on]
 == User Authentication for Single Sign-On
 
 The single sign-on feature of the Payara Server allows multiple web applications deployed to the same virtual server to share the user authentication state.
@@ -988,7 +988,7 @@ asadmin set server-config.http-service.virtual-server.vsrv1.property.sso-max-ina
 asadmin set server-config.http-service.virtual-server.vsrv1.property.sso-reap-interval-seconds="60"
 ----
 
-[[jakarta-security-support]]
+[#jakarta-security-support]
 == Jakarta Security Support
 
 Jakarta Security defines several authentication-related plugin SPIs, such as the `HttpAuthenticationMechanism` and `IdentityStore` interfaces:
@@ -1000,7 +1000,7 @@ In addition to these authentication plugin SPIs, the Jakarta Security specificat
 
 The `SecurityContext` interface defines methods that allow an application to access security information about a caller, authenticate a caller, and authorize a caller. These methods include `getCallerPrincipal()`, `getPrincipalsByType()`, `isCallerInRole()`, `authenticate()`, and `hasAccessToWebResource()`.
 
-[[payara-and-jakarta-security]]
+[#payara-and-jakarta-security]
 === Payara Platform and Jakarta Security
 
 Payara Server and Micro implement Jakarta Security to provide built-in support for the following authentication mechanisms:
@@ -1016,7 +1016,7 @@ Jakarta Security  defines several annotations, with names that end with the `Def
 
 TIP: Jakarta Security also supports the use of Jakarta Expression Language in these annotations to allow dynamic configuration.
 
-[[built-in-authentication-mechanisms-and-identity-stores]]
+[#built-in-authentication-mechanisms-and-identity-stores]
 ==== Built-In Authentication Mechanisms and Identity Stores
 
 An application packages its own `HttpAuthenticationMechanism` by including in a bean archive that is a part of the application. Alternatively, it may select and configure one of the built-in mechanisms using the corresponding annotation, as listed below:
@@ -1061,7 +1061,7 @@ Payara Server provides out of the box implementation of the `Pbkdf2PasswordHash`
 
 It is suggested that you use `Pbkdf2PasswordHash` for generating and validating passwords, unless there are specific requirements which cannot be met in any other way.
 
-[[custom-authentication-mechanism]]
+[#custom-authentication-mechanism]
 ==== Custom Authentication Mechanism
 
 An application provider can choose to provide its own custom authentication mechanism, apart from built-in authentication mechanisms.
@@ -1145,7 +1145,7 @@ public class MyAuthenticationMechanism implements HttpAuthenticationMechanism {
 }
 ----
 
-[[multiple-httpauthenticationmechanism-ear]]
+[#multiple-httpauthenticationmechanism-ear]
 === Multiple Httpauthenticationmechanisms in EAR Application
 
 Within the Security API specification, an `HttpAuthenticationMechanism` can be defined to retrieve the user credentials from the HTTP Request. These credentials are then used by any configured identity stores to validate the user.
@@ -1160,7 +1160,7 @@ IMPORTANT: In order to use this feature, there must not be any custom `HttpAuthe
 
 NOTE: This behaviour is specific to the Payara Platform and not compatible with the Jakarta Security specification.
 
-[[configure-multiple-httpauth-mechanisms]]
+[#configure-multiple-httpauth-mechanisms]
 ==== How to Configure
 
 In order to configure a specific `HttpAuthenticationMechanism` for a Web application, define the `fish.payara.security.mechanism` parameter in the `web.xml` deployment descriptor like in the following case:
@@ -1191,7 +1191,7 @@ The following mechanisms can be used:
 
 NOTE: When no parameter is specified, the standard rules of Jakarta Security are active (only 1 mechanism allowed per application/module).
 
-[[jakarta-authentication-support]]
+[#jakarta-authentication-support]
 == Jakarta Authentication Support
 
 Jakarta Authentication is part of the Jakarta EE specification and defined by https://jakarta.ee/specifications/authentication[its own specification^].
@@ -1204,7 +1204,7 @@ Payara Server provides a simple file-based Jakarta Authentication engine as a de
 
 To configure an alternate provider using the Administration Console, open the _Security_ component under the relevant configuration, and select the _JACC Providers_ component.
 
-[[payara-server-and-jakarta-authentication]]
+[#payara-server-and-jakarta-authentication]
 === Payara Server and Jakarta Authentication
 
 The Jakarta Authentication specification defines profiles that establish contracts for the use of the SPI in specific contexts.
@@ -1227,14 +1227,14 @@ A compatible server-side message processing runtime, such as the Payara Server s
 
 The servlet container uses the SPI at these interaction points to delegate the corresponding message security processing to a *server authentication module (SAM)*, integrated by the SPI into the container.
 
-[[adding-authentication-modules-to-the-servlet-container]]
+[#adding-authentication-modules-to-the-servlet-container]
 === Adding Authentication Modules to the Servlet Container
 
 You can use Jakarta Authentication in the web tier to facilitate the injection of pluggable authentication modules within the servlet constraint processing engine. Payara Server includes implementations of a number of HTTP layer authentication mechanisms such as `basic`, `form`, and `digest` authentication.
 
 You can add alternative implementations of the included mechanisms or implementations of new mechanisms such as Kerberos/SPNEGO or CAS for example.
 
-[[writing-a-server-authentication-module]]
+[#writing-a-server-authentication-module]
 === Writing a Server Authentication Module
 
 A key step in adding an authentication mechanism to a compatible server-side message processing runtime such as the servlet container is acquiring a SAM that implements the desired authentication mechanism. One way to do that is to write the SAM yourself.
@@ -1267,7 +1267,7 @@ The `validateRequest` method may also throw an `AuthException` to indicate that 
 
 *`cleanSubject(MessageInfo messageInfo, Subject subject)`*: This method removes the mechanism-specific principals, credentials, or both from the subject. This method is not currently called by the container. A legitimate implementation could remove all the principals from the argument subject.
 
-[[sample-server-authentication-module]]
+[#sample-server-authentication-module]
 === Sample Server Authentication Module
 
 The class `MySam.java` is a sample SAM implementation. Notice that the sample implements the five methods of the ServerAuthModule interface. This SAM implements an emulation of HTTP basic authentication for demonstration purposes.
@@ -1425,14 +1425,14 @@ public class MySam implements ServerAuthModule {
 NOTE: The `initialize` method looks for the `group.name` and `realm.name` properties. The `group.name` property configures the default group assigned as a result of any successful authentication. +
 The `realm.name` property defines the realm value sent back to the browser in the `WWW-Authenticate` challenge.
 
-[[compiling-and-installing-a-server-authentication-module]]
+[#compiling-and-installing-a-server-authentication-module]
 === Compiling and Installing a Server Authentication Module
 
 Before you can use the sample SAM, you need to compile, install, and configure it. Then you can bind it to an application.
 
 To compile the SAM, include the SPI in your classpath. After you compile the SAM, install it by copying a JAR file containing the compiled SAM to the `$as-install/glassfish/lib` directory.
 
-[[configuring-a-server-authentication-module]]
+[#configuring-a-server-authentication-module]
 === Configuring a Server Authentication Module
 
 You can configure a SAM in one of these ways:
@@ -1459,7 +1459,7 @@ You can configure a SAM in one of these ways:
 ** `--property group-name=user:realm-name=Sam`
 ** Provider name operand — Specify a unique name for the SAM, for example `MySAM`
 
-[[binding-a-server-authentication-module-to-your-application]]
+[#binding-a-server-authentication-module-to-your-application]
 === Binding a Server Authentication Module to Your Application
 
 After you install and configure the SAM, you can bind it for use by the container on behalf of one or more of your applications. You have two options in how you bind the SAM, depending on whether you are willing to repackage and redeploy your application:
@@ -1473,7 +1473,7 @@ TIP: You can find a description of the functionality of an `AuthConfigProvider` 
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-[[advanced-group-configuration]]
+[#advanced-group-configuration]
 == Advanced Groups Configuration
 
 Payara Server allows the advanced configuration mapping of a client certificate's distinguished name (DN) to specific realm groups, which allows the realm to automatically assign groups based on the values of each DN part to all principals registered in the realm.
@@ -1510,7 +1510,7 @@ Not all DN parts are supported. The following is the list of all parts that are 
 |IP |IP Address |1.3.6.1.4.1.42.2.11.2.1
 |===
 
-[[advanced-groups-conf-using-admin-console]]
+[#advanced-groups-conf-using-admin-console]
 === Configuration Using the Admin Console
 
 This feature can be configured on the default certificate realm with the following steps:
@@ -1520,7 +1520,7 @@ This feature can be configured on the default certificate realm with the followi
 . Click the `Add Property` button
 . Set the property _Name_ to be `dn-parts-used-for-groups` and set the _Value_ to a comma separated list of OID names.
 
-[[advanced-groups-conf-using-asadmin-cli]]
+[#advanced-groups-conf-using-asadmin-cli]
 === Configuration Using the Asadmin CLI
 
 You can also use the following asadmin command to set the value of the property in the security realm:
@@ -1534,7 +1534,7 @@ IMPORTANT: After setting the value of the property, make sure that you **restart
 
 CAUTION: Keep in mind that the set of DN parts used to configure the realm groups must be predictable to be useful, so be careful to use DN parts that do not create group name collisions.
 
-[[mapping-groups-to-roles-in-applications]]
+[#mapping-groups-to-roles-in-applications]
 === Mapping Groups to Security Roles in Applications
 
 After configuring the realm groups, you can map these groups to application roles as you'd do by using the Payara Server specific deployment descriptors. You can even map these roles to principals that are configured as documented in the xref:#configure-the-principal-name-on-certificate-realms[advanced Principal Name configuration] section.
@@ -1595,7 +1595,7 @@ Then the role mapping can be based on organizational unit in this case. But you 
 </payara-web-app>
 ----
 
-[[configure-the-principal-name-on-certificate-realms]]
+[#configure-the-principal-name-on-certificate-realms]
 == Advanced Principal Name Configuration
 
 Payara Server allows the use of the Common-Name (`CN`) attribute of a client certificate's DN to be used as the full principal's name when the certificated is authenticated in an application. This simplifies the authentication process, as the common name will replace the full name in the validation process of the certificate's authentication.
@@ -1604,7 +1604,7 @@ To configure this behaviour, the `common-name-as-principal-name` property can be
 
 NOTE: The `common-name-as-principal-name` property is set to false by default if no configuration is provided.
 
-[[advanced-principal-conf-using-admin-console]]
+[#advanced-principal-conf-using-admin-console]
 === Configuration Using the Admin Console
 
 This feature can be configured on the default certificate realm as follows on the Admin Console:
@@ -1616,7 +1616,7 @@ This feature can be configured on the default certificate realm as follows on th
 +
 image:security/common-name-as-principal-name.png[alt="Common Name As Principal Name Setting",width=600px]
 
-[[advanced-principal-conf-using-asadmin-cli]]
+[#advanced-principal-conf-using-asadmin-cli]
 === Configuration Using the Asadmin CLI
 
 You can also use the following asadmin command to set the value of the property:
@@ -1628,7 +1628,7 @@ asadmin set configs.config.${YOUR_INSTANCE_CONFIG}.security-service.auth-realm.c
 
 IMPORTANT: After setting the value of the property, make sure that you **restart the server instance** for the changes to take effect.
 
-[[using-cn-as-subject-in-applications]]
+[#using-cn-as-subject-in-applications]
 === Using `CN` as Subject in Applications
 
 Once this feature is enabled, users can be authenticated when a valid certificate uses the common name instead of the full domain name. It is also possible to map users to roles in this directly.
@@ -1663,7 +1663,7 @@ Then the `principal-name` can be simplified by using only the common name like t
 </payara-web-app>
 ----
 
-[[client-certificate-validator]]
+[#client-certificate-validator]
 == Client Certificate Custom Validations
 
 By default, the Payara Server runtime checks only if the submitted Client Certificate is present in the trust store and that it hasn't expired already. If these conditions are met, it is accepted without any additional checks.
@@ -1672,7 +1672,7 @@ Custom Client Certificate Validation allows you to perform extra checks in addit
 
 You can perform a check on the validity date, and use the Online Certificate Status Protocol (OCSP) to validate the certificate when it has a Certificate Revocation List entry (CRL), or lookup the DN name in a database for example, and determine based on this information if the certificate is still accepted.
 
-[[create-custom-validator]]
+[#create-custom-validator]
 === Creating a Custom Validator
 
 When you want to implement custom validation, implement the `fish.payara.security.client.ClientCertificateValidator` interface and define your class through the `ServiceLoader` mechanism.
@@ -1717,12 +1717,12 @@ com.company.certificate.MyCertificateValidator
 
 NOTE: You can @Inject CDI and EJB beans in your validator implementation, however since the validator itself is not a Jakarta EE bean, `@PostConstruct` and `@PreDestroy`-annotated methods will not be called on the validator instance.
 
-[[client-certificate-expiration-validator]]
+[#client-certificate-expiration-validator]
 === Certificate Expiration Validation
 
 By default, certificate expiration validation is enabled. This validation checks if the certificates in the trust store haven't expired yet. If the client certificate has expired or is not valid yet, a warning message will be printed in the server logs.
 
-[[certificate-expiration-val-config-the-asadmin-cli]]
+[#certificate-expiration-val-config-the-asadmin-cli]
 ==== Configuration Using the Asadmin CLI
 
 You can use the following asadmin command to set the value of the property through:
@@ -1732,7 +1732,7 @@ You can use the following asadmin command to set the value of the property throu
 asadmin> set configs.config.${YOUR_INSTANCE_CONFIG}.security-service.auth-realm.certificate.property.certificate-validation=[true/false]
 ----
 
-[[certificate-expiration-val-config-using-the-admin-console]]
+[#certificate-expiration-val-config-using-the-admin-console]
 ==== Configuration Using the Admin Console
 
 This feature can be configured on the default certificate realm as follows on the Admin Console:
@@ -1745,19 +1745,19 @@ image:security/default-certificate-expiration-validation.png[alt="Certificate Ex
 +
 IMPORTANT: After setting the value of the property, make sure that you **restart the server instance** for the changes to take effect.
 
-[[jce-provider-support]]
+[#jce-provider-support]
 == JCE Provider Support
 
 Payara Server supports using the JCE framework to configure custom security providers. Custom providers can be installed statically in the JDK, via the service loader mechanism, or via the programmatic API.
 
 NOTE: Although the provider can be changed while the server is running, this can influence other processes that already use the previous preferred provider.
 
-[[example]]
+[#example]
 === Example
 
 The example below uses an existing provider (https://bouncycastle.org/[Bouncy Castle^]), to which a custom service is added programmatically. As suggested above, this is not the suggested way to do this since it is being changed dynamically. Rather, this example is here for an idea of how it _could_ be used.
 
-[[custom-certificate-factory]]
+[#custom-certificate-factory]
 ==== Custom Certificate Factory
 
 [source, java]

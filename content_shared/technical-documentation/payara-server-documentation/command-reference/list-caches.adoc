@@ -2,7 +2,7 @@
 
 Lists all configured Hazelcast distributed caches.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] list-caches
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to list the Hazelcast distributed caches configured in the corresponding target.
 
 For each cache entry, a minimal amount of information is printed out.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -34,7 +34,7 @@ Applies to the default server instance. This is the default value.
 instance_name;;
 Applies to a specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Lists the Hazelcast distributed caches in the domain.*
@@ -51,7 +51,7 @@ HZMap payara.micro.applications.store hz:impl:mapService 1 entries
 Command list-caches executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

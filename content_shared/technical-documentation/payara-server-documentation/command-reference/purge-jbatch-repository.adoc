@@ -2,7 +2,7 @@
 
 Purges the current Jakarta Batch repository.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] purge-jbatch-repository [--help]
 [app-tag]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `purge-jbatch-repository` subcommand will purge the current Jakarta Batch repository of all jobs scheduled for the referenced application's tag.
@@ -47,7 +47,7 @@ If using Maven, you'll have to add a dependency to IBM's *JBatch Container Runti
 </dependency>
 ----
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -56,7 +56,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *app-tag*:
@@ -73,7 +73,7 @@ Where *Configuration Identifier* is the identifier of the configuration associat
 +
 See the description of the command on how to acquire the application's tag in a programmatic manner.
 
-[[examples]]
+[#examples]
 == Examples
 
 To remove all current jobs for an application named _jbatch-test_ deployed on the DAS (`server-config`) then run the following command:
@@ -83,7 +83,7 @@ To remove all current jobs for an application named _jbatch-test_ deployed on th
 asadmin> purge-jbatch-repository "server-config:jbatch-test__/jbatch-test"
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

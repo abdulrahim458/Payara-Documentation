@@ -5,12 +5,12 @@ This chapter describes important information about running Payara Server in a se
 
 This chapter assumes that you are familiar with security features such as authentication, authorization and certificates. If you are not, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-system-security[Administering System Security] first.
 
-[[determining-your-security-needs]]
+[#determining-your-security-needs]
 == Determining Your Security Needs
 
 Before you deploy Payara Server and your Jakarta EE applications into a production environment, determine your security needs and make sure that you take the appropriate security measures.
 
-[[understand-your-environment]]
+[#understand-your-environment]
 === Understand Your Environment
 
 To better understand your security needs, ask yourself the following questions:
@@ -39,12 +39,12 @@ In some cases, a fault in your security scheme is easily detected and considered
 +
 Understanding the security ramifications of each resource will help you protect it properly.
 
-[[installing-payara-server-in-a-secure-environment]]
+[#installing-payara-server-in-a-secure-environment]
 == Installing Payara Server in a Secure Environment
 
 This section describes recommendations for installing Payara Server in a secure environment.
 
-[[enable-the-secure-administration-feature]]
+[#enable-the-secure-administration-feature]
 === Enable the Secure Administration Feature
 
 The secure administration feature allows an administrator to secure all administrative communication between the domain administration server (DAS), any remote instances, and administration clients such as the asadmin utility, the administration console, and REST clients.
@@ -57,12 +57,12 @@ NOTE: Imposing a heightened level of security is optional.
 
 See xref:technical-documentation/payara-server-documentation/security-guide/managing-administrative-security.adoc#managing-administrative-security[Managing Administrative Security] for information on enabling the secure administration feature.
 
-[[run-on-the-web-profile-if-possible]]
+[#run-on-the-web-profile-if-possible]
 == Run on the Web Profile If Possible
 
 If your applications can run without issues on Payara Server's Web Profile, use that instead of the Full Profile. As the web profile is a subset of the full feature set of the Payara Platform, it has fewer features that require extra considerations for security (like ORB listeners, Web Services, Message Queue Brokers) which reduces the overall risks of the server's installation.
 
-[[securing-the-payara-server-host]]
+[#securing-the-payara-server-host]
 == Securing the Payara Server Host Machine
 
 A Payara Server production environment is only as secure as the security of the machine on which it is running. It is important that you secure the physical machine, the operating system, and all other software that is installed on the host machine.
@@ -185,7 +185,7 @@ NOTE: In general, whenever possible it is recommended to upgrade the Java runtim
 
 |=======================================================================
 
-[[securing-payara-server]]
+[#securing-payara-server]
 == Securing Payara Server
 
 Payara Server provides a powerful and flexible set of software tools for securing the subsystems and applications that run on a server instance. The following table provides a checklist of essential features recommended to secure your production environment.
@@ -253,7 +253,7 @@ By default, Payara Server logging messages are recorded in the server log, and y
 For production environments, create at least one other account in the `asadmin` group in case one account password is compromised. When creating asadmin users give them unique names that cannot be easily guessed.
 |=======================================================================
 
-[[securing-applications]]
+[#securing-applications]
 == Securing Applications
 
 Although much of the responsibility for securing Payara Server resources in a domain fall within the scope of the server, some security responsibilities lie within the scope of individual applications.

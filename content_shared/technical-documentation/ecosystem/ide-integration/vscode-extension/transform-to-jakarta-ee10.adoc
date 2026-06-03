@@ -2,7 +2,7 @@
 
 VSCode's Payara Tools allow users to automatically convert the source code of Java/Jakarta EE 8 applications to Jakarta EE 10.
 
-[[transform-single-file]]
+[#transform-single-file]
 == Transform a Single File
 
 To transform a single file, select the file, right-click on it and select the *Transform to Jakarta EE 10* option:
@@ -21,7 +21,7 @@ To verify that the resulting file is valid you'll have to open it using either V
 
 *image*: vscode-extension/transform-to-jakartaee10/file-transform-open-resulting-file.png[Open transformed file]
 
-[[transform-single-file-same-location]]
+[#transform-single-file-same-location]
 == Transform a Single File in the Same Location
 
 It is possible to save the transformed file in the same location where the original resides.
@@ -34,7 +34,7 @@ Once the file has been transformed, it will override the current file in the IDE
 
 *image*: vscode-extension/transform-to-jakartaee10/file-transform-same-folder-result.png[Result of overridden original file]
 
-[[transform-all-files-folder]]
+[#transform-all-files-folder]
 == Transform All Files in a Folder
 
 To transform all source code files located in a folder, select the folder, right click and select the *Transform to Jakarta EE 10* option.
@@ -55,7 +55,7 @@ To verify that the resulting files in the new folder are valid, open it from wit
 
 *image*: vscode-extension/transform-to-jakartaee10/folder-transform-open-new-folder.png[Open newly transformed folder]
 
-[[transform-folder-same-location]]
+[#transform-folder-same-location]
 == Transform All Files in a Folder in the Same Location
 
 It is possible to save all transformed files in the same location where the originals reside, effectively overriding them.

@@ -2,7 +2,7 @@
 
 Returns whether the Asadmin Recorder service is enabled .
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,12 +10,12 @@ Returns whether the Asadmin Recorder service is enabled .
 asadmin [asadmin-options] asadmin-recorder-enabled [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `asadmin-recorder-enabled` command checks if the Asadmin Recorder feature is active in Payara Server, simply returning a true or false status.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -24,7 +24,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1*
@@ -38,7 +38,7 @@ Asadmin Recorder Service is enabled
 Command asadmin-recorder-enabled executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

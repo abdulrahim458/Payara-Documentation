@@ -3,7 +3,7 @@
 
 This section details how to use the underlying Data Grid Hazelcast instance in Payara Server within application code.
 
-[[accessing-the-jndi-registered-hazelcast-instance]]
+[#accessing-the-jndi-registered-hazelcast-instance]
 == Accessing the Hazelcast Instance via JNDI
 
 By default, the JNDI name of the hazelcast instance is `payara/Hazelcast`, though this can be altered using the xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[set-hazelcast-configuration] command. You will need to import the following packages into your Java class:
@@ -45,12 +45,12 @@ public class Component{
 
 WARNING: It is recommended to wrap this block in a `try-catch` clause, since a `NamingException` exception can be generated due to the use of JNDI.
 
-[[using-hazelcast-for-the-web-and-ejb-container-persistence]]
+[#using-hazelcast-for-the-web-and-ejb-container-persistence]
 == Using Hazelcast for Web and EJB Container Persistence
 
 Hazelcast can be used as the persistence provider for both the Web and EJB containers.
 
-[[setting-hazelcast-as-the-persistence-provider-through-the-admin-console]]
+[#setting-hazelcast-as-the-persistence-provider-through-the-admin-console]
 === Setting Hazelcast as the Persistence Provider through the Admin Console
 
 NOTE: Payara Server's initial configuration has the `hazelcast` option as the default setting.
@@ -62,7 +62,7 @@ To set up Hazelcast for persistence:
 +
 *image*: hazelcast/hazelcast-admin-console-select-availability-service.png[Availability Service]
 
-[[setting-web-persistence]]
+[#setting-web-persistence]
 ==== Setting Web Persistence
 
 . Open the "Web Container Availability" tab, and select "Hazelcast" from the _Persistence Type_ drop-down menu:
@@ -71,7 +71,7 @@ To set up Hazelcast for persistence:
 
 . Save the changes.
 
-[[setting-ejb-persistence]]
+[#setting-ejb-persistence]
 ==== Setting EJB Persistence
 
 . Open the "EJB Container Availability" tab and select "Hazelcast" from the _Persistence Type_ drop-down menu:
@@ -80,12 +80,12 @@ To set up Hazelcast for persistence:
 
 . Save the changes.
 
-[[setting-hazelcast-as-the-persistence-provider-using-asadmin]]
+[#setting-hazelcast-as-the-persistence-provider-using-asadmin]
 === Setting Hazelcast as the Persistence Provider from the Command Line
 
 To configure the persistence provider with the _asadmin_ CLI, you have to use the _set_ command.
 
-[[for-the-web-container-1]]
+[#for-the-web-container-1]
 ==== For the Web Container
 
 To set Hazelcast as the persistence provider of the Web Container, run the following command:
@@ -95,7 +95,7 @@ To set Hazelcast as the persistence provider of the Web Container, run the follo
 asadmin> set <cluster-config>.availability-service.web-container-availability.persistence-type=hazelcast
 ----
 
-[[for-the-ejb-container-1]]
+[#for-the-ejb-container-1]
 ==== For the EJB Container
 
 To set Hazelcast as the persistence provider of the EJB Container, run the following command:

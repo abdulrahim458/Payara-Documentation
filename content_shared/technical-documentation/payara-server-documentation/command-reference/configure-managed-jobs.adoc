@@ -2,7 +2,7 @@
 
 Configures how long information about subcommands that were started using `asadmin --detach` or that contain progress information is kept.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,14 +14,14 @@ asadmin [asadmin-options] configure-managed-jobs [--help]
 [--cleanup-poll-interval cleanup-poll-interval]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `configure-managed-jobs` subcommand configures how long information about subcommands (jobs) that were started using the `asadmin` utility option `--detach` or that contain progress information is kept. The `--detach` option detaches long-running subcommands and executes them in the background in detach mode. Job information includes subcommand progress and status.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -38,7 +38,7 @@ This subcommand is supported in remote mode only.
 *`--cleanup-poll-interval`*:
   Specifies the time interval after which the cleanup service polls for expired jobs. The default value is 20 minutes.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Configuring the Job Retention Period*
@@ -51,7 +51,7 @@ asadmin> configure-managed-jobs --job-retention-period=36h
 Command configure-managed-jobs executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

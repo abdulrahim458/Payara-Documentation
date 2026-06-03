@@ -2,7 +2,7 @@
 
 Restarts all instances in a cluster.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,7 +16,7 @@ asadmin [asadmin-options] restart-cluster [--help]
 [clustername]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `restart-cluster` subcommand stops and starts a cluster by stopping and starting all Payara Server instances in the cluster that are  already running.
@@ -30,7 +30,7 @@ You may run this subcommand from any host that can contact the DAS.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -62,13 +62,13 @@ Specify a timeout value of instances. The default value is `600`.
 *`--timeout`*:
 Specify a timeout value of the command. The default value is `600`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *cluster-name*:
   The name of the cluster to restart.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Restarting a Cluster*
@@ -81,7 +81,7 @@ asadmin> restart-cluster c1
 Command restart-cluster executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

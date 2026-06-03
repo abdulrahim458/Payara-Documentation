@@ -3,7 +3,7 @@
 
 When using this adapter, the Payara Micro container lifecycle is managed by Arquillian by starting a separate JVM process to launch and stop a Payara Micro instance locally.
 
-[[usage]]
+[#usage]
 == Usage
 
 The Payara Micro Managed Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-micro-managed[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
@@ -17,7 +17,7 @@ The Payara Micro Managed Arquillian container adapter can be found on link:https
 </dependency>
 ----
 
-[[configuration]]
+[#configuration]
 == Container Configuration
 
 The Payara Micro container can be configured via the `arquillian.xml` file using the standard http://arquillian.org/arquillian-core/#container-configuration[Arquillian Container Configuration^] mechanism.
@@ -90,7 +90,7 @@ To change this, provide java debug options to `cmdOptions`.
 |
 |===
 
-[[examples]]
+[#examples]
 == Examples
 
 To configure the options using Arquillian container properties, you need to use an `arquillian.xml` file placed on the test classpath.

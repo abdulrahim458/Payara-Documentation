@@ -2,7 +2,7 @@
 
 Stops the Domain Administration Server(DAS) of the specified domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,14 +15,14 @@ asadmin [asadmin-options] stop-domain [--help]
 [domain-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `stop-domain` subcommand stops the Domain Administration Server (DAS) of the specified domain. If the domain directory is not specified, the domain in the default domains directory is stopped. If there are two or more domains in the domains directory, the domain-name operand must be specified.
 
 This subcommand is supported in local or remote mode. If you specify a host name, the subcommand assumes you are operating in remote mode, which means you must correctly authenticate to the remote server. In local mode, you normally do not need to authenticate to the server as long as you are running the subcommand as the same user who started the server.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -52,13 +52,13 @@ Specifies how long to take for the domain to stop in seconds. If stopping the do
 +
 The default value is `600`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-name*:
   The name of the domain you want to stop. Default is the name specified during installation, usually `domain1`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Stopping a Domain*
@@ -72,7 +72,7 @@ Waiting for the domain to stop .................
 Command stop-domain executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

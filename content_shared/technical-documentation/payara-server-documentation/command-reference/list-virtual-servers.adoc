@@ -2,7 +2,7 @@
 
 Lists the existing virtual servers.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-virtual-servers [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-virtual-servers` subcommand lists the existing virtual servers.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -41,7 +41,7 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Lists the virtual servers for the specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Virtual Servers*
@@ -56,7 +56,7 @@ __asadmin
 Command list-virtual-servers executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

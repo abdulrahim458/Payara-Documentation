@@ -4,7 +4,7 @@ Apache NetBeans IDE 16 and higher provides out-of-the-box support for the Payara
 
 Therefore, there is no need to manually install the Payara Tools plugin.
 
-[[tools]]
+[#tools]
 == Tools
 * xref:technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/payara-server.adoc[Payara Server] - Apache NetBeans enables developers to download the latest version of Payara Server that can be easily configured and added as a recognised server in NetBeans IDE. This means you can easily deploy and manage applications from the NetBeans IDE.
 

@@ -2,7 +2,7 @@
 
 Provides a way to delete a MicroProfile Configuration property in one of the built-in configuration sources.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,7 +15,7 @@ asadmin [asadmin-options] delete-config-property [--help]
 [--target=<target[default:server]>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-config-property` deletes the record of a MicroProfile Configuration property in one of the built-in config sources.
@@ -24,7 +24,7 @@ The source is specified with `--source` and, where there is ambiguity, the `--so
 
 For example, where the source is `server`, the `--sourceName` can be used to specify the name of the server instance where the property is stored.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -57,7 +57,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting the configuration property value*
@@ -69,7 +69,7 @@ This example deletes the `JMSBrokerURL` property from the configuration source n
 asadmin delete-config-property --propertyName=JMSBrokerURL --source=module --sourceName=myApplication --moduleName=myModule --target=myAppCluster
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

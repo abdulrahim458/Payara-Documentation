@@ -2,7 +2,7 @@
 
 Lists all the thread pools.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-threadpools [--help]
 target
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-threadpools` subcommand lists the Payara Server thread pools.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -42,7 +42,7 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Lists the thread pools for a particular instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Thread Pools*
@@ -58,7 +58,7 @@ thread-pool-1
 Command list-threadpools executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 This section details the very basics of starting a Payara Micro instance.
 
-[[starting-an-instance-from-the-command-line]]
+[#starting-an-instance-from-the-command-line]
 == Starting an Instance from the Command Line
 
 To start an instance of Payara Micro from the command line, you simply run the JAR:
@@ -14,7 +14,7 @@ java -jar payara-micro.jar
 
 This single command is all you need to run Payara Micro instances; additional configuration options are all part of this command.
 
-[[starting-an-instance-from-rootdir-launcher]]
+[#starting-an-instance-from-rootdir-launcher]
 == Starting an Instance from Persistent Configuration Directory
 
 When using xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/jar-structure-and-configuration/root-directory.adoc[persistent root configuration directory], it is possible to generate a launcher bound to that directory using the command:
@@ -33,7 +33,7 @@ java -jar $rootDirectory/launch-micro.jar
 
 This makes configuration directory self-sufficient and the distribution file (`payara-micro.jar`) is no longer needed.
 
-[[starting-an-instance-programmatically]]
+[#starting-an-instance-programmatically]
 == Starting an Instance Programmatically
 
 You need to import two classes from the `fish.payara.micro` package (contained in the Payara Micro JAR, see section xref:technical-documentation/payara-micro-documentation/maven-support.adoc[Maven Support] for instructions on importing this JAR with **Maven**):

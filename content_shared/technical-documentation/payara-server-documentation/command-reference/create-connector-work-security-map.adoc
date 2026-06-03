@@ -2,7 +2,7 @@
 
 Creates a work security map for the specified resource adapter.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,7 +15,7 @@ asadmin [asadmin-options] create-connector-work-security-map [--help]
 mapname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-connector-work-security-map` subcommand maps the caller identity of the work submitted by the resource adapter EIS principal or
@@ -26,7 +26,7 @@ The enterprise information system (EIS) is any system that holds the data of an 
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -46,13 +46,13 @@ This subcommand is supported in remote mode only.
 *`--raname`*:
   Indicates the connector module name, which is the name of the resource adapter.
 
-[[operands]]
+[#operands]
 == Operands
 
 *mapname*:
   The name of the work security map to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Connector Work Security Map (Principal)*
@@ -80,7 +80,7 @@ eis-group-3=server-group-1 workSecurityMap2
 Command create-connector-work-security-map executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

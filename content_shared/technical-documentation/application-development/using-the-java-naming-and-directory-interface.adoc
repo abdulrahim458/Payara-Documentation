@@ -8,7 +8,7 @@ For general information about the JNDI API, see `http://www.oracle.com/technetwo
 
 IMPORTANT: Payara Server's Web Profile supports the EJB 4.0 Lite specification, which allows enterprise beans within web applications, among other features. The Full Profile supports the entire EJB 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans^].
 
-[[accessing-the-naming-context]]
+[#accessing-the-naming-context]
 == Accessing the Naming Context
 
 Payara Server provides a naming environment, or context, which is compliant with standard Jakarta EE requirements. A `Context` object provides the methods for binding names to objects, unbinding names from objects, renaming objects, and listing the bindings.
@@ -19,7 +19,7 @@ The JNDI API also provides subcontext functionality. Much like a directory in a 
 
 NOTE: Each resource within a server instance must have a unique name. However, two resources in different server instances or different domains can have the same name.
 
-[[portable-global-jndi-names]]
+[#portable-global-jndi-names]
 === Portable Global JNDI Names
 
 If an EJB component is a kind of session bean, and it is deployed to any implementation supporting the Jakarta Enterprise Beans 4.0 specification,
@@ -34,7 +34,7 @@ For more information, see the Jakarta EE Platform Specification, section https:/
 NOTE: If the `disable-nonportable-jndi-names` property is set to `false` (the
 default), a Payara Server JNDI name is assigned in addition to a portable global JNDI name.
 
-[[payara-server-vendor-specific-global-jndi-names]]
+[#payara-server-vendor-specific-global-jndi-names]
 === Payara Server Vendor-Specific Global JNDI Names
 
 Payara Server vendor-specific global JNDI names are assigned according to the following precedence rules:
@@ -62,7 +62,7 @@ For an entity bean, a global JNDI name must be assigned.
 +
 For example, in the `@Resource(name="jdbc/Foo") DataSource ds;` annotation, the global JNDI name is `jdbc/Foo`.
 
-[[disabling-payara-server-jndi-names]]
+[#disabling-payara-server-jndi-names]
 === Disabling Payara Server JNDI Names
 
 The EJB specification supported by Payara Server defines portable EJB JNDI names for session beans. Because of this, there is less need to continue to use older vendor-specific JNDI names.
@@ -85,7 +85,7 @@ The `disable-nonportable-jndi-names` property is a boolean flag that can take th
 
 TIP: This setting applies to all session beans deployed in the server.
 
-[[accessing-ejb-components-using-the-cosnaming-naming-context]]
+[#accessing-ejb-components-using-the-cosnaming-naming-context]
 === Accessing EJB Components Using the `CosNaming` Naming Context
 
 The preferred way of accessing the naming service, even in code that runs outside a Jakarta EE container, is to use the no-argument `InitialContext` constructor.
@@ -111,7 +111,7 @@ try {
 
 The `java.naming.factory.initial` property applies to only one instance. The property is neither cluster or deployment group-aware.
 
-[[accessing-ejb-components-in-a-remote-payara-server]]
+[#accessing-ejb-components-in-a-remote-payara-server]
 === Accessing EJB Components in a Remote Payara Server
 
 The recommended approach for looking up an EJB component in a remote Payara Server from a client that is a servlet or EJB component is to use the Interoperable Naming Service syntax.
@@ -160,12 +160,12 @@ IMPORTANT: Objects stored in the interoperable naming context and component-spec
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-[[configuring-resources]]
+[#configuring-resources]
 == Configuring Resources
 
 Payara Server exposes special resources in the naming context environment.
 
-[[external-jndi-resources]]
+[#external-jndi-resources]
 === External JNDI Resources
 
 An external JNDI resource defines custom JNDI contexts and implements the `javax.naming.spi.InitialContextFactory` interface. There is no specific JNDI parent context for external JNDI resources, except for the standard `java:comp/env/`.
@@ -175,7 +175,7 @@ Create an external JNDI resource in one of these ways:
 * To create an external JNDI resource using the Administration Console, open the _Resources_ component, open the _JNDI_ component, and select _External Resources_.
 * To create an external JNDI resource, use the `asadmin create-jndi-resource` command.
 
-[[custom-resources]]
+[#custom-resources]
 === Custom Resources
 
 A custom resource specifies a custom server-wide resource object factory that implements the `javax.naming.spi.ObjectFactory` interface. There is no specific JNDI parent context for external JNDI resources, except for the standard `java:comp/env/`.
@@ -185,7 +185,7 @@ Create a custom resource in one of these ways:
 * To create a custom resource using the Administration Console, open the _Resources_ component, open the _JNDI_ component, and select _Custom Resources_.
 * To create a custom resource, use the `asadmin create-custom-resource` command.
 
-[[built-in-factories-for-custom-resources]]
+[#built-in-factories-for-custom-resources]
 === Built-In Factories for Custom Resources
 
 Payara Server provides built-in factories for the following types of custom resources:
@@ -200,7 +200,7 @@ It is possible to create custom resources by using a `payara-resources.xml` or `
 IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-resources.xml instead.
 
-[[javabeanfactory]]
+[#javabeanfactory]
 ==== Javabeanfactory
 
 To create a custom resource that provides instances of a JavaBean class, follow these steps:
@@ -213,7 +213,7 @@ For example, if the JavaBean class has a method named `setAccount`, specify a pr
 +
 For example, you can place the JavaBean class in the `as-install/lib` directory.
 
-[[propertiesfactory]]
+[#propertiesfactory]
 ==== Propertiesfactory
 
 To create a custom resource that provides configuration properties to applications, set the custom resource's factory class to `org.glassfish.resources.custom.factory.PropertiesFactory`, then specify one or both of the following:
@@ -230,7 +230,7 @@ If both the `fileName` property and other properties are specified, the resultin
 +
 If the same property is defined in the file and directly in the custom resource, the value of the latter takes precedence.
 
-[[primitivesandstringfactory]]
+[#primitivesandstringfactory]
 ==== Primitivesandstringfactory
 
 To create a custom resource that provides Java primitives to applications, follow these steps:
@@ -252,7 +252,7 @@ To create a custom resource that provides Java primitives to applications, follo
 +
 For example, If the application requires a `double` of value `22.1`, create a property with the name `value` and the value `22.1`.
 
-[[urlfactory]]
+[#urlfactory]
 ==== Urlfactory
 
 To create a custom resource that provides URL instances to applications, follow these steps:
@@ -271,7 +271,7 @@ For example, for the first constructor, define properties named `protocol`, `hos
 +
 For the third constructor, define a property named `spec` and assign it the value of the entire URL.
 
-[[using-application-scoped-resources]]
+[#using-application-scoped-resources]
 === Using Application-Scoped Resources
 
 You can define an application-scoped JNDI resource for an enterprise application, web module, EJB module, connector module, or application client module by supplying a `glassfish-resources.xml` or `payara-resources.xml` deployment descriptor file.
@@ -281,14 +281,14 @@ It is recommended to use payara-resources.xml instead.
 
 For details, see "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Application Deployment section.
 
-[[using-a-custom-jndi.properties-file]]
+[#using-a-custom-jndi.properties-file]
 == Using a Custom `jndi.properties` File
 
 To use a custom `jndi.properties` file, JAR it and place it in the `domain-dir/lib` directory. This adds the custom `jndi.properties` file to the Common class loader. For more information about class loading, see xref:technical-documentation/application-development/class-loaders.adoc[Class Loaders].
 
 TIP: For each property found in more than one `jndi.properties` file, the Jakarta EE naming service either uses the first value found or concatenates all values, whichever makes sense at runtime.
 
-[[mapping-references]]
+[#mapping-references]
 == Mapping References
 
 The following XML elements in the Payara Server deployment descriptors map resource references in application client, EJB, and web application components to JNDI names configured in Payara Server:

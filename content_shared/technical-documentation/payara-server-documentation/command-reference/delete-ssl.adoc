@@ -2,7 +2,7 @@
 
 Deletes the SSL element in the selected HTTP listener, IIOP listener, or IIOP service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] delete-ssl [--help]
 listener_id
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-ssl` subcommand deletes the SSL element in the selected HTTP listener, IIOP listener, or IIOP service.
@@ -22,7 +22,7 @@ The listener_id is not required if the `--type` is `iiop-service`.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
@@ -49,17 +49,17 @@ If an option has a short option name, then the short option precedes the long op
   * `iiop-listener`
   * `iiop-service`
 
-[[operands]]
+[#operands]
 == Operands
 
 *listener_id*:
   The ID of the listener from which the SSL element is to be deleted. +
   The listener_id operand is not required if the `--type` is `iiop-service`.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Deleting an SSL element from an HTTP listener*
 
@@ -72,7 +72,7 @@ asadmin> delete-ssl
 Command delete-ssl executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

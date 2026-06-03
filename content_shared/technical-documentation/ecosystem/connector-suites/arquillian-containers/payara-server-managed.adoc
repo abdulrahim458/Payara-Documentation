@@ -6,7 +6,7 @@ When using this adapter, the Payara Server container lifecycle is managed by Arq
 NOTE: As a requirement, the adapter will need to use a local installation of Payara Server.
 
 
-[[usage]]
+[#usage]
 == Usage
 
 The Payara Server Managed Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-managed[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
@@ -20,7 +20,7 @@ The Payara Server Managed Arquillian container adapter can be found on link:http
 </dependency>
 ----
 
-[[configuration]]
+[#configuration]
 == Container Configuration
 
 The Payara Server container can be configured via the `arquillian.xml` file using the standard http://arquillian.org/arquillian-core/#container-configuration[Arquillian Container Configuration^] mechanism.
@@ -146,7 +146,7 @@ The same rule is applied for enterprise applications if there is no `application
 IMPORTANT: glassfish-web.xml and sun-web.xml are deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-[[examples]]
+[#examples]
 == Examples
 
 To configure the Arquillian Container options, you need to use an `arquillian.xml` file placed on the test classpath.
@@ -194,7 +194,7 @@ This is how you can do it with the maven `surefire` plugin (`my.admin.password` 
 </plugin>
 ----
 
-[[automatic-download-example]]
+[#automatic-download-example]
 === Downloading Payara Server Automatically from Maven
 
 You can configure your Maven project to automatically download and install the Payara Server version required by the container adapter.

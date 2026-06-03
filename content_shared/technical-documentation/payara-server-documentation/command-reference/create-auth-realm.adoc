@@ -2,7 +2,7 @@
 
 Adds the named authentication realm.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] create-auth-realm [--help]
 [--target target_name] auth_realm_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-auth-realm` subcommand adds the named authentication realm.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -134,13 +134,13 @@ It is a security risk not to specify a password encryption algorithm.
   `search-bind-password`;;
     (Optional) Specifies the LDAP password for the DN given in `search-bind-dn`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *auth_realm_name*:
   A short name for the realm. This name is used to refer to the realm from, for example, `web.xml`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a New Authentication Realm*
@@ -157,7 +157,7 @@ Command create-auth-realm executed successfully
 
 Where `file` is the authentication realm created.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

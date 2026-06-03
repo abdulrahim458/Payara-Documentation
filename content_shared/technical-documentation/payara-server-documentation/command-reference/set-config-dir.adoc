@@ -2,7 +2,7 @@
 
 Provides a way to configure the *Directory* configuration source.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] set-config-dir [--help]
 [--target=<target[default:server]>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-config-dir` sets the directory to be used for the directory config source.
@@ -21,7 +21,7 @@ The `set-config-dir` sets the directory to be used for the directory config sour
 * If relative, will look beneath server instance location (usually to be found at `domain-dir/`)
 * Defaults to `secrets`, targeting `domain-dir/secrets/`
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -47,7 +47,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting the Config Directory.*
@@ -59,7 +59,7 @@ This example sets the directory to be used for the directory config source.
 asadmin set-config-dir --directory=/home/payara/secrets --target=myAppCluster
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

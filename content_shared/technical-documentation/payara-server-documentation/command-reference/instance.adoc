@@ -3,7 +3,7 @@
 
 An instance in Payara Server has its own Jakarta EE configuration, Jakarta EE resources, application deployment areas, and server configuration settings.
 
-[[description]]
+[#description]
 == Description
 
 Payara Server creates one server instance, called `server` at the time of installation. You can delete the server instance and create a new instance with a different name.

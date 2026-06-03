@@ -2,7 +2,7 @@
 
 Lists all existing JNDI resources.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,14 +10,14 @@ Lists all existing JNDI resources.
 list-jndi-resources [--help] [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-jndi-resources` subcommand identifies all existing JNDI resources.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -26,7 +26,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -40,7 +40,7 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Lists the JNDI resources on a specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing JNDI Resources*
@@ -56,7 +56,7 @@ jndi_resource3
 Command list-jndi-resources executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

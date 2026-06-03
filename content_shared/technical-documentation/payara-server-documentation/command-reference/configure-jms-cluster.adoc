@@ -2,7 +2,7 @@
 
 Configures the Message Queue cluster providing JMS services to a Payara Server cluster.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -18,7 +18,7 @@ asadmin [asadmin-options] configure-jms-cluster [--help]
 cluster-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `configure-jms-cluster` configures the Message Queue cluster providing JMS services to a Payara Server cluster.
@@ -28,7 +28,7 @@ xref:technical-documentation/payara-server-documentation/general-administration/
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -70,7 +70,7 @@ entry `AS_ADMIN_JMSDBPASSWORD` to the password file.
 prop1name=prop1value:prop2name=prop2value
 ----
 
-[[operands]]
+[#operands]
 == Operands
 
 *cluster-name*:
@@ -80,7 +80,7 @@ prop1name=prop1value:prop2name=prop2value
   * If `clustertype` is set to `enhanced`, the name can be no longer than n–21 characters, where n is the maximum table name length allowed by the database.
   * If `configstoretype` is set to `shareddb`, the name can be no longer than n–19 characters, where n is the maximum table name length allowed by the database.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

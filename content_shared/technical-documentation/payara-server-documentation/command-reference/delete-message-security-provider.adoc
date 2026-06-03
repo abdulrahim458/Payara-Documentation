@@ -2,7 +2,7 @@
 
 Enables administrators to delete a message security provider.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] delete-message-security-provider [--help]
 provider_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-message-security-provider` subcommand enables administrators
@@ -27,7 +27,7 @@ If the message-layer (`message-security-config` attribute) does not exist, it is
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
@@ -50,13 +50,13 @@ If an option has a short option name, then the short option precedes the long op
 *`--layer`*:
   The message-layer from which the provider has to be deleted. The default value is `HttpServlet`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *provider_name*:
   The name of the provider used to reference the `provider-config` element.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a message security provider*
@@ -69,7 +69,7 @@ asadmin> delete-message-security-provider
 --layer SOAP mySecurityProvider
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

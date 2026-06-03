@@ -2,7 +2,7 @@
 
 Launches the Application Client Container and invokes the client application typically packaged in the application JAR file.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -22,7 +22,7 @@ appclient [jvm-options]
 class-selector [application-options]
 ----
 
-[[description]]
+[#description]
 == Description
 
 Use the `appclient` command to launch the Application Client Container and invoke a client application that is typically packaged in an application JAR file. The application client JAR file is specified and created during deployment by the Administration Console or the `asadmin deploy` command with the `--retrieve` option. You can also retrieve the client JAR file using the `asadmin get-client-stubs` command.
@@ -33,7 +33,7 @@ The client JAR file that is retrieved after deploying an application should be p
 
 If the application client is a stand-alone module or the only client in an EAR file, the Application Client Container can find the client without using the `-mainclass` or `-name` options. If you provide a `-mainclass` or `-name` value that does not match what is in the client, the Application Client Container launches the client anyway but issues a warning that the selection did not match the information in the client. The warning also displays what the actual main class and name values are for the client.
 
-[[options]]
+[#options]
 == Options
 
 *jvm-options*:
@@ -78,7 +78,7 @@ running processes and the commands to start them, such as `ps`.
 *application-options*:
   optional; you can set client application arguments.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Using the `appclient` command*
@@ -90,7 +90,7 @@ appclient -xml sun-acc.xml -jar myclientapp.jar scott sample
 
 Where: `sun-acc.xml` is the name of the client configuration XML file, `myclientapp.jar` is the client application `.jar` file, and `scott` and `sample` are arguments to pass to the application. If `sun-acc.xml` and `myclientapp.jar` are not in the current directory, you must give the absolute path locations; otherwise the relative paths are used. The relative path is relative to the directory where the command is being executed.
 
-[[attributes]]
+[#attributes]
 == Attributes
 
 See

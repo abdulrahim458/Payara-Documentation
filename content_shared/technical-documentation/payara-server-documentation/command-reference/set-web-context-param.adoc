@@ -2,7 +2,7 @@
 
 Sets a servlet context-initialization parameter of a deployed web application or module.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] set-web-context-param [--help]
 [--description=description] application-name[/module]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-web-context-param` subcommand sets a servlet context-initialization parameter of one of the following items:
@@ -28,7 +28,7 @@ descriptors and repackage and redeploy the application.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -59,7 +59,7 @@ subcommand for this purpose.
 *`--description`*:
   An optional textual description of the context parameter that is being set.
 
-[[operands]]
+[#operands]
 == Operands
 
 *application-name*:
@@ -84,7 +84,7 @@ subcommand for this purpose.
 ----
   The module would be specified as the operand of this command as `myApp/myWebModule.war`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Setting a Servlet Context-Initialization Parameter for a Web Application*
@@ -113,7 +113,7 @@ basic-ezcomp
 Command set-web-context-param executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

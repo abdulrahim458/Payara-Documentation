@@ -2,7 +2,7 @@
 
 Deletes a Payara Server instance on the machine where the subcommand is run/
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] delete-local-instance [--help]
 [instance-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-local-instance` subcommand deletes a Payara Server instance on the machine where the subcommand is run. This subcommand does not require the secure shell (SSH) to be configured. You must run this command from the machine where the instance resides.
@@ -36,7 +36,7 @@ If no operand is specified and only one instance resides on the specified node, 
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -49,13 +49,13 @@ This subcommand is supported in remote mode only.
 *`--node`*:
   Specifies the node on which the instance resides. This option may be omitted only if the directory that the `--nodedir` option specifies contains only one node directory. Otherwise, this option is required.
 
-[[operands]]
+[#operands]
 == Operands
 
 *instance-name*:
   The name of the instance to delete. This operand may be omitted if only one instance resides on the specified node. Otherwise, this operand is required.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting an Instance*
@@ -69,7 +69,7 @@ asadmin> delete-local-instance pmdsainst
 Command delete-local-instance executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Provides a way to set the value of a MicroProfile Configuration property in a specific configuration source.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,14 +16,14 @@ asadmin [asadmin-options] set-config-property [--help]
 [--target=<target[default:server]>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-config-property` sets the value of a MicroProfile Configuration property in one of the built-in config sources. The source is specified with `--source` and, where there is ambiguity, the `--sourceName` and `--moduleName` options can be used.
 
 For example, where the source is server, the `--sourceName` can be used to specify the name of the server where the config property is to be stored.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -54,7 +54,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting the configuration property value*
@@ -66,7 +66,7 @@ This example sets the `JMSBrokerURL` property to `my.jms.hostname` within the co
 asadmin set-config-property --propertyName=JMSBrokerURL --propertyValue=my.jms.hostname --source=module --sourceName=myApplication --moduleName=myModule --target=myAppCluster
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

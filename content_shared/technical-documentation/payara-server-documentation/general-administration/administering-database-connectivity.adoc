@@ -3,7 +3,7 @@
 
 This chapter provides procedures for performing database connectivity tasks in the Payara Server environment.
 
-[[about-database-connectivity]]
+[#about-database-connectivity]
 == About Database Connectivity
 
 A database management system (DBMS) provides facilities for storing, organizing, and retrieving data. The information in databases is often described as persistent data because it is saved on disk and exists after the application process ends. Most business applications store data in relational databases. Applications can access database information by using the Java Database Connectivity (JDBC) API.
@@ -28,12 +28,12 @@ Payara Server retrieves a physical connection from the connection pool that corr
 The application accesses the database by making calls to the JDBC API. The JDBC driver translates the application's JDBC calls into the protocol of the database server.
 . When the application is finished accessing the database, the application closes the connection and returns the connection to the connection pool.
 
-[[setting-up-the-database]]
+[#setting-up-the-database]
 == Setting up the Database
 
 Most applications use relational databases to store, organize, and retrieve data. Applications access relational databases through the Java Database Connectivity (JDBC) API.
 
-[[to-install-the-database-and-database-driver]]
+[#to-install-the-database-and-database-driver]
 === To Install the Database and Database Driver
 
 . Install a compatible JDBC relational database product.
@@ -53,7 +53,7 @@ xref:technical-documentation/payara-server-documentation/general-administration/
 The final step is to integrate the JDBC driver into an administrative domain as described in
 xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#integrating-the-jdbc-driver[Integrating the JDBC Driver].
 
-[[to-start-the-database]]
+[#to-start-the-database]
 === To Start the Database
 
 Payara Server includes an implementation of the H2 Database, however, you can use any JDBC-compliant database. The database is not started automatically when you start Payara Server, so if you have applications that require a database, you need to start H2 database manually by using the local `start-database` subcommand.
@@ -65,7 +65,7 @@ When the database server starts, or a client connects to it successfully, the fo
 * The `h2.log` file contains the database server process log along with its standard output and standard error information.
 * The database files contain your schema (for example, database tables).
 
-[[example-to-start-a-database]]
+[#example-to-start-a-database]
 ==== Example 11-1 to Start a Database
 
 This example starts the H2 database on the host host1 and port 5001.
@@ -82,7 +82,7 @@ Command start-database executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help start-database` at the command line.
 
-[[to-stop-the-database]]
+[#to-stop-the-database]
 === To Stop the Database
 
 Use the local `stop-database` subcommand to stop the H2 database on a specified port. A single host can have multiple database server processes running on different ports.
@@ -90,7 +90,7 @@ Use the local `stop-database` subcommand to stop the H2 database on a specified 
 . If necessary, notify users that the database is being stopped.
 . Stop the database by using the xref:technical-documentation/payara-server-documentation/command-reference/stop-database.adoc[`stop-database`] subcommand.
 
-[[example-to-stop-the-database]]
+[#example-to-stop-the-database]
 ==== Example 11-2 to Stop a Database
 
 This example stops the H2 database on port 5001 of `localhost`.
@@ -101,7 +101,7 @@ asadmin> stop-database --dbhost=localhost --dbport=5001
 Command stop-database executed successfully.
 ----
 
-[[database-troubleshooting]]
+[#database-troubleshooting]
 === Troubleshooting
 
 For a laptop that roams between networks, you might have trouble shutting down the database. If you start the H2 database and then change your IP address, you will not be able to stop the H2 database unless you add a specific `--dbhost` argument. For example, if you run `asadmin start-database` `dbhost` `= 0.0.0.0`, and then disconnect Ethernet and switch to Wi-Fi, you should run a command similar to the following to stop the database:
@@ -113,29 +113,29 @@ asadmin> stop-database dbhost localhost
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help stop-database` at the command line.
 
-[[h2-documentation]]
+[#h2-documentation]
 === H2 Database Documentation
 
 For further details on how to configure the embedded H2 database you can visit the following: https://www.h2database.com/html/quickstart.html[H2 Database Documentation^].
 
-[[configuring-access-to-the-database]]
+[#configuring-access-to-the-database]
 == Configuring Access to the Database
 
 After establishing the database, you are ready to set up access for Payara Server applications. The high-level steps include creating a JDBC connection pool, creating a JDBC resource for the connection pool, and integrating a JDBC driver into an administrative domain.
 
-[[administering-jdbc-connection-pools]]
+[#administering-jdbc-connection-pools]
 === Administering JDBC Connection Pools
 
 A JDBC connection pool is a group of reusable connections for a particular database. Because creating each new physical connection is time-consuming, Payara Server maintains a pool of available connections. When an application requests a connection, it obtains one from the pool. When an application closes a connection, the connection is returned to the pool. JDBC connection pools can be globally accessible or be scoped to an enterprise application, web module, EJB module, connector module or application client module, as described in "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Payara Server Application Deployment section.
 
 A JDBC resource is created by specifying the connection pool with which the resource is associated. Multiple JDBC resources can specify a single connection pool. The properties of connection pools can vary with different database vendors. Some common properties are the database name (URL), the username, and the password.
 
-[[to-create-a-jdbc-connection-pool]]
+[#to-create-a-jdbc-connection-pool]
 ==== To Create a JDBC Connection Pool
 
 It is possible to create a JDBC connection pool using administration commands or on the web administration console.
 
-[[using-asadmin]]
+[#using-asadmin]
 ==== Using Administration Commands
 
 Use the `create-jdbc-connection-pool` subcommand in remote mode to register a new JDBC connection pool with the specified JDBC connection pool name. A JDBC connection pool or a connector connection pool can be created with authentication. You can either use a subcommand option to specify user, password, or other connection information using the `asadmin` utility, or specify the connection information in the XML descriptor file.
@@ -162,7 +162,7 @@ xref:technical-documentation/payara-server-documentation/general-administration/
 
 //TODO - Needs to be updated with H2 examples
 
-[[example-to-create-a-jdbc-connection-pool]]
+[#example-to-create-a-jdbc-connection-pool]
 ==== Example 11-3 to Create a JDBC Connection Pool
 
 This example creates a JDBC connection pool named `sample_derby_pool` on `localhost`.
@@ -176,7 +176,7 @@ Command create-jdbc-connection-pool executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-jdbc-connection-pool` at the command line.
 
-[[using-admin-console]]
+[#using-admin-console]
 ==== Using Admin Console
 
 In the left hand panel of the Admin console go to _Resources_ -> _JDBC_ -> _JDBC Connection Pools_
@@ -214,7 +214,7 @@ To test the connection attributes, go back to the _General_ tab and click the _P
 
 
 
-[[to-list-jdbc-connection-pools]]
+[#to-list-jdbc-connection-pools]
 ==== To List JDBC Connection Pools
 
 Use the `list-jdbc-connection-pools` subcommand in remote mode to list all existing JDBC connection pools.
@@ -222,7 +222,7 @@ Use the `list-jdbc-connection-pools` subcommand in remote mode to list all exist
 . Ensure that the server is running. Remote subcommands require a running server.
 . List the JDBC connection pools by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-jdbc-connection-pools.adoc[`list-jdbc-connection-pools`] subcommand.
 
-[[example-to-list-jdbc-connection-pools]]
+[#example-to-list-jdbc-connection-pools]
 ==== Example 11-4 to List a JDBC Connection Pool
 
 This example lists the JDBC connection pools that are on `localhost`.
@@ -240,7 +240,7 @@ Command list-jdbc-connection-pools executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-jdbc-connection-pools` at the command line.
 
-[[to-contact-ping-a-connection-pool]]
+[#to-contact-ping-a-connection-pool]
 ==== To Contact (Ping) a Connection Pool
 
 Use the `ping-connection-pool` subcommand in remote mode to test if a connection pool is usable. For example, if you create a new JDBC connection pool for an application that is expected to be deployed later, you can test the JDBC pool with this subcommand before the application is deployed.
@@ -254,7 +254,7 @@ Before you can contact a connection pool, the connection pool must be created wi
 . Ensure that the server is running. Remote subcommands require a running server.
 . Ping a connection pool by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/ping-connection-pool.adoc[`ping-connection-pool`] subcommand.
 
-[[example-to-contact-ping-a-connection-pool]]
+[#example-to-contact-ping-a-connection-pool]
 ==== Example 11-5 to Contact (Ping) a Connection Pool
 
 This example tests to see if the `DerbyPool` connection pool is usable.
@@ -269,7 +269,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 You can also specify that a JDBC connection pool is automatically tested when created or reconfigured by setting its `--ping` option to `true`(the default is `false`). See xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#to-create-a-jdbc-connection-pool[To Create a JDBC ConnectionPool] or xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#to-update-a-jdbc-connection-pool[To Update a JDBC Connection Pool].
 
-[[to-reset-flush-a-connection-pool]]
+[#to-reset-flush-a-connection-pool]
 ==== To Reset (Flush) a Connection Pool
 
 Use the `flush-connection-pool` in remote mode to reinitialize all connections established in the specified connection pool without the need for reconfiguring the pool. Connection pool reconfiguration can result in application redeployment, which is a time-consuming operation.
@@ -279,7 +279,7 @@ The JDBC connection pool or connector connection pool is reset to its initial st
 . Ensure that the server is running. Remote subcommands require a running server.
 . Reset a connection pool by using the `flush-connection-pool` subcommand.
 
-[[example-flushing-connection-pool]]
+[#example-flushing-connection-pool]
 ==== Example 11-6 Resetting (Flushing) a Connection Pool
 
 This example resets the JDBC connection pool named `__TimerPool` to its steady pool size.
@@ -292,7 +292,7 @@ Command flush-connection-pool executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help flush-connection-pool` at the command line.
 
-[[to-update-a-jdbc-connection-pool]]
+[#to-update-a-jdbc-connection-pool]
 ==== To Update a JDBC Connection Pool
 
 You can change all settings for an existing pool except its name. Use the `get` and `set` subcommands to view and change the values of the JDBC connection pool properties.
@@ -312,7 +312,7 @@ Some parameters require server restart. See +
 xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
 
 
-[[connection-pool-sizing]]
+[#connection-pool-sizing]
 == Connection Pool Sizing
 
 Connection pools should be sized to cater for the maximum number of concurrent connections.
@@ -321,14 +321,14 @@ The maximum size should be set in accordance with the maximum number of client r
 
 The minimum size of the connection pool ensures that a number of connections to the database are always established - this means that if you have a pool with a minimum size of 10, and you receive 10 requests then all can retrieve a database connection without waiting for the pool to create a new connection.
 
-[[setting-the-sizes-via-the-admin-console]]
+[#setting-the-sizes-via-the-admin-console]
 === Setting the Sizes Using the Admin Console
 
 Click on the connection pool name and under the _Pool Settings_ section you will find Initial and Minimum Pool Size and Maximum Pool Size. Set these to your required sizes:
 
 image:connection-pools/connection_pools_3.png[alt="Connection Pool sizes in the admin console",width=600px]
 
-[[setting-the-sizes-via-asadmin]]
+[#setting-the-sizes-via-asadmin]
 === Setting the Sizes Using Administration Commands
 
 To set the initial and minimum pool size (to the value of *10* for example), use the following administration commands:
@@ -345,7 +345,7 @@ To set the maximum pool size (to the value of *200* for example), use the follow
 asadmin> set resources.jdbc-connection-pool.test-pool.max-pool-size=200
 ----
 
-[[connection-validation]]
+[#connection-validation]
 == Connection Validation
 
 Connection validation ensures that connections aren't assigned to your application after the connection has already gone stale.
@@ -358,7 +358,7 @@ connection. If there is an issue with the connection, it is removed from the poo
 
 In order to avoid this, you can set a connection validation so that if a connection fails, all remaining open connections are closed.
 
-[[set-up-the-validation-via-the-admin-console]]
+[#set-up-the-validation-via-the-admin-console]
 === Set up the Validation Using the Admin Console
 
 . Click on the name of the connection pool
@@ -376,7 +376,7 @@ image:connection-pools/connection_pools_4.png[alt="Connection validation configu
 
 Additional information regarding enabling connection validation through 'asadmin' commands, along with various options, is elaborated in the the xref:technical-documentation/application-development/using-the-jdbc-api-for-database-access.adoc[`Handling Invalid Connections`] section of our Payara Server Application Development JDBC documentation.
 
-[[to-delete-a-jdbc-connection-pool]]
+[#to-delete-a-jdbc-connection-pool]
 == To Delete a JDBC Connection Pool
 
 Use the `delete-jdbc-connection-pool` subcommand in remote mode to delete an existing JDBC connection pool. Deleting a JDBC connection pool is a dynamic event and does not require server restart.
@@ -390,7 +390,7 @@ Before deleting a JDBC connection pool, all associations to the resource must be
 . If necessary, notify users that the JDBC connection pool is being deleted.
 . Delete the connection pool by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-jdbc-connection-pool.adoc[`delete-jdbc-connection-pool`] subcommand.
 
-[[example-to-delete-a-jdbc-connection-pool]]
+[#example-to-delete-a-jdbc-connection-pool]
 === Example 11-7 to Delete a JDBC Connection Pool
 
 This example deletes the JDBC connection pool named `H2Pool`.
@@ -403,12 +403,12 @@ Command delete-jdbc-connection-pool executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help delete-jdbc-connection-pool` at the command line.
 
-[[configuring-specific-jdbc-connection-pool-features]]
+[#configuring-specific-jdbc-connection-pool-features]
 == Configuring Specific JDBC Connection Pool Features
 
 In Payara Server, JDBC Connection Pools support a variety of features to simplify administration, monitoring and performance tuning.
 
-[[transparent-pool-reconfiguration]]
+[#transparent-pool-reconfiguration]
 === Transparent Pool Reconfiguration
 
 When the properties or attributes of a JDBC connection pool are changed, the connection pool is destroyed and re-created. Normally, applications using the connection pool must be redeployed as a consequence. This restriction can be avoided by enabling transparent JDBC connection pool reconfiguration. When this feature is enabled, applications do not need to be redeployed. Instead, requests for new connections are blocked until the reconfiguration operation completes. Connection requests from any in-flight transactions are served using the old pool configuration to complete the transaction. Then, connections are created using the pool's new configuration, and any blocked connection requests are served with connections from the re-created pool.
@@ -426,7 +426,7 @@ asadmin set resources.jdbc-connection-pool.pool-name.property.dynamic-reconfigur
 
 This property specifies the time in seconds to wait for in-use connections to close and in-flight transactions to complete. Any connections in use or transaction in flight past this time must be retried.
 
-[[using-an-initialization-statement]]
+[#using-an-initialization-statement]
 ==== Using an Initialization Statement
 
 You can specify a statement that executes each time a physical connection to the database is created (not reused) from a JDBC  connection pool. This is useful for setting request or session specific properties and is suited for homogeneous requests in a single application. Set the _Init SQL_ attribute of the JDBC connection pool to the SQL string to be executed in one of the following ways:
@@ -441,7 +441,7 @@ Attributes page in the Administration Console.
 asadmin set domain1.resources.jdbc-connection-pool.H2Pool.init-sql="sql-string"
 ----
 
-[[setting-a-statement-timeout]]
+[#setting-a-statement-timeout]
 ==== Setting a Statement Timeout
 
 An abnormally long-running JDBC query executed by an application may leave it in a hanging state unless a timeout is explicitly set on the statement. Setting a statement timeout guarantees that all queries automatically time out if not completed within the specified period.
@@ -454,7 +454,7 @@ You can specify a statement timeout in the following ways:
 * Specify the `--statementtimeout` option in the `asadmin create-jdbc-connection-pool` command. For more information, see
 xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc[`create-jdbc-connection-pool`].
 
-[[statement-leak-detection-and-leaked-statement-reclamation]]
+[#statement-leak-detection-and-leaked-statement-reclamation]
 == Statement and Connection Leak Detection and Reclamation
 
 This feature allows you to set specific time-outs so that if SQL statements or JDBC connections haven't been closed by an application (potentially leading to a memory leak) they can be logged and/or closed.
@@ -470,7 +470,7 @@ When selecting a value for Statement Leak Timeout In Seconds, make sure that:
 * It is less than the Connection Leak Timeout; otherwise, the connection could be closed before the statement leak is recognized.
 * It is greater than the Statement Timeout; otherwise, a long-running query could be mistaken as a statement leak.
 
-[[setting-leak-detection-via-the-admin-console]]
+[#setting-leak-detection-via-the-admin-console]
 === Configuring Leak Detection Using the Admin Console
 
 . Click on the name of the JDBC connections pool
@@ -480,7 +480,7 @@ When selecting a value for Statement Leak Timeout In Seconds, make sure that:
 
 image:connection-pools/connection_pools_5.png[alt="Leak Detection setting in Admin console",width=600px]
 
-[[setting-leak-detection-via-asadmin]]
+[#setting-leak-detection-via-asadmin]
 === Configuring Leak Detection Using Administration Commands
 
 You also can set the time-out values using the following `asadmin` commands:
@@ -507,7 +507,7 @@ WARNING: A potential connection leak detected for connection pool test-pool. The
  ...
 ----
 
-[[enabling-jdbc-call-logging]]
+[#enabling-jdbc-call-logging]
 == Enabling JDBC Call Logging
 
 With *Log JDBC Calls* configured on the connection call each call into the connection pool is timed and logged to the server log at the `FINE` level. A typical log message with Log JDBC Enabled is shown below:
@@ -518,7 +518,7 @@ With *Log JDBC Calls* configured on the connection call each call into the conne
   PoolName=H2Pool | ExecutionTime=1ms | ClassName=org.apache.derby.client.net.NetConnection40 | MethodName=prepareStatement | arg[0]=SELECT ID, AGE, BIO, BIRTHDATE, BIRTHDAY, DATEFORMAT, DATEOFBIRTH, DATEOFHIRE, EMAIL, HIREDATE, HIREDAY, MEMBERAGE, NAME, TODAYSDATE FROM MEMBERENTITY WHERE (NAME = ?) | arg[1]=1003 | arg[2]=1007 | |#]
 ----
 
-[[jdbc-call-logging-administration-console]]
+[#jdbc-call-logging-administration-console]
 === Using the Administration Console
 
 SQL Tracing can be enabled through the Payara Server Web administration console. First, navigate to the advanced table of your JDBC connection pool, then select the _JDBC > JDBC Connection pools > ${Your Connection pool}_.
@@ -527,7 +527,7 @@ Then select the *Advanced Tab* in the main window of the administration console.
 
 image:advanced-jdbc/logjdbccall.png[alt="Enabling SQL Tracing in the administration console",width=600px]
 
-[[asadmin-command-line-interface]]
+[#asadmin-command-line-interface]
 === Using Asadmin Commands
 
 The *Log JDBC Calls* setting for a JDBC connection pool can also be configured via asadmin using the `set` command to set the `fish.payara.log-jdbc-calls` property of your connection pool to `true`, like in the following example:
@@ -537,12 +537,12 @@ The *Log JDBC Calls* setting for a JDBC connection pool can also be configured v
 asadmin set domain.resources.jdbc-connection-pool.__TimerPool.log-jdbc-calls=true
 ----
 
-[[advance-connection-pool-properties-in-deployment-descriptors]]
+[#advance-connection-pool-properties-in-deployment-descriptors]
 === Advanced Connection Pool Properties in Deployment Descriptors
 
 Payara Server supports setting advanced JDBC connection pool properties directly on data source definitions made with the `@DataSourceDefinition` annotation or directly on deployment descriptors.
 
-[[setting-properties-in-the-deployment-descriptor]]
+[#setting-properties-in-the-deployment-descriptor]
 === Setting Properties in the Deployment Descriptor
 
 In a Jakarta EE application, a data source definition can be added to a deployment descriptor of an application. For a web application, you would this in the standard _web.xml_ deployment descriptor. To set advanced properties just add a `property` element as shown in the following example:
@@ -565,7 +565,7 @@ In a Jakarta EE application, a data source definition can be added to a deployme
 </data-source>
 ----
 
-[[setting-properties-via-annotations.]]
+[#setting-properties-via-annotations.]
 === Setting Properties on the `@DataSourceDefinition` Annotation.
 
 In Jakarta EE applications, a JDBC data source can be deployed by adding the `@DataSourceDefinition` annotation to  a managed component (like and `@Stateless` EJB bean for example). To configure advanced JDBC properties, use the `properties` attribute of the annotation to define an array of the properties to configure:
@@ -581,7 +581,7 @@ public class ApplicationComponent{
 }
 ----
 
-[[full-list-of-properties]]
+[#full-list-of-properties]
 == Full List of Properties
 
 The complete list of configurable properties is the following:
@@ -661,7 +661,7 @@ SQL
 client info will not be validated.
 |=======================================================================
 
-[[example-datasource-configuration]]
+[#example-datasource-configuration]
 == Example Data Source Configuration
 
 An example data source configured on the _web.xml_ and deployed with a custom *SQL Trace Listener* is shown below. This data source is configured to also validate all connections returned from the connection pool before giving them to the application using the built-in _MySQL_ *Connection Validation* class. The data source is also configured to log any queries that exceed **5** seconds and also logs ALL JDBC statements:
@@ -714,7 +714,7 @@ An example data source configured on the _web.xml_ and deployed with a custom *S
 ----
 
 
-[[administering-jdbc-resources]]
+[#administering-jdbc-resources]
 == Administering JDBC Resources
 
 A JDBC resource, also known as a data source, provides an application with a means of connecting to a database. Typically, you create a JDBC resource for each database that is accessed by the applications deployed in a domain. Multiple JDBC resources can be specified for a database. JDBC resources can be globally accessible or be scoped to an enterprise application, web module, EJB module, connector module or application client module, as described in "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Payara Server Application Deployment section.
@@ -723,7 +723,7 @@ A JDBC resource is created by specifying the connection pool with which the reso
 
 The Jakarta EE standard specifies that certain default resources be made available to applications, and defines specific JNDI names for these default resources. Payara Server makes these names available through the use of logical JNDI names, which map Jakarta EE standard JNDI names to specific Payara Server resources. For JDBC resources, the Jakarta EE standard name `java:comp/DefaultDataSource` is mapped to the `jdbc/__default` resource.
 
-[[to-create-a-jdbc-resource]]
+[#to-create-a-jdbc-resource]
 === To Create a JDBC Resource
 
 Use the `create-jdbc-resource` subcommand in remote mode to create a JDBC resource. Creating a JDBC resource is a dynamic event and does not require server restart.
@@ -741,7 +741,7 @@ xref:ROOT:technical-documentation/payara-server-documentation/command-reference/
 Information about properties for the subcommand is included in this help page.
 . If necessary, notify users that the new resource has been created.
 
-[[example-to-create-a-jdbc-resource]]
+[#example-to-create-a-jdbc-resource]
 ==== Example 11-8 to Create a JDBC Resource
 
 This example creates a JDBC resource named `H2Pool`.
@@ -754,7 +754,7 @@ Command create-jdbc-resource executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-jdbc-resource` at the command line.
 
-[[to-list-jdbc-resources]]
+[#to-list-jdbc-resources]
 === To List JDBC Resources
 
 Use the `list-jdbc-resources` subcommand in remote mode to list the existing JDBC resources.
@@ -762,7 +762,7 @@ Use the `list-jdbc-resources` subcommand in remote mode to list the existing JDB
 . Ensure that the server is running. Remote subcommands require a running server.
 . List JDBC resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-jdbc-resources.adoc[`list-jdbc-resources`] subcommand.
 
-[[example-to-list-jdbc-resources]]
+[#example-to-list-jdbc-resources]
 ==== Example 11-9 to List a JDBC Resource
 
 This example lists JDBC resources for `localhost`.
@@ -779,7 +779,7 @@ Command list-jdbc-resources executed successfully.
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-jdbc-resources` at the command line.
 
-[[to-update-a-jdbc-resource]]
+[#to-update-a-jdbc-resource]
 === To Update a JDBC Resource
 
 You can enable or disable a JDBC resource by using the `set` subcommand. The JDBC resource is identified by its dotted name.
@@ -789,7 +789,7 @@ You can enable or disable a JDBC resource by using the `set` subcommand. The JDB
 
 For example:
 
-[[example-to-update-a-jdbc-resource]]
+[#example-to-update-a-jdbc-resource]
 ==== Example 11-10 to Update a JDBC Resource
 
 This example changes the `res1` enabled setting to `false`.
@@ -799,7 +799,7 @@ This example changes the `res1` enabled setting to `false`.
 asadmin>set resources.jdbc-resource.res1.enabled=false
 ----
 
-[[to-delete-a-jdbc-resource]]
+[#to-delete-a-jdbc-resource]
 === To Delete a JDBC Resource
 
 Use the `delete-jdbc-resource` subcommand in remote mode to delete an existing JDBC resource. Deleting a JDBC resource is a dynamic event and does not require server restart.
@@ -813,7 +813,7 @@ Before deleting a JDBC resource, all associations with this resource must be rem
 . If necessary, notify users that the JDBC resource is being deleted.
 . Delete a JDBC resource by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-jdbc-resource.adoc[`delete-jdbc-resource`] subcommand.
 
-[[example-to-delete-a-jdbc-resource]]
+[#example-to-delete-a-jdbc-resource]
 ==== Example 11-11 to Delete a JDBC Resource
 
 This example deletes a JDBC resource named `H2Pool`.
@@ -828,12 +828,12 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 //TODO - This section needs to be expanded and complimented for clusters/deployment groups
 
-[[enabling-the-jdbc__default-resource-in-a-clustered-environment]]
+[#enabling-the-jdbc__default-resource-in-a-clustered-environment]
 === Enabling the `jdbc/__default` Resource in a Clustered Environment
 
 Payara Server  includes a preconfigured JDBC resource with the JNDI name `jdbc/__default`. This `jdbc/__default` resource is not enabled by default in a traditional cluster, so you need to explicitly enable it if you want to use it in a cluster.
 
-[[to-enable-the-jdbc__default-resource-for-a-clustered-environment]]
+[#to-enable-the-jdbc__default-resource-for-a-clustered-environment]
 ==== To Enable the `jdbc/__default` Resource for a Clustered Environment
 
 Instructions for creating JDBC resources in general are provided in xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#to-create-a-jdbc-resource[To Create a JDBC Resource]. Use the following procedure to enable the preconfigured `jdbc/__default` resource for a clustered Payara Server environment.
@@ -851,26 +851,26 @@ asadmin start-domain domain-name
 asadmin start-cluster cluster-name
 ----
 
-[[integrating-the-jdbc-driver]]
+[#integrating-the-jdbc-driver]
 === Integrating the JDBC Driver
 
 To use JDBC features, you must choose a JDBC driver to work with Payara Server, then you must set up the driver.
 
 //TODO - Needs clarification of what Payara's policy on which supported JDBC drivers are
 
-[[supported-database-drivers]]
+[#supported-database-drivers]
 ==== Supported Database Drivers
 
 For a list of the JDBC drivers currently supported by the Payara Server, see the Payara Release Notes. For configurations of supported and other drivers, see xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#configuration-specifics-for-jdbc-drivers[Configuration Specifics for JDBC Drivers].
 
 NOTE: Because the drivers and databases supported by the Payara Server are constantly being updated, and because database vendors continue to upgrade their products, always check with Oracle technical support for the latest database support information.
 
-[[making-the-jdbc-driver-jar-files-accessible]]
+[#making-the-jdbc-driver-jar-files-accessible]
 ==== Making the JDBC Driver JAR Files Accessible
 
 To integrate the JDBC driver into a Payara Server domain, copy the JAR files into the `domain-dir/lib` directory, then restart the server. This makes classes accessible to all applications or modules deployed on servers that share the same configuration. For more information about Payara Server class loaders, see "xref:technical-documentation/application-development/class-loaders.adoc[Class Loaders]" in the Payara Server Application Development section.
 
-[[automatic-detection-of-installed-drivers]]
+[#automatic-detection-of-installed-drivers]
 ==== Automatic Detection of Installed Drivers
 
 The Administration Console detects installed JDBC Drivers automatically when you create a JDBC connection pool. To create a JDBC connection pool using the Administration Console, open the Resources component, open the JDBC component, select Connection Pools, and click on the New button. This displays the New JDBC Connection Pool page.
@@ -879,12 +879,12 @@ Based on the Resource Type and Database Vendor you select on the New JDBC Connec
 
 //TODO - This section requires a complete overhaul with modern drivers tested, perhaps?
 
-[[configuration-specifics-for-jdbc-drivers]]
+[#configuration-specifics-for-jdbc-drivers]
 == Configuration Specifics for JDBC Drivers
 
 Payara Server is designed to support connectivity to any database management system by using a corresponding JDBC driver.
 
-[[ibm-db2-database-type-4-driver]]
+[#ibm-db2-database-type-4-driver]
 === IBM DB2 Database Type 4 Driver
 
 The JAR file for the DB2 driver is `db2jcc.jar`. Configure the connection pool using the following settings:
@@ -903,7 +903,7 @@ The JAR file for the DB2 driver is `db2jcc.jar`. Configure the connection pool u
 
 ** `driverType` - Set to `4`.
 
-[[apache-derby-dbderby-type-4-driver]]
+[#apache-derby-dbderby-type-4-driver]
 === Apache Derby Db/derby Type 4 Driver
 
 The JAR file for the Apache Derby DB driver is `derbyclient.jar`. Configure the connection pool using the following settings:
@@ -933,7 +933,7 @@ default. When the user is provided, it is the name of the schema where the table
 ** `password` - Specify the database password. +
 This is only necessary if the Apache Derby database is configured to use authentication.
 
-[[mysql-server-database-type-4-driver]]
+[#mysql-server-database-type-4-driver]
 === Mysql Server Database Type 4 Driver
 
 The JAR file for the MySQL driver is `mysql-connector-java-5.1.14-bin.jar`. Configure the connection pool using the following settings:
@@ -960,7 +960,7 @@ com.mysql.jdbc.jdbc2.optional.MysqlXADataSource
 
 ** `password` - Set as appropriate.
 
-[[oracle-10-database-driver]]
+[#oracle-10-database-driver]
 === Oracle 10 Database Driver
 
 The JAR file for the Oracle 10 database driver is `ojdbc14.jar`. Make sure that the shared library is available through `LD_LIBRARY_PATH` and that the `ORACLE_HOME` property is set.
@@ -990,7 +990,7 @@ oracle.jdbc.xa.client.OracleXADataSource
 
 ** `password` - Set as appropriate.
 
-[[oracle-11-database-driver]]
+[#oracle-11-database-driver]
 === Oracle 11 Database Driver
 
 The JAR file for the Oracle 11 database driver is `ojdbc6.jar`.
@@ -1034,7 +1034,7 @@ certain Oracle permissions: +
 DBA_2PC_PENDING and DBA_2PC_NEIGHBORS.
 ** EXECUTE permissions on DBMS_XA and DBMS_SYSTEM.
 
-[[postgresql-type-4-driver]]
+[#postgresql-type-4-driver]
 === Postgresql Type 4 Driver
 
 The JAR file for the PostgreSQL driver is `postgresql-9.0-801.jdbc4.jar`. Configure the connection pool using the following settings:
@@ -1055,7 +1055,7 @@ The JAR file for the PostgreSQL driver is `postgresql-9.0-801.jdbc4.jar`. Config
 
 ** `password` - Set as appropriate.
 
-[[datadirect-type-4-driver-for-ibm-db2-database]]
+[#datadirect-type-4-driver-for-ibm-db2-database]
 === Datadirect Type 4 Driver for IBM DB2 Database
 
 The JAR file for DataDirect driver is `db2.jar`. Configure the connection pool using the following settings:
@@ -1076,7 +1076,7 @@ The JAR file for DataDirect driver is `db2.jar`. Configure the connection pool u
 
 ** `password` - Set as appropriate.
 
-[[datadirect-type-4-driver-for-ibm-informix]]
+[#datadirect-type-4-driver-for-ibm-informix]
 === Datadirect Type 4 Driver for IBM Informix
 
 Configure the connection pool using the following settings:
@@ -1108,7 +1108,7 @@ DataDirect DataSource Classname:
 ** `IfxIFXHost` - Specify the host name or IP address of the database
 server.
 
-[[datadirect-type-4-driver-for-microsoft-sql-server-database]]
+[#datadirect-type-4-driver-for-microsoft-sql-server-database]
 === Datadirect Type 4 Driver for Microsoft SQL Server Database
 
 The JAR file for the DataDirect driver is `sqlserver.jar`. Configure the connection pool using the following settings:
@@ -1129,7 +1129,7 @@ The JAR file for the DataDirect driver is `sqlserver.jar`. Configure the connect
 
 ** `selectMethod` - Set to `cursor`.
 
-[[datadirect-type-4-driver-for-mysql-server-database]]
+[#datadirect-type-4-driver-for-mysql-server-database]
 === Datadirect Type 4 Driver for Mysql Server Database
 
 The JAR file for the DataDirect driver is `mysql.jar`. Configure the connection pool using the following settings:
@@ -1150,7 +1150,7 @@ The JAR file for the DataDirect driver is `mysql.jar`. Configure the connection 
 
 ** `selectMethod` - Set to `cursor`.
 
-[[datadirect-type-4-driver-for-oracle-11-database]]
+[#datadirect-type-4-driver-for-oracle-11-database]
 === Datadirect Type 4 Driver for Oracle 11 Database
 
 The JAR file for the DataDirect driver is `oracle.jar`.
@@ -1178,7 +1178,7 @@ Configure the connection pool using the following settings:
 
 ** `password` - Set as appropriate.
 
-[[datadirect-type-4-driver-for-sybase-database]]
+[#datadirect-type-4-driver-for-sybase-database]
 === Datadirect Type 4 Driver for Sybase Database
 
 The JAR file for the DataDirect driver is `sybase.jar`. Configure the connection pool using the following settings:
@@ -1201,7 +1201,7 @@ The JAR file for the DataDirect driver is `sybase.jar`. Configure the connection
 
 NOTE: In some situations, using this driver can cause exceptions to be thrown because the driver creates a stored procedure for every parameterized PreparedStatement by default. If this situation arises, add the property `PrepareMethod`, setting its value to `direct`.
 
-[[inet-merlia-driver-for-microsoft-sql-server-database]]
+[#inet-merlia-driver-for-microsoft-sql-server-database]
 === Inet Merlia Driver for Microsoft SQL Server Database
 
 The JAR file for the Inet Microsoft SQL Server driver is `Merlia.jar`. Configure the connection pool using the following settings:
@@ -1220,7 +1220,7 @@ The JAR file for the Inet Microsoft SQL Server driver is `Merlia.jar`. Configure
 
 ** `password` - Set as appropriate.
 
-[[inet-sybelux-driver-for-sybase-database]]
+[#inet-sybelux-driver-for-sybase-database]
 === Inet Sybelux Driver for Sybase Database
 
 The JAR file for the Inet Sybase driver is `Sybelux.jar`. Configure the connection pool using the following settings:
@@ -1241,7 +1241,7 @@ The JAR file for the Inet Sybase driver is `Sybelux.jar`. Configure the connecti
 
 ** `password` - Set as appropriate.
 
-[[jconnect-type-4-driver-for-sybase-ase-12.5-database]]
+[#jconnect-type-4-driver-for-sybase-ase-12.5-database]
 === Jconnect Type 4 Driver for Sybase ASE 12.5 Database
 
 The JAR file for the Sybase driver is `jconn4.jar`. Configure the connection pool using the following settings:
@@ -1274,13 +1274,13 @@ com.sybase.jdbc4.jdbc.SybXADataSource
 ** `FAKE_METADATA` - Set to `true`.
 
 
-[[sql-management-overview]]
+[#sql-management-overview]
 == SQL Management in Payara Server
 
 Payara Server keeps track of the recently executed SQL statements for monitoring purposes.
 This way, one can review which SQL statements are executed, how many times the same statement is executed and how long it took.
 
-[[activate-sql-statment-overview]]
+[#activate-sql-statment-overview]
 == Activate Overview
 
 The activation of the collection is controlled by the monitoring service.
@@ -1299,7 +1299,7 @@ set configs.config.server-config.monitoring-service.module-monitoring-levels.jdb
 The information can be consulted via the JMX beans or the Rest monitoring interface. These need to be activated also,
 see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#jmx-monitoring-service[jmx monitoring configuration] and xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#rest-monitoring[rest monitoring configuration] on how to do this.
 
-[[view-sql-statment-overview]]
+[#view-sql-statment-overview]
 == Viewing Statements
 
 When you want to retrieve the information through the JMX channel, you can find the information in the following MBean:
@@ -1323,7 +1323,7 @@ The properties we want to highlight here are
 *`frequsedsqlqueries`*: Contains the list of all SQL statements and their execution count, which are executed during the collection time frame.
 *`slowSqlQueries`*: Contains again the list of all SQL statements but this time with the maximum execution time they took.
 
-[[configure-sql-statment-overview]]
+[#configure-sql-statment-overview]
 == Configuring Parameters
 
 The SQL statement collection has a few configuration values which have default values.
@@ -1340,21 +1340,21 @@ TIP: Setting the maximum size of the cache to `0` will disable it completely.
 
 When the cache size is too small, you see an information message in the log to indicate that not all statements could be retained.
 
-[[slow-sql-logger]]
+[#slow-sql-logger]
 == Slow SQL Logger
 
 Many performance problems in Enterprise Applications can be traced to slow database access. Payara Server includes capabilities to detect and log slow SQL queries executed via a JDBC Connection pool. The Slow SQL logger monitors all queries executed on the connection pool and if they exceed a configurable execution time in seconds a warning message is logged into the server log.
 
 The warning message (see below) logs the SQL query and the stack trace to the code executing the query. This enables rapid diagnosis by pinpointing the exact lines of code to investigate.
 
-[[configuring-the-slow-sql-logger]]
+[#configuring-the-slow-sql-logger]
 === Configuring the Slow SQL Logger
 
 Ensure Wrap JDBC Objects is enabled in your JDBC Connection Pool (enabled by default) for the Slow SQL Logger to function correctly.
 
 There are a number of ways to configure the slow SQL threshold time on a JDBC connection pool.
 
-[[slow-sql-administration-console]]
+[#slow-sql-administration-console]
 === Using the Administration Console
 
 To configure slow SQL logging on a JDBC connection pool via the administration console, navigate to the Connection Pool's *Advanced Properties* tab. Then specify the *Slow Query Log Threshold* time in seconds or use a decimal value to signify milliseconds.
@@ -1363,7 +1363,7 @@ image:advanced-jdbc/slowsqllogging.png[alt="Slow SQL Logging settings in the adm
 
 TIP: setting the threshold to `-1` will disable the feature
 
-[[slow-sql-asadmin]]
+[#slow-sql-asadmin]
 === Using Asadmin Commands
 
 The *Slow Query Log Threshold* time for a JDBC connection pool can also be configured with an `asadmin` command, by using the `set` command to set the `slow-query-threshold-in-seconds` property, like in the following example:
@@ -1380,14 +1380,14 @@ You can also set the threshold time to milliseconds simply by passing a decimal 
 asadmin set domain.resources.jdbc-connection-pool.__TimerPool.slow-query-threshold-in-seconds=0.2
 ----
 
-[[configuring-sql-trace-listeners]]
+[#configuring-sql-trace-listeners]
 == Configuring SQL Trace Listeners
 
 Payara Server provides support for custom SQL Trace Listeners. A *SQL Trace Listener* is registered against a data source and is called after each method call made on the JDBC connection pool.
 
 More information on how to implement a SQL Trace listener can be found in the xref:technical-documentation/application-development/using-the-jdbc-api-for-database-access.adoc#sql-trace-listeners[Application Development section].
 
-[[sql-trace-administration-console]]
+[#sql-trace-administration-console]
 === Using the Administration Console
 
 SQL Trace Listeners can be enabled on a JDBC connection pool through the administration web console. Navigate to the *Advanced Tab* of your connection pool by selecting the JDBC -> JDBC Connection Pools -> *<Your Connection pool>*.
@@ -1398,7 +1398,7 @@ image:advanced-jdbc/sqltracelistener.png[alt="Enabling SQL Tracing in the admini
 
 IMPORTANT: The implementation class must be on the server's _classpath_ for it to work correctly.
 
-[[sql-trace-asadmin-commands]]
+[#sql-trace-asadmin-commands]
 === Using Asadmin Commands
 
 SQL Trace Listeners can be enabled on a JDBC connection pool using with an `asadmin` commands by using the `set` command to set the `fish.payara.lsql-trace-listeners` to the fully qualified class name of your listener implementation, like on the following example:

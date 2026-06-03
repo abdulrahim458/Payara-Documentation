@@ -2,7 +2,7 @@
 
 Removes a JMS resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] delete-jms-resource [--help]
 jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-jms-resource` subcommand removes the specified Java Message Service (JMS) resource. Ensure that you remove all references to this resource before executing this subcommand.
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -41,13 +41,13 @@ NOTE: Resources are always created for a domain as a whole but are only active f
   instance-name;;
     Deletes the JMS resource from the specified server instance.
 
-[[operandds]]
+[#operandds]
 == Operands
 
 *jndi_name*:
   The JNDI name of the JMS resource to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a JMS destination resource*
@@ -61,7 +61,7 @@ Administered object jms/MyQueue deleted.
 Command delete-jms-resource executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

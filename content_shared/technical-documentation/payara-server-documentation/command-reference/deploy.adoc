@@ -2,7 +2,7 @@
 
 Deploys the specified component.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -38,14 +38,14 @@ endif::[]
 [file_archive|filepath]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `deploy` subcommand deploys applications to the server. Applications can be enterprise applications, web applications, Enterprise JavaBeans (EJB) modules, connector modules, and application client modules. If the component is already deployed or already exists, it is forcibly redeployed if the `--force` option is set to `true` (default is `false`).
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -186,7 +186,7 @@ Without this option the deployment would fail if a data source is defined and th
 asadmin deploy --skipdsfailure /home/mark/clusterjsp-1.1.war
 ----
 
-[[operands]]
+[#operands]
 == Operands
 
 *file_archive|filepath*:
@@ -195,7 +195,7 @@ asadmin deploy --skipdsfailure /home/mark/clusterjsp-1.1.war
   If the `--upload` option is set to `true`, this is the path to the deployable file on the local client machine. If the `--upload` option is set to `false`, this is the path to the file on the server machine.
   * A directory that contains the exploded format of the deployable archive. This is the path to the directory on the server machine. If you specify a directory, the `--upload` option is ignored.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deploying an Enterprise Application*
@@ -298,7 +298,7 @@ Application deployed successfully with name sample1.
 Command deploy executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

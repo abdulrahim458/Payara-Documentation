@@ -7,10 +7,10 @@ For more information about the Jakarta Transactions API (JTA) and Java Transacti
 
 You might also want to read "https://eclipse-ee4j.github.io/jakartaee-tutorial/#transactions[Transactions^]" in The Jakarta EE Tutorial.
 
-[[handling-transactions-with-databases]]
+[#handling-transactions-with-databases]
 == Handling Transactions with Databases
 
-[[using-jdbc-transaction-isolation-levels]]
+[#using-jdbc-transaction-isolation-levels]
 === Using JDBC Transaction Isolation Levels
 
 Not all database vendors support all transaction isolation levels available in the JDBC API. Payara Server allows specifying any isolation level your database supports. The following table defines transaction isolation levels.
@@ -72,7 +72,7 @@ You can guarantee the transaction isolation level in the following ways:
 asadmin set domain1.resources.jdbc-connection-pool.H2Pool.is-isolation-level-guaranteed=true
 ----
 
-[[using-non-transactional-connections]]
+[#using-non-transactional-connections]
 === Using Non-Transactional Connections
 
 You can specify a non-transactional database connection in any of these ways:
@@ -109,28 +109,28 @@ This is because the in-progress transaction hasn't committed. For another exampl
 
 Here is a typical use case for a non-transactional connection: a component that is updating a database in a transaction context spanning over several iterations of a loop can refresh cached data by using a non-transactional connection to read data before the transaction commits.
 
-[[handling-transactions-with-enterprise-beans]]
+[#handling-transactions-with-enterprise-beans]
 == Handling Transactions with Enterprise Beans
 
 This section describes the transaction support built into the Jakarta Enterprise Beans programming model.
 
 As a developer, you can write an application that updates data in multiple databases distributed across multiple sites. The application might use EJB servers from different vendors.
 
-[[flat-transactions]]
+[#flat-transactions]
 === Flat Transactions
 
 The Jakarta Enterprise Beans specification support for flat (as opposed to nested) transactions. In a flat transaction, each transaction is decoupled and remains independent of other transactions in the system. Another transaction cannot start in the same thread until the current transaction ends.
 
 Flat transactions are the most prevalent model and are supported by most commercial database systems. Although nested transactions offer a finer granularity of control over transactions, they are supported by far fewer commercial database systems.
 
-[[global-and-local-transactions]]
+[#global-and-local-transactions]
 === Global and Local Transactions
 
 Both local and global transactions are demarcated using the `jakarta.transaction.UserTransaction` interface, which the client must use. Local transactions bypass the XA commit protocol and are faster.
 
 For more information, see xref:#the-transaction-manager-the-transaction-synchronization-registry-and-usertransaction[The Transaction Manager, the Transaction Synchronization Registry, and `UserTransaction`].
 
-[[commit-options]]
+[#commit-options]
 === Commit Options
 
 The EJB specification's transaction guidelines are designed to give the container the flexibility to select the disposition of the instance state at the time a transaction is committed. This allows the container to best manage caching an entity object's state and associating an entity object identity with the EJB instances.
@@ -162,7 +162,7 @@ If there is more than one transactional client concurrently accessing the same e
 
 The `payara-ejb-jar.xml` deployment descriptor has an element, `commit-option`, that specifies the commit option to be used. Based on the specified commit option, the appropriate handler is instantiated.
 
-[[bean-level-container-managed-transaction-timeouts]]
+[#bean-level-container-managed-transaction-timeouts]
 === Bean-Level Container-Managed Transaction Timeouts
 
 The transaction timeout for the domain is specified using the _Transaction Timeout_ setting of the server's Transaction Service.
@@ -175,17 +175,17 @@ The value of `cmt-timeout-in-seconds` is used for all methods in the bean that s
 
 IMPORTANT: This timeout value is not used if the bean joins a client transaction.
 
-[[handling-transactions-with-jakarta-messaging]]
+[#handling-transactions-with-jakarta-messaging]
 == Handling Transactions with Jakarta Messaging
 
-[[transactions-and-non-persistent-messages]]
+[#transactions-and-non-persistent-messages]
 === Transactions and Non-Persistent Messages
 
 During transaction recovery, non-persistent messages might be lost. If the broker fails between the transaction manager `prepare` and `commit` operations, any non-persistent message in the transaction is lost and cannot be delivered.
 
 A message that is not saved to a persistent store is not available for transaction recovery.
 
-[[using-the-configurabletransactionsupport-interface]]
+[#using-the-configurabletransactionsupport-interface]
 === Using the Configurabletransactionsupport Interface
 
 The Jakarta Connectors specification allows a resource adapter to use the `transaction-support` attribute to specify the level of transaction support that the resource adapter handles.
@@ -196,7 +196,7 @@ If a `ManagedConnectionFactory` implements an optional interface called `com.sun
 
 Connections obtained from the pool can then be used with a transaction level at or lower than the configured value. For example, a connection obtained from a pool that is set to `XA_TRANSACTION` could be used as a `LOCAL` resource in a last-agent-optimized transaction or in a non-transactional context.
 
-[[the-transaction-manager-the-transaction-synchronization-registry-and-usertransaction]]
+[#the-transaction-manager-the-transaction-synchronization-registry-and-usertransaction]
 == The Transaction Manager, the Transaction Synchronization Registry, and `UserTransaction`
 
 To access a `UserTransaction` instance, you can either look it up using the `java:comp/UserTransaction` JNDI name or inject it using the `@Resource` annotation.

@@ -5,7 +5,7 @@ This chapter provides procedures for administering thread pools in the Payara Se
 
 Instructions for accomplishing these tasks by using the Administration Console are contained in the Administration Console online help.
 
-[[about-thread-pools]]
+[#about-thread-pools]
 == About Thread Pools
 
 The Virtual Machine for the Java platform ((Java Virtual Machine) or JVM machine) can support many threads of execution simultaneously.
@@ -16,12 +16,12 @@ One thread pool can serve multiple connector modules and enterprise beans. Reque
 When Payara Server receives a request, it assigns the request to a free thread from the thread pool. The thread executes the client's requests and returns results.
 For example, if the request needs to use a system resource that is currently busy, the thread waits until that resource is free before allowing the request to use that resource.
 
-[[configuring-thread-pools]]
+[#configuring-thread-pools]
 == Configuring Thread Pools
 
 You can specify the minimum and maximum number of threads that are reserved for requests from applications. The thread pool is dynamically adjusted between these two values.
 
-[[default-thread-pool-size]]
+[#default-thread-pool-size]
 === Default Thread Pool Size
 
 The thread pool `thread-pool-1` starts with a minimum size of *2* instead of *1* (like in previous versions)
@@ -31,7 +31,7 @@ Without this change, new tasks submitted to these service components would just 
 
 NOTE: This minor optimization is configured on the default domain template (so all newly created domains inherit it).
 
-[[to-create-a-thread-pool]]
+[#to-create-a-thread-pool]
 === To Create a Thread Pool
 
 Use the `create-threadpool` subcommand in remote mode to create a thread pool.
@@ -61,7 +61,7 @@ Command create-threadpool executed successfully
 ----
 This example creates `threadpool-l`.
 
-[[to-list-thread-pools]]
+[#to-list-thread-pools]
 === To List Thread Pools
 
 Use the `list-threadpools` subcommand in remote mode to list the existing thread pools.
@@ -79,7 +79,7 @@ Command list-threadpools executed successfully
 ----
 This example lists the existing thread pools.
 
-[[to-update-a-thread-pool]]
+[#to-update-a-thread-pool]
 === To Update a Thread Pool
 
 Use the `set` subcommand to update the values for a specified thread pool.
@@ -99,7 +99,7 @@ Command set executed successfully
 ----
 This example sets the `max-thread-pool-size` from its previous value to 8.
 
-[[to-delete-a-thread-pool]]
+[#to-delete-a-thread-pool]
 === To Delete a Thread Pool
 
 Use the `delete-threadpool` subcommand in remote mode to delete an existing thread pool. Deleting a thread pool will fail if that pool is referenced by a network listener.
@@ -120,14 +120,14 @@ Command delete-threadpool executed successfully
 ----
 This example deletes `threadpool-1`.
 
-[[ejb-thread-pool]]
+[#ejb-thread-pool]
 == EJB Thread Pool
 
 The EJB Thread Pool is for prepared EJB beans which are ready for usage, this means there is no instantiation and initialization overhead when the bean is used. It can also be used to limit the number of concurrent beans in use.
 
 An individual bean can specify a configuration that overrides the configuration of the EJB container in the `<bean-pool>` element of the `glassfish-ejb-jar.xml` file.
 
-[[configuration-properties]]
+[#configuration-properties]
 === EJB Thread Pool Configuration Properties
 
 The EJB Thread Pool has the following properties configured by default.
@@ -143,7 +143,7 @@ The EJB Thread Pool has the following properties configured by default.
 |Prestart All Core Threads |false |Threads in the EJB container thread pool are started even if no requests have arrived, and the pool has a non-empty queue
 |=======================================================================
 
-[[configuring-the-pool]]
+[#configuring-the-pool]
 == Configuring the EJB Thread Pool
 
 The EJB thread pool can be configured with either the admin console or the asadmin CLI, by making use of the following configuration properties.

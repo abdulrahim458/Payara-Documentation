@@ -3,7 +3,7 @@
 
 A deployment group is a loose grouping of Payara Server instances that can be used as a target for *deployments*. Deployment Groups consist of one or more standalone instances and each instance can belong to one or more deployment groups.
 
-[[description]]
+[#description]
 == Description
 
 Deployment groups are effective and more flexible replacements for traditional clusters, as they can be used to effectively manage the lifecycle of multiple server instances at once.

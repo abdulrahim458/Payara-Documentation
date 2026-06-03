@@ -2,7 +2,7 @@
 
 Lists the existing protocol finders.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] list-protocol-finders [--help]
 protocol-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-protocol-finders` subcommand lists the existing protocol finders.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -38,13 +38,13 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Lists the protocol finders for the specified server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *protocol-name*:
   The name of the protocol for which to list protocol finders.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

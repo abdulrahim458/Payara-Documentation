@@ -3,7 +3,7 @@
 
 Apache NetBeans has Payara Micro support built into the IDE, so there is no need to install a plugin to integrate and control Payara Micro from Apache NetBeans.
 
-[[create-micro-project]]
+[#create-micro-project]
 == Creating a Payara Micro Project
 
 Apache NetBeans IDE supports Payara Micro out of the box. To create a Payara Micro project, follow these steps:
@@ -20,14 +20,14 @@ Apache NetBeans IDE supports Payara Micro out of the box. To create a Payara Mic
 +
 *image*: apache-netbeans/payara-micro/netbeans-new-application-version-payara6.png[]
 
-[[deploy-payara-micro-project]]
+[#deploy-payara-micro-project]
 == Deploying the Payara Micro Project
 
 To deploy the Payara Micro project, simply run the application using the Run Project option from the Run menu. The Payara Micro application will be deployed and the URL will be displayed in the _Output_ window:
 
 *image*: apache-netbeans/payara-micro/netbeans-app-running-payara6.png[]
 
-[[hot-deploy-and-auto-deploy-settings]]
+[#hot-deploy-and-auto-deploy-settings]
 == Hot Deploy and Auto Deploy Settings
 
 To enable the *Auto Deploy* features for Payara Micro on the Apache NetBeans IDE, you must enable the *Compile on Save* and *Deploy on Save* features from the *Project Properties*.
@@ -44,6 +44,6 @@ To enable the *Hot Deploy* feature for Payara Micro on the Apache NetBeans IDE, 
 
 *image*: hot-auto-deploy/netbeans-hotdeploy-micro.png[Hot Deploy Micro]
 
-[[see-also]]
+[#see-also]
 == See Also
 xref:technical-documentation/ecosystem/ide-integration/hot-deploy-and-auto-deploy.adoc[Hot Deploy and Auto Deploy]

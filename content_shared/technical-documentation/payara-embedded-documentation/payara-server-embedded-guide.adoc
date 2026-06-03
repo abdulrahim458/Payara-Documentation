@@ -4,7 +4,7 @@ This document explains how to run applications in embedded Payara Server and to 
 
 This document is for software developers who are developing applications to run in an embedded instance of Payara Server.
 
-[[introduction-to-embedded-payara-server]]
+[#introduction-to-embedded-payara-server]
 == Introduction to Embedded Payara Server
 
 Embedded Payara Server enables you to use Payara Server as a library. Embedded Payara Server also enables you to run Payara Server inside any Virtual Machine for the Java platform (Java Virtual Machine or JVM).
@@ -16,7 +16,7 @@ You can use embedded Payara Server in the following ways:
 * With the Embedded Server API (see xref:including-the-payara-server-embedded-server-api-in-applications[Including the Payara Server Embedded Server API in Applications])
 * With the EJB Embeddable API (see xref:using-the-ejb-embeddable-api-with-embedded-payara-server[Using the EJB Embeddable API with Embedded Payara Server]
 
-[[embedded-payara-server-file-system]]
+[#embedded-payara-server-file-system]
 == Embedded Payara Server File System
 
 The following Embedded Payara Server directories and files are important if you are referencing a non-embedded installation of Payara Server:
@@ -25,7 +25,7 @@ The following Embedded Payara Server directories and files are important if you 
 * xref:instance-root-directory[Instance Root Directory]
 * xref:the-domainxml-file[The `domain.xml` File]
 
-[[installation-root-directory]]
+[#installation-root-directory]
 === Installation Root Directory
 
 The installation root directory, represented as `as-install`, is the parent of the directory that embedded Payara Server uses for configuration files.
@@ -34,7 +34,7 @@ This directory corresponds to the base directory for an installation of Payara S
 * `domains`
 * `lib`
 
-[[instance-root-directory]]
+[#instance-root-directory]
 === Instance Root Directory
 
 The instance root directory, represented as `domain-dir`, is the parent directory of a server instance directory. Embedded Payara Server uses the server instance directory for domain configuration files.
@@ -43,19 +43,19 @@ NOTE: If you have valid non-embedded Payara Server `as-install` and `domain-dir`
 
 If domain-dir is not specified, Payara Server creates a directory named `gfembed` `random-number` `tmp` in a temporary directory, where random-number is a randomly generated 19-digit number. Payara Server then copies configuration files into this directory. The temporary directory is the value of the system property `java.io.tmpdir`. You can override this value by specifying the `glassfish.embedded.tmpdir` property in the `GlassFishProperties` class or as a system property.
 
-[[the-domainxml-file]]
+[#the-domainxml-file]
 === The `domain.xml` File
 
 Using an existing `domain.xml` file avoids the need to configure embedded Payara Server programmatically in your application. Your application obtains domain configuration data from an existing `domain.xml` file. You can create this file by using the administrative interfaces of an existing Payara Server installation.
 
 To specify an existing `domain.xml` file, invoke the `setConfigFileURI` method of the `GlassFishProperties` class as described in xref:creating-and-configuring-an-embedded-payara-server[Creating and Configuring an Embedded Payara Server].
 
-[[including-the-payara-server-embedded-server-api-in-applications]]
+[#including-the-payara-server-embedded-server-api-in-applications]
 == Including the Payara Server Embedded Server API in Applications
 
 Payara Server provides an application programming interface (API) for developing applications in which Payara Server is embedded.
 
-[[setting-the-class-path]]
+[#setting-the-class-path]
 === Setting the Class Path
 
 Payara Embedded has two distribution variants, `payara-embedded-all` and `payara-embedded-web`, functionally these are the same as their standalone counterparts, Payara Server Full Profile and Payara Server Web Profile respectively.
@@ -95,12 +95,12 @@ In addition, add to the class path any other JAR files or classes upon which you
 
 For example, if an application uses a database other than H2, include the JDBC driver JAR files in the class path accordingly.
 
-[[creating-starting-and-stopping-embedded-payara-server]]
+[#creating-starting-and-stopping-embedded-payara-server]
 === Creating, Starting, and Stopping Embedded Payara Server
 
 Before you can run applications, you must set up and run the embedded Payara Server.
 
-[[creating-and-configuring-an-embedded-payara-server]]
+[#creating-and-configuring-an-embedded-payara-server]
 ==== Creating and Configuring an Embedded Payara Server
 
 To create and configure an embedded Payara Server, perform these tasks:
@@ -218,7 +218,7 @@ public class EmbeddedRunner{
 }
 ----
 
-[[running-an-embedded-payara-server]]
+[#running-an-embedded-payara-server]
 ==== Running an Embedded Payara Server
 
 After you create an embedded Payara Server as described in xref:creating-and-configuring-an-embedded-payara-server[Creating and Configuring an Embedded Payara Server], you can perform operations such as:
@@ -227,7 +227,7 @@ After you create an embedded Payara Server as described in xref:creating-and-con
 * xref:starting-an-embedded-payara-server-from-an-application[Starting an Embedded Payara Server From an Application]
 * xref:stopping-an-embedded-payara-server-from-an-application[Stopping an Embedded Payara Server From an Application]
 
-[[setting-the-port-of-an-embedded-payara-server-from-an-application]]
+[#setting-the-port-of-an-embedded-payara-server-from-an-application]
 *Setting the Port of an Embedded Payara Server From an Application*
 
 You must set the server's HTTP or HTTPS port. If you do not set the port, your application fails to start and throws an exception. You can set the port directly or indirectly.
@@ -252,7 +252,7 @@ public class EmbeddedRunner{
 }
 ----
 
-[[starting-an-embedded-payara-server-from-an-application]]
+[#starting-an-embedded-payara-server-from-an-application]
 *Starting an Embedded Payara Server From an Application*
 
 To start an embedded Payara Server, invoke the `start` method of the corresponding server object.
@@ -275,7 +275,7 @@ public class EmbeddedRunner{
 }
 ----
 
-[[stopping-an-embedded-payara-server-from-an-application]]
+[#stopping-an-embedded-payara-server-from-an-application]
 *Stopping an Embedded Payara Server From an Application*
 
 The API for an embedded Payara Server provides a method for stopping an embedded server. Using this method enables your application to stop the server in
@@ -306,12 +306,12 @@ public class EmbeddedRunner{
 
 As an alternative, you can use the `dispose` method to stop an embedded Payara Server and dispose of the temporary file system.
 
-[[deploying-and-undeploying-an-application-in-an-embedded-payara-server]]
+[#deploying-and-undeploying-an-application-in-an-embedded-payara-server]
 === Deploying and Un-Deploying an Application in an Embedded Payara Server
 
 Deploying an application installs the files that comprise the application into Embedded Payara Server and makes the application ready to run. By default, an application is enabled when it is deployed.
 
-[[to-deploy-an-application-from-an-archive-file-or-a-directory]]
+[#to-deploy-an-application-from-an-archive-file-or-a-directory]
 ==== To Deploy an Application from an Archive File or a Directory
 
 An archive file contains the resources, deployment descriptor, and classes of an application. The content of the file must be organized in the directory structure that the Jakarta EE specifications define for the type of archive that the file contains. For more information, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#deploying-applications[Deploying Applications] in the Payara Server Application Deployment section.
@@ -352,7 +352,7 @@ public class EmbeddedRunner{
 }
 ----
 
-[[undeploying-an-application]]
+[#undeploying-an-application]
 ==== Un-Deploying an Application
 
 Undeploy an application when the application is no longer required to run in Payara Server. For example, before stopping Payara Server, undeploy all applications that are running in Payara Server.
@@ -377,7 +377,7 @@ public class EmbeddedRunner{
 }
 ----
 
-[[creating-a-scattered-archive]]
+[#creating-a-scattered-archive]
 ==== Creating a Scattered Archive
 
 Deploying a module from a scattered archive (WAR or JAR) enables you to deploy an un-packaged module whose resources, deployment descriptor, and classes are in any location. Deploying a module from a scattered archive simplifies the testing of a module during development, especially if all the items that the module requires are not available to be packaged.
@@ -484,7 +484,7 @@ public class EmbeddedRunner{
 }
 ----
 
-[[creating-a-scattered-enterprise-archive]]
+[#creating-a-scattered-enterprise-archive]
 ==== Creating a Scattered Enterprise Archive
 
 Deploying an application from a scattered enterprise archive (EAR) enables you to deploy an un-packaged application whose resources, deployment descriptor, and classes are in any location. Deploying an application from a scattered archive simplifies the testing of an application during development, especially if all the items that the application requires are not available to be packaged.
@@ -617,7 +617,7 @@ public class EmbeddedRunner{
 }
 ----
 
-[[running-asadmin-commands-using-the-payara-server-embedded-server-api]]
+[#running-asadmin-commands-using-the-payara-server-embedded-server-api]
 === Running `asadmin` Commands Using the Payara Server Embedded Server API
 
 Running commands from an application enables the application to configure the embedded Payara Server to suit the application's requirements. For example, an application can run the required `asadmin` commands to create a JDBC technology connection to a database.
@@ -659,7 +659,7 @@ public class EmbeddedRunner{
 }
 ----
 
-[[sample-applications]]
+[#sample-applications]
 === Sample Applications
 
 This example shows code for the following:
@@ -706,14 +706,14 @@ public class EmbeddedRunner {
 }
 ----
 
-[[using-the-ejb-embeddable-api-with-embedded-payara-server]]
+[#using-the-ejb-embeddable-api-with-embedded-payara-server]
 == Using the EJB Embeddable API with Embedded Payara Server
 
 Payara Server Embedded is not related to the EJB Embeddable API, but you can use these APIs together in some form. The EJB Embeddable API supports all EJB Lite features with addition of the EJB timer service and testing of EJB modules packaged in a WAR file.
 
 For EJB modules in a WAR file (or an exploded directory), if a web application has one EJB module, and there are no other EJB modules in the classpath, those entries (libraries) are ignored. If there are other EJB modules, a temporary EAR file is created. For EJB modules in a WAR file to be tested, the client code must use EJB modules with interfaces or without annotations. Those EJB modules are not part of the classpath and can't be loaded by the client class loader.
 
-[[to-use-the-ejb-embeddable-api-with-embedded-payara-server]]
+[#to-use-the-ejb-embeddable-api-with-embedded-payara-server]
 === To Use the EJB Embeddable API with Embedded Payara Server
 
 . To specify Payara Server as the Container Provider, include the `payara-embedded-all.jar` dependency in the class path of your embeddable EJB application.
@@ -738,7 +738,7 @@ The default root directory location is `as-install/domains/domain1` if a non-emb
 
 .  Close the EJB container properly to release all acquired resources and threads.
 
-[[ejb-embeddable-api-properties]]
+[#ejb-embeddable-api-properties]
 === EJB Embeddable API Properties
 
 Properties that can be passed to the `EJBContainer#createEJBContainer(Properties)` method are summarized in the following table.
@@ -785,7 +785,7 @@ a|In order of precedence:
 |If `true`, omits modules from the classpath if they are not specified using `EJBContainer.MODULES` and have a manifest file with a `Main-Class` attribute.
 |===
 
-[[changing-log-levels-in-payara-embedded]]
+[#changing-log-levels-in-payara-embedded]
 == Changing Log Levels in Payara Server Embedded
 
 To change the JUL (Java Util Logging) log levels in Payara Server Embedded, you can follow the steps in this section, or you can use the Embedded Server API as shown in the previous examples.
@@ -842,14 +842,14 @@ Pass the name of this custom logging configuration file to the `java` command wh
 java -Djava.util.logging.config.file=custom-logging.properties fish.payara.embedded.ServerRunner
 ----
 
-[[default-jakarta-persistence-data-source-for-embedded-payara-server]]
+[#default-jakarta-persistence-data-source-for-embedded-payara-server]
 == Default Jakarta Persistence Data Source for Embedded Payara Server
 
 The `jdbc/__default` H2 database is preconfigured in any Embedded Payara Server. It is used when an application is deployed in Embedded Payara Server that uses Jakarta Persistence but doesn't specify a data source.
 
 Embedded Payara Server uses an embedded H2 database created in a temporary domain that is destroyed when an embedded Payara Server is stopped. You can use an H2 database configured with non-embedded Payara Server if you explicitly specify the instance root directory or through its configuration file.
 
-[[restrictions-for-payara-server-embedded-web-profile]]
+[#restrictions-for-payara-server-embedded-web-profile]
 == Restrictions for Payara Server Embedded Web Profile
 
 The web profile variant of the Embedded API (`payara-embedded-web.jar`) only supports the following Payara Server features:
@@ -882,19 +882,19 @@ When embedded Payara Server is started, the base installation directory that Pay
 
 NOTE: If necessary, Payara Server also creates an instance root directory.
 
-[[payara-server-embedded-usecases]]
+[#payara-server-embedded-usecases]
 == Payara Server Embedded Use Cases
 
 Overview of some expected use cases of Payara Server Embedded.
 
-[[bundle-application]]
+[#bundle-application]
 === Bundle Your Application
 
 Where the installation of Payara Server and the deployment of the applications can't be done on a central infrastructure, you may opt to use Payara Embedded. In this case, you can bundle Payara Server with the application within a single application, which makes it easier for installing it.
 
 Instead of having the three steps, installing Payara Server, configuring the environment, and deploying the application, you can do all those steps within the application containing Payara Embedded. You only need to start the application and the system is ready to respond to user requests.
 
-[[integration-testing]]
+[#integration-testing]
 === Integration Testing
 
 While performing integration testing, you may need to deploy the application to Payara in order to verify the behaviour of the code you have written. While you could use a standalone installation of Payara Server, cleanup is not always done correctly and can cause other tests to behave incorrectly.
@@ -903,7 +903,7 @@ Integration testing can be done easier and more consistently with Payara Embedde
 
 Starting Payara Embedded for testing can also be done using the Arquillian connector. In that case, the setup and teardown of Payara is managed for you.
 
-[[jdk-17-considerations]]
+[#jdk-17-considerations]
 == JDK 17 Considerations
 
 When running Payara Embedded on JDK 17, you must update your client side run configuration with all the necessary opens and exports for Payara to work as expected. The following JVM options should be added within your run configuration:
@@ -913,7 +913,7 @@ When running Payara Embedded on JDK 17, you must update your client side run con
 --add-opens=java.base/jdk.internal.loader=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jrt=ALL-UNNAMED -Xbootclasspath/a:${com.sun.aas.installRoot}/lib/grizzly-npn-api.jar --add-exports=java.base/sun.net.www=ALL-UNNAMED --add-exports=java.base/sun.security.util=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.desktop/java.beans=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/sun.net.www.protocol.jar=ALL-UNNAMED
 ----
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-embedded.adoc[Payara Arquillian Connector]

@@ -5,7 +5,7 @@ This chapter describes how to use the Jakarta Mail API, which provides a set of 
 
 IMPORTANT: Jakarta Mail resources are supported only in the Full Profile, not in the Web Profile.
 
-[[introducing-jakarta-mail]]
+[#introducing-jakarta-mail]
 == Introducing Jakarta Mail
 
 The Jakarta Mail API defines classes such as `Message`, `Store`, and `Transport`. The API can be extended and can be subclassed to provide new protocols and to add functionality when necessary. In addition, the API provides concrete subclasses of the abstract classes. These subclasses, including `MimeMessage` and `MimeBodyPart`, implement widely
@@ -19,7 +19,7 @@ The Jakarta Mail architectural components are as follows:
 
 For more information, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-jakarta-mail-service.adoc[Administering the Jakarta Mail Service]" in the Payara Server General Administration section and the https://jakarta.ee/specifications/mail[Jakarta Mail specification^].
 
-[[creating-a-jakarta-mail-session]]
+[#creating-a-jakarta-mail-session]
 == Creating a Jakarta Mail Session
 
 You can create a Jakarta Mail session in the following ways:
@@ -27,7 +27,7 @@ You can create a Jakarta Mail session in the following ways:
 * In the Administration Console, open the _Resources_ component and select _JavaMail Sessions_.
 * Use the `asadmin create-mail-resource` command.
 
-[[jakarta-mail-session-properties]]
+[#jakarta-mail-session-properties]
 == Jakarta Mail Session Properties
 
 You can set properties for a Jakarta Mail `Session` object. Every property name must start with a `mail-` prefix. Payara Server changes the dash (`-`) character to a period (`.`) in the name of the property and saves the property to the `MailConfiguration` and Jakarta Mail `Session` objects. If the name of the property doesn't start with `mail-`, the property is ignored.
@@ -37,7 +37,7 @@ For example, if you want to define the property `mail.from` in a Jakarta Mail `S
 * Name:  `mail-from`
 * Value: `john.doe@sun.com`
 
-[[looking-up-a-jakarta-mail-session]]
+[#looking-up-a-jakarta-mail-session]
 == Looking up a Jakarta Mail Session
 
 The standard Java Naming and Directory Interface (JNDI) subcontext for Jakarta Mail sessions is `java:comp/env/mail`.
@@ -57,10 +57,10 @@ var session = (Session)ic.lookup(snName);
 
 For more information about the JNDI API, see xref:technical-documentation/application-development/using-the-java-naming-and-directory-interface.adoc#using-a-custom-jndi.properties-file[Using the Java Naming and Directory Interface].
 
-[[sending-and-reading-messages-using-jakarta-mail]]
+[#sending-and-reading-messages-using-jakarta-mail]
 == Sending and Reading Messages Using Jakarta Mail
 
-[[to-send-a-message-using-jakarta-mail]]
+[#to-send-a-message-using-jakarta-mail]
 === To Send a Message Using Jakarta Mail
 
 . Import the packages that you need.
@@ -110,7 +110,7 @@ msg.setText(msgTxt);
 Transport.send(msg);
 ----
 
-[[to-read-a-message-using-jakarta-mail]]
+[#to-read-a-message-using-jakarta-mail]
 === To Read a Message Using Jakarta Mail
 
 . Import the packages that you need.
@@ -163,7 +163,7 @@ Folder folder = store.getFolder("INBOX");
 Message[] messages = folder.getMessages();
 ----
 
-[[using-application-scoped-jakarta-mail-resources]]
+[#using-application-scoped-jakarta-mail-resources]
 == Using Application-Scoped Jakarta Mail Resources
 
 You can define an application-scoped Jakarta Mail or other resource for an enterprise application, web module, EJB module, connector module, or application client module by supplying a `payara-resources.xml` deployment descriptor file.

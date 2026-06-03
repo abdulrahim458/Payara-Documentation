@@ -2,7 +2,7 @@
 
 Tests if a connection pool is usable.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ pool_name
 [--appname application [--modulename module]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `ping-connection-pool` subcommand tests if an existing JDBC or connector connection pool is usable . For example, if you create a new
@@ -36,7 +36,7 @@ It is recommended to use payara-resources.xml instead.
 The `jndi-name` for application-scoped-resources or module-scoped-resources are specified using the format
 `java:app/`jdbc/myDataSource or `java:module/`jdbc/myModuleLevelDataSource`.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -49,13 +49,13 @@ The `jndi-name` for application-scoped-resources or module-scoped-resources are 
 *`--modulename`*:
   Name of the module in which the module scoped resource is defined.
 
-[[operands]]
+[#operands]
 == Operands
 
 *pool_name*:
   Name of the connection pool to be reinitialized.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Contacting a Connection Pool*
@@ -68,7 +68,7 @@ asadmin> ping-connection-pool DerbyPool
 Command ping-connection-pool executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

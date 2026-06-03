@@ -2,7 +2,7 @@
 
 Celetes a security map for the specified connector connection pool.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] delete-connector-security-map [--help]
 --poolname connector_connection_pool_name mapname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-connector-security-map` subcommand deletes a security map for the specified connector connection pool.
@@ -20,7 +20,7 @@ For this subcommand to succeed, you must have first created a connector connecti
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -31,13 +31,13 @@ This subcommand is supported in remote mode only.
 *`--poolname`*:
   Specifies the name of the connector connection pool to which the security map that is to be deleted belongs.
 
-[[operands]]
+[#operands]
 == Operands
 
 *mapname*:
   Name of the security map to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Connector Security Map*
@@ -51,7 +51,7 @@ asadmin> delete-connector-security-map
 Command delete-connector-security-map executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

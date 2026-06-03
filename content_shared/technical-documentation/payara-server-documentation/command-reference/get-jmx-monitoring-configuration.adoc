@@ -2,7 +2,7 @@
 
 Retrieves the JMX monitoring service general settings.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,12 +13,12 @@ asadmin [asadmin-options] get-jmx-monitoring-configuration
 [--pretty={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to view the current configuration of the JMX monitoring service.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ Applies to a specified server instance.
 *`pretty`*:
 Default to `false`. Whether to displays boolean configuration values options as a *tick* or a *cross*
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Get current JMX monitoring service configuration*
@@ -65,7 +65,7 @@ Object Name            Attribute             Description
 java.lang:type=Memory  HeapMemoryUsage.used
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

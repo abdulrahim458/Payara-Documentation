@@ -2,7 +2,7 @@
 
 Disables monitoring for the server or for specific monitorable module.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] disable-monitoring [--help]
 [--modules module-name][:module-name]*
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `disable-monitoring` subcommand is used to turn off monitoring for Payara Server or for particular modules during runtime. Changes are dynamic, that is, server restart is not required.
@@ -24,7 +24,7 @@ An alternative method for disabling monitoring is to use the `set` subcommand. I
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -35,13 +35,13 @@ This subcommand is supported in remote mode only.
 *`--modules`*:
   Disables the specified module or modules by setting the monitoring level to OFF. Multiple modules are separated by : (colon). Monitorable modules include `connector-connection-pool`, `connector-service`, `ejb-container`, `http-service`, `jdbc-connection-pool`, `jersey`, `jpa`, `jms-service`, `jvm`, `security`, `thread-pool`, `transaction-service`, `web-container`, and `web-services-container`. Additional modules can be listed by using the `get` subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Disabling the Monitoring Service for Payara Server*
 
@@ -53,7 +53,7 @@ asadmin> disable-monitoring
 Command disable-monitoring executed successfully
 ----
 
-[[example-2]]
+[#example-2]
 
 *Example 2 Disabling Monitoring for the Web and EJB Containers*
 
@@ -65,7 +65,7 @@ asadmin> disable-monitoring --modules web-container:ejb-container
 Command disable-monitoring executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

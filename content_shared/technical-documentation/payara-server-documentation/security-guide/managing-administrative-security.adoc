@@ -5,7 +5,7 @@ This chapter describes how to manage administrative security by using Payara Ser
 
 This chapter assumes that you are familiar with security features such as authentication, authorization, and certificates. If you are not, first see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-system-security[Administering System Security].
 
-[[secure-administration-overview]]
+[#secure-administration-overview]
 == Secure Administration Overview
 
 The secure administration feature allows an administrator to secure all administrative communication between the domain administration server
@@ -33,12 +33,12 @@ If secure admin is not enabled, this subcommand has no effect.
 
 This section describes how to use these commands to run secure admin, and the implications of doing so.
 
-[[how-secure-admin-works-the-big-picture]]
+[#how-secure-admin-works-the-big-picture]
 == How Secure Admin Works: the Big Picture
 
 Secure admin is a domain-wide setting. It affects the DAS and all instances and all administration clients.
 
-[[functions-performed-by-secure-admin]]
+[#functions-performed-by-secure-admin]
 === Functions Performed by Secure Admin
 
 The `enable-secure-admin` subcommand performs the following functions. Subsequent sections describe these functions in more detail.
@@ -59,7 +59,7 @@ NOTE: HTTP configuration on the DAS and each instance is identical, with the exc
 +
 A server restart is required to apply the aforementioned changes. The restart also synchronizes the restarted instances.
 
-[[which-administration-account-is-used]]
+[#which-administration-account-is-used]
 === Which Administration Account Is Used?
 
 If only one administration account exists in the default `admin` realm, Payara Server treats that account as the current default administration account. In this case, when you run an `asadmin` command, you do not need to specify a username. If a password for that username is required, you need to specify it, typically by using the `--passwordfile` option or by letting `asadmin` prompt you for it.
@@ -70,7 +70,7 @@ If multiple admin accounts exist, then Payara Server does not recognize any admi
 
 The username and password used for a login attempt must match the username and password (if required) for an account defined in the `admin` realm, and you must have set up the account as a member of the `admin` group.
 
-[[what-authentication-methods-are-used-for-secure-administration]]
+[#what-authentication-methods-are-used-for-secure-administration]
 === What Authentication Methods Are Used for Secure Administration?
 
 The secure admin feature enforces security via the following authentication methods:
@@ -108,7 +108,7 @@ No mutual authentication.
 |SSL-encrypted messages. Locally-provisioned password mechanism is used.
 |=======================================================================
 
-[[understanding-how-certificate-authentication-is-performed]]
+[#understanding-how-certificate-authentication-is-performed]
 === Understanding How Certificate Authentication Is Performed
 
 The domain creation process creates a primary (private) key and a self-signed certificate for the DAS, and a separate private key and self-signed certificate for remote instances.
@@ -124,7 +124,7 @@ When the DAS sends a message to an instance:
 . The DAS sends the certificate with the alias you specified using the `--adminalias` option when you ran the `enable-secure-admin` subcommand.
 . The instance makes sure the certificate is valid and Payara Server makes sure that the security `Principal` associated with  the incoming request (provided automatically by the HTTP engine and the SSL/TLS implementation provided by the Java runtime) matches the `Principal` associated with the`adminalias` from the instance's truststore.
 
-[[what-certificates-are-used]]
+[#what-certificates-are-used]
 === What Certificates Are Used?
 
 When you enable secure admin, you can optionally set the `--adminalias` and `--instancealias` options that tell secure admin which aliases to use for the DAS and instance certificates.
@@ -154,7 +154,7 @@ Certificate fingerprint (MD5): 8B:7D:5A:4A:32:36:1B:5D:6A:29:66:01:B0:A3:CB:85
 
 The `--adminalias` and `--instancealias` values are maintained. Because of this design, normal instance creation operations (create-instance over SSH and create-local-instance) apply the up-to-date keystore, truststore, and configuration to each instance.
 
-[[self-signed-certificates-and-trust]]
+[#self-signed-certificates-and-trust]
 ==== Self-Signed Certificates and Trust
 
 The self-signed certificates that Payara Server uses will not be trusted by clients by default because a certificate authority (CA)) does not vouch for the authenticity of the certificate.
@@ -221,7 +221,7 @@ The Asadmin CLI locally saves accepted certificates in the `.gf-client/truststor
 
 Some `asadmin` commands can contact an instance directly to retrieve information (but not to make configuration changes). The instances do not use the same certificate as the DAS, so in these cases the command will also prompt you to accept or reject the specific instance certificate.
 
-[[using-your-own-certificates]]
+[#using-your-own-certificates]
 ==== Using Your Own Certificates
 
 By default, `--adminalias` of the `enable-secure-admin` subcommand uses the `s1as` alias, and the `--instancealias` option uses the `glassfish-instance` alias, both of which identify default self-signed certificates prepared by the domain at its creation.
@@ -243,7 +243,7 @@ You can also use the `--changealias` or`--delete` option of `keytool` to accompl
 IMPORTANT: When renewing an expired certificate (since most CA-issued certificates would have a lifetime of a year in general), you must first disable secure admin, replace the certificates in the keystore and truststore with the renewed certificates and then re-enable secure admin to correctly re-established secure administration to the domain and its instances.
 
 
-[[an-alternate-approach-using-distinguished-names-to-specify-certificates]]
+[#an-alternate-approach-using-distinguished-names-to-specify-certificates]
 === An Alternate Approach: Using Distinguished Names to Specify Certificates
 
 By default, the DAS uses the alias associated with the `--instancealias` option to check incoming requests that use SSL/TLS cert authentication. Conversely, instances use the alias associated with the `--adminalias` option to check incoming requests with certificate authentication.
@@ -350,7 +350,7 @@ You can use the xref:technical-documentation/payara-server-documentation/command
 
 You can use the xref:technical-documentation/payara-server-documentation/command-reference/list-secure-admin-principals.adoc[`list-secure-admin-principals`] subcommand to list the certificates for which Payara Server accepts admin requests from clients.
 
-[[guarding-against-unwanted-connections]]
+[#guarding-against-unwanted-connections]
 === Guarding Against Unwanted Connections
 
 Secure admin guards against unwanted connections in several ways:
@@ -371,7 +371,7 @@ Remote `asadmin` clients are unable to connect directly to instances. If the use
 +
 Therefore, a user on "test1" will not be able to run a remote command targeting an instance on "test2."
 
-[[considerations-when-running-payara-server-with-default-security]]
+[#considerations-when-running-payara-server-with-default-security]
 == Considerations When Running Payara Server with Default Security
 
 In Payara Server, the default admin account has the username "admin" with an empty password credentials. By default, admin clients provide empty credentials or none at all, and all are authenticated and authorized as that default admin user. None of the participants (clients, DAS, or instances) encrypts network messages.
@@ -403,12 +403,12 @@ expected but requires prior SSH configuration.
 |Functions as expected but requires prior SSH configuration.
 |=======================================================================
 
-[[running-secure-admin]]
+[#running-secure-admin]
 == Running Secure Admin
 
 This section describes how to run secure admin. The section begins with prerequisites for running secure admin.
 
-[[prerequisites-for-running-secure-admin]]
+[#prerequisites-for-running-secure-admin]
 === Prerequisites for Running Secure Admin
 
 Before running Payara Server with secure admin enabled, you must make sure that:
@@ -425,7 +425,7 @@ NOTE: If you are not using the default self-signed certificates, you must add yo
 +
 TIP: For convenience, you can use the same certificate alias for both DAS access and DAS-to-instance communication.
 
-[[an-alternate-approach-using-a-user-name-and-password-for-internal-authentication-and-authorization]]
+[#an-alternate-approach-using-a-user-name-and-password-for-internal-authentication-and-authorization]
 === An Alternate Approach: Using a Username and Password for Internal Authentication and Authorization
 
 By default, secure admin uses the Payara Server self-signed certificates, via the aliases corresponding to these certificates, to authenticate the DAS and instances with each other and to authorize secure admin operations. Specifically, the DAS uses the (`s1as`) alias for authenticating itself and authorizing access in administration traffic, and instances use the (`glassfish-instance`) alias for authenticating themselves and authorizing access in secure admin traffic.
@@ -474,14 +474,14 @@ To disable multiple usernames for authenticating and authorizing access in secur
 
 You can use the xref:technical-documentation/payara-server-documentation/command-reference/list-secure-admin-internal-users.adoc#list-secure-admin-internal-users[`list-secure-admin-internal-users`] subcommand to list the usernames for which Payara Server authenticate the DAS and instances with each other and authorizes admin operations.
 
-[[additional-considerations-when-creating-local-instances]]
+[#additional-considerations-when-creating-local-instances]
 == Additional Considerations When Creating Local Instances
 
 If you use `*-local-instance` variant commands to set up local instances (which are run locally from within the node host where the instance has been installed), either leave secure admin disabled, or enable it before you create or start the instances and leave it that way.
 
 However, if you use `*-instance` variant commands over SSH to manage remote instances (which are run from the DAS), you can enable and disable secure admin, although this is not recommended because it can result in an inconsistent security model.
 
-[[secure-admin-use-case]]
+[#secure-admin-use-case]
 == Secure Admin Use Case
 
 This section describes a simple secure admin use case.

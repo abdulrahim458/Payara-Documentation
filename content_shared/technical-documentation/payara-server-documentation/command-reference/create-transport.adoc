@@ -2,7 +2,7 @@
 
 Adds a new transport.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -23,12 +23,12 @@ asadmin [asadmin-options] create-transport [--help]
 transport-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-transport` subcommand creates a transport for a network listener. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -69,13 +69,13 @@ The `create-transport` subcommand creates a transport for a network listener. Th
   standalone-instance-name;;
     Creates the transport on the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *transport-name*:
   The name of the transport.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Transport*
@@ -88,7 +88,7 @@ asadmin> create-transport --acceptorthreads 100 http1-trans
 Command create-transport executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

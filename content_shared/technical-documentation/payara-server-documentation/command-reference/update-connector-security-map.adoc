@@ -2,7 +2,7 @@
 
 Modifies a security map for the specified connector connection pool.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,7 +17,7 @@ asadmin [asadmin-options] update-connector-security-map [--help]
 mapname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `update-connector-security-map` subcommand modifies a security map for the specified connector connection pool.
@@ -26,7 +26,7 @@ For this subcommand to succeed, you must have first created a connector connecti
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -47,13 +47,13 @@ This subcommand is supported in remote mode only.
 *`--mappedusername`*:
   Specifies the EIS username.
 
-[[operands]]
+[#operands]
 == Operands
 
 *mapname*:
   The name of the security map to be updated.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Updating a Connector Security Map*
@@ -67,7 +67,7 @@ asadmin> update-connector-security-map --poolname connector-pool1
 Command update-connector-security-map executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Gets the current settings of the MicroProfile OpenAPI service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] get-openapi-configuration [--help]
   [--target=<target>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command get the current settings of the MicroProfile OpenAPI service.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,7 +36,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

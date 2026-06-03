@@ -2,7 +2,7 @@
 
 Adds a connection pool with the specified connection pool name.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -35,7 +35,7 @@ asadmin [asadmin-options] create-connector-connection-pool [--help]
 poolname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-connector-connection-pool` subcommand defines a pool of connections to an enterprise information system (EIS). The named pool can be referred to by multiple connector resources.
@@ -48,7 +48,7 @@ connection information, or by specifying the connection information in the XML d
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -138,13 +138,13 @@ This subcommand is supported in remote mode only.
   Specifies the time interval in seconds between successive requests to validate a connection at most once.
   Setting this attribute to an appropriate value minimizes the number of validation requests by a connection. Default value is 0, which means that the attribute is not enabled.
 
-[[operands]]
+[#operands]
 == Operands
 
 *poolname*:
   The name of the connection pool to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Connector Connection Pool*
@@ -159,7 +159,7 @@ asadmin> create-connector-connection-pool --raname jmsra
 Command create-connector-connection-pool executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

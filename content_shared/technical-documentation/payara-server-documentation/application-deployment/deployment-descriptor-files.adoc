@@ -3,7 +3,7 @@
 
 This appendix describes the element hierarchies in the Payara Platform deployment descriptors that are supported on top of the standard Jakarta EE deployment descriptors.
 
-[[about-the-payara-platform-deployment-descriptors]]
+[#about-the-payara-platform-deployment-descriptors]
 == About the Payara Platform Deployment Descriptors
 
 Each deployment descriptor XML file has a corresponding Document Type Definition (DTD) file, which defines the elements, data, and attributes that the deployment descriptor file can contain.
@@ -85,7 +85,7 @@ Specifying a different file is optional.
 
 IMPORTANT: Deployment descriptors whose names start with the `glassfish-` prefix are referred as "original" deployment descriptor files from Eclipse GlassFish, since these files names and DTDs were created while supporting Eclipse GlassFish and their support has been inherited by the Payara Platform.
 
-[[the-payara-application.xml-file]]
+[#the-payara-application.xml-file]
 == The Payara-application.xml File
 
 IMPORTANT: glassfish-application.xml is deprecated and support will be removed in a future release.
@@ -177,7 +177,7 @@ Payara Application Server 7 Jakarta EE Application 11//EN"
 </payara-application>
 ----
 
-[[the-payara-web.xml-file]]
+[#the-payara-web.xml-file]
 == The `glassfish-web.xml` and `payara-web.xml` Files
 
 The `glassfish-web.xml` file configures a web application (WAR file). It is an original Eclipse GlassFish deployment descriptor.
@@ -344,7 +344,7 @@ payara-web-app
 </payara-web-app>
 ----
 
-[[the-payara-ejb-jar.xml-file]]
+[#the-payara-ejb-jar.xml-file]
 == The `payara-ejb-jar.xml` File
 
 
@@ -558,7 +558,7 @@ DTD Payara Application Server 7 EJB 4.0//EN"
 </payara-ejb-jar>
 ----
 
-[[the-payara-application-client.xml-file]]
+[#the-payara-application-client.xml-file]
 == The `payara-application-client.xml` File
 
 IMPORTANT: glassfish-application-client.xml is deprecated and support will be removed in a future release.
@@ -639,7 +639,7 @@ payara-application-client
 </payara-application-client>
 ----
 
-[[the-payara-resources.xml-file]]
+[#the-payara-resources.xml-file]
 == The `glassfish-resources.xml` and `payara-resources.xml` Files
 
 IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in a future release.
@@ -727,7 +727,7 @@ IMPORTANT: The elements marked as `(*)` are only supported in the payara-resourc
 </resources>
 ----
 
-[[the-sun-acc.xml-file]]
+[#the-sun-acc.xml-file]
 == The Sun-acc.xml File
 
 The `sun-acc.xml` file configures the Application Client Container. This is more of a configuration file than a deployment descriptor.
@@ -756,7 +756,7 @@ client-container
 .  property (with attributes)
 ----
 
-[[deployment-descriptor-precedence-order]]
+[#deployment-descriptor-precedence-order]
 == Deployment Descriptor Precedence Order
 
 When multiple vendor deployment descriptors are present in the same module (including deployment descriptors of the original *Eclipse GlassFish* and of the old *Sun Application Server*), the descriptors are processed with the following precedence order in default mode:

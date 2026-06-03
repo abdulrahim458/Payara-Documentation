@@ -2,7 +2,7 @@
 
 Configures the settings of the Event Bus notifier
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,14 +15,14 @@ asadmin [asadmin-options] set-eventbus-notifier-configuration [--help]
 [--topicName topicName]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the EventBus notifier in Payara Server.
 
 NOTE: The Data Grid must be enabled for the Event Bus to be available.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -49,7 +49,7 @@ Defaults to `WARNING`. The notifier only responds to events at or above this lev
 *`--topicName`*:
 Defines the name of the internal Hazelcast distributed topic which will be used by the event bus to subscribe to notification events.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enable the Event Bus notifier and set its topic*
@@ -59,7 +59,7 @@ Defines the name of the internal Hazelcast distributed topic which will be used 
 asadmin set-eventbus-notifier-configuration --topicName=testTopic --dynamic=true --enabled=true
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

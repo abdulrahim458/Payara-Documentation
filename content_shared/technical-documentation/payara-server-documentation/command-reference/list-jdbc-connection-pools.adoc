@@ -2,7 +2,7 @@
 
 Lists all JDBC connection pools.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,14 +10,14 @@ Lists all JDBC connection pools.
 asadmin [asadmin-options] list-jdbc-connection-pools [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-jdbc-connection-pools` subcommand lists the current JDBC connection pools.
 
 This subcommand is supported in the remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -26,10 +26,10 @@ This subcommand is supported in the remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Listing the JDBC Connection Pools*
 
@@ -43,7 +43,7 @@ __TimerPool
 Command list-jdbc-connection-pools executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

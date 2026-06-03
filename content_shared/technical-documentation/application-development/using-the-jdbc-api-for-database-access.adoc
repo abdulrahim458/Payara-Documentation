@@ -7,10 +7,10 @@ This chapter also provides high level JDBC implementation instructions for servl
 
 IMPORTANT: Payara Server does not support connection pooling or transactions for an application's database access if it does not use standard Jakarta EE `DataSource` objects.
 
-[[statements]]
+[#statements]
 == Statements
 
-[[using-an-initialization-statement]]
+[#using-an-initialization-statement]
 === Using an Initialization Statement
 
 You can specify a SQL statement that executes each time a *physical* connection to the database is created (not reused) from a JDBC connection pool. This is useful for setting request or session specific properties and is suited for homogeneous requests in a single application.
@@ -26,7 +26,7 @@ Set the *Init SQL* attribute of the JDBC connection pool to the SQL string to be
 asadmin set domain1.resources.jdbc-connection-pool.DerbyPool.init-sql="sql-string"
 ----
 
-[[setting-a-statement-timeout]]
+[#setting-a-statement-timeout]
 === Setting a Statement Timeout
 
 An abnormally long-running SQL query executed by an application may leave it in a hanging state unless a timeout is explicitly set on the statement. Setting a statement timeout guarantees that all queries automatically time out if not completed within the specified period.
@@ -38,7 +38,7 @@ You can specify a statement timeout in the following ways:
 * Enter a _Statement Timeout_ value in the _Edit Connection Pool Advance Attributes_ page in the Administration Console.
 * Specify the `--statementtimeout` option in the `asadmin create-jdbc-connection-pool` command.
 
-[[statement-leak-detection-and-leaked-statement-reclamation]]
+[#statement-leak-detection-and-leaked-statement-reclamation]
 === Statement Leak Detection and Leaked Statement Reclamation
 
 If SQL statements are not closed by an application after use, it is possible for the application to run out of cursors. Enabling statement leak detection causes statements to be considered as leaked if they are not closed within a specified period. Additionally, leaked statements can be reclaimed automatically.
@@ -68,7 +68,7 @@ After enabling statement leak detection, enable leaked statement reclamation by 
 asadmin set resources.jdbc-connection-pool.pool-name.statement-leak-reclaim=true
 ----
 
-[[statement-caching]]
+[#statement-caching]
 === Statement Caching
 
 Statement caching stores statements, prepared statements, and callable statements that are executed repeatedly by applications in a cache, thereby improving performance. Instead of the statement being prepared each time, the cache is searched for an existing match. The overhead of parsing and creating new statements each time is eliminated.
@@ -92,14 +92,14 @@ To enable statement caching, you can set any positive nonzero value. The built-i
 
 When a connection pool is flushed, the connections in the statement cache are recreated.
 
-[[sql-trace-listeners]]
+[#sql-trace-listeners]
 == SQL Trace Listeners
 
 Payara Server provides support for custom SQL Trace Listeners. A *SQL Trace Listener* is registered against a data source and is called after each method call made on the JDBC connection pool.
 
 SQL Trace Listeners allows developers to track all calls to the database and can be used to develop custom auditing, error handling or monitoring components. SQL Trace Listeners can be enabled globally on a data source if the class that implements it is on the server's _classpath_, or can be enabled on application specific data sources by including them in the application's WAR or EAR.
 
-[[sql-trace-listener-interface]]
+[#sql-trace-listener-interface]
 === SQL Trace Listener Interface
 
 The SQL Trace Listener interface is shown below:
@@ -159,7 +159,7 @@ private long timeStamp;
 private Object[] params;
 ----
 
-[[example-sql-trace-listener]]
+[#example-sql-trace-listener]
 === SQL Trace Listener Example
 
 The following code fragment illustrates an example SQL trace listener that just logs the executed call to the server's log file:
@@ -184,7 +184,7 @@ public class SQLTraceLogger implements SQLTraceListener {
 }
 ----
 
-[[sql-trace-listener-logger]]
+[#sql-trace-listener-logger]
 === SQL Trace Listener Logger
 
 Payara Server provides an SQL tracing logger to log the SQL operations in the form of `SQLTraceRecord` objects in the `server.log` file. The module name under which the SQL operation is logged is `javax.enterprise.resource.sqltrace`.
@@ -218,7 +218,7 @@ Set these parameters in one of the following ways:
 asadmin set resources.jdbc-connection-pool.pool-name.property.time-to-keep-queries-in-minutes=10
 ----
 
-[[configuring-sql-trace-listeners]]
+[#configuring-sql-trace-listeners]
 ==== Configuring SQL Trace Listeners
 
 To configure the listeners used by a connection pool set the _SQL Trace Listeners_ attribute to a comma-separated list of trace listener implementation classes in one of the following ways:
@@ -236,10 +236,10 @@ To make custom implementations of this interface available to Payara Server, pla
 
 More information on how to configure SQL Trace listeners can be read in the xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc[JDBC Connection Pool] configuration of Payara Server's administration section.
 
-[[connections]]
+[#connections]
 == Connections
 
-[[transparent-pool-reconfiguration]]
+[#transparent-pool-reconfiguration]
 === Transparent Pool Reconfiguration
 
 When the properties or attributes of a JDBC connection pool are changed, the connection pool is destroyed and re-created. Normally, applications using the connection pool must be redeployed as a consequence. This restriction can be avoided by enabling transparent JDBC connection pool reconfiguration. When this feature is enabled, applications do not need to be redeployed. Instead, requests for a new connections are blocked until the reconfiguration operation completes.
@@ -259,7 +259,7 @@ asadmin set resources.jdbc-connection-pool.pool-name.property.dynamic-reconfigur
 
 This property specifies the time in seconds to wait for in-use connections to close and in-flight transactions to complete. Any connections in use or transaction in flight past this time must be retried.
 
-[[disabling-pooling]]
+[#disabling-pooling]
 === Disabling Pooling
 
 To disable connection pooling, set the _Pooling_ attribute to false. The default is `true`. You can enable or disable connection pooling in one of the following ways:
@@ -283,7 +283,7 @@ An exception is thrown if `associate-with-thread` is set to `true` and pooling i
 * `max-connection-usage`
 * `idle-timeout`
 
-[[associating-connections-with-threads]]
+[#associating-connections-with-threads]
 === Associating Connections with Threads
 
 To associate connections with a thread, set the _Associate With Thread_ attribute to `true`. The default is `false`. A `true` setting allows connections to be saved as `ThreadLocal` in the calling thread.
@@ -307,7 +307,7 @@ You can set the Associate With Thread attribute in the following ways:
 asadmin set domain1.resources.jdbc-connection-pool.DerbyPool.associate-with-thread=true
 ----
 
-[[custom-connection-validation]]
+[#custom-connection-validation]
 === Custom Connection Validation
 
 You can specify a custom implementation for _Connection Validation_ that is faster or optimized for a specific database.
@@ -339,7 +339,7 @@ By default, optimized validation mechanisms are provided for DB2, H2, Apache Der
 
 Additionally, for JDBC 4.0 compliant database drivers, a validation mechanism is provided that uses the `Connection.isValid(0)` implementation.
 
-[[sharing-connections]]
+[#sharing-connections]
 === Sharing Connections
 
 When multiple connections acquired by an application use the same JDBC resource, the connection pool provides connection sharing within the same transaction scope.
@@ -351,7 +351,7 @@ To turn off connection sharing, set `res-sharing-scope` to `Unshareable`.
 
 For general information about connections and JDBC URLs, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#administering-database-connectivity[Administering Database Connectivity]" in the Payara Server General Administration section.
 
-[[marking-bad-connections]]
+[#marking-bad-connections]
 === Marking Bad Connections
 
 The default `DataSource` implementation in Payara Server provides a `markConnectionAsBad` method. A marked bad connection is removed from its connection pool when it is closed and is not returned to the pool. The method signature is as follows:
@@ -384,7 +384,7 @@ public class ApplicationComponent{
 }
 ----
 
-[[handling-invalid-connections]]
+[#handling-invalid-connections]
 === Handling Invalid Connections
 
 If a `ConnectionErrorOccured` event occurs, Payara Server considers the connection invalid and removes the connection from the connection pool. Typically, a JDBC driver generates a `ConnectionErrorOccured` event when it finds a `ManagedConnection` object unusable. Reasons can be database failure, network failure with the database, fatal problems with the connection pool, and so on.
@@ -409,10 +409,10 @@ asadmin set server.resources.jdbc-connection-pool.MyPool.property.prefer-validat
 NOTE: The interface `ValidatingManagedConnectionFactory` exposes the method `getInvalidConnections` to allow retrieval of the invalid connections. +
 Payara Server checks if the JDBC driver implements this interface, and if it does, invalid connections are automatically removed when the connection pool is resized.
 
-[[connection-wrapping]]
+[#connection-wrapping]
 == Connection Wrapping
 
-[[wrapping-connections]]
+[#wrapping-connections]
 === Wrapping Connections
 
 If the _Wrap JDBC Objects_ option is `true` (the default), wrapped JDBC objects are returned for `Statement`, `PreparedStatement`, `CallableStatement`, `ResultSet`, and `DatabaseMetaData`.
@@ -424,7 +424,7 @@ You can specify the _Wrap JDBC Objects_ option in the following ways:
 * Check or uncheck the _Wrap JDBC Objects_ box on the _Edit Connection Pool Advanced Attributes_ page in the Administration Console.
 * Specify the `--wrapjdbcobjects` option in the `asadmin create-jdbc-connection-pool` command.
 
-[[obtaining-a-physical-connection-from-a-wrapped-connection]]
+[#obtaining-a-physical-connection-from-a-wrapped-connection]
 === Obtaining a Physical Connection from a Wrapped Connection
 
 The default `DataSource` implementation in Payara Server provides a `getConnection` method that retrieves the JDBC driver's `SQLConnection` from Payara Server's `Connection` wrapper.
@@ -460,14 +460,14 @@ public class MyComponent{
 }
 ----
 
-[[using-the-connection.unwrap-method]]
+[#using-the-connection.unwrap-method]
 === Using the `Connection.unwrap()` Method
 
 Using the `Connection.unwrap()` method on a vendor-provided interface returns an object or a wrapper object implementing the vendor-provided interface, which the application can make use of to do vendor-specific database operations. Use the `Connection.isWrapperFor()` method on a vendor-provided interface to check whether the connection can provide an implementation of the vendor-provided interface.
 
 Check your corresponding JDBC driver vendor's documentation for information on these interfaces.
 
-[[allowing-non-component-callers]]
+[#allowing-non-component-callers]
 == Allowing Non-Component Callers
 
 You can allow non-Jakarta-EE components, such as third party persistence managers, to use a managed JDBC connection pool.
@@ -491,14 +491,14 @@ asadmin set domain1.resources.jdbc-connection-pool.DerbyPool.allow-non-component
 
 Accessing a `DataSource` using the `Synchronization.beforeCompletion()` method requires setting _Allow Non Component Callers_ to `true`. For more information about the Transaction Synchronization Registry, see xref:technical-documentation/application-development/using-the-transaction-service.adoc#the-transaction-manager-the-transaction-synchronization-registry-and-usertransaction[The Transaction Manager, the Transaction Synchronization Registry, and `UserTransaction`].
 
-[[using-application-scoped-resources]]
+[#using-application-scoped-resources]
 == Using Application-Scoped Resources
 
 You can define an application-scoped database or other resources for an enterprise application, web module, EJB module, connector module, or application client module by supplying a `payara-resources.xml` deployment descriptor file.
 
 For more details, see "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Payara Server Application Deployment section.
 
-[[jdbc-call-logging-deployment]]
+[#jdbc-call-logging-deployment]
 == JDBC Development Guidelines
 
 In Jakarta EE applications and above, a JDBC data source can be deployed by adding the `@DataSourceDefinition` annotation to  a managed component (like and `@Stateless` EJB bean for example). The *Log JDBC Calls* setting can be configured using this annotation as well:
@@ -586,7 +586,7 @@ The below example shows the Slow Query Log Threshold and SQL Trace Listener set 
 </data-source>
 ----
 
-[[example-trace]]
+[#example-trace]
 === Slow Query Trace Example
 
 Below is an example `WARNING` trace for a slow query recollected from the server's log:

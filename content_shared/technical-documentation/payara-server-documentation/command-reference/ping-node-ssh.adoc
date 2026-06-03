@@ -2,7 +2,7 @@
 
 Tests if a node that is enabled for communication over SSH is usable.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] ping-node-ssh [--help]
 [--validate={false|true}] node-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `ping-node-ssh` subcommand tests if a node that is enabled for communication over secure shell (SSH) is usable. This subcommand
@@ -31,7 +31,7 @@ xref:technical-documentation/payara-server-documentation/command-reference/list-
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -47,13 +47,13 @@ This subcommand is supported in remote mode only.
   `false`;;
     The node is not validated (default).
 
-[[operands]]
+[#operands]
 == Operands
 
 *node-name*:
   The name of the node to test. The node must be enabled for communication over SSH. Otherwise, an error occurs.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Testing if an SSH-Enabled Node Is Usable*
@@ -84,7 +84,7 @@ Command version executed successfully.
 Command ping-node-ssh executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,12 +2,12 @@
 
 The Request Tracing service works the same on Payara Micro and will trace the same events described in its xref:technical-documentation/application-development/using-request-tracing-in-applications.adoc#request-tracing[documentation].
 
-[[usage]]
+[#usage]
 == Usage
 
 Payara Micro exposes a number of command line options to configure request tracing. These options cover the most frequent use cases for Payara Micro, but you can also configure the Request Tracing Service using a *post*-boot command file, giving you access to the asadmin commands and the full range of options they provide.
 
-[[configuration-options]]
+[#configuration-options]
 === Configuration Options
 
 [cols="<,a", options="header"]
@@ -71,7 +71,7 @@ value is given. The accepted strings are (case-insensitive):
 This is combined with the `requesttracingadaptivesamplingtimevalue` setting to determine the adaptive sampling time period. Only used if adaptive sampling is enabled.
 |===
 
-[[shorthand-notation]]
+[#shorthand-notation]
 === Shorthand Notation
 
 To enable and configure request tracing with a single command, the

@@ -2,7 +2,7 @@
 
 The AWS cloud config source takes configuration properties from AWS Secrets Manager.
 
-[[aws-secret-creation]]
+[#aws-secret-creation]
 == AWS Secret Creation
 
 The AWS cloud config source takes configuration from a single named secret in a JSON format, with each object key being a config property name. To create a secret of this format, you must first go to the AWS secret manager home: https://console.aws.amazon.com/secretsmanager/home.
@@ -15,7 +15,7 @@ On the next screen, you'll be able to enter your secret name. This will need giv
 
 image:microprofile/config/cloud/aws/secret-name.png[alt="AWS Secret Name",width=600px]
 
-[[aws-iam-user]]
+[#aws-iam-user]
 == AWS IAM User
 
 In order to connect to AWS Secrets Manager you need to know your project name as well as have an access key. Assuming you already have an AWS project and a secret created in AWS Secrets Manager, you need to create an IAM user which Payara Server will use to access your AWS Secrets.
@@ -38,7 +38,7 @@ Whether you assign a group or select individual permissions, make sure the IAM u
 
 When you finish creating the IAM user, you'll be given an access key id and secret access key. These will need to be recorded, and passed to Payara Server as xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases] `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` respectively.
 
-[[configuration]]
+[#configuration]
 == Configuration
 
 You can configure AWS Secrets either via the admin console or the _asadmin_ utility. You'll need the access key id, secret access key and secret name created from the AWS console in the previous sections, as well as the name of the AWS region. Make sure that the AWS Secrets Manager has been enabled in the specified region.
@@ -49,7 +49,7 @@ image:microprofile/config/cloud/aws/region.png[alt="AWS region selection",width=
 
 NOTE: The region name is the snake-case notation, not the full words. E.g. `eu-west-2`.
 
-[[conf-from-admin-console]]
+[#conf-from-admin-console]
 === From the Admin Console
 
 To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliases from the admin console, refer to the xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases Admin Console configuration] guide.
@@ -60,7 +60,7 @@ image:microprofile/config/cloud/aws/admin-console-config.png[alt="Payara Server 
 
 From here you can pass the name of the secret to access in AWS Secrets Manager, as well as the region name. You can also decide whether to apply these changes dynamically or on the next server restart. If the config source is enabled or disabled dynamically it will take effect across the server immediately.
 
-[[conf-from-command-line]]
+[#conf-from-command-line]
 === From the Command Line
 
 To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliases from the command line, refer to the xref:technical-documentation/payara-server-documentation/general-administration/subcommands-for-the-asadmin-cli.adoc[Password Aliases Asadmin configuration] guide.
@@ -71,7 +71,7 @@ To configure the AWS Secrets Cloud Config Source from the command line, use thes
 
 * xref:technical-documentation/payara-server-documentation/command-reference/get-aws-config-source-configuration.adoc#get-aws-config-source-configuration[`get-aws-config-source-configuration`]
 
-[[usage]]
+[#usage]
 == Usage
 
 Provided the required roles have been assigned to the IAM user in the AWS console, the secrets can be injected into any applicable MicroProfile Config injection point as with any other configuration source.

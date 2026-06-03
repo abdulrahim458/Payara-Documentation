@@ -3,13 +3,13 @@
 Payara Micro also supports SQL Trace Listeners which brings powerful
 operational diagnostics to your microservices platform.
 
-[[adding-a-sql-trace-listener]]
+[#adding-a-sql-trace-listener]
 == Adding a SQL Trace Listener
 
 To add a SQL Trace Listener to your data source used by applications deployed on Payara Micro,
 you can use the annotation or deployment descriptor methods described below.
 
-[[deployment]]
+[#deployment]
 === Application Deployment
 
 In Java EE 7+ applications, a JDBC data source can be deployed by adding the
@@ -47,7 +47,7 @@ an application, for example in the _web.xml_ standard deployment descriptor:
 </data-source>
 ----
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/database-management/slow-sql-logger.adoc[Slow SQL Logging in Payara Micro]

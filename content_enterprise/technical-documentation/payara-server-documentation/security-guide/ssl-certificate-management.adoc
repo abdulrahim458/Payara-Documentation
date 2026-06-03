@@ -8,7 +8,7 @@ As a reminder, Payara Server uses the following PKCS12 keystore files to manage 
 
 These keystores are protected with the Master Password of your domain.
 
-[[add-certificate]]
+[#add-certificate]
 == Adding a New SSL Certificate
 
 To add your SSL Certificate to the Payara Server configuration files, you need:
@@ -41,12 +41,12 @@ openssl pkcs12 -export -in mycert.crt -inkey mycert.key -out mycert.p12 -name my
 
 The resulting P12 bundle file can then be added to the keystore and truststore in Payara Server as described in the following sections.
 
-[[import-into-keystore]]
+[#import-into-keystore]
 === Import into the Keystore
 
 The information needs to be imported into the `keystore.p12` file of your Payara Server domain which will use it.
 
-[[via-asadmin-cli-1]]
+[#via-asadmin-cli-1]
 ==== Using Asadmin CLI
 
 You can use the xref:technical-documentation/payara-server-documentation/command-reference/add-to-keystore.adoc[`add-to-keystore`] command:
@@ -56,7 +56,7 @@ You can use the xref:technical-documentation/payara-server-documentation/command
 asadmin add-to-keystore --file mycert.p12 mydomain_certificate
 ----
 
-[[via-admin-console-1]]
+[#via-admin-console-1]
 ==== Using the Admin Console
 
 From the Admin Console, open the instance details page (e.g. on the navigation bar select _Instances_ -> _$instanceName_) and navigate to the _Certificate Management_ tab.
@@ -69,7 +69,7 @@ You can then enter the alias name and the path to the certificate bundle:
 
 image:certificate-management/CertificateManagementAddKeystoreEntry.png[alt="Add Keystore Entry",width=600px]
 
-[[import-keystore-via-keytool]]
+[#import-keystore-via-keytool]
 ==== Using the `keytool` Command
 
 You can also use the `keytool` command of the JDK:
@@ -79,12 +79,12 @@ You can also use the `keytool` command of the JDK:
 keytool -importkeystore -destkeystore keystore.p12 -srckeystore mycert.p12 -srcstoretype PKCS12 -alias mydomain_certificate
 ----
 
-[[import-into-truststore]]
+[#import-into-truststore]
 === Import into the Truststore
 
 A similar command is used to import the information into the Trust Store file so that our certificate is trusted by the JVM.
 
-[[via-asadmin-cli-2]]
+[#via-asadmin-cli-2]
 ==== Using Asadmin CLI
 
 You can use the xref:technical-documentation/payara-server-documentation/command-reference/add-to-truststore.adoc[`add-to-truststore`] command:
@@ -94,7 +94,7 @@ You can use the xref:technical-documentation/payara-server-documentation/command
 asadmin add-to-truststore --file mycert.crt mydomain_certificate
 ----
 
-[[via-admin-console-2]]
+[#via-admin-console-2]
 ==== Using the Admin Console
 
 You can also follow the same steps as done for adding the bundle to the keystore via the admin console, though selecting the *Add* button of the truststore table
@@ -105,7 +105,7 @@ And then specifying the `mycert.crt` file.
 
 image:certificate-management/CertificateManagementAddTruststoreEntry.png[alt="Add Truststore Entry",width=600px]
 
-[[via-keytool-command-2]]
+[#via-keytool-command-2]
 ==== Using the `keytool` Command
 
 You can also use the `keytool` command of the JDK:
@@ -115,12 +115,12 @@ You can also use the `keytool` command of the JDK:
 keytool -importcert -trustcacerts -destkeystore cacerts.p12 -file mycert.crt -alias mydomain_certificate
 ----
 
-[[update-http-listeners]]
+[#update-http-listeners]
 === Update HTTP Listeners
 
 The last step you have to perform is to configure which certificate needs to be used when the server receives an SSL/TLS request. This can be done by specifying the alias name we have used when we integrated the required information into the key store files of the domain.
 
-[[via-asadmin-cli-3]]
+[#via-asadmin-cli-3]
 ==== Using Asadmin CLI
 
 This information can be set via the CLI:
@@ -132,12 +132,12 @@ asadmin set configs.config.server-config.network-config.protocols.protocol.http-
 
 NOTE: In a default installation, the `http-listener-2` listener is responsible for handling the secure connections on port *8181*. The above command sets the alias name so that the system knows which certificate needs to be used.
 
-[[via-admin-console-3]]
+[#via-admin-console-3]
 ==== Using the Admin Console
 
 The information can also be entered in the Web Administration console, by navigating to the page Configurations -> `server-config` -> HTTP Service -> HTTP Listeners -> `http-listener-2`.
 
-[[loading-certificates-from-multiple-keystores]]
+[#loading-certificates-from-multiple-keystores]
 == Loading Certificates from Multiple Keystores
 
 IMPORTANT: All additional keystores must have the same password as your domain master password.
@@ -154,7 +154,7 @@ The new JVM properties used to add additional keystores are:
 -Dfish.payara.ssl.additionalTrustStores
 ----
 
-[[via-admin-console-4]]
+[#via-admin-console-4]
 === Using the Admin Console
 
 To configure the additional keystore locations in the admin console, head to the *Configurations -> <instance configuration> -> JVM Settings* and on the *JVM Options* tab click *Add JVM Option*.
@@ -163,7 +163,7 @@ You can add the new JVM property and the relative paths to your keystores or tru
 
 image:docs::ssl/add-additional-keystores-admin-console.png[alt="Configure Additional keystores and truststores in Admin Console",width=600px]
 
-[[via-asadmin-cli]]
+[#via-asadmin-cli]
 === Using Asadmin CLI
 
 JVM options can be configured using the `create-jvm-options` asadmin command, you can configure your additional keystore and truststore files using this command. If you are loading in multiple additional keystores via asadmin commands, you will need to prefix the appropriate delimiter for your OS with `\` to avoid creating multiple JVM options.
@@ -182,7 +182,7 @@ asadmin create-jvm-options "-Dfish.payara.ssl.additionalTrustStores=/path/to/tru
 
 NOTE: If you load multiple keystores with the same alias, the server will use the first keystore with that alias, starting with the default and then the additional keystores in the order they are listed in the JVM option.
 
-[[cetificate-expiration]]
+[#cetificate-expiration]
 == Certificate Expiration
 
 All X.509 certificates have a validity period when they can be used. Once this validity period is passed, the users will see a warning or error message depending on the browser that the certificate is no longer valid.
@@ -191,10 +191,10 @@ Within the server log file, the expired certificates are listed when the system 
 
 NOTE: The log level of the expired certificates is of type **WARNING**.
 
-[[removing-expired]]
+[#removing-expired]
 === Removing Expired Certificates
 
-[[via-asadmin-cli-5]]
+[#via-asadmin-cli-5]
 ==== Using Asadmin CLI
 
 If you wish to remove all expired certificates, you can use the following Asadmin CLI subcommands:
@@ -210,7 +210,7 @@ asadmin remove-from-keystore mydomain_certificate
 asadmin remove-from-truststore mydomain_certificate
 ----
 
-[[via-admin-console-5]]
+[#via-admin-console-5]
 ==== Using the Admin Console
 
 You can also remove individual or groups of certificates using the admin console Certificate Management tab (_Instances_ -> _$instanceName_ -> _Certificate Management_).

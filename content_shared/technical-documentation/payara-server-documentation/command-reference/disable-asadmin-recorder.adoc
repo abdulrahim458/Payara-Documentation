@@ -2,7 +2,7 @@
 
 Disables the Asadmin recorder.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,12 +10,12 @@ Disables the Asadmin recorder.
 asadmin [asadmin-options] disable-asadmin-recorder [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `disable-asadmin-recorder` subcommand deactivates the Asadmin Recorder feature, ceasing the capture and logging of asadmin commands executed through the Admin Console.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -24,7 +24,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Disabling asadmin Recorder*
@@ -38,7 +38,7 @@ asadmin disable-asadmin-recorder
 Command disable-asadmin-recorder executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

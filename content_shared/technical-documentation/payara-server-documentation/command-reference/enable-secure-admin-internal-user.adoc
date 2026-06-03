@@ -2,7 +2,7 @@
 
 Instructs the Payara Server DAS and instances to use the specified admin user and the password associated with the password alias to authenticate with each other and to authorize admin operations.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] enable-secure-admin-internal-user [--help]
 admin-username
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `enable-secure-admin-internal-user` subcommand instructs all servers in the domain to authenticate to each other, and to authorize admin operations submitted to each other, using an existing admin username and password rather than SSL certificates. This generally means that you must:
@@ -47,7 +47,7 @@ Most users who use this subcommand will need to set up only one secure admin int
 
 If you set up more than one secure admin internal user, you should not make any assumptions about which username and password pair Payara Server will choose to use for any given admin request.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -58,13 +58,13 @@ If you set up more than one secure admin internal user, you should not make any 
 *`--passwordalias`*:
   The password alias for the user that Payara Server should use for internally authenticating and authorizing the DAS to instances and the instances to the DAS.
 
-[[operands]]
+[#operands]
 == Operands
 
 *admin-username*:
   The admin username that Payara Server should use for internally authenticating and authorizing the DAS to instances and the instances to the DAS.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Specifying a username and password for secure admin*
@@ -78,7 +78,7 @@ asadmin> enable-secure-admin-internal-user
 newAdminUsername
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

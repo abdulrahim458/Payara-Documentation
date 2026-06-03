@@ -13,7 +13,7 @@ IMPORTANT: If you installed the Web Profile, connector modules that use only out
 
 For more information about connectors, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#resource-adapters-and-contracts[Resource Adapters and Contracts^]" in the Jakarta EE Tutorial.
 
-[[connector-support-in-payara-server]]
+[#connector-support-in-payara-server]
 == Connector Support in Payara Server
 
 Payara Server supports the development and deployment of resource adapters that are compatible with the Jakarta Connector specification in the following versions:
@@ -27,7 +27,7 @@ Payara Server supports the development and deployment of resource adapters that 
 * The Connector 2.0 specification moves the old Java Connectors Architecture specification (JCA) to Jakarta EE.
 * The Connector 2.1 specification, as part of Jakarta EE 10 has introduced Java SE 11 as the minimum requirement to run Jakarta EE applications.
 
-[[connector-architecture-for-jms-and-jdbc]]
+[#connector-architecture-for-jms-and-jdbc]
 === Connector Architecture for JMS and JDBC
 
 In the Administration Console, connector, JMS, and JDBC resources are handled differently, but they use the same underlying Connector architecture.
@@ -39,7 +39,7 @@ For more information about JMS in the Payara Server, see xref:technical-document
 
 For more information about JDBC in the Payara Server, see xref:technical-documentation/application-development/using-the-jdbc-api-for-database-access.adoc#using-the-jdbc-api-for-database-access[Using the JDBC API for Database Access].
 
-[[connector-configuration]]
+[#connector-configuration]
 === Connector Configuration
 
 Payara Server does not need to use `sun-ra.xml` deployment descriptor, which previous versions used (as with GlassFish), to store server-specific deployment information inside a Resource Adapter Archive (RAR) file. (However, the `sun-ra.xml` file is still supported for backward compatibility.) Instead, the information is stored in the server configuration.
@@ -48,10 +48,10 @@ As a result, you can create multiple connector connection pools for a connection
 
 TIP: Dynamic changes can be made to connector connection pools and the connector resource properties without restarting Payara Server.
 
-[[advanced-connector-configuration-options]]
+[#advanced-connector-configuration-options]
 == Advanced Connector Configuration Options
 
-[[thread-associations]]
+[#thread-associations]
 === Thread Associations
 
 Connectors can submit work instances to Payara Server for execution. By default, Payara Server services work requests for all connectors from its default thread pool.
@@ -69,7 +69,7 @@ To associate a connector with a thread pool:
 
 NOTE: If you create a resource adapter configuration for a connector module that is already deployed, the connector module deployment is restarted with the new configuration properties.
 
-[[security-maps]]
+[#security-maps]
 === Security Maps
 
 Create a security map for a connector connection pool to map an application principal or a user group to a backend EIS principal. The security map is usually used in situations where one or more EIS back end principals are used to execute operations (on the EIS) initiated by various principals or user groups in the application.
@@ -83,7 +83,7 @@ If a security map already exists for a connector connection pool, the new securi
 
 When an application principal initiates a request to an EIS, Payara Server first checks for an exact match to a mapped back end EIS principal using the security map defined for the connector connection pool. If there is no exact match, Payara Server uses the wild card character specification, if any, to determine the mapped back end EIS principal.
 
-[[work-security-maps]]
+[#work-security-maps]
 === Work Security Maps
 
 A work security map for a resource adapter maps an EIS principal or group to an application principal or group. A work security map is useful in situations where one or more application principals execute operations initiated by principals or user groups in the EIS. A resource adapter can have multiple work security maps. A work security map can map either principals or groups, but not both.
@@ -94,7 +94,7 @@ The work security map configuration supports the wildcard asterisk (`*`) charact
 
 If there is no exact match, Payara Server uses the wild card character specification, if any, to determine the application principal.
 
-[[overriding-configuration-properties]]
+[#overriding-configuration-properties]
 === Overriding Configuration Properties
 
 You can override the properties (`config-property` elements) specified in the `ra.xml` file of a resource adapter:
@@ -106,7 +106,7 @@ You can specify configuration properties either before or after resource adapter
 
 You can also use token replacement for overriding resource adapter configuration properties in individual server instances when the resource adapter is deployed to a cluster. For example, for a property called `inboundPort`, you can assign the value `$\{inboundPort\}`. You can then assign a different value to this system property for each server instance. Changes to system properties take effect upon server restart.
 
-[[testing-a-connector-connection-pool]]
+[#testing-a-connector-connection-pool]
 === Testing a Connector Connection Pool
 
 You can test a connector connection pool for usability in one of these ways:
@@ -122,7 +122,7 @@ You can also specify that a connection pool is automatically tested when created
 * Enter a _Ping_ value in the _Connector Connection Pools_ page in the Administration Console.
 * Specify the `--ping` option in the `asadmin create-connector-connection-pool` command. For more information, see the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-connection-pool.adoc[create-connector-connection-pool].
 
-[[flushing-a-connector-connection-pool]]
+[#flushing-a-connector-connection-pool]
 === Flushing a Connector Connection Pool
 
 Flushing a connector connection pool recreates all the connections in the pool and brings the pool to the steady pool size without the need for reconfiguring the pool. Connection pool reconfiguration can result in application redeployment, which is a time-consuming operation. Flushing destroys existing connections, and any existing transactions are lost and must be retired.
@@ -132,7 +132,7 @@ You can flush a connector connection pool in one of these ways:
 * In the Administration Console, open the _Resources_ component, open the _Connectors_ component, select _Connection Pools_, and select the connection pool you want to flush. Then select the _Flush_ button in the top right corner of the page.
 * Use the `asadmin flush-connection-pool` command. For details, see the xref:technical-documentation/payara-server-documentation/command-reference/flush-connection-pool.adoc[flush-connection-pool].
 
-[[handling-invalid-connections]]
+[#handling-invalid-connections]
 === Handling Invalid Connections
 
 If a resource adapter generates a `ConnectionErrorOccured` event, Payara Server considers the connection invalid and removes the connection
@@ -157,7 +157,7 @@ asadmin set server.resources.connector-connection-pool.CCP1.property.prefer-vali
 The interface ValidatingManagedConnectionFactory exposes the method `getInvalidConnections` to allow retrieval of the invalid connections.
 Payara Server checks if the resource adapter implements this interface, and if it does, invalid connections are removed when the connection pool is resized.
 
-[[setting-the-shutdown-timeout]]
+[#setting-the-shutdown-timeout]
 === Setting the Shutdown Timeout
 
 According to the Jakarta Connectors specification, while an application server shuts down, all resource adapters SHOULD be stopped. A resource adapter might hang during shutdown, since shutdown is typically a resource intensive operation. To avoid such a situation, you can set a timeout that aborts resource adapter shutdown if exceeded.
@@ -175,7 +175,7 @@ asadmin set server.connector-service.shutdown-timeout-in-seconds="num-secs"
 
 WARNING: Payara Server deactivates all message-driven bean deployments before stopping a resource adapter.
 
-[[specifying-the-class-loading-policy]]
+[#specifying-the-class-loading-policy]
 === Specifying the Class Loading Policy
 
 Use the `class-loading-policy` setting to determine which resource adapters are accessible to applications. Allowed values are:
@@ -191,7 +191,7 @@ To configure this setting, use the `asadmin set` command. For example:
 asadmin set server.connector-service.class-loading-policy="global"
 ----
 
-[[using-last-agent-optimization-of-transactions]]
+[#using-last-agent-optimization-of-transactions]
 === Using Last Agent Optimization of Transactions
 
 Transactions that involve multiple resources or multiple participant processes are distributed or global transactions. A global transaction can involve one non-XA resource if last agent optimization is enabled. Otherwise, ALL resources must be XA-aware.
@@ -206,7 +206,7 @@ The value of the connection pool configuration property `transaction-support` de
 
 The connection pool configuration property can override the `ra.xml` file property if the transaction level in the connection pool configuration property is lower. If the value in the connection pool configuration property is higher, it is ignored.
 
-[[disabling-pooling-for-a-connection]]
+[#disabling-pooling-for-a-connection]
 === Disabling Pooling for a Connection
 
 To disable connection pooling, set the _Pooling_ attribute to `false`. The default is `true`. You can enable or disable connection pooling in one of the following ways:
@@ -214,7 +214,7 @@ To disable connection pooling, set the _Pooling_ attribute to `false`. The defau
 * Enter a _Pooling_ value in the _Connector Connection Pools_ page in the Administration Console.
 * Specify the `--pooling` option in the `asadmin create-connector-connection-pool` command. For more information, see the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-connection-pool.adoc[create-connector-connection-pool].
 
-[[using-application-scoped-connectors]]
+[#using-application-scoped-connectors]
 === Using Application-Scoped Connectors
 
 You can define an application-scoped connector or other resource for an enterprise application, web module, EJB module, connector module, or application client module by supplying a `payara-resources.xml` or `glassfish-resources.xml` deployment descriptor file. For details, see "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Payara Server Application Deployment section.
@@ -222,7 +222,7 @@ You can define an application-scoped connector or other resource for an enterpri
 IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-resources.xml instead.
 
-[[inbound-communication-support]]
+[#inbound-communication-support]
 == Inbound Communication Support
 
 The Jakarta Connectors specification defines the transaction and message inflow system contracts for achieving inbound connectivity from an EIS.
@@ -239,7 +239,7 @@ are not specified. Values for the properties that are overridden in the message-
 
 Administered objects can also be specified for a resource adapter, and these JavaBeans are specific to a messaging style or message provider. For example, some messaging styles may need applications to use special administered objects (such as `Queue` and `Topic` objects in JMS). Applications use these objects to send and synchronously receive messages using connection objects using messaging style APIs. For more information about administered objects, see xref:technical-documentation/application-development/using-jakarta-messaging.adoc#using-jakarta-messaging[Using the Java Message Service].
 
-[[outbound-communication-support]]
+[#outbound-communication-support]
 == Outbound Communication Support
 
 The Jakarta Connectors specification defines the system contracts for achieving outbound connectivity from an EIS. A resource adapter supporting outbound communication provides an instance of a `ManagedConnectionFactory` JavaBean class. A `ManagedConnectionFactory` JavaBean represents outbound connectivity information to an EIS instance from an application.
@@ -249,7 +249,7 @@ During the configuration of a `ManagedConnectionFactory` in the Connector Connec
 
 The three levels are `no-tx`, `local-tx`, `xa-tx`. If a `ManagedConnectionFactory` returns `local-tx` as the level it can support, it is assumed that `xa-tx` is not supported, and the Administration Console shows only `no-tx` and `local-tx` as the available  support levels.
 
-[[configuring-a-message-driven-bean-to-use-a-resource-adapter]]
+[#configuring-a-message-driven-bean-to-use-a-resource-adapter]
 == Configuring a Message Driven Bean to Use a Resource Adapter
 
 The Connectors specification's message inflow contract provides a generic mechanism to plug in a wide-range of message providers, including JMS, into a Java-EE-compatible application server. Message providers use a resource adapter and dispatch messages to message endpoints, which are implemented as message-driven beans.

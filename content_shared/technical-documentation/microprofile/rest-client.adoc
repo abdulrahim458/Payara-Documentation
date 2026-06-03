@@ -2,7 +2,7 @@
 
 Payara Platform {version} provides MicroProfile Rest Client {mpRestClientVersion}
 
-[[background]]
+[#background]
 == Background
 
 The MicroProfile Rest Client provides a type-safe approach to invoke RESTful services over HTTP. The aim of this specification is to provide a much more natural coding style, with the underlying MicroProfile implementation handling the communication between the client and service.
@@ -13,7 +13,7 @@ Breaking changes introduced in MicroProfile Rest Client {mpRestClientVersion} ar
 
 NOTE: The Payara Platform implementation of this specification is based on Jersey's MicroProfile Rest client, the interaction with client interfaces is translated into interaction with standard JAX-RS clients.
 
-[[cdi]]
+[#cdi]
 == Jakarta CDI
 
 Rest Client interfaces may be injected as CDI beans. To do this, you must first register your interface class by using the `@RegisterRestClient` annotation, and then use the `@RestClient` qualifier on the injected bean, like so:
@@ -37,14 +37,14 @@ public class MyService {
 
 The endpoint to connect to in such a case must either be configured directly in attribute `baseUri` of the `@RegisterRestClient` annotation or via Microprofile Configuration properties.
 
-[[async]]
+[#async]
 == Asynchronous Communication
 
 It is possible for Rest Client interface methods to be declared asynchronous, by having return type of `CompletionStage<?>`. This allows the thread invoking the interface method to proceed while the effective client communication occurs on another thread.
 
 The thread pool used in this call can be configured via the `RestClientBuilder.executorService` method. If this setting is not configured, a default, server-managed thread pool will be provided.
 
-[[providers]]
+[#providers]
 == Providers
 
 The `RestClientBuilder` interface extends the `Configurable` interface of the JAX-RS API, allowing users to register custom providers while at the object's instantiation. The following provider types are supported:
@@ -60,7 +60,7 @@ The `RestClientBuilder` interface extends the `Configurable` interface of the JA
 
 See the full documentation (linked below) for more information on available registration methods.
 
-[[ssl]]
+[#ssl]
 == SSL Configuration
 
 On a per-client basis, or via Microprofile Configuration properties, the following aspects of secure client communication can be set:
@@ -71,12 +71,12 @@ On a per-client basis, or via Microprofile Configuration properties, the followi
 
 Programmatically it is also possible to provide an implementation of the `javax.net.ssl.SSLContext` class to have major control over all aspects of this secure communication channel.
 
-[[ssl-context-configuration]]
+[#ssl-context-configuration]
 === SSL Context Configuration
 
 You can define the certificate alias rest client will use with one of the following approaches:
 
-[[during-rest-client-call]]
+[#during-rest-client-call]
 ==== During REST Client Call
 
 [cols="1,1,1", options="header"]
@@ -87,7 +87,7 @@ You can define the certificate alias rest client will use with one of the follow
 
 NOTE: The name of the property is defined as a constant in the `fish.payara.security.client.PayaraConstants` class.
 
-[[during-rest-client-call-example]]
+[#during-rest-client-call-example]
 ===== Example
 
 Here's an example of how to set up the property when executing a new MP Rest Client call:
@@ -104,7 +104,7 @@ public class Component{
 }
 ----
 
-[[on-microprofile-configuration]]
+[#on-microprofile-configuration]
 ==== On Microprofile Configuration
 
 [cols="1,1,1", options="header"]
@@ -117,7 +117,7 @@ You can define the alias globally as a xref:technical-documentation/microprofile
 
 NOTE: For this to work, you need to include the certificate with the given alias in the default Payara Server keystore.
 
-[[proxy-configuration]]
+[#proxy-configuration]
 == Proxy Configuration
 
 MicroProfile Rest Client 2.0 introduced support for configuring proxy servers via MicroProfile Config properties and the `RestClientBuilder` API. On a vanilla installation however, Payara Platform will not use these settings thus they will be ignored. This is due to Jersey, the JAX-RS client and underlying implementation of MicroProfile Rest Client, which by default, doesn't support the configuration of proxies on a per-client basis (only via a global JVM-level system property).
@@ -128,7 +128,7 @@ If you wish to make use of this feature, you must perform a number of steps to c
 
 Below are instructions for how to configure Payara Server to make use of Apache HTTP Client connector.
 
-[[create-restclientlistener]]
+[#create-restclientlistener]
 === Create a Restclientlistener
 
 To configure Jersey to use Apache HTTP Client as its connector, a `RestClientListener` must be used to register the connector for each new client. You can add one to your application by simply registering as a custom JAX-RS provider.
@@ -148,7 +148,7 @@ public class RestClientApacheHttpClientListener implements RestClientListener {
 
 NOTE: The `ApacheConnectorProvider` class can be found in the `org.glassfish.jersey.connectors:jersey-apache-connector` library, please refer to the Payara BOM artefact for the specific version of the Jersey connector to use.
 
-[[add-apache-http-client]]
+[#add-apache-http-client]
 === Add Apache HTTP Client Dependencies
 
 In addition to the above, you will also need to add the following dependencies to the Payara Server domain (if applicable):
@@ -171,7 +171,7 @@ If you haven't bundled the library in your application, you will also need to ad
 asadmin add-library jersey-apache-connector-${jersey.version}.jar
 ----
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * {repo}/spec/src/main/asciidoc/clientexamples.asciidoc[MicroProfile Rest Client Examples]

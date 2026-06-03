@@ -2,7 +2,7 @@
 
 Configures the settings of the Log notifier
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,12 +15,12 @@ asadmin [asadmin-options] set-log-notifier-configuration [--help]
 [--useseparatelogfile={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the log notifier in Payara Server.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -47,7 +47,7 @@ Defaults to `WARNING`. The notifier only responds to events at or above this lev
 *`--useseparatelogfile`*:
 Defaults to `false`. Whether to use a separate log file to store notifications.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enable the Log Notifier and Configure Filter level*
@@ -57,7 +57,7 @@ Defaults to `false`. Whether to use a separate log file to store notifications.
 asadmin> set-log-notifier-configuration --enabled=true --dynamic=true --filter=INFO
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

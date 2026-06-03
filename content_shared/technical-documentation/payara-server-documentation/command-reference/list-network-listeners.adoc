@@ -2,7 +2,7 @@
 
 Lists the existing network listeners.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-network-listeners [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-network-listeners` subcommand lists the existing network listeners.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -41,7 +41,7 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Lists the network listeners for the specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Network Listeners*
@@ -57,7 +57,7 @@ https-listener-2
 Command list-network-listeners executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

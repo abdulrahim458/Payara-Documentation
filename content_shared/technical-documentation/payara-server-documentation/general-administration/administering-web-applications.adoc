@@ -5,7 +5,7 @@ This chapter explains how to administer web applications in the Payara Server en
 
 Instructions for accomplishing some of these tasks by using the Administration Console are contained in the Administration Console online help.
 
-[[invoking-a-servlet-by-alternate-means]]
+[#invoking-a-servlet-by-alternate-means]
 == Invoking a Servlet by Alternate Means
 
 You can call a servlet deployed to Payara Server by using a URL in a browser or embedded as a link in an HTML or JSP file. The format of a servlet invocation URL is as follows:
@@ -49,14 +49,14 @@ To invoke a servlet from within a JSP file, you can use a relative path. For exa
 <jsp:forward page="TestServlet"/><jsp:include page="TestServlet"/>
 ----
 
-[[changing-log-output-for-a-servlet]]
+[#changing-log-output-for-a-servlet]
 == Changing Log Output for a Servlet
 
 `ServletContext.log` messages are sent to the server log. By default, the `System.out` and `System.err` output of servlets are sent to the server log. During startup, server log messages are echoed to the `System.err` output. Also by default, there is no Windows-only console for the `System.err` output.
 
 You can change these defaults using the Administration Console Write to System Log box. If this box is checked, `System.out` output is sent to the server log. If it is unchecked, `System.out` output is sent to the system default location only.
 
-[[defining-global-features-for-web-applications]]
+[#defining-global-features-for-web-applications]
 == Defining Global Features for Web Applications
 
 You can use the `default-web.xml` file to define features such as filters and security constraints that apply to all web applications.
@@ -85,14 +85,14 @@ The `mime-mapping` elements in `default-web.xml` are global and inherited by all
 
 You can use the Administration Console to edit the `default-web.xml` file, or edit the file directly using the following steps.
 
-[[to-use-the-default-web.xml-file]]
+[#to-use-the-default-web.xml-file]
 === To Use the `default-web.xml` File
 
 . Place the JAR file for the filter, security constraint, or other feature in the domain-dir`/lib` directory.
 . Edit the domain-dir`/config/default-web.xml` file to refer to the JAR file.
 . To apply your changes, restart Payara Server. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
-[[redirecting-a-url]]
+[#redirecting-a-url]
 == Redirecting a URL
 
 You can specify that a request for an old URL be treated as a request for a new URL. This is called redirecting a URL.
@@ -113,7 +113,7 @@ This example redirects `from` `dummy` to `etude`:
 <property name="redirect_1" value="from=/dummy url-prefix=http://etude"/>
 ----
 
-[[administering-mod_jk]]
+[#administering-mod_jk]
 == Administering `mod_jk`
 
 The Apache Tomcat Connector `mod_jk` can be used to connect the web container with web servers such as Apache HTTP Server. By using `mod_jk`, which comes with Payara Server, you can front Payara Server with Apache HTTP Server.
@@ -121,7 +121,7 @@ The Apache Tomcat Connector `mod_jk` can be used to connect the web container wi
 You can also use `mod_jk` directly at the JSP/servlet engine for load balancing. For more information about configuring `mod_jk` and Apache HTTP Server for load
 balancing with Payara Server refer to xref:technical-documentation/payara-server-documentation/high-availability/configuring-http-load-balancing.adoc#configuring-http-load-balancing[Configuring HTTP Load Balancing] in the Payara Server High Availability section.
 
-[[to-enable-mod_jk]]
+[#to-enable-mod_jk]
 === To Enable `mod_jk`
 
 You can front Payara Server with Apache HTTP Server by enabling the `mod_jk` protocol for one of Payara Server's network listeners, as described in this procedure. A typical use for `mod_jk` would be to have Apache HTTP Server handle requests for static resources, while having requests for dynamic resources, such as servlets and JavaServer Pages (JSPs), forwarded to, and handled by the Payara Server back-end instance.
@@ -161,7 +161,7 @@ http-thread-pool.max-thread-pool-size=value
 ----
 . To apply your changes, restart Payara Server. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
-[[example-6-4]]
+[#example-6-4]
 ==== Example 6-4 `httpd.conf` File for `Mod_jk`
 
 This example shows an `httpd.conf` file that is set for `mod_jk`. In this example, `mod_jk` used as a simple pass-through.
@@ -186,7 +186,7 @@ JkMount /*.jsp worker1
 JkMount /glassfish-test/* worker1
 ----
 
-[[example-6-5]]
+[#example-6-5]
 ==== Example 6-5 `workers.properties` File for `Mod_jk`
 
 This example shows a `workers.properties` that is set for `mod_jk`. This `workers.properties` file is referenced in the second line of xref:technical-documentation/payara-server-documentation/general-administration/administering-web-applications.adoc#example-6-4[Example 6-4].
@@ -204,7 +204,7 @@ worker.worker1.port=8009
 * For more information on Apache, see `http://httpd.apache.org/`.
 * For more information on Apache Tomcat Connector, see `http://tomcat.apache.org/connectors-doc/index.html`.
 
-[[to-load-balance-using-mod_jk-and-payara-server]]
+[#to-load-balance-using-mod_jk-and-payara-server]
 === To Load Balance Using `mod_jk` and Payara Server
 
 Load balancing is the process of dividing the amount of work that a computer has to do between two or more computers so that more work gets done in the same amount of time. Load balancing can be configured with or without security.
@@ -226,7 +226,7 @@ where instance-worker-name is the name of the worker that you defined to
 represent the instance in the `workers.properties` file.
 . To apply your changes, restart Apache HTTP Server and Payara Server.
 
-[[example-6-6]]
+[#example-6-6]
 ==== Example 6-6 `httpd.conf` File for Load Balancing
 
 This example shows an `httpd.conf` file that is set for load balancing.
@@ -251,7 +251,7 @@ JkMount /*.jsp worker1
 JkMount /glassfish-test/* loadbalancer
 ----
 
-[[example-6-7]]
+[#example-6-7]
 ==== Example 6-7 `workers.properties` File for Load Balancing
 
 This example shows a `workers.properties` or `glassfish-jk.properties` file that is set for load balancing. The `worker.worker*.port` should match with JK ports you created.
@@ -275,7 +275,7 @@ worker.loadbalancer.type=lb
 worker.loadbalancer.balance_workers=worker1,worker2
 ----
 
-[[to-enable-ssl-between-the-mod_jk-load-balancer-and-the-browser]]
+[#to-enable-ssl-between-the-mod_jk-load-balancer-and-the-browser]
 === To Enable SSL between the `mod_jk` Load Balancer and the Browser
 
 To activate security for `mod_jk` on Payara Server, you must first generate a Secure Socket Layer (SSL) self-signed certificate on the Apache HTTP Server with the `mod_ssl` module. The tasks include generating a private key, a Certificate Signing Request (CSR), a self-signed certificate, and configuring SSL-enabled virtual hosts.
@@ -322,7 +322,7 @@ JkMount /*.jsp worker1
 JkMount /glassfish-test/* loadbalancer
 ----
 
-[[example-6-8]]
+[#example-6-8]
 ==== Example 6-8 `http-ssl.conf` File for `mod_jk` Security
 
 A basic SSL-enabled virtual host will appear in the `http-ssl.conf` file. In this example, all requests are redirected.
@@ -339,7 +339,7 @@ JkMount /* worker1
 </VirtualHost>
 ----
 
-[[to-enable-ssl-between-the-mod_jk-load-balancer-and-payara-server]]
+[#to-enable-ssl-between-the-mod_jk-load-balancer-and-payara-server]
 === To Enable SSL between the `mod_jk` Load Balancer and Payara Server
 
 This procedure does not enable SSL transfer between `mod_jk` and Payara Server. It enables `mod_jk` to forward SSL-encrypted information from the browser to Payara Server.
@@ -373,12 +373,12 @@ JkCERTSIndicator SSL_CLIENT_CERT
 +
 .  To apply your changes, restart Apache HTTP Server and Payara Server.
 
-[[administering-mod_proxy_ajp]]
+[#administering-mod_proxy_ajp]
 == Administering `mod_proxy_ajp`
 
 The Apache Connector `mod_proxy_ajp` can be used to connect the web container with Apache HTTP Server. By using `mod_proxy_ajp`, you can front Payara Server with Apache HTTP Server.
 
-[[to-enable-mod_proxy_ajp]]
+[#to-enable-mod_proxy_ajp]
 === To Enable `mod_proxy_ajp`
 
 You can front Payara Server with Apache HTTP Server and its `mod_proxy_ajp` connector by enabling the AJP protocol for one of Payara Server's network
@@ -433,7 +433,7 @@ See xref:technical-documentation/payara-server-documentation/general-administrat
 * For more information on the AJP protocol, see http://tomcat.apache.org/connectors-doc/ajp/ajpv13a.html.
 
 
-[[to-load-balance-using-mod_proxy_ajp-and-payara-server]]
+[#to-load-balance-using-mod_proxy_ajp-and-payara-server]
 === To Load Balance Using `mod_proxy_ajp` and Payara Server
 
 Load balancing is the process of dividing the amount of work that a computer has to do between two or more computers so that more work gets done in the same amount of time. In the Payara Server context, load balancing is most frequently used to distribute work among the instances in a Payara Server cluster.

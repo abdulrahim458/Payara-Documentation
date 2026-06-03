@@ -2,7 +2,7 @@
 
 Starts all the instances in a Payara Server deployment group.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,7 +14,7 @@ asadmin [asadmin-options] start-deployment-group [--help]
 name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `start-deployment-group` subcommand starts all instances that belong to a Payara Server deployment group. The command will fail if the deployment group doesn't contain any instances in it.
@@ -23,7 +23,7 @@ Internally this command works in the same manner that the xref:technical-documen
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -47,13 +47,13 @@ Specifies how long to take for each instance to start in seconds. If starting th
 +
 The default value is `600`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *name*:
 The name of the deployment group. If there are no deployment groups that match the name the command will exit with an error.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Start a Deployment Group*
@@ -78,7 +78,7 @@ asadmin start-deployment-group --instanceTimeout 30 test-dgroup
 Command start-deployment-group executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

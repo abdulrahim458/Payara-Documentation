@@ -1,6 +1,6 @@
 = Eclipse Microprofile
 
-[[what-is]]
+[#what-is]
 == What Is Eclipse Microprofile?
 The MicroProfile project was launched in June 2016 as a collaborative effort between Java application server vendors and the enterprise Java community to enable fast innovation.
 

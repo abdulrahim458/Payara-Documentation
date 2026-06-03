@@ -2,7 +2,7 @@
 
 Creates a security map for the specified connector connection pool.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,7 +15,7 @@ asadmin [asadmin-options] create-connector-security-map [--help]
 mapname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-connector-security-map` subcommand creates a security map for the specified connector connection pool. If the security map is not present, a new one is created.
@@ -30,7 +30,7 @@ For this subcommand to succeed, you must have first created a connector connecti
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -49,13 +49,13 @@ This subcommand is supported in remote mode only.
 *`--mappedusername`*:
   Specifies the EIS username.
 
-[[operands]]
+[#operands]
 == Operands
 
 *mapname*:
   The name of the security map to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Connector Security Map*
@@ -69,7 +69,7 @@ asadmin> create-connector-security-map --poolname connector-pool1
 Command create-connector-security-map executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

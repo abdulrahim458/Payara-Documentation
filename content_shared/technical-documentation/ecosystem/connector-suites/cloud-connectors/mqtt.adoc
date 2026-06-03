@@ -2,14 +2,14 @@
 
 MQTT (Message Queue Telemetry Transport) is a lightweight publish-subscribe messaging protocol.
 
-[[versioning]]
+[#versioning]
 == Versioning
 The tags below are for the https://github.com/payara/Cloud-Connectors[Cloud Connectors repository^]. You should use the one corresponding to the Jakarta version you require.
 
 https://github.com/payara/Cloud-Connectors/releases/tag/0.8.0[0.8.0^]:: MQTT Connector using JakartaEE 8 and the `javax` namespace
 https://github.com/payara/Cloud-Connectors/releases/tag/MQTT-1.0.0[MQTT-1.0.0^]:: Azure Service Bus Connector using JakartaEE 10 and the `jakarta` namespace
 
-[[usage]]
+[#usage]
 == Usage
 
 IMPORTANT: If you have selected to use MQTT Connector 1.0.0, replace all occurunces of `0.8.0` with `1.0.0` for the following example.
@@ -31,7 +31,7 @@ In order to make use of this connector in an application, the following Maven de
 
 Note that this dependency have scope provided since the types within this dependency are globally available to every application deployed to Payara Micro after the `mqtt-rar-0.8.0.rar` was deployed.
 
-[[sending-messages]]
+[#sending-messages]
 == Sending Messages
 Sending messages to a MQTT broker can be done via the JCA and an MQTT specific API. In order to start using this API to send messages, a resource has to be defined via the JCA API; a connection factory.
 
@@ -71,7 +71,7 @@ public class SendMQTTMessage {
 }
 ----
 
-[[receiving-messages]]
+[#receiving-messages]
 == Receiving Messages
 Messages can be received from an MQTT broker by creating an MDB (Message Driven Bean) that implements the `fish.payara.cloud.connectors.MQTT.api.MQTTListener` marker interface and has a single method annotated with `@OnMQTTMessage` and the method signature `void method(String topic, MqttMessage message)`.
 

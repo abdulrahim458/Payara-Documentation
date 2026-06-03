@@ -2,7 +2,7 @@
 
 configures the starting of a DAS or a Payara Server instance on an unattended boot
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -18,7 +18,7 @@ asadmin [asadmin-options] create-service [--help]
 [domain-or-instance-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-service` subcommand configures the starting of a domain administration server (DAS) or a Payara Server instance on an unattended boot on Windows, Linux, and Oracle Solaris systems.
@@ -84,7 +84,7 @@ If you delete a service that you created by using the `create-service` subcomman
 
 The Oracle Solaris command `svccfg` does not delete this directory.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -143,13 +143,13 @@ The default is `as-install/nodes`. If this option is specified, the operand must
 *`--node`*:
 Specifies the node on which the instance resides. This option may be omitted only if the directory that the `--nodedir` option specifies contains only one node directory. Otherwise, this option is required. If this option is specified, the operand must specify an instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-or-instance-name*:
   The name of the domain or instance to configure. If no operand is specified, the default domain is used.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Service on a Windows System*
@@ -256,7 +256,7 @@ Here are the most typical Solaris commands of interest:
 Command create-service executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

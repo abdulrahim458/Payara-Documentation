@@ -2,7 +2,7 @@
 
 Configures the batch runtime.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,12 +14,12 @@ asadmin [asadmin-options] set-batch-runtime-configuration [--help]
 [--schemaName schema-name --tablePrefix table-prefix --tableSuffix table-suffix]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-batch-runtime-configuration` subcommand configures the batch runtime. The runtime uses a data source and a managed executor service to execute batch jobs. Batch runtime configuration data is stored in the`config` element in `domain.xml`.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -56,7 +56,7 @@ The prefix to apply to the batch table name.
 *`--tableSuffix`*:
 Sets the suffix to apply to the batch table name.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Configuring the Batch Runtime*
@@ -78,7 +78,7 @@ The following command will set the data source and the prefix and suffix for the
 asadmin> set-batch-runtime-configuration --target="server" --datasourcelookupname="jdbc/BatchJobsDS" --tablePrefix="BATCHJ_" --tableSuffix="_JB"
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

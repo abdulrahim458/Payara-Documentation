@@ -2,7 +2,7 @@
 
 Lists the existing JavaMail session resources.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,14 +10,14 @@ Lists the existing JavaMail session resources.
 asadmin [asadmin-options] list-javamail-resources [--help] [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-javamail-resources` subcommand lists the existing JavaMail session resources.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -26,7 +26,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -40,10 +40,10 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Lists the resources for a particular server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Listing JavaMail Resources*
 
@@ -56,7 +56,7 @@ mail/MyMailSession
 Command list-javamail-resources executed successfuly.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

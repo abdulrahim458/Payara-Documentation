@@ -2,7 +2,7 @@
 
 The DynamoDB config source reads configuration properties from a DynamoDB database table. DynamoDB is a managed *NoSQL* database service provided by Amazon.
 
-[[aws-iam-user]]
+[#aws-iam-user]
 == AWS IAM User
 
 In order to access DynamoDB, you need an AWS access key. If you don't have an access key, you can create them from the AWS Management Console. To create access keys for an IAM user which Payara Server will use to access your DynamoDB.
@@ -25,7 +25,7 @@ Whether you assign a group or select individual permissions, make sure the IAM u
 
 When you finish creating the IAM user, you'll be given an access key id and secret access key. These will need to be recorded and passed to Payara Server as xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases] `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` respectively.
 
-[[configuration]]
+[#configuration]
 == Configuration in Payara Server
 
 DynamoDB config source configuration is disabled by default but can be configured dynamically or statically like any other Payara service.
@@ -42,7 +42,7 @@ image:microprofile/config/cloud/aws/region.png[alt="AWS Region Selection",width=
 
 NOTE: The region name is the snake-case notation, not the full words. E.g. `eu-west-2`.
 
-[[from-admin-console]]
+[#from-admin-console]
 === From the Admin Console
 
 To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliases from the admin console, refer to the xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases Admin Console configuration] guide.
@@ -53,7 +53,7 @@ image:microprofile/config/cloud/dynamodb/admin-console-config.png[alt="Payara Se
 
 From here you configure the name of the database table, the region name, name of the key column containing the key, name of the column containing the value and the maximum number of items to retrieves from the database table.
 
-[[from-command-line]]
+[#from-command-line]
 === From the Command Line
 
 To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliases from the command line, refer to the xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases Asadmin configuration] guide.
@@ -64,7 +64,7 @@ To configure the DynamoDB config source from the command line, use these command
 
 * xref:technical-documentation/payara-server-documentation/command-reference/get-dynamodb-config-source-configuration.adoc#get-dynamodb-config-source-configuration[`get-dynamodb-config-source-configuration`].
 
-[[usage]]
+[#usage]
 == Usage
 
 Once all required options are configured, you should be able to read configuration properties from a database table. For example, let's look at the following diagram. It shows a table named `Books` with columns ISBN, Author and Title.

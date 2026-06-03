@@ -6,7 +6,7 @@ Information and instructions on deploying from the command line are provided in 
 
 //TODO - Modernise the pictures in this document
 
-[[about-application-deployment]]
+[#about-application-deployment]
 == About Application Deployment
 
 Assembly, also known as packaging, is the process of combining discrete components of an application or module into a single unit that can be installed on an application server. The Payara Server assembly process conforms to the customary Jakarta EE specifications. The only difference is that when you assemble applications or modules in Payara Server, you can include optional Payara Server deployment descriptors that enhance functionality.
@@ -22,7 +22,7 @@ The following topics are addressed here:
 * xref:naming-standards[Naming Standards]
 * xref:module-and-application-versions[Module and Application Versions]
 
-[[general-deployment-functionality]]
+[#general-deployment-functionality]
 === General Deployment Functionality
 
 Various Jakarta EE module types, such as connector module, web module, EJB module, application client module, can be deployed in the following ways:
@@ -43,7 +43,7 @@ Some deployment methods that are used effectively in a development environment s
 
 For production environments, any upgrade should be performed as a *rolling upgrade*, which upgrades applications and modules without interruption in service.
 
-[[deployment-descriptors-and-annotations]]
+[#deployment-descriptors-and-annotations]
 === Deployment Descriptors and Annotations
 
 A deployment descriptor is an XML file that describes how a Jakarta EE application or module should be deployed. Each deployment descriptor XML file has a corresponding Document Type Definition (DTD) file or schema (XSD) file, which defines the elements, data, and attributes that the deployment descriptor file can contain.
@@ -90,7 +90,7 @@ The following annotation and deployment descriptor combinations are supported:
 * Jakarta EE applications or modules can be fully annotated with metadata defined by the listed specifications. Annotation eliminates the need for Jakarta EE standard deployment descriptors. In most cases, the Payara Server deployment descriptors are also not needed.
 * Jakarta EE applications or modules can be partially annotated with some deployment information in standard deployment descriptors. In case of conflicts, deployment descriptor values supersede the annotated metadata, and a warning message is logged.
 
-[[modules-and-applications]]
+[#modules-and-applications]
 === Modules and Applications
 
 An application is a logical collection of one or more modules joined by application annotations or deployment descriptors. You assemble components into JAR, WAR, or RAR files, then combine these files and, optionally, deployment descriptors into an Enterprise archive (EAR) file which is deployed.
@@ -103,7 +103,7 @@ The following topics are addressed here:
 * xref:module-based-deployment[Module-Based Deployment]
 * xref:application-based-deployment[Application-Based Deployment]
 
-[[types-of-modules]]
+[#types-of-modules]
 ==== Types of Modules
 
 Payara Server supports the following types of modules:
@@ -116,7 +116,7 @@ After deploying a Jakarta EE connector module, you must configure it as describe
 * *Application Client Module*. An application client module is a deployable software unit that consists of one or more classes, and application client deployment descriptors
 (`application-client.xml` and `payara-application-client.xml`). An application client JAR file applies to a Payara Server type of Jakarta EE client. An application client supports the standard Jakarta EE Application Client specifications.
 
-[[module-based-deployment]]
+[#module-based-deployment]
 ==== Module-Based Deployment
 
 You can deploy web, EJB, and application client modules separately, outside any application. Module-based deployment is appropriate when components need to be accessed by other modules, applications, or application clients. Module-based deployment allows shared access to a bean from a web, EJB, or application client component.
@@ -125,22 +125,22 @@ The following figure shows separately-deployed EJB, web, and application client 
 
 //TODO - Update the pictures in this page
 
-[[figure-1-1-module-based-assembly-and-deployment]]
+[#figure-1-1-module-based-assembly-and-deployment]
 .*Figure 1-1 Module-Based Assembly and Deployment*
 image:app-deployment/dgdeploy3.png[alt=""Figure shows EJB",web, and application client module assembly and deployment.",width=600px]
 
-[[application-based-deployment]]
+[#application-based-deployment]
 ==== Application-Based Deployment
 
 Application-based deployment is appropriate when components need to work together as one unit.
 
 The following figure shows EJB, web, application client, and connector modules assembled into a Jakarta EE application.
 
-[[figure-1-2-application-based-assembly-and-deployment]]
+[#figure-1-2-application-based-assembly-and-deployment]
 .*Figure 1-2 Application-Based Assembly and Deployment*
 image:app-deployment/dgdeploya.png[alt=""Figure shows Jakarta EE application assembly and deployment."",width=600px]
 
-[[access-to-shared-framework-classes]]
+[#access-to-shared-framework-classes]
 === Access to Shared Framework Classes
 
 If you assemble a large, shared library into every module that uses it, the result is a huge file that takes too long to register with the server. In addition, several versions of the same class could exist in different class loaders, which is a waste of resources. When Jakarta EE applications and modules use shared framework classes (such as utility classes and libraries), the classes can be put in the path for the common class loader or an application-specific class loader rather than in an application or module.
@@ -151,7 +151,7 @@ For more information about class loaders, see xref:technical-documentation/appli
 
 NOTE: According to the Jakarta EE specification, you cannot package utility classes within an individually-deployed EJB module. Instead, you must package the EJB module and utility JAR within an application using the JAR Extension Mechanism Architecture.
 
-[[naming-standards]]
+[#naming-standards]
 === Naming Standards
 
 Names of applications and individually-deployed modules must be unique within a Payara Server domain. Modules within an application must have unique names.
@@ -164,7 +164,7 @@ The following topics are addressed here:
 * xref:jndi-naming[JNDI Naming]
 * xref:directory-structure[Directory Structure]
 
-[[portable-naming]]
+[#portable-naming]
 ==== Portable Naming
 
 The Jakarta EE specification defines the portable `application-name`, which allows you to specify an application name in the `application.xml` file.
@@ -184,7 +184,7 @@ Payara Server determines the application registration name according to the foll
 .  If no name is specified at deployment time, the portable `application-name` or `module-name` in the Jakarta  EE deployment descriptor is used.
 .  If no name is specified at deployment time or in the deployment descriptors, the archive name, minus the file type suffix, is used.
 
-[[deploying-from-an-ide]]
+[#deploying-from-an-ide]
 ==== Deploying from an IDE
 
 When deploying an application or a module on Payara Server from an IDE (like **Apache NetBeans** or **IntelliJ Idea**), the IDE deploys to Payara Server using the asadmin deploy command, with the `--name` option specified.
@@ -193,20 +193,20 @@ This will force the application or module to have the specified name over the na
 
 To solve the issue, application or module name defined in the deployment descriptor will **always** take precedence over the `--name` option. But you use the `--name` and `--forcename` options to override this behaviour.
 
-[[jndi-naming]]
+[#jndi-naming]
 ==== JNDI Naming
 
 Jakarta Naming and Directory Interface (JNDI) lookup names for EJB components must also be unique. Establishing a consistent naming convention can help.
 For example, appending the  application name and the module name to the EJB name is a way to guarantee unique names, such as, `jms/qConnPool`.
 
-[[directory-structure]]
+[#directory-structure]
 ==== Directory Structure
 
 Application and module directory structures must follow the structure outlined in the Jakarta  EE specification. During deployment, the application or module is expanded from the archive file to an open directory structure. The directories that hold the individual modules are named with `_jar`, `_rar`, and `_war` suffixes.
 
 If you deploy a directory instead of an EAR file, your directory structure must follow this same convention. For instructions on performing directory deployment, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module-in-a-directory-format[To Deploy an Application or Module in a Directory Format].
 
-[[module-and-application-versions]]
+[#module-and-application-versions]
 === Module and Application Versions
 
 Application and module versioning allows multiple versions of the same application to exist in a Payara Server domain, which simplifies upgrade and rollback tasks. At most one version of an application or module can be enabled on a server any given time. Versioning provides extensions to tools for deploying, viewing, and managing multiple versions of modules and applications, including the Administration Console and deployment-related `asadmin` subcommands.
@@ -218,7 +218,7 @@ The following topics are addressed here:
 * xref:choosing-the-enabled-version[Choosing the Enabled Version]
 * xref:versioning-restrictions-and-limitations[Versioning Restrictions and Limitations]
 
-[[version-identifiers-and-expressions]]
+[#version-identifiers-and-expressions]
 ==== Version Identifiers and Expressions
 
 The version identifier is a suffix to the module or application name. It is separated from the name by a colon (`:`). It must begin with a letter or number.
@@ -260,7 +260,7 @@ The `create-application-ref` subcommand is expression-aware only if the `--enabl
 
 The `list-applications` and `list-application-refs` subcommands display information about all deployed versions of a module or application. To find out which version is enabled, use the `--long` option.
 
-[[choosing-the-enabled-version]]
+[#choosing-the-enabled-version]
 ==== Choosing the Enabled Version
 
 At most one version of a module or application can be enabled on a server instance. All other versions are disabled. Enabling one version automatically disables all others.
@@ -270,7 +270,7 @@ The `--enabled` option of the `deploy` and `redeploy` subcommands is set to `tru
 
 To enable a version that has been deployed previously, use the `enable` subcommand.
 
-[[versioning-restrictions-and-limitations]]
+[#versioning-restrictions-and-limitations]
 ==== Versioning Restrictions and Limitations
 
 Module and application versioning in Payara Server is subject to the following restrictions and limitations:
@@ -286,7 +286,7 @@ Module and application versioning in Payara Server is subject to the following r
 
 //TODO - Would be good to modernise this explanation in more detail
 
-[[about-assembly-and-deployment-events]]
+[#about-assembly-and-deployment-events]
 == About Assembly and Deployment Events
 
 The deployment tools that are provided by Payara Server can be used by any user authorized as an administrator to deploy applications and modules into any Payara Server environment. However, effective application deployment requires planning and care. Only the developer knows exactly what is required by an application, so the developer is responsible for initial assembly and deployment.
@@ -306,12 +306,12 @@ The Payara Server sample applications contain deployment descriptors that can be
 +
 The developer fixes the problem and resubmits the archive to the administrator. Sometimes the administrator resolves the problem, depending on what the problem is.
 
-[[about-deployment-tools]]
+[#about-deployment-tools]
 == About Deployment Tools
 
 Payara Server provides tools for assembling and deploying a module or application.
 
-[[administration-console]]
+[#administration-console]
 === Administration Console
 
 The Payara Server Administration Console is a browser-based utility that features a graphical interface that includes extensive online help for the administrative tasks. The format for starting the Administration Console in a web browser is `__http://hostname:port__`. For example:
@@ -323,7 +323,7 @@ http://localhost:4848
 
 Step-by-step instructions for using the Administration Console for deployment are provided in the Administration Console online help. You can display the help material for a page by clicking the Help button. The initial help page describes the functions and fields of the page itself. To find instructions for performing associated tasks, click a link in the See Also list.
 
-[[the-asadmin-utility]]
+[#the-asadmin-utility]
 === The `asadmin` Utility
 
 The Payara Server `asadmin` utility is a command-line tool that invokes subcommands for identifying the operation or task that you want to perform.
@@ -347,7 +347,7 @@ asadmin help list-applications
 For additional information on the `asadmin` utility, see "xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#using-the-asadmin-utility[Using the `asadmin` Utility]" in
 __Payara Server General Administration section__ and the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`(1M)] help page.
 
-[[additional-information-on-application-deployment]]
+[#additional-information-on-application-deployment]
 == Additional Information on Application Deployment
 
 As specified from Jakarta Platform, the following are relevant specifications to this guide:

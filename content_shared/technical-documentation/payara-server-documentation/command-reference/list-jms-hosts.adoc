@@ -2,7 +2,7 @@
 
 Lists the existing JMS hosts.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-jms-hosts [--help]
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-jms-hosts` subcommand lists the existing Java Message Service (JMS) hosts for the JMS service.
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -37,7 +37,7 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
   instance-name;;
     Lists the JMS hosts for the specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing all JMS hosts*
@@ -52,7 +52,7 @@ MyNewHost
 Command list-jms-hosts executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

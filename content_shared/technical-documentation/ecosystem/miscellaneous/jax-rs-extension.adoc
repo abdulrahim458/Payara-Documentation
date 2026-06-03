@@ -4,7 +4,7 @@ The JAX-RS Extension is an application specific extension that can assist you in
 
 * Define the `alias` of SSL certificate entry that will be used to establish secure communication in a mutual TLS transport setting. 
 
-[[installation]]
+[#installation]
 == Installation
 
 To install this extension, simply include its JAR file in the application's WAR file. Using Maven, it is as simple as declaring the dependency through its GAV coordinates:
@@ -18,10 +18,10 @@ To install this extension, simply include its JAR file in the application's WAR 
 </dependency>
 ----
 
-[[usage]]
+[#usage]
 == Usage
 
-[[ssl-certificate-alias-configuration]]
+[#ssl-certificate-alias-configuration]
 === SSL Certificate Alias Configuration
 
 To configure the alias of the SSL certificate to be used in secure communications established by the client, the following system property must be defined when establishing a new REST client call through the use of the `jakarta.ws.rs.client.ClientBuilder` class:
@@ -36,7 +36,7 @@ NOTE: The name of the property is defined as a constant in the `fish.payara.secu
 
 IMPORTANT: The certificate that corresponds to the given alias must exist in the domain's configured keystore.
 
-[[alias-configuration-example]]
+[#alias-configuration-example]
 ==== Example
 
 Here's an example of how to set up the property when executing a new JAX-RS client call:

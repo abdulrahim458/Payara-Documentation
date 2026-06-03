@@ -2,7 +2,7 @@
 
 Removes all expired certificates from the target instance or listener's keystores and truststores.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,14 +17,14 @@ asadmin remove-expired-certificates [--help]
 [--target=instanceName]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command removes all expired certificates from the target instance or listener's key and trust stores.
 
 If the instance or listener is configured to use the default trust store, the command will instead synchronize the instance with the DAS (under the assumption the certificate has been removed from the default trust store of the DAS), since any certificates removed from the instance stores would be lost upon its next synchronisation.
 
-[[options]]
+[#options]
 == Options
 
 *`--help`*:
@@ -60,7 +60,7 @@ The path to the directory containing the target node.
 +
 Defaults to `as-install/glassfish/nodes`
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Removes all expired certificates in the `production` domain*
@@ -70,7 +70,7 @@ Defaults to `as-install/glassfish/nodes`
 asadmin remove-expired-certificates --domainName --listener http-listener-2 --reload=true
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

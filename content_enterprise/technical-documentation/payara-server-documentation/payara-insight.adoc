@@ -7,7 +7,7 @@ It consists of a server module responsible for collecting a multitude of metrics
 
 The metrics include server metrics from different sources within the server as well as metrics defined in user applications using _MicroProfile Metrics_ and metrics derived from _MicroProfile Health_ checks.
 
-[[enabling-the-gui]]
+[#enabling-the-gui]
 == Enabling the GUI
 
 By default, the Payara Insight GUI is automatically enabled for the `production` domain. Links can be found on the _Common Tasks_ home page of the Admin GUI in section _Monitoring_ or on the _Monitoring Data_ page.
@@ -34,7 +34,7 @@ asadmin> set-monitoring-console-configuration --enabled=false
 TIP: Stopping the application does not disable the data collection. +
 This is a background process that is controlled separately as described in the next section.
 
-[[enabling-data-collection]]
+[#enabling-data-collection]
 == Enabling Data Collection
 
 The collection of monitoring data gets enabled and disabled in connection with the general configuration: _Monitoring_ => _Monitoring Service_ => _Enabled_.
@@ -42,7 +42,7 @@ By default, this setting is enabled.
 
 NOTE: If you want to remove the monitoring data collection from the server's runtime without disabling the monitoring service itself you must delete the `monitoring-console-core.jar` from the `as-install/modules` folder of your server installation and restart the server.
 
-[[enabling-data-aggregation]]
+[#enabling-data-aggregation]
 == Enabling Data Aggregation (History)
 
 By default, InSight has a sliding window of data per metric of usually one minute length which contains 1 point per second. This allows typical "real-time" monitoring. These points represent the raw data as it is probed/collected.
@@ -80,7 +80,7 @@ The aggregated history feature is designed to keep memory usage fairly low. 1000
 
 In typical environments the extra memory and CPU effort for the history should not be an issue.
 
-[[graphical-user-interface]]
+[#graphical-user-interface]
 == Graphical User Interface
 
 After enabling Payara InSight open the home page at `/monitoring-console/` (usually on port `8080`).
@@ -89,14 +89,14 @@ The GUI ships with a set of xref:#presets-pages[preconfigured pages] each focuss
 
 NOTE: Some metrics are only available when the monitoring configuration of certain server parts is set to `HIGH`. Widgets that do depend on such a configuration changes let you know how to enable the metrics.
 
-[[pages]]
+[#pages]
 === Pages
 
 Payara InSight is organized in fully customizable pages. A page is a collection of xref:#widgets[widgets] arranged in columns. Usually, pages are focused on visualizing metrics of a specific area of the server, like HTTP or request tracing.
 
 The pre-configured pages are a starting point that can be changed and extended by the user. New custom pages can be created and populated with arbitrary metrics.
 
-[[switching-pages]]
+[#switching-pages]
 ==== Switching Pages
 
 To switch page use the left menu.
@@ -109,14 +109,14 @@ TIP: Each page switch also updates the URL making them "bookmarkeable". URLs can
 
 Updating URLs after switching pages also means that once the page is changed using the dropdown navigation, the browser's page history based navigation can be used to go back to already visited pages.
 
-[[changing-page-layout]]
+[#changing-page-layout]
 ==== Changing Page Layout
 
 Each page uses a column layout of one or more columns. The number of columns for a page can be changed using one of the _Layout Columns_ quick access buttons.
 
 Changing the column layout of a page does not change the preferred position of the widgets. If a widget is set to column 3 but a 2-column layout is used all widgets of the 3rd or 4th column get pushed to the 2nd column instead. This allows switching layouts based on the viewing device without redoing the configuration entirely.
 
-[[changing-page-interval]]
+[#changing-page-interval]
 ==== Changing Page Update Interval
 
 By default, the graphs on a page update every 2 seconds. To control the interval use quick access on the left side menu or _General_ application settings.
@@ -125,7 +125,7 @@ By default, the graphs on a page update every 2 seconds. To control the interval
 
 The interval can be paused and continued without changing the interval duration by using the _play/pause_ toggle next to the interval setting.
 
-[[adding-pages]]
+[#adding-pages]
 ==== Adding Pages
 
 To add a new page expand the left menu, click the _Add New Page_ button below the list of pages and enter a name for the new page in the dialogue.
@@ -146,7 +146,7 @@ Naturally this comes at the downside that metrics no longer are added to the pag
 
 Learn more about xref:#pattern-data-series[series patterns] as used by query pages.
 
-[[deleting-pages]]
+[#deleting-pages]
 ==== Deleting a Page
 
 To delete a page open the left sidebar and click the on the trash icon next to the page name in the list of pages you want to delete.
@@ -159,7 +159,7 @@ Confirm the deletion.
 
 NOTE: Pages that are based on a preset cannot be deleted. They can only be reset to their preset configuration.
 
-[[reset-pages]]
+[#reset-pages]
 ==== Reset a Page
 
 When the configuration of a preconfigured page or any of the widgets on it was changed by the user the page can be reset by clicking the _Reset_ icon next to the page name in the expanded left side menu.
@@ -176,7 +176,7 @@ NOTE: To reset all pages and remove all user-created pages, clear the browser's 
 
 *image*: monitoring-console/mc_sample_local-storage-chrome.png[Clear Local Storage in Chrome Browser]
 
-[[page-rotation]]
+[#page-rotation]
 ==== Page Rotation
 
 Payara InSight is meant to be used to display metrics on status monitors.
@@ -190,7 +190,7 @@ Individual pages can be excluded from rotation by toggling the _Include In Rotat
 
 *image*: monitoring-console/mc_settings_page_general-h.png[Page Settings]
 
-[[page-management]]
+[#page-management]
 ==== Page Management
 
 Payara InSight uses the browser's local storage to store the page configuration (which includes the widgets placed on a page). This means by default changes to page configurations do not affect other users.
@@ -244,14 +244,14 @@ Both _Push_ and _Pull_ need to be confirmed.
 *image*: monitoring-console/mc_dialog_pull-page.png[Confirm Page Pull]
 *image*: monitoring-console/mc_dialog_push-page.png[Confirm Page Push]
 
-[[page-export]]
+[#page-export]
 ==== Page Export
 
 Besides the managed page synchronisation which is using the persistent server configuration the local configuration can also be managed manually. To manually export pages click the _Export..._ button and select the set of pages to export in the dialogue and confirm your selection by pressing _Export_
 
 *image*: monitoring-console/mc_dialog_export-pages.png[Page Export Dialogue]
 
-[[page-import]]
+[#page-import]
 ==== Page Import
 
 To manually import pages click the _Import..._ button and select a file. The dialogue will show the list of pages contained in the file.
@@ -262,7 +262,7 @@ Select the pages that should be imported:
 
 WARNING: Importing a page will override the local page with the same ID (name). Any customisation made to the local page will be lost.
 
-[[changing-user-role]]
+[#changing-user-role]
 ==== Changing User Role
 
 When no role is set from previous sessions the user is asked to choose a role when opening the Payara InSight application.
@@ -275,12 +275,12 @@ The selection can be changed at any time in the _General_ application settings f
 
 NOTE: Roles are not connected to accounts or other forms of permission management. Users can switch between the roles to suit their current intentions when using Payara InSight.
 
-[[widgets]]
+[#widgets]
 === Widgets
 
 Widgets are the components that can be placed on a page to show a particular metric or a set of metrics. While there are different types of widgets usually a widget shows a line graph of one or more metrics for the entire cluster.
 
-[[adding-widgets]]
+[#adding-widgets]
 ==== Adding a Widget
 
 Widgets can be added to any page. Click the plus button in the minimized right side menu or the _Add New Chart_ button when it is expanded:
@@ -302,7 +302,7 @@ Newly added widgets are automatically placed in a column so that widgets are eve
 
 Use the xref:#configuring-widgets[side panel widget settings] to change the column, width, height or item position of the widget or use the quick menu for the widget by clicking the pencil symbol in the top right corner of the widget.
 
-[[configuring-widgets]]
+[#configuring-widgets]
 ==== Configuring Widgets
 
 To configure a widget select it by clicking on its title or the pencil icon in the top right corner of the widget.
@@ -390,7 +390,7 @@ _Instance and Series Name_ shows the same instance and series in the same colour
 | Coloring Mapping | (undefined) | A space separated mapping of series group values to a named colour value as defined by the application appearance _Defaults_ settings. For example to color a series shown with label _AmberAck_ in amber color the entry is `AmberAck:amber` (`amber` here refers to the default name used for _Degraded_ (internal name)).
 |====================
 
-[[configuring-widget-extras]]
+[#configuring-widget-extras]
 ==== Configuring Widget Extras
 
 The _Extras_ settings are concerned with additional information shown in or around the graph or widget content in general.
@@ -446,7 +446,7 @@ Use the colour input to individually override the widget's colour for waterline,
 
 Press the button right next to it which shows the default colour as configured in the _Appearance_ application settings to reset the individual colour to use the default setting instead. A colour set to the default changes with the default.
 
-[[configure-widget-status-messages]]
+[#configure-widget-status-messages]
 ==== Configuring Widget Status Messages
 
 The current value of a metric can automatically be categorised as a certain status.
@@ -465,7 +465,7 @@ For example based on the threshold values of decorations or by encountered error
 
 The messages support simple markup using `pass:[*]boldpass:[*]` and `pass:[_]italicpass:[_]`.
 
-[[configure-widget-alerts]]
+[#configure-widget-alerts]
 ==== Configuring Widget Alerts
 
 The values of metric series can be tracked by the server to report values that out of a healthy range.
@@ -493,7 +493,7 @@ If for any of these 3 groups of pairs both are checked no alerts would be shown.
 Use a widget of type _Alerts Table_ to show all alerts according to the filter at all times.
 |====================
 
-[[handling-alerts]]
+[#handling-alerts]
 ==== Handling Alerts
 
 Alerts can occur when a watch is configured for a metric series.
@@ -522,7 +522,7 @@ An alert table shows the overall state of each instance in the table's legend.
 
 As mentioned before the _Alerts_ settings can equally be used for line graphs to create a more restrictive setting.
 
-[[remove-widgets]]
+[#remove-widgets]
 ==== Removing a Widget
 
 Any widget can be removed from any page. Click the pencil symbol in the top right of the widget or its title to open the widget's settings.
@@ -537,7 +537,7 @@ Confirm you want to remove the widget.
 
 Remember that a page originating from a preset can be xref:#reset-pages[reset] to recover a widget that was removed accidentally.
 
-[[common-page-settings]]
+[#common-page-settings]
 === Common Page Settings
 
 Most of the page settings have already been described in context of the different page related user actions. The following tables are included for reference.
@@ -581,14 +581,14 @@ NOTE: Pages of _Type: Query_ have more settings to configure the contents of the
 
 See xref:#application-metrics-page[Application Metrics page] for an example of a query page.
 
-[[global-configurations]]
+[#global-configurations]
 === Global Configurations
 
 The configuration that controls global properties of the Payara InSight user interface. It is stored in the browser's local storage and thereby individual for each user.
 
 NOTE: These settings cannot be shared.
 
-[[general-application-settings]]
+[#general-application-settings]
 ==== General Application Settings
 
 *image*: monitoring-console/mc_settings_app_general-h.png[Application General Settings]
@@ -603,14 +603,14 @@ NOTE: These settings cannot be shared.
 | Watches | - | Click the _Go to Watch Settings_ button to open the xref:#watch-management[Watch Management]
 |====================
 
-[[pages-settings]]
+[#pages-settings]
 ==== Pages Settings
 
 The _Pages_ application settings give access to different page management operations as described in detain in section xref:#page-management[Page Management]
 
 *image*: monitoring-console/mc_settings_app_pages-h.png[Application Pages Settings]
 
-[[alerts-settings]]
+[#alerts-settings]
 ==== Alerts Settings
 
 The _Alerts_ application settings contain general alert configuration that applies globally (to any page).
@@ -626,7 +626,7 @@ The _Alerts_ application settings contain general alert configuration that appli
 TIP: With this feature no alarms will be missed.
 |====================
 
-[[appearance-settings]]
+[#appearance-settings]
 ==== Appearance Settings
 
 Payara InSight allows you to configure the colours used in graphs. There is a global colour configuration affecting all graphs.
@@ -671,7 +671,7 @@ Themes act as a (p)reset of the data colour palette, default colours and _Opacit
 
 Any further customisation of individual colours can and should be done after applying the theme of choice as switching theme would reset such customisations again.
 
-[[alerts-management]]
+[#alerts-management]
 === Alerts Management
 
 The values of series can be monitored using xref:#watch-management[watches]. If values fulfil all aspects of a start condition of a watch an alert is created.
@@ -683,7 +683,7 @@ While alerts transition between the states _Unhealthy_, _Degraded_, _Healthy_ an
 
 Both of these manual states should help users to keep track of alert transitions and the alerts they have dealt with.
 
-[[acknowledge-alerts]]
+[#acknowledge-alerts]
 ==== Acknowledge Alerts
 
 Alerts are manually acknowledged by system operators when they have checked and reacted to the alert and consider it done. It is a form of alert management tool that is shared by all users.
@@ -698,7 +698,7 @@ An alert can be acknowledged:
 * When shown on top of a line graph widget
 * When shown as part of an alert table widget
 
-[[confirming-alerts]]
+[#confirming-alerts]
 ==== Confirming Alerts
 
 When the state of alerts changed compared to the last state that has been confirmed by a user the change is indicated by the _Alert Status Change_ pop-up dialogue. It shows all transitions that took place since the user last confirmed alert status changes.
@@ -711,7 +711,7 @@ NOTE: The confirmation status is individual for the user (browser local state) s
 
 The confirmation pop-ups can be disabled in the xref:#alerts-settings[Application Alerts Popups setting]. When disabled transitions are implicitly confirmed until the setting is enabled again. This is a more modest setting where alerts are only indicated globally by the alert indicator in the footer.
 
-[[alerts-status-indicator]]
+[#alerts-status-indicator]
 ==== Alert Status Indicator
 
 All alerts are indicated in the bottom right corner of the footer so that users do not miss alerts that would otherwise not show on the current page.
@@ -725,7 +725,7 @@ The indicator gives a summary of the ongoing alerts:
 
 Click on the indicator to jump to the alerts overview page.
 
-[[watch-management]]
+[#watch-management]
 === Watch Management
 
 A watch describes the conditions to meet to start and stop alerts in relation to a specific metric. For example to get an alert every time an HTTP request causes a server error (responds with any of the `5xx` status codes) a custom watch is installed.
@@ -758,7 +758,7 @@ NOTE: Generally the appearance of the watch management and the available options
 The list shows _System Watches_ and _User Watches_ (below if any exists).
 To expand and see a watches' conditions click on the down arrow or its name to toggle the details.
 
-[[creating-watches]]
+[#creating-watches]
 ==== Creating a Watch
 
 Open the watch management as described above and click the _Add New Watch_ button at the top.
@@ -830,7 +830,7 @@ Find more in the edit section below.
 
 WARNING: Watches operate on the DAS server. Their configuration is common for all users. Any change will affect other users.
 
-[[editing-watches]]
+[#editing-watches]
 ==== Editing a Watch
 
 To edit a user watch open the xref:#watch-management[watch manager], scroll down to the list of _User Watches_ and click the _Edit_ button of the watch that should be edited.
@@ -845,7 +845,7 @@ WARNING: When changing the name of a watch to a name of an already existing watc
 
 NOTE: System watches cannot be edited. To achieve the effect of a changed system watch disable and copy it. The copy is a user watch that can be adjusted freely. The suggested name _Copy of {original name}_ can be changed as long as it is unique.
 
-[[enabling-or-disabling-watches]]
+[#enabling-or-disabling-watches]
 ==== Enabling or Disabling a Watch
 
 Open the xref:#watch-management[watch manager] as an _Administrator_ and click the _Disable_ or _Enable_ button of the watch that should be disabled or enabled.
@@ -854,14 +854,14 @@ The change has immediate effect and can easily be "undone" by toggling the state
 
 Enabling such a watch again then requires matching the watches start condition again.
 
-[[presets-pages]]
+[#presets-pages]
 === Preconfigured Pages
 
 Payara InSight is shipped with a dozen of preconfigured pages. These are in no way privileged over the user-created pages. It is simply a configuration identical to one user can create manually that is hard coded as a preset.
 
 Users can modify these pages freely, but they cannot be deleted.
 
-[[core-page]]
+[#core-page]
 ==== Core Page
 
 The _Core_ page gives an overview of some of the important instance metrics. Each instance in the grid is shown separately.
@@ -875,7 +875,7 @@ The _Core_ page gives an overview of some of the important instance metrics. Eac
 * _CPU Usage_: Percentage CPU usage by the instance (not the machine but the process).
 * _Thread Pool Current Thread Usage_: Percentage of HTTP thread pool threads currently in use by the instance.
 
-[[traffic-light-status-page]]
+[#traffic-light-status-page]
 ==== Traffic Light Status Page
 
 The _Traffic Light Status_ page (a.k.a. RAG Status for Red-Amber-Green Status) indicates the health status of the server and deployed application using traffic light signals to visualise the current state.
@@ -888,7 +888,7 @@ In contrast to most pages this page is not static based on a manually created co
 
 For more details on query pages see sections xref:#adding-pages[Adding Pages] and xref:#common-page-settings[Page Settings].
 
-[[http-page]]
+[#http-page]
 ==== HTTP Page
 
 The _HTTP_ page gives a rough overview of the state of the HTTP services of each instance.
@@ -902,7 +902,7 @@ The _HTTP_ page gives a rough overview of the state of the HTTP services of each
 * _Server Count4xx_: Requests per seconds and instance responding with Client Error.
 * _Server Count5xx_: Requests per seconds and instance responding with Server Error.
 
-[[jvm-page]]
+[#jvm-page]
 ==== JVM Page
 
 The _JVM_ pages gives a general overview of the state of the JVM running Payara Server.
@@ -916,7 +916,7 @@ The _JVM_ pages gives a general overview of the state of the JVM running Payara 
 * _Live Threads_: Total number of threads used by the JVM (including daemon threads)
 * _Daemon Threads_: Total number of daemon threads used by the JVM
 
-[[monitoring-page]]
+[#monitoring-page]
 ==== Monitoring Page
 
 This is mostly useful to identify problems with the monitoring system or to cross-check that unexpected metric values aren't caused by general problems with monitoring.
@@ -936,7 +936,7 @@ This time can vary a lot depending on the server configurations as sources are e
 Typically, in the range of two digit milliseconds.
 * _Alerts_: The total number of ongoing (active) alerts.
 
-[[health-checks-page]]
+[#health-checks-page]
 ==== Health Checks Page
 
 A page that gives an overview of the state of the server health checks. The individual checks need to be enabled in the server's _HealthCheck_ configuration.
@@ -953,7 +953,7 @@ NOTE: It is not required to enable the _HealthCheck service_ in the _General_ ta
 * _Connection Pool_: Connection Pool Health Check, percent of connections currently used for each JDBC connection pool
 * _Alerts_: A list of all health check related alerts
 
-[[thread-health-page]]
+[#thread-health-page]
 ==== Thread Health Page
 
 The _Threads_ page gives detailed information on thread health of the cluster and lists information on stuck or hogging threads. The total number of live and daemon threads are given for reference.
@@ -974,7 +974,7 @@ This is the case if the thread's use of the CPU in percent points is higher than
 WARNING: Be aware that the number shown in the example image might not be characteristic. For demonstration purposes the thresholds might be set uncharacteristically low to be able to "force" entries. +
 Usually the threshold for stuck threads should be in region of some seconds to a few minutes. The threshold for hogging threads should be well above 90% with a few retries.
 
-[[request-tracing-page]]
+[#request-tracing-page]
 ==== Request Tracing Page
 
 The _Request Tracing_ page overview page shows traces that exceeded the set threshold configures as part of the request tracing server configuration.
@@ -1010,7 +1010,7 @@ When clicking on the bars in the details view the right side panel shows the tra
 
 WARNING: Be aware that the graphs in the example images above show unrealistically low numbers due to the way that request tracing was configured. In a more realistic configuration, the durations are more likely to be in range of a few hundred milliseconds to some seconds.
 
-[[sql-page]]
+[#sql-page]
 ==== SQL Page
 
 The _SQL_ page gives insight into slow SQL queries for all connection pools configured in Payara Server.
@@ -1023,7 +1023,7 @@ NOTE: To capture slow SQL queries the _JDBC Connection Pool_ configuration's _Sl
 * _Worst SQL Execution Time_: Shows SQL query activity. Each data point gives the duration of the slowest query run during last second. Zero means no SQL query was run.
 * _Slow SQL Alerts_: A list of alerts caused by too slow SQL queries in reference to the _Slow Query Log Threshold_ given in the pool configuration. Single outliers cause a degraded state (amber alerts), outlier groups cause unhealthy state (red alerts).
 
-[[alerts-page]]
+[#alerts-page]
 ==== Alerts Page
 
 The main use of the _Alerts_ page is to check for any server alerts. The page is split into two lists: the upper list containing all ongoing alerts, and the lower list containing past alerts.
@@ -1034,7 +1034,7 @@ As always for alert lists both lists are sorted starting with the most recent se
 
 NOTE: Past alerts can be managed by acknowledging the alerts which makes them disappear from the list.
 
-[[application-metrics-page]]
+[#application-metrics-page]
 ==== Application Metrics Page
 
 Payara InSight is build with the intention to make visualising user defined metrics really easy. This includes MicroProfile Metrics and MicroProfile Health checks that as defined by deployed application and server itself.
@@ -1055,12 +1055,12 @@ When populating the page the widgets are configured automatically based on the i
 
 For more details on query pages see xref:#adding-pages[Adding Pages] and xref:#common-page-settings[Page Settings].
 
-[[experimental-features]]
+[#experimental-features]
 === Experimental Features
 
 This section includes features that aren't fully complete or integrated or which might change drastically or even be removed in future releases.
 
-[[pattern-data-series]]
+[#pattern-data-series]
 ==== Pattern Data Series
 
 The term _series_ is used for the name or key for a particular metric. Each metric has a unique key or series name.

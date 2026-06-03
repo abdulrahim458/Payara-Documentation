@@ -2,7 +2,7 @@
 
 Deletes a Docker node
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] delete-node-docker [--help]
 node-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-node-docker` subcommand deletes a Docker node. The command will assume that the node's configuration to be able to reach the container are still valid and will de-register the node configuration from the DAS and will automatically remove the container that corresponds to the deleted node.
@@ -20,7 +20,7 @@ If the settings of the Docker node are not valid or if the Docker engine is not 
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -29,16 +29,16 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *node-name*:
 The name of the node to delete.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Deleting a Docker Node*
 
@@ -50,7 +50,7 @@ asadmin> delete-node-docker docker-node-1
 Command delete-node-docker executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

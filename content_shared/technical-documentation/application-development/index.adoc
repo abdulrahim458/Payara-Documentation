@@ -2,7 +2,7 @@
 
 This chapter describes how to create and run Jakarta EE applications in compatible Payara Platform distributions. Topics for this guide include developer tools, security, debugging and specific features for Jakarta EE specification implementations. This document is intended for use by software developers who create, assemble, and deploy Jakarta EE applications using the Payara Platform.
 
-[[related-documentation]]
+[#related-documentation]
 == Related Documentation
 
 The following tutorials explain how to develop Jakarta EE applications:

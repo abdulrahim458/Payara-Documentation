@@ -2,7 +2,7 @@
 
 List all deployment groups registered in an existing server domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,14 +10,14 @@ List all deployment groups registered in an existing server domain.
 asadmin [asadmin-options] list-deployment-groups [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-deployment-groups` subcommand lists all existing deployment groups registered in the server domain.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Deployment Groups*
@@ -44,7 +44,7 @@ List of Deployment Groups:
 Command list-deployment-groups executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

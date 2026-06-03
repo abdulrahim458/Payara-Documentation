@@ -2,7 +2,7 @@
 
 Configures the Asadmin Recorder service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,12 +16,12 @@ asadmin [asadmin-options] set-asadmin-recorder-configuration [--help]
 [--prependedoptions=prependedoptions]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-asadmin-recorder-configuration` subcommand adjusts the settings of the Asadmin Recorder. When enabled with --enabled true, it starts recording all asadmin commands issued through the Admin Console.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,7 +40,7 @@ Specifies whether the commands specified with the `--filteredcommands` option sh
 *--filteredCommands*:
 A comma separated list of asadmin commands and regular expressions to exclude from being recorded.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1*
@@ -54,7 +54,7 @@ asadmin set-asadmin-recorder-configuration --enabled true --outputLocation /home
 Command set-asadmin-recorder-configuration executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

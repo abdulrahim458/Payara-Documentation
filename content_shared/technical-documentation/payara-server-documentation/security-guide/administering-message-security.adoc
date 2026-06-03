@@ -7,7 +7,7 @@ NOTE: Message security is supported only in the Full Profile of Payara Server, n
 
 Materials in this chapter assumes a basic understanding of security and web services concepts. For more information about security, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#about-system-security-in-payara-server[About System Security in Payara Server].
 
-[[about-message-security-in-payara-server]]
+[#about-message-security-in-payara-server]
 == About Message Security in Payara Server
 
 Message security enables a server to perform end-to-end authentication of web service invocations and responses at the message layer. Security information is inserted into messages so that it travels through the networking layers and arrives with the intact message at the message destination(s). Message security differs from transport layer security in that message security can be used to decouple message protection from message transport so that messages remain protected after transmission.
@@ -16,7 +16,7 @@ SOAP Web services deployed on Payara Server are secured by binding SOAP layer me
 
 Message-level security can be configured for the entire Payara Server or for specific applications or methods. Configuring message security at the application level is discussed in the xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc[Application Development section].
 
-[[security-tokens-and-security-mechanisms]]
+[#security-tokens-and-security-mechanisms]
 === Security Tokens and Security Mechanisms
 
 WS-Security is a specification that provides a communications protocol for applying security to web services. The security mechanisms implement the specification. Web Services Interoperability Technologies (WSIT) implements WS-Security to provide interoperable message content integrity and confidentiality, even when messages pass through intermediary nodes before reaching their destination endpoint.
@@ -38,7 +38,7 @@ identity of the parties who are authorized to read a message.
 +
 When using encryption, a Java Cryptography Extension (JCE) provider that supports the corresponding encryption algorithm suites must be installed.
 
-[[authentication-providers]]
+[#authentication-providers]
 === Authentication Providers
 
 The authentication layer is the message layer on which authentication processing must be performed. Payara Server enforces web services message security at the SOAP layer. The types of authentication that are supported include the following:
@@ -56,7 +56,7 @@ The default client provider is used to identify the client—side provider to be
 +
 The default server provider is used to identify the server—side provider to be invoked for any application for which a specific server provider has not been bound.
 
-[[message-protection-policies]]
+[#message-protection-policies]
 === Message Protection Policies
 
 A request policy defines the authentication policy requirements associated with request processing performed by the authentication provider. Policies are expressed in message sender order such that a requirement that encryption occur after content would mean that the message receiver would expect to decrypt the message before validating the signature. The response policy defines the authentication policy requirements associated with response processing performed by the authentication provider.
@@ -71,7 +71,7 @@ Request and response message protection policies are defined when a security pro
 
 For more information about defining application-specific message protection policies, see "xref:technical-documentation/application-development/securing-applications.adoc#securing-applications[Securing Applications]" in the Application Development section.
 
-[[application-specific-web-services-security]]
+[#application-specific-web-services-security]
 === Application-Specific Web Services Security
 
 Application-specific web services security functionality is configured (at application assembly) by defining the `message-security-binding` elements in the Payara Server deployment descriptors of the application. These `message-security-binding` elements are used to associate a specific security provider or message protection policy with a web service endpoint or service reference, and might be qualified so that they apply to a specific port or method of the corresponding endpoint or referenced service.
@@ -79,7 +79,7 @@ Application-specific web services security functionality is configured (at appli
 For information about defining application-specific message protection
 policies, see "xref:technical-documentation/application-development/securing-applications.adoc#securing-applications[Securing Applications]" in the Application Development section.
 
-[[message-security-administration]]
+[#message-security-administration]
 === Message Security Administration
 
 When Payara Server is installed or a new domain is created, SOAP layer message security providers are configured in the client and server-side containers of Payara Server, where they are available for binding for use by the containers, or by individual applications or clients deployed in the containers.
@@ -94,7 +94,7 @@ Payara Server administrative interfaces can be used as follows:
 
 Analogous administrative operations can be performed on the SOAP message layer security configuration of the application client container. If you want web services security to protect all web services applications deployed on Payara Server, see xref:technical-documentation/payara-server-documentation/security-guide/administering-message-security.adoc#enabling-message-security-for-application-clients[Enabling Message Security for Application Clients].
 
-[[message-security-tasks]]
+[#message-security-tasks]
 ==== Message Security Tasks
 
 The general implementation tasks for message security include some or all of the following:
@@ -107,12 +107,12 @@ NOTE: When using a username/password token, an appropriate realm must be configu
 . Enabling the Payara Server default providers
 . Configuring new message security providers
 
-[[message-security-roles]]
+[#message-security-roles]
 ==== Message Security Roles
 
 In a traditional Payara Server management infrastructure, the administrator and the application deployer are expected to take primary responsibility for configuring message security.
 
-[[system-administrator]]
+[#system-administrator]
 ===== System Administrator
 
 The system administrator is responsible for the following message security tasks:
@@ -122,7 +122,7 @@ The system administrator is responsible for the following message security tasks
 * Configuring message security providers on Payara Server
 * Turning on message security
 
-[[application-deployer]]
+[#application-deployer]
 ===== Application Deployer
 
 The application deployer is responsible for the following message security tasks:
@@ -130,7 +130,7 @@ The application deployer is responsible for the following message security tasks
 * Specifying (at application reassembly) any required application-specific message protection policies if such policies have not already been specified by the developer/assembler.
 * Modifying Payara Server deployment descriptors to specify application-specific message protection policies information (message-security-binding elements) to web service endpoint and service references.
 
-[[application-developerassembler]]
+[#application-developerassembler]
 ==== Application Developer
 
 The application developer is responsible for the following message security tasks:
@@ -145,12 +145,12 @@ NOTE: Message security can be set up by the administrator so that all web servic
 
 * Turning on message security if authorized to do so by the administrator.
 
-[[enabling-default-message-security-providers-for-soap-web-services]]
+[#enabling-default-message-security-providers-for-soap-web-services]
 == Enabling Default Message Security Providers for SOAP Web Services
 
 By default, message security is disabled on Payara Server. Default message security providers have been created, but are not active until you enable them. After the providers have been enabled, message security is enabled.
 
-[[to-enable-a-default-server-provider]]
+[#to-enable-a-default-server-provider]
 === To Enable a Default Server Provider
 
 To enable message security for web services endpoints deployed in Payara Server, you must specify a security provider to be used by default on the server side. If you enable a default provider for message security, you also need to enable providers to be used by clients of the web services deployed in Payara Server.
@@ -166,7 +166,7 @@ asadmin set --port admin-port server-config.security-service.message-security-co
 
 . To apply your changes to applications that are already running, restart the server instance.
 
-[[to-enable-a-default-client-provider]]
+[#to-enable-a-default-client-provider]
 === To Enable a Default Client Provider
 
 To enable message security for web service invocations originating from deployed endpoints, you must specify a default client provider. If you enabled a default client provider for Payara Server, you must ensure that any services invoked from endpoints deployed in Payara Server are compatibly configured for message layer security.
@@ -182,14 +182,14 @@ asadmin set --port admin-port server-config.security-service.message-security-co
 
 . To apply your changes to applications that are already running, restart the server instance.
 
-[[configuring-message-protection-policies]]
+[#configuring-message-protection-policies]
 == Configuring Message Protection Policies
 
 Message protection policies are defined for request message processing and response message processing. The policies are expressed in terms of requirements for source and/or recipient authentication.
 
 The providers apply specific message security mechanisms to cause the message protection policies to be realized in the context of SOAP web services messages.
 
-[[message-protection-policy-mapping]]
+[#message-protection-policy-mapping]
 === Message Protection Policy Mapping
 
 The following table shows message protection policy configurations and the resulting message security operations performed by the WS-Security SOAP message security providers for that configuration.
@@ -257,7 +257,7 @@ The `xenc:EncryptedKey` contains the key used to encrypt the SOAP message body. 
 |No security operations are performed by the modules.
 |=======================================================================
 
-[[to-configure-the-message-protection-policies-for-a-provider]]
+[#to-configure-the-message-protection-policies-for-a-provider]
 === To Configure the Message Protection Policies for a Provider
 
 Typically, you would not reconfigure a provider. However, if needed for your situation, you can modify a provider's message protection policies  by changing provider type, implementation class, and provider-specific configuration properties. To understand the results of different  combinations, see the table in the above section.
@@ -300,7 +300,7 @@ For example:
 asadmin set server-config.security-service.message-security-config.SOAP.provider-config.ServerProvider.request-policy.auth_recipient=[before-content | after-content]
 ----
 
-[[setting-the-request-and-response-policy-for-the-application-client-configuration]]
+[#setting-the-request-and-response-policy-for-the-application-client-configuration]
 === Setting the Request and Response Policy for the Application Client Configuration
 
 The request and response policies define the authentication policy requirements associated with request and response processing performed by the authentication provider.
@@ -311,7 +311,7 @@ To achieve message security, the request and response policies must be enabled o
 
 To set the request policy for the application client configuration, modify the Payara Server-specific configuration for the application client container as described in xref:technical-documentation/payara-server-documentation/security-guide/administering-message-security.adoc#enabling-message-security-for-application-clients[Enabling Message Security for Application Clients].
 
-[[message-security-policy-example]]
+[#message-security-policy-example]
 ==== Message Security Policy Setting Example
 
 In the application client configuration file, the `request-policy` and `response-policy` elements are used to set the request policy, as shown in the following code snippet.
@@ -342,10 +342,10 @@ To not specify a request or response policy, leave the element with no content:
 <response-policy/>
 ----
 
-[[administering-non-default-message-security-providers]]
+[#administering-non-default-message-security-providers]
 == Administering Non-Default Message Security Providers
 
-[[to-create-a-message-security-provider]]
+[#to-create-a-message-security-provider]
 === To Create a Message Security Provider
 
 Use the `create-message-security-provider` subcommand in remote mode to create a new message provider for the security service. If the message layer does not exist, the message layer is created, and the provider is created under it.
@@ -363,7 +363,7 @@ asadmin create-message-security-provider --classname com.sun.enterprise.security
 Command create-message-security-provider executed successfully.
 ----
 
-[[to-list-message-security-providers]]
+[#to-list-message-security-providers]
 === To List Message Security Providers
 
 Use the `list-message-security-providers` subcommand in remote mode to list the message providers for the security layer.
@@ -385,7 +385,7 @@ ServerProvider
 Command list-message-security-providers executed successfully.
 ----
 
-[[to-update-a-message-security-provider]]
+[#to-update-a-message-security-provider]
 === To Update a Message Security Provider
 
 . Ensure that the server is running.
@@ -394,7 +394,7 @@ Command list-message-security-providers executed successfully.
 +
 The message security provider is identified by its *dotted name*.
 
-[[to-delete-a-message-security-provider]]
+[#to-delete-a-message-security-provider]
 === To Delete a Message Security Provider
 
 Use the `delete-message-security-provider` subcommand in remote mode to remove a message security provider.
@@ -413,7 +413,7 @@ asadmin delete-message-security-provider --layer SOAP myServerityProvider
 Command delete-message-security-provider executed successfully.
 ----
 
-[[to-configure-a-servlet-layer-sam]]
+[#to-configure-a-servlet-layer-sam]
 === To Configure a Servlet Layer Server Authentication Module (SAM)
 
 You can configure a Jakarta Authentication Server Authentication Module (SAM) as an HTTP Servlet-layer message security provider, either through the Administration Console or with the `create-message-security-provider` subcommand.
@@ -464,7 +464,7 @@ mySAM
 Command list-message-security-providers executed successfully.
 ----
 
-[[enabling-message-security-for-application-clients]]
+[#enabling-message-security-for-application-clients]
 == Enabling Message Security for Application Clients
 
 The message protection policies of client providers must be configured such that they are equivalent to the message protection policies of the server-side providers they will be interacting with. This is already the situation for the providers configured (but not enabled) when Payara Server is installed or a new domain is created.

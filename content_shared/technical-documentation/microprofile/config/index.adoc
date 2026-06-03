@@ -2,7 +2,7 @@
 
 The Payara Platform {version} provides MicroProfile Configuration {mpConfigVersion}
 
-[[background]]
+[#background]
 == Background
 
 The Config API was created to allow for the modification of application configuration from outside the application without needing the application to be repackaged.
@@ -11,7 +11,7 @@ The Config API was created to allow for the modification of application configur
 
 Breaking changes introduced in MicroProfile Config {mpConfigVersion} are listed in the official specification under {mpConfigSpecUrl}#_incompatible_changes[Incompatible Changes]
 
-[[config-sources]]
+[#config-sources]
 == Config Sources
 
 A `ConfigSource` is a definition of a source of configuration values that can be used by an application. In addition to {mpConfigSpecUrl}#default_configsources[ the default ConfigSources outlined by the specification], the following are also supported ConfigSources:
@@ -95,14 +95,14 @@ You can find out more about JDBC config sources here: xref:technical-documentati
 You can find out more about LDAP config sources here: xref:technical-documentation/microprofile/config/ldap.adoc[LDAP Config Sources]
 |===
 
-[[converters]]
+[#converters]
 == Converters
 
 In addition to the standard converters specified by the API, Payara Platform's implementation includes out-of-the-box converters for URL and `InetAddress`.
 
 These have `@Priority` of `1`, the same as the default converters.
 
-[[platform-config-properties]]
+[#platform-config-properties]
 == Payara Platform Configuration Properties
 
 In addition to the standard configuration properties, Payara Server and Micro provide a number of out-of-the-box config properties you can use in your application to find information about the runtime environment.
@@ -163,19 +163,19 @@ In addition to the standard configuration properties, Payara Server and Micro pr
 
 Payara Server offers additional facilities to configure specific settings of the MicroProfile Configuration API, described next.
 
-[[config-ordinal-configuration]]
+[#config-ordinal-configuration]
 == Config Ordinal Configuration
 
 Configuration variables ordinal values can be configured by using Admin Console or via the Asadmin CLI.
 
-[[using-the-admin-console]]
+[#using-the-admin-console]
 === Using the Admin Console
 
 To configure the ordinal value in the Admin Console, go to Configuration → [instance-configuration (like server-config)] -> MicroProfile -> Config -> Ordinal:
 
 image:microprofile/config-ordinal.png[alt="Set Config Ordinal",width=600px]
 
-[[using-asadmin-commands]]
+[#using-asadmin-commands]
 === Using Asadmin Commands
 
 IMPORTANT: A `--source` value of `jndi` is not supported for these asadmin commands yet. The JNDI `ConfigSource` does exist and is usable from the Config API, though.
@@ -185,19 +185,19 @@ The following Asadmin commands can be used to manipulate configuration sources o
 * xref:technical-documentation/payara-server-documentation/command-reference/set-config-ordinal.adoc#set-config-ordinal[`set-config-ordinal`]
 * xref:technical-documentation/payara-server-documentation/command-reference/get-config-ordinal.adoc#get-config-ordinal[`get-config-ordinal`]
 
-[[config-property-manipulation]]
+[#config-property-manipulation]
 == Configuration Property Manipulation
 
 Configuration properties can be configured by using Admin Console or Asadmin commands.
 
-[[using-the-admin-console-get]]
+[#using-the-admin-console-get]
 === Using the Admin Console
 
 To configure the property in the Admin Console, go to Configuration → [instance-configuration (like server-config)] -> MicroProfile -> Config -> Property:
 
 image:microprofile/config-property.png[alt="Set Config Property",width=600px]
 
-[[using-asadmin-commands-get]]
+[#using-asadmin-commands-get]
 === Using Asadmin Commands
 
 The following Asadmin commands can be used to directly configure MicroProfile configuration properties:
@@ -208,7 +208,7 @@ The following Asadmin commands can be used to directly configure MicroProfile co
 
 * xref:technical-documentation/payara-server-documentation/command-reference/delete-config-property.adoc#delete-config-property[`delete-config-property`]
 
-[[config-cache-duration-configuration]]
+[#config-cache-duration-configuration]
 == Cache Duration Configuration
 
 The cache duration of the values of a configuration property can be configured by using Asadmin commands. By default, the cached value of properties have a TTL (time to live) of `60` seconds.

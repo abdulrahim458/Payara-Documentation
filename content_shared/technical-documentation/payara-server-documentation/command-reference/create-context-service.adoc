@@ -2,7 +2,7 @@
 
 The `create-context-service` asadmin command creates a context service resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,14 +17,14 @@ asadmin [asadmin-options] create-context-service [--help]
         jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-context-service` subcommand creates a context service resource.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -67,13 +67,13 @@ Creates the resource for every server instance in the specified cluster.
 instance_name;;
 Creates the resource for the specified server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
 The JNDI name of this resource.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Context Service Resource*
@@ -87,7 +87,7 @@ Context service concurrent/myContextService created successfully.
 Command create-context-service executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

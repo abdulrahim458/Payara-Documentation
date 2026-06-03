@@ -2,7 +2,7 @@
 
 Redeploys the specified component.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -34,7 +34,7 @@ asadmin [asadmin-options] redeploy [--help]
 [file_archive|filepath]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `redeploy` subcommand redeploys an enterprise application, web application, module based on the Enterprise JavaBeans (EJB)
@@ -44,7 +44,7 @@ deployed. Otherwise, an error occurs.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -221,7 +221,7 @@ This subcommand is supported in remote mode only.
   OSGi web container registers a URL stream handler named `webbundle`, which is used to wrap a plain WAR file as a WAB. For more information
   about usage, see the related example in the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`] help page.
 
-[[operands]]
+[#operands]
 == Operands
 
 *file_archive|filepath*:
@@ -238,7 +238,7 @@ This subcommand is supported in remote mode only.
   archive-path operand is optional. +
   The operand can specify a directory or an archive file.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Redeploying a Web Application From a File*
@@ -264,7 +264,7 @@ Application deployed successfully with name hellodir.
 Command redeploy executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

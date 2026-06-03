@@ -2,7 +2,7 @@
 
 As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License^], following is a summary of the TCK results for Payara Server releases for Jakarta EE Platform 11.
 
-[[payara-server-web-results]]
+[#payara-server-web-results]
 == Payara Server 7.2026.4 (Web Profile) Jakarta EE 11 Web Profile Certification Summary
 
 - Product Name, Version and download URL (if applicable):

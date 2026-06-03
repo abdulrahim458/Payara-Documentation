@@ -2,7 +2,7 @@
 
 Configures the settings of the CDI Event Bus notifier
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,12 +16,12 @@ asadmin [asadmin-options] set-eventbus-notifier-configuration [--help]
 [--hazelcastEnabled={false|true}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the CDI EventBus notifier in Payara Server.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -50,7 +50,7 @@ Defaults to `false`. Whether events should also be observed on the same instance
 *`--hazelcastEnabled`*:
 Defaults to `false`. Whether to enable the Data Grid to send notification events to external instances.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enable the CDI Event Bus notifier*
@@ -60,7 +60,7 @@ Defaults to `false`. Whether to enable the Data Grid to send notification events
 asadmin set-cdieventbus-notifier-configuration --loopBack=true --dynamic=true --enabled=true --hazelcastEnabled=true
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

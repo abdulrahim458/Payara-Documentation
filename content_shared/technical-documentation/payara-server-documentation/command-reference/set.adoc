@@ -2,7 +2,7 @@
 
 Sets the values of configurable attributes.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] set [--help]
 attribute-name=value
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set` subcommand uses dotted names to modify the values of one or more configurable attributes.
@@ -24,7 +24,7 @@ By modifying attributes, you can enable and disable services, and customize how 
 
 Any change made by using the `asadmin` utility subcommands or the Administration Console are automatically applied to the associated Payara Server configuration file.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -33,13 +33,13 @@ Any change made by using the `asadmin` utility subcommands or the Administration
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *attribute-name=value*:
   Identifies the full dotted name of the attribute name and its value.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Setting a JDBC Connection Pool Attribute*
@@ -72,7 +72,7 @@ asadmin> set server.transaction-service.automatic-recovery=true
 Command set executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

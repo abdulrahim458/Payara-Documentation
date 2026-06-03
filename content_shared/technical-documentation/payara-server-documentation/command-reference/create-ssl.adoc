@@ -2,7 +2,7 @@
 
 Creates and configures the SSL element in the selected HTTP listener, IIOP listener, or IIOP service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -19,14 +19,14 @@ asadmin [asadmin-options] create-ssl [--help]
 [listener_id]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-ssl` subcommand creates and configures the SSL element in the selected HTTP listener, IIOP listener, or IIOP service to enable secure communication on that listener/service.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
@@ -94,13 +94,13 @@ If an option has a short option name, then the short option precedes the long op
 *`--clientauthenabled`*:
   Set to `true` if you want SSL3 client authentication performed on every request independent of ACL-based access control. Default value is `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *listener_id*:
   The ID of the HTTP or IIOP listener for which the SSL element is to be created. The listener_id is not required if the `--type` is `iiop-service`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating an SSL element for an HTTP listener*
@@ -115,7 +115,7 @@ asadmin> create-ssl
 Command create-ssl executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

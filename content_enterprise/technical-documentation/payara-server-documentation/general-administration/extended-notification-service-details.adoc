@@ -5,29 +5,29 @@ Payara Enterprise has additional notifiers built in and ready for use with your 
 
 TIP: If needed, notifiers can be removed from the server's environment to reduce overhead.
 
-[[summary]]
+[#summary]
 == Notifier Extension Structure
 
 Each notifier extension is composed of 2 parts:
 
-[[core-module]]
+[#core-module]
 === The Core Module
 
 The core module contains all the code necessary to receive notifications from the notification service and propagate them to their proposed channel. When installing this module, you'll get the admin commands to configure the notifier, as well as the ability to select that notifier in the notification sources such as Request Tracing commands and admin console pages.
 
-[[admin-console-plugin]]
+[#admin-console-plugin]
 === The Admin Console Plugin
 
 The admin console plugin contains all the code necessary to configure the notifier in the admin console. This is exclusively the tab in the notification service page. This module is not required for the notifier to function, but makes administrating the notifier easier.
 
-[[installation]]
+[#installation]
 == Installing a Notifier
 
 To install a notifier extension: download the artifacts listed on the notifier documentation page and drop them into the `as-install/modules` directory of your Payara Server installation.
 
 You can then restart the server to see your extension activated.
 
-[[removing-notifiers]]
+[#removing-notifiers]
 == Removing Notifiers
 
 All Payara  Server notifiers are included in Payara Enterprise by default, however they are fully pluggable and can be removed from your Payara Server installation.
@@ -36,12 +36,12 @@ To remove a notifier from Payara Enterprise edition, first find the relevant mod
 
 If you change your mind in the future, you can just drop both the module files back into the `as-install/modules` directory and restart the domain for the notifier to be re-installed.
 
-[[additional-notifiers]]
+[#additional-notifiers]
 == Additional Notifiers
 
 The following notifiers are available in Payara Server Enterprise:
 
-[[email-notifier]]
+[#email-notifier]
 === Email Notifier
 
 Payara Server is able to direct notifications to a single given email address. The notifier modules are available in these locations:
@@ -53,7 +53,7 @@ To use this notifier the following requirements have to be met:
 
 * A valid, configured `JavaMail` session.
 
-[[email-notifier-configuration]]
+[#email-notifier-configuration]
 ==== Configuration
 
 At a high level, the steps to configure the email notifier are:
@@ -61,7 +61,7 @@ At a high level, the steps to configure the email notifier are:
 . Create a `JavaMail` Session
 . Create the notifier using the `asadmin` command or through the Admin Console
 
-[[email-notifier-admin-console]]
+[#email-notifier-admin-console]
 ===== Using the Admin Console
 
 You will need a `JavaMail` session to send the notifications; instructions on setting up a `JavaMail` session can be found xref:technical-documentation/payara-server-documentation/general-administration/administering-the-jakarta-mail-service.adoc[in this section].
@@ -80,7 +80,7 @@ only one address can be specified. The parameter name is `--recipient` in the as
 
 image:docs::notification-service/email/email-admin-console-configuration.png[alt="Email Notifier on Admin Console",width=600px]
 
-[[email-notifier-asadmin]]
+[#email-notifier-asadmin]
 ===== Using the Asadmin CLI
 
 The same configuration can be set using an `asadmin` command, as shown below:
@@ -110,7 +110,7 @@ Enabled  JNDI Name                  Recipient
 true     mail/exampleEmailNotifier  example@example.com
 ----
 
-[[snmp-notifier]]
+[#snmp-notifier]
 === SNMP Notifier
 
 The **S**imple **N**etwork **M**anagement **P**rotocol is a standard Internet Protocol that was designed to collect and organize information about all managed devices and services that belong to the same network. *SNMP* is supported by a huge variety of devices, including network devices like routers, modems and switches, servers and in the latter years extended to cover IoT devices and specialized equipment connected to the cloud.
@@ -123,7 +123,7 @@ The notifier modules are available in these locations:
 
 IMPORTANT: Use the version of SNMP4J 3.7.5 provided above as it has a modified manifest to be compatible with Payara Enterprise.
 
-[[snmp-concepts]]
+[#snmp-concepts]
 ==== SNMP Concepts
 
 The basic elements in every SNMP communication are the following:
@@ -139,7 +139,7 @@ The SNMP protocol works using _PDUs (Protocol Data Units)_ to allow managers and
 
 NOTE: The notifier currently operates using the *TRAP* PDU to handle notification events.
 
-[[snmp-traps]]
+[#snmp-traps]
 ==== SNMP Traps
 
 Payara Server notifies network management systems using SNMP traps. An SNMP trap is a special PDU that is used to generate an asynchronous notification from an _agent_ to a _manager_. An important point to stress with traps is that they are asynchronous events that can occur at any time, which means that a _manager_ expects to receive updates in a *PASSIVE* manner, thus saving resources.
@@ -152,7 +152,7 @@ In order to correctly configure Payara Server to send traps to a manager, the fo
 **Community**: This is the community string used to "secure" the communication to the manager
 **OID**: The object identifier used by the trap in order to allow the manager to correctly interpret the status of the server.
 
-[[version]]
+[#version]
 ===== Version
 
 Currently, the SNMP protocol is supported on three versions: *v1*, *v2c* and *v3*. Version 1 is extremely unsecure since authentication is managed only with the community string. Version 2c is an enhanced version of v1 in that improves the message formats and the protocol operations, using stronger authentication guards using the simplistic community string mechanism.
@@ -161,14 +161,14 @@ Finally, Version 3 improves security and remote management discarding the use of
 
 Currently, the notifier configuration only supports *v1* and *v2c*, hence the need to correctly configure a community string as well. By default, all traps are configured to use *v2c*, since it's guaranteed to be supported by almost all network manager systems.
 
-[[community]]
+[#community]
 ===== Community
 
 The community string is used to establish trust between managers and agents. The community names are essentially passwords; most vendors ship their equipment with default community strings: `public` for a read-only community (allows reading data values, but doesn't allow modification) and `private` for the read-write community (allowed to read and modify data values). It's important to change these defaults on production environments.
 
 The notifier configures all traps with the `public` community string by default.
 
-[[oid]]
+[#oid]
 ===== OID - Object Identifier
 
 Agents expose management data as variables composed in a structured hierarchy. SNMP does not define which variables are exposed by a managed component. Instead, SNMP uses an extensible design which allows applications and services to define their own hierarchies and other metadata (such as type and description of the variable), which are described in a *Management Information Base (MIB)*.
@@ -181,21 +181,21 @@ The default value used by the notification service is `.1.3.6.1.2.1.1.8`. This O
 
 NOTE: In most cases there is no need to change the default OID, since it's verified by most of the standard MIBs included on SNMP management systems and tools.
 
-[[snmp-notifier-configuration]]
+[#snmp-notifier-configuration]
 ==== Configuration
 
 To set up the SNMP notifier on Payara Server you need to input the values mentioned earlier in the domain configuration. As usual, you can do this using the administration web console or from the command line.
 
 TIP: Keep in mind that the only required value to configure the notifier is the *hostname* of your network management system. All other values will assume the defaults discussed earlier if not configured explicitly.
 
-[[snmp-notifier-admin-console]]
+[#snmp-notifier-admin-console]
 ===== Using the Admin Console
 
 To configure the Notification Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Notification Service_ and click on the *SNMP* tab:
 
 image:docs::notification-service/snmp/snmp-admin-console-configuration.png[alt="Notification Service in Admin Console",width=600px]
 
-[[snmp-notifier-asadmin]]
+[#snmp-notifier-asadmin]
 ===== Using the Asadmin CLI
 
 To configure the Notification Service from the command line, use the `set-snmp-notifier-configuration` asadmin command like this:
@@ -222,7 +222,7 @@ Enabled  Filter   Community  OID                Version  Host       SNMP Port
 true     WARNING  example    .1.3.6.1.2.1.1.8   v2c      127.0.0.1  162
 ----
 
-[[snmp-troubleshooting]]
+[#snmp-troubleshooting]
 ==== Troubleshooting
 
 When you have correctly configured the SNMP notifier, it can be used to push notifications to your configured server. You can visualize the notification messages on your network management system of your choice.
@@ -244,7 +244,7 @@ Here's a sample of how the SNMP traps are visualized using http://www.mg-soft.co
 
 image:docs::notification-service/snmp/trap-ringer-pro-output.png[alt="SNMP Traps onTRinger",width=600px]
 
-[[newrelic-notifier]]
+[#newrelic-notifier]
 === New Relic Notifier
 
 https://newrelic.com/[New Relic^] is an application performance monitoring (APM) tool that can be used to gather statistics and notify on key critical events generated by different type of applications.
@@ -260,7 +260,7 @@ The notifier modules are available in these locations:
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/newrelic-notifier-core/2.0-enterprise/newrelic-notifier-core-2.0-enterprise.jar[New Relic Notifier Core 2.0-enterprise^]
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/newrelic-notifier-console-plugin/2.0-enterprise/newrelic-notifier-console-plugin-2.0-enterprise.jar[New Relic Notifier Console Plugin 2.0-enterprise^]
 
-[[newrelic-integration-configuration]]
+[#newrelic-integration-configuration]
 ==== New Relic Configuration
 
 In order for the notifier to work correctly, you must complete the following requirements:
@@ -272,7 +272,7 @@ NOTE: New Relic offers 14-days trial accounts that can be used to test the servi
 . Configure application performance monitoring (APM) for a Payara Server instance by installing a New Relic Java agent
 . Configure a New Relic Insights API key that will be used to set up the notifier.
 
-[[configure-apm]]
+[#configure-apm]
 ==== Configure Application Performance Monitoring for Payara Server
 
 The first task is to set up the New Relic Java agent in Payara Server. To do that, follow these steps:
@@ -392,7 +392,7 @@ You can also access the latest monitoring statistics:
 +
 image:docs::notification-service/newrelic/apm-application-details.png[alt="New Relic Application Details",width=600px]
 
-[[retrieving-api-key]]
+[#retrieving-api-key]
 ===== Retrieving the API Key from New Relic Insights
 
 Now that the agent has been correctly installed, login back to your New Relic account portal and head to the *Insights* dashboard:
@@ -409,12 +409,12 @@ reference this key on the dashboard:
 
 image:docs::notification-service/newrelic/insights-insert-api-key.png[alt="New Relic Insights Insert API Keys",width=600px]
 
-[[newrelic-notifier-configuration]]
+[#newrelic-notifier-configuration]
 ==== Notifier Configuration
 
 With the New Relic Java agent and Insights API Key correctly configured, you can proceed to configure the New Relic notifier on the Payara Server domain. As usual, you can do this using the administration web console or from the command line.
 
-[[newrelic-notifier-admin-console]]
+[#newrelic-notifier-admin-console]
 ===== Using the Administration Web Console
 
 To configure the Notification Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Notification Service_ and click on the *New Relic* tab:
@@ -424,7 +424,7 @@ image:docs::notification-service/newrelic/new-relic-admin-console-configuration.
 Check the *Enabled* box (and the *Dynamic* box too if you don't want to restart the domain) and input the New Relic Account ID and the newly inserted
 Insights API Key. Hit the *Save* button to preserve the changes.
 
-[[newrelic-notifier-asadmin]]
+[#newrelic-notifier-asadmin]
 ===== From the Command Line
 
 To configure the Notification Service from the command line, use the `set-newrelic-notifier-configuration` asadmin command, specifying the tokens like this:
@@ -446,7 +446,7 @@ Enabled  Filter  Key                               Account Id
 true     WARNING   b5815wdxj6lF_tmMBljQa5y1603JTiLh  1658989
 ----
 
-[[newrelic-troubleshooting]]
+[#newrelic-troubleshooting]
 ==== Troubleshooting
 
 When you have correctly configured the New Relic notifier, it can be used observe notification events on the New Relic Insights service dashboard. If you do not see any notification event messages on the data explorer, check the following:
@@ -466,7 +466,7 @@ image:docs::notification-service/newrelic/insights-data-explorer-results.png[alt
 
 You can observe that the events are correctly identified depending on the severity of the notification, and they are correctly grouped by their custom category (in the image only the *Healthcheck* events are shown).
 
-[[datadog-notifier]]
+[#datadog-notifier]
 === Datadog Notifier
 
 https://www.datadoghq.com[Datadog^] is a cloud metric aggregator that simplifies the gathering and visualization of multiple platform stacks and services that can be on premises or on the cloud. Datadog also eases browsing through of all this information by implementing combination graphs (multiple graphs that can be configured on a single view) of related metrics.
@@ -490,7 +490,7 @@ The notifier modules are available in these locations:
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/datadog-notifier-core/2.0-enterprise/datadog-notifier-core-2.0-enterprise.jar[Datadog Notifier Core 2.0-enterprise^]
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/datadog-notifier-console-plugin/2.0-enterprise/datadog-notifier-console-plugin-2.0-enterprise.jar[Datadog Notifier Console Plugin 2.0-enterprise^]
 
-[[datadog-integration-configuration]]
+[#datadog-integration-configuration]
 ==== Datadog Account Integration
 
 When you create a Datadog account, the service will provide you a default API key that you can use to integrate Payara Server with your account.
@@ -513,12 +513,12 @@ You can also create a new API key if you want to use it exclusively for your Pay
 +
 image:docs::notification-service/datadog/apikey-name-dialog.png[alt="Datadog API Key Name",width=600px]
 
-[[datadog-notifier-configuration]]
+[#datadog-notifier-configuration]
 ==== Notifier Configuration
 
 Having retrieved the API key from Datadog's administration panel, it's necessary to configure this key to the notification service on Payara Server. It's possible to do this either by using the administration web console or from the command line using administration commands.
 
-[[datadog-notifier-admin-console]]
+[#datadog-notifier-admin-console]
 ===== Using the Administration Web Console
 
 To configure the Notification Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Notification Service_ and click on the *Datadog* tab:
@@ -529,7 +529,7 @@ Check the *Enabled* box (and the *Dynamic* box too if you don't want to restart 
 
 Hit the *Save* button to preserve the changes.
 
-[[from-the-command-line]]
+[#from-the-command-line]
 ===== From the Command Line
 
 To configure the Notification Service from the command line, use the `set-datadog-notifier-configuration` asadmin command, specifying the tokens like this:
@@ -551,7 +551,7 @@ Enabled  Filter   Key
 true     WARNING  af510f122026bc9107f7c5f4f049e597
 ----
 
-[[datadog-troubleshooting]]
+[#datadog-troubleshooting]
 ==== Troubleshooting
 
 When you have correctly configured the Datadog notifier, Datadog can gather relevant monitoring events from your Payara Server installation. If you do not see any notification event messages on your Datadog account, check the following:
@@ -568,7 +568,7 @@ Here's a sample of how the notifications are visualized on the Datadog event not
 
 image:docs::notification-service/datadog/event-sample.png[alt="Datadog Events Sample",width=600px]
 
-[[teams-notifier]]
+[#teams-notifier]
 === MS Teams Notifier
 
 A notifier extension for publishing to a Microsoft Teams channel.
@@ -578,17 +578,17 @@ The notifier modules are available in these locations:
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/teams-notifier-core/2.0-enterprise/teams-notifier-core-2.0-enterprise.jar[Teams Notifier Core 2.0-enterprise^]
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/teams-notifier-console-plugin/2.0-enterprise/teams-notifier-console-plugin-2.0-enterprise.jar[Teams Notifier Console Plugin 2.0-enterprise^]
 
-[[teams-notifier-configuration]]
+[#teams-notifier-configuration]
 ==== Notifier Configuration Configuration
 
-[[teams-notifier-admin-console]]
+[#teams-notifier-admin-console]
 ===== Using the Administration Web Console
 
 To configure the Notification Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Notification Service_ and click on the *Teams* tab:
 
 image:docs::notification-service/teams/teams-admin-console-configuration.png[alt="Notification Service in Admin Console",width=600px]
 
-[[teams-notifier-asadmin]]
+[#teams-notifier-asadmin]
 ===== From the Command Line
 
 To configure the Notification Service from the command line, use the `set-teams-notifier-configuration` asadmin command like this:
@@ -615,7 +615,7 @@ Enabled  Filter   Webhook URL
 true     WARNING  https://outlook.office.com/webhook/xyz
 ----
 
-[[slack-notifier]]
+[#slack-notifier]
 === Slack Notifier
 
 https://slack.com/[Slack^] is a functional enterprise chat and team collaboration tool inspired by IRC. It allows an organisation to create specific *domains* and discuss work topics or subjects in separate *channels* that can either be public or private.
@@ -627,7 +627,7 @@ The notifier modules are available in these locations:
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/slack-notifier-core/2.0-enterprise/slack-notifier-core-2.0-enterprise.jar[Slack Notifier Core 2.0-enterprise^]
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/slack-notifier-console-plugin/2.0-enterprise/slack-notifier-console-plugin-2.0-enterprise.jar[Slack Notifier Console Plugin 2.0-enterprise^]
 
-[[slack-integration-configuration]]
+[#slack-integration-configuration]
 ==== Slack Integration Configuration
 
 In order to allow the notification service to log events on a Slack channel of your choice, you must fulfill the following requirements first:
@@ -640,7 +640,7 @@ Once you have completed these requirements, you can configure an link:https://ap
 
 An _Incoming Webhook_ is the simplest integration mechanism that Slack provides, in that they make use of normal HTTP requests with a _JSON_ payload that includes the message text and additional options to format incoming messages to the channel.
 
-[[configure-incoming-webhook]]
+[#configure-incoming-webhook]
 ===== Configure Incoming Webhook
 
 . First, access the developer portal's application directory located at https://payara.slack.com/apps.
@@ -676,12 +676,12 @@ We recommend that you configure the following settings in the channel integratio
 +
 image:docs::notification-service/slack/webhook-additional-settings.png[alt="WebHook Additional Settings",width=600px]
 
-[[slack-notifier-configuration]]
+[#slack-notifier-configuration]
 ==== Notifier Configuration
 
 With the Incoming WebHook properly configured, now it's time to set up the Notification Service in the domain configuration. As usual, you can do this using the administration web console or from the command line.
 
-[[slack-notifier-admin-console]]
+[#slack-notifier-admin-console]
 ===== Using the Administration Web Console
 
 To configure the Notification Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Notification Service_ and click on the *Slack* tab:
@@ -690,7 +690,7 @@ image:docs::notification-service/slack/slack-admin-console-configuration.png[alt
 
 Check the *Enabled* box (and the *Dynamic* box too if you don't want to restart the domain) and input the three tokens highlighted in the previous section. Hit the *Save* button to preserve the changes.
 
-[[slack-notifier-asadmin]]
+[#slack-notifier-asadmin]
 ===== From the Command Line
 
 To configure the Notification Service from the command line, use the `set-slack-notifier-configuration` asadmin command, specifying the tokens like this:
@@ -712,7 +712,7 @@ Enabled  Filter   Token 1    Token 2    Token 3
 true     WARNING  T43CHENUC  B441EFQB1  Jas8P3jCZ4wK8Y2m88dCxGkn
 ----
 
-[[slack-troubleshooting]]
+[#slack-troubleshooting]
 ==== Troubleshooting
 
 When you have correctly configured the Slack notifier, it can be used to push notifications to your configured channel. If you do not see any notification event messages, check the following:
@@ -729,7 +729,7 @@ Here's a sample of how the notifications are visualized on the Slack Desktop app
 
 image:docs::notification-service/slack/notifications-sample.png[alt="Slack Notifications Sample",width=600px]
 
-[[discord-notifier]]
+[#discord-notifier]
 === Discord Notifier
 
 A notifier for publishing notifications to a Discord channel.
@@ -739,17 +739,17 @@ The notifier modules are available in these locations:
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/discord-notifier-core/2.0-enterprise/discord-notifier-core-2.0-enterprise.jar[Discord Notifier Core 2.0-enterprise^]
 * link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/discord-notifier-console-plugin/2.0-enterprise/discord-notifier-console-plugin-2.0-enterprise.jar[Discord Notifier Console Plugin 2.0-enterprise^]
 
-[[discord-notifier-configuration]]
+[#discord-notifier-configuration]
 ==== Notifier Configuration
 
-[[discord-notifier-admin-console]]
+[#discord-notifier-admin-console]
 ===== Using the Administration Web Console
 
 To configure the Notification Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Notification Service_ and click on the *Discord* tab:
 
 image:docs::notification-service/discord/discord-admin-console-configuration.png[alt="Notification Service in Admin Console",width=600px]
 
-[[discord-notifier-asadmin]]
+[#discord-notifier-asadmin]
 ===== From the Command Line
 
 To configure the Notification Service from the command line, use the `set-discord-notifier-configuration` asadmin command like this:

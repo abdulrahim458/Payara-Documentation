@@ -2,7 +2,7 @@
 
 Modifies the configuration settings of the MicroProfile Fault Tolerance service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,12 +13,12 @@ asadmin [asadmin-options] set-fault-tolerance-configuration [--help]
 [--target=server-config]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-fault-tolerance-configuration` provides a way to modify the configuration of the MicroProfile Fault Tolerance service in the specified target.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -49,7 +49,7 @@ Specifies a cluster.
 configuration-name;;
 Specifies a named configuration.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting MicroProfile Fault Tolerance configuration*
@@ -61,7 +61,7 @@ This example sets the configuration of the MicroProfile Fault Tolerance service.
 asadmin> set-fault-tolerance-configuration --managedexecutorservicename=java:comp/DefaultManagedExecutorService --target instance1
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

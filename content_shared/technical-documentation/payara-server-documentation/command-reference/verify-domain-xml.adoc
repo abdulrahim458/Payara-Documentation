@@ -2,7 +2,7 @@
 
 Verifies the contents of the domain.xml file.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] verify-domain-xml [--help]
 [--domaindir domain-dir] [domain-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 Verifies the content of the `domain.xml` file by checking the following details:
@@ -21,7 +21,7 @@ Verifies the content of the `domain.xml` file by checking the following details:
 
 This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -31,13 +31,13 @@ This subcommand is supported in local mode only.
 *`--domaindir`*:
   Specifies the domain root directory, where the domains are located. The path must be accessible in the file system. The default is `as-install/domains`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain_name*:
   Specifies the name of the domain. The default is `domain1`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Using verify-domain-xml*
@@ -49,7 +49,7 @@ All Tests Passed.
 domain.xml is valid
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

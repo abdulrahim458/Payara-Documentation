@@ -2,7 +2,7 @@
 
 Removes a transport.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,12 +12,12 @@ asadmin [asadmin-options] delete-transport [--help]
 transport-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-transport` subcommand removes the specified transport. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,13 +36,13 @@ The `delete-transport` subcommand removes the specified transport. This subcomma
   standalone-instance-name;;
     Deletes the transport from the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *transport-name*:
   The name of the transport to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Transport*
@@ -55,7 +55,7 @@ asadmin> delete-transport http1-trans
 Command delete-transport executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

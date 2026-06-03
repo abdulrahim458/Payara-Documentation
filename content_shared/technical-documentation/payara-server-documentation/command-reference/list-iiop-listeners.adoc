@@ -2,7 +2,7 @@
 
 Lists the existing IIOP listeners.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-iiop-listeners [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-iiop-listeners` subcommand lists the existing IIOP listeners.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -41,10 +41,10 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Lists the listeners in a particular server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Using the list-iiop-listeners subcommand*
 
@@ -60,7 +60,7 @@ sample_iiop_listener
 Command list-iiop-listeners executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

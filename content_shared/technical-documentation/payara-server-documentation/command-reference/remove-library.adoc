@@ -2,7 +2,7 @@
 
 Removes one or more library JAR files from Payara Server.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] remove-library [--help]
 library-name [library-name ... ]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `remove-library` subcommand removes one or more library JAR files from Payara Server.
@@ -28,7 +28,7 @@ This command is not supported on the Windows operating system.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -46,13 +46,13 @@ This subcommand is supported in remote mode only.
     Removes the library files from the application-specific class loader directory, `domain-dir/lib/applibs`. +
   For more information about these directories, see xref:technical-documentation/application-development/class-loaders.adoc#classloading[Class Loaders] in the Payara Server Application Development section.
 
-[[operands]]
+[#operands]
 == Operands
 
 *library-name*:
   The names of the JAR files that contain the libraries that are to be removed.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Removing Libraries*
@@ -65,7 +65,7 @@ asadmin> remove-library --type app mylib.jar
 Command remove-library executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

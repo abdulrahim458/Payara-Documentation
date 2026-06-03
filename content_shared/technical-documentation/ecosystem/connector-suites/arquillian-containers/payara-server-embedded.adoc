@@ -3,7 +3,7 @@
 
 When using this adapter, the Payara Server container lifecycle is managed by Arquillian and resides in the same JVM where tests are executed using a local communication protocol.
 
-[[usage]]
+[#usage]
 == Usage
 
 The Payara Server Embedded Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-embedded[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
@@ -17,7 +17,7 @@ The Payara Server Embedded Arquillian container adapter can be found on link:htt
 </dependency>
 ----
 
-[[configuration]]
+[#configuration]
 == Container Configuration
 
 The Payara Server container can be configured via the `arquillian.xml` file using the standard http://arquillian.org/arquillian-core/#container-configuration[Arquillian Container Configuration^] mechanism.
@@ -66,7 +66,7 @@ This recursively deletes files in the `instanceRoot` directory.
 |
 |===
 
-[[examples]]
+[#examples]
 == Examples
 
 To configure the Arquillian Container options, you need to use an `arquillian.xml` file placed on the test classpath.

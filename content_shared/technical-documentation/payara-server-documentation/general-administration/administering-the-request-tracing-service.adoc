@@ -33,26 +33,26 @@ The Request Tracing service has the concept of sample rates, affording you extra
 
 An option to perform this sampling before or after the threshold checks is offered, allowing you to either determine if a trace should be sampled at its inception, or only after determining that a trace has breached your configured thresholds respectively.
 
-[[opentelemetry-support]]
+[#opentelemetry-support]
 == Opentelemetry Support
 
 As Payara Platform offers support for MicroProfile Telemetry, it is possible to manually instrument your application code for creating spans.
 
 For the full details, see the xref:technical-documentation/microprofile/opentelemetry-and-opentracing.adoc#opentelemetry-and-opentracing[OpenTelemetry support] in the Payara Platform Application Development section.
 
-[[opentracing-support]]
+[#opentracing-support]
 == Opentracing Support
 
 In-line with Payara Platform's support for xref:technical-documentation/microprofile/opentracing.adoc[MicroProfile OpenTracing], there's added support for http://opentracing.io/[OpenTracing.io^] code instrumentation.
 
 NOTE: Since OpenTracing is just a wrapper around OpenTelemetry, it is advised to use OpenTelemetry APIs instead.
 
-[[configuration]]
+[#configuration]
 == Configuration
 
 As with any other services available in Payara Server, the Request Tracing service can be configured by using the Admin Console or via the Asadmin CLI.
 
-[[using-the-web-console]]
+[#using-the-web-console]
 === Using the Web Administration Console
 
 To configure the Request Tracing Service in the Administration Console, go to _Configuration -> [instance-configuration (like server-config)] -> Request Tracing_:
@@ -87,7 +87,7 @@ IMPORTANT: Keep in mind that for request tracing events to be relayed to the sel
 
 TIP: You don't need to manually add each notifier on this screen. When enabling a notifier on its configuration screen, the server will **automatically** add it to the list of selected notifiers for the Request Tracing service. This same result occurs when enabling the notifier using the appropriate _asadmin_ command.
 
-[[from-the-command-line]]
+[#from-the-command-line]
 === From the Command Line
 
 // TODO - Expand this section with concrete examples

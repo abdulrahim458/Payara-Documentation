@@ -2,7 +2,7 @@
 
 The Payara Platform {version} provides MicroProfile JWT Authentication {mpJWTVersion}.
 
-[[background]]
+[#background]
 == Background
 
 The JWT Authentication API was designed to provide application callers with the ability to authenticate themselves using a JWT token. A JWT token is essentially a string of JSON with fields for specifying the caller/username and the groups the caller is in.
@@ -16,7 +16,7 @@ Breaking changes introduced in MicroProfile JWT Authentication {mpJWTVersion} ar
 IMPORTANT: The MicroProfile JWT Authentication specification currently does not define any means for preemptive authentication, that is, authenticating when the target resource (such as a JAX-RS end-point) is not protected / constrained by a security role. +
 Practically this means that if a JWT token is sent alongside a request to a public / unchecked resource, MicroProfile JWT implementations will ignore it. This limitation will be addressed in a later version of the JWT specification.
 
-[[jakarta-security-jwt]]
+[#jakarta-security-jwt]
 == Jakarta Security and JWT
 
 Payara Server and Payara Micro implement the JWT authentication mechanism as a normal Jakarta Security (JSR 375) authentication mechanism.
@@ -25,7 +25,7 @@ This specifically means that when MP JWT authentication is used on Payara Server
 
 By providing additional `IdentityStore` beans, an application can, if needed, augment the JWT identity store, for instance by providing extra roles.
 
-[[vending-tokens]]
+[#vending-tokens]
 == Vending Tokens
 
 A JWT token, like most API tokens, is typically vended from a website for use with the services provided by that site. For instance, from Google or Facebook can obtain such a token for usage with their respective APIs.
@@ -118,10 +118,10 @@ The code here assumes the location of the raw JSON file on the classpath being p
 
 If other input/outputs are needed that should be easy to do using the above code as a starting point.
 
-[[accepting-tokens]]
+[#accepting-tokens]
 == Accepting Tokens
 
-[[public-key-configuration]]
+[#public-key-configuration]
 === Public Key Configuration
 
 In order to validate the signature of a provided token is valid, an application that uses JWT Authentication has to provide the public key to the MicroProfile JWT Authentication implementation either using the standard MicroProfile Configuration options or using the vendor-specific option.
@@ -143,7 +143,7 @@ In Payara this is done by placing the public key such as generated above as `pub
 
 NOTE: Vendor-specific option for supplying the public key will always take precedence.
 
-[[issuer-configuration]]
+[#issuer-configuration]
 === Issuer Configuration
 
 Next to providing the public key, an application that uses JWT Authentication has to provide the issuer (corresponding to the `iss` field in the JSON token) it's willing to accept.
@@ -159,7 +159,7 @@ The properties file should contain the key `accepted.issuer` with as value the s
 
 NOTE: Vendor-specific option for supplying the issuer will always take precedence.
 
-[[namespaced-claims-configuration]]
+[#namespaced-claims-configuration]
 === Namespaced Claims Configuration
 
 Authentication services (like https://auth0.com/docs/scopes/current/custom-claims[auth0^], https://connect2id.com/products/server/docs/config/claims-mapping[connect2id^]) offer the chance to add custom claims to JWT tokens but also enforce a namespaced format to avoid possible collisions with standard OpenID Connect claims.
@@ -190,7 +190,7 @@ Then the JSON Parser search for namespace prefixed claims, remove the namespace 
 ==== custom.namespace
 When the `custom.namespace` property is set, it will always take precedence over the default namespace and be used instead.
 
-[[disabling-type-claim-verification]]
+[#disabling-type-claim-verification]
 === Disabling Type Claim Verification
 
 The MicroProfile JWT Authentication specification currently mandates that the type claim (`typ`) of any authorization token parsed by the container is present and is set to the `JWT` value.
@@ -211,7 +211,7 @@ NOTE: This property has to be defined in the `payara-mp-jwt.properties` configur
 
 IMPORTANT: Keep in mind that tokens which are missing their type claim and are propagated to other services running on other Eclipse MicroProfile runtimes might be rejected, as the specification mandates the inclusion of the claim.
 
-[[caching-public-ky]]
+[#caching-public-ky]
 === Caching the Public Key
 
 By default, the public key retrieved by the `mp.jwt.verify.publickey.location` configuration property will be cached in memory for 5 minutes after being read from either a local file or a remote location. You can modify this _"time-to-live"_ which determines how long the key stays cached in memory in the case you are dealing with long-lived keys, this is done by setting the `publicKey.cache.ttl` custom property.
@@ -222,7 +222,7 @@ NOTE: If the public key is retrieved from a remote HTTP(S) location, and the ser
 
 IMPORTANT: The value of the `publicKey.cache.ttl` property is defined in milliseconds, so keep this in mind when modifying the property
 
-[[error-caching-public-key]]
+[#error-caching-public-key]
 === Retaining the Cached Public Key on Retrieval Errors
 
 When a public key is retrieved from a remote location as specified by the `mp.jwt.verify.publickey.location` configuration property, Payara caches it in memory for the duration defined by the `publicKey.cache.ttl` property (default 5 minutes).
@@ -243,12 +243,12 @@ NOTE: This property must be defined in the `payara-mp-jwt.properties` configurat
 IMPORTANT: The value of the `publicKey.cache.retain-on-error-duration` property is defined in **milliseconds**.
 For example, a value of `3600000` will retain the cached key for an additional 1 hour in the event of a remote key retrieval failure.
 
-[[activating-jwt-authentication]]
+[#activating-jwt-authentication]
 == Activating JWT Authentication
 
 An application activates the JWT authentication mechanism and identity store by annotating a class in the application, for instance, the JAX-RS `Application` class, with `@LoginConfig(authMethod = "MP-JWT")`.
 
-[[protecting-jax-rs-endpoints]]
+[#protecting-jax-rs-endpoints]
 == Protecting Jakarta REST Services Endpoints
 
 MicroProfile JWT Authentication specifies that Jakarta REST services endpoints are to be secured by using the `jakarta.annotation.security.RolesAllowed` annotation. Note that while this is a general annotation, for Jakarta EE it's only EJBs that interprets this.
@@ -278,7 +278,7 @@ public class Resource {
 }
 ----
 
-[[accessing-protected-endpoints]]
+[#accessing-protected-endpoints]
 == Accessing a Protected Endpoint
 
 With the `generateJWTString()` method as presented above and the JWT token residing in a file called `jwt-token.json` on the classpath, a request to a JWT protected endpoint can be done as follows using the Jakarta REST Services client API:
@@ -300,7 +300,7 @@ public class Application{
 
 With `base` being the context where the application is deployed, e.g. `http://example.com/myapp`
 
-[[switch-off-rolesallowed-support]]
+[#switch-off-rolesallowed-support]
 == Switching off @Rolesallowed Support
 
 The out-of-the-box support of `@RolesAllowed` for Jakarta REST Services resources can be switched off by setting the `<jaxrs-roles-allowed-enabled>` tag in `WEB-INF/payara-web.xml` to `false`.

@@ -2,7 +2,7 @@
 
 Lists the existing application references.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-application-refs [--help]
 [--long={false|true}] [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-application-refs` subcommand lists all application references in a cluster or an unclustered server instance. This effectively lists
@@ -25,7 +25,7 @@ The target instance or instances making up the cluster need not be running or av
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,7 +36,7 @@ This subcommand is supported in remote mode only.
 *`--long`*:
   If `true`, displays whether each module or application listed is enabled. The default is `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -45,7 +45,7 @@ This subcommand is supported in remote mode only.
   * cluster_name- Specifies a certain cluster as the target.
   * instance_name- Specifies a certain server instance as the target.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Application References*
@@ -61,7 +61,7 @@ __ejb_container_timer_app
 Command list-application-refs executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

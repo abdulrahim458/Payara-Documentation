@@ -14,7 +14,7 @@ The command supports only X.509 certificates files with the following extensions
 
 NOTE: If the file contains more certificates, the command prints only the first one.
 
-[[usage]]
+[#usage]
 == Usage
 
 The `print-certificate` is an offline command (it doesn't need a running domain or server instance as target) that prints data of a selected certificate in RFC 2253 format.
@@ -39,10 +39,10 @@ The `print-certificate` is an offline command (it doesn't need a running domain 
 
 See the xref:technical-documentation/payara-server-documentation/command-reference/print-certificate.adoc[`print-certificate`] documentation in the Command Reference for more information on its structure.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[der-pem-certificate-example]]
+[#der-pem-certificate-example]
 === DER/PEM Encoded Certificate
 
 Here's an example for printing a DER certificate with one entry:
@@ -62,7 +62,7 @@ Sign. Alg.: SHA256withRSA (OID: 1.2.840.113549.1.1.11)
 Command print-certificate executed successfully.
 ----
 
-[[keystore-example]]
+[#keystore-example]
 === Keystore
 
 Here's an example for printing a specific certificate using a P12 format keystore:
@@ -83,7 +83,7 @@ Sign. Alg.: SHA256withRSA (OID: 1.2.840.113549.1.1.11)
 Command print-certificate executed successfully.
 ----
 
-[[alternative-provider-example]]
+[#alternative-provider-example]
 === Alternative Provider
 
 It is possible to plug a different `java.security.Provider` implementation to get different outputs when running the `print-certificate` command.

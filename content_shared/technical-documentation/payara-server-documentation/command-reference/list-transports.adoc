@@ -2,7 +2,7 @@
 
 Lists the existing transports.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] list-transports [--help]
 [target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-transports` subcommand lists the existing transports.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -41,7 +41,7 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Lists the transports for the specified server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Transports*
@@ -56,7 +56,7 @@ tcp
 Command list-transports executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

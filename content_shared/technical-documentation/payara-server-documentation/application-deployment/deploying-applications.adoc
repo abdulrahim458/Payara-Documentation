@@ -3,7 +3,7 @@
 
 This chapter provides procedures and guidelines for deploying applications and modules in the Payara Server environment by using the `asadmin`command-line utility.
 
-[[deploying-applications-and-modules]]
+[#deploying-applications-and-modules]
 == Deploying Applications and Modules
 
 Application deployment is a dynamic process, which means that deployed applications and modules become available without requiring you to restart the server instance.
@@ -29,7 +29,7 @@ The following topics are addressed here:
 
 Instructions for accomplishing these tasks by using the Administration Console are contained in the Administration Console online help.
 
-[[to-deploy-an-application-or-module]]
+[#to-deploy-an-application-or-module]
 ===  To Deploy an Application or Module
 
 Use the `deploy` subcommand in remote mode to deploy an assembled application or module to Payara Server. If an error occurs during deployment, the application or module is not deployed. If a module within an application contains an error, the entire application is not deployed.
@@ -64,7 +64,7 @@ If a deployment order is not specified at the time an application is deployed, t
 Information about the options and properties of the subcommand is included in this help page.
 . If needed, fix issues and rerun the `deploy` subcommand.
 
-[[example-deploy-app]]
+[#example-deploy-app]
 ==== Example - Deploying an Enterprise Application
 
 This example deploys `newApp.ear` to the default server, `server`.
@@ -76,7 +76,7 @@ Application deployed successfully with name Cart.
 Command deploy executed successfully
 ----
 
-[[example-deploy-con-module]]
+[#example-deploy-con-module]
 ==== Example - Deploying a Connector Module
 
 This example deploys a connector module that is packaged in an RAR file.
@@ -88,7 +88,7 @@ Application deployed successfully with name jdbcra.
 Command deploy executed successfully
 ----
 
-[[example-using-alt-dd]]
+[#example-using-alt-dd]
 ==== Example - Using an Alternate Jakarta EE Standard Deployment Descriptor
 
 This example deploys an application using an alternate Jakarta EE standard deployment descriptor file that resides outside an application archive. Specify an absolute path or a relative path to the alternate deployment descriptor file.
@@ -100,7 +100,7 @@ Application deployed successfully with name cart.
 Command deploy executed successfully
 ----
 
-[[example-deployment-order]]
+[#example-deployment-order]
 ==== Example - Specifying the Deployment Order of an Application
 
 This example specifies the deployment order of two applications. The `cart` application is loaded before the `horse` application at server startup.
@@ -116,7 +116,7 @@ asadmin deploy --deploymentorder 110 --name horse horse.war
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help deploy` at the command line.
 
-[[to-change-targets-for-a-deployed-application-or-module]]
+[#to-change-targets-for-a-deployed-application-or-module]
 === To Change Targets for a Deployed Application or Module
 
 After deployment, the deployed application or module exists in the central repository and can be referenced by the server instances or clusters that you deployed to as targets.
@@ -132,7 +132,7 @@ xref:technical-documentation/payara-server-documentation/command-reference/delet
 
 TIP: You can also view the full syntax and options of the subcommand by typing`asadmin help create-application-ref` or `asadmin help delete-application-ref` at the command line.
 
-[[to-list-deployed-applications-or-modules]]
+[#to-list-deployed-applications-or-modules]
 === To List Deployed Applications or Modules
 
 There are a number of commands that can be used to list deployed applications or modules and their subcomponents. Use the commands in this section in remote mode.
@@ -144,7 +144,7 @@ the xref:technical-documentation/payara-server-documentation/command-reference/l
 Information about these commands is included in these help pages.
 . Show the status of a deployed component by using the xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc[`show-component-status`] subcommand.
 
-[[example-list-apps]]
+[#example-list-apps]
 ==== Example Listing Applications
 
 The `list-applications` subcommand lists all deployed Jakarta EE applications or modules. If the `--type` option is not specified, all components are listed.
@@ -158,7 +158,7 @@ hellojsp <web>
 Command list-applications executed successfully
 ----
 
-[[example-list-subcomponents]]
+[#example-list-subcomponents]
 ==== Example - Listing Subcomponents
 
 The `list-sub-components` subcommand lists EJBs or servlets in a deployed module or in a module of the deployed application. If a module is not identified, all modules are listed. The `--appname` option functions only when the given module is standalone.
@@ -174,7 +174,7 @@ MEJBBean <StatelessSessionBean>
 Command list-sub-components executed successfully
 ----
 
-[[example-show-status]]
+[#example-show-status]
 ==== Example - Showing Status of a Deployed Component
 
 The `show-component-status` subcommand gets the status (enabled or disabled) of the deployed component. This example gets the status of the `MEjbApp` component.
@@ -186,7 +186,7 @@ Status of MEjbApp is enabled
 Command show-component-status executed successfully
 ----
 
-[[to-redeploy-an-application-or-module]]
+[#to-redeploy-an-application-or-module]
 === To Redeploy an Application or Module
 
 Use the `redeploy` subcommand in remote mode to overwrite a previously-deployed application or module. You can also accomplish this task by using the `--force` option of the `deploy` subcommand. Whenever a redeployment is done, the HTTP and SFSB sessions in transit at that time, and the EJB timers, become invalid unless you use the `--keepstate=true` option of the `redeploy` subcommand.
@@ -202,7 +202,7 @@ xref:technical-documentation/payara-server-documentation/command-reference/redep
 +
 Information about the options and properties of these commands is included in these help pages.
 
-[[example-retain-http-session]]
+[#example-retain-http-session]
 ==== Example - Retaining HTTP Session State During Redeployment
 
 This example redeploys the `hello` web application. In a production environment, you usually want to retain sessions.
@@ -218,7 +218,7 @@ Command redeploy executed successfully.
 
 Keep State is a checkbox option when you redeploy using the Administration Console. For instructions, see the Administration Console online help.
 
-[[example-redeploy-webapp-from-dir]]
+[#example-redeploy-webapp-from-dir]
 ==== Example - Redeploying a Web Application that Was Deployed from a Directory
 
 This example redeploys the `hello` web application, which was originally deployed from the `hellodir` directory.
@@ -230,7 +230,7 @@ Application deployed successfully with name hellodir.
 Command redeploy executed successfully.
 ----
 
-[[example-redeploy-app-force]]
+[#example-redeploy-app-force]
 ==== Example - Redeploying an Application by Using `Asadmin Deploy` `--Force`
 
 The `--force` option is set to `false` by default. This example redeploys `newApp.ear` even if has been deployed or already exists.
@@ -244,7 +244,7 @@ Command deploy executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help redeploy` at the command line.
 
-[[to-disable-an-application-or-module]]
+[#to-disable-an-application-or-module]
 === To Disable an Application or Module
 
 Use the `disable` subcommand in remote mode to immediately deactivate a deployed application or module without removing it from the server.
@@ -263,7 +263,7 @@ To see the status of deployed components, use the xref:technical-documentation/p
 +
 Information about the options and properties of the subcommand is included in this help page.
 
-[[example-list-deployed-webapps]]
+[#example-list-deployed-webapps]
 ==== Example - Listing Deployed Web Applications
 
 This example lists all deployed web applications.
@@ -275,7 +275,7 @@ hellojsp <web>
 Command list-applications executed successfully.
 ----
 
-[[example-disable-webapp]]
+[#example-disable-webapp]
 ==== *Example 2-12* Disabling a Web Application
 
 This example disables the `hellojsp` application.
@@ -288,7 +288,7 @@ Command disable executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help disable` at the command line.
 
-[[to-enable-an-application-or-module]]
+[#to-enable-an-application-or-module]
 === To Enable an Application or Module
 
 An enabled application or module is runnable and can be accessed by clients if it has been deployed to an accessible server instance or cluster. An application or module is enabled by default.
@@ -306,7 +306,7 @@ To see the status of deployed components, use the xref:technical-documentation/p
 +
 Information about the options and properties of the subcommand is included in this help page.
 
-[[example-enable-app]]
+[#example-enable-app]
 ==== Example - Enabling an Application
 
 This example enables the `sampleApp` application.
@@ -319,7 +319,7 @@ Command enable executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help enable` at the command line.
 
-[[to-undeploy-an-application-or-module]]
+[#to-undeploy-an-application-or-module]
 === To Undeploy an Application or Module
 
 Use the `undeploy` subcommand in remote mode to uninstall a deployed application or module and remove it from the repository. To reinstate the component, you must deploy the component again using the `deploy` subcommand.
@@ -336,7 +336,7 @@ To see the status of deployed components, use the xref:technical-documentation/p
 +
 Information about the options and properties of the subcommand is included in this help page.
 
-[[example-list-deployed-apps-or-modules]]
+[#example-list-deployed-apps-or-modules]
 ==== *Example 2-14* Listing Deployed Applications or Modules
 
 This example lists all applications of type `web`.
@@ -348,7 +348,7 @@ hellojsp <web>
 Command list-applications executed successfully.
 ----
 
-[[example-undeploy-app]]
+[#example-undeploy-app]
 ==== Example - Un-Deploying an Application
 
 This example uninstalls the `hellojsp` application.
@@ -362,7 +362,7 @@ Command undeploy executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help undeploy` at the command line.
 
-[[to-reload-changes-to-applications-or-modules-dynamically]]
+[#to-reload-changes-to-applications-or-modules-dynamically]
 === To Reload Changes to Applications or Modules Dynamically
 
 Dynamic reloading enables you to change the code or deployment descriptors of an application or module without needing to perform an explicit redeployment.
@@ -396,7 +396,7 @@ For Windows: `echo> .reload`
 +
 If the `.reload` file doesn't exist, the `touch` or `echo` command creates it.
 
-[[to-deploy-an-application-or-module-automatically]]
+[#to-deploy-an-application-or-module-automatically]
 === To Deploy an Application or Module Automatically
 
 WARNING: This task is best suited for use in a development environment.
@@ -418,7 +418,7 @@ To undeploy an automatically deployed application or module, remove its archive 
 +
 NOTE: Deployment directories might change between Payara Server releases.
 
-[[example-set-autodeploy-interval]]
+[#example-set-autodeploy-interval]
 ==== Example - Setting the Auto-Deployment Interval
 
 This example sets the auto-deployment interval to 3 seconds (default is 2).
@@ -429,7 +429,7 @@ asadmin set server.admin-service.das-config.autodeploy-polling-interval-in-secon
 Command set executed successfully.
 ----
 
-[[example-set-jsp-precompilation]]
+[#example-set-jsp-precompilation]
 ==== Example - Setting JSP Precompilation
 
 This example enables JSP precompilation (default is `false`).
@@ -443,7 +443,7 @@ Command set executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin set --help` at the command line.
 
-[[to-deploy-an-application-or-module-by-using-a-deployment-plan]]
+[#to-deploy-an-application-or-module-by-using-a-deployment-plan]
 === To Deploy an Application or Module by Using a Deployment Plan
 
 In the deployment plan for an EAR file, the `payara-application.xml` file is located at the root. The deployment descriptor for each module is stored according to this syntax: `module-name.gf-dd-name`, where the `gf-dd-name` depends on the module type.
@@ -455,7 +455,7 @@ Each `/` (forward slash) is replaced by a `#` (pound sign).
 +
 NOTE: Deployment directories might change between Payara Server releases.
 
-[[example-deployment-plan]]
+[#example-deployment-plan]
 ==== Example - Deploying by Using a Deployment Plan
 
 This example deploys the application in the `myrostapp.ear` file according to the plan specified by the `mydeployplan.jar` file.
@@ -468,7 +468,7 @@ Application deployed successfully with name myrostapp.
 Command deploy executed successfully.
 ----
 
-[[example-deployment-plan-structure-ear]]
+[#example-deployment-plan-structure-ear]
 ==== Example - Deployment Plan Structure for an Enterprise Application
 
 This listing shows the structure of the deployment plan JAR file for an EAR file.
@@ -484,7 +484,7 @@ $ jar -tvf mydeployplan.jar
 84805 Thu Mar 13 15:37:48 PST 2003 team-ejb.jar.RosterSchema.dbschema
 ----
 
-[[to-deploy-an-application-or-module-in-a-directory-format]]
+[#to-deploy-an-application-or-module-in-a-directory-format]
 === To Deploy an Application or Module in a Directory Format
 
 WARNING: This task is best suited for use in a development environment.
@@ -521,7 +521,7 @@ For information about the required directory contents, see the appropriate speci
 +
 NOTE: Deployment directories might change between Payara Server releases.
 
-[[example-deploy-app-from-dir]]
+[#example-deploy-app-from-dir]
 ==== Example - Deploying an Application from a Directory
 
 This example deploys the expanded directory `/apps/MyApp` for the `hello` application.
@@ -535,7 +535,7 @@ Command deploy executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help deploy` at the command line.
 
-[[to-deploy-an-application-on-server-start]]
+[#to-deploy-an-application-on-server-start]
 === To Deploy an Application on Server Start
 
 As described in <<to-deploy-an-application-or-module-automatically>> Payara Server has the ability to automatically deploy applications on server start using the `autodeploy` directory. While acceptable in development environments, the internal scanner used to deploy files in this directory is a security risk for production environments.
@@ -576,7 +576,7 @@ asadmin start-domain --postbootCommandFile=deployment-script.asadmin
 
 IMPORTANT: Post boot command scripts will guarantee that applications will be deployed AFTER the server has completed its boot sequence, guaranteeing that all required resources will be available for the application to use.
 
-[[command-script-considerations]]
+[#command-script-considerations]
 ==== Command Script Considerations
 
 There are some considerations to have on how to structure command scripts:
@@ -588,14 +588,14 @@ There are some considerations to have on how to structure command scripts:
 * Script files *_must_* exist, and be accessible by the server instance.
 * Both pre-boot and post-boot script files can be passed at the same time when starting the domain.
 
-[[to-deploy-from-a-url]]
+[#to-deploy-from-a-url]
 === To Deploy from a URL
 
 Payara Server also has the ability to deploy applications whose archives are hosted on a remote location. To deploy an application archive that can be reached via its URL, use the xref:technical-documentation/payara-server-documentation/command-reference/deploy-remote-archive.adoc[`deploy-remote-archive`] subcommand, which works similarly to the standard `deploy` command, and can be used in the same way.
 
 The only difference in the command is that it takes a valid URL instead of a file location in the host's filesystem.
 
-[[example-deploy-from-url]]
+[#example-deploy-from-url]
 ==== Example - Deploying by Using a URL
 
 The following example showcases how to deploy an application's archive for the `clusterjsp` application hosted in the `https://nexus.payara.fish/repository/payara-artifacts` remote repository using the `deploy-remote-archive` subcommand:
@@ -607,14 +607,14 @@ asadmin deploy-remote-archive https://nexus.payara.fish/repository/payara-artifa
 
 WARNING: The command will only accept HTTP and HTTPS URLs.
 
-[[to-deploy-using-maven-artifact]]
+[#to-deploy-using-maven-artifact]
 === To Deploy Using a Maven Artifact
 
 Payara Server also has the ability to deploy applications whose archives are hosted as Maven artifacts on remote repositories. To deploy an application archive in this manner, use the xref:technical-documentation/payara-server-documentation/command-reference/deploy-remote-archive.adoc[`deploy-remote-archive`] subcommand, which works similarly to the standard `deploy` command, and point it to a set of Maven GAV (Group ID/Artifact ID/Version) coordinates where the artifact is located.
 
 By default, the command will search for the artifact in Maven Central, but specific Maven repositories can be added as search locations by using the `additionalRepositories` option, which accepts a comma separated list of repository URLs.
 
-[[example-deploy-from-maven-repo]]
+[#example-deploy-from-maven-repo]
 ==== Example - Deploying by Using a Maven Artifact
 
 The following example showcases how to deploy an application's archive for the `clusterjsp-1.1.1.war` application artifact which is located in the `https://nexus.payara.fish/repository/payara-artifacts` Maven repository using the `deploy-remote-archive` subcommand:
@@ -627,7 +627,7 @@ For example, given an `additionalRepositories` of _repo1,repo2_, the order that 
 asadmin deploy-remote-archive --additionalRepositories https://nexus.payara.fish/repository/payara-artifacts fish.payara.testing,clusterjsp,1.1
 ----
 
-[[modifying-the-configuration-of-a-web-application-or-module]]
+[#modifying-the-configuration-of-a-web-application-or-module]
 == Modifying the Configuration of a Web Application or Module
 
 You can modify the configuration of a web application or a module by modifying the deployment descriptors and then repackaging and redeploying the application.
@@ -645,7 +645,7 @@ The following topics are addressed here:
 * xref:to-unset-a-web-environment-entry[To Unset a Web Environment Entry]
 * xref:to-list-web-environment-entries[To List Web Environment Entries]
 
-[[to-set-a-web-context-parameter]]
+[#to-set-a-web-context-parameter]
 === To Set a Web Context Parameter
 
 Use the `set-web-context-param` subcommand in remote mode to change the configuration of a deployed application without the need to modify the application's deployment
@@ -672,7 +672,7 @@ Remote commands require a running server.
 +
 Information about the options for the subcommand is included in this help page.
 
-[[exaple-servlet-context-init]]
+[#exaple-servlet-context-init]
 ==== Example - Setting a Servlet Context-Initialization Parameter for a Web Application
 
 This example sets the servlet context-initialization parameter `jakarta.faces.STATE_SAVING_METHOD` of the web application `basic-ezcomp` to client.
@@ -686,7 +686,7 @@ Command set-web-context-param executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help set-web-context-param` at the command line.
 
-[[to-unset-a-web-context-parameter]]
+[#to-unset-a-web-context-parameter]
 === To Unset a Web Context Parameter
 
 Use the `unset-web-context-param` subcommand in remote mode to unset an environment entry for a deployed web application or module that has been set by using the `set-web-env-entry` subcommand. There is no need to modify the application's deployment descriptors and repackage and redeploy the application.
@@ -711,7 +711,7 @@ Remote commands require a running server.
 +
 Information about the options for the subcommand is included in this help page.
 
-[[example-unset-servlet-context-init]]
+[#example-unset-servlet-context-init]
 ==== Example - Unsetting a Servlet Context-Initialization Parameter for a Web Application
 
 This example unsets the servlet context-initialization parameter ` jakarta.faces.STATE_SAVING_METHOD` of the web application `basic-ezcomp`.
@@ -724,7 +724,7 @@ Command unset-web-context-param executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help unset-web-context-param` at the command line.
 
-[[to-list-web-context-parameters]]
+[#to-list-web-context-parameters]
 === To List Web Context Parameters
 
 Use the `list-web-context-param` subcommand in remote mode to list the parameters that have previously been set by using the xref:technical-documentation/payara-server-documentation/command-reference/set-web-context-param.adoc[`set-web-context-param`] subcommand.
@@ -741,7 +741,7 @@ The subcommand does not list parameters that are set only in the application's d
 Remote commands require a running server.
 . List servlet context-initialization parameters by using the xref:technical-documentation/payara-server-documentation/command-reference/list-web-context-param.adoc[`list-web-context-param`] subcommand.
 
-[[example-list-servlet-context-init-params]]
+[#example-list-servlet-context-init-params]
 ==== Example - Listing Servlet Context-Initialization Parameters for a Web Application
 
 This example lists all servlet context-initialization parameters of the web application `basic-ezcomp` that have been set by using the `set-web-context-param` subcommand. Because no description was specified when the `jakarta.faces.PROJECT_STAGE` parameter was set, null is displayed instead of a description for this parameter.
@@ -756,7 +756,7 @@ Command list-web-context-param executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help list-web-context-param` at the command line.
 
-[[to-set-a-web-environment-entry]]
+[#to-set-a-web-environment-entry]
 === To Set a Web Environment Entry
 
 An application uses the values of environment entries to customize its behavior or presentation. Use the `set-web-env-entry` subcommand in remote mode to change the configuration of a deployed application without the need to modify the application's deployment descriptors and repackage and redeploy the application.
@@ -781,7 +781,7 @@ Remote commands require a running server.
 +
 Information about the options for the subcommand is included in this help page.
 
-[[example-set-env-var-webapp]]
+[#example-set-env-var-webapp]
 ==== Example - Setting an Environment Entry for a Web Application
 
 This example sets the environment entry `Hello User` of the application hello to `techscribe`. The Java type of this entry is `java.lang.String`.
@@ -795,7 +795,7 @@ Command set-web-env-entry executed successfully
 
 TIP: You can also view the full syntax and options of the subcommand by typing `asadmin help set-web-env-entry` at the command line.
 
-[[to-unset-a-web-environment-entry]]
+[#to-unset-a-web-environment-entry]
 === To Unset a Web Environment Entry
 
 Use the `unset-web-env-entry` subcommand in remote mode to unset an environment entry for a deployed web application or module.
@@ -807,7 +807,7 @@ Remote commands require a running server.
 +
 Information about the options for the subcommand is included in this help page.
 
-[[example-unset-env-var-webapp]]
+[#example-unset-env-var-webapp]
 ==== Example - Unsetting an Environment Entry for a Web Application
 
 This example unsets the environment entry `Hello User` of the web application `hello`.
@@ -818,7 +818,7 @@ asadmin unset-web-env-entry --name="Hello User" hello
 Command unset-web-env-entry executed successfully.
 ----
 
-[[to-list-web-environment-entries]]
+[#to-list-web-environment-entries]
 === To List Web Environment Entries
 
 Use the `list-web-env-entry` subcommand to list environment entries for a deployed web application or module. For each entry, the following information is displayed:
@@ -834,7 +834,7 @@ Use the `list-web-env-entry` subcommand to list environment entries for a deploy
 Remote commands require a running server.
 . List the environment entries by using the xref:technical-documentation/payara-server-documentation/command-reference/list-web-env-entry.adoc[`list-web-env-entry`] subcommand.
 
-[[example-list-env-var-entries-webapp]]
+[#example-list-env-var-entries-webapp]
 ==== Example - Listing Environment Entries for a Web Application
 
 This example lists all environment entries that have been set for the web application `hello` by using the `set-web-env-entry` subcommand.
@@ -850,7 +850,7 @@ Command list-web-env-entry executed successfully.
 
 TIP: You can also view the full syntax and options of the subcommand by typing asadmin help `list-web-env-entry` at the command line.
 
-[[web-module-deployment-guidelines]]
+[#web-module-deployment-guidelines]
 == Web Module Deployment Guidelines
 
 The following guidelines apply to deploying a web module in Payara Server:
@@ -909,7 +909,7 @@ For more information about JSP precompilation, see xref:technical-documentation/
 ** xref:to-unset-a-web-environment-entry[To Unset a Web Environment Entry]
 ** xref:to-list-web-environment-entries[To List Web Environment Entries]
 
-[[ejb-module-deployment-guidelines]]
+[#ejb-module-deployment-guidelines]
 == EJB Module Deployment Guidelines
 
 NOTE: The Payara Server Web Profile supports the Jakarta Enterprise Beans 4.0 Lite specification, which allows enterprise beans within web applications, among other features. +
@@ -941,7 +941,7 @@ The current allowed value is `v2`, which refers to older runtimes from where Pay
 +
 NOTE: Starting in Java EE 6, the Java EE specification imposes stricter requirements than Java EE 5 did on which JAR files can be visible to various modules within an EAR file. Setting this element to `v2` removes these Java EE 6 and later restrictions.
 
-[[deploying-a-connector-module]]
+[#deploying-a-connector-module]
 == Deploying a Connector Module
 
 Deploying a stand-alone connector module allows multiple deployed Jakarta EE applications to share the connector module. A resource adapter configuration is automatically created for the connector module.
@@ -952,7 +952,7 @@ The following topics are addressed here:
 * xref:redeploying-a-stand-alone-connector-module[Redeploying a Stand-Alone Connector Module]
 * xref:deploying-and-configuring-an-embedded-resource-adapter[Deploying and Configuring an Embedded Resource Adapter]
 
-[[to-deploy-and-configure-a-stand-alone-connector-module]]
+[#to-deploy-and-configure-a-stand-alone-connector-module]
 === To Deploy and Configure a Stand-Alone Connector Module
 
 As an alternative to Step 3 through Step 6, you can define application-scoped resources in the `glassfish-resources.xml` or `payara-resources.xml` deployment descriptor.
@@ -988,7 +988,7 @@ If needed, you can override the default configuration properties of a resource a
 Use the `create-admin-object` subcommand. For procedures, see
 "xref:technical-documentation/payara-server-documentation/general-administration/administering-eis-connectivity.adoc#to-create-an-administered-object[To Create an Administered Object]" in the __General Administration section__.
 
-[[redeploying-a-stand-alone-connector-module]]
+[#redeploying-a-stand-alone-connector-module]
 === Redeploying a Stand-Alone Connector Module
 
 Redeployment of a connector module maintains all connector connection pools, connector resources, and administered objects defined for the previously deployed connector module. You do not need to reconfigure any of these resources.
@@ -1003,7 +1003,7 @@ Client applications or application components using the connector module's resou
 
 To disable automatic redeployment, set the `--force` option to `false`. In this case, if the connector module has already been deployed, Payara Server provides an error message.
 
-[[deploying-and-configuring-an-embedded-resource-adapter]]
+[#deploying-and-configuring-an-embedded-resource-adapter]
 === Deploying and Configuring an Embedded Resource Adapter
 
 A connector module can be deployed as a Jakarta EE component in a Jakarta EE application. Such connectors are only visible to components residing in the same Jakarta EE application. Deploy this application as you would any other Jakarta EE application.
@@ -1016,7 +1016,7 @@ An embedded connector module cannot be un-deployed using the name `app-name#conn
 
 The association between the physical JNDI name for the connector module in Payara Server and the logical JNDI name used in the application component is specified in the Payara Server-specific XML descriptor `glassfish-ejb-jar.xml`.
 
-[[assembling-and-deploying-an-application-client-module]]
+[#assembling-and-deploying-an-application-client-module]
 == Assembling and Deploying an Application Client Module
 
 Deployment is necessary for application clients that communicate with EJB components.
@@ -1029,7 +1029,7 @@ The following topics are addressed here:
 * xref:to-prepare-another-machine-for-running-an-application-client[To Prepare Another Machine for Running an Application Client]
 * xref:to-undeploy-an-application-client[To Undeploy an Application Client]
 
-[[to-assemble-and-deploy-an-application-client]]
+[#to-assemble-and-deploy-an-application-client]
 === To Assemble and Deploy an Application Client
 
 . Assemble the necessary client components.
@@ -1075,7 +1075,7 @@ For more detailed information about creating application clients, see
 * Using libraries with application clients
 * Specifying a splash screen, login retries, and other customizations
 
-[[to-prepare-another-machine-for-running-an-application-client]]
+[#to-prepare-another-machine-for-running-an-application-client]
 === To Prepare Another Machine for Running an Application Client
 
 If the __context-root__ or __module-id__ is not specified during deployment, the name of the EAR or JAR file without the `.ear` or `.jar` extension is used. For an application, the relative path to the application client JAR file is also included. If the application or module is not in EAR or JAR file format, a __context-root__ or __module-id__ is generated.
@@ -1105,14 +1105,14 @@ You are now ready to run the client.
 
 TIP: For more detailed information about the `package-appclient` script, see xref:technical-documentation/payara-server-documentation/command-reference/appclient.adoc[`appclient`(1M)].
 
-[[to-undeploy-an-application-client]]
+[#to-undeploy-an-application-client]
 === To Undeploy an Application Client
 
 After application clients are downloaded, they remain on the client until they are manually removed.
 
 If you undeploy an application client, you can no longer download that application client because it might be in an inconsistent state. If you try to launch an application client that was previously downloaded (even though the server side of the application client is no longer present), the results are unpredictable unless the application client has been written to tolerate such situations.
 
-[[web-service-deployment-guidelines]]
+[#web-service-deployment-guidelines]
 == Web Service Deployment Guidelines
 
 NOTE: If you installed the Web Profile, web services are not supported unless the optional Metro Web Services Stack add-on component is downloaded. +
@@ -1133,7 +1133,7 @@ It is recommended to use payara-web.xml instead.
 
 For more information about web services, see "xref:technical-documentation/application-development/developing-soap-webservices.adoc#developing-web-services[Developing Web Services]" in the Application Development section.
 
-[[osgi-bundle-deployment-guidelines]]
+[#osgi-bundle-deployment-guidelines]
 == Osgi Bundle Deployment Guidelines
 
 To deploy an OSGi bundle using the Administration Console, select Other from the Type drop-down list and check the OSGI Type checkbox.
@@ -1151,7 +1151,7 @@ NOTE: For components packaged as OSGi bundles (`--type=osgi`), the `deploy` subc
 
 Other properties are used in the decoration process. For example, the Payara Server OSGi web container registers a URL stream handler named `webbundle`, which is used to wrap a plain WAR file as a WAB.
 
-[[transparent-jdbc-connection-pool-reconfiguration]]
+[#transparent-jdbc-connection-pool-reconfiguration]
 == Transparent JDBC Connection Pool Reconfiguration
 
 In this Payara Server release, reconfiguration of a JDBC connection pool due to attribute or property changes can be transparent to the applications or modules that use the pool, even if pool reconfiguration results in pool recreation.
@@ -1174,7 +1174,7 @@ For JDBC connection pools that are not application-scoped, use the `set` subcomm
 asadmin set myserver.resources.jdbc-connection-pool.mypool.property.dynamic-reconfiguration-wait-timeout-in-seconds=30
 ----
 
-[[application-scoped-resources]]
+[#application-scoped-resources]
 == Application-Scoped Resources
 
 You can define an application-scoped JDBC resource or other resource for an enterprise application, web module, EJB module, connector module, or application client module. This allows single-step deployment for resource-dependent modules and applications.

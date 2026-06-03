@@ -3,7 +3,7 @@
 
 This appendix provides a checklist to get started on evaluation and production using Payara Server.
 
-[[checklist]]
+[#checklist]
 == Checklist
 
 //TODO - Add additional recommendations

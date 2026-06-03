@@ -10,12 +10,12 @@ Documentation for the _Open Message Queue_ software can be found in the followin
 * link:https://eclipse-ee4j.github.io/openmq/guides/mq-tech-over/toc.html[OpenMQ Technical Overview^]
 * link:https://eclipse-ee4j.github.io/openmq/guides/mq-admin-guide/toc.html[OpenMQ Administration Guide^]
 
-[[using-message-queue-broker-clusters-with-payara-server]]
+[#using-message-queue-broker-clusters-with-payara-server]
 == Using Message Queue Broker Clusters with Payara Server
 
 This section describes how the JMS service uses Message Queue broker clusters to support *high-availability* JMS messaging in Payara Server clusters and deployment groups. It describes the different cluster and broker types that are supported and how to configure them.
 
-[[about-message-queue-broker-clusters]]
+[#about-message-queue-broker-clusters]
 === About Message Queue Broker Clusters
 
 The following discussion provides a brief overview of Message Queue broker clusters.
@@ -49,7 +49,7 @@ IMPORTANT: By its very nature, an enhanced broker cluster is always cluster of p
 NOTE: Despite the message service availability offered by both conventional and enhanced broker clusters, they do not provide a guarantee against failure and the possibility that certain failures, for example in the middle of a transaction, could require that some operations be repeated. +
 It is the responsibility of the messaging application (both producers and consumers) to respond to JMS exceptions appropriately.
 
-[[configuring-payara-clusters-to-use-message-queue-broker-clusters]]
+[#configuring-payara-clusters-to-use-message-queue-broker-clusters]
 === Configuring Payara Server Clusters to Use Message Queue Broker Clusters
 
 When a Payara Server cluster is created, the JMS service automatically configures a Message Queue *conventional broker cluster with master broker* for the cluster, provided that the JMS host type in the Payara Server cluster's configuration is either `Embedded` or `Local`.
@@ -90,13 +90,13 @@ The `Embedded` mode is not recommended for the usual reliability and scalability
 
 The following topics provide instructions for configuring broker clusters in all these contexts.
 
-[[deployment-groups-considerations]]
+[#deployment-groups-considerations]
 ==== Deployment Groups Considerations
 The instructions provided will also apply to *deployment groups* as well, however, it is mandatory that all Payara Server instances reference the same named configuration object. If multiple instances in the same deployment group reference multiple, separate configuration objects, high availability for the JMS service won't be guaranteed.
 
 When running the commands listed in the respective instructions, instead of targeting a server cluster, you can target a deployment group instead.
 
-[[to-configure-a-payara-cluster-to-use-an-embedded-or-local-conventional-broker-cluster-with-master-broker]]
+[#to-configure-a-payara-cluster-to-use-an-embedded-or-local-conventional-broker-cluster-with-master-broker]
 === To Configure a Payara Cluster to Use an Embedded or Local Conventional Broker Cluster with Master Broker
 
 Use the `configure-jms-cluster` subcommand in remote `asadmin` mode to configure a conventional broker cluster with master broker to service a Payara Server cluster that uses either `Embedded` or `Local` JMS hosts.
@@ -120,7 +120,7 @@ asadmin configure-jms-cluster --clustertype=conventional --configstoretype=maste
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help configure-jms-cluster` at the command line.
 
-[[to-configure-a-payara-cluster-to-use-an-embedded-or-local-conventional-broker-cluster-of-peer-brokers]]
+[#to-configure-a-payara-cluster-to-use-an-embedded-or-local-conventional-broker-cluster-of-peer-brokers]
 === To Configure a Payara Server Cluster to Use an Embedded or Local Conventional Broker Cluster of Peer Brokers
 
 Use the `configure-jms-cluster` subcommand in remote `asadmin` mode to configure a conventional broker cluster of peer brokers to service a Payara Server cluster that uses `Embedded` or `Local` JMS hosts.
@@ -148,7 +148,7 @@ asadmin --passwordfile password-file configure-jms-cluster --clustertype=convent
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help configure-jms-cluster` at the command line.
 
-[[to-change-the-master-broker-in-an-embedded-or-local-broker-cluster]]
+[#to-change-the-master-broker-in-an-embedded-or-local-broker-cluster]
 === To Change the Master Broker in an Embedded or Local Broker Cluster
 
 Use the `change-master-broker` subcommand in remote `asadmin` mode to change the master broker to a different broker in a conventional broker cluster with master broker serving a Payara Server cluster that uses `Embedded` or `Local` JMS hosts.
@@ -171,12 +171,12 @@ asadmin change-master-broker payara-clustered-instance-name
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help change-master-broker` at the command line.
 
-[[to-migrate-between-types-of-embedded-or-local-conventional-broker-clusters]]
+[#to-migrate-between-types-of-embedded-or-local-conventional-broker-clusters]
 === To Migrate between Types of Embedded or Local Conventional Broker Clusters
 
 If the need arises to convert from a conventional broker cluster with master broker to a conventional broker cluster of peer brokers, or the reverse, follow the instructions in the *Managing Conventional Clusters* section of the OpenMQ Administration Guide.
 
-[[to-configure-a-payara-cluster-to-use-a-local-enhanced-broker-cluster]]
+[#to-configure-a-payara-cluster-to-use-a-local-enhanced-broker-cluster]
 === To Configure a Payara Server Cluster to Use a Local Enhanced Broker Cluster
 
 Use the `configure-jms-cluster` subcommand in remote `asadmin` mode to configure an enhanced broker cluster to service a Payara Server cluster that uses `Local` JMS hosts.
@@ -202,7 +202,7 @@ asadmin --passwordfile password-file configure-jms-cluster --clustertype=enhance
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help configure-jms-cluster` at the command line.
 
-[[to-configure-a-payara-cluster-to-use-a-remote-broker-cluster]]
+[#to-configure-a-payara-cluster-to-use-a-remote-broker-cluster]
 === To Configure a Payara Server Cluster to Use a Remote Broker Cluster
 
 *Before You Begin*
@@ -230,7 +230,7 @@ asadmin create-jms-host --target payara-cluster-name --mqhost broker-host --mqpo
 . Start the brokers in the cluster by using the Message Queue `imqbrokerd` command, as described in the *Managing Broker Clusters* section the in OpenMQ Administration Guide.
 . Create instances in the Payara Server cluster, as described in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally] and xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
 
-[[connection-failover]]
+[#connection-failover]
 == Connection Failover
 
 The use of Message Queue broker clusters provides JMS connection failover, including several options that control how connection failures are handled.
@@ -289,7 +289,7 @@ For enhanced clusters, this field specifies the number of times the Java Message
 
 You can override these settings using JMS connection factory settings. For details, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-connection-factories-and-destinations[Administering JMS Connection Factories and Destinations]" in the Payara Server General Administration section.
 
-[[load-balanced-delivery-to-mdbs]]
+[#load-balanced-delivery-to-mdbs]
 == Load-Balanced Delivery to Mdbs
 
 When a message-driven bean (MDB) application is deployed to a Payara Server cluster, incoming messages are delivered randomly to MDBs without regard to the server cluster instances in which they are running.

@@ -2,7 +2,7 @@
 
 Returns the length of time that the DAS has been running.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -10,14 +10,14 @@ Returns the length of time that the DAS has been running.
 asadmin [asadmin-options] uptime [--help]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `uptime` subcommand returns the length of time that the domain administration server (DAS) has been running since it was last restarted.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -26,7 +26,7 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Showing How Long the DAS Has Been Running*
@@ -40,7 +40,7 @@ Uptime: 2 days, 1 hours, 30 minutes, 18 seconds, Total milliseconds: 178218706
 Command uptime executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

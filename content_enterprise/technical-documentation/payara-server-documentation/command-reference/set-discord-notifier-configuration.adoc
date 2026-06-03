@@ -2,7 +2,7 @@
 
 Configures the settings of the Discord notifier.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,7 +16,7 @@ asadmin [asadmin-options] set-discord-notifier-configuration [--help]
 [--webhookToken token]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to configure the behaviour of the Discord notifier in Payara Server.
@@ -24,7 +24,7 @@ This command can be used to configure the behaviour of the Discord notifier in P
 IMPORTANT: This command is available as long as the Discord notifier's core module is installed in the server. +
 This notifier's extension is installed by default on Payara Server Enterprise.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -53,7 +53,7 @@ The ID of the webhook required to authenticate to the corresponding Discord chan
 *`--webhookToken`*:
 The token required to authenticate the webhook to the corresponding Discord channel.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enable the Discord notifier and set its required webhook settings*
@@ -63,7 +63,7 @@ The token required to authenticate the webhook to the corresponding Discord chan
 asadmin set-discord-notifier-configuration --enabled=true --dynamic=true --webhookId=xxx --webhookToken=yyy
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -9,7 +9,7 @@ Using the Payara IntelliJ Ultimate Tools plugin, you can integrate Payara Server
 - Define the Java runtime to be used by Payara Server
 - Deploy an application from within the IDE
 
-[[managing-payara-server-from-intellij]]
+[#managing-payara-server-from-intellij]
 == Managing Payara Server from the Intellij IDE
 To manage Payara Server from the IntelliJ idea, first create the new *Payara Server configuration* by selecting the *Edit Configuration* option:
 
@@ -39,7 +39,7 @@ TIP: You can filter logs by level with the dropdown menu on the right of the `Pa
 
 *image*: intellij-plugin/payara-server/server-log.png[Payara Server log]
 
-[[deploying-application-payara-server-from-intellij]]
+[#deploying-application-payara-server-from-intellij]
 == Deploying an Application to Payara Server from Intellij
 To deploy an application to Payara Server you must further edit the run configuration you are using to run Payara Server from IntelliJ.
 
@@ -54,7 +54,7 @@ To deploy an application to Payara Server you must further edit the run configur
 
 After application deployed to the Payara Server, IntelliJ starts a web browser and opens the application context root in the web browser.
 
-[[deploy-to-docker-container]]
+[#deploy-to-docker-container]
 == Deploy Applications in a Local Docker Container
 
 The Payara Server tools for IntelliJ IDEA include Docker integration, making it seamless to deploy exploded applications to a Payara Server instance running within a local Docker container.
@@ -80,7 +80,7 @@ This mapping should align with the exploded application path or parent path of e
 . Click *OK*
 . Click the *Run or Debug* button from top-right panel to deploy the application to the registered Payara Server docker instance.
 
-[[deploy-applications-in-wsl]]
+[#deploy-applications-in-wsl]
 == Deploy Applications in a WSL Environment
 
 Another noteworthy feature is the integration of the Payara Server Tools with Windows Subsystem for Linux (WSL).

@@ -2,7 +2,7 @@
 
 Allows multiple subcommands to be run while preserving environment settings and remaining in the asadmin utility.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] multimode [--help]
 [--printprompt={true|false}] [--encoding encode]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `multimode` subcommand processes `asadmin` subcommands sequentially in a single session. The command-line interface prompts for a subcommand, runs that subcommand, displays the results of that subcommand, and then prompts for the next subcommand. All the `asadmin` options set in multimode apply to subsequent commands until the multimode session is exited. You exit `multimode` by typing `exit`, `quit`, or Ctrl-D.
@@ -25,7 +25,7 @@ You can invoke `multimode` from within a multimode session. When you exit the se
 
 All the remote `asadmin` utility options can be supplied when invoking the `multimode` subcommand. The settings will apply as defaults for all subcommands that are run within the multimode session. For a list of the `asadmin` utility options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -42,7 +42,7 @@ All the remote `asadmin` utility options can be supplied when invoking the `mult
 *`--encoding`*:
   Specifies the character set for the file to be decoded. By default, the system character set is used.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Starting a Multimode Session*
@@ -66,7 +66,7 @@ This example runs a sequence of subcommands from the `commands_file.txt` file.
 % asadmin multimode --file commands_file.txt
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

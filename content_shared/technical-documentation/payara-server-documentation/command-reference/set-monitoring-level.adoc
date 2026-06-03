@@ -2,7 +2,7 @@
 
 This command can be used to set the monitoring level of a module.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,12 +14,12 @@ asadmin [asadmin-options] set-monitoring-level
 [--level={HIGH|LOW|OFF}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to set the monitoring level (`HIGH`/`LOW`) of a module. Monitoring can also be disabled by setting the level to `OFF`.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -42,7 +42,7 @@ NOTE: Multiple module names can be set in a comma separated string.
 *`--level`*:
 Allows you to change monitoring level for a module to `OFF`, `LOW` or `HIGH`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Configure the monitoring level of the JVM module to `HIGH`*
@@ -59,7 +59,7 @@ asadmin set-monitoring-level --module=jvm --level=HIGH --target=server
 asadmin set-monitoring-level --module=jvm,http-service --level=LOW --target=server
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

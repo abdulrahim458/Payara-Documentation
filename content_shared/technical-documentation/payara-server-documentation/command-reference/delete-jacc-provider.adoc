@@ -2,7 +2,7 @@
 
 Enables administrators to delete JACC providers defined for a domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] delete-jacc-provider [--help]
 [--target target] jacc-provider-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-jacc-provider` subcommand enables administrators to delete JACC providers defined for a domain. JACC providers are defined as `jacc-provider` elements in the `security-service` element in the domain's `domain.xml` file. JACC providers can be created using the Payara Server Admin Console or the `create-jacc-provider` subcommand.
@@ -24,7 +24,7 @@ If you change the `jacc-provider` element to point to a different JACC provider,
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
@@ -45,13 +45,13 @@ If an option has a short option name, then the short option precedes the long op
   instance_name;;
     Deletes the JACC provider on a specified server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jacc-provider-name*:
   The name of the JACC provider to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a JACC provider*
@@ -65,7 +65,7 @@ asadmin> delete-jacc-provider testJACC
 Command delete-jacc-provider executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

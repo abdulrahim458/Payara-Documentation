@@ -2,7 +2,7 @@
 
 Adds a new network listener socket.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -19,7 +19,7 @@ asadmin [asadmin-options] create-network-listener [--help]
 listener-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-network-listener` subcommand creates a network listener. This subcommand is supported in remote mode only.
@@ -30,7 +30,7 @@ must restart the server for the changes to take effect. The Administration Conso
 NOTE: You can use the `create-http-listener` subcommand to create a network listener that uses the HTTP protocol without having to first create a protocol, transport, or HTTP configuration. This subcommand is a
 convenient shortcut, but it gives access to only a limited number of options.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -64,13 +64,13 @@ convenient shortcut, but it gives access to only a limited number of options.
   standalone-instance-name;;
     Creates the network listener on the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *listener-name*:
   The name of the network listener.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Network Listener*
@@ -84,7 +84,7 @@ asadmin> create-network-listener --listenerport 7272 --protocol http-1
 Command create-network-listener executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

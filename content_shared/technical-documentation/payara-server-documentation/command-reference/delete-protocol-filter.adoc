@@ -2,7 +2,7 @@
 
 Removes a protocol filter.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,13 +13,13 @@ asadmin [asadmin-options] delete-protocol-filter [--help]
 protocol-filter-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-protocol-filter` subcommand removes the specified protocol
 filter. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -45,13 +45,13 @@ filter. This subcommand is supported in remote mode only.
     Deletes the protocol filter from the specified standalone server
     instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *protocol-filter-name*:
   The name of the protocol filter to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Protocol Filter*
@@ -64,7 +64,7 @@ asadmin> delete-protocol-filter --protocol http1 http1-filter
 Command delete-protocol-filter executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -3,12 +3,12 @@
 
 You can deploy applications onto Payara Micro programmatically via its API.
 
-[[deploying-applications-using-an-asadmin-command]]
+[#deploying-applications-using-an-asadmin-command]
 == Deploying Applications Using an Asadmin Command
 
 Applications can be deployed using the equivalent administration (`asadmin`) commands present on Payara Server.
 
-[[deploying-on-a-local-instance]]
+[#deploying-on-a-local-instance]
 === Deploying on a Local Instance
 
 It's possible to use the `run(Collection<InstanceDescriptor> members, String command, String... args )`
@@ -48,7 +48,7 @@ public class EmbeddedPayara {
 }
 ----
 
-[[deploying-on-multiple-instances]]
+[#deploying-on-multiple-instances]
 == Deploying on Multiple Running Instances
 
 You can use the `run` method to run the `deploy` asadmin command on multiple Payara Micro instances that belong to the same cluster. There are two `run` method variants available for running administration commands: One which runs an `asadmin` command on a subset of instances in a cluster, and another than runs an `asadmin` command on ALL instances in a cluster.
@@ -73,7 +73,7 @@ public class EmbeddedPayara{
 
 See the example for <<deploying-on-a-local-instance, deploying on local instance>> on how to use the `run` method on a subset of instances in a cluster.
 
-[[deploying-an-application-programmatically-during-bootstrap]]
+[#deploying-an-application-programmatically-during-bootstrap]
 == Deploying an Application Programmatically During Bootstrap
 
 There are two methods you can use to deploy an application during Payara Micro's bootstrap process:
@@ -129,7 +129,7 @@ public class EmbeddedPayara{
 
 TIP: You can use this strategy to deploy multiple deployments by calling `addDeployment` multiple times, or use `setDeploymentDir` to point to a deployment directory that contains the applications to deploy.
 
-[[deploying-an-application-programmatically-after-bootstrap]]
+[#deploying-an-application-programmatically-after-bootstrap]
 == Deploying an Application Programmatically after Bootstrap
 
 There are three methods available for deploying an application to a running instance:
@@ -138,12 +138,12 @@ There are three methods available for deploying an application to a running inst
 * `deploy(String name, InputStream is)`
 * `deploy(String name, String contextRoot, InputStream is)`
 
-[[deployfile-war]]
+[#deployfile-war]
 === `Deploy(file War)`
 
 The first method works in the exact same way as the `addDeploymentFile` method described in the  <<deploying-an-application-programmatically-during-bootstrap, Deploying Programmatically during Bootstrap>> section.
 
-[[deploystring-name-inputstream-is]]
+[#deploystring-name-inputstream-is]
 === `Deploy(string Name, Inputstream Is)`
 
 This method allows you to deploy WAR files using an `InputStream`:
@@ -173,7 +173,7 @@ public class EmbeddedPayara {
 }
 ----
 
-[[deploystring-name-string-contextroot-inputstream-is]]
+[#deploystring-name-string-contextroot-inputstream-is]
 === `Deploy(string Name, String Contextroot, Inputstream Is)`
 
 This method works in the same way as the previous one, but allows you to specify the context root of the application at the same time. The following example would deploy the `test` application to a context root of `/app`:
@@ -203,12 +203,12 @@ public class EmbeddedPayara{
 }
 ----
 
-[[deploying-an-application-programmatically-from-a-maven-repository]]
+[#deploying-an-application-programmatically-from-a-maven-repository]
 == Deploying an Application Programmatically from a Maven Repository
 
 Payara Micro supports the deployment of an application's artefact that is hosted in a Maven repository.
 
-[[deploying-an-artefact-using-maven-coordinates]]
+[#deploying-an-artefact-using-maven-coordinates]
 === Deploying an Artefact Using Maven Coordinates
 
 To deploy an application directly from a Maven repository, you will need to add a Maven GAV coordinate. This can be done using `addDeployFromGAV()` method. This method accepts a comma separated string denoting a maven artefact's `groupId`, `artifactId`, and `version` attributes.
@@ -225,7 +225,7 @@ public class EmbeddedPayara{
 }
 ----
 
-[[specifying-additional-maven-repositories]]
+[#specifying-additional-maven-repositories]
 == Specifying Additional Maven Repositories
 
 By default, Payara Micro will only search for artefacts in the Maven Central repository. If you wish to search additional repositories, you can add them to the list of repositories to search with the `addRepoUrl()` method:
@@ -260,7 +260,7 @@ public class EmbeddedPayara{
 }
 ----
 
-[[deploying-multiple-applications-from-a-maven-repository]]
+[#deploying-multiple-applications-from-a-maven-repository]
 === Deploying Multiple Applications from a Maven Repository
 
 To deploy multiple applications hosted in a Maven repository, you must call the `addDeployFromGAV` method for each application.For example, to deploy two applications:

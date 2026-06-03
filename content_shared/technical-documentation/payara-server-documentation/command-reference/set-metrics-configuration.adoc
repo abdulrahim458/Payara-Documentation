@@ -2,7 +2,7 @@
 
 Modifies the configuration settings of the MicroProfile Metrics service.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,12 +17,12 @@ asadmin [asadmin-options] set-metrics-configuration [--help]
 [--virtualservers=<virtualserver-list>]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-metrics-configuration` provides a way to set the configuration of the metrics service of the targeted config.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -64,7 +64,7 @@ If defined, the endpoint will be assigned to a list of virtual servers specified
 +
 Otherwise, the endpoint will be assigned to all virtual servers available.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting the configuration of the Metrics service*
@@ -77,7 +77,7 @@ asadmin set-metrics-configuration --enabled=true --securityEnabled=true --dynami
 
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

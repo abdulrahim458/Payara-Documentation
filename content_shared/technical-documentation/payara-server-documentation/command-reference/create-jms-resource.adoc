@@ -2,7 +2,7 @@
 
 Creates a JMS resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -17,14 +17,14 @@ asadmin [asadmin-options] create-jms-resource [--help]
 jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-jms-resource` subcommand creates a Java Message Service (JMS) connection factory resource or a JMS destination resource.
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -80,13 +80,13 @@ NOTE: The resource is always created for the domain as a whole, but the`<resourc
 *`--force`*:
   Specifies whether the subcommand overwrites the existing JMS resource of the same name. The default value is `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
   The JNDI name of the JMS resource to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a JMS connection factory resource for durable subscriptions*
@@ -114,7 +114,7 @@ Administered object jms/MyQueue created.
 Command create-jms-resource executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

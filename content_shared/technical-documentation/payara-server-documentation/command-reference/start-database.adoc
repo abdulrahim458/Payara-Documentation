@@ -2,7 +2,7 @@
 
 Starts a standalone H2 database in server mode.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] start-database [--help]
 [--dbhome db-file-path]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `start-database` subcommand starts the H2 database server that is available for use with Payara Server. Use this subcommand only for working with applications deployed to the server.
@@ -34,7 +34,7 @@ The `start-database` subcommand starts the database process, even if it cannot w
 
 This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -61,7 +61,7 @@ The format of an option depends on whether the option has a name and a value or 
   * Otherwise, the `start-database` subcommand creates the files in the as-install`/databases` directory. +
   To create the database files at a particular location, you must set the `--dbhome` option.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Starting Java DB*
@@ -92,7 +92,7 @@ Starting database in the background.
 Log redirected to /opt/payara/glassfish/databases/h2.log.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 The exit status applies to errors in executing the `asadmin` utility.For information on database errors, see the `h2.log` file. This file is located in the directory you specify by using the `--dbhome` option when you run the `start-database` subcommand. If you did not specify `--dbhome`, the value of `H2_INSTALL` defaults to `as-install/h2`.

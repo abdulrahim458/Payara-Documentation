@@ -2,7 +2,7 @@
 
 Adds the default configuration of a module to `domain.xml`.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,14 +14,14 @@ asadmin [asadmin-options] create-module-config [--help]
 [service_name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-module-config` subcommand adds the default configuration of a module to `domain.xml`.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -45,13 +45,13 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Adds the default configuration to the specified instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *service_name*:
   The name of the module for which the default configuration is to be added.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Adding a Default Configuration to domain.xml*
@@ -64,7 +64,7 @@ asadmin> create-module-config web-container
 Command create-module-config executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

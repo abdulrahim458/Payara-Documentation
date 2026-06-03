@@ -3,7 +3,7 @@
 
 This page provides instructions on how to build the Payara Server's source code.
 
-[[prerequisites]]
+[#prerequisites]
 == Prerequisites
 
 To build and run Payara Server, your environment must be set up with the following:
@@ -17,14 +17,14 @@ To build and run Payara Server, your environment must be set up with the followi
 You can also optionally add the Maven _bin_ folder to the `PATH` environment variable as well, and the documentation will assume that you have done so.
 
 
-[[getting-the-source-code]]
+[#getting-the-source-code]
 == Getting the Source Code
 
 To download the Payara Server's source code, open a terminal or Git Bash window, navigate to the directory you would like the source code to be downloaded to, and run `git clone https://github.com/payara/Payara.git`.
 
 This will download the Payara Server's source code, and initialize **git**, in a directory called _Payara_.
 
-[[building-payara-server]]
+[#building-payara-server]
 == Building Payara Server
 
 With your Git Bash or terminal window, navigate into the downloaded _Payara_  directory, and run:
@@ -41,7 +41,7 @@ This will build Payara and run the integrated unit tests. To save a bit of time,
 mvn clean install -DskipTests
 ----
 
-[[building-payara-micro]]
+[#building-payara-micro]
 == Building Payara Micro
 
 Payara Micro is included as part of the default build. As it depends on modules of Payara Server, it can't be built on its own. To build Payara Micro:
@@ -58,7 +58,7 @@ After the build has completed, the Payara Micro jar can be found in the target d
 appserver/extras/payara-micro/payara-micro-distribution/target/
 ----
 
-[[building-docker-images]]
+[#building-docker-images]
 == Building Payara Docker Images
 
 The source code of the Official Docker Images is also integrated in the main Payara repository. In order to be able to build these images, a Docker Client needs to be installed on the machine you execute the Maven command. 
@@ -70,7 +70,7 @@ mvn clean install -PBuildDockerImages -pl :docker-images -amd
 
 The Maven build expects that a regular build of Payara is already executed as it searches for some artifacts in the Maven repository (like SNAPSHOT builds of the server)
 
-[[additional-build-profiles]]
+[#additional-build-profiles]
 == Additional Build Profiles
 
 There are a number of additional Maven build profiles:

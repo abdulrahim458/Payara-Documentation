@@ -2,7 +2,7 @@
 
 Removes a thread pool.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,12 +11,12 @@ asadmin [asadmin-options] delete-threadpool [--help]
 [--target target] threadpool-id
 ----
 
-[[description]]
+[#description]
 == Description
 
 Removes the thread pool with the specified ID. This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -36,13 +36,13 @@ Removes the thread pool with the specified ID. This subcommand is supported in r
   instance-name;;
     Deletes the thread pool for a particular instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *threadpool-id*:
   An ID for the work queue, for example, `thread-pool1`, `threadpool-2`, and so forth.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Thread Pool*
@@ -55,7 +55,7 @@ asadmin> delete-threadpool threadpool-1
 Command delete-threadpool executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

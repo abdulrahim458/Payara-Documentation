@@ -2,7 +2,7 @@
 
 Payara Platform {version} provides MicroProfile OpenTracing {mpOpenTracingVersion}
 
-[[background]]
+[#background]
 == Background
 
 The Open Tracing API was created to allow easier tracing of the flow of a request in microservices environment across service boundaries.
@@ -15,22 +15,22 @@ Support for MicroProfile Open Tracing is provided via compatibility layer for Op
 
 To achieve full compatibility in naming the spans with the spec a span convention needs to be configured as described in <<span-convention>>.
 
-[[text-and-binary-carriers]]
+[#text-and-binary-carriers]
 == Text and Binary Carriers Support
 
 The Payara Platform implementation of the `io.opentracing.Tracer` interface supports the following carriers:
 
 * `TextMap` carriers with `HTTP_HEADERS` and `TEXT_MAP` formats
 
-[[jax-ws-support]]
+[#jax-ws-support]
 == JAX-WS Support
 
 The Payara Platform's MicroProfile implementation supports tracing of requests that are handled by SOAP Web Services implemented via the JAX-WS API. Since JAX-WS is only supported on Payara Server Full Profile, this support is not covered on Payara Micro.
 
-[[opentracing-configuration]]
+[#opentracing-configuration]
 == Opentracing Configuration
 
-[[span-convention]]
+[#span-convention]
 === Span Naming Convention
 
 By default, span names for JAX-RS endpoints follow  recommendations set forth by OpenTelemetry Semantic Conventions. To have span names follow naming conventions defined by MicroProfile OpenTelemetry, following MicroProfile Config property must be set for application or globally for the server or domain:
@@ -42,7 +42,7 @@ payara.telemetry.span-convention=opentracing-class-method
 
 All valid values for the property are documented in xref:technical-documentation/microprofile/opentelemetry-and-opentracing.adoc#span-convention-settings[OpenTelemetry Span Convention Settings]
 
-[[alternative-implementation]]
+[#alternative-implementation]
 == Using Alternate Opentracing Implementations
 
 Currently, it is not possible to use other OpenTracing implementations in the Payara Platform.

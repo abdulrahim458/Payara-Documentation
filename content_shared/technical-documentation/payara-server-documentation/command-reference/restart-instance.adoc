@@ -2,7 +2,7 @@
 
 Restarts a running Payara Server instance.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] restart-instance [--help]
 [--debug={false|true}] instance-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `restart-instance` subcommand restarts a running Payara Server instance. This subcommand requires secure shell (SSH) to be configured on the machine where the domain administration server (DAS) is running and on the machine where the instance resides.
@@ -36,7 +36,7 @@ If different synchronization behavior is required, the instance must be stopped 
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -53,13 +53,13 @@ This subcommand is supported in remote mode only.
     The instance is restarted with JPDA debugging disabled. +
   The default is the current setting of this option for the instance that is being restarted.
 
-[[operands]]
+[#operands]
 == Operands
 
 *instance-name*:
   The name of the Payara Server instance to restart. If the instance is not running, the subcommand displays a warning message and attempts to start the instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Restarting a Payara Server Instance*
@@ -74,7 +74,7 @@ Instance pmdsa1 was restarted.
 Command restart-instance executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

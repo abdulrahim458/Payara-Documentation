@@ -6,7 +6,7 @@ To simplify the setup needed to use the SQS API from a standard Jakarta EE appli
 
 This section will show how to access these facilities and focus on key operations like creating, listing, and deleting queues.
 
-[[connection-factory-setup]]
+[#connection-factory-setup]
 == Connection Factory Setup
 
 To utilize the Amazon SQS API for managing SQS resources in a Jakarta EE application, you must define a connection factory using the JCA API (via the `@ConnectionFactoryDefinition` annotation). This involves specifying the connection factory type and resource adapter name.
@@ -47,12 +47,12 @@ In the above example, The `@ConnectionFactoryDefinition` annotation sets up the 
 
 Within the `try` block, an instance of `AmazonSQSConnection` instance is created using the connection factory method (`factory.createConnection()`).
 
-[[management-operations]]
+[#management-operations]
 == Management Operations
 
 Once an `com.amazonaws.services.sqs.AmazonSQSConnection` instance is retrieved, it can be used to perform various queue management operations, such as creating a new queue, listing all queues, and deleting an existing queue.
 
-[[creating-a-queue]]
+[#creating-a-queue]
 === Create Queue
 
 Creating a new Amazon SQS queue is a fundamental operation. The following code snippet demonstrates how to create a queue:
@@ -77,7 +77,7 @@ public class ManageSQSQueueBean {
 
 In this example, `MyNewQueue` is the name of the new queue. Additional parameters can be added to customize the queue creation.
 
-[[list-queues]]
+[#list-queues]
 === List Queues
 
 Listing queues provides insight into existing queues. The following code snippet demonstrates how to list all queues and those with a specific name prefix:
@@ -113,7 +113,7 @@ public class ManageSQSQueueBean {
 
 Listing queues aids in monitoring and managing existing queues, allowing for targeted actions.
 
-[[delete-queue]]
+[#delete-queue]
 === Delete Queue
 
 Deleting an existing SQS queue is a critical operation. Ensure the complete queue URL is provided in the `DeleteQueueRequest`. The following code snippet illustrates how to delete a queue:
@@ -140,7 +140,7 @@ public class ManageSQSQueueBean {
 
 CAUTION: Deleting a queue is an irreversible operation and results in the loss of all messages handled by the queue.
 
-[[list-queue-tags]]
+[#list-queue-tags]
 == List Queue Tags
 
 Listing queue tags provides metadata about a queue. The following code snippet demonstrates how to list tags for a specific queue:
@@ -166,7 +166,7 @@ public class ManageSQSQueueBean {
 
 Tags offer a way to categorize and organize queues based on specific attributes.
 
-[[purge-queue]]
+[#purge-queue]
 === Purge Queue
 
 Purging a queue deletes all messages within it. The following code snippet illustrates how to purge a queue:
@@ -191,7 +191,7 @@ public class ManageSQSQueueBean {
 
 CAUTION: Use this operation carefully, as it is irreversible, and it removes all messages from the specified queue.
 
-[[tag-untag-queue]]
+[#tag-untag-queue]
 === Tag and Untag Queue
 
 Adding and removing tags from a queue provides additional context. The following code snippet shows how to tag and untag a queue:
@@ -227,7 +227,7 @@ TIP: Tagging allows for easy classification, while untagging removes unnecessary
 
 Effectively managing Amazon SQS queues using the JCA API empowers developers to streamline message processing and maintain a well-organized messaging system.
 
-[[see-also]]
+[#see-also]
 == See Also
 
 For more detailed information on the Amazon SQS Java SDK, including additional features and advanced usage, refer to the link:https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sqs/SqsClient.html[official Javadocs^].

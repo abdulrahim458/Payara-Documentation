@@ -2,7 +2,7 @@
 
 Sets the logging attributes for one or more loggers.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] set-log-attributes [--help]
 attribute-name=attribute-value[:attribute-name=attribute-value]*
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-log-attributes` subcommand sets logging attributes for one or more loggers. The attributes you can set correspond to the attributes that are available in the `logging.properties` file for the domain.Depending on the attributes you set, a server restart may be necessary.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -30,7 +30,7 @@ This subcommand is supported in remote mode only.
 *`--target`*:
   The server domain, instance, or cluster for which logger attributes will be set. If this option is omitted, attributes are set for the default server.
 
-[[operands]]
+[#operands]
 == Operands
 
 *target*:
@@ -84,7 +84,7 @@ This subcommand is supported in remote mode only.
   `log4j.logger.org.hibernate.validator.util.Version`;;
     Default is `warn`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Setting the Maximum Number of Log History Files to Maintain*
@@ -101,7 +101,7 @@ These logging attributes are set for server.
 Command set-log-attributes executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

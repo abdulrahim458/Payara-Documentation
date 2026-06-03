@@ -2,7 +2,7 @@
 
 Manually recovers pending transactions.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] recover-transactions [--help]
 [--target target_server_name] server_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `recover-transactions` subcommand manually recovers pending transactions.
@@ -26,7 +26,7 @@ For a stand-alone server, do not use this subcommand to recover transactions aft
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -40,7 +40,7 @@ This subcommand is supported in remote mode only.
 *`--target`*:
   The target server that performs the recovery for the server that is specified by the server_name operand. The target server should be running.
 
-[[operands]]
+[#operands]
 == Operands
 
 *server_name*:
@@ -50,7 +50,7 @@ This subcommand is supported in remote mode only.
   situation, the `--transactionlogdir` and `--target` options should be omitted. If the server is not running, the `--target` option is
   required, and the `--transactionlogdir` option is also required if transaction logs are stored on a shared file system.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Recovering transactions on a running server*
@@ -69,7 +69,7 @@ Transaction recovered.
 Transaction recovered.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

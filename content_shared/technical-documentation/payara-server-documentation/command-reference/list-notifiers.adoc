@@ -2,7 +2,7 @@
 
 List all available notifiers to the server.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,12 +12,12 @@ asadmin [asadmin-options] list-notifiers
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 This command can be used to list all available notifiers.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -26,7 +26,7 @@ Options for the `asadmin` utility. For information about these options, see the 
 *`-?`*:
 Displays the help text for the subcommand.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 List current notifiers*
@@ -43,7 +43,7 @@ Available Notifier Services:
 Command list-notifiers executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

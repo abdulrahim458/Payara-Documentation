@@ -2,7 +2,7 @@
 
 Restarts the Domain Administration Server(DAS) of the specified domains.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,12 +13,12 @@ asadmin [asadmin-options] restart-domains [--help]
 [domain-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `restart-domains` subcommand can be used to restart the specified list of domains in the operand. This list must be specified as a comma separated string of values.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -34,13 +34,13 @@ Specifies how long to take for each domain to restart in seconds. If restarting 
 +
 The default value is `600`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-names*:
   The name of the domains you want to restart.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Restarting Domains*
@@ -60,7 +60,7 @@ Restarted domain testy
 Command restart-domains executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

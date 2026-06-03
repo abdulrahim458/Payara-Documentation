@@ -2,7 +2,7 @@
 
 Creates the named virtual server.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -18,7 +18,7 @@ asadmin [asadmin-options] create-virtual-server [--help]
 virtual-server-id
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-virtual-server` subcommand creates the named virtual server.
@@ -27,7 +27,7 @@ host addresses. If the application is available at two virtual servers, they sti
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -209,13 +209,13 @@ You can set this property for a specific web application. For  details, see xref
   standalone-instance-name;;
     Creates the virtual server on the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *virtual-server-id*:
   Identifies the unique ID for the virtual server to be created. This ID cannot begin with a number.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Virtual Server*
@@ -229,7 +229,7 @@ asadmin> create-virtual-server --hosts pigeon,localhost
 Command create-virtual-server executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

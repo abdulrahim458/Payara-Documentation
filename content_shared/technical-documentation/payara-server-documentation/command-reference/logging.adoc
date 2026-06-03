@@ -3,7 +3,7 @@
 
 Capturing information on Payara Server runtime events.
 
-[[description]]
+[#description]
 == Description
 
 Logging is the process by which Payara Server captures data about events that occur during Payara Server operation. Payara Server components and application components generate logging data, which is saved in the server log, typically `domain-dir/logs/server.log`.

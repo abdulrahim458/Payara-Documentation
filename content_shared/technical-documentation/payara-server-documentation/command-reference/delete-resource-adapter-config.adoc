@@ -2,7 +2,7 @@
 
 Deletes the resource adapter configuration.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] delete-resource-adapter-config [--help]
 raname
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-resource-adapter-config` subcommand deletes the configuration information for the connector module.
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -27,16 +27,16 @@ This command is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *raname*:
   Specifies the connector module name.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Deleting a Resource Adapter Configuration*
 
 This example deletes the configuration information for `ra1`.
@@ -47,7 +47,7 @@ asadmin> delete-resource-adapter-config ra1
 Command delete-resource-adapter-config executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

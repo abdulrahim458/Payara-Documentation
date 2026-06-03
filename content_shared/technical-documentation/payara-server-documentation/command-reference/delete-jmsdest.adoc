@@ -2,7 +2,7 @@
 
 Removes a JMS physical destination.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,14 +13,14 @@ asadmin [asadmin-options] delete-jmsdest [--help]
 dest_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-jmsdest` subcommand removes the specified Java Message Service (JMS) physical destination.
 
 This subcommand is supported in remote mode only. Remote `asadmin` subcommands require a running domain administration server (DAS).
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -41,13 +41,13 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
   instance-name;;
     Creates the physical destination from the specified server instance.
 
-[[operandds]]
+[#operandds]
 == Operands
 
 *dest_name*:
   The unique identifier of the JMS destination to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a physical destination*
@@ -60,7 +60,7 @@ asadmin> delete-jmsdest --desttype queue PhysicalQueue
 Command delete-jmsdest executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

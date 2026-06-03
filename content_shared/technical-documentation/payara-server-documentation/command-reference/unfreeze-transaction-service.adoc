@@ -2,7 +2,7 @@
 
 Resumes all suspended transactions.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] unfreeze-transaction-service [--help]
 [--target target]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `unfreeze-transaction-service` subcommand restarts the transaction subsystem and resumes all in-flight transactions. Invoke this subcommand
@@ -19,7 +19,7 @@ on an already frozen transaction subsystem.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -38,7 +38,7 @@ This subcommand is supported in remote mode only.
   instance_name;;
     Unfreezes the transaction service for a particular server instance.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Using unfreeze-transaction-service*
@@ -49,7 +49,7 @@ This subcommand is supported in remote mode only.
 Command unfreeze-transaction-service executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

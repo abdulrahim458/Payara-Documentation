@@ -2,7 +2,7 @@
 
 Creates a JavaMail session resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,14 +15,14 @@ asadmin [asadmin-options] create-javamail-resource [--help]
 [--description resource-description] [--property (name=value)[:name=value]*] jndi-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-javamail-resource` subcommand creates a JavaMail session resource.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -63,13 +63,13 @@ This subcommand is supported in remote mode only.
 *`--property`*:
   Optional attribute name/value pairs for configuring the JavaMail resource. The Payara Server-specific `mail-` prefix is converted to the standard mail prefix. The JavaMail API documentation lists the properties you might want to set.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi-name*:
   The JNDI name of the JavaMail resource to be created. It is a recommended practice to use the naming subcontext prefix `mail/` for JavaMail resources.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a JavaMail Resource*
@@ -83,7 +83,7 @@ asadmin> create-javamail-resource --mailhost localhost
 Command create-javamail-resource executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

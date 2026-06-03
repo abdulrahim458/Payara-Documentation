@@ -2,7 +2,7 @@
 
 Removes a managed thread factory resource with the specified JNDI name.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] delete-managed-thread-factory [--help]
 managed_thread_factory_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-managed-thread-factory` subcommand removes a managed thread
@@ -20,7 +20,7 @@ factory resource with the specified JNDI name.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -43,13 +43,13 @@ cluster.
 instance_name;;
 Deletes the resource from the specified server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *managed_thread_factory_name*:
 The JNDI name of the resource to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Managed Thread Factory Resource*
@@ -63,7 +63,7 @@ Managed thread factory concurrent/Factory1 deleted successfully.
 Command delete-managed-thread-factory executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

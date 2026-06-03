@@ -2,7 +2,7 @@
 
 Enables administrators to create a JACC provider that can be used by third-party authorization modules for applications running in Payara Server.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -14,7 +14,7 @@ asadmin [asadmin-options] create-jacc-provider [--help]
 [--target target] jacc-provider-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-jacc-provider` subcommand creates a JSR-115—compliant Java Authorization Contract for Containers (JACC) provider that can be used for authorization of applications running in Payara. The JACC provider is created as a `jacc-provider` element within the `security-service` element in the domain's `domain.xml` file.
@@ -26,7 +26,7 @@ You can create any number of JACC providers within the `security-service` elemen
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
@@ -55,13 +55,13 @@ If an option has a short option name, then the short option precedes the long op
   instance_name;;
     Creates the JACC provider on a specified server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jacc-provider-name*:
   The name of the provider used to reference the `jacc-provider` element in `domain.xml`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a JACC Provider*
@@ -78,7 +78,7 @@ testJACC
 Command create-jacc-provider executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

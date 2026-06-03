@@ -2,7 +2,7 @@
 
 Adds the administered object with the specified JNDI name for a resource adapter.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -18,14 +18,14 @@ asadmin [asadmin-options] create-admin-object [--help]
 jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-admin-object` subcommand creates the administered object with the specified JNDI name and the interface definition for a resource adapter.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -59,16 +59,16 @@ NOTE: The resource is always created for the domain as a whole, but the `resourc
 *`--property`*:
   Description of the name/values pairs for configuring the resource. Dependent on the resource adapter. For JMS properties, see xref:technical-documentation/payara-server-documentation/command-reference/create-jms-resource.adoc#create-jms-resource[`create-jms-resource`] for JMS destination resources.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
   JNDI name of the administered object to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Creating an Administered Object*
 
 In this example, `jmsra` is a system resource adapter with the admin object interfaces, `jakarta.jms.Queue` and `jakarta.jms.Topic`.
@@ -81,7 +81,7 @@ asadmin> create-admin-object --restype jakarta.jms.Queue
 Command create-admin-object executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -5,10 +5,10 @@ Payara Micro has a Maven plugin which can start and stop Payara Micro and create
 
 The plugin requires JDK 8 or higher and the latest version is currently `1.4.0`
 
-[[goals]]
+[#goals]
 == Configurable Goals
 
-[[bundle-goal]]
+[#bundle-goal]
 === `bundle`
 
 *Aim*: This goal bundles the attached project's artifact into an Uber JAR with the specified configurations. By default, this goal is attached to the install phase.
@@ -129,7 +129,7 @@ Additionally, boot command scripts will be included if they exist in `src/main/r
 *`post-boot-commands.txt`*: Provides a file of asadmin commands to run after booting the server.
 *`post-deploy-commands.txt`*: Provides a file of asadmin commands to run after all deployments have completed.
 
-[[start-goal]]
+[#start-goal]
 === `start`
 
 *Aim*: This goal starts Payara Micro with the specified configuration.
@@ -306,7 +306,7 @@ NOTE: If you want to execute the payara-micro plugin along with maven-toolchains
 |Refactors log format for improved readability.
 |===
 
-[[stop-goal]]
+[#stop-goal]
 === `stop`
 *Aim*: This goal stops Payara Micro with the specified configuration. By default, this goal tries to find the currently executing Payara Micro instance by checking the running JAR.
 
@@ -382,7 +382,7 @@ NOTE: If you want to execute the payara-micro plugin along with maven-toolchains
 |Defines the maximum timeout in milliseconds to wait for the process of Payara Micro instance to stop.
 |====
 
-[[reload-goal]]
+[#reload-goal]
 === `reload`
 
 *Aim*: This goal reloads the Payara Micro application with the specified configuration. By default, this goal performs the vanilla deployment of the application without restarting the Payara Micro instance.
@@ -428,7 +428,7 @@ This can lead to significant savings of time when an application is redeployed a
 |Persists session state across multiple re-deployments.
 |===
 
-[[dev-goal]]
+[#dev-goal]
 === `dev`
 
 *Aim*: The dev goal is designed to streamline development by enabling `deployWar`, `exploded`, `autoDeploy`, `liveReload`, `keepState`, and `trimLog` to true, which facilitating auto compilation and deployment on saving files resulting in rapid compilation, and deployment for an efficient development workflow.
@@ -446,7 +446,7 @@ The `dev` goal is an extended goal of `start` and is pre-configured for developi
 mvn payara-micro:start -DautoDeploy=true -DliveReload=true -DdeployWar=true -Dexploded=true -DkeepState -DtrimLog=true
 ----
 
-[[dev-mode-features]]
+[#dev-mode-features]
 ==== Features in Dev Mode
 
 . *Auto Deploy*: The AutoDeploy feature enables automatic compilation and deployment of the application upon saving files within the project structure. Enabled by setting `autoDeploy=true`.
@@ -474,7 +474,7 @@ The LiveReload feature automatically refreshes the browser upon redeployment.
 
 NOTE: All listed features are enabled by default in the `dev` mode.
 
-[[using-toolchains]]
+[#using-toolchains]
 === Using Toolchains
 
 The Maven Toolchains provide a way for plugins to discover what JDK (or other tools) are to be used during the build and Payara Micro Maven Plugin also supports using toolchains with its configuration.

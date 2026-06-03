@@ -2,7 +2,7 @@
 
 Removes a network listener.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] delete-http-listener [--help]
 listener-id
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-http-listener` subcommand removes the specified network listener.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -38,16 +38,16 @@ This subcommand is supported in remote mode only.
   standalone-instance-name;;
     Deletes the network listener from the specified standalone server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *listener-id*:
   The unique identifier for the network listener to be deleted.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Using the delete-http-listener subcommand*
 
 The following command deletes the network listener named `sampleListener`:
@@ -58,7 +58,7 @@ asadmin> delete-http-listener sampleListener
 Command delete-http-listener executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Enables secure admin (if it is not already enabled), optionally changing the alias used for DAS-to-instance admin messages or the alias used for instance-to-DAS admin messages.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] enable-secure-admin [--help]
 [--instancealias=alias]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `enable-secure-admin` subcommand causes the DAS and the instances in the domain to use SSL certificates for encrypting the messages they send to each other. This subcommand also allows the DAS to accept administration messages from remote admin clients such as the asadmin utility and IDEs.
@@ -25,7 +25,7 @@ The `enable-secure-admin` subcommand fails if any administrative user in the dom
 
 Alternatively, you can use the `enable-secure-admin-internal-user` subcommand to cause the servers to identify themselves using a secure admin user name and password.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -38,7 +38,7 @@ Alternatively, you can use the `enable-secure-admin-internal-user` subcommand to
 *`--instancealias`*:
   The alias that refers to the SSL/TLS certificate on the instances. This alias is used by the instances to identify themselves to the DAS. The default value is `glassfish-instance`.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Enabling `secure admin` for a domain*
@@ -54,7 +54,7 @@ default-config
 Command enable-secure-admin executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

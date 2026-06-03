@@ -2,7 +2,7 @@
 
 Creates an Asadmin CLI autocompletion script for bash.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin generate-bash-autocomplete [--help]
 [file]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The created file will be located in the server’s host and not the client. If they are on different hosts, then the file will be needed to copied from the server to the client.
@@ -22,7 +22,7 @@ TIP: You can add the resulting file to your bash path by adding source `path/to/
 
 This means that you can run asadmin commands by typing asadmin in a terminal, and you can use double-tab to autocomplete a command, similar to other bash commands.
 
-[[options]]
+[#options]
 == Options
 
 *`--help`*:
@@ -40,10 +40,10 @@ This option will include local asadmin commands.
 +
 The default value is `false`.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Creating an asadmin autocompletion script for bash.*
 
@@ -56,7 +56,7 @@ Written bash autocomplete file to /export/payara7/glassfish/bin/bash_autocomplet
 Command generate-bash-autocomplete executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

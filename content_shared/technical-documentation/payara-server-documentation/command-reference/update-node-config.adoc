@@ -2,7 +2,7 @@
 
 Updates the configuration data of a node.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] update-node-config [--help]
 node-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `update-node-config` subcommand updates the configuration data of a node.
@@ -28,7 +28,7 @@ the node. You may run this subcommand from any host that can contact the DAS.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -44,13 +44,13 @@ This subcommand is supported in remote mode only.
   The path to the directory that is to contain Payara Server instances that are created on the node. If a relative path is
   specified, the path is relative to the as-install directory, where as-install is the base installation directory of the Payara Server software on the host.
 
-[[operands]]
+[#operands]
 == Operands
 
 *node-name*:
   The name of the node to update. The node must exist. Otherwise, an error occurs.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Updating the Host That a Node Represents*
@@ -63,7 +63,7 @@ asadmin> update-node-config --nodehost hsj04 sj04
 Command update-node-config executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

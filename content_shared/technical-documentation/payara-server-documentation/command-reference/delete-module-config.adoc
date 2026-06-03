@@ -2,7 +2,7 @@
 
 Removes the configuration of a module from `domain.xml`.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,14 +12,14 @@ asadmin [asadmin-options] delete-module-config [--help]
 service_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-module-config` subcommand removes the configuration of a module from `domain.xml` and causes the module to use the default configuration included in the module.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -39,13 +39,13 @@ This subcommand is supported in remote mode only.
   instance-name;;
     Deletes the configuration from the specified instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *service_name*:
   The name of the module for which configuration is to be removed.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Default Configuration From domain.xml*
@@ -58,7 +58,7 @@ asadmin> delete-module-config web-container
 Command delete-module-config executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

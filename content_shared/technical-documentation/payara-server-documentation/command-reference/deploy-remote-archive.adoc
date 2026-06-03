@@ -2,7 +2,7 @@
 
 Deploys the specified component from a remote location.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -39,7 +39,7 @@ endif::[]
 [url|(groupId,artefactId,versionNumber)]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `deploy-remote-archive` subcommand deploys applications to the server and works in exactly the same as the xref:technical-documentation/[`deploy`] subcommand, but instead of accepting a local file path as its operand this command deploys an artifact that is available on a remote location via:
@@ -51,7 +51,7 @@ This subcommand is supported in remote mode only.
 
 WARNING: Although the command can accept a set Maven GAV coordinates, it does not actually make use of Maven, and so artefacts will not be saved into your local Maven repository.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -200,7 +200,7 @@ https://nexus.payara.fish/payara-artifacts,https://google.co.uk
 NOTE:  If an application artifact matching the GAV coordinates exists on multiple repositories, the first artifact found will be deployed. The order that the repositories are searched is the order that you specify them in. +
 For example, if this option's value is _repo1,repo2_, the order that the repositories would be searched is: _Maven Central_ -> _repo1_ -> _repo2_.
 
-[[operands]]
+[#operands]
 == Operands
 
 *url|(groupId,artifactId,versionNumber)*:
@@ -211,7 +211,7 @@ This operand supports 2 type of values:
 +
 TIP: By default, the command will look for a matching artifact in Maven Central. Additional Maven repositories can be configured using the `--additionalRepositories` option
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deploying an Application hosted on a public HTTP(S) location*
@@ -250,7 +250,7 @@ Application deployed successfully with name clusterjsp.
 Command deploy-remote-archive executed successfully
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

@@ -2,7 +2,7 @@
 
 Deletes a domain.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,14 +11,14 @@ asadmin [asadmin-options] delete-domain [--help]
 [--domaindir domaindir] domain-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-domain` subcommand deletes the specified domain. The domain must already exist and must be stopped.
 
 This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -29,13 +29,13 @@ This subcommand is supported in local mode only.
 *`--domaindir`*:
   The directory where the domain to be deleted is located. If specified, the path must be accessible in the file system. If not specified, the domain under the domain root directory, which defaults to as-install`/domains`, is deleted.
 
-[[operands]]
+[#operands]
 == Operands
 
 *domain-name*:
   The unique name of the domain you want to delete.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Deleting a Domain*
@@ -60,7 +60,7 @@ Domain sampleDomain deleted
 Command delete-domain executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

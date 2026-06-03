@@ -2,7 +2,7 @@
 
 Registers a JNDI resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -16,14 +16,14 @@ asadmin [asadmin-options] create-jndi-resource [--help]
 jndi-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-jndi-resource` subcommand registers a JNDI resource.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -58,13 +58,13 @@ NOTE: The resource is always created for the domain as a whole, but the `resourc
 *`--property`*:
   Optional properties for configuring the resource. Each property is specified as a name-value pair. The available properties are specific to the implementation that is specified by the `--factoryclass` option and are used by that implementation. Payara Server itself does not define any properties for configuring a JNDI resource.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi-name*:
   The unique name of the JNDI resource to be created.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a JNDI Resource*
@@ -82,7 +82,7 @@ JNDI resource my-jndi-resource created.
 Command create-jndi-resource executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

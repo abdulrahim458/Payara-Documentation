@@ -22,7 +22,7 @@ java -jar payara-micro.jar --deploy activemq-rar-5.14.5.rar --deploy myapp.war
 
 NOTE: When deploying multiple files to Payara Micro, the order of `--deploy` options is respected so, in the above example, the ActiveMQ RAR will be deployed before the `myapp.war` application.
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * xref:technical-documentation/payara-micro-documentation/extensions/jca-support.adoc[User Guide: Using Payara Micro as a JMS Client]

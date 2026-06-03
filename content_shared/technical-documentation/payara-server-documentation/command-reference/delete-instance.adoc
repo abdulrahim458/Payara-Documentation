@@ -2,7 +2,7 @@
 
 Deletes a Payara Server instance.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] delete-instance [--help]
 instance-name 
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `delete-instance` subcommand deletes a Payara Server instance. This subcommand requires the secure shell (SSH) to be configured on the host where the domain administration server (DAS) is running and on the host that is represented by the node where the instance resides.
@@ -35,7 +35,7 @@ If a standalone instance is deleted, the instance's standalone configuration is 
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -44,16 +44,16 @@ This subcommand is supported in remote mode only.
 *`-?`*:
   Displays the help text for the subcommand.
 
-[[operands]]
+[#operands]
 == Operands
 
 *instance-name*:
   The name of the instance to delete.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 *Example 1 Deleting a Payara Server Instance*
 
 This example deletes the Payara Server instance `pmdsainst`.
@@ -65,7 +65,7 @@ asadmin> delete-instance pmdsainst
 Command delete-instance executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

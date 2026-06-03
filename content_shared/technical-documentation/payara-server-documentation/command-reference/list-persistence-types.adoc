@@ -2,7 +2,7 @@
 
 Lists registered persistence types for HTTP sessions and SFSB instances.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -11,7 +11,7 @@ asadmin [asadmin-options] list-persistence-types [--help]
 --type={web|ejb}
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `list-persistence-types` subcommand lists registered persistence types for HTTP sessions and stateful session bean (SFSB) instances. The built-in persistence types are `memory`, `file`, and `hazelcast`. The`memory` type does not apply to SFSB instances.
@@ -42,7 +42,7 @@ c1-config.availability-service.ejb-container-availability.sfsb-ha-persistence-ty
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -55,7 +55,7 @@ This subcommand is supported in remote mode only.
   * `web` — Lists persistence types for HTTP sessions.
   * `ejb` — Lists persistence types for SFSB instances.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Listing Persistence Types for HTTP Sessions*
@@ -71,7 +71,7 @@ hazelcast
 Command list-persistence-types executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

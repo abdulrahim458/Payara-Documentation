@@ -20,7 +20,7 @@ TIP: The diagnostics tool can be manually upgraded to a newer version in case it
 
 The tool is also updated at every release of Azul Payara.
 
-[[usage]]
+[#usage]
 == Usage
 
 The diagnostic tool can be used through the xref:technical-documentation/payara-server-documentation/command-reference/collect-diagnostics.adoc#collect-diagnostics[`collect-diagnostics`] Asadmin CLI subcommand, which will collect the relevant data and store it locally in a ZIP bundle that can be used for troubleshooting purposes when raising support tickets on the support portal.
@@ -55,7 +55,7 @@ deploymentGroup1
 
 Where the data is grouped in sub-folders segregated in all targets (deployment groups, clusters and instances) scanned by the command.
 
-[[example]]
+[#example]
 === Example
 
 The following example shows how to collect the data of all instances that belong to the `deploymentGroup1` deployment group in the `mydomain` domain:
@@ -86,7 +86,7 @@ Collecting Heap Dump from instance1
 Command collect-diagnostics executed successfully.
 ----
 
-[[nodas-collection]]
+[#nodas-collection]
 == Collect Diagnostics with an Unavailable DAS
 
 Diagnostics can be collected directly from a running instance in case its corresponding DAS it's not available by specifying the admin port of the target instance (see xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#options[Asadmin Options]), like this:

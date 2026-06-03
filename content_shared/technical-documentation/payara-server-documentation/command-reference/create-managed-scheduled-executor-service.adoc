@@ -2,7 +2,7 @@
 
 Creates a managed scheduled executor service resource.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -24,14 +24,14 @@ asadmin [asadmin-options] create-managed-scheduled-executor-service [--help]
         jndi_name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `create-managed-scheduled-executor-service` subcommand creates a managed scheduled executor service resource.
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -88,13 +88,13 @@ cluster.
 instance_name;;
 Creates the resource for the specified server instance.
 
-[[operands]]
+[#operands]
 == Operands
 
 *jndi_name*:
 The JNDI name of this resource.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Creating a Managed Scheduled Executor Service Resource*
@@ -108,7 +108,7 @@ Managed scheduled executor service concurrent/myScheduledExecutor created succes
 Command create-managed-scheduled-executor-service executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

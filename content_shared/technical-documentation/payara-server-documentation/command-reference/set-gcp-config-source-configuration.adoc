@@ -2,7 +2,7 @@
 
 Sets the configuration for the GCP secrets configuration source.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,12 +15,12 @@ asadmin [asadmin-options] set-gcp-config-source-configuration [--help]
 [--enabled={true|false}]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `set-gcp-config-source-configuration` provides configuration options for the config source which fetches data from GCP Secrets Manager.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -53,7 +53,7 @@ Configure the config source dynamically, which will not require a restart.
 *`--enabled`*:
 Enables or disables the config source.
 
-[[examples]]
+[#examples]
 == Example
 
 *Example 1 Setting the configuration of the GCP Config Source*
@@ -65,7 +65,7 @@ This example configures the GCP Config Source.
 asadmin set-gcp-config-source-configuration --dynamic true --enabled true --jsonKeyFile /path/to/token/file.json --projectName project-name
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

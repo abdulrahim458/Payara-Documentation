@@ -3,7 +3,7 @@
 
 This chapter describes how to use the Jakarta Faces (JSF) API.
 
-[[introducing-jakarta-faces]]
+[#introducing-jakarta-faces]
 == Introducing Jakarta Faces
 
 Jakarta Faces is a server-side component framework for creating diverse Java technology–based web applications for browser-focused environments.
@@ -16,7 +16,7 @@ Jakarta Faces consists of the following:
 
 Jakarta Faces provides a well-defined programming model and various *tag libraries*. These tag libraries contain *tag handlers* that implement component tags. These features significantly ease the burden of creating and maintaining web applications with server-side user interfaces.
 
-[[jakarta-faces-applications]]
+[#jakarta-faces-applications]
 === Jakarta Faces Applications
 
 The functionality provided by a Jakarta Faces application is similar to that of any other Java web-based application. A typical Jakarta Faces application includes the following parts.
@@ -30,24 +30,24 @@ The functionality provided by a Jakarta Faces application is similar to that of 
 * _(Optional)_ A set of custom objects, which can include custom components, validators, converters, or listeners.
 * _(Optional)_ A set of custom tags for representing custom or complex objects on the page.
 
-[[configurable-jsf-options]]
+[#configurable-jsf-options]
 == Configurable JSF Options
 
 This section documents specific configuration settings that are not available in the standard deployment descriptors or configuration files described above as part of the Jakarta Faces API.
 
-[[parallel-initialization]]
+[#parallel-initialization]
 === Parallel Initialization
 
 It is possible to specify a Payara Platform specific JSF context parameter in the `web.xml` deployment descriptor, named `fish.payara.faces.enableParallelInit` to provide parallel initialization benefits to the application in question.
 
-[[parallel-initialization-usage]]
+[#parallel-initialization-usage]
 ==== Usage
 
 When the `fish.payara.faces.enableParallelInit` context parameter is set to `true` some of the internal initialisation of Mojarra (the JSF implementation Payara Server uses) is performed in parallel.
 
 To this effect, this the platform fork/join thread pool is used, which is the same pool used for processing JDK 8 Streams in parallel.
 
-[[parallel-initialization-example]]
+[#parallel-initialization-example]
 ==== Example
 
 Here's an example that sets the option to `true` in `web.xml`:
@@ -74,7 +74,7 @@ This is an existing Mojarra-specific parameter to also enable parallel initialis
 
 IMPORTANT: As a Payara Platform specific implementation this will use the default Platform Concurrency executor if there is one, if not it will create a single use executor with 5 threads.
 
-[[use-bundled-jsf]]
+[#use-bundled-jsf]
 == Using an Alternative Jakarta Faces Implementation
 
 As a special case of how the classloader hierarchy can be modified (see xref:technical-documentation/application-development/class-loaders.adoc#configuring-delegation[configuring classloading delegation]), the Payara Platform allows the use of a Jakarta Faces implementation that is bundled on a web application.

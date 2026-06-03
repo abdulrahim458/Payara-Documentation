@@ -3,7 +3,7 @@
 
 The data set that determines how a Payara Server instance operates.
 
-[[description]]
+[#description]
 == Description
 
 The configuration of Payara Server is the data set that determines how it operates. Parts of this configuration determine the operation of specific parts of Payara Server, such as the following:
@@ -21,7 +21,7 @@ The hierarchical structure of the configuration is explained in the dotted names
 
 To list the structure of all or part of the configuration, use the `list` subcommand. To view the value of one or more attributes or properties, use the `get` subcommand. To change the value of an attribute or property, use the `set` subcommand.
 
-[[see-also]]
+[#see-also]
 == See Also
 
 * xref:technical-documentation/payara-server-documentation/command-reference/get.adoc#get[`get`],

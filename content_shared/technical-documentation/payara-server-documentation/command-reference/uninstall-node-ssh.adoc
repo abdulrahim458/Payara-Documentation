@@ -2,7 +2,7 @@
 
 Uninstalls Payara Server software from specified SSH-enabled hosts.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -15,7 +15,7 @@ asadmin [asadmin-options] uninstall-node-ssh [--help]
 host-list
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `uninstall-node-ssh` subcommand uninstalls Payara Server software from the hosts that are specified as the operand of the
@@ -43,7 +43,7 @@ The subcommand does not modify the configuration of the domain administration se
 
 This subcommand is supported in local mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -82,13 +82,13 @@ This subcommand is supported in local mode only.
     The subcommand uninstalls the Payara Server software from the host even if a user-defined node resides on the host. +
     If the `--force` option is `true`, the subcommand removes the entire content of the parent of the base installation directory.
 
-[[operands]]
+[#operands]
 == Operands
 
 *host-list*:
   A space-separated list of the names of the hosts from which the Payara Server software is to be uninstalled.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Uninstalling Payara Server Software From the Default Location*
@@ -127,7 +127,7 @@ Force removing directory /export/payara7/glassfish
 Command uninstall-node-ssh executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

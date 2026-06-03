@@ -5,14 +5,14 @@ This chapter describes how web applications are supported in the Payara Platform
 
 For general information about web applications, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#the-web-tier[The Web Tier^]" in The Jakarta EE Tutorial.
 
-[[using-servlets]]
+[#using-servlets]
 == Using Servlets
 
 Both Payara Server and Payara Micro supports the Jakarta Servlet specification. For information about using the Jakarta Servlet API, see the specification at https://jakarta.ee/specifications/servlet/.
 
 This section describes how to create effective servlets to control application interactions running on Payara Server or Micro, including standard-based servlets. In addition, this section describes additional features introduced in the Payara Platform.
 
-[[caching-servlet-results]]
+[#caching-servlet-results]
 === Caching Servlet Results
 
 Payara Server and Micro can cache the results of invoking a servlet, a JSP, or any URL pattern to make subsequent invocations of the same servlet, JSP, or URL pattern faster. The server runtime caches the request results for a specific amount of time. In this way, if another data call occurs, the server runtime can return the cached data instead of performing the operation again.
@@ -30,7 +30,7 @@ WARNING: A servlet that uses caching is not portable.
 
 For information about JSP caching, see xref:#jsp-caching[JSP Caching].
 
-[[caching-features]]
+[#caching-features]
 ==== Caching Features
 
 The Payara Platform has the following web application response caching capabilities:
@@ -59,7 +59,7 @@ For example, a response from `/garden/catalog?category=roses` is different from 
 
 * Results produced by resources that are the target of a `RequestDispatcher.include()` or `RequestDispatcher.forward()` call are cached if caching has been enabled for those resources. For details, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#cache-mapping[cache-mapping]" and "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#dispatcher[dispatcher] in the Payara Server Application Deployment section.
 
-[[default-cache-configuration]]
+[#default-cache-configuration]
 ==== Default Cache Configuration
 
 If you enable caching but do not provide any special configuration for a servlet or JSP page, the default cache configuration is as follows:
@@ -73,7 +73,7 @@ If you enable caching but do not provide any special configuration for a servlet
 * Key generation concatenates the servlet path with key field values, if any are specified.
 * Results produced by resources that are the target of a `RequestDispatcher.include()` or `RequestDispatcher.forward()` call are never cached.
 
-[[caching-example]]
+[#caching-example]
 ==== Caching Example
 
 Here is an example cache element in the `payara-web.xml` file:
@@ -124,7 +124,7 @@ For more information about the `glassfish-web.xml`/`payara-web.xml` caching sett
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-[[the-cachekeygenerator-interface]]
+[#the-cachekeygenerator-interface]
 ==== The Cachekeygenerator Interface
 
 The built-in default `CacheHelper` implementation allows web applications to customize the key generation. An application component (in a servlet or JSP) can set up a custom `CacheKeyGenerator` implementation as an attribute in the `ServletContext`.
@@ -136,19 +136,19 @@ For more information, see "xref:technical-documentation/payara-server-documentat
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-[[about-the-servlet-engine]]
+[#about-the-servlet-engine]
 === About the Servlet Engine
 
 Servlets exist in and are managed by the servlet engine in Payara Server or Micro. The servlet engine is an internal container that handles all servlet meta functions. These functions include instantiation, initialization, destruction, access from other components, and configuration management.
 
-[[instantiating-and-removing-servlets]]
+[#instantiating-and-removing-servlets]
 ==== Instantiating and Removing Servlets
 
 After the servlet engine instantiates the servlet, the servlet engine calls the servlet's `init` method to perform any necessary initialization. You can override this method to perform an initialization function for the servlet's life, such as initializing a counter.
 
 When a servlet is removed from service, the servlet engine calls the `destroy` method in the servlet so that the servlet can perform any final tasks and deallocate resources. You can override this method to write log messages or clean up any lingering connections that won't be caught in garbage collection.
 
-[[request-handling]]
+[#request-handling]
 ==== Request Handling
 
 When a request is made, the server runtime hands the incoming data to the servlet engine. The servlet engine processes the request's input data, such as form data, cookies, session information, and URL name-value pairs, into an `HttpServletRequest` request object type.
@@ -161,7 +161,7 @@ Since the routing takes place in the `service` method, you generally do not over
 
 To perform the tasks to answer a request, override the `service` method for generic servlets, and the `doGet` or `doPost` methods for HTTP servlets. Very often, this means accessing EJB components or CDI beans to perform business operations, then collating the information in the `request` object or in a JDBC `ResultSet` object.
 
-[[using-jakarta-server-pages]]
+[#using-jakarta-server-pages]
 == Using Jakarta Server Pages
 
 Payara Server and Micro supports the following features:
@@ -172,21 +172,21 @@ Payara Server and Micro supports the following features:
 
 This section describes how to use Jakarta Server Pages (JSP files) as page templates in a web application.
 
-[[jsp-tag-libraries-and-standard-portable-tags]]
+[#jsp-tag-libraries-and-standard-portable-tags]
 === JSP Tag Libraries and Standard Portable Tags
 
 Payara Server and Micro supports tag libraries and standard portable tags. For more information, see the https://jakarta.ee/specifications/tags/[Jakarta Standard Tag Library (JSTL) specification^].
 
 NOTE: The standard tag libraries are automatically available to all web applications.
 
-[[jsp-caching]]
+[#jsp-caching]
 === JSP Caching
 
 JSP caching lets you cache tag invocation results within the servlet engine. Each view can be cached using different cache criteria. For example, suppose you have invocations to view stock quotes, weather information, and so on. The stock quote result can be cached for 10 minutes, the weather report result for 30 minutes, and so on.
 
 For more information about response caching as it pertains to servlets, see xref:#caching-servlet-results[Caching Servlet Results].
 
-[[enabling-jsp-caching]]
+[#enabling-jsp-caching]
 ==== Enabling JSP Caching
 
 To globally enable JSP caching, set the `jspCachingEnabled` property to `true`. The default is `false`. For example:
@@ -215,7 +215,7 @@ Refer to the caching tags in JSP files as follows:
 
 Subsequently, the cache tags are available as `<${prefix}:cache>` and `<${prefix}:flush>`. For example, if your prefix is `mypfx`, the cache tags are available as `<mypfx:cache>` and `<mypfx:flush>`.
 
-[[caching-scope]]
+[#caching-scope]
 ==== Caching Scope
 
 JSP caching is available in three different scopes: `request`, `session`, and `application`. The default is `application`. To use a cache in `request` scope, a web application must configure the `com.sun.appserv.web.taglibs.cache.CacheRequestListener` as a web listener in the application's `web.xml` deployment descriptor, as follows:
@@ -238,14 +238,14 @@ Likewise, for a web application to utilize a cache in `session` scope, it must c
 
 To utilize a cache in `application` scope, a web application doesn't need to configure any extra listener. The `com.sun.appserv.web.taglibs.cache.CacheContextListener` is already specified in the `jspcachtags.tld` file.
 
-[[the-cache-tag]]
+[#the-cache-tag]
 ==== The `cache` Tag
 
 The `cache` tag caches the body between the beginning and ending tags according to the attributes specified. The first time the tag is encountered, the body content is executed and cached. Each subsequent time it is run, the cached content is checked to see if it needs to be refreshed and if so, it is executed again, and the cached data is refreshed.
 
 Otherwise, the cached data in the page is served.
 
-[[attributes-of-cache]]
+[#attributes-of-cache]
 ==== Attributes of `cache`
 
 The following table describes attributes for the `cache` tag.
@@ -277,7 +277,7 @@ See xref:#caching-scope[Caching Scope].
 
 |===
 
-[[example-of-cache]]
+[#example-of-cache]
 ==== Example of `cache` Tag Annotation Usage
 
 The following example represents a cached JSP file:
@@ -302,12 +302,12 @@ The following example represents a cached JSP file:
 </mypfx:cache>
 ----
 
-[[the-flush-tag]]
+[#the-flush-tag]
 ==== The `flush` Tag
 
 Forces the cache to be flushed. If a `key` is specified, only the entry with that key is flushed. If no key is specified, the entire cache is flushed.
 
-[[attributes-of-flush]]
+[#attributes-of-flush]
 ==== Attributes of `flush`
 
 The following table describes the attributes used for the `flush` tag.
@@ -327,7 +327,7 @@ If no key is specified, a number is generated according to the position of the t
 See xref:#caching-scope[Caching Scope]
 |===
 
-[[examples-of-flush]]
+[#examples-of-flush]
 ==== Examples of `flush`
 
 To flush the entry with `key="foobar"`:
@@ -346,7 +346,7 @@ To flush the entire cache:
 </c:if>
 ----
 
-[[options-for-compiling-jsp-files]]
+[#options-for-compiling-jsp-files]
 === Options for Compiling JSP Files
 
 Payara Server provides the following ways of compiling JSP source files into servlets:
@@ -355,15 +355,15 @@ Payara Server provides the following ways of compiling JSP source files into ser
 * The `asadmin deploy` command has a `--precompilejsp` option.
 * The `jspc` command line tool allows you to precompile JSP files at the command line.
 
-[[creating-and-managing-sessions]]
+[#creating-and-managing-sessions]
 == Creating and Managing Sessions
 
 This section describes how to create and manage HTTP sessions that allows users and transaction information to persist between interactions.
 
-[[configuring-sessions]]
+[#configuring-sessions]
 === Configuring Sessions
 
-[[http-sessions-cookies-and-url-rewriting]]
+[#http-sessions-cookies-and-url-rewriting]
 ==== HTTP Sessions, Cookies, and URL Rewriting
 
 To configure whether and how HTTP sessions use cookies and URL rewriting, edit the `session-properties` and `cookie-properties elements in the `glassfish-web.xml` or `payara-web.xml` file for an individual web application. For more details about the properties you can configure, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#session-properties[session-properties]" "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#cookie-properties[cookie-properties]" and in the Payara Server Application Deployment section.
@@ -374,7 +374,7 @@ It is recommended to use payara-web.xml instead.
 For information about configuring default session properties for the
 entire web container, see xref:#using-the-default-web.xml-file[Using the `default-web.xml` File].
 
-[[saving-sessions-during-redeployment]]
+[#saving-sessions-during-redeployment]
 ==== Saving Sessions During Redeployment
 
 Whenever an application redeployment is done, the sessions at that transit time become invalid unless you use the `--keepstate=true` option of the `asadmin redeploy` command. For example:
@@ -399,7 +399,7 @@ The new class loader of the redeployed application is used to deserialize any se
 
 For more information about class loaders, see xref:technical-documentation/application-development/class-loaders.adoc[Class Loaders].
 
-[[logging-session-attributes]]
+[#logging-session-attributes]
 ==== Logging Session Attributes
 
 You can write specific session attribute values to the HTTP service access log. The access log format placeholder `%session.name%` logs one of the following:
@@ -408,7 +408,7 @@ You can write specific session attribute values to the HTTP service access log. 
 * `NULL-SESSION-ATTRIBUTE-name` if the named attribute does not exist in the session.
 * `NULL-SESSION` if no session exists.
 
-[[distributed-sessions-and-persistence]]
+[#distributed-sessions-and-persistence]
 ==== Distributed Sessions and Persistence
 
 A distributed HTTP session can run in multiple Payara Server/Micro instances, provided the following criteria are met:
@@ -463,7 +463,7 @@ correctly rolled back or committed.
 
 |===
 
-[[session-managers]]
+[#session-managers]
 === Session Managers
 
 A session manager automatically creates new session objects whenever a new session starts. In some circumstances, clients do not join the session, for example, if the session manager uses cookies and the client does not accept cookies.
@@ -481,7 +481,7 @@ NOTE: If the session manager configuration contains an error, the error is writt
 
 For more information, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#session-manager[session-manager]" in the Payara Server Application Deployment section.
 
-[[the-memory-persistence-type]]
+[#the-memory-persistence-type]
 ==== The `memory` Persistence Type
 
 This persistence type is not designed for a production environment that requires session persistence as it provides no actual session persistence. However, you can configure it so that the session state in memory is written to the file system prior to server shutdown.
@@ -509,7 +509,7 @@ The only manager property that the `memory` persistence type supports is
 
 The `sessionFilename` property specifies the name of the file where sessions are serialized and persisted if the web application or the server is stopped. To disable this behavior, specify an empty string as the value of `sessionFilename`. The default value is an empty string.
 
-[[the-file-persistence-type]]
+[#the-file-persistence-type]
 ==== The `file` Persistence Type
 
 This persistence type provides session persistence to the local file system, and allows a single server domain to recover the session state after a failure and restart. The session state is persisted in the background, and the rate at which this occurs is configurable.
@@ -538,7 +538,7 @@ It is recommended to use payara-web.xml instead.
 
 The `file` persistence type supports all the manager properties listed under "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#manager-properties[manager-properties]" in the Payara Server Application Deployment section except `sessionFilename`, and supports the `directory` store property listed under "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#store-properties[store-properties]" in the same document.
 
-[[the-hazelcast-persistence-type]]
+[#the-hazelcast-persistence-type]
 ==== The `hazelcast` Persistence Type
 
 The `hazelcast` persistence type uses Payara Server/Micro Data Grid to store information in the internal distributed memory grid. All server instances that join the data grid (regardless of the deployment groups they belong to) will store partitioned information of the session data courtesy of Hazelcast. This allows sessions to be distributed properly with failover in place. For details, see xref:#distributed-sessions-and-persistence[Distributed Sessions and Persistence]. This is the default persistence type for both Payara Server and Micro instances.
@@ -552,12 +552,12 @@ To use the `hazelcast` persistence type, you must enable availability first. Sel
 
 All instances in a cluster or deployment group should have the same availability settings to ensure consistent behavior.
 
-[[using-comet]]
+[#using-comet]
 == Using Comet
 
 This section explains the Comet programming technique and how to create and deploy a Comet-enabled application in Payara Server or Micro.
 
-[[introduction-to-comet]]
+[#introduction-to-comet]
 === Introduction to Comet
 
 Comet is a programming technique that allows a web server to send updates to clients without requiring the clients to explicitly request them.
@@ -572,7 +572,7 @@ With Comet, the server can deliver messages to the clients as they are posted ra
 
 To accomplish this scenario, a Comet application establishes a long-lived HTTP connection. This connection is suspended on the server side, waiting for an event to happen before resuming. This kind of connection remains open, allowing an application that uses the Comet technique to send updates to clients when they are available rather than expecting clients to reopen the connection to poll the server for updates.
 
-[[the-grizzly-implementation-of-comet]]
+[#the-grizzly-implementation-of-comet]
 ==== The Grizzly Implementation of Comet
 
 A limitation of the Comet technique is that you must use it with a web server that supports non-blocking connections to avoid poor performance. Non-blocking connections are those that do not need to allocate one thread for each request. If the web server were to use blocking connections then it might end up holding many thousands of threads, thereby hindering its scalability.
@@ -581,19 +581,19 @@ The Payara Platform includes the Grizzly HTTP Engine, which enables asynchronous
 
 With Java NIO, Grizzly enables greater performance and scalability by avoiding the limitations experienced by traditional web servers that must run a thread for each request. Instead, Grizzly's ARP mechanism makes efficient use of a thread pool system and also keeps the state of requests so that it can keep requests alive without holding a single thread for each of them.
 
-[[client-technologies-to-use-with-comet]]
+[#client-technologies-to-use-with-comet]
 ==== Client Technologies to Use with Comet
 
 In addition to creating a web component that uses the Comet APIs, you need to enable your client to accept asynchronous updates from the web component. To accomplish this, you can use Iframes, plain JavaScript, or a robust JavaScript framework, such as the http://dojotoolkit.org[Dojo Toolkit^].
 
 The next section explains the two kinds of connections that you can make to the server. While you can use any of the client technologies listed in this section with either kind of connection, it is more challenging to use JavaScript with an HTTP-streaming connection.
 
-[[types-of-comet-connections]]
+[#types-of-comet-connections]
 ==== Types of Comet Connections
 
 When working with Comet, as implemented in Grizzly, you have two different ways to handle client connections to the server:
 
-[[http-streaming]]
+[#http-streaming]
 ==== HTTP Streaming
 
 The HTTP Streaming technique keeps a connection open indefinitely. It never closes, even after the server pushes data to the client.
@@ -606,7 +606,7 @@ The basic life cycle of an application using HTTP-streaming is:
 
 The client makes an initial request and then suspends the request, meaning that it waits for a response. Whenever new data is available, the server writes it to the response.
 
-[[long-polling]]
+[#long-polling]
 ==== Long Polling
 
 The long-polling technique is a combination of server-push and client-pull because the client needs to resume the connection after a certain amount of time or after the server pushes an update to the client.
@@ -617,14 +617,14 @@ The basic life cycle of an application using long-polling is:
 
 The client makes an initial request and then suspends the request. When an update is available, the server writes it to the response. The connection closes, and the client optionally resumes the connection.
 
-[[how-to-choose-the-type-of-connection]]
+[#how-to-choose-the-type-of-connection]
 ==== How to Choose the Type of Connection
 
 If you anticipate that your web application will need to send frequent updates to the client, you should use the HTTP-streaming connection so that the client does not have to frequently reestablish a connection. If you anticipate less frequent updates, you should use the long-polling connection so that the web server does not need to keep a connection open when no updates are occurring.
 
 One caveat to using the HTTP-streaming connection is that if you are streaming through a proxy, the proxy can buffer the response from the server. So, be sure to test your application if you plan to use HTTP-streaming behind a proxy.
 
-[[grizzly-comet]]
+[#grizzly-comet]
 === Grizzly Comet
 
 For details on using Grizzly Comet including a sample application, refer to the Grizzly Comet documentation on GitHub (`https://javaee.github.io/grizzly/comet.html`).
@@ -660,7 +660,7 @@ cometContext.addCometHandler(handler);
 cometContext.notify(handler);
 ----
 
-[[enabling-comet]]
+[#enabling-comet]
 === Enabling Comet
 
 Before running a Comet-enabled application, you need to enable Comet in the HTTP listener for your application by setting a special attribute in the associated protocol configuration. The following example shows the `asadmin set` command that adds this attribute:
@@ -670,22 +670,22 @@ Before running a Comet-enabled application, you need to enable Comet in the HTTP
 asadmin set server-config.network-config.protocols.protocol.${protocol-name}.http.comet-support-enabled="true"
 ----
 
-[[advanced-web-application-features]]
+[#advanced-web-application-features]
 == Advanced Web Application Features
 
-[[the-servers-default-locale]]
+[#the-servers-default-locale]
 === The Server's Default Locale
 
 To set the default locale of the entire server runtime, which determines the locale of the Payara Server Administration Console (In a multi-language distribution variant), text entries in the logs, and so on, use the Administration Console. Select the _domain_ component.
 
 Then type a value in the _Locale_ field. Values must conform to a valid `java.util.Locale` constant (see the Javadoc for the https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Locale.html[Locale^] class for more information).
 
-[[servlet-character-encoding]]
+[#servlet-character-encoding]
 === Servlet Character Encoding
 
 This section explains how the server runtime determines the character encoding for the servlet request and response. Valid encoding formats must conform to the list of Java's https://docs.oracle.com/en/java/javase/11/intl/supported-encodings.html[supported encodings^].
 
-[[servlet-request-encoding]]
+[#servlet-request-encoding]
 ==== Servlet Request
 
 When processing a servlet request, the server uses the following order of precedence, first to last, to determine the request character encoding:
@@ -700,7 +700,7 @@ It is recommended to use payara-web.xml instead.
 
 For details about the `parameter-encoding` element, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#parameter-encoding[parameter-encoding]" in the Payara Server Application Deployment section.
 
-[[servlet-response]]
+[#servlet-response]
 ==== Servlet Response
 
 When processing a servlet response, the server uses the following order of precedence, first to last, to determine the response character encoding:
@@ -709,7 +709,7 @@ When processing a servlet response, the server uses the following order of prece
 * The `setLocale` method
 * The default encoding, which is `ISO-8859-1`
 
-[[virtual-server-properties]]
+[#virtual-server-properties]
 === Virtual Server Properties
 
 You can set virtual server properties in the following ways:
@@ -734,7 +734,7 @@ asadmin set server-config.http-service.virtual-server.MyVS.property.authRealm="l
 
 * You can define virtual server properties using the Administration Console. Select the _HTTP Service_ component under the relevant configuration, then select _Virtual Servers_, and select the desired virtual server. Select _Add Property_, enter the property name and value, check the _Enable_ box, and save your changes.
 
-[[using-the-default-web.xml-file]]
+[#using-the-default-web.xml-file]
 === Using the `default-web.xml` File
 
 You can use the `default-web.xml` file to define features such as filters and security constraints that apply to all web applications deployed in a Payara Server domain.
@@ -765,25 +765,25 @@ Here's an excerpt of the file configured as stated:
 
 The `mime-mapping` elements in `default-web.xml` are global and inherited by all web applications. You can override these mappings or define your own using `mime-mapping` elements in your web application's `web.xml` file. For more information about `mime-mapping` elements, see the Jakarta Servlet specification.
 
-[[to-use-the-default-web.xml-file]]
+[#to-use-the-default-web.xml-file]
 ==== To Use the `default-web.xml` File
 
 . Place the JAR file for the filter, security constraint, or any other specific web component features in the `domain-dir/lib` directory.
 . Edit the `domain-dir/config/default-web.xml` file to refer to the JAR file.
 . Restart the domain and any server instances.
 
-[[configuring-logging-and-monitoring-in-the-web-container]]
+[#configuring-logging-and-monitoring-in-the-web-container]
 === Configuring Logging and Monitoring in the Web Container
 
 Select _Logger Settings_ under the relevant configuration, or select the _Instances_ component, select the instance from the table, and select the _Monitor_ tab.
 
-[[catalina-specific-features]]
+[#catalina-specific-features]
 === Catalina Specific Features
 
 IMPORTANT: *Catalina* is the internal implementation of the Servlet implementation used in the Payara Platform, originated from Apache Tomcat's own implementation. +
 Catalina will be replaced in future releases and as such the specifics documented here may change or be completely rewritten.
 
-[[configuring-valves-and-catalina-listeners]]
+[#configuring-valves-and-catalina-listeners]
 ==== Configuring Valves and Catalina Listeners
 
 You can configure custom valves and *Catalina* listeners for web modules or virtual servers by defining properties. A valve class must implement the `org.glassfish.web.valve.GlassFishValve` interface. A listener class for a virtual server must implement the `org.apache.catalina.ContainerListener` or `org.apache.catalina.LifecycleListener` interfaces.
@@ -809,7 +809,7 @@ It is recommended to use payara-web.xml instead.
 
 You can define these same properties for a virtual server configuration. For more information, see xref:#virtual-server-properties[Virtual Server Properties].
 
-[[using-a-context.xml-file]]
+[#using-a-context.xml-file]
 ==== Using a `context.xml` File
 
 You can define an Apache Tomcat `context.xml` configuration file for all web applications, for web applications assigned to a specific virtual server, or for a specific web application.
@@ -842,7 +842,7 @@ For more information about virtual server properties, see xref:#virtual-server-p
 
 NOTE: Not all context definitions are supported by the Payara Platform.
 
-[[enabling-webdav]]
+[#enabling-webdav]
 ==== Enabling Webdav
 
 To enable WebDav in Payara Server, you edit the `web.xml` and `glassfish-web.xml`/`payara-web.xml` files as follows.
@@ -938,7 +938,7 @@ http://localhost:80/myapp-webdav/webdav/index.html
 
 You can add the WebDav servlet to your `default-web.xml` file to enable it for all applications, but you can't set up a security role mapping to protect it.
 
-[[using-ssi]]
+[#using-ssi]
 ==== Using SSI
 
 To enable SSI (server-side includes) processing for a specific web module, add the `SSIServlet` to your `web.xml` deployment descriptor as follows:
@@ -988,7 +988,7 @@ You can configure the following `init-param` values for the `SSIServlet`.
 
 For more information about SSI, see `http://httpd.apache.org/docs/2.2/mod/mod_include.html`.
 
-[[using-cgi]]
+[#using-cgi]
 ==== Using CGI
 
 To enable CGI (common gateway interface) processing for a specific web module, add the `CGIServlet` to your `web.xml` file as follows:
@@ -1052,7 +1052,7 @@ To work with a native executable, do the following:
 . Make sure the executable has its executable bits set correctly.
 . Use directory deployment to deploy the web module. Do not deploy it as a WAR file, because the executable bit information is lost during the process of `jar` and `unjar`.
 
-[[alternate-document-roots]]
+[#alternate-document-roots]
 === Alternate Document Roots
 
 An alternate document root (`docroot`) allows a web application to serve requests for certain resources from outside its own document root, based on whether those requests match one (or more) of the URI patterns of the web application's alternate document roots.

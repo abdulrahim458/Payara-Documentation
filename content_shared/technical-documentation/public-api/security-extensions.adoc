@@ -2,24 +2,24 @@
 
 This section documents available extensions for custom authentication mechanisms and identity store configurations that can be used in any Jakarta EE application.
 
-[[custom-authentication-mechanisms]]
+[#custom-authentication-mechanisms]
 == Custom Authentication Mechanisms
 
 The Payara Platform Public API offers the following custom authentication mechanisms for use cases that aren't covered in the Jakarta EE Security API.
 
-[[certificate-authentication-mechanism]]
+[#certificate-authentication-mechanism]
 === Client Certificate Authentication Mechanism
 
 The Jakarta EE Security API doesn't include any specific authentication mechanisms for support client certificate validation, so the `@CertificateAuthenticationMechanismDefinition` can be used to instruct any application to initiate client certificate validation when any HTTP request is to be authenticated.
 
 TIP: This authentication mechanism will mostly be used in conjunction with the `@CertificateIdentityStoreDefinition` (see below for more information), since certificates are probably stored in a client certificate security realm.
 
-[[configuration]]
+[#configuration]
 ==== Configuration
 
 No specific configuration is needed for this annotation.
 
-[[usage-example]]
+[#usage-example]
 ==== Example
 
 The following code sample illustrates how to configure a client certificate authentication mechanism:
@@ -36,7 +36,7 @@ public class MyRestApp extends Application {
 ----
 
 
-[[custom-identity-stores]]
+[#custom-identity-stores]
 == Custom Identity Stores
 
 By default, the Jakarta EE Security API only instructs containers to implement identity stores for the following types:
@@ -46,14 +46,14 @@ By default, the Jakarta EE Security API only instructs containers to implement i
 
 The following annotations serve to provide additional identity store configurations, by allowing the mapping an existing Payara Platform security realm
 
-[[realm-identity-stores]]
+[#realm-identity-stores]
 === Basic Realm Identity Store
 
 The `@RealmIdentityStoreDefinition` annotation allows users to plug-in any existing security realm as a valid identity store definition.
 
 NOTE: No additional configuration settings or properties are available, so in case of needing further control over the store definition, see the more specific annotations defined below.
 
-[[realm-identity-stores-configuration]]
+[#realm-identity-stores-configuration]
 ==== Configuration
 
 The `@RealmIdentityStoreDefinition` annotation is configured with the options as shown below.
@@ -63,7 +63,7 @@ The `@RealmIdentityStoreDefinition` annotation is configured with the options as
 | `value`| The name of an existing security realm.| <Default Realm>| `true`
 |===
 
-[[realm-identity-stores-usage-example]]
+[#realm-identity-stores-usage-example]
 ==== Example
 
 The following code sample illustrates how to configure the default `file` security realm as an identity store:
@@ -93,14 +93,14 @@ public class MyRestApp extends Application {
 }
 ----
 
-[[file-identity-store]]
+[#file-identity-store]
 === File Identity Store
 
 The `@FileIdentityStoreDefinition` annotation allows users to plug in an existing file security realm (`com.sun.enterprise.security.auth.realm.file.FileRealm`) as a valid identity store definition.
 
 IMPORTANT: If no realm is found with the defined name then a new realm will register on the server's configuration using the `create-auth-realm` asadmin command.
 
-[[file-identity-store-configuration]]
+[#file-identity-store-configuration]
 ==== Configuration
 
 The file realm identity store can be configured via both `@FileIdentityStoreDefinition` annotation attributes and MicroProfile Configuration properties. Here's a list of all available and equivalent settings:
@@ -115,7 +115,7 @@ The file realm identity store can be configured via both `@FileIdentityStoreDefi
 
 CAUTION: If both an annotation attribute and a MicroProfile Configuration property are defined for the same option then the configuration property always takes precedence.
 
-[[file-identity-store-usage-example]]
+[#file-identity-store-usage-example]
 ==== Example
 
 The following code sample illustrates how to configure a file realm identity store:
@@ -131,14 +131,14 @@ public class MyRestApp extends Application {
 }
 ----
 
-[[certificate-identity-store]]
+[#certificate-identity-store]
 === Client Certificate Identity Store
 
 The `@CertificateIdentityStoreDefinition` annotation allows users to plug-in an existing client `certificate` security realm (`com.sun.enterprise.security.auth.realm.certificate.CertificateRealm`) as a valid identity store definition.
 
 IMPORTANT: If no realm is found with the defined name then a new realm will register on the server's configuration using the `create-auth-realm` asadmin command.
 
-[[certificate-identity-store-configuration]]
+[#certificate-identity-store-configuration]
 ==== Configuration
 
 The certificate realm identity store can be configured via both `@CertificateIdentityStoreDefinition` annotation attributes and MicroProfile Configuration properties. Here's a list of all available and equivalent settings:
@@ -151,7 +151,7 @@ The certificate realm identity store can be configured via both `@CertificateIde
 
 CAUTION: If both an annotation attribute and a MicroProfile Configuration property are defined for the same option then the configuration property always takes precedence.
 
-[[certificate-identity-store-usage-example]]
+[#certificate-identity-store-usage-example]
 ==== Example
 
 The following code sample illustrates how to configure a certificate realm identity store:
@@ -167,14 +167,14 @@ public class MyRestApp extends Application {
 }
 ----
 
-[[pam-identity-store]]
+[#pam-identity-store]
 === PAM Identity Store
 
 The `@PamIdentityStoreDefinition` annotation allows users to plug-in an existing PAM (Privileged Access Management) security realm (`com.sun.enterprise.security.auth.realm.pam.PamRealm`) as a valid identity store definition.
 
 IMPORTANT: If no realm is found with the defined name then a new realm will register on the server's configuration using the `create-auth-realm` asadmin command.
 
-[[pam-identity-store-configuration]]
+[#pam-identity-store-configuration]
 ==== Configuration
 
 The pam realm identity store can be configured via both `@PamIdentityStoreDefinition` annotation attributes and MicroProfile Configuration properties. Here's a list of all available and equivalent settings:
@@ -186,7 +186,7 @@ The pam realm identity store can be configured via both `@PamIdentityStoreDefini
 | `jaasContext`| `payara.security.pam.jaasContext` | The JAAS Context of the PAM realm. | `pamRealm`| `false`
 |===
 
-[[pam-identity-store-usage-example]]
+[#pam-identity-store-usage-example]
 ==== Example
 
 The following code sample illustrates how to configure a PAM realm identity store:
@@ -204,14 +204,14 @@ public class MyRestApp extends Application {
 
 CAUTION: If both an annotation attribute and a MicroProfile Configuration property are defined for the same option then the configuration property always takes precedence.
 
-[[solaris-identity-store]]
+[#solaris-identity-store]
 === Solaris Identity Store
 
 The `@SolarisIdentityStoreDefinition` annotation allows users to plug in an existing Solaris security realm (`com.sun.enterprise.security.auth.realm.solaris.SolarisRealm`) as a valid identity store definition.
 
 IMPORTANT: If no realm is found with the defined name then a new realm will register on the server's configuration using the `create-auth-realm` asadmin command.
 
-[[solaris-identity-store-configuration]]
+[#solaris-identity-store-configuration]
 ==== Configuration
 
 The Solaris realm identity store can be configured via both `@SolarisIdentityStoreDefinition` annotation attributes and MicroProfile Configuration properties. Here's a list of all available and equivalent settings:
@@ -225,7 +225,7 @@ The Solaris realm identity store can be configured via both `@SolarisIdentitySto
 
 CAUTION: If both an annotation attribute and a MicroProfile Configuration property are defined for the same option then the configuration property always takes precedence.
 
-[[solaris-identity-store-usage-example]]
+[#solaris-identity-store-usage-example]
 ==== Example
 
 The following code sample illustrates how to configure a Solaris realm identity store:

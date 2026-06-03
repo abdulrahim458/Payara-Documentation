@@ -2,7 +2,7 @@
 
 Starts a Payara Server instance.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -12,7 +12,7 @@ asadmin [asadmin-options] start-instance [--help]
 [--timeout timeout] instance-name
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `start-instance` subcommand starts a Payara Server instance. This subcommand requires the secure shell (SSH) to be configured on the machine where the domain administration server (DAS) is running and on the machine where the instance resides.
@@ -25,7 +25,7 @@ The subcommand can start any Payara Server instance, regardless of how the insta
 
 This command is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 CAUTION: These are not the same options available for the `start-local-instance` command.
@@ -85,13 +85,13 @@ Specifies whether information on the result is output
 +
 The default value is `false`.
 
-[[operands]]
+[#operands]
 == Operands
 
 *instance-name*:
   The name of the Payara Server instance to start.
 
-[[examples]]
+[#examples]
 == Examples
 
 *Example 1 Starting a Payara Server Instance*
@@ -131,7 +131,7 @@ The instance, ymlsa1, was started on host localhost
 Command start-instance executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:

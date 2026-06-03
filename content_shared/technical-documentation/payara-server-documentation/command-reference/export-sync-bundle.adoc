@@ -2,7 +2,7 @@
 
 Exports the configuration data of a cluster or standalone instance to an archive file.
 
-[[synopsis]]
+[#synopsis]
 == Synopsis
 
 [source,shell]
@@ -13,7 +13,7 @@ asadmin [asadmin-options] export-sync-bundle [--help]
 [file-name]
 ----
 
-[[description]]
+[#description]
 == Description
 
 The `export-sync-bundle` subcommand exports the configuration data of a cluster or standalone instance to an archive file. The archive file can then be used with the xref:technical-documentation/payara-server-documentation/command-reference/import-sync-bundle.adoc#import-sync-bundle[`import-sync-bundle`] subcommand to restore the configuration data.
@@ -42,7 +42,7 @@ The subcommand creates an archive that contains the following files and director
 
 This subcommand is supported in remote mode only.
 
-[[options]]
+[#options]
 == Options
 
 *asadmin-options*:
@@ -60,7 +60,7 @@ This subcommand is supported in remote mode only.
   `false`;;
     The archive file is not downloaded and remains on the DAS host (default).
 
-[[operands]]
+[#operands]
 == Operands
 
 *file-name*:
@@ -74,10 +74,10 @@ This subcommand is supported in remote mode only.
   * If `--retrieve` is `true`, the path is appended to the current working directory. +
   If an existing directory is specified without a filename, the file name of the archive file is target`-sync-bundle.zip`, where target is the cluster or standalone instance that the `--target` option specifies.
 
-[[examples]]
+[#examples]
 == Examples
 
-[[example-1]]
+[#example-1]
 
 *Example 1 Exporting the Configuration Data of a Cluster*
 
@@ -92,7 +92,7 @@ pmdcluster-sync-bundle.zip
 Command export-sync-bundle executed successfully.
 ----
 
-[[exit-status]]
+[#exit-status]
 == Exit Status
 
 *0*:
