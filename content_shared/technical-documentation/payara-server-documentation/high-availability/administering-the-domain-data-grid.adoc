@@ -368,7 +368,7 @@ The `--dataGridStartPort` option can be used with the xref:technical-documentati
 You can configure the start port used by an instance after its creation by either using the Admin Console or the asadmin CLI.
 
 [[setting-data-grid-start-port-with-the-admin-console]]
-===== *Setting Data Grid Start Port with the Admin Console*
+===== Setting Data Grid Start Port with the Admin Console
 
 . Select the Configuration from the page tree, click on the relevant instance and finally click on the Data Grid.
 . On the Configuration Specific Data Grid Configuration, set the **Data Grid Start Port** and click **Save**.
@@ -376,7 +376,7 @@ You can configure the start port used by an instance after its creation by eithe
 *image*: hazelcast/hazelcast-admin-console-config-data-grid-start-port.png[Data Grid Start Port Option]
 
 [[setting-data-grid-start-port-with-the-asadmin-cli]]
-===== *Setting Data Grid Start Port Using Asadmin CLI*
+===== Setting Data Grid Start Port Using Asadmin CLI
 
 The xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] command can be used to set the Data Grid start port:
 

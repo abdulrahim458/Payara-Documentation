@@ -202,7 +202,7 @@ The `session-manager` element's `persistence-type` attribute determines the type
 
 It must be set to `hazelcast` (as this is the default persistence mode) to enable high availability session persistence.
 
-==== *Example*
+==== Example
 
 [source,xml]
 ----
@@ -244,7 +244,7 @@ This enables the web container to return for each requesting thread whatever ver
 
 This is critical when multiple threads are interacting in an essentially non-deterministic fashion with the container.
 
-==== *Example*
+==== Example
 
 The following is an example snippet from a `payara-web.xml` file that illustrates where to add the `relaxVersionSemantics` property.
 
@@ -281,7 +281,7 @@ asadmin> set config-1.availability-service.web-container-availability.sso-failov
 ----
 
 [[single-sign-on-groups]]
-==== *Single Sign-On Groups*
+==== Single Sign-On Groups
 
 Applications that can be accessed through a single name and password combination constitute a *single sign-on group*.
 
@@ -343,7 +343,7 @@ asadmin> set config1.availability-service.ejb-container-availability.sfsb-ha-per
 ----
 
 [[configuring-the-sfsb-session-store-when-availability-is-disabled]]
-==== *Configuring the SFSB Session Store When Availability Is Disabled*
+==== Configuring the SFSB Session Store When Availability Is Disabled
 
 If availability is disabled, the local file system is used for SFSB state passivation, but not persistence. To change where the SFSB state is stored, change the *Session Store Location* setting in the EJB container.
 

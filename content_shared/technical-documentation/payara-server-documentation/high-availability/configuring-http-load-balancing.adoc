@@ -196,7 +196,7 @@ If you've configured HTTP session persistence, session information persists when
 If you have multiple clusters, requests can be load balanced across clusters but are only failed over between the instances in a single cluster. Use multiple clusters in a load balancer to easily enable *rolling upgrades* of applications.
 
 [[using-multiple-standalone-instances]]
-==== *Using Multiple Standalone Instances*
+==== Using Multiple Standalone Instances
 
 It is also possible to configure your load balancer to use multiple standalone instances, and load balance and failover requests between them. However, in this configuration, you must manually ensure that the standalone instances have homogenous environments and the same applications deployed to them.
 

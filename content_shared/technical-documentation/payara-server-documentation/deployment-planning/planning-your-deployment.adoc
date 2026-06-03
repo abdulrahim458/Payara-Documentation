@@ -39,7 +39,7 @@ High availability applications incur additional overhead because they periodical
 Consider the following factors to estimate the load on Payara Server instances.
 
 [[maximum-number-of-concurrent-users]]
-==== *Maximum Number of Concurrent Users*
+==== Maximum Number of Concurrent Users
 
 Users interact with an application through a client, such as a web browser or Java program. Based on the user's actions, the client periodically sends requests to the Payara Server. A user is considered active as long as the user's session has neither expired nor been terminated. When estimating the number of concurrent users, include all active users.
 
@@ -48,7 +48,7 @@ Initially, as the number of users increases, throughput increases correspondingl
 Identify the point at which adding concurrent users reduces the number of requests that can be processed per minute. This point indicates when optimal performance is reached and beyond which throughput starts to degrade. Generally, strive to operate the system at optimal throughput as much as possible. You might need to add processing power to handle additional load and increase throughput.
 
 [[think-time]]
-==== *Think Time*
+==== Think Time
 
 A user does not submit requests continuously. A user submits a request, the server receives and processes the request, and then returns a result, at which point the user spends some time before submitting a new request. The time between one request and the next is called think time.
 
@@ -57,7 +57,7 @@ Think times are dependent on the type of users. For example, machine-to-machine 
 Determining the average think time is important. You can use this duration to calculate the number of requests that need to be completed per minute, as well as the number of concurrent users the system can support.
 
 [[average-response-time]]
-==== *Average Response Time*
+==== Average Response Time
 
 Response time refers to the amount of time Payara Server takes to return the results of a request to the user. The response time is affected by factors such as network bandwidth, number of users, number and type of requests submitted, and the average think time.
 
@@ -96,7 +96,7 @@ Therefore, the response time is two seconds.
 After the system's response time has been calculated, particularly at peak load, compare it to the acceptable response time for the application. Response time, along with throughput, is one of the main factors critical to Payara Server performance.
 
 [[requests-per-minute]]
-==== *Requests per Minute*
+==== Requests per Minute
 
 If you know the number of concurrent users at any given time, the response time of their requests, and the average user think time, then you can calculate the number of requests per minute. Typically, start by estimating the number of concurrent users that are on the system.
 
@@ -201,7 +201,7 @@ At the most basic level, a cluster is a group of Payara Server clients as a sing
 One way to achieve high availability is to add hardware and software redundancy to the system. When one unit fails, the redundant unit takes over. This is also referred to as fault tolerance. In general, to maximize high availability, determine and remove every possible point of failure in the system.
 
 [[identifying-failure-classes]]
-==== *Identifying Failure Classes*
+==== Identifying Failure Classes
 
 The level of redundancy is determined by the failure classes (types of failure) that the system needs to tolerate. Some examples of failure classes are:
 
@@ -216,7 +216,7 @@ The level of redundancy is determined by the failure classes (types of failure) 
 Duplicated system processes tolerate single system process failures, as well as single machine failures. Attaching the duplicated mirrored (paired) machines to different power supplies tolerates single power failures. By keeping the mirrored machines in separate buildings, a single-building fire can be tolerated. By keeping them in separate geographical locations, natural catastrophes like earthquakes can be tolerated.
 
 [[planning-failover-capacity]]
-==== *Planning Failover Capacity*
+==== Planning Failover Capacity
 
 Failover capacity planning implies deciding how many additional servers and processes you need to add to the Payara Server deployment so that in the event of a server or process failure, the system can seamlessly recover data and continue processing. If your system gets overloaded, a process or server failure might result, causing response time degradation or even total loss of service. Preparing for such an occurrence is critical to successful deployment.
 
@@ -283,7 +283,7 @@ In a conventional cluster, having multiple brokers does not ensure that transact
 In an enhanced cluster, transactions and persistent messages owned by the failed broker are taken over by another running broker in the cluster and non-prepared transactions are rolled back. Data failover is ensured for prepared transactions and persisted messages.
 
 [[master-broker-and-client-synchronization-for-conventional-clusters]]
-==== *Master Broker and Client Synchronization for Conventional Clusters*
+==== Master Broker and Client Synchronization for Conventional Clusters
 
 In a configuration for a conventional broker cluster, each destination is replicated on all the brokers in a cluster. Each broker knows about message consumers that are registered for destinations on all other brokers. Each broker can therefore route messages from its own directly-connected message producers to remote message consumers, and deliver messages from remote producers to its own directly-connected consumers.
 
@@ -303,7 +303,7 @@ The Payara Server's Java Message Service represents the connector module (resour
 In Payara Server, a JMS host refers to a Message Queue broker. The Payara Server's Java Message Service configuration contains a JMS Host List (also called AddressList) that contains all the JMS hosts that will be used.
 
 [[java-message-service-type]]
-==== *Java Message Service Type*
+==== Java Message Service Type
 
 There are three types of integration between Payara Server and Message Queue brokers: `embedded`, `local`, and `remote`. You can set this type attribute on the Administration Console's Java Message Service page.
 
@@ -317,21 +317,21 @@ With the `EMBEDDED` type, use the *Start Arguments* attribute to specify Message
 With the `EMBEDDED` type, make sure the Java heap size is large enough to allow Payara Server and Message Queue to run in the same virtual machine.
 
 [[local-java-message-service]]
-==== *Local Java Message Service*
+==== Local Java Message Service
 
 If the Type attribute is `LOCAL`, Payara Server starts and stops the Message Queue broker. When Payara Server starts up, it starts the Message Queue broker specified as the Default JMS host. Likewise, when the Payara Server instance shuts down, it shuts down the Message Queue broker. The `LOCAL` type is most suitable for use with enhanced broker clusters, and for other cases where the administrator prefers the use of separate JVMs.
 
 With the `LOCAL` type, use the *Start Arguments* attribute to specify Message Queue broker startup parameters.
 
 [[remote-java-message-service]]
-==== *Remote Java Message Service*
+==== Remote Java Message Service
 
 If the Type attribute is `REMOTE`, Payara Server uses an externally configured broker or broker cluster. In this case, you must start and stop Message Queue brokers separately from Payara Server, and use Message Queue tools to configure and tune the broker or broker cluster. The `REMOTE` type is most suitable for brokers running on different machines from the server instances (to share the load among more machines or for higher availability), or for using a different number of brokers and server instances.
 
 With the `REMOTE` type, you must specify Message Queue broker startup parameters using the Message Queue tools. The *Start Arguments* attribute is ignored.
 
 [[managing-jms-with-the-administration-console]]
-==== *Managing JMS with the Administration Console*
+==== Managing JMS with the Administration Console
 
 In the Administration Console, you can set JMS properties using the Java Message Service node for a particular configuration. You can set properties such as *Reconnect Interval* and *Reconnect Attempts*. For more information, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-the-java-message-service-jms[Administering the Java Message Service (JMS)]" in the Payara Server General Administration section.
 
@@ -340,7 +340,7 @@ The JMS Hosts node under the Java Message Service node contains a list of JMS ho
 In `REMOTE` mode, configure the JMS Hosts list to contain all the Message Queue brokers in the cluster. For example, to set up a cluster containing three Message Queue brokers, add a JMS host within the Java Message Service for each one. Message Queue clients use the configuration information in the Jakarta Messaging system to communicate with the Message Queue broker.
 
 [[managing-jms-with-asadmin]]
-==== *Managing JMS with Asadmin*
+==== Managing JMS with Asadmin
 
 In addition to the Administration Console, you can use the `asadmin` command-line utility to manage the Java Message Service and JMS hosts. Use the following `asadmin` commands:
 
@@ -356,7 +356,7 @@ In addition to the Administration Console, you can use the `asadmin` command-lin
 ** `asadmin list-jms-resources`
 
 [[default-jms-host]]
-==== *Default JMS Host*
+==== Default JMS Host
 
 You can specify the default JMS Host in the Administration Console Java Message Service page. If the Java Message Service type is `LOCAL`, Payara Server starts the default JMS host when the Payara Server instance starts. If the Java Message Service type is `EMBEDDED`, the default JMS host is started lazily when needed.
 
@@ -379,20 +379,20 @@ Installing the Payara Server automatically creates a domain administration serve
 Creating a new domain also creates a new broker. By default, when you add a stand-alone server instance or a cluster to the domain, its Java Message Service is configured as `EMBEDDED` and its default JMS host is the broker started by the DAS.
 
 [[using-a-message-queue-broker-cluster-with-a-payara-server-cluster]]
-==== *Using a Message Queue Broker Cluster with a Payara Server Cluster*
+==== Using a Message Queue Broker Cluster with a Payara Server Cluster
 
 In `EMBEDDED` or `LOCAL` mode, when a Payara Server is configured, a Message Queue broker cluster is autoconfigured with each Payara Server instance associated with a Message Queue broker instance.
 
 In `REMOTE` mode, to configure a Payara Server cluster to use a Message Queue broker cluster, add all the Message Queue brokers as JMS hosts in the Payara Server's Java Message Service. Any JMS connection factories created and MDBs deployed then uses the JMS configuration specified.
 
 [[specifying-an-application-specific-message-queue-broker-cluster]]
-==== *Specifying an Application-Specific Message Queue Broker Cluster*
+==== Specifying an Application-Specific Message Queue Broker Cluster
 
 In some cases, an application may need to use a different Message Queue broker cluster than the one used by the Payara Server cluster. To do so, use the `AddressList` property of a JMS connection factory or the `activation-config` element in an MDB deployment descriptor to specify the Message Queue broker cluster.
 
 For more information about configuring connection factories, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-connection-factories-and-destinations[Administering JMS Connection Factories and Destinations]" in the Payara Server Administration section. For more information about MDBs, see "xref:technical-documentation/application-development/using-jakarta-enterprise-beans-technology.adoc#using-message-driven-beans[Using Message-Driven Beans]" in the Payara Server Application Development section.
 
 [[application-clients]]
-==== *Application Clients*
+==== Application Clients
 
 When an application client or standalone application accesses a JMS administered object for the first time, the client JVM retrieves the Java Message Service configuration from the server. Furthermore, changes to the JMS service will not be available to the client JVM until it is restarted.

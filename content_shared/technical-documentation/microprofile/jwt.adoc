@@ -168,7 +168,7 @@ In the Payara Platform, namespaced claims configuration is done by placing a pro
 
 For example, when using a Maven project as `src/main/resources/payara-mp-jwt.properties`. These properties file should contain the Boolean property `enable.namespace` and the optional property `custom.namespace`.
 
-==== *enable.namespace*
+==== enable.namespace
 If this is true, the default `https://payara.fish/mp-jwt/` namespace will be used and the parser will look out for namespaced claims.
 
 For example:
@@ -187,7 +187,7 @@ If following JSON is the token payload and `enable.namespace` property is `true`
 
 Then the JSON Parser search for namespace prefixed claims, remove the namespace from claim name, allow the processing of the token as usual.
 
-==== *custom.namespace*
+==== custom.namespace
 When the `custom.namespace` property is set, it will always take precedence over the default namespace and be used instead.
 
 [[disabling-type-claim-verification]]

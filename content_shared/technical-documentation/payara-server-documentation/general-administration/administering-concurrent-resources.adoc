@@ -66,7 +66,7 @@ IMPORTANT: Creating a context service resource is a dynamic event and typically 
 . If necessary, notify users that the new resource has been created.
 
 [[example-configuring-context-services]]
-==== *Example 14-1 to Create a Context Service*
+==== Example 14-1 to Create a Context Service
 
 This example creates a context service resource named `concurrent/Context1`.
 
@@ -89,7 +89,7 @@ Remote subcommands require a running server.
 . List context service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-context-services.adoc[`list-context-services`] subcommand.
 
 [[example-to-list-context-services]]
-==== *Example 14-2 to List a Context Service*
+==== Example 14-2 to List a Context Service
 
 This example lists context service resources on the default server instance, `server`.
 
@@ -140,7 +140,7 @@ Before deleting a context service resource, all associations to the resource mus
 . Delete the context service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-context-service.adoc[`delete-context-service`] subcommand.
 
 [[example-to-delete-a-context-service]]
-==== *Example 14-3 to Delete a Context Service*
+==== Example 14-3 to Delete a Context Service
 This example deletes the context service resource named `concurrent/Context1`.
 
 [source, shell]
@@ -182,7 +182,7 @@ NOTE: Creating a managed thread factory resource is a dynamic event and typicall
 . If necessary, notify users that the new resource has been created.
 
 [[example-to-create-a-managed-thread-factory]]
-==== *Example 14-4 to Create a Managed Thread Factory*
+==== Example 14-4 to Create a Managed Thread Factory
 
 This example creates a managed thread factory resource named `concurrent/Factory1`.
 
@@ -204,7 +204,7 @@ Use the `list-managed-thread-factories` subcommand in remote mode to list the ex
 . List managed thread factory resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-thread-factories.adoc[`list-managed-thread-factories`] subcommand.
 
 [[example-to-list-managed-thread-factories]]
-==== *Example 14-5 to List a Managed Thread Factory*
+==== Example 14-5 to List a Managed Thread Factory
 
 This example lists managed thread factory resources on the default server instance, `server`.
 
@@ -257,7 +257,7 @@ Before deleting a managed thread factory resource, all associations to the resou
 . Delete the managed thread factory by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-managed-thread-factory.adoc[`delete-managed-thread-factory`] subcommand.
 
 [[example-to-delete-a-managed-thread-factory]]
-==== *Example 14-6 to Delete a Managed Thread Factory*
+==== Example 14-6 to Delete a Managed Thread Factory
 
 This example deletes the managed thread factory resource named `concurrent/Factory1`.
 
@@ -302,7 +302,7 @@ NOTE: Creating a managed executor service resource is a dynamic event and typica
 . If necessary, notify users that the new resource has been created.
 
 [[example-to-create-a-managed-executor-service]]
-==== *Example 14-7 to Create a Managed Executor Service*
+==== Example 14-7 to Create a Managed Executor Service
 
 This example creates a managed executor service resource named `concurrent/Executor1`.
 
@@ -324,7 +324,7 @@ The `list-managed-executor-services` asadmin command can be used to list the exi
 . List managed executor service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-executor-services.adoc[`list-managed-executor-services`] subcommand.
 
 [[example-to-list-managed-executor-services]]
-==== *Example 14-8 to List a Managed Executor Service*
+==== Example 14-8 to List a Managed Executor Service
 This example lists managed executor service resources on the default server instance, `server`.
 
 [source,shell]
@@ -376,7 +376,7 @@ Before deleting a managed executor service resource, all associations to the res
 . Delete the managed executor service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-managed-executor-service.adoc[`delete-managed-executor-service`] subcommand.
 
 [[example-to-delete-a-managed-executor-service]]
-==== *Example 14-9 to Delete a Managed Executor Service*
+==== Example 14-9 to Delete a Managed Executor Service
 
 This example deletes the managed executor service resource named `concurrent/Executor1`.
 
@@ -421,7 +421,7 @@ NOTE: Creating a managed scheduled executor service resource is a dynamic event 
 . If necessary, notify users that the new resource has been created.
 
 [[example-to-create-a-managed-scheduled-executor-service]]
-==== *Example 14-10 to Create a Managed Scheduled Executor Service*
+==== Example 14-10 to Create a Managed Scheduled Executor Service
 
 This example creates a managed scheduled executor service resource named `concurrent/ScheduledExecutor1`.
 
@@ -443,7 +443,7 @@ Use the `list-managed-scheduled-executor-services` subcommand in remote mode to 
 . List managed scheduled executor service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-scheduled-executor-services.adoc[`list-managed-scheduled-executor-services`] subcommand.
 
 [[example-to-list-managed-scheduled-executor-services]]
-==== *Example 14-11 to List a Managed Scheduled Executor Service*
+==== Example 14-11 to List a Managed Scheduled Executor Service
 
 This example lists managed scheduled executor service resources on the default server instance, `server`.
 
@@ -496,7 +496,7 @@ Before deleting a managed scheduled executor service resource, all associations 
 subcommand.
 
 [[example-to-delete-a-managed-scheduled-executor-service]]
-==== *Example 14-12 to Delete a Managed Scheduled Executor Service*
+==== Example 14-12 to Delete a Managed Scheduled Executor Service
 
 This example deletes the managed scheduled executor service resource named `concurrent/ScheduledExecutor1`.
 

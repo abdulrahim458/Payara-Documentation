@@ -26,7 +26,7 @@ asadmin [asadmin-util-options] [subcommand [subcommand-options] [operands]]
 The replaceable items in this syntax are described in the subsections that follow.
 
 [[subcommands-of-the-asadmin-utility]]
-==== *Subcommands of the `asadmin` Utility*
+==== Subcommands of the `asadmin` Utility
 
 The subcommand identifies the operation or task that you are performing. Subcommands are case-sensitive. Each subcommand is either a local subcommand or a remote subcommand.
 
@@ -34,7 +34,7 @@ The subcommand identifies the operation or task that you are performing. Subcomm
 * A remote subcommand is always run by connecting to a DAS and running the subcommand there. A running DAS is required.
 
 [[asadmin-utility-options-and-subcommand-options]]
-==== *`Asadmin` Utility Options and Subcommand Options*
+==== `Asadmin` Utility Options and Subcommand Options
 
 Options control the behavior of the `asadmin` utility and its subcommands. Options are case-sensitive.
 
@@ -63,7 +63,7 @@ For example, the short form and the long form of the option for specifying terse
 TIP: Most options require argument values, except `Boolean` options, which toggle to enable or disable a feature.
 
 [[operands-of-asadmin-utility-subcommands]]
-==== *Operands of `asadmin` Utility Subcommands*
+==== Operands of `asadmin` Utility Subcommands
 
 Operands specify the items on which the subcommand is to act. Operands must follow the argument values of subcommand options, and are set off by a space, a tab, or double dashes (`--`). The `asadmin` utility treats anything that follows the subcommand options and their values as an operand.
 

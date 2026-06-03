@@ -104,7 +104,7 @@ The following topics are addressed here:
 * xref:application-based-deployment[Application-Based Deployment]
 
 [[types-of-modules]]
-==== *Types of Modules*
+==== Types of Modules
 
 Payara Server supports the following types of modules:
 
@@ -117,7 +117,7 @@ After deploying a Jakarta EE connector module, you must configure it as describe
 (`application-client.xml` and `payara-application-client.xml`). An application client JAR file applies to a Payara Server type of Jakarta EE client. An application client supports the standard Jakarta EE Application Client specifications.
 
 [[module-based-deployment]]
-==== *Module-Based Deployment*
+==== Module-Based Deployment
 
 You can deploy web, EJB, and application client modules separately, outside any application. Module-based deployment is appropriate when components need to be accessed by other modules, applications, or application clients. Module-based deployment allows shared access to a bean from a web, EJB, or application client component.
 
@@ -165,7 +165,7 @@ The following topics are addressed here:
 * xref:directory-structure[Directory Structure]
 
 [[portable-naming]]
-==== *Portable Naming*
+==== Portable Naming
 
 The Jakarta EE specification defines the portable `application-name`, which allows you to specify an application name in the `application.xml` file.
 
@@ -194,13 +194,13 @@ This will force the application or module to have the specified name over the na
 To solve the issue, application or module name defined in the deployment descriptor will **always** take precedence over the `--name` option. But you use the `--name` and `--forcename` options to override this behaviour.
 
 [[jndi-naming]]
-==== *JNDI Naming*
+==== JNDI Naming
 
 Jakarta Naming and Directory Interface (JNDI) lookup names for EJB components must also be unique. Establishing a consistent naming convention can help.
 For example, appending the  application name and the module name to the EJB name is a way to guarantee unique names, such as, `jms/qConnPool`.
 
 [[directory-structure]]
-==== *Directory Structure*
+==== Directory Structure
 
 Application and module directory structures must follow the structure outlined in the Jakarta  EE specification. During deployment, the application or module is expanded from the archive file to an open directory structure. The directories that hold the individual modules are named with `_jar`, `_rar`, and `_war` suffixes.
 
@@ -261,7 +261,7 @@ The `create-application-ref` subcommand is expression-aware only if the `--enabl
 The `list-applications` and `list-application-refs` subcommands display information about all deployed versions of a module or application. To find out which version is enabled, use the `--long` option.
 
 [[choosing-the-enabled-version]]
-==== *Choosing the Enabled Version*
+==== Choosing the Enabled Version
 
 At most one version of a module or application can be enabled on a server instance. All other versions are disabled. Enabling one version automatically disables all others.
 You can disable all versions of a module or application, leaving none enabled.
@@ -271,7 +271,7 @@ The `--enabled` option of the `deploy` and `redeploy` subcommands is set to `tru
 To enable a version that has been deployed previously, use the `enable` subcommand.
 
 [[versioning-restrictions-and-limitations]]
-==== *Versioning Restrictions and Limitations*
+==== Versioning Restrictions and Limitations
 
 Module and application versioning in Payara Server is subject to the following restrictions and limitations:
 

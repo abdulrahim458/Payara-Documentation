@@ -661,7 +661,7 @@ cometContext.notify(handler);
 ----
 
 [[enabling-comet]]
-=== *Enabling Comet*
+=== Enabling Comet
 
 Before running a Comet-enabled application, you need to enable Comet in the HTTP listener for your application by setting a special attribute in the associated protocol configuration. The following example shows the `asadmin set` command that adds this attribute:
 

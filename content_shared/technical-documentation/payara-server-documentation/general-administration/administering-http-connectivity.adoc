@@ -203,7 +203,7 @@ Command create-network-listener executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-http-listener` or `asadmin help create-network-listener` at the command line.
 
 [[to-list-http-network-listeners]]
-=== *To List HTTP Network Listeners*
+=== To List HTTP Network Listeners
 
 Use the `list-http-listeners` subcommand or the `list-network-listeners` subcommand in remote mode to list the existing HTTP listeners.
 
@@ -227,7 +227,7 @@ Command list-http-listeners executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-http-listeners` or `asadmin help list-network-listeners` at the command line.
 
 [[to-update-an-http-network-listener]]
-=== *To Update an HTTP Network Listener*
+=== To Update an HTTP Network Listener
 
 . List HTTP listeners by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-http-listeners.adoc[`list-http-listeners`] or xref:technical-documentation/payara-server-documentation/command-reference/list-network-listeners.adoc[`list-network-listeners`] subcommand.
 . Modify the values for the specified listener by using the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand.
@@ -246,7 +246,7 @@ Command set executed successfully.
 ----
 
 [[to-restart-an-http-network-listener]]
-=== *To Restart an HTTP Network Listener*
+=== To Restart an HTTP Network Listener
 
 The `restart-http-listeners` commands restarts all HTTP listeners but the `admin-listener` of the targeted instance(s). It is either used with the `--all` flag to target all instances or with a particular target instance, deployment group or cluster following the `--target` parameter.
 
@@ -266,7 +266,7 @@ Command restart-http-listeners executed successfully.
 ----
 
 [[to-delete-an-http-network-listener]]
-=== *To Delete an HTTP Network Listener*
+=== To Delete an HTTP Network Listener
 
 Use the `delete-http-listener` subcommand or the `delete-network-listener` subcommand in remote mode to delete an existing HTTP listener. This disables secure communications for the listener.
 
@@ -290,7 +290,7 @@ Command delete-http-listener executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help delete-http-listener` or `asadmin help delete-network-listener` at the command line.
 
 [[configure-an-http-listener-for-ssl]]
-=== *Configure an HTTP Listener for SSL*
+=== Configure an HTTP Listener for SSL
 
 Use the `create-ssl` subcommand in remote mode to create and configure an SSL element in the specified listener. This enables secure communication for the listener.
 
@@ -316,7 +316,7 @@ Command create-ssl executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-ssl` at the command line.
 
 [[configure-sni-for-http-listeners]]
-=== *Configure SNI for HTTP Listeners*
+=== Configure SNI for HTTP Listeners
 
 Server Name Indication, SNI for short, allows you to use multiple SSL certificates with the same IP address. When enabled, the server will look for a certificate in the configured keystore using a nickname that matches the host name requested.
 
@@ -327,7 +327,7 @@ From here, click on the SSL tab, and make sure that the *SNI Support* checkbox i
 IMPORTANT: For SNI to take effect, the network listener must have security enabled by providing a default keypair and certificate, and by checking the *Security* box on the *HTTP* tab.
 
 [[configure-optional-client-authentication-for-ssl]]
-=== *Configure Optional Client Authentication for SSL*
+=== Configure Optional Client Authentication for SSL
 
 In Payara Server, you can configure the SSL protocol of an HTTP listener such that it requests a certificate before permitting a client connection, but does not refuse a connection if the client does not provide one. To enable this feature, set the `client-auth` property of the SSL protocol to the value `want`. For example:
 
@@ -337,7 +337,7 @@ asadmin set configs.config.config-name.network-config.protocols.protocol.listene
 ----
 
 [[configure-a-custom-ssl-implementation]]
-=== *Configure a Custom SSL Implementation*
+=== Configure a Custom SSL Implementation
 
 In Payara Server, you can configure the SSL protocol an HTTP listener such that it uses a custom implementation of SSL. To enable this feature, set the `classname` property of the SSL protocol to the name of a class that implements the `com.sun.grizzly.util.net.SSLImplementation` interface. For example:
 
@@ -349,7 +349,7 @@ asadmin> set configs.config.config-name.network-config.protocols.protocol.listen
 By default, Payara Server uses the implementation `com.sun.enterprise.security.ssl.GlassfishSSLImpl` for the SSL protocol.
 
 [[delete-ssl-from-an-http-listener]]
-=== *Delete SSL from an HTTP Listener*
+=== Delete SSL from an HTTP Listener
 
 Use the `delete-ssl` subcommand in remote mode to delete the SSL element in the specified listener. This disables secure communications for the listener.
 
@@ -375,7 +375,7 @@ Command delete-ssl executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help delete-ssl` at the command line.
 
 [[assign-a-default-virtual-server-to-an-http-listener]]
-=== *Assign a Default Virtual Server to an HTTP Listener*
+=== Assign a Default Virtual Server to an HTTP Listener
 
 . In the Administration Console, open the HTTP Service component under the relevant configuration.
 . Open the HTTP Listeners component under the HTTP Service component.
@@ -721,7 +721,7 @@ NOTE: When the configuration value is set to true, the HSTS header is added with
 |===
 
 [[create-a-protocol]]
-=== *Create a Protocol*
+=== Create a Protocol
 
 Use the `create-protocol` subcommand in remote mode to create a protocol.
 
@@ -746,7 +746,7 @@ Command create-protocol executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-protocol` at the command line.
 
 [[list-protocols]]
-=== *List Protocols*
+=== List Protocols
 
 Use the `list-protocols` subcommand in remote mode to list the existing HTTP protocols.
 
@@ -771,7 +771,7 @@ Command list-protocols executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-protocols` at the command line.
 
 [[delete-a-protocol]]
-=== *Delete a Protocol*
+=== Delete a Protocol
 
 Use the `delete-protocol` subcommand in remote mode to remove a protocol.
 
@@ -797,7 +797,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Each HTTP listener has an HTTP configuration, which is created either by using the `create-http` subcommand or by using the built-in configurations that are applied when you follow the instructions in xref:technical-documentation/payara-server-documentation/general-administration/administering-http-connectivity.adoc#to-create-an-http-network-listener[To Create an HTTP Network Listener].
 
 [[create-an-http-configuration]]
-=== *Create an HTTP Configuration*
+=== Create an HTTP Configuration
 
 Use the `create-http` subcommand in remote mode to create a set of HTTP parameters for a protocol. This set of parameters configures one or more network listeners,
 
@@ -820,7 +820,7 @@ Command create-http executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-http` at the command line.
 
 [[delete-an-http-configuration]]
-=== *Delete an HTTP Configuration*
+=== Delete an HTTP Configuration
 
 Use the `delete-http` subcommand in remote mode to remove HTTP parameters from a protocol.
 
@@ -846,7 +846,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Each HTTP listener has an HTTP transport, which is created either by using the `create-transport` subcommand or by using the built-in transports that are applied when you follow the instructions in xref:technical-documentation/payara-server-documentation/general-administration/administering-http-connectivity.adoc#to-create-an-http-network-listener[To Create an HTTP Network Listener].
 
 [[create-a-transport]]
-=== *Create a Transport*
+=== Create a Transport
 
 Use the `create-transport` subcommand in remote mode to create a transport for a network listener,
 
@@ -870,7 +870,7 @@ Command create-transport executed successfully.
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-transport` at the command line.
 
 [[list-transports]]
-=== *List Transports*
+=== List Transports
 
 Use the `list-transports` subcommand in remote mode to list the existing HTTP transports.
 
@@ -906,7 +906,7 @@ Lists the transports for the specified server instance.
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-transports` at the command line.
 
 [[delete-a-transport]]
-=== *Delete a Transport*
+=== Delete a Transport
 
 Use the `delete-transport` subcommand in remote mode to remove a transport.
 

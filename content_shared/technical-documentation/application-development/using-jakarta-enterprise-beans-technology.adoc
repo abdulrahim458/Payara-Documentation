@@ -478,7 +478,7 @@ To enable availability for the EJB container, select the EJB Container Availabil
 All instances in a Payara Server cluster or deployment group must have the same availability settings to ensure consistent behavior.
 
 [[using-the---keepstate-option]]
-==== *Using the `--keepstate` Option*
+==== Using the `--keepstate` Option
 
 If you are using the file system for persistence, you can use the `--keepstate` option of the `asadmin redeploy` command to retain the SFSB state between re-deployments.
 
@@ -701,7 +701,7 @@ This section describes message-driven beans and explains the requirements for cr
 For information about setting up load balancing for message-driven beans, see xref:technical-documentation/application-development/using-jakarta-messaging.adoc#load-balanced-message-inflow[Load-Balanced Message Inflow].
 
 [[connection-factory-and-destination]]
-==== *Connection Factory and Destination*
+==== Connection Factory and Destination
 
 A message-driven bean is a client to a Connector inbound resource adapter. The message-driven bean container uses the JMS service integrated into Payara Server for message-driven beans that are JMS clients.
 JMS clients use JMS Connection Factory- and Destination-administered objects.
@@ -712,7 +712,7 @@ The `mdb-connection-factory` element in the `payara-ejb-jar.xml` file for a mess
 The `jndi-name` element of the `ejb` element in the `payara-ejb-jar.xml` file specifies the JNDI name of the administered object for the JMS Queue or Topic destination that is associated with the message-driven bean.
 
 [[message-driven-bean-pool]]
-==== *Message-Driven Bean Pool*
+==== Message-Driven Bean Pool
 
 The container manages a pool of message-driven beans for the concurrent processing of a stream of messages. The `payara-ejb-jar.xml` file contains the elements that define the pool (that is, the `bean-pool` element):
 
@@ -744,7 +744,7 @@ For details, see "xref:technical-documentation/payara-server-documentation/gener
 This section discusses the following restrictions and performance optimizations that pertain to developing message-driven beans:
 
 [[pool-tuning-and-monitoring]]
-==== *Pool Tuning and Monitoring*
+==== Pool Tuning and Monitoring
 
 The message-driven bean pool is also a pool of threads, with each message-driven bean instance in the pool associating with a server session, and each server session associating with a thread.
 

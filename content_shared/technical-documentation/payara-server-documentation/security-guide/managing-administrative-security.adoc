@@ -155,7 +155,7 @@ Certificate fingerprint (MD5): 8B:7D:5A:4A:32:36:1B:5D:6A:29:66:01:B0:A3:CB:85
 The `--adminalias` and `--instancealias` values are maintained. Because of this design, normal instance creation operations (create-instance over SSH and create-local-instance) apply the up-to-date keystore, truststore, and configuration to each instance.
 
 [[self-signed-certificates-and-trust]]
-==== *Self-Signed Certificates and Trust*
+==== Self-Signed Certificates and Trust
 
 The self-signed certificates that Payara Server uses will not be trusted by clients by default because a certificate authority (CA)) does not vouch for the authenticity of the certificate.
 

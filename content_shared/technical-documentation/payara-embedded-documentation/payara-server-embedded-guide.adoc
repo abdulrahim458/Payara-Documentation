@@ -101,7 +101,7 @@ For example, if an application uses a database other than H2, include the JDBC d
 Before you can run applications, you must set up and run the embedded Payara Server.
 
 [[creating-and-configuring-an-embedded-payara-server]]
-==== *Creating and Configuring an Embedded Payara Server*
+==== Creating and Configuring an Embedded Payara Server
 
 To create and configure an embedded Payara Server, perform these tasks:
 
@@ -219,7 +219,7 @@ public class EmbeddedRunner{
 ----
 
 [[running-an-embedded-payara-server]]
-==== *Running an Embedded Payara Server*
+==== Running an Embedded Payara Server
 
 After you create an embedded Payara Server as described in xref:creating-and-configuring-an-embedded-payara-server[Creating and Configuring an Embedded Payara Server], you can perform operations such as:
 
@@ -312,7 +312,7 @@ As an alternative, you can use the `dispose` method to stop an embedded Payara S
 Deploying an application installs the files that comprise the application into Embedded Payara Server and makes the application ready to run. By default, an application is enabled when it is deployed.
 
 [[to-deploy-an-application-from-an-archive-file-or-a-directory]]
-==== *To Deploy an Application from an Archive File or a Directory*
+==== To Deploy an Application from an Archive File or a Directory
 
 An archive file contains the resources, deployment descriptor, and classes of an application. The content of the file must be organized in the directory structure that the Jakarta EE specifications define for the type of archive that the file contains. For more information, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#deploying-applications[Deploying Applications] in the Payara Server Application Deployment section.
 
@@ -353,7 +353,7 @@ public class EmbeddedRunner{
 ----
 
 [[undeploying-an-application]]
-==== *Un-Deploying an Application*
+==== Un-Deploying an Application
 
 Undeploy an application when the application is no longer required to run in Payara Server. For example, before stopping Payara Server, undeploy all applications that are running in Payara Server.
 
@@ -378,7 +378,7 @@ public class EmbeddedRunner{
 ----
 
 [[creating-a-scattered-archive]]
-==== *Creating a Scattered Archive*
+==== Creating a Scattered Archive
 
 Deploying a module from a scattered archive (WAR or JAR) enables you to deploy an un-packaged module whose resources, deployment descriptor, and classes are in any location. Deploying a module from a scattered archive simplifies the testing of a module during development, especially if all the items that the module requires are not available to be packaged.
 
@@ -485,7 +485,7 @@ public class EmbeddedRunner{
 ----
 
 [[creating-a-scattered-enterprise-archive]]
-==== *Creating a Scattered Enterprise Archive*
+==== Creating a Scattered Enterprise Archive
 
 Deploying an application from a scattered enterprise archive (EAR) enables you to deploy an un-packaged application whose resources, deployment descriptor, and classes are in any location. Deploying an application from a scattered archive simplifies the testing of an application during development, especially if all the items that the application requires are not available to be packaged.
 

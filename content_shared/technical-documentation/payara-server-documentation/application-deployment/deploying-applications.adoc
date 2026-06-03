@@ -65,7 +65,7 @@ Information about the options and properties of the subcommand is included in th
 . If needed, fix issues and rerun the `deploy` subcommand.
 
 [[example-deploy-app]]
-==== *Example - Deploying an Enterprise Application*
+==== Example - Deploying an Enterprise Application
 
 This example deploys `newApp.ear` to the default server, `server`.
 
@@ -77,7 +77,7 @@ Command deploy executed successfully
 ----
 
 [[example-deploy-con-module]]
-==== *Example - Deploying a Connector Module*
+==== Example - Deploying a Connector Module
 
 This example deploys a connector module that is packaged in an RAR file.
 
@@ -89,7 +89,7 @@ Command deploy executed successfully
 ----
 
 [[example-using-alt-dd]]
-==== *Example - Using an Alternate Jakarta EE Standard Deployment Descriptor*
+==== Example - Using an Alternate Jakarta EE Standard Deployment Descriptor
 
 This example deploys an application using an alternate Jakarta EE standard deployment descriptor file that resides outside an application archive. Specify an absolute path or a relative path to the alternate deployment descriptor file.
 
@@ -101,7 +101,7 @@ Command deploy executed successfully
 ----
 
 [[example-deployment-order]]
-==== *Example - Specifying the Deployment Order of an Application*
+==== Example - Specifying the Deployment Order of an Application
 
 This example specifies the deployment order of two applications. The `cart` application is loaded before the `horse` application at server startup.
 
@@ -145,7 +145,7 @@ Information about these commands is included in these help pages.
 . Show the status of a deployed component by using the xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc[`show-component-status`] subcommand.
 
 [[example-list-apps]]
-==== *Example Listing Applications*
+==== Example Listing Applications
 
 The `list-applications` subcommand lists all deployed Jakarta EE applications or modules. If the `--type` option is not specified, all components are listed.
 
@@ -159,7 +159,7 @@ Command list-applications executed successfully
 ----
 
 [[example-list-subcomponents]]
-==== *Example - Listing Subcomponents*
+==== Example - Listing Subcomponents
 
 The `list-sub-components` subcommand lists EJBs or servlets in a deployed module or in a module of the deployed application. If a module is not identified, all modules are listed. The `--appname` option functions only when the given module is standalone.
 
@@ -175,7 +175,7 @@ Command list-sub-components executed successfully
 ----
 
 [[example-show-status]]
-==== *Example - Showing Status of a Deployed Component*
+==== Example - Showing Status of a Deployed Component
 
 The `show-component-status` subcommand gets the status (enabled or disabled) of the deployed component. This example gets the status of the `MEjbApp` component.
 
@@ -203,7 +203,7 @@ xref:technical-documentation/payara-server-documentation/command-reference/redep
 Information about the options and properties of these commands is included in these help pages.
 
 [[example-retain-http-session]]
-==== *Example - Retaining HTTP Session State During Redeployment*
+==== Example - Retaining HTTP Session State During Redeployment
 
 This example redeploys the `hello` web application. In a production environment, you usually want to retain sessions.
 
@@ -219,7 +219,7 @@ Command redeploy executed successfully.
 Keep State is a checkbox option when you redeploy using the Administration Console. For instructions, see the Administration Console online help.
 
 [[example-redeploy-webapp-from-dir]]
-==== *Example - Redeploying a Web Application that Was Deployed from a Directory*
+==== Example - Redeploying a Web Application that Was Deployed from a Directory
 
 This example redeploys the `hello` web application, which was originally deployed from the `hellodir` directory.
 
@@ -231,7 +231,7 @@ Command redeploy executed successfully.
 ----
 
 [[example-redeploy-app-force]]
-==== *Example - Redeploying an Application by Using `Asadmin Deploy` `--Force`*
+==== Example - Redeploying an Application by Using `Asadmin Deploy` `--Force`
 
 The `--force` option is set to `false` by default. This example redeploys `newApp.ear` even if has been deployed or already exists.
 
@@ -264,7 +264,7 @@ To see the status of deployed components, use the xref:technical-documentation/p
 Information about the options and properties of the subcommand is included in this help page.
 
 [[example-list-deployed-webapps]]
-==== *Example - Listing Deployed Web Applications*
+==== Example - Listing Deployed Web Applications
 
 This example lists all deployed web applications.
 
@@ -307,7 +307,7 @@ To see the status of deployed components, use the xref:technical-documentation/p
 Information about the options and properties of the subcommand is included in this help page.
 
 [[example-enable-app]]
-==== *Example - Enabling an Application*
+==== Example - Enabling an Application
 
 This example enables the `sampleApp` application.
 
@@ -349,7 +349,7 @@ Command list-applications executed successfully.
 ----
 
 [[example-undeploy-app]]
-==== *Example - Un-Deploying an Application*
+==== Example - Un-Deploying an Application
 
 This example uninstalls the `hellojsp` application.
 
@@ -419,7 +419,7 @@ To undeploy an automatically deployed application or module, remove its archive 
 NOTE: Deployment directories might change between Payara Server releases.
 
 [[example-set-autodeploy-interval]]
-==== *Example - Setting the Auto-Deployment Interval*
+==== Example - Setting the Auto-Deployment Interval
 
 This example sets the auto-deployment interval to 3 seconds (default is 2).
 
@@ -430,7 +430,7 @@ Command set executed successfully.
 ----
 
 [[example-set-jsp-precompilation]]
-==== *Example - Setting JSP Precompilation*
+==== Example - Setting JSP Precompilation
 
 This example enables JSP precompilation (default is `false`).
 
@@ -456,7 +456,7 @@ Each `/` (forward slash) is replaced by a `#` (pound sign).
 NOTE: Deployment directories might change between Payara Server releases.
 
 [[example-deployment-plan]]
-==== *Example - Deploying by Using a Deployment Plan*
+==== Example - Deploying by Using a Deployment Plan
 
 This example deploys the application in the `myrostapp.ear` file according to the plan specified by the `mydeployplan.jar` file.
 
@@ -469,7 +469,7 @@ Command deploy executed successfully.
 ----
 
 [[example-deployment-plan-structure-ear]]
-==== *Example - Deployment Plan Structure for an Enterprise Application*
+==== Example - Deployment Plan Structure for an Enterprise Application
 
 This listing shows the structure of the deployment plan JAR file for an EAR file.
 
@@ -522,7 +522,7 @@ For information about the required directory contents, see the appropriate speci
 NOTE: Deployment directories might change between Payara Server releases.
 
 [[example-deploy-app-from-dir]]
-==== *Example - Deploying an Application from a Directory*
+==== Example - Deploying an Application from a Directory
 
 This example deploys the expanded directory `/apps/MyApp` for the `hello` application.
 
@@ -596,7 +596,7 @@ Payara Server also has the ability to deploy applications whose archives are hos
 The only difference in the command is that it takes a valid URL instead of a file location in the host's filesystem.
 
 [[example-deploy-from-url]]
-==== *Example - Deploying by Using a URL*
+==== Example - Deploying by Using a URL
 
 The following example showcases how to deploy an application's archive for the `clusterjsp` application hosted in the `https://nexus.payara.fish/repository/payara-artifacts` remote repository using the `deploy-remote-archive` subcommand:
 
@@ -615,7 +615,7 @@ Payara Server also has the ability to deploy applications whose archives are hos
 By default, the command will search for the artifact in Maven Central, but specific Maven repositories can be added as search locations by using the `additionalRepositories` option, which accepts a comma separated list of repository URLs.
 
 [[example-deploy-from-maven-repo]]
-==== *Example - Deploying by Using a Maven Artifact*
+==== Example - Deploying by Using a Maven Artifact
 
 The following example showcases how to deploy an application's archive for the `clusterjsp-1.1.1.war` application artifact which is located in the `https://nexus.payara.fish/repository/payara-artifacts` Maven repository using the `deploy-remote-archive` subcommand:
 
@@ -673,7 +673,7 @@ Remote commands require a running server.
 Information about the options for the subcommand is included in this help page.
 
 [[exaple-servlet-context-init]]
-==== *Example - Setting a Servlet Context-Initialization Parameter for a Web Application*
+==== Example - Setting a Servlet Context-Initialization Parameter for a Web Application
 
 This example sets the servlet context-initialization parameter `jakarta.faces.STATE_SAVING_METHOD` of the web application `basic-ezcomp` to client.
 
@@ -712,7 +712,7 @@ Remote commands require a running server.
 Information about the options for the subcommand is included in this help page.
 
 [[example-unset-servlet-context-init]]
-==== *Example - Unsetting a Servlet Context-Initialization Parameter for a Web Application*
+==== Example - Unsetting a Servlet Context-Initialization Parameter for a Web Application
 
 This example unsets the servlet context-initialization parameter ` jakarta.faces.STATE_SAVING_METHOD` of the web application `basic-ezcomp`.
 
@@ -742,7 +742,7 @@ Remote commands require a running server.
 . List servlet context-initialization parameters by using the xref:technical-documentation/payara-server-documentation/command-reference/list-web-context-param.adoc[`list-web-context-param`] subcommand.
 
 [[example-list-servlet-context-init-params]]
-==== *Example - Listing Servlet Context-Initialization Parameters for a Web Application*
+==== Example - Listing Servlet Context-Initialization Parameters for a Web Application
 
 This example lists all servlet context-initialization parameters of the web application `basic-ezcomp` that have been set by using the `set-web-context-param` subcommand. Because no description was specified when the `jakarta.faces.PROJECT_STAGE` parameter was set, null is displayed instead of a description for this parameter.
 
@@ -782,7 +782,7 @@ Remote commands require a running server.
 Information about the options for the subcommand is included in this help page.
 
 [[example-set-env-var-webapp]]
-==== *Example - Setting an Environment Entry for a Web Application*
+==== Example - Setting an Environment Entry for a Web Application
 
 This example sets the environment entry `Hello User` of the application hello to `techscribe`. The Java type of this entry is `java.lang.String`.
 
@@ -808,7 +808,7 @@ Remote commands require a running server.
 Information about the options for the subcommand is included in this help page.
 
 [[example-unset-env-var-webapp]]
-==== *Example - Unsetting an Environment Entry for a Web Application*
+==== Example - Unsetting an Environment Entry for a Web Application
 
 This example unsets the environment entry `Hello User` of the web application `hello`.
 
@@ -835,7 +835,7 @@ Remote commands require a running server.
 . List the environment entries by using the xref:technical-documentation/payara-server-documentation/command-reference/list-web-env-entry.adoc[`list-web-env-entry`] subcommand.
 
 [[example-list-env-var-entries-webapp]]
-==== *Example - Listing Environment Entries for a Web Application*
+==== Example - Listing Environment Entries for a Web Application
 
 This example lists all environment entries that have been set for the web application `hello` by using the `set-web-env-entry` subcommand.
 

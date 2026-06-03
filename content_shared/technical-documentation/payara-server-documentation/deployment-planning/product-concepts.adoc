@@ -83,7 +83,7 @@ Changing the configuration of one domain does not affect the configurations of o
 NOTE: All hosts in a domain on which the DAS and Payara Server instances are running must have the same operating system.
 
 [[domain-administration-server-das]]
-==== *Domain Administration Server (DAS)*
+==== Domain Administration Server (DAS)
 
 A domain has one Domain Administration Server (DAS), a specially designated Payara Server instance that hosts the administrative applications. The DAS authenticates the administrator, accepts requests from administration tools, and communicates with server instances in the domain to carry out the requests.
 

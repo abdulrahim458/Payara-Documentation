@@ -349,7 +349,7 @@ The Payara Server provides workarounds for some known issues with transaction re
 NOTE: These workarounds do not imply support for any particular JDBC driver.
 
 [[general-recovery-limitations]]
-==== *General Recovery Limitations*
+==== General Recovery Limitations
 
 The following general limitations apply to transaction recovery:
 
@@ -368,7 +368,7 @@ or if it used a `LOCAL` or `REMOTE` Message Queue broker and the broker also fai
 This is because for conventional Message Queue clustering, state information in a failed broker is not available until the broker restarts.
 
 [[oracle-setup-for-transaction-recovery]]
-==== *Oracle Setup for Transaction Recovery*
+==== Oracle Setup for Transaction Recovery
 
 You must configure the following `grant` statements in your Oracle database to set up transaction recovery:
 
@@ -385,7 +385,7 @@ grant select on SYS.DBA_2PC_PENDING to user;
 The user is the database administrator. On some versions of the Oracle driver the last `grant execute` fails. You can ignore this.
 
 [[oracle-thin-driver]]
-==== *Oracle Thin Driver*
+==== Oracle Thin Driver
 
 In the Oracle thin driver, the `XAResource.recover` method repeatedly returns the same set of in-doubt Xids regardless of the input flag.
 According to the XA specifications, the Transaction Manager initially calls this method with TMSTARTSCAN and then with TMNOFLAGS repeatedly until no Xids are returned.
@@ -397,12 +397,12 @@ about how to set this property, see xref:technical-documentation/payara-server-d
 This workaround is used unless explicitly disabled.
 
 [[delegated-recovery-after-server-crash-doesnt-work-on-mysql]]
-==== *Delegated Recovery after Server Crash Doesn't Work on Mysql*
+==== Delegated Recovery after Server Crash Doesn't Work on Mysql
 
 The MySQL database supports XA transaction recovery only when the database crashes. When a Payara Server instance crashes, MySQL rolls back prepared transactions.
 
 [[call-to-xateminator.recover-during-resourceadapter.start-hangs-if-automatic-recovery-is-enabled]]
-==== *Call to `XATeminator.recover()` During `ResourceAdapter.start()` Hangs If Automatic Recovery Is Enabled*
+==== Call to `XATeminator.recover()` During `ResourceAdapter.start()` Hangs If Automatic Recovery Is Enabled
 
 Calls to `XATerminator.recover()` from the `ResourceAdapter.start()` method never return because Payara Server deadlocks. This only occurs when automatic recovery is enabled.
 

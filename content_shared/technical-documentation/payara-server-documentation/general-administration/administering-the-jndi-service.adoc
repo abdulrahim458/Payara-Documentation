@@ -81,7 +81,7 @@ Within Payara Server, you can configure your environment for custom and external
 A custom resource specifies a custom server-wide resource object factory that implements the `javax.naming.spi.ObjectFactory` interface.
 
 [[to-create-a-custom-jndi-resource]]
-==== *To Create a Custom JNDI Resource*
+==== To Create a Custom JNDI Resource
 
 Use the `create-custom-resource` subcommand in remote mode to create a custom resource.
 
@@ -99,7 +99,7 @@ Command create-custom-resource executed successfully.
 This example creates a custom resource named `sample-custom-resource`.
 
 [[to-list-custom-jndi-resources]]
-==== *To List Custom JNDI Resources*
+==== To List Custom JNDI Resources
 
 Use the `list-custom-resources` subcommand in remote mode to list the existing custom resources.
 
@@ -117,7 +117,7 @@ Command list-custom-resources executed successfully
 This example lists the existing custom resources.
 
 [[to-update-a-custom-jndi-resource]]
-==== *To Update a Custom JNDI Resource*
+==== To Update a Custom JNDI Resource
 
 . List the custom resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-custom-resources.adoc[`list-custom-resources`] subcommand.
 . Use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand to modify a custom JNDI resource.
@@ -132,7 +132,7 @@ asadmin> set server.resources.custom-resource.custom
 This example modifies a custom resource.
 
 [[to-delete-a-custom-jndi-resource]]
-==== *To Delete a Custom JNDI Resource*
+==== To Delete a Custom JNDI Resource
 
 Use the `delete-custom-resource` subcommand in remote mode to delete a custom resource.
 
@@ -154,7 +154,7 @@ This example deletes a custom resource named `sample-custom-resource`.
 Applications running on Payara Server often require access to resources stored in an external JNDI repository. For example, generic Java objects might be stored in an LDAP server according to the Java schema. External JNDI resource elements let you configure such external resource repositories.
 
 [[to-register-an-external-jndi-resource]]
-==== *To Register an External JNDI Resource*
+==== To Register an External JNDI Resource
 
 Use the `create-jndi-resource` subcommand in remote mode to register an external JNDI resource.
 
@@ -179,7 +179,7 @@ Command create-jndi-resource executed successfully
 In This example `sample_jndi_resource` is registered.
 
 [[to-list-external-jndi-resources]]
-==== *To List External JNDI Resources*
+==== To List External JNDI Resources
 
 Use the `list-jndi-resources` subcommand in remote mode to list all existing JNDI resources.
 
@@ -198,7 +198,7 @@ Command list-jndi-resources executed successfully
 This example lists the JNDI resources.
 
 [[to-list-external-jndi-entries]]
-==== *To List External JNDI Entries*
+==== To List External JNDI Entries
 
 Use the `list-jndi-entries` subcommand in remote mode to browse and list the entries in the JNDI tree. You can either list all entries, or you can specify
 the JNDI context or subcontext to list specific entries.
@@ -218,7 +218,7 @@ Command list-jndi-resources executed successfully
 This example lists all the JNDI entries for the naming service.
 
 [[to-update-an-external-jndi-resource]]
-==== *To Update an External JNDI Resource*
+==== To Update an External JNDI Resource
 
 . List the existing JNDI resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-jndi-resources.adoc#list-jndi-resources[`list-jndi-resources`] subcommand.
 . Use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand to modify an external JNDI resource.
@@ -232,7 +232,7 @@ jndi-lookup-name=bar server.resources.external-jndi-resource.my-jndi-resource.jn
 This example modifies an external resource.
 
 [[to-delete-an-external-jndi-resource]]
-==== *To Delete an External JNDI Resource*
+==== To Delete an External JNDI Resource
 
 Use the `delete-jndi-resource` subcommand in remote mode to remove a JNDI resource.
 
@@ -248,7 +248,7 @@ Command delete-jndi-resource executed successfully.
 This example deletes an external JNDI resource:
 
 [[example-of-using-an-external-jndi-resource]]
-==== *Example of Using an External JNDI Resource*
+==== Example of Using an External JNDI Resource
 
 [source,xml]
 ----
@@ -275,7 +275,7 @@ This example deletes an external JNDI resource:
 ----
 
 [[to-disable-payara-server-v2-vendor-specific-jndi-names]]
-==== *To Disable Payara Server v2 Vendor-Specific JNDI Names*
+==== To Disable Payara Server v2 Vendor-Specific JNDI Names
 
 The EJB 3.1 specification supported by Payara Server 5.0 defines portable EJB JNDI names. Because of this, there is less need to continue to use older vendor-specific JNDI names.
 

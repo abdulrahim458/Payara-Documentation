@@ -249,7 +249,7 @@ Multi-homing provides the following benefits:
 * Supports separation of external and internal traffic.
 
 [[traffic-separation-using-multi-homing]]
-==== *Traffic Separation Using Multi-Homing*
+==== Traffic Separation Using Multi-Homing
 
 You can separate the internal traffic resulting from GMS from the external traffic. Traffic separation enables you plan a network better and augment certain parts of the network, as required.
 

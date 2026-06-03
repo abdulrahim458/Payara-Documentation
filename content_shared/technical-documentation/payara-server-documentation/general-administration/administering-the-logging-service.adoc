@@ -23,7 +23,7 @@ For more information about Logging in Java, see:
 Payara Server log records are captured in the server log file, which captures information about the operation of a server instance running in the domain. Each instance, managed server instance (that is, each cluster member), and the domain administration server (DAS) has an individual server log file.
 
 [[log-file-names-and-locations]]
-==== *Log File Names and Locations*
+==== Log File Names and Locations
 
 In a Payara Server domain, log files have the following name and location by default:
 
@@ -68,7 +68,7 @@ as-install-parent directory
 You can change the default name or location of a log file by modifying the logging properties file for the corresponding instance, described in xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#to-change-the-name-and-location-of-the-log-file[To Change the Name and Location of the Log File].
 
 [[log-records]]
-==== *Log Records*
+==== Log Records
 
 Payara Server writes log records in either the Oracle Diagnostics Logging (ODL) format or the Uniform Log Formatter (ULF) format. The default format is ODL. For information about changing the format, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#setting-the-log-file-format[Setting the Log File Format].
 
@@ -134,7 +134,7 @@ The following is an example of a log record formatted in the ULF format:
 The Administration Console presents log records in a more readable display. For information about viewing log records using the Administration Console, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#viewing-log-records[Viewing Log Records].
 
 [[log-rotation]]
-==== *Log Rotation*
+==== Log Rotation
 
 By default, when a log file grows to 2 MB, Payara Server renames (rotates) the file to incorporate a timestamp and creates a new log file. The log file is renamed as `server.log` date, where date is the date and time that the file was rotated.
 
@@ -295,7 +295,7 @@ This section explains how to change the name and location of the following loggi
 * Logging properties file
 
 [[to-change-the-name-and-location-of-the-log-file]]
-==== *To Change the Name and Location of the Log File*
+==== To Change the Name and Location of the Log File
 
 To change the name and location of the log file, first use the `list-log-attributes` subcommand to obtain the current log attribute setting for the log file name and location.
 
@@ -317,7 +317,7 @@ If you do not specify a target, the log attribute settings for the DAS are displ
 If you do not specify a target, the log file for the DAS is targeted by default. If you target a cluster, the name of the cluster log file for each member instance can be changed (the server log file name cannot).
 
 [[example-to-change-the-name-and-location-of-the-log-file]]
-==== *Example - to Change the Name and Location of the Log File*
+==== Example - to Change the Name and Location of the Log File
 
 This example changes the name of the cluster log file for `Cluster1` to `cluster1.log`. `Cluster1` has two server instances: `ClusterServer1` and `ClusterServer2`.
 
@@ -358,7 +358,7 @@ You can view the full syntax and options of these subcommands by typing
 the command line.
 
 [[to-change-the-name-and-location-of-the-logging-properties-file]]
-==== *To Change the Name and Location of the Logging Properties File*
+==== To Change the Name and Location of the Logging Properties File
 
 You can set the name and location of the logging properties file by setting the `java.util.logging.config.file` system property. By setting this system property, you can have a single logging properties file that is used by all instances running on the same host.
 
@@ -377,7 +377,7 @@ Alternatively, you can use the Administration Console to set this system propert
 . To apply your change, restart Payara Server.
 
 [[example-to-change-the-name-and-location-of-the-logging-properties-file]]
-==== *Example - to Change the Name and Location of the Logging Property File*
+==== Example - to Change the Name and Location of the Logging Property File
 
 The following example changes the location of the logging properties file to `/space/mylogging/logging.properties`:
 
@@ -402,7 +402,7 @@ Because setting log levels is a dynamic operation, you do not need to restart Pa
 Setting either global or logger-specific log levels is done by using the `set-log-levels` subcommand. Listing log levels is done by using the `list-log-levels` subcommand.
 
 [[to-list-log-levels]]
-==== *To List Log Levels*
+==== To List Log Levels
 
 Payara Server provides the means to list all loggers and their log levels. Listing the loggers provides a convenient means to view current loggers and log levels either prior to or after making log level changes.
 
@@ -417,7 +417,7 @@ Use the `list-log-levels` subcommand in remote mode to list the modules and thei
 . List the existing module loggers and log levels by using the xref:technical-documentation/payara-server-documentation/command-reference/list-log-levels.adoc[`list-log-levels`] subcommand.
 
 [[example-to-list-log-levels]]
-==== *Example - to List Log Levels Part 1*
+==== Example - to List Log Levels Part 1
 
 This example shows a partial list of the existing loggers and their log levels in the DAS.
 
@@ -437,7 +437,7 @@ Command list-log-levels executed successfully.
 ----
 
 [[example-to-list-log-levels-2]]
-==== *Example - to List Log Levels Part 2*
+==== Example - to List Log Levels Part 2
 
 This example shows a partial list of the loggers and log levels for the instance `MyServer2`.
 
@@ -460,7 +460,7 @@ Command list-log-levels executed successfully.
 You can view the full syntax and options of the subcommand by typing `asadmin help list-log-levels` at the command line.
 
 [[to-set-the-global-log-level]]
-==== *To Set the Global Log Level*
+==== To Set the Global Log Level
 
 The global log level specifies the events that are logged across all loggers. The default level for messages output to the console is `INFO` (which also includes `EMERGENCY`, `ALERT`, `SEVERE`, and `WARNING` messages).
 
@@ -482,7 +482,7 @@ java.util.logging.ConsoleHandler <FINEST>
 ----
 
 [[example-to-set-the-global-log-level]]
-==== *Example - to Set the Global Log Level*
+==== Example - to Set the Global Log Level
 
 By setting the log level of the `ConsoleHandler`, you set the global log level for all loggers. This example sets the global log level in the DAS to `INFO`:
 
@@ -499,7 +499,7 @@ Command set-log-levels executed successfully.
 You can view the full syntax and options of the subcommand by typing `asadmin help set-log-levels` at the command line.
 
 [[to-set-module-log-levels]]
-==== *To Set Module Log Levels*
+==== To Set Module Log Levels
 
 A module log level specifies the events that are logged for a particular logger. The default level for messages output to the console is `INFO` (which also includes `EMERGENCY`, `ALERT`, `SEVERE`, and `WARNING` messages). The global log level is overridden by a module-specific log level.
 
@@ -527,7 +527,7 @@ xref:technical-documentation/payara-server-documentation/command-reference/set-l
 Your choices are `EMERGENCY`, `ALERT`, `SEVERE`, `WARNING`, `INFO`, `CONFIG`, `FINE`, `FINER`, and `FINEST`.
 
 [[example-to-set-module-log-levels]]
-==== *Example - to Set the Module Log Levels Part 1*
+==== Example - to Set the Module Log Levels Part 1
 
 This example sets the log level for the web container logger to WARNING on the target instance `ManagedServer1`:
 
@@ -546,7 +546,7 @@ Command set-log-levels executed successfully.
 ----
 
 [[example-to-set-module-log-levels-2]]
-==== *Example - to Set the Module Log Levels Part 2*
+==== Example - to Set the Module Log Levels Part 2
 
 The following example sets the log level for security and web container loggers in the DAS.
 
@@ -570,7 +570,7 @@ You can view the full syntax and options of the subcommand by typing `asadmin he
 You can set the format for log records in log files.
 
 [[to-set-the-log-file-format]]
-==== *To Set the Log File Format*
+==== To Set the Log File Format
 
 Use the `set-log-file-format` subcommand in remote mode to set the formatter used by Payara Server to format log records in log files. You can also use the `set-log-attributes` subcommand.
 
@@ -583,7 +583,7 @@ NOTE: Changing the log format forces log rotation to avoid mixed format in the s
 . To apply your change, restart Payara Server.
 
 [[example-to-set-the-log-file-format]]
-==== *Example - to Set the Log File Format Part 1*
+==== Example - to Set the Log File Format Part 1
 
 This example sets the log file format to `ULF` for standalone instance `ManagedServer1` using the `set-log-file-format` subcommand.
 
@@ -596,7 +596,7 @@ Command set-log-file-format executed successfully.
 ----
 
 [[example-to-set-the-log-file-format-2]]
-==== *Example - to Set the Log File Format Part 2*
+==== Example - to Set the Log File Format Part 2
 
 This example sets the log file format to `ULF` for standalone instance `ManagedServer1` using the `set-log-attributes` subcommand.
 
@@ -687,7 +687,7 @@ public class ApplicationComponent{
 ----
 
 [[to-exclude-fields-in-log-records]]
-==== *To Exclude Fields in Log Records*
+==== To Exclude Fields in Log Records
 
 Use the `set-log-attributes` subcommand in remote mode to exclude specific name-value fields from log records. If the `excludeFields` attribute is not specified, all name-value fields are included.
 
@@ -710,7 +710,7 @@ Remote commands require a running server.
 . To apply your change, restart Payara Server.
 
 [[example-to-exclude-fields-in-log-records]]
-===== *Example - to Exclude Fields in Log Records*
+===== Example - to Exclude Fields in Log Records
 
 This example excludes the `userId` and `levelVal` name-value fields in log records for standalone instance `ManagedServer1`:
 
@@ -728,7 +728,7 @@ Command set-log-attributes executed successfully.
 You can view the full syntax and options of the subcommand by typing `asadmin help set-log-attributes` at the command line.
 
 [[to-set-multiline-mode]]
-==== *To Set Multiline Mode*
+==== To Set Multiline Mode
 
 Use the `set-log-attributes` command in remote mode to set multiline
 mode. When multiline mode is enabled (the default), the body of a log message starts on a new line after the message header and is indented.
@@ -741,7 +741,7 @@ xref:technical-documentation/payara-server-documentation/command-reference/set-l
 .  To apply your change, restart Payara Server.
 
 [[example-to-set-multiline-mode]]
-==== *Example - to Set Multiline Mode*
+==== Example - to Set Multiline Mode
 
 Multiline mode is enabled by default. The following example disables multiline mode in log files for standalone instance `ManagedServer1`:
 
@@ -779,7 +779,7 @@ A manual rotation forces the immediate rotation of the target log file.
 Changing the default log rotation settings is done using the `set-log-attributes` subcommand, and rotating log files manually is done using the `rotate-log` subcommand.
 
 [[to-change-the-rotation-file-size]]
-==== *To Change the Rotation File Size*
+==== To Change the Rotation File Size
 
 Use the `set-log-attributes` subcommand in remote mode to change the log rotation file size. The default target of this subcommand is the DAS.
 
@@ -790,7 +790,7 @@ Optionally, you can target a configuration, server, instance, or cluster. The mi
 . To apply your change, restart Payara Server.
 
 [[example-to-change-the-rotation-file-size]]
-==== *Example - to Change the Rotation File Size*
+==== Example - to Change the Rotation File Size
 
 The following example sets the log file rotation size to 1 MB for the standalone instance `ManagedServer1`:
 
@@ -813,7 +813,7 @@ Command set-log-attributes executed successfully.
 You can view the full syntax and options of the subcommand by typing `asadmin help set-log-attributes` at the command line.
 
 [[to-change-the-file-rotation-interval]]
-==== *To Change the File Rotation Interval*
+==== To Change the File Rotation Interval
 
 Use the `set-log-attributes` subcommand in remote mode to change the log file rotation time limit interval. The default target of this subcommand is the DAS. Optionally, you can target a configuration, server, instance, or cluster. The default value is `0`.
 
@@ -822,7 +822,7 @@ Use the `set-log-attributes` subcommand in remote mode to change the log file ro
 . To apply your change, restart Payara Server.
 
 [[example-to-change-the-file-rotation-interval]]
-==== *Example - to Change the File Rotation Interval*
+==== Example - to Change the File Rotation Interval
 
 The following example sets the log file rotation time limit for the cluster `Cluster1`, which has the instances `ClusterServer1` and `ClusterServer2`.
 
@@ -850,7 +850,7 @@ Command set-log-attributes executed successfully.
 You can view the full syntax and options of the subcommand by typing `asadmin help set-log-attributes` at the command line.
 
 [[to-change-the-limit-number-of-retained-files]]
-==== *To Change the Limit Number of Retained Files*
+==== To Change the Limit Number of Retained Files
 
 Use the `set-log-attributes` subcommand in remote mode to change the limit on the number of log files that the server creates to store old log messages. The default target of this subcommand is the DAS.Optionally, you can target a configuration, server, instance, or cluster. The default limit value is `0`, which results in no limit placed on the number of rotated log files that are retained.
 
@@ -865,7 +865,7 @@ The behavior of the `com.sun.enterprise.server.logging.GFFileHandler.maxHistoryF
 . To apply your change, restart Payara Server.
 
 [[example-to-change-the-limit-number-of-retained-files]]
-==== *Example - to Change the Limit Number of Retained Files*
+==== Example - to Change the Limit Number of Retained Files
 
 The following example sets the log limit number of retained log files for the DAS to `10`.
 
@@ -905,7 +905,7 @@ asadmin> set-log-attributes com.sun.enterprise.server.logging.GFFileHandler.comp
 ----
 
 [[to-rotate-log-files-manually]]
-==== *To Rotate Log Files Manually*
+==== To Rotate Log Files Manually
 
 You can rotate log files manually by using the `rotate-log` subcommand in remote mode. The default target of this subcommand is the DAS. Optionally, you can target a configuration, server, instance, or cluster. When you use this subcommand, the target log file is immediately moved to a new time-stamped file and a new log file is created.
 
@@ -915,7 +915,7 @@ Because log rotation is a dynamic operation, you do not need to restart Payara S
 . Rotate log files by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/rotate-log.adoc[`rotate-log`] subcommand.
 
 [[example-to-rotate-log-files-manually]]
-==== *Example - to Rotate Log Files Manually*
+==== Example - to Rotate Log Files Manually
 
 The following example rotates the `server.log` file for `ManagedServer2` to `server.log_`yyyy-mm-dd`T`hh-mm-ss`, where `yyyy-mm-dd`T`hh-mm-ss` represents the time when the file is rotated, and creates a new `server.log` file in the default location.
 
@@ -937,7 +937,7 @@ However, you may find that you want to log messages to a different location, suc
 This section explains how to add a custom log handler to the Payara Server logging service.
 
 [[to-add-a-custom-log-handler]]
-==== *To Add a Custom Log Handler*
+==== To Add a Custom Log Handler
 
 A comma-separated list of log handlers is installed during startup of the Java Virtual Machine (JVM) host. The default log handler that is provided in the `logging.properties` file, `ConsoleHandler`, is configured as follows:
 
@@ -964,7 +964,7 @@ The default target of this subcommand is the DAS. Optionally you can target a co
 . To apply your changes, restart Payara Server.
 
 [[example-to-add-a-custom-log-handler]]
-==== *Example - to Add a Custom Log Handler*
+==== Example - to Add a Custom Log Handler
 
 This example adds the custom logger `com.example.logging.MyHandler` to the logging properties file of the DAS.
 
@@ -1160,7 +1160,7 @@ The default location in which the ZIP archive is created is the `domain-dir/coll
 The name of the ZIP file contains the timestamp, as follows: `log_`yyyy-mm-dd_hh-min-sec`.zip`
 
 [[example-to-collect-log-files-into-a-zip-archive]]
-==== *Example - to Collect Log Files into a .zip Archive*
+==== Example - to Collect Log Files into a .zip Archive
 
 This example shows collecting the log files for the cluster `MyCluster` and compiling them into a ZIP archive in the `/space/output` directory.
 
@@ -1209,7 +1209,7 @@ Remote commands require a running server.
 . List loggers by using the xref:technical-documentation/payara-server-documentation/command-reference/list-loggers.adoc[`list-loggers`] subcommand.
 
 [[example-to-list-loggers]]
-==== *Example - to List Loggers*
+==== Example - to List Loggers
 
 This example lists the logger name, subsystem, and description for each logger. Some lines of output are omitted from this example for readability.
 

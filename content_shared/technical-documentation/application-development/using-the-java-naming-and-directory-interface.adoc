@@ -201,7 +201,7 @@ IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in 
 It is recommended to use payara-resources.xml instead.
 
 [[javabeanfactory]]
-==== *Javabeanfactory*
+==== Javabeanfactory
 
 To create a custom resource that provides instances of a JavaBean class, follow these steps:
 

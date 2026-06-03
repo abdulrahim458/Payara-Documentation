@@ -64,7 +64,7 @@ The requirements for SSH configuration and user management are different for eac
 On UNIX and Linux systems, SSH is typically installed and preconfigured, and requires minimal additional setup. On Windows systems, additional setup is required to install and configure an SSH provider.
 
 [[obtaining-ssh-software]]
-==== *Obtaining SSH Software*
+==== Obtaining SSH Software
 
 On UNIX and Linux systems, SSH software is typically installed as part of the base operating system.
 
@@ -74,7 +74,7 @@ However, on Windows systems, you must install one of the following SSH providers
 * http://www.mkssoftware.com[MKS Toolkit for Developers^]
 
 [[determining-the-ssh-user]]
-==== *Determining the SSH User*
+==== Determining the SSH User
 
 Before setting up SSH, decide which SSH user Payara Server will use when connecting to remote hosts.
 For the following reasons, administration is simplest if the SSH user is the user that starts the DAS:
@@ -84,7 +84,7 @@ For the following reasons, administration is simplest if the SSH user is the use
 * By default, the DAS assumes that the SSH user is the user that is running the DAS.
 
 [[requirements-for-the-ssh-users-environment]]
-==== *Requirements for the SSH User's Environment*
+==== Requirements for the SSH User's Environment
 
 The SSH user's environment on a host is set by the environment set-up files that are run when the user uses SSH to run a command on the host. You must ensure that these files set up the SSH user's environment correctly.
 
@@ -93,7 +93,7 @@ The files that are run when the user uses SSH to run a command are different fro
 Therefore, in the bash shell, you must ensure that `.bashrc` contains the required environment settings for the SSH user.
 
 [[file-access-permissions-on-uac-enabled-windows-systems]]
-==== *File Access Permissions on UAC-Enabled Windows Systems*
+==== File Access Permissions on UAC-Enabled Windows Systems
 
 WARNING: The http://technet.microsoft.com/en-us/library/cc709691%28WS.10%29.aspx[User
 Account Control (UAC)] (`http://technet.microsoft.com/en-us/library/cc709691%28WS.10%29.aspx`) feature is available only on older versions of the Windows operating system( like Windows 7, Windows Vista, and Windows Server 2008).

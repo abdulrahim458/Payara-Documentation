@@ -140,7 +140,7 @@ NOTE: You can also set broker properties in the JMS service configuration. If yo
 * *jms-host-name*: The unique name of the JMS host.
 
 [[example-17-1-creating-a-jms-host]]
-==== *Example 17-1 Creating a JMS Host*
+==== Example 17-1 Creating a JMS Host
 
 This example creates a JMS host named `MyNewHost`.
 
@@ -160,7 +160,7 @@ Use the `list-jms-hosts` subcommand in remote `asadmin` mode to list the existin
 .  List the JMS hosts by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-jms-hosts.adoc[`list-jms-hosts`] subcommand.
 
 [[example-17-2-listing-jms-hosts]]
-==== *Example 17-2 Listing JMS Hosts*
+==== Example 17-2 Listing JMS Hosts
 
 The following subcommand lists the existing JMS hosts.
 
@@ -204,7 +204,7 @@ jms-host-name.attribute-name=attribute-value
 NOTE: You can also set broker properties in the JMS service configuration. If you set the same broker property in both the JMS host and the JMS service configuration, the value specified in the JMS host is used.
 
 [[example-17-3-updating-jms-host]]
-==== *Example 17-3 Updating a JMS Host*
+==== Example 17-3 Updating a JMS Host
 
 This example changes the value of the `host` attribute of the JMS host `default_JMS_Host`. By default, this value is `localhost`.
 
@@ -223,7 +223,7 @@ Use the `delete-jms-host` subcommand in remote `asadmin` mode to delete a JMS ho
 . Delete a JMS host by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-jms-host.adoc[`delete-jms-host`] subcommand.
 
 [[example-17-4-deleting-a-jms-host]]
-==== *Example 17-4 Deleting a JMS Host*
+==== Example 17-4 Deleting a JMS Host
 
 This example deletes a JMS host named `MyNewHost`.
 
@@ -280,7 +280,7 @@ Information about the properties for the subcommand is included in this help pag
 Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc[Configuration Changes That Require Restart]. If your server needs to be restarted, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 [[example-17-5-creating-a-jms-connection-factory]]
-==== *Example 17-5 Creating a JMS Connection Factory*
+==== Example 17-5 Creating a JMS Connection Factory
 
 This example creates a connection factory resource of type `jakarta.jms.ConnectionFactory` whose JNDI name is `jms/DurableConnectionFactory`. The `ClientId` property sets a client ID on the connection factory so that it can be used for durable subscriptions. The JNDI name for a JMS resource customarily includes the `jms/` naming subcontext.
 
@@ -293,7 +293,7 @@ Command create-jms-resource executed successfully.
 ----
 
 [[example-17-6-creating-a-jms-destination]]
-==== *Example 17-6 Creating a JMS Destination*
+==== Example 17-6 Creating a JMS Destination
 
 This example creates a destination resource whose JNDI name is `jms/MyQueue`.
 
@@ -313,7 +313,7 @@ Use the `list-jms-resources` subcommand in remote `asadmin` mode to list the exi
 . List the existing JMS resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-jms-resources.adoc[`list-jms-resources`] subcommand.
 
 [[example-17-7-listing-all-jms-resources]]
-==== *Example 17-7 Listing All JMS Resources*
+==== Example 17-7 Listing All JMS Resources
 
 This example lists all the existing JMS connection factory and destination resources.
 
@@ -328,7 +328,7 @@ Command list-jms-resources executed successfully
 ----
 
 [[example-17-8-list-a-jms-resource-of-a-specific-type]]
-==== *Example 17-8 Listing a JMS Resources of a Specific Type*
+==== Example 17-8 Listing a JMS Resources of a Specific Type
 
 This example lists the resources for the resource type `javax`.
 
@@ -354,7 +354,7 @@ Ensure that you remove all references to the specified JMS resource before runni
 . Delete the JMS resource by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-jms-resource.adoc[`delete-jms-resource`] subcommand.
 
 [[example-17-9-deleting-a-jms-resource]]
-==== *Example 17-9 Deleting a JMS Resource*
+==== Example 17-9 Deleting a JMS Resource
 
 This example deletes the `jms/Queue` resource.
 
@@ -384,7 +384,7 @@ Because a physical destination is actually a Message Queue object rather than a 
 
 
 [[example-17-10-creating-a-jms-physical-destination]]
-==== *Example 17-10 Creating a JMS Physical Destination*
+==== Example 17-10 Creating a JMS Physical Destination
 
 This example creates a queue named `PhysicalQueue`.
 
@@ -403,7 +403,7 @@ Use the `list-jmsdest` subcommand in remote `asadmin` mode to list the existing 
 . Ensure that the server is running. Remote `asadmin` subcommands require a running server.
 . List the existing JMS physical destinations by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-jmsdest.adoc[`list-jmsdest`] subcommand.
 
-==== *Example 17-11 Listing JMS Physical Destinations*
+==== Example 17-11 Listing JMS Physical Destinations
 [source,shell]
 ----
 asadmin> list-jmsdest
@@ -422,7 +422,7 @@ Use the `flush-jmsdest` subcommand in remote `asadmin` mode to purge the message
 . Purge messages from the JMS physical destination by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/flush-jmsdest.adoc[`flush-jmsdest`] subcommand.
 . If needed, restart the server. Some properties require server restart. See xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart]. If your server needs to be restarted, see  xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
-==== *Example 17-12 Flushing Messages from a JMS Physical Destination*
+==== Example 17-12 Flushing Messages from a JMS Physical Destination
 [source,shell]
 ----
 asadmin> flush-jmsdest --desttype queue PhysicalQueue
@@ -439,7 +439,7 @@ Use the `delete-jmsdest` subcommand in remote `asadmin` mode to remove the speci
 . List the existing JMS physical destinations by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-jmsdest.adoc[`list-jmsdest`] subcommand.
 . Delete the physical resource by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-jmsdest.adoc[`delete-jmsdest`] subcommand.
 
-==== *Example 17-13 Deleting a Physical Destination*
+==== Example 17-13 Deleting a Physical Destination
 [source,shell]
 ----
 asadmin> delete-jmsdest --desttype queue PhysicalQueue

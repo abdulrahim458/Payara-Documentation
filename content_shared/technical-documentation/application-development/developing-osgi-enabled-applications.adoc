@@ -58,7 +58,7 @@ Thus, an OSGi bundle deployed in Payara Server can access these services using O
 * JMS Resource Service
 
 [[http-service]]
-==== *HTTP Service*
+==== HTTP Service
 
 The Payara Server web container is made available as a service for OSGi users who do not use OSGi Web Application Bundles (WABs).
 
@@ -329,7 +329,7 @@ public class MyEJB {
 ----
 
 [[using-the-osgi-cdi-extension-with-ejb-bundles]]
-==== *Using the Osgi CDI Extension with EJB Bundles*
+==== Using the Osgi CDI Extension with EJB Bundles
 
 Payara Server includes a CDI extension that enables EJB application bundles to express a type-safe dependency on an OSGi Service using CDI APIs.
 
