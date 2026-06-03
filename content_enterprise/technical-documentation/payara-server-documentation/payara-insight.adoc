@@ -678,8 +678,8 @@ The values of series can be monitored using xref:#watch-management[watches]. If 
 
 While alerts transition between the states _Unhealthy_, _Degraded_, _Healthy_ and possibly _Normal_ based on the watch definition they originated from there are two manual status fields available for each alert:
 
-***Global***: _Acknowledged_/_Unacknowledged_: When an alert transitions to a more severe state it resets to _Unacknowledged_ waiting for users to manually acknowledge that they took notice (and care) of the degrading state transition.
-***User***: _Confirmed_/_Unconfirmed_: Alerts are unconfirmed for a user if that user has not seen and confirmed the alert transition yet.
+* **Global**: _Acknowledged_/_Unacknowledged_: When an alert transitions to a more severe state it resets to _Unacknowledged_ waiting for users to manually acknowledge that they took notice (and care) of the degrading state transition.
+* **User**: _Confirmed_/_Unconfirmed_: Alerts are unconfirmed for a user if that user has not seen and confirmed the alert transition yet.
 
 Both of these manual states should help users to keep track of alert transitions and the alerts they have dealt with.
 

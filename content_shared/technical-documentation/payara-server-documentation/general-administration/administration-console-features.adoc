@@ -99,7 +99,7 @@ This service can be configured from the admin console and from the command line.
 
 The auditing service configuration can be found in the web console under `Configurations` -> `<configuration-name>` -> `Security` -> `Admin Audit`:
 
-image:admin-console/admin-audit-menu.png[alt="Admin Audit Service in Web Console",width=600px]
+image:admin-console/admin-audit-menu.png[alt="Admin Audit Service in Web Console",width=250px]
 
 Once enabled, actions in the admin console that have a corresponding `asadmin` command will be sent to the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc[Notification service].
 
@@ -108,9 +108,9 @@ restart the domain) to switch the auditing service on.
 
 The *Audit Level* options sets the level of operations that will be logged:
 
-***MODIFIERS***: (Default setting) All operations that modify the configuration of the server in some capacity.
-***ACCESSORS***: All operations query the configuration of the server in some capacity.
-***INTERNAL***: All existing operations, including internal operations of the server.
+* **MODIFIERS**: (Default setting) All operations that modify the configuration of the server in some capacity.
+* **ACCESSORS**: All operations query the configuration of the server in some capacity.
+* **INTERNAL**: All existing operations, including internal operations of the server.
 
 Aside from this configuration setting, you can also define which notifiers will be used to relay the admin console audit events by moving them to the **Selected Notifiers** box.
 
