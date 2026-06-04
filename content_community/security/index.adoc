@@ -47,7 +47,7 @@ In these cases, reports SHOULD if possible reference an existing CVE record that
 [#reporting-security-vulnerabilities]
 == Reporting Security Vulnerabilities
 
-To report a vulnerability, send an email with the described flaws and vulnerabilities to link:mailto:security@payara.fish[security@payara.fish]. Please make sure to describe the vulnerability encountered in great detail, along with detailed steps on how to reproduce or exploit the vulnerability and environmental details like:
+To report a vulnerability, send an email with the described flaws and vulnerabilities to mailto:security@payara.fish[security@payara.fish]. Please make sure to describe the vulnerability encountered in great detail, along with detailed steps on how to reproduce or exploit the vulnerability and environmental details like:
 
 * Payara Platform distribution (i.e, Server, Micro, Embedded, Docker Image) and version
 * Operating System
