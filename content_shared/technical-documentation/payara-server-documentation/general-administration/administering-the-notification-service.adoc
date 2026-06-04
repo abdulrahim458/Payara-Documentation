@@ -1,7 +1,7 @@
 = Administering the Notification Service
 :ordinal: 11
 
-Payara Server comes with a general Notification service that can be used to log events which come from other services, such as the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc[Monitoring Service], the xref:administering-the-healthcheck-service.adoc[HealthCheck service] or the xref:administering-the-request-tracing-service.adoc[Request Tracing Service].
+Payara Server comes with a general Notification service that can be used to log events which come from other services, such as the xref:administering-the-monitoring-service.adoc[Monitoring Service], the xref:administering-the-healthcheck-service.adoc[HealthCheck service] or the xref:administering-the-request-tracing-service.adoc[Request Tracing Service].
 
 [#notification-service-command-reference]
 == Notification Service Configuration Commands
@@ -320,7 +320,7 @@ The JMX page allows you to specify the time between notifications, how notificat
 [#enabling-monitoring-service]
 === Enabling Monitoring Service
 
-To configure notification settings for JMX Monitoring, you will need to enable it. Have a look at xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#to-enable-monitoring[How To Enable JMX Monitoring]
+To configure notification settings for JMX Monitoring, you will need to enable it. Have a look at xref:administering-the-monitoring-service.adoc#to-enable-monitoring[How To Enable JMX Monitoring]
 
 NOTE: You will need some MBean attributes configured for anything to be logged by the notifiers.
 

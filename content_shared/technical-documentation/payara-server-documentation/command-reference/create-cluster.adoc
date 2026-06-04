@@ -299,7 +299,7 @@ See Also
 * xref:list-clusters.adoc#list-clusters[`list-clusters`],
 * xref:start-cluster.adoc#start-cluster[`start-cluster`],
 * xref:stop-cluster.adoc#stop-cluster[`stop-cluster`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-cluster#restart-cluster[`restart-cluster`],
+* xref:restart-cluster.adoc#restart-cluster[`restart-cluster`],
 * xref:validate-multicast.adoc#validate-multicast[`validate-multicast`]
 * http://felix.apache.org/site/apache-felix-remote-shell.html[Apache Felix Remote Shell^] (http://felix.apache.org/site/apache-felix-remote-shell.html), Java
 * http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.htmlPlatform Debugger Architecture (JPDA) (http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html)

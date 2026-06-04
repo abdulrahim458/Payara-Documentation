@@ -64,7 +64,7 @@ Command delete-http-redirect executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
 * xref:create-http-redirect.adoc#create-http-redirect[`create-http-redirect`]
 
 

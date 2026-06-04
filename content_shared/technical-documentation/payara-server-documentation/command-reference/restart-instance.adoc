@@ -84,17 +84,17 @@ Command restart-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance#create-instance[`create-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance#create-local-instance[`create-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance#delete-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance#delete-local-instance[`delete-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-local-instance#restart-local-instance[`restart-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/setup-ssh#setup-ssh[`setup-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-instance#start-instance[`start-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance#start-local-instance[`start-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-instance#stop-instance[`stop-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance#stop-local-instance[`stop-local-instance`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-instance.adoc#create-instance[`create-instance`],
+* xref:create-local-instance.adoc#create-local-instance[`create-local-instance`],
+* xref:delete-instance.adoc#delete-instance[`delete-instance`],
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
+* xref:restart-local-instance.adoc#restart-local-instance[`restart-local-instance`],
+* xref:setup-ssh.adoc#setup-ssh[`setup-ssh`],
+* xref:start-instance.adoc#start-instance[`start-instance`],
+* xref:start-local-instance.adoc#start-local-instance[`start-local-instance`],
+* xref:stop-instance.adoc#stop-instance[`stop-instance`],
+* xref:stop-local-instance.adoc#stop-local-instance[`stop-local-instance`]
 * http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java Platform Debugger Architecture (JPDA)^] (http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html)
 
 

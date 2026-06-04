@@ -6722,7 +6722,7 @@ none - contains data
 [#version-identifier]
 == `version-identifier`
 
-Contains version information for an application or module. For more information about application versioning, see xref:index.adoc#module-and-application-versions[Module and Application Versions].
+Contains version information for an application or module. For more information about application versioning, see xref:../../../index.adoc#module-and-application-versions[Module and Application Versions].
 
 [#superelements-212]
 === Superelements

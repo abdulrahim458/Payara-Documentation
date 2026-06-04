@@ -108,8 +108,8 @@ Command enable-monitoring executed successfully
 * xref:get.adoc#get[`get`],
 * xref:list.adoc#list[`list`],
 * xref:monitor.adoc#monitor[`monitor`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set#set[`set`]
+* xref:set.adoc#set[`set`]
 * xref:monitoring.adoc#monitoring[`monitoring`]
-* "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in Payara Server General Administration section
+* "xref:../general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in Payara Server General Administration section
 
 

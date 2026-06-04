@@ -736,7 +736,7 @@ You can control the following domain-level message-driven bean settings in the E
 Select the _Instances_ component, select the instance from the table, and select the Monitor tab.
 
 NOTE: Running monitoring when it is not needed might impact performance, so you might choose to turn monitoring off when it is not in use.
-For details, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in the Payara Server General Administration section.
+For details, see "xref:../payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in the Payara Server General Administration section.
 
 [#message-driven-bean-restrictions-and-optimizations]
 === Message-Driven Bean Restrictions and Optimizations
@@ -754,7 +754,7 @@ When configuring message-driven bean pool properties, make sure to consider fact
 
 When tuning performance and resource usage, make sure to consider potential JMS provider properties for the connection factory used by the container (the `mdb-connection-factory` element in the `payara-ejb-jar.xml` file). For example, you can tune the Open Message Queue flow control related properties for connection factory in situations where the message incoming rate is much higher than `max-pool-size` can handle.
 
-Refer to "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in the Payara Server General Administration section for information on how to get message-driven bean pool statistics.
+Refer to "xref:../payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in the Payara Server General Administration section for information on how to get message-driven bean pool statistics.
 
 [#fine-tuning-with-the-activationconfigproperty-annotation]
 ==== Fine-Tuning with the Activationconfigproperty Annotation

@@ -76,7 +76,7 @@ Command delete-jacc-provider executed successfully.
 *See Also*
 
 * xref:asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jacc-provider#create-jacc-provider[`create-jacc-provider`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jacc-providers#list-jacc-providers[`list-jacc-providers`]
+* xref:create-jacc-provider.adoc#create-jacc-provider[`create-jacc-provider`],
+* xref:list-jacc-providers.adoc#list-jacc-providers[`list-jacc-providers`]
 
 

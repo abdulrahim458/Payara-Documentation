@@ -40,7 +40,7 @@ Both HTTP sessions and stateful session beans (SFSBs) have session state data.
 
 Preserving session state across server failures can be important to end users. If the Payara Server instance hosting the user session experiences a failure, the session state can be recovered, and the session can continue without loss of information. High availability is implemented in Payara Server by means of in-memory session replication on Payara Server instances running in a cluster.
 
-For more information about in-memory session replication in Payara Server, see xref:index.adoc#how-payara-server-provides-high-availability[How Payara Server Provides High Availability].
+For more information about in-memory session replication in Payara Server, see xref:../../../index.adoc#how-payara-server-provides-high-availability[How Payara Server Provides High Availability].
 For detailed instructions on configuring high availability session persistence,
 see xref:configuring-ha-session-persistence-and-failover.adoc#configuring-high-availability-session-persistence-and-failover[Configuring High Availability Session Persistence and Failover].
 
@@ -79,8 +79,8 @@ For more information on RMI-IIOP load balancing and failover, see xref:rmi-iiop-
 
 Payara Server provides high availability through the following subcomponents and features:
 
-* xref:index.adoc#storage-for-session-state-data[Storage for Session State Data]
-* xref:index.adoc#highly-available-clusters[Highly Available Clusters]
+* xref:../../../index.adoc#storage-for-session-state-data[Storage for Session State Data]
+* xref:../../../index.adoc#highly-available-clusters[Highly Available Clusters]
 
 [#storage-for-session-state-data]
 === Storage for Session State Data

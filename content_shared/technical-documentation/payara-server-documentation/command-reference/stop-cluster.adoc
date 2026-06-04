@@ -88,6 +88,6 @@ Command stop-cluster executed successfully.
 * xref:delete-cluster.adoc#delete-cluster[`delete-cluster`],
 * xref:list-clusters.adoc#list-clusters[`list-clusters`],
 * xref:start-cluster.adoc#start-cluster[`start-cluster`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-cluster#restart-cluster[`restart-cluster`]
+* xref:restart-cluster.adoc#restart-cluster[`restart-cluster`]
 
 

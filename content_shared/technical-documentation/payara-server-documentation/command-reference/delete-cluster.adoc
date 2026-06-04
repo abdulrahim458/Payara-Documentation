@@ -70,6 +70,6 @@ Command delete-cluster executed successfully.
 * xref:stop-instance.adoc#stop-instance[`stop-instance`],
 * xref:stop-local-instance.adoc#stop-local-instance[`stop-local-instance`],
 * xref:stop-cluster.adoc#stop-cluster[`stop-cluster`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-cluster#restart-cluster[`restart-cluster`]
+* xref:restart-cluster.adoc#restart-cluster[`restart-cluster`]
 
 

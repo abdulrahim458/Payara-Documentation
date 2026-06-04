@@ -70,8 +70,8 @@ Command delete-resource-ref executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-resource-ref#create-resource-ref[`create-resource-ref`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-resource-refs#list-resource-refs[`list-resource-refs`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-resource-ref.adoc#create-resource-ref[`create-resource-ref`],
+* xref:list-resource-refs.adoc#list-resource-refs[`list-resource-refs`]
 
 

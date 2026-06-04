@@ -81,7 +81,7 @@ Command list-persistence-types executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get#get[`get`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list#list[`list`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set#set[`set`],
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:get.adoc#get[`get`],
+* xref:list.adoc#list[`list`],
+* xref:set.adoc#set[`set`],

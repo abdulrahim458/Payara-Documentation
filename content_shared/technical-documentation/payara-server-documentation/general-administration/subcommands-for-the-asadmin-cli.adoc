@@ -40,13 +40,13 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 | Deletes system properties of a domain or configuration, or server instance. Supported in remote mode only. For procedural information in this guide, see xref:general-runtime-administration.adoc#to-delete-a-system-property[To Delete a System Property].
 
 | `get`
-| Gets an attribute of an element in the `domain.xml` file. With the `-m` option, gets the names and values of the monitorable or configurable attributes. For procedural information in this guide, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#guidelines-for-using-the-list-and-get-subcommands-for-monitoring[Guidelines for Using the list and get Subcommands for Monitoring].
+| Gets an attribute of an element in the `domain.xml` file. With the `-m` option, gets the names and values of the monitorable or configurable attributes. For procedural information in this guide, see xref:administering-the-monitoring-service.adoc#guidelines-for-using-the-list-and-get-subcommands-for-monitoring[Guidelines for Using the list and get Subcommands for Monitoring].
 
 | `get-active-module-config`
 | Displays the current active configuration of a module.
 
 | `list`
-| Lists the configurable element. On Oracle Solaris, quotes are needed when running subcommands with `*` as the option value or operand. For procedural information in this guide, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#guidelines-for-using-the-list-and-get-subcommands-for-monitoring[Guidelines for Using the list and get Subcommands for Monitoring].
+| Lists the configurable element. On Oracle Solaris, quotes are needed when running subcommands with `*` as the option value or operand. For procedural information in this guide, see xref:administering-the-monitoring-service.adoc#guidelines-for-using-the-list-and-get-subcommands-for-monitoring[Guidelines for Using the list and get Subcommands for Monitoring].
 
 | `list-commands`
 | Lists all the `asadmin` subcommands, local subcommands first, then remote subcommands. You can specify that only remote subcommands or only local subcommands be displayed. Supported in remote mode only. For procedural information in this guide, see xref:general-runtime-administration.adoc#to-list-subcommands[To List Subcommands].
@@ -70,13 +70,13 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 | Provides an `asadmin>` prompt for running multiple subcommands while preserving options and environment settings. Supported in local mode only. For procedural information, see xref:general-runtime-administration.adoc#using-the-asadmin-utility[Using the asadmin Utility].
 
 | `osgi`
-| Delegates the command line to the Apache Felix Gogo remote shell for the execution of OSGi shell commands. For procedural information in this guide, see xref:index.adoc#to-run-apache-felix-gogo-remote-shell-commands[To Run Apache Felix Gogo Remote Shell Commands].
+| Delegates the command line to the Apache Felix Gogo remote shell for the execution of OSGi shell commands. For procedural information in this guide, see xref:../../../index.adoc#to-run-apache-felix-gogo-remote-shell-commands[To Run Apache Felix Gogo Remote Shell Commands].
 
 | `osgi-shell`
-| Provides interactive access to the Apache Felix Gogo remote shell for the execution of OSGi shell commands. For procedural information in this guide, see xref:index.adoc#to-run-apache-felix-gogo-remote-shell-commands[To Run Apache Felix Gogo Remote Shell Commands].
+| Provides interactive access to the Apache Felix Gogo remote shell for the execution of OSGi shell commands. For procedural information in this guide, see xref:../../../index.adoc#to-run-apache-felix-gogo-remote-shell-commands[To Run Apache Felix Gogo Remote Shell Commands].
 
 | `set`
-| Sets the values of one or more configurable attributes. For procedural information in this guide, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#configuring-monitoring[Configuring Monitoring].
+| Sets the values of one or more configurable attributes. For procedural information in this guide, see xref:administering-the-monitoring-service.adoc#configuring-monitoring[Configuring Monitoring].
 
 | `show-component-status`
 | Lists the status of existing components. Supported in remote mode only. For procedural information in this guide, see xref:general-runtime-administration.adoc#to-show-component-status[To Show Component Status].
@@ -485,10 +485,10 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 | Collects all available log files and creates a ZIP archive. Supported in remote mode only. For procedural information in this guide, see xref:administering-the-logging-service.adoc#to-collect-log-files-into-a-zip-archive[To Collect Log Files into a ZIP Archive].
 
 | `disable-monitoring`
-| Disables the monitoring service. Supported in remote mode only. For procedural information in this guide, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#to-disable-monitoring[To Disable Monitoring].
+| Disables the monitoring service. Supported in remote mode only. For procedural information in this guide, see xref:administering-the-monitoring-service.adoc#to-disable-monitoring[To Disable Monitoring].
 
 | `enable-monitoring`
-| Enables the monitoring service. Supported in remote mode only. For procedural information in this guide, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#to-enable-monitoring[To Enable Monitoring].
+| Enables the monitoring service. Supported in remote mode only. For procedural information in this guide, see xref:administering-the-monitoring-service.adoc#to-enable-monitoring[To Enable Monitoring].
 
 | `list-log-attributes`
 | Lists log file attributes. Supported in remote mode only. For procedural information in this guide, see xref:administering-the-logging-service.adoc#configuring-the-logging-service[Configuring the Logging Service].
@@ -500,7 +500,7 @@ NOTE: Online help for the `asadmin` subcommands can be invoked on the command li
 | Lists all public loggers in your distribution of Payara Server. Internal loggers are not listed. For procedural information in this guide, see xref:administering-the-logging-service.adoc#to-list-loggers[To List Loggers].
 
 | `monitor`
-| Displays monitoring information for the common Payara Server resources. Supported in remote mode only. For procedural information in this guide, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#to-view-common-monitoring-data[To View Common Monitoring Data].
+| Displays monitoring information for the common Payara Server resources. Supported in remote mode only. For procedural information in this guide, see xref:administering-the-monitoring-service.adoc#to-view-common-monitoring-data[To View Common Monitoring Data].
 
 | `rotate-log`
 | Rotates the `server.log` file and stores the old data in a time-stamped file. Supported in remote mode only. For procedural information in this guide, see xref:administering-the-logging-service.adoc#to-rotate-log-files-manually[To Rotate Log Files Manually].

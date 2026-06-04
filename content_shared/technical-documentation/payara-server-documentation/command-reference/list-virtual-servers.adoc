@@ -66,8 +66,8 @@ Command list-virtual-servers executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-virtual-server#create-virtual-server[`create-virtual-server`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-virtual-server#delete-virtual-server[`delete-virtual-server`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-virtual-server.adoc#create-virtual-server[`create-virtual-server`],
+* xref:delete-virtual-server.adoc#delete-virtual-server[`delete-virtual-server`]
 
 

@@ -30,7 +30,7 @@ When running a Payara Platform distribution in a container, there is no way to r
 
 Thus, you should add the corresponding command to a boot script as described at xref:../../payara-micro-documentation/payara-micro-configuration-and-management/micro-management/asadmin-commands/pre-and-post-boot-commands.adoc[Pre- and Postboot scripts].
 
-See xref:technical-documentation/payara-server-documentation/payara-server-docker-image.adoc#using-environment-variables[Payara Server Docker Image environment variables] for details how to use this within non-micro containers.
+See xref:../../payara-server-documentation/payara-server-docker-image.adoc#using-environment-variables[Payara Server Docker Image environment variables] for details how to use this within non-micro containers.
 
 [#usage]
 == Usage

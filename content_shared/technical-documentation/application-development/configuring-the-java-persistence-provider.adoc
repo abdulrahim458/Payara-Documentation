@@ -57,7 +57,7 @@ If you are using the Jakarta Persistence API by calling `Persistence.createEMF()
 
 . Run the application.
 
-. Monitor the application. See "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in the Payara Server General Administration section.
+. Monitor the application. See "xref:../payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in the Payara Server General Administration section.
 
 [#specifying-the-database-for-an-application]
 == Specifying the Database for an Application

@@ -66,8 +66,8 @@ Command list-transports executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-transport#create-transport[`create-transport`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-transport#delete-transport[`delete-transport`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-transport.adoc#create-transport[`create-transport`],
+* xref:delete-transport.adoc#delete-transport[`delete-transport`]
 
 

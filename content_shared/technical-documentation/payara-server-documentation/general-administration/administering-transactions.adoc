@@ -220,7 +220,7 @@ asadmin> set cluster1-config.monitoring-service.module-monitoring-levels.transac
 transactions. See xref:administering-transactions.adoc#to-stop-the-transaction-service[To Stop the Transaction Service].
 . Identify the ID of the transaction you want to roll back. +
 To see a list of IDs of active transactions, use the `get` subcommand with the `--monitor` option to get the monitoring data for the `activeids` statistic.
-See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#transaction-service-statistics[Transaction Service Statistics]. For example:
+See xref:administering-the-monitoring-service.adoc#transaction-service-statistics[Transaction Service Statistics]. For example:
 +
 [source,shell]
 ----

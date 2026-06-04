@@ -85,5 +85,5 @@ file will be used by asadmin commands to manage associated domain.
 *See Also*
 
 * xref:asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-domain#create-domain[`create-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-domain#delete-domain[`delete-domain`]
+* xref:create-domain.adoc#create-domain[`create-domain`],
+* xref:delete-domain.adoc#delete-domain[`delete-domain`]
