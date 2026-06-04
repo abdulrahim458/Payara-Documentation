@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -82,9 +82,9 @@ Command create-jdbc-resource executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-resource-ref.adoc#create-resource-ref[`create-resource-ref`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-jdbc-resource.adoc#delete-jdbc-resource[`delete-jdbc-resource`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-resources.adoc#list-jdbc-resources[`list-jdbc-resources`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-resource-ref.adoc#create-resource-ref[`create-resource-ref`],
+* xref:delete-jdbc-resource.adoc#delete-jdbc-resource[`delete-jdbc-resource`],
+* xref:list-jdbc-resources.adoc#list-jdbc-resources[`list-jdbc-resources`]
 
 

@@ -32,7 +32,7 @@ NOTE: This subcommand is provided for backward compatibility and as a shortcut f
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -94,13 +94,13 @@ Command create-http-listener executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-ssl.adoc#create-ssl[`create-ssl`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc#create-network-listener[`create-network-listener`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-network-listener-configuration.adoc#set-network-listener-configuration[`set-network-listener-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-virtual-server.adoc#create-virtual-server[`create-virtual-server`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-http-listener.adoc#delete-http-listener[`delete-http-listener`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-http-listeners.adoc#list-http-listeners[`list-http-listeners`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-http-listeners.adoc#restart-http-listeners[`restart-http-listeners`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-ssl.adoc#create-ssl[`create-ssl`],
+* xref:create-network-listener.adoc#create-network-listener[`create-network-listener`],
+* xref:set-network-listener-configuration.adoc#set-network-listener-configuration[`set-network-listener-configuration`],
+* xref:create-virtual-server.adoc#create-virtual-server[`create-virtual-server`],
+* xref:delete-http-listener.adoc#delete-http-listener[`delete-http-listener`],
+* xref:list-http-listeners.adoc#list-http-listeners[`list-http-listeners`],
+* xref:restart-http-listeners.adoc#restart-http-listeners[`restart-http-listeners`]
 
 

@@ -22,7 +22,7 @@ This command can be used to restart the monitoring levels of all modules per the
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -83,8 +83,8 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/monitoring.adoc[Monitoring Basics],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-monitoring-service-configuration.adoc[`set-monitoring-service-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-monitoring.adoc[`enable-monitoring`],
-* xref:technical-documentation/payara-server-documentation/command-reference/disable-monitoring.adoc[`disable-monitoring`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:monitoring.adoc[Monitoring Basics],
+* xref:set-monitoring-service-configuration.adoc[`set-monitoring-service-configuration`],
+* xref:enable-monitoring.adoc[`enable-monitoring`],
+* xref:disable-monitoring.adoc[`disable-monitoring`]

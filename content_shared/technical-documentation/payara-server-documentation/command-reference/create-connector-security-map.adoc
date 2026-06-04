@@ -34,7 +34,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -79,9 +79,9 @@ Command create-connector-security-map executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-connector-security-map.adoc#delete-connector-security-map[`delete-connector-security-map`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-connector-security-maps.adoc#list-connector-security-maps[`list-connector-security-maps`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-connector-security-map.adoc#update-connector-security-map[`update-connector-security-map`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:delete-connector-security-map.adoc#delete-connector-security-map[`delete-connector-security-map`],
+* xref:list-connector-security-maps.adoc#list-connector-security-maps[`list-connector-security-maps`],
+* xref:update-connector-security-map.adoc#update-connector-security-map[`update-connector-security-map`]
 
 

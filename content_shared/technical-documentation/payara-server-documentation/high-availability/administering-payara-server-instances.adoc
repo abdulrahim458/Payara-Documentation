@@ -41,7 +41,7 @@ A Docker instance denotes an instance that is running within a Docker container 
 Centralized administration requires a secure shell (SSH) to be set up.
 If SSH is set up, you can administer clustered instances without the need to log in to hosts where remote instances reside.
 
-For information about setting up SSH, see xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#enabling-centralized-administration-of-payara-server-instances[Enabling Centralized Administration of Payara Server Instances].
+For information about setting up SSH, see xref:enabling-centralized-administration-of-server-instances.adoc#enabling-centralized-administration-of-payara-server-instances[Enabling Centralized Administration of Payara Server Instances].
 
 Administering Payara Server instances centrally involves the following tasks:
 
@@ -61,14 +61,14 @@ Before you begin, ensure that following prerequisites are met:
 
 For information about how to create a node that is enabled for remote communication, see the following sections:
 
-** xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
+** xref:administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
 * The user of the DAS can use SSH to log in to the host for the node where the instance is to reside.
 
-If any of these prerequisites is not met, create the instance locally as explained in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
+If any of these prerequisites is not met, create the instance locally as explained in xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
 
-If you are adding the instance to a cluster, ensure that the cluster to which you are adding the instance exists. For information about how to create a cluster, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#to-create-a-cluster[To Create a Cluster].
+If you are adding the instance to a cluster, ensure that the cluster to which you are adding the instance exists. For information about how to create a cluster, see xref:administering-payara-server-clusters.adoc#to-create-a-cluster[To Create a Cluster].
 
-If the instance is to reference an existing named configuration, ensure that the configuration exists. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-named-configurations.adoc#to-create-a-named-configuration[To Create a Named Configuration].
+If the instance is to reference an existing named configuration, ensure that the configuration exists. For more information, see xref:administering-named-configurations.adoc#to-create-a-named-configuration[To Create a Named Configuration].
 
 //TODO - Review this information
 
@@ -151,8 +151,8 @@ Command create-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
+* xref:administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
+* xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-instance` at the command line.
@@ -219,8 +219,8 @@ Deleting an instance involves the following:
 
 Ensure that the instance that you are deleting is not running. For information about how to stop an instance, see the following sections:
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
+* xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Confirm that the instance is not running.
@@ -258,11 +258,11 @@ Command delete-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
-* xref:technical-documentation/payara-server-documentation/command-reference/change-master-broker.adoc[`change-master-broker`(1)]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc[`delete-instance`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc[`list-instances`]
+* xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
+* xref:../command-reference/change-master-broker.adoc[`change-master-broker`(1)]
+* xref:../command-reference/delete-instance.adoc[`delete-instance`]
+* xref:../command-reference/list-instances.adoc[`list-instances`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 
@@ -279,7 +279,7 @@ Ensure that following prerequisites are met:
 * Each node where an instance in the cluster resides is either enabled for remote communication or represents the host on which the DAS is running.
 * The operating system user that runs the DAS can use SSH to log in to the host for any node where instances in the cluster reside.
 
-If any of these prerequisites is not met, start the cluster by starting each instance locally as explained in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-locally[To Start an Individual Instance Locally].
+If any of these prerequisites is not met, start the cluster by starting each instance locally as explained in xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-locally[To Start an Individual Instance Locally].
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Run the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-cluster.adoc[`start-cluster`] subcommand.
@@ -302,7 +302,7 @@ Command start-cluster executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-locally[To Start an Individual Instance Locally]
+* xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-locally[To Start an Individual Instance Locally]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-cluster.adoc[`start-cluster`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help start-cluster` at the command line.
@@ -354,7 +354,7 @@ Ensure that following prerequisites are met:
 * The node where the instance resides is either enabled for remote communication or represents the host on which the DAS is running.
 * The operating system user that runs the DAS can use SSH to log in to the host for any node where the instance resides.
 
-If any of these prerequisites is not met, start the instance locally as explained in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-locally[To Start an Individual Instance Locally].
+If any of these prerequisites is not met, start the instance locally as explained in xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-locally[To Start an Individual Instance Locally].
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Run the `start-instance` subcommand.
@@ -428,10 +428,10 @@ If the instance has become unresponsive and fails to stop, run the subcommand ag
 
 Use the `restart-instance` subcommand in remote mode to start an individual instance centrally.
 
-When this subcommand restarts an instance, the DAS synchronizes the instance with changes since the last synchronization as described in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#default-synchronization-for-files-and-directories[Default Synchronization for Files and Directories].
+When this subcommand restarts an instance, the DAS synchronizes the instance with changes since the last synchronization as described in xref:administering-payara-server-instances.adoc#default-synchronization-for-files-and-directories[Default Synchronization for Files and Directories].
 
 If you require different synchronization behavior, stop and start the
-instance as explained in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online].
+instance as explained in xref:administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online].
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Run the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/restart-instance.adoc[`restart-instance`] subcommand.
@@ -455,8 +455,8 @@ Command restart-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Start an Individual Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Start an Individual Instance Centrally]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/restart-instance.adoc#restart-instance[`restart-instance`(1)]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help restart-instance` at the command line.
@@ -471,7 +471,7 @@ If the instance has become unresponsive and fails to stop, run the subcommand ag
 
 Local administration does not require SSH to be set up. If SSH is set up, you must log in to each host where remote instances reside and administer the instances individually.
 
-TIP: Even SSH is set up, you can obtain information about instances in a domain without logging in to each host where remote instances reside. For instructions, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-list-all-instances-in-a-domain[To List All Instances in a Domain].
+TIP: Even SSH is set up, you can obtain information about instances in a domain without logging in to each host where remote instances reside. For instructions, see xref:administering-payara-server-instances.adoc#to-list-all-instances-in-a-domain[To List All Instances in a Domain].
 
 [#to-create-an-instance-locally]
 === To Create an Instance Locally
@@ -479,7 +479,7 @@ TIP: Even SSH is set up, you can obtain information about instances in a domain 
 Use the `create-local-instance` subcommand in remote mode to create a Payara Server instance locally. Creating an instance adds the instance to the DAS configuration and creates the instance's files on the host where the instance resides.
 
 NOTE: If the instance is a clustered instance, system properties for the instance that relate to GMS must be configured correctly. +
-If you change GMS-related system properties for an existing instance, the DAS and the instance must be restarted to apply the changes. For information about GMS, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#group-management-service[Group Management Service].
+If you change GMS-related system properties for an existing instance, the DAS and the instance must be restarted to apply the changes. For information about GMS, see xref:administering-payara-server-clusters.adoc#group-management-service[Group Management Service].
 
 *Before You Begin*
 
@@ -489,17 +489,17 @@ NOTE: If you create the instance on a host for which no nodes are defined, you c
 
 For information about how to create a node, see the following sections:
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-a-config-node[To Create a `CONFIG` Node]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#creating-a-docker-node[To Create a `DOCKER` Node]
+* xref:administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
+* xref:administering-payara-server-nodes.adoc#to-create-a-config-node[To Create a `CONFIG` Node]
+* xref:administering-payara-server-nodes.adoc#creating-a-docker-node[To Create a `DOCKER` Node]
 
-If the instance is to reference an existing named configuration, ensure that the configuration exists. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-named-configurations.adoc#to-create-a-named-configuration[To Create a Named Configuration].
+If the instance is to reference an existing named configuration, ensure that the configuration exists. For more information, see xref:administering-named-configurations.adoc#to-create-a-named-configuration[To Create a Named Configuration].
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Log in to the host that is represented by the node where the instance is to reside.
 . Run the `create-local-instance` subcommand.
 +
-NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for configuring the instance, see the xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc[`create-local-instance`] help page.
+NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for configuring the instance, see the xref:../command-reference/create-local-instance.adoc[`create-local-instance`] help page.
 
 * If you are creating a standalone instance, do not specify a cluster name.
 +
@@ -645,8 +645,8 @@ Command create-local-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-a-config-node[To Create a `CONFIG` Node]
+* xref:administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
+* xref:administering-payara-server-nodes.adoc#to-create-a-config-node[To Create a `CONFIG` Node]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc[`create-local-instance`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-local-instance` at the command line.
@@ -655,8 +655,8 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 After creating an instance, you can start the instance as explained in the following sections:
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Start an Individual Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
+* xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Start an Individual Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
 
 [#to-delete-an-instance-locally]
 === To Delete an Instance Locally
@@ -676,8 +676,8 @@ Deleting an instance involves the following:
 Ensure that the instance that you are deleting is not running. For
 information about how to stop an instance, see the following sections:
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
+* xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Log in to the host that is represented by the node where the instance resides.
@@ -721,8 +721,8 @@ Command delete-local-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
+* xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/change-master-broker.adoc[`change-master-broker`]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc[`delete-local-instance`]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc[`list-instances`]
@@ -774,7 +774,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 *Next Steps*
 
-After starting an instance, you can deploy applications to the instance. For more information, see the xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc[Payara Server Application Deployment section].
+After starting an instance, you can deploy applications to the instance. For more information, see the xref:../application-deployment/index.adoc[Payara Server Application Deployment section].
 
 [#to-stop-an-individual-instance-locally]
 === To Stop an Individual Instance Locally
@@ -820,10 +820,10 @@ When this option is `true`, the subcommand uses functionality of the operating s
 
 Use the `restart-local-instance` subcommand in local mode to restart an individual instance locally.
 
-When this subcommand restarts an instance, the DAS synchronizes the instance with changes since the last synchronization as described in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#default-synchronization-for-files-and-directories[Default Synchronization for Files and Directories].
+When this subcommand restarts an instance, the DAS synchronizes the instance with changes since the last synchronization as described in xref:administering-payara-server-instances.adoc#default-synchronization-for-files-and-directories[Default Synchronization for Files and Directories].
 
 If you require different synchronization behavior, stop and start the
-instance as explained in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online].
+instance as explained in xref:administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online].
 
 . Log in to the host that is represented by the node where the instance resides.
 . Run the `restart-local-instance` subcommand.
@@ -926,18 +926,18 @@ Command create-instance executed successfully.
 
 When you invoke these commands, a Docker container of the name `DockerInstance1` will be created. If a Docker container of the same name already exists, the `create-instance` command will fail, and Payara Server will attempt to unregister the instance from the DAS.
 
-WARNING: When xref:technical-documentation/payara-server-documentation/command-reference/auto-naming.adoc[auto-naming] is enabled, Payara Server will only attempt to resolve conflicts with instance names - it will not attempt to resolve conflicts in container name.
+WARNING: When xref:../command-reference/auto-naming.adoc[auto-naming] is enabled, Payara Server will only attempt to resolve conflicts with instance names - it will not attempt to resolve conflicts in container name.
 
 WARNING: This type of instance is completely managed by the DAS - when you delete it, it will be deleted along with the Docker container including its logs (unless they are re-mapped to an external volume location)
 
 [#from-docker]
 ===== From Docker
 
-Payara Server supports creating instances by using Docker directly, making use of the xref:technical-documentation/payara-server-documentation/command-reference/auto-naming.adoc[auto-naming] feature to resolve any conflicts.
+Payara Server supports creating instances by using Docker directly, making use of the xref:../command-reference/auto-naming.adoc[auto-naming] feature to resolve any conflicts.
 
 The `docker container create` command creates a Payara Server Docker container without the need to contact the DAS. This is also the reason why the Docker container has a different name than the server instance - they have different contexts, and it is not possible to avoid naming conflicts, only to minimize them.
 
-You can also specify an existing Docker node name in `PAYARA_NODE_NAME` system property (and ideally also `DOCKER_CONTAINER_IP`) and/or any relevant xref:technical-documentation/payara-server-documentation/high-availability/administering-deployment-groups.adoc[deployment groups] by using the `PAYARA_DEPLOYMENT_GROUP` property. In this case, the Docker instance will be created as if it would be created from the DAS, except the fact that the DAS will be informed about that later when the container is properly started.
+You can also specify an existing Docker node name in `PAYARA_NODE_NAME` system property (and ideally also `DOCKER_CONTAINER_IP`) and/or any relevant xref:administering-deployment-groups.adoc[deployment groups] by using the `PAYARA_DEPLOYMENT_GROUP` property. In this case, the Docker instance will be created as if it would be created from the DAS, except the fact that the DAS will be informed about that later when the container is properly started.
 
 If the property was not specified or the node does not exist, a temporary Docker node and instance will be created on the DAS. The temporary Docker node is bound to the instance, so when you delete the instance, the temporary Docker node will be deleted too. This type of node is also not listed in the DAS or offered in inputs and cannot be edited.
 
@@ -1090,7 +1090,7 @@ The following Docker Environment properties are used by the default Docker image
 | First result of `hostname -I` (all IP addresses, excluding loopback)
 
 | `PAYARA_DEPLOYMENT_GROUP`
-| The name of the xref:technical-documentation/payara-server-documentation/high-availability/administering-deployment-groups.adoc[Deployment Group] that the instance should join.
+| The name of the xref:administering-deployment-groups.adoc[Deployment Group] that the instance should join.
 
 Once the instance joins the Deployment Group, all the application targeted at the Deployment Group will automatically deploy to it.
 | ""
@@ -1225,13 +1225,13 @@ Configuration data for a Payara Server instance is stored as follows:
 
 The configuration data in these locations must be synchronized. The cache is synchronized in the following circumstances:
 
-* Whenever an `asadmin` subcommand is run. For more information, see xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#impact-of-configuration-changes[Impact of Configuration Changes]" in Payara Server General Administration section.
+* Whenever an `asadmin` subcommand is run. For more information, see xref:../general-administration/index.adoc#impact-of-configuration-changes[Impact of Configuration Changes]" in Payara Server General Administration section.
 * When a user uses the administration tools to start or restart an instance.
 
 [#default-synchronization-for-files-and-directories]
 === Default Synchronization for Files and Directories
 
-The `--sync` option of the subcommands for starting an instance controls the type of synchronization between the DAS and the instance's files when the instance is started. You can use this option to override the default synchronization behavior for the files and directories of an instance. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online].
+The `--sync` option of the subcommands for starting an instance controls the type of synchronization between the DAS and the instance's files when the instance is started. You can use this option to override the default synchronization behavior for the files and directories of an instance. For more information, see xref:administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online].
 
 On the DAS, the files and directories of an instance are stored in the `domain-dir` directory, where `domain-dir` is the directory in which a domain's configuration is stored.
 
@@ -1257,7 +1257,7 @@ If you add a file to the `config` directory of an instance, the file is deleted 
 +
 If you require any additional configuration files to be resynchronized, you must specify the files explicitly.
 +
-For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-resynchronize-additional-configuration-files[To Resynchronize Additional Configuration Files].
+For more information, see xref:administering-payara-server-instances.adoc#to-resynchronize-additional-configuration-files[To Resynchronize Additional Configuration Files].
 
 *`config/config-name`*:
 This directory contains files that are to be shared by all instances that reference the named configuration config-name. A config-name directory exists for each named configuration in the configuration of the DAS.
@@ -1297,7 +1297,7 @@ This directory is resynchronized when the `applications` directory is resynchron
 *`lib/classes`*:
 These directories contain common Jakarta EE class files or JAR archives and ZIP archives for use by applications that are deployed to the entire domain. Typically, these directories contain common JDBC drivers and other utility libraries that are shared by all applications in the domain.
 +
-The contents of these directories are loaded by the common class loader. For more information, see "xref:technical-documentation/application-development/class-loaders.adoc[Using the Common Class Loader]" in the Payara Server Application Development section.
+The contents of these directories are loaded by the common class loader. For more information, see "xref:../../application-development/class-loaders.adoc[Using the Common Class Loader]" in the Payara Server Application Development section.
 +
 The class loader loads the contents of these directories in the following order: +
 +
@@ -1384,9 +1384,9 @@ Command start-local-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc[`list-instances`]
-* xref:technical-documentation/payara-server-documentation/command-reference/start-instance.adoc[`start-instance`]
-* xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc[`start-local-instance`]
+* xref:../command-reference/list-instances.adoc[`list-instances`]
+* xref:../command-reference/start-instance.adoc[`start-instance`]
+* xref:../command-reference/start-local-instance.adoc[`start-local-instance`]
 
 [#to-resynchronize-library-files]
 === To Resynchronize Library Files
@@ -1488,8 +1488,8 @@ Command create-jvm-options executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc[`create-jvm-options`]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-jvm-options.adoc[`delete-jvm-options`]
+* xref:../command-reference/create-jvm-options.adoc[`create-jvm-options`]
+* xref:../command-reference/delete-jvm-options.adoc[`delete-jvm-options`]
 
 [#to-resynchronize-users-changes-to-files]
 === To Resynchronize Users' Changes to Files
@@ -1508,11 +1508,11 @@ For example, on UNIX and Linux systems, you can use `touch` command.
 
 . Resynchronize each instance in the domain with the DAS.
 +
-For instructions, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online].
+For instructions, see xref:administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online].
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online]
+* xref:administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online]
 * http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1touch-1[`touch`(1)^]
 
 [#to-resynchronize-additional-configuration-files]
@@ -1649,8 +1649,8 @@ Command import-sync-bundle executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/export-sync-bundle.adoc[`export-sync-bundle`]
-* xref:technical-documentation/payara-server-documentation/command-reference/import-sync-bundle.adoc[`import-sync-bundle`]
+* xref:../command-reference/export-sync-bundle.adoc[`export-sync-bundle`]
+* xref:../command-reference/import-sync-bundle.adoc[`import-sync-bundle`]
 
 [#the-extra-terse-option]
 == The Extra Terse Option
@@ -1687,8 +1687,8 @@ Automatic timer migration is enabled by default for clustered server instances t
 
 In addition, timers can be migrated manually for stopped or crashed server instances.
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-enable-automatic-ejb-timer-migration-for-failed-clustered-instances[To Enable Automatic EJB Timer Migration for Failed Clustered Instances]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-migrate-ejb-timers-manually[To Migrate EJB Timers Manually]
+* xref:administering-payara-server-instances.adoc#to-enable-automatic-ejb-timer-migration-for-failed-clustered-instances[To Enable Automatic EJB Timer Migration for Failed Clustered Instances]
+* xref:administering-payara-server-instances.adoc#to-migrate-ejb-timers-manually[To Migrate EJB Timers Manually]
 
 [#to-enable-automatic-ejb-timer-migration-for-failed-clustered-instances]
 === To Enable Automatic EJB Timer Migration for Failed Clustered Instances
@@ -1696,7 +1696,7 @@ In addition, timers can be migrated manually for stopped or crashed server insta
 Automatic migration of EJB timers is enabled by default for clustered server instances that are stopped normally. The procedure in this section is only necessary if you want to enable automatic timer migration for clustered server instances that have stopped abnormally.
 
 NOTE: If the GMS is enabled, the default automatic timer migration cannot be disabled. To disable automatic timer migration, you must first disable the GMS.
-For information about the GMS, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#group-management-service[Group Management Service].
+For information about the GMS, see xref:administering-payara-server-clusters.adoc#group-management-service[Group Management Service].
 
 *Before You Begin*
 
@@ -1706,7 +1706,7 @@ Enable delegated transaction recovery for the cluster.
 
 This enables automatic timer migration for failed server instances in the cluster.
 
-For instructions on enabling delegated transaction recovery, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in Payara Server General Administration section.
+For instructions on enabling delegated transaction recovery, see "xref:../general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in Payara Server General Administration section.
 
 [#to-migrate-ejb-timers-manually]
 === To Migrate EJB Timers Manually

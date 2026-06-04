@@ -20,7 +20,7 @@ name
 
 The `sop-deployment-group` subcommand sop all instances that belong to a Payara Server deployment group. Initially the deployment group contains no Payara Server instances, applications, or resources.
 
-Internally this command works in the same manner that the xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc[`stop-instance`] subcommand.
+Internally this command works in the same manner that the xref:stop-instance.adoc[`stop-instance`] subcommand.
 
 This subcommand is supported in remote mode only.
 
@@ -28,7 +28,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -91,9 +91,9 @@ error in executing the command
 
 See Also
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-deployment-group.adoc#create-deployment-group[`create-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-instance.adoc#start-instance[`start-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-deployment-group.adoc#stop-deployment-group[`stop-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-deployment-group.adoc#restart-deployment-group[`restart-deployment-group`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-deployment-group.adoc#create-deployment-group[`create-deployment-group`],
+* xref:start-instance.adoc#start-instance[`start-instance`],
+* xref:list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`],
+* xref:stop-deployment-group.adoc#stop-deployment-group[`stop-deployment-group`],
+* xref:restart-deployment-group.adoc#restart-deployment-group[`restart-deployment-group`]

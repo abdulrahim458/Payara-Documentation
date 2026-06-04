@@ -3,7 +3,7 @@
 
 This chapter describes general information about administering system security.
 
-Information on application security is contained in "xref:technical-documentation/application-development/securing-applications.adoc#securing-applications[Securing Applications]" in the Application Development section.
+Information on application security is contained in "xref:../../application-development/securing-applications.adoc#securing-applications[Securing Applications]" in the Application Development section.
 
 [#about-system-security-in-payara-server]
 == About System Security in Payara Server
@@ -68,7 +68,7 @@ A significant advantage of using `HttpAuthenticationMechanism` and `IdentityStor
 [#passwords]
 ==== Passwords
 
-Passwords are your first line of defense against unauthorized access to the components and data of Payara Server. For Information about how to use passwords for Payara Server, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-passwords[Administering Passwords].
+Passwords are your first line of defense against unauthorized access to the components and data of Payara Server. For Information about how to use passwords for Payara Server, see xref:administering-system-security.adoc#administering-passwords[Administering Passwords].
 
 [#master-password-and-keystores]
 ==== Master Password and Java Keystores
@@ -142,7 +142,7 @@ system, or by a user-defined master password.
 
 An administration password, also known as the admin password, is used to invoke the Administration Console and the Asadmin CLI utility. As with the default `admin` username, the default admin password is usually set during installation, but it can be changed.
 
-For instructions, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#to-change-an-administration-password[To Change an Administration Password].
+For instructions, see xref:administering-system-security.adoc#to-change-an-administration-password[To Change an Administration Password].
 
 [#encoded-passwords]
 ==== Encoded Passwords
@@ -157,7 +157,7 @@ This file contains the encoded master password and should be protected with the 
 +
 Additionally, any password file being used for a transient purpose, such as setting up SSH nodes, should be deleted after it has served its purpose.
 
-For instructions, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#to-set-a-password-from-a-file[To Set a Password From a File].
+For instructions, see xref:administering-system-security.adoc#to-set-a-password-from-a-file[To Set a Password From a File].
 
 [#web-browsers-and-password-storage]
 ==== Web Browsers and Password Storage
@@ -171,7 +171,7 @@ It is heavily recommended to disable password storage when prompted for the pass
 [#password-aliases]
 ==== Password Aliases
 
-To avoid storing passwords in the domain configuration file in clear text, you can create an alias for a password. This process is also known as encrypting a password. For more information, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Administering Password Aliases].
+To avoid storing passwords in the domain configuration file in clear text, you can create an alias for a password. This process is also known as encrypting a password. For more information, see xref:administering-system-security.adoc#administering-password-aliases[Administering Password Aliases].
 
 [#authorization]
 === Authorization
@@ -410,7 +410,7 @@ When a Web browser (client) wants to connect to a secure site, an SSL handshake 
 
 After the handshake, the client has verified the identity of the website, and only the client and the Web server have a copy of the session key. From this point forward, the client and the server use the session key to encrypt all their communications with each other. Thus, their communications are ensured to be secure.
 
-To use SSL, Payara Server must have a certificate for each external interface or IP address that accepts secure connections. The HTTPS service of most web servers will not run unless a certificate has been installed. For instructions on applying SSL to HTTP listeners, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-http-connectivity.adoc#configure-an-http-listener-for-ssl[To Configure an HTTP Listener for SSL]" in the Payara Server General Administration section.
+To use SSL, Payara Server must have a certificate for each external interface or IP address that accepts secure connections. The HTTPS service of most web servers will not run unless a certificate has been installed. For instructions on applying SSL to HTTP listeners, see "xref:../general-administration/administering-http-connectivity.adoc#configure-an-http-listener-for-ssl[To Configure an HTTP Listener for SSL]" in the Payara Server General Administration section.
 
 [#ciphers]
 ==== Ciphers
@@ -549,7 +549,7 @@ When the master password is saved, it is saved in the `domain-dir/config/master-
 Follow these steps to correctly change the master password on an existing domain:
 
 . Stop the domain first.
-. Change the master password for the domain by using the xref:technical-documentation/payara-server-documentation/command-reference/change-master-password.adoc[`change-master-password`] subcommand. +
+. Change the master password for the domain by using the xref:../command-reference/change-master-password.adoc[`change-master-password`] subcommand. +
 You will be prompted for the old and new passwords based on whether you have been previously logged into the domain.
 . Start the domain again.
 
@@ -560,7 +560,7 @@ The following example changes the master password for the `custom-domain` domain
 asadmin> change-master-password custom-domain
 ----
 
-If you have already logged into the domain using the xref:technical-documentation/payara-server-documentation/command-reference/login.adoc[`login`] subcommand, you are prompted for the new master password:
+If you have already logged into the domain using the xref:../command-reference/login.adoc[`login`] subcommand, you are prompted for the new master password:
 
 [source,shell]
 ----
@@ -688,7 +688,7 @@ NOTE: If there is a single user called `admin` that does not have a password, yo
 
 WARNING: If secure administration is enabled as described in link:Technical Documentation/Payara Server Documentation/Security Guide/administrative-security.adoc#running-secure-admin[Running Secure Admin], you cannot change an administration password to a blank value under any circumstance.
 
-. Change the admin password by using the xref:technical-documentation/payara-server-documentation/command-reference/change-admin-password.adoc#change-admin-password[`change-admin-password`] subcommand.
+. Change the admin password by using the xref:../command-reference/change-admin-password.adoc#change-admin-password[`change-admin-password`] subcommand.
 . Enter the old and new admin passwords when prompted.
 . Restart the Payara Server domain.
 
@@ -719,7 +719,7 @@ The `--passwordfile` option of the Asadmin CLI utility takes the name of the fil
 
 NOTE: Any password file created to pass as an argument by using the `--passwordfile` argument to the `asadmin` utility should be protected with the corresponding file system permissions. Additionally, any password file being used for a transient purpose, such as setting up SSH among nodes, should be deleted after it has served its purpose.
 
-For a complete list of the types of passwords that can be specified, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`] command help page. Here are a couple of examples of password names used by the file.
+For a complete list of the types of passwords that can be specified, see the xref:../command-reference/asadmin.adoc[`asadmin`] command help page. Here are a couple of examples of password names used by the file.
 
 [source, text]
 ----
@@ -756,7 +756,7 @@ Use the `create-password-alias` subcommand in remote mode to create an alias for
 
 The `create-password-alias` subcommand takes both a secure interactive form, in which users are prompted for all information, and a more script-friendly form, in which the password is propagated on the command line.
 
-You can also use the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand to remove and replace the password in the configuration file. For example:
+You can also use the xref:../command-reference/set.adoc[`set`] subcommand to remove and replace the password in the configuration file. For example:
 
 [source,shell]
 ----
@@ -766,11 +766,11 @@ admin-password='${ALIAS=jms-password}'
 
 To create a new password alias follow these steps:
 
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/create-password-alias.adoc[`create-password-alias`] subcommand.
+. Run the xref:../command-reference/create-password-alias.adoc[`create-password-alias`] subcommand.
 . Type the password for the alias when prompted.
 . Add the alias to a password file.
 +
-For example, assume the use of a password file such as `passwords.txt`. Assume further that you want to add an alias for the `AS_ADMIN_USERPASSWORD` entry that is read by the xref:technical-documentation/payara-server-documentation/command-reference/create-file-user.adoc[`create-file-user`] subcommand.
+For example, assume the use of a password file such as `passwords.txt`. Assume further that you want to add an alias for the `AS_ADMIN_USERPASSWORD` entry that is read by the xref:../command-reference/create-file-user.adoc[`create-file-user`] subcommand.
 +
 You would add the following line to the password file:
 +
@@ -781,7 +781,7 @@ AS_ADMIN_USERPASSWORD=${ALIAS=user-password-alias}
 +
 Where `user-password-alias` is the new password alias.
 
-. Now execute the corresponding command that requires the alias in the password file. Here's an example that uses the xref:technical-documentation/payara-server-documentation/command-reference/create-file-user.adoc[`create-file-user`] subcommand:
+. Now execute the corresponding command that requires the alias in the password file. Here's an example that uses the xref:../command-reference/create-file-user.adoc[`create-file-user`] subcommand:
 +
 [source, shell]
 ----
@@ -913,7 +913,7 @@ To delete a password alias, go to the *Password Aliases page*, tick the checkbox
 [#using-password-alias-microprofile]
 === Microprofile Config Support
 
-Password aliases can also be accessed using MicroProfile Config, as detailed xref:technical-documentation/microprofile/config/index.adoc[here].
+Password aliases can also be accessed using MicroProfile Config, as detailed xref:../../microprofile/config/index.adoc[here].
 
 [#administering-jsse-certificates]
 == Administering JSSE Certificates
@@ -1195,7 +1195,7 @@ As you can see on the XML excerpt, more JACC providers can be defined (by defaul
 
 With a custom JACC provide per server, applications deployed to a single server can't have their own custom authorization contracts. In this case, having a custom JACC Provider per application makes more sense by using the `fish.payara.jacc.JaccConfigurationFactory` API.
 
-IMPORTANT: To access this API, you will need to add a dependency to the xref:technical-documentation/public-api/index.adoc[Payara Public API] first.
+IMPORTANT: To access this API, you will need to add a dependency to the xref:../../public-api/index.adoc[Payara Public API] first.
 
 In the example below, when an application is deployed, a custom JACC provider is registered programmatically using the `JaccConfigurationFactory (consisting of a JACC `PolicyConfigurationFactory` and `Policy` implementation objects) in the `contextInitialized` method of `ServletContextListener`.
 

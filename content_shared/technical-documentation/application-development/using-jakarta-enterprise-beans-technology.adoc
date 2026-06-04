@@ -87,7 +87,7 @@ NOTE: Read-only beans are best suited for situations where the underlying data n
 
 The `pass-by-reference` element in the `payara-ejb-jar.xml` file allows you to specify the parameter passing semantics for co-located remote EJB invocations. This is an opportunity to improve performance.
 
-However, use of this feature results in non-portable applications. See "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#pass-by-reference[pass-by-reference]" in the Payara Server Application Deployment section.
+However, use of this feature results in non-portable applications. See "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#pass-by-reference[pass-by-reference]" in the Payara Server Application Deployment section.
 
 [#pooling-and-caching]
 === Pooling and Caching
@@ -103,7 +103,7 @@ In addition, Payara Server supports a number of tunable parameters that can cont
 
 To achieve scalability, the container selectively evicts some bean instances from the cache, usually when it overflows. These evicted bean instances return to the free bean pool. The size and behavior of each cache can be controlled using the cache-related properties in the EJB container or the `payara-ejb-jar.xml` file.
 
-Pooling and caching parameters for the `payara-ejb-jar.xml` file are described in "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#bean-cache[bean-cache]" in the Payara Server Application Deployment section.
+Pooling and caching parameters for the `payara-ejb-jar.xml` file are described in "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#bean-cache[bean-cache]" in the Payara Server Application Deployment section.
 
 [#pooling-parameters]
 ==== Pooling Parameters
@@ -119,7 +119,7 @@ Another parameter, `pool-idle-timeout-in-seconds`, allows the administrator to s
 [#caching-parameters]
 ==== Caching Parameters
 
-Payara Server provides a way that completely avoids caching of entity beans, using commit option `C`. Commit option `C` is particularly useful if beans are accessed in large number but very rarely reused. For additional information, refer to xref:technical-documentation/application-development/using-the-transaction-service.adoc#commit-options[Commit Options].
+Payara Server provides a way that completely avoids caching of entity beans, using commit option `C`. Commit option `C` is particularly useful if beans are accessed in large number but very rarely reused. For additional information, refer to xref:using-the-transaction-service.adoc#commit-options[Commit Options].
 
 Payara Server caches can be either bounded or unbounded. Bounded caches have limits on the number of beans that they can hold beyond which beans are passivated. For stateful session beans, there are three ways (LRU, NRU and FIFO) of picking victim beans when cache overflow occurs.
 
@@ -141,7 +141,7 @@ Normally, all entity bean updates within a transaction are batched and executed 
 
 Since a transaction often spans many method calls, you might want to find out if the updates made by a method succeeded or failed immediately after method execution. To force a flush at the end of a method's execution, use the `flush-at-end-of-method` element in the `payara-ejb-jar.xml` file.
 Only non-finder methods in an entity bean can be flush-enabled. (For an EJB 2.1 bean, these methods must be in the Local, Local Home, Remote, or Remote Home interface).
-See "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#flush-at-end-of-method[flush-at-end-of-method]" in the Payara Server Application Deployment section.
+See "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#flush-at-end-of-method[flush-at-end-of-method]" in the Payara Server Application Deployment section.
 
 Upon completion of the method, the EJB container updates the database. Any exception thrown by the underlying data store is wrapped as follows:
 
@@ -156,7 +156,7 @@ All normal end-of-transaction database synchronization steps occur regardless of
 
 The EJB Timer Service uses a database to store persistent information about EJB timers. The EJB Timer Service in Payara Server is preconfigured to use an embedded version of the H2 database via its `jdbc/__TimerPool` default datasource.
 
-The EJB Timer Service configuration can store persistent timer information in any database supported by Payara Server for persistence. For configurations of supported drivers, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#configuration-specifics-for-jdbc-drivers[Configuration Specifics for JDBC Drivers]" in the Payara Server General Administration section.
+The EJB Timer Service configuration can store persistent timer information in any database supported by Payara Server for persistence. For configurations of supported drivers, see "xref:../payara-server-documentation/general-administration/administering-database-connectivity.adoc#configuration-specifics-for-jdbc-drivers[Configuration Specifics for JDBC Drivers]" in the Payara Server General Administration section.
 
 The timer service is automatically enabled when you deploy an application or module that uses it. You can verify that the timer service is running by accessing the following URL in a local context:
 
@@ -179,9 +179,9 @@ You can change the following EJB Timer Service settings. You must restart the se
 +
 CAUTION: Do not use the `jdbc/__TimerPool` resource for timers in clustered Payara Server environments.
 You must instead use a custom JDBC resource or the `jdbc/__default` resource. See the instructions below, in xref:#to-deploy-an-ejb-timer-to-a-cluster[To Deploy an EJB Timer to a Cluster]. +
-Also refer to "xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#enabling-the-jdbc__default-resource-in-a-clustered-environment[Enabling the jdbc/__default Resource in a Clustered Environment]" in the Payara Server General Administration section.
+Also refer to "xref:../payara-server-documentation/general-administration/administering-database-connectivity.adoc#enabling-the-jdbc__default-resource-in-a-clustered-environment[Enabling the jdbc/__default Resource in a Clustered Environment]" in the Payara Server General Administration section.
 
-For information about migrating EJB timers, see "xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#migrating-ejb-timers[Migrating EJB Timers]" in the Payara Server High Availability section.
+For information about migrating EJB timers, see "xref:../payara-server-documentation/high-availability/administering-payara-server-instances.adoc#migrating-ejb-timers[Migrating EJB Timers]" in the Payara Server High Availability section.
 
 You can use the `--keepstate` option of the `asadmin redeploy` command to retain EJB timers between re-deployments.
 
@@ -331,7 +331,7 @@ A stateless session bean container uses a bean pool to service requests. The Pay
 * `max-pool-size`
 * `pool-idle-timeout-in-seconds`
 
-For more information about `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml`, see "xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The payara-ejb-jar.xml File]" in the Payara Server Application Deployment section.
+For more information about `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml`, see "xref:../payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The payara-ejb-jar.xml File]" in the Payara Server Application Deployment section.
 
 Payara Server provides the `wscompile` and `wsdeploy` tools to help you implement a web service endpoint as a stateless session bean.
 
@@ -385,12 +385,12 @@ Stateful session beans are managed using an internal cache. The size and behavio
 
 The `max-cache-size` element specifies the maximum number of session beans that are held in cache. If the cache overflows (when the number of beans exceeds `max-cache-size`), the container then passivates some beans or writes out the serialized state of the bean into a file. The directory in which the file is created is obtained from the EJB container using the configuration APIs.
 
-For more information about `payara-ejb-jar.xml`, see "xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The payara-ejb-jar.xml File]" in the Payara Server Application Deployment section.
+For more information about `payara-ejb-jar.xml`, see "xref:../payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The payara-ejb-jar.xml File]" in the Payara Server Application Deployment section.
 
 The passivated beans are stored on the file system. The Session Store Location setting in the EJB container allows an administrator to specify the directory where passivated beans are stored. By default, passivated stateful session beans are stored in application-specific subdirectories created under `${domain-dir}/session-store`.
 
 NOTE: Make sure the `delete` option is set in the `server.policy` file, or expired file-based sessions might not be deleted properly.
-For more information about `server.policy`, see xref:technical-documentation/application-development/securing-applications.adoc#the-server.policy-file[The `server.policy` File].
+For more information about `server.policy`, see xref:securing-applications.adoc#the-server.policy-file[The `server.policy` File].
 
 The Session Store Location setting also determines where the session state is persisted if it is in a High Availability environment; see xref:#choosing-a-persistence-store[Choosing a Persistence Store].
 
@@ -440,13 +440,13 @@ For example, failover might work because the class implementing that type is *se
 |===
 
 For more information about the `InitialContext`, see
-xref:technical-documentation/application-development/using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context]. For more information about transaction recovery, see xref:technical-documentation/application-development/using-the-transaction-service.adoc#using-the-transaction-service[Using the Transaction Service]. For more information about Administered Objects, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-physical-destinations[Administering JMS Physical Destinations]" in the Payara Server General Administration section.
+xref:using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context]. For more information about transaction recovery, see xref:using-the-transaction-service.adoc#using-the-transaction-service[Using the Transaction Service]. For more information about Administered Objects, see "xref:../payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-physical-destinations[Administering JMS Physical Destinations]" in the Payara Server General Administration section.
 
 If a server instance to which an RMI-IIOP client request is sent crashes during the request processing (before the response is prepared and sent back to the client), an error is sent to the client.
 
 The client must retry the request explicitly. When the client retries the request, the request is sent to another server instance in the cluster, which retrieves session state information for this client.
 
-HTTP sessions can also be saved in a persistent store in case a server instance fails. In addition, if a distributable web application references an SFSB, and the web application's session fails over, the EJB reference is also failed over. For more information, see xref:technical-documentation/application-development/developing-web-applications.adoc#distributed-sessions-and-persistence[Distributed Sessions and Persistence].
+HTTP sessions can also be saved in a persistent store in case a server instance fails. In addition, if a distributable web application references an SFSB, and the web application's session fails over, the EJB reference is also failed over. For more information, see xref:developing-web-applications.adoc#distributed-sessions-and-persistence[Distributed Sessions and Persistence].
 
 If an SFSB that uses session persistence is un-deployed while the Payara Server instance is stopped, the session data in the persistence store might not be cleared. To prevent this, undeploy the SFSB while the Payara Server instance is running.
 
@@ -559,7 +559,7 @@ For example:
 </payara-ejb-jar>
 ----
 
-For details, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#checkpoint-at-end-of-method[checkpoint-at-end-of-method]" in the Payara Server Application Deployment section.
+For details, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#checkpoint-at-end-of-method[checkpoint-at-end-of-method]" in the Payara Server Application Deployment section.
 
 The non-transactional methods in the `checkpoint-at-end-of-method` element can be the following:
 
@@ -688,7 +688,7 @@ Also, the `refresh-period-in-seconds` element in the `payara-ejb-jar.xml` file c
 All requests in the same transaction context are routed to the same read-only bean instance. Set the `allow-concurrent-access` element to
 either `true` (to allow concurrent accesses) or `false` (to serialize concurrent access to the same read-only bean). The default is `false`.
 
-For further information on these elements, refer to "xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The payara-ejb-jar.xml File]" in the Payara Server Application Deployment section.
+For further information on these elements, refer to "xref:../payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The payara-ejb-jar.xml File]" in the Payara Server Application Deployment section.
 
 [#using-message-driven-beans]
 == Using Message-Driven Beans
@@ -698,7 +698,7 @@ This section describes message-driven beans and explains the requirements for cr
 [#message-driven-bean-configuration]
 === Message-Driven Bean Configuration
 
-For information about setting up load balancing for message-driven beans, see xref:technical-documentation/application-development/using-jakarta-messaging.adoc#load-balanced-message-inflow[Load-Balanced Message Inflow].
+For information about setting up load balancing for message-driven beans, see xref:using-jakarta-messaging.adoc#load-balanced-message-inflow[Load-Balanced Message Inflow].
 
 [#connection-factory-and-destination]
 ==== Connection Factory and Destination
@@ -721,7 +721,7 @@ The container manages a pool of message-driven beans for the concurrent processi
 * `max-pool-size`
 * `pool-idle-timeout-in-seconds`
 
-For more information about `payara-ejb-jar.xml`, see "xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The payara-ejb-jar.xml File]" in the Payara Server Application Deployment section.
+For more information about `payara-ejb-jar.xml`, see "xref:../payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The payara-ejb-jar.xml File]" in the Payara Server Application Deployment section.
 
 [#domain-level-settings]
 ==== Domain-Level Settings
@@ -838,12 +838,12 @@ TIP: EJB Timers are persistent by default.
 [#preconditions-for-persistent-timers]
 ==== Preconditions for Using Persistent Timers in Deployment Groups
 
-Because xref:technical-documentation/payara-server-documentation/high-availability/administering-deployment-groups.adoc[deployment groups] do not need to share configurations amongst their instances, there are several configuration and operational constraints that are not enforced by the server.
+Because xref:../payara-server-documentation/high-availability/administering-deployment-groups.adoc[deployment groups] do not need to share configurations amongst their instances, there are several configuration and operational constraints that are not enforced by the server.
 
 To ensure correct behaviour of persistent timers within a deployment group, the following conditions need to be met:
 
-* The EJB Timer Service needs to use shared storage --an external database-- or xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc[the DataGrid].
-* All instances of a deployment group, and the Domain Administration Server MUST share the same configuration settings for the EJB Timer Service (see xref:technical-documentation/application-development/using-jakarta-enterprise-beans-technology.adoc#ejb-timer-service[here] for more information).
+* The EJB Timer Service needs to use shared storage --an external database-- or xref:../payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc[the DataGrid].
+* All instances of a deployment group, and the Domain Administration Server MUST share the same configuration settings for the EJB Timer Service (see xref:using-jakarta-enterprise-beans-technology.adoc#ejb-timer-service[here] for more information).
 * Applications with persistent timers are deployed to a deployment group and not managed on instance level afterward.
 * Instances are members of only a single deployment group
 

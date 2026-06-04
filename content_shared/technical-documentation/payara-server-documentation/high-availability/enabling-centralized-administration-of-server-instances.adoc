@@ -41,13 +41,13 @@ How you administer instances and the nodes on which they reside varies depending
 |=======================================================================
 |Protocol |Node Administration Instructions |Instance Administration Instructions
 
-|xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#administering-payara-server-instances-centrally[Administering Payara Server Instances Centrally] +
+|xref:administering-payara-server-instances.adoc#administering-payara-server-instances-centrally[Administering Payara Server Instances Centrally] +
 
-|SSH |xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#creating-listing-testing-and-deleting-ssh-nodes[Creating, Listing, Testing, and Deleting `SSH` Nodes] +
-|xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#administering-payara-server-instances-centrally[Administering Payara Server Instances Centrally] +
+|SSH |xref:administering-payara-server-nodes.adoc#creating-listing-testing-and-deleting-ssh-nodes[Creating, Listing, Testing, and Deleting `SSH` Nodes] +
+|xref:administering-payara-server-instances.adoc#administering-payara-server-instances-centrally[Administering Payara Server Instances Centrally] +
 
-|None |xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#creating-listing-and-deleting-config-nodes[Creating, Listing, and Deleting `CONFIG` Nodes] +
-|xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#administering-payara-server-instances-locally[Administering Payara Server Instances Locally] +
+|None |xref:administering-payara-server-nodes.adoc#creating-listing-and-deleting-config-nodes[Creating, Listing, and Deleting `CONFIG` Nodes] +
+|xref:administering-payara-server-instances.adoc#administering-payara-server-instances-locally[Administering Payara Server Instances Locally] +
 
 |=======================================================================
 
@@ -234,7 +234,7 @@ $ cygrunsrv --query sshd
 *Next Steps*
 
 After you have completed the setup of SSH on a host, test the setup on
-the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
+the host as explained in xref:enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
 [#setting-up-the-mks-toolkit-on-windows]
 == Setting up the MKS Toolkit on Windows
@@ -376,7 +376,7 @@ Service Start Name:     LocalSystem
 
 *Next Steps*
 
-After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
+After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
 [#setting-up-ssh-on-unix-and-linux-systems]
 == Setting up SSH on UNIX and Linux Systems
@@ -421,7 +421,7 @@ http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1svcs-1[`svcs`(1)^]
 
 *Next Steps*
 
-After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
+After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
 [#to-set-up-ssh-on-macos-systems]
 === To Set up SSH on Macos Systems
@@ -452,7 +452,7 @@ $ sudo launchctl start com.openssh.sshd
 
 *Next Steps*
 
-After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
+After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
 [#to-set-up-ssh-on-linux-systems]
 === To Set up SSH on Linux Systems
@@ -485,7 +485,7 @@ openssh-daemon (pid  2373) is running...
 
 *Next Steps*
 
-After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
+After you have completed the setup of SSH on a host, test the setup on the host as explained in xref:enabling-centralized-administration-of-server-instances.adoc#testing-the-ssh-setup-on-a-host[Testing the SSH Setup on a Host].
 
 [#testing-the-ssh-setup-on-a-host]
 == Testing the SSH Setup on a Host
@@ -525,7 +525,7 @@ If your connection is accepted, but you cannot log in, ensure that the SSH user 
 
 *Next Steps*
 
-After testing the SSH setup, set up SSH user authentication to enable SSH to authenticate users without prompting for a password. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-user-authentication[Setting Up SSH User Authentication].
+After testing the SSH setup, set up SSH user authentication to enable SSH to authenticate users without prompting for a password. For more information, see xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-user-authentication[Setting Up SSH User Authentication].
 
 [#setting-up-ssh-user-authentication]
 == Setting up SSH User Authentication
@@ -561,16 +561,16 @@ Use the `setup-ssh` subcommand in local mode to set up public key authentication
 
 The `setup-ssh` subcommand generates a key pair and distributes the public key file to specified hosts. The private key file and the public key file are protected only by the file system's file access permissions.
 
-If you require additional security, set up public key authentication with passphrase-protected encryption as explained in xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#to-set-up-encrypted-public-key-authentication[To Set Up Encrypted Public Key Authentication].
+If you require additional security, set up public key authentication with passphrase-protected encryption as explained in xref:enabling-centralized-administration-of-server-instances.adoc#to-set-up-encrypted-public-key-authentication[To Set Up Encrypted Public Key Authentication].
 
 *Before You Begin*
 
 Ensure that the following prerequisites are met:
 
 * SSH is set up on each host where you are setting up public key authentication. For more information, see the following sections:
-** xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
-** xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
-** xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
+** xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
+** xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
+** xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
 * Only the SSH user has write access to the following files and directories on each host where you are setting up public key authentication:
 ** The SSH user's home directory
 ** The `~/.ssh` directory
@@ -629,9 +629,9 @@ If you have set the file access permissions in the SSH user's home directory cor
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
-* xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
-* xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
+* xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
+* xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
+* xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/setup-ssh.adoc#setup-ssh[`setup-ssh`(1)]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help setup-ssh` at the command line.
@@ -653,9 +653,9 @@ each step. For information about all the options for the commands and subcommand
 Ensure that the following prerequisites are met:
 
 * SSH is set up on each host where you are setting up public key authentication. For more information, see the following sections:
-** xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
-** xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
-** xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
+** xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
+** xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
+** xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
 * Only the SSH user has write access to the following files and directories on each host where you are setting up public key authentication:
 
 ** The SSH user's home directory
@@ -724,7 +724,7 @@ The `create-password-alias` subcommand prompts you to type the passphrase again.
 AS_ADMIN_SSHKEYPASSPHRASE=${ALIAS=alias-name}
 ----
 
-NOTE: When you create an `SSH` node, pass this file as the `--passwordfile` option of the `asadmin` utility. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node].
+NOTE: When you create an `SSH` node, pass this file as the `--passwordfile` option of the `asadmin` utility. For more information, see xref:administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node].
 
 The following example generates an SSH key pair with an encrypted private key for the user `gfadmin` and distributes the public key to the hosts `sj01` and `ja02`. The example also creates an alias that is named `ssh-key-passphrase` for the private key's passphrase.
 
@@ -771,9 +771,9 @@ If you have set the file access permissions in the SSH user's home directory cor
 * On each remote host, copy the public key file to the SSH user's `~/.ssh` directory and import the file. To import the file, select the Secure Service tab in the MKS configuration GUI and click _Passwordless_.
 * Disable strict modes.
 
-* xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
-* xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
-* xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
+* xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
+* xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
+* xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`(1M)]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-password-alias.adoc#create-password-alias[`create-password-alias`(1)]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/setup-ssh.adoc#setup-ssh[`setup-ssh`(1)]
@@ -824,7 +824,7 @@ AS_ADMIN_SSHPASSWORD=${ALIAS=alias-name}
 *alias-name*:
   The alias name that you specified in Step *2*.
 +
-NOTE: When you create an `SSH` node, pass this file as the `--passwordfile` option of the `asadmin` utility. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node].
+NOTE: When you create an `SSH` node, pass this file as the `--passwordfile` option of the `asadmin` utility. For more information, see xref:administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node].
 
 The following example creates an alias that is named `ssh-password` for the SSH user's password.
 
@@ -845,9 +845,9 @@ AS_ADMIN_SSHPASSWORD=${ALIAS=ssh-password}
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
-* xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
-* xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
+* xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-cygwin-ssh-on-windows[Setting Up Cygwin SSH on Windows]
+* xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-the-mks-toolkit-on-windows[Setting Up the MKS Toolkit on Windows]
+* xref:enabling-centralized-administration-of-server-instances.adoc#setting-up-ssh-on-unix-and-linux-systems[Setting Up SSH on UNIX and Linux Systems]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`(1M)]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-password-alias.adoc#create-password-alias[`create-password-alias`(1)]
 
@@ -859,9 +859,9 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Payara Server software must be installed on all hosts where Payara Server will run. How to install Payara Server software on multiple hosts depends on the degree of control that you require over the installation on each host.
 
 * If you require complete control over the installation on each host, install the software from a Payara Server distribution on each host individually.
-* If the same setup on each host is acceptable, copy an existing Payara Server installation to the hosts. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#to-copy-a-payara-server-installation-to-multiple-hosts[To Copy a Payara Server Installation to Multiple Hosts].
+* If the same setup on each host is acceptable, copy an existing Payara Server installation to the hosts. For more information, see xref:enabling-centralized-administration-of-server-instances.adoc#to-copy-a-payara-server-installation-to-multiple-hosts[To Copy a Payara Server Installation to Multiple Hosts].
 
-Payara Server also enables you to remove Payara Server software from multiple hosts in a single operation. For more information, see xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#to-remove-payara-server-software-from-multiple-hosts[To Remove Payara Server Software From Multiple Hosts].
+Payara Server also enables you to remove Payara Server software from multiple hosts in a single operation. For more information, see xref:enabling-centralized-administration-of-server-instances.adoc#to-remove-payara-server-software-from-multiple-hosts[To Remove Payara Server Software From Multiple Hosts].
 
 [#to-copy-a-payara-server-installation-to-multiple-hosts]
 === To Copy a Payara Server Installation to Multiple Hosts

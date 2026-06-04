@@ -35,7 +35,7 @@ The `jndi-name` for application-scoped-resources or module-scoped-resources are 
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -71,8 +71,8 @@ Command flush-connection-pool executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-connector-connection-pools.adoc#list-connector-connection-pools[`list-connector-connection-pools`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-connection-pools.adoc#list-jdbc-connection-pools[`list-jdbc-connection-pools`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:list-connector-connection-pools.adoc#list-connector-connection-pools[`list-connector-connection-pools`],
+* xref:list-jdbc-connection-pools.adoc#list-jdbc-connection-pools[`list-jdbc-connection-pools`]
 
 

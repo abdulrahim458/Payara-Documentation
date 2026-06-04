@@ -106,7 +106,7 @@ To fine-tune spans and have better control about their boundaries you can use di
 [#tracing-dependencies]
 === Dependencies
 
-The appropriate versions of APIs are provided by xref:technical-documentation/ecosystem/project-management-tools/maven-bom.adoc[Payara BOM artifact] matching the version of the Payara Platform distribution you are using.
+The appropriate versions of APIs are provided by xref:../ecosystem/project-management-tools/maven-bom.adoc[Payara BOM artifact] matching the version of the Payara Platform distribution you are using.
 
 Payara Platform provides the following APIs, and it is advised to mark them as `provided` dependencies in your application and don't package them with it:
 

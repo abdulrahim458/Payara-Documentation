@@ -23,7 +23,7 @@ image:microprofile/config/cloud/aws/iam-user-permissions.png[alt="AWS IAM user p
 
 Whether you assign a group or select individual permissions, make sure the IAM user contains the _SecretsManagerReadWrite_ permission, which will allow the user access to your secrets.
 
-When you finish creating the IAM user, you'll be given an access key id and secret access key. These will need to be recorded and passed to Payara Server as xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases] `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` respectively.
+When you finish creating the IAM user, you'll be given an access key id and secret access key. These will need to be recorded and passed to Payara Server as xref:../../../payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases] `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` respectively.
 
 [#configuration]
 == Configuration in Payara Server
@@ -45,7 +45,7 @@ NOTE: The region name is the snake-case notation, not the full words. E.g. `eu-w
 [#from-admin-console]
 === From the Admin Console
 
-To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliases from the admin console, refer to the xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases Admin Console configuration] guide.
+To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliases from the admin console, refer to the xref:../../../payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases Admin Console configuration] guide.
 
 To configure the config source from the admin console, go to `Configs` -> `your-config` -> `MicroProfile` -> `Config` -> `DynamoDB`.
 
@@ -56,13 +56,13 @@ From here you configure the name of the database table, the region name, name of
 [#from-command-line]
 === From the Command Line
 
-To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliases from the command line, refer to the xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases Asadmin configuration] guide.
+To configure the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` password aliases from the command line, refer to the xref:../../../payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases Asadmin configuration] guide.
 
 To configure the DynamoDB config source from the command line, use these commands:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/set-dynamodb-config-source-configuration.adoc#set-dynamodb-config-source-configuration[`set-dynamodb-config-source-configuration`].
+* xref:../../../payara-server-documentation/command-reference/set-dynamodb-config-source-configuration.adoc#set-dynamodb-config-source-configuration[`set-dynamodb-config-source-configuration`].
 
-* xref:technical-documentation/payara-server-documentation/command-reference/get-dynamodb-config-source-configuration.adoc#get-dynamodb-config-source-configuration[`get-dynamodb-config-source-configuration`].
+* xref:../../../payara-server-documentation/command-reference/get-dynamodb-config-source-configuration.adoc#get-dynamodb-config-source-configuration[`get-dynamodb-config-source-configuration`].
 
 [#usage]
 == Usage

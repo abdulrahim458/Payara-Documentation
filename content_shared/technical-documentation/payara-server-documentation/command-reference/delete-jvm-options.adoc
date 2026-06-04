@@ -15,7 +15,7 @@ asadmin [asadmin-options] delete-jvm-options [--help]
 [#description]
 == Description
 
-The `delete-jvm-options` subcommand removes one or more command-line options for the Java application launcher. These options are removed from the Java configuration `java—config` element of the `domain.xml` file. To see the Java application launcher options that can be deleted, use the xref:technical-documentation/payara-server-documentation/command-reference/list-jvm-options.adoc#list-jvm-options[`list-jvm-options`] subcommand.
+The `delete-jvm-options` subcommand removes one or more command-line options for the Java application launcher. These options are removed from the Java configuration `java—config` element of the `domain.xml` file. To see the Java application launcher options that can be deleted, use the xref:list-jvm-options.adoc#list-jvm-options[`list-jvm-options`] subcommand.
 
 The deletion of some options requires a server restart for changes to become effective. Other options are set immediately in the environment of the domain administration server (DAS) and do not require a restart.
 
@@ -33,7 +33,7 @@ Whether a restart is required depends on the type of option.
 `-Xmx1024m` +
 `-d64`
 
-To restart the DAS, use the xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc#restart-domain[`restart-domain`] command.
+To restart the DAS, use the xref:restart-domain.adoc#restart-domain[`restart-domain`] command.
 
 This subcommand is supported in remote mode only.
 
@@ -41,7 +41,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -65,7 +65,7 @@ This subcommand is supported in remote mode only.
   * If the option has a name and a value, the format is option-name=value.
   * If the option has only a name, the format is option-name. For example, `-Xmx2048m`. +
 
-NOTE: If an option name or option value contains a colon, the backslash (`\`) must be used to escape the colon in the name or value. Other characters might also require an escape character. For more information about escape characters in subcommand options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] man page.
+NOTE: If an option name or option value contains a colon, the backslash (`\`) must be used to escape the colon in the name or value. Other characters might also require an escape character. For more information about escape characters in subcommand options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] man page.
 
 [#examples]
 == Examples
@@ -92,10 +92,10 @@ Command delete-jvm-options executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc#create-jvm-options[`create-jvm-options`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jvm-options.adoc#list-jvm-options[`list-jvm-options`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc#restart-domain[`restart-domain`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-jvm-options.adoc#create-jvm-options[`create-jvm-options`],
+* xref:list-jvm-options.adoc#list-jvm-options[`list-jvm-options`],
+* xref:restart-domain.adoc#restart-domain[`restart-domain`]
 
 For more information about the Java application launcher, see the reference page for the operating system that you are using:
 

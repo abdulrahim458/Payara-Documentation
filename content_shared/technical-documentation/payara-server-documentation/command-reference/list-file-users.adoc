@@ -68,8 +68,8 @@ Command list-file-users executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-file-user.adoc#create-file-user[`create-file-user`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-file-user.adoc#delete-file-user[`delete-file-user`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-file-groups.adoc#list-file-groups[`list-file-groups`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-file-user.adoc#update-file-user[`update-file-user`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-file-user.adoc#create-file-user[`create-file-user`],
+* xref:delete-file-user.adoc#delete-file-user[`delete-file-user`],
+* xref:list-file-groups.adoc#list-file-groups[`list-file-groups`],
+* xref:update-file-user.adoc#update-file-user[`update-file-user`]

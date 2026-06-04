@@ -33,7 +33,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -103,13 +103,13 @@ Command enable-monitoring executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/disable-monitoring.adoc#disable-monitoring[`disable-monitoring`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get.adoc#get[`get`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list.adoc#list[`list`],
-* xref:technical-documentation/payara-server-documentation/command-reference/monitor.adoc#monitor[`monitor`],
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:disable-monitoring.adoc#disable-monitoring[`disable-monitoring`],
+* xref:get.adoc#get[`get`],
+* xref:list.adoc#list[`list`],
+* xref:monitor.adoc#monitor[`monitor`],
 * xref:technical-documentation/payara-server-documentation/command-reference/set#set[`set`]
-* xref:technical-documentation/payara-server-documentation/command-reference/monitoring.adoc#monitoring[`monitoring`]
+* xref:monitoring.adoc#monitoring[`monitoring`]
 * "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service]" in Payara Server General Administration section
 
 

@@ -23,7 +23,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -69,8 +69,8 @@ error in executing the command
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-managed-scheduled-executor-service.adoc#create-managed-scheduled-executor-service[`create-managed-scheduled-executor-service`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-managed-scheduled-executor-services.adoc#list-managed-scheduled-executor-services[`list-managed-scheduled-executor-services`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-managed-scheduled-executor-service.adoc#create-managed-scheduled-executor-service[`create-managed-scheduled-executor-service`],
+* xref:list-managed-scheduled-executor-services.adoc#list-managed-scheduled-executor-services[`list-managed-scheduled-executor-services`]
 
 

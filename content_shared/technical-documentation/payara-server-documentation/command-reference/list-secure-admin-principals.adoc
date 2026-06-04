@@ -23,7 +23,7 @@ The `list-secure-admin-principals` subcommand lists the certificates for which P
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -74,8 +74,8 @@ Command list-secure-admin-principals executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-secure-admin.adoc#enable-secure-admin[`enable-secure-admin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-secure-admin-principal.adoc#enable-secure-admin-principal[`enable-secure-admin-principal`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:enable-secure-admin.adoc#enable-secure-admin[`enable-secure-admin`],
+* xref:enable-secure-admin-principal.adoc#enable-secure-admin-principal[`enable-secure-admin-principal`]
 
 

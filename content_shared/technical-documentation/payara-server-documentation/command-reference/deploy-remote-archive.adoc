@@ -55,7 +55,7 @@ WARNING: Although the command can accept a set Maven GAV coordinates, it does no
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -71,7 +71,7 @@ WARNING: Although the command can accept a set Maven GAV coordinates, it does no
   If set to true and the required verifier packages are installed from the Update Tool, the syntax and semantics of the deployment descriptor is verified. Default is `false`.
 *`--name`*:
   Name of the deployable component. +
-  The name can include an optional version identifier, which follows the name and is separated from the name by a colon (`:`). The version identifier must begin with a letter or number. It can contain alphanumeric characters plus underscore (`_`), dash (`-`), and period (`.`) characters. For more information about module and application versions, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#module-and-application-versions[Module and Application Versions]" in Payara Server Application Deployment section.
+  The name can include an optional version identifier, which follows the name and is separated from the name by a colon (`:`). The version identifier must begin with a letter or number. It can contain alphanumeric characters plus underscore (`_`), dash (`-`), and period (`.`) characters. For more information about module and application versions, see "xref:../application-deployment/index.adoc#module-and-application-versions[Module and Application Versions]" in Payara Server Application Deployment section.
 *`--upload`*:
   Specifies whether the subcommand uploads the file to the DAS. In most situations, this option can be omitted. +
   Valid values are as follows: +
@@ -260,6 +260,6 @@ Command deploy-remote-archive executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/get.adoc#get[`get`],
-* xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:get.adoc#get[`get`],
+* xref:deploy.adoc#deploy[`deploy`]

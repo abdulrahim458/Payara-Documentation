@@ -49,7 +49,7 @@ You can enable debugging even when Payara Server is started without the `--debug
 . Use the Administration Console. Select the _JVM Settings_ component under the relevant configuration.
 . Check the _Debug Enabled_ box.
 . To specify a different port (from `9009`, the default) to use when attaching the JVM software to a debugger, specify `address=` port-number in the _Debug Options_ field.
-. To add JPDA options, add any desired JPDA debugging options in Debug Options. See xref:technical-documentation/application-development/debugging-applications.adoc#jpda-options[JPDA Options].
+. To add JPDA options, add any desired JPDA debugging options in Debug Options. See xref:debugging-applications.adoc#jpda-options[JPDA Options].
 
 [#jpda-options]
 === JPDA Options
@@ -74,7 +74,7 @@ You can include any additional options if needed.
 
 To generate a Java stack trace for debugging purposes, use the `asadmin generate-jvm-report --type=thread` command. The generated stack trace goes to the `domain-dir/logs/server.log` file and also appears on the command prompt screen.
 
-For more information about the `asadmin generate-jvm-report` command, see xref:technical-documentation/payara-server-documentation/command-reference/generate-jvm-report.adoc[`generate-jvm-report`].
+For more information about the `asadmin generate-jvm-report` command, see xref:../payara-server-documentation/command-reference/generate-jvm-report.adoc[`generate-jvm-report`].
 
 [#application-client-debugging]
 === Application Client Debugging
@@ -90,9 +90,9 @@ IMPORTANT: For debugging an application client, you must set the suspend option 
 
 You should use different ports for the server and client if you are debugging both concurrently. For details about setting the port, see xref:#jpda-options[JPDA Options].
 
-You can also include JVM options in the `appclient` script directly. For information about the `appclient` script, see xref:technical-documentation/payara-server-documentation/command-reference/appclient.adoc[`appclient`].
+You can also include JVM options in the `appclient` script directly. For information about the `appclient` script, see xref:../payara-server-documentation/command-reference/appclient.adoc[`appclient`].
 
-NOTE: The Application Client Container is supported only in the Full Profile, not in the Web Profile. See xref:technical-documentation/application-development/developing-java-clients.adoc#developing-java-clients[Developing Java Clients].
+NOTE: The Application Client Container is supported only in the Full Profile, not in the Web Profile. See xref:developing-java-clients.adoc#developing-java-clients[Developing Java Clients].
 
 [#open-message-queue-debugging]
 === Open Message Queue Debugging
@@ -101,7 +101,7 @@ Open Message Queue has a broker logger, which can be useful for debugging Java M
 
 You can adjust the logger's verbosity, and you can send the logger output to the broker's console using the broker's `-tty` option.
 
-NOTE: JMS resources are supported only in the Full Profile, not in the Web Profile. See xref:technical-documentation/application-development/using-jakarta-messaging.adoc#using-jakarta-messaging[Using Jakarta Messaging].
+NOTE: JMS resources are supported only in the Full Profile, not in the Web Profile. See xref:using-jakarta-messaging.adoc#using-jakarta-messaging[Using Jakarta Messaging].
 
 [#enabling-verbose-mode]
 === Enabling Verbose Mode

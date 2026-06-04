@@ -27,12 +27,12 @@ The following topics are addressed here:
 
 Various Jakarta EE module types, such as connector module, web module, EJB module, application client module, can be deployed in the following ways:
 
-* Archive Deployment. Deploys the application as an archive file. For instructions, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module].
-* Dynamic Reloading. Redeploys the application by creating or modifying a special `.reload` file in the *applications* repository. For instructions, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-reload-changes-to-applications-or-modules-dynamically[To Reload Changes to Applications or Modules Dynamically].
-* Automatic Deployment. Deploys the application archive that is placed in the `autodeployment` directory. For instructions, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module-automatically[To Deploy an Application or Module Automatically].
-* Directory Deployment. Deploys the application in a directory format. For instructions, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module-in-a-directory-format[To Deploy an Application or Module in a Directory Format].
+* Archive Deployment. Deploys the application as an archive file. For instructions, see xref:deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module].
+* Dynamic Reloading. Redeploys the application by creating or modifying a special `.reload` file in the *applications* repository. For instructions, see xref:deploying-applications.adoc#to-reload-changes-to-applications-or-modules-dynamically[To Reload Changes to Applications or Modules Dynamically].
+* Automatic Deployment. Deploys the application archive that is placed in the `autodeployment` directory. For instructions, see xref:deploying-applications.adoc#to-deploy-an-application-or-module-automatically[To Deploy an Application or Module Automatically].
+* Directory Deployment. Deploys the application in a directory format. For instructions, see xref:deploying-applications.adoc#to-deploy-an-application-or-module-in-a-directory-format[To Deploy an Application or Module in a Directory Format].
 
-A deployment plan, which deploys a portable archive along with a deployment plan containing Payara Server deployment descriptors, can apply to any of these deployment techniques. For instructions, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module-by-using-a-deployment-plan[To Deploy an Application or Module by Using a Deployment Plan].
+A deployment plan, which deploys a portable archive along with a deployment plan containing Payara Server deployment descriptors, can apply to any of these deployment techniques. For instructions, see xref:deploying-applications.adoc#to-deploy-an-application-or-module-by-using-a-deployment-plan[To Deploy an Application or Module by Using a Deployment Plan].
 
 There are two work situations that require different safeguards and processes:
 
@@ -65,7 +65,7 @@ For example, for EAR files, an alternate deployment descriptor overrides `applic
 For standalone modules, an alternate deployment descriptor overrides the top-level module descriptor, such as `web.xml`.
 * *Payara Server Descriptors*. Payara Server provides optional deployment descriptors for configuring features that are specific to Payara Server. For example, when you assemble an EJB module, you annotate or create two Payara Server deployment descriptor files with these names: `ejb-jar.xml` and `glassfish-ejb-jar.xml`.
 +
-For complete descriptions of these files and their elements, see xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#about-the-payara-platform-deployment-descriptors[Payara Server Deployment Descriptor Files] and xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors].
+For complete descriptions of these files and their elements, see xref:deployment-descriptor-files.adoc#about-the-payara-platform-deployment-descriptors[Payara Server Deployment Descriptor Files] and xref:elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors].
 +
 Payara Server also permits the use of alternate top-level Payara Server runtime deployment descriptors that reside outside an application archive. Alternate Payara Server deployment descriptors override the top-level deployment descriptors packaged in the archive.
 +
@@ -112,7 +112,7 @@ Payara Server supports the following types of modules:
 * *EJB Module*. An EJB module is a deployable software unit that consists of one or more enterprise beans, plus an EJB deployment descriptor. A Java archive (JAR) file is the standard format for assembling enterprise beans. An EJB JAR file contains the bean classes (home, remote, local, and implementation), all of the utility classes, and annotations or deployment descriptors (`ejb-jar.xml` and `glassfish-ejb-jar.xml`).
 * *Connector Module*. A connector module, also known as a resource adapter module, is a deployable software unit that provides a portable way for EJB components to access foreign enterprise information system (EIS) data. A connector module consists of all Jakarta interfaces, classes, and native libraries for implementing a resource module, plus a resource deployment descriptor. A resource adapter archive (RAR) is the standard format for assembling connector modules. Each Payara Server connector has annotations or a deployment descriptor file (`ra.xml`).
 +
-After deploying a Jakarta EE connector module, you must configure it as described in xref:technical-documentation/application-development/developing-connectors.adoc#developing-connectors[Developing Connectors] in the Payara Server Application Development section.
+After deploying a Jakarta EE connector module, you must configure it as described in xref:../../application-development/developing-connectors.adoc#developing-connectors[Developing Connectors] in the Payara Server Application Development section.
 * *Application Client Module*. An application client module is a deployable software unit that consists of one or more classes, and application client deployment descriptors
 (`application-client.xml` and `payara-application-client.xml`). An application client JAR file applies to a Payara Server type of Jakarta EE client. An application client supports the standard Jakarta EE Application Client specifications.
 
@@ -147,7 +147,7 @@ If you assemble a large, shared library into every module that uses it, the resu
 
 To specify an application-specific library file during deployment, use the `--libraries` option of the `deploy` or `redeploy` subcommand of the `asadmin` command. To add a library JAR file to the Common class loader directory, the Jakarta optional package directory, or the application-specific class loader directory, use the `add-library` subcommand. You can then list the libraries with `list-libraries` and remove the libraries with `remove-library`. For more information about all these commands, see the Payara Server Reference Manual.
 
-For more information about class loaders, see xref:technical-documentation/application-development/class-loaders.adoc#classloading[Class Loaders] in the Payara Server Application Development section.
+For more information about class loaders, see xref:../../application-development/class-loaders.adoc#classloading[Class Loaders] in the Payara Server Application Development section.
 
 NOTE: According to the Jakarta EE specification, you cannot package utility classes within an individually-deployed EJB module. Instead, you must package the EJB module and utility JAR within an application using the JAR Extension Mechanism Architecture.
 
@@ -204,7 +204,7 @@ For example, appending the  application name and the module name to the EJB name
 
 Application and module directory structures must follow the structure outlined in the Jakarta  EE specification. During deployment, the application or module is expanded from the archive file to an open directory structure. The directories that hold the individual modules are named with `_jar`, `_rar`, and `_war` suffixes.
 
-If you deploy a directory instead of an EAR file, your directory structure must follow this same convention. For instructions on performing directory deployment, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module-in-a-directory-format[To Deploy an Application or Module in a Directory Format].
+If you deploy a directory instead of an EAR file, your directory structure must follow this same convention. For instructions on performing directory deployment, see xref:deploying-applications.adoc#to-deploy-an-application-or-module-in-a-directory-format[To Deploy an Application or Module in a Directory Format].
 
 [#module-and-application-versions]
 === Module and Application Versions
@@ -294,14 +294,14 @@ The deployment tools that are provided by Payara Server can be used by any user 
 . *Deployment Descriptor or Annotation Creation*. The developer creates the deployment descriptors or equivalent annotations using Jakarta standards and tools.
 +
 Details of the Payara Server deployment descriptors are contained in
-xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#about-the-payara-platform-deployment-descriptors[Payara Server Deployment Descriptor Files] and xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors].
+xref:deployment-descriptor-files.adoc#about-the-payara-platform-deployment-descriptors[Payara Server Deployment Descriptor Files] and xref:elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors].
 +
 The Payara Server sample applications contain deployment descriptors that can be used as templates for developing deployment descriptors.
-. *Assembly*. The developer assembles the archive file(s) using Jakarta standards and tools, such as the `jar` command. The application or module is packaged into a JAR, WAR, RAR, or EAR file. For guidelines on naming, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#naming-standards[Naming Standards]. There are no Payara Server issues to consider.
-.  *Test Deployment*. The developer performs a test deployment of the archive. For instructions, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module].
-. *Archive Submission*. The developer submits the verified archive to the administrator for deployment into a production environment. The developer includes instructions for any additional deployment tasks that the administrator must perform. For an example of such additional instructions, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#access-to-shared-framework-classes[Access to Shared Framework Classes].
+. *Assembly*. The developer assembles the archive file(s) using Jakarta standards and tools, such as the `jar` command. The application or module is packaged into a JAR, WAR, RAR, or EAR file. For guidelines on naming, see xref:index.adoc#naming-standards[Naming Standards]. There are no Payara Server issues to consider.
+.  *Test Deployment*. The developer performs a test deployment of the archive. For instructions, see xref:deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module].
+. *Archive Submission*. The developer submits the verified archive to the administrator for deployment into a production environment. The developer includes instructions for any additional deployment tasks that the administrator must perform. For an example of such additional instructions, see xref:index.adoc#access-to-shared-framework-classes[Access to Shared Framework Classes].
 . *Configuration*. The administrator applies additional deployment specifics. Sometimes the developer has indicated additional deployment needs, such as specifying the production database. In this case, the administrator edits and reassembles the archive.
-. *Production Deployment*. The administrator deploys the archive to production. See xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module].
+. *Production Deployment*. The administrator deploys the archive to production. See xref:deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module].
 . *Troubleshooting*. If deployment fails, the administrator returns the archive to the developer.
 +
 The developer fixes the problem and resubmits the archive to the administrator. Sometimes the administrator resolves the problem, depending on what the problem is.
@@ -335,7 +335,7 @@ __**subcommand --option**__`. For example:
 asadmin list-applications --type web
 ----
 
-Application deployment commands are listed in xref:technical-documentation/payara-server-documentation/application-deployment/the-deployment-subcommands.adoc#the-asadmin-deployment-subcommands[The `asadmin` Deployment Subcommands].
+Application deployment commands are listed in xref:the-deployment-subcommands.adoc#the-asadmin-deployment-subcommands[The `asadmin` Deployment Subcommands].
 
 For the most part, you can perform the same administrative tasks by using either the graphical Administration Console or the `asadmin` command-line utility, however, there are exceptions. Procedures for using the command-line utilities are provided in this guide and in the command-line help pages, which are similar to man pages. You can display the help material for a command by typing help followed by the subcommand. For example:
 
@@ -344,7 +344,7 @@ For the most part, you can perform the same administrative tasks by using either
 asadmin help list-applications
 ----
 
-For additional information on the `asadmin` utility, see "xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#using-the-asadmin-utility[Using the `asadmin` Utility]" in
+For additional information on the `asadmin` utility, see "xref:../general-administration/general-runtime-administration.adoc#using-the-asadmin-utility[Using the `asadmin` Utility]" in
 __Payara Server General Administration section__ and the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`(1M)] help page.
 
 [#additional-information-on-application-deployment]

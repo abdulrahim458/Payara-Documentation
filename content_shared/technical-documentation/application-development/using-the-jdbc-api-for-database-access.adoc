@@ -45,7 +45,7 @@ If SQL statements are not closed by an application after use, it is possible for
 
 To enable statement leak detection, set _Statement Leak Timeout In Seconds_ for the JDBC connection pool to a positive, nonzero value in one of the following ways:
 
-* Specify the `--statementleaktimeout` option in the `create-jdbc-connection-pool` subcommand. For more information, see xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc[`create-jdbc-connection-pool`].
+* Specify the `--statementleaktimeout` option in the `create-jdbc-connection-pool` subcommand. For more information, see xref:../payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc[`create-jdbc-connection-pool`].
 * Specify the `statement-leak-timeout-in-seconds` option in the `set` subcommand. For example:
 +
 [source,shell]
@@ -60,7 +60,7 @@ When selecting a value for _Statement Leak Timeout In Seconds_, make sure that:
 
 After enabling statement leak detection, enable leaked statement reclamation by setting the _Reclaim Leaked Statements_ setting for the JDBC connection pool to a `true` value in one of the following ways:
 
-* Specify the `--statementleakreclaim=true` option in the `create-jdbc-connection-pool` subcommand. For more information, see xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc[`create-jdbc-connection-pool`].
+* Specify the `--statementleakreclaim=true` option in the `create-jdbc-connection-pool` subcommand. For more information, see xref:../payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc[`create-jdbc-connection-pool`].
 * Specify the `statement-leak-reclaim` option in the `set` subcommand. For example:
 +
 [source,shell]
@@ -210,7 +210,7 @@ When SQL statement tracing is enabled and JDBC connection pool monitoring is ena
 Set these parameters in one of the following ways:
 
 * Add them as custom properties in the _Edit JDBC Connection Pool Properties_ page in the Administration Console.
-* Specify them using the `--property` option in the `create-jdbc-connection-pool` subcommand. For more information, see xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc[`create-jdbc-connection-pool`].
+* Specify them using the `--property` option in the `create-jdbc-connection-pool` subcommand. For more information, see xref:../payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc[`create-jdbc-connection-pool`].
 * Set them using the `set` subcommand. For example:
 +
 [source,shell]
@@ -234,7 +234,7 @@ asadmin set domain1.resources.jdbc-connection-pool.DerbyPool.sql-trace-listeners
 
 To make custom implementations of this interface available to Payara Server, place the implementation classes in `as-install/lib`.
 
-More information on how to configure SQL Trace listeners can be read in the xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc[JDBC Connection Pool] configuration of Payara Server's administration section.
+More information on how to configure SQL Trace listeners can be read in the xref:../payara-server-documentation/general-administration/administering-database-connectivity.adoc[JDBC Connection Pool] configuration of Payara Server's administration section.
 
 [#connections]
 == Connections
@@ -249,7 +249,7 @@ Connection requests from any "in-flight" transactions are served using the old p
 To enable transparent JDBC connection pool reconfiguration, set the `dynamic-reconfiguration-wait-timeout-in-seconds` property of the JDBC connection pool to a positive, nonzero value in one of the following ways:
 
 * Add it as a property in the _Edit JDBC Connection Pool Properties_ page in the Administration Console.
-* Specify it using the `--property` option in the `create-jdbc-connection-pool` subcommand. For more information, see xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc[`create-jdbc-connection-pool`].
+* Specify it using the `--property` option in the `create-jdbc-connection-pool` subcommand. For more information, see xref:../payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc[`create-jdbc-connection-pool`].
 * Set it using the `set` subcommand. For example:
 +
 [source,shell]
@@ -349,7 +349,7 @@ For example, suppose *Bean A* starts a transaction and obtains a connection, the
 NOTE: Connections obtained through a resource are shared only if the resource reference declared by the Jakarta EE component allows it to be shareable. This is specified in a component's deployment descriptor by setting the `res-sharing-scope` element to `Shareable` for the particular resource reference. +
 To turn off connection sharing, set `res-sharing-scope` to `Unshareable`.
 
-For general information about connections and JDBC URLs, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#administering-database-connectivity[Administering Database Connectivity]" in the Payara Server General Administration section.
+For general information about connections and JDBC URLs, see "xref:../payara-server-documentation/general-administration/administering-database-connectivity.adoc#administering-database-connectivity[Administering Database Connectivity]" in the Payara Server General Administration section.
 
 [#marking-bad-connections]
 === Marking Bad Connections
@@ -489,14 +489,14 @@ asadmin set domain1.resources.jdbc-connection-pool.DerbyPool.allow-non-component
 
 * Create a JDBC resource with a `__pm` suffix.
 
-Accessing a `DataSource` using the `Synchronization.beforeCompletion()` method requires setting _Allow Non Component Callers_ to `true`. For more information about the Transaction Synchronization Registry, see xref:technical-documentation/application-development/using-the-transaction-service.adoc#the-transaction-manager-the-transaction-synchronization-registry-and-usertransaction[The Transaction Manager, the Transaction Synchronization Registry, and `UserTransaction`].
+Accessing a `DataSource` using the `Synchronization.beforeCompletion()` method requires setting _Allow Non Component Callers_ to `true`. For more information about the Transaction Synchronization Registry, see xref:using-the-transaction-service.adoc#the-transaction-manager-the-transaction-synchronization-registry-and-usertransaction[The Transaction Manager, the Transaction Synchronization Registry, and `UserTransaction`].
 
 [#using-application-scoped-resources]
 == Using Application-Scoped Resources
 
 You can define an application-scoped database or other resources for an enterprise application, web module, EJB module, connector module, or application client module by supplying a `payara-resources.xml` deployment descriptor file.
 
-For more details, see "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Payara Server Application Deployment section.
+For more details, see "xref:../payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Payara Server Application Deployment section.
 
 [#jdbc-call-logging-deployment]
 == JDBC Development Guidelines

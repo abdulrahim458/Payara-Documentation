@@ -20,7 +20,7 @@ Returns the current configuration options for the `ejb-invoker` application on t
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -55,5 +55,5 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-ejb-invoker-configuration.adoc#set-ejb-invoker-configuration[`set-ejb-invoker-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:set-ejb-invoker-configuration.adoc#set-ejb-invoker-configuration[`set-ejb-invoker-configuration`]

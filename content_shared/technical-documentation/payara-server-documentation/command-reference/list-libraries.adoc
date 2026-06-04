@@ -24,7 +24,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -36,7 +36,7 @@ This subcommand is supported in remote mode only.
     Lists the library files for the Java optional package directory, `domain-dir/lib/ext`.
   `app`;;
     Lists the library files for the application-specific class loader directory, `domain-dir/lib/applibs`. +
-  For more information about these directories, see xref:technical-documentation/application-development/class-loaders.adoc#classloading[Class Loaders] in the Payara Server Application section.
+  For more information about these directories, see xref:../../application-development/class-loaders.adoc#classloading[Class Loaders] in the Payara Server Application section.
 
 [#examples]
 == Examples
@@ -65,9 +65,9 @@ Command list-libraries executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/add-library.adoc#add-library[`add-library`],
-* xref:technical-documentation/payara-server-documentation/command-reference/remove-library.adoc#remove-library[`remove-library`],
-* xref:technical-documentation/application-development/class-loaders.adoc#classloading[Class Loaders] in the Payara Server Application Development section
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:add-library.adoc#add-library[`add-library`],
+* xref:remove-library.adoc#remove-library[`remove-library`],
+* xref:../../application-development/class-loaders.adoc#classloading[Class Loaders] in the Payara Server Application Development section
 
 

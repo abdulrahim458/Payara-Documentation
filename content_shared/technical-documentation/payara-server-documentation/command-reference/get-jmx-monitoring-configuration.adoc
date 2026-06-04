@@ -22,7 +22,7 @@ This command can be used to view the current configuration of the JMX monitoring
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -75,7 +75,7 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/monitoring.adoc[Monitoring Basics],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-amx-enabled.adoc[`set-amx-enabled`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-jmx-monitoring-configuration.adoc[`set-jmx-monitoring-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:monitoring.adoc[Monitoring Basics],
+* xref:set-amx-enabled.adoc[`set-amx-enabled`],
+* xref:set-jmx-monitoring-configuration.adoc[`set-jmx-monitoring-configuration`]

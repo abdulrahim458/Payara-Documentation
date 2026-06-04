@@ -39,7 +39,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -73,11 +73,11 @@ Command rollback-transaction executed succeessfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/freeze-transaction-service.adoc#freeze-transaction-service[`freeze-transaction-service`],
-* xref:technical-documentation/payara-server-documentation/command-reference/recover-transactions.adoc#recover-transactions[`recover-transactions`],
-* xref:technical-documentation/payara-server-documentation/command-reference/unfreeze-transaction-service.adoc#unfreeze-transaction-service[`unfreeze-transaction-service`],
-* "xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in the Payara Server General Administration section
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:freeze-transaction-service.adoc#freeze-transaction-service[`freeze-transaction-service`],
+* xref:recover-transactions.adoc#recover-transactions[`recover-transactions`],
+* xref:unfreeze-transaction-service.adoc#unfreeze-transaction-service[`unfreeze-transaction-service`],
+* "xref:../general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in the Payara Server General Administration section
 * "https://jakarta.ee/specifications/transactions/[Transactions^]" in The Jakarta EE Specifications
 
 

@@ -26,7 +26,7 @@ When you run `enable-secure-admin`, Payara Server automatically records the DNs 
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -65,8 +65,8 @@ Command enable-secure-admin-principal executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/disable-secure-admin-principal.adoc#disable-secure-admin-principal[`disable-secure-admin-principal`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-secure-admin.adoc#enable-secure-admin[`enable-secure-admin`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:disable-secure-admin-principal.adoc#disable-secure-admin-principal[`disable-secure-admin-principal`],
+* xref:enable-secure-admin.adoc#enable-secure-admin[`enable-secure-admin`]
 
 

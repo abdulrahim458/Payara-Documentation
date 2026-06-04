@@ -88,7 +88,7 @@ The Oracle Solaris command `svccfg` does not delete this directory.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -266,8 +266,8 @@ Command create-service executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-service.adoc#_delete-service[`_delete-service`],
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:delete-service.adoc#_delete-service[`_delete-service`],
 * http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1auths-1[`auths`^],
 * http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1svcs-1[`svcs`^]
 * http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Msvccfg-1m[`svccfg`^],

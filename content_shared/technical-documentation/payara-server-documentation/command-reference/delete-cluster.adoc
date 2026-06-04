@@ -27,7 +27,7 @@ This command is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -61,15 +61,15 @@ Command delete-cluster executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-cluster.adoc#create-cluster[`create-cluster`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-clusters.adoc#list-clusters[`list-clusters`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-cluster.adoc#start-cluster[`start-cluster`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc#stop-instance[`stop-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc#stop-local-instance[`stop-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-cluster.adoc#stop-cluster[`stop-cluster`],
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-cluster.adoc#create-cluster[`create-cluster`],
+* xref:delete-instance.adoc#delete-instance[`delete-instance`],
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
+* xref:list-clusters.adoc#list-clusters[`list-clusters`],
+* xref:start-cluster.adoc#start-cluster[`start-cluster`],
+* xref:stop-instance.adoc#stop-instance[`stop-instance`],
+* xref:stop-local-instance.adoc#stop-local-instance[`stop-local-instance`],
+* xref:stop-cluster.adoc#stop-cluster[`stop-cluster`],
 * xref:technical-documentation/payara-server-documentation/command-reference/restart-cluster#restart-cluster[`restart-cluster`]
 
 

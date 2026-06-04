@@ -64,7 +64,7 @@ At a high level, the steps to configure the email notifier are:
 [#email-notifier-admin-console]
 ===== Using the Admin Console
 
-You will need a `JavaMail` session to send the notifications; instructions on setting up a `JavaMail` session can be found xref:technical-documentation/payara-server-documentation/general-administration/administering-the-jakarta-mail-service.adoc[in this section].
+You will need a `JavaMail` session to send the notifications; instructions on setting up a `JavaMail` session can be found xref:administering-the-jakarta-mail-service.adoc[in this section].
 
 The email notifier is configured in the **Email** tab of the Notification Section of the server's instance configuration.
 
@@ -251,7 +251,7 @@ https://newrelic.com/[New Relic^] is an application performance monitoring (APM)
 
 New Relic specializes on integrating Java application servers like GlassFish, JBoss WildFly, etc. and other application frameworks seamlessly.
 
-Payara Server includes a special notifier to send notifications from the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc[Notification service] to the New Relic **Insights service** using its remote API.
+Payara Server includes a special notifier to send notifications from the xref:administering-the-notification-service.adoc[Notification service] to the New Relic **Insights service** using its remote API.
 
 Custom notification events generated from Payara Server's own monitoring systems like the Request Tracing and Healthcheck services can be automatically identified by this API and gathered correctly to identify performance issues on the application server.
 
@@ -481,7 +481,7 @@ Datadog supports gathering metrics from the following sources:
 * SQL and NoSQL Databases (MySQL, PostgreSQL, MongoDB, CouchBase)
 * Monitoring Solutions (New Relic, Nagios, Splunk, Amazon Cloud Trail)
 
-Payara Server includes a special notifier to send notifications from the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc[Notification service] to a Datadog account by means of an API key.
+Payara Server includes a special notifier to send notifications from the xref:administering-the-notification-service.adoc[Notification service] to a Datadog account by means of an API key.
 
 IMPORTANT: Currently, the Payara Datadog notifier only supports the `US1 - East` region.
 

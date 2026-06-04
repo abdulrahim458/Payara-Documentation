@@ -63,7 +63,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -214,7 +214,7 @@ Required when a datasource class implements two or more interfaces (`javax.sql.D
   `number-of-top-queries-to-report`;;
     Specifies the number of queries to list when reporting the top and most frequently used queries. Takes effect when SQL tracing and monitoring are enabled for the JDBC connection pool. The default value is 10 queries. +
 
-NOTE: If an attribute name or attribute value contains a colon, the backslash (`\`) must be used to escape the colon in the name or value. Other characters might also require an escape character. For more information about escape characters in command options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] man page.
+NOTE: If an attribute name or attribute value contains a colon, the backslash (`\`) must be used to escape the colon in the name or value. Other characters might also require an escape character. For more information about escape characters in command options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] man page.
 
 *`--skipclientinfovalidation`*:
   Determines whether to skip the validation of client info properties. Default is false.
@@ -255,8 +255,8 @@ The escape character backslash (`\`) is used in the `--property` option to disti
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-jdbc-connection-pool.adoc#delete-jdbc-connection-pool[`delete-jdbc-connection-pool`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-connection-pools.adoc#list-jdbc-connection-pools[`list-jdbc-connection-pools`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:delete-jdbc-connection-pool.adoc#delete-jdbc-connection-pool[`delete-jdbc-connection-pool`],
+* xref:list-jdbc-connection-pools.adoc#list-jdbc-connection-pools[`list-jdbc-connection-pools`]
 
 

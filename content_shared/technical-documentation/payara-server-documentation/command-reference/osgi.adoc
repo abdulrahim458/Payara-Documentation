@@ -21,7 +21,7 @@ The `osgi` subcommand delegates the command line to the Apache Felix Gogo remote
 
 Multiple command-line sessions can be created. Use the `--session` and `--session-id` options to run commands in a specific command-line session. If no session is specified, a new session is created to run commands and closed when execution completes.
 
-A related subcommand is the `osgi-shell` subcommand, which enables you to run multiple commands from a file or run commands interactively. For more information about the `osgi-shell` subcommand, see the xref:technical-documentation/payara-server-documentation/command-reference/osgi-shell.adoc#osgi-shell[`osgi-shell`] help page.
+A related subcommand is the `osgi-shell` subcommand, which enables you to run multiple commands from a file or run commands interactively. For more information about the `osgi-shell` subcommand, see the xref:osgi-shell.adoc#osgi-shell[`osgi-shell`] help page.
 
 This subcommand is supported in remote mode only.
 
@@ -29,7 +29,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the `osgi` subcommand.
@@ -148,5 +148,5 @@ Command osgi executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/osgi-shell.adoc#osgi-shell[`osgi-shell`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:osgi-shell.adoc#osgi-shell[`osgi-shell`]

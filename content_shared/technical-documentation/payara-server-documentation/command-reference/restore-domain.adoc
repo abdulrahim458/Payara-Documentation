@@ -30,7 +30,7 @@ WARNING: If a domain is restored on an already existing domain folder, all the f
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -84,8 +84,8 @@ If the specified domain name does not match the domain name stored in the backup
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/backup-domain.adoc#backup-domain[`backup-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-backups.adoc#list-backups[`list-backups`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:backup-domain.adoc#backup-domain[`backup-domain`],
+* xref:list-backups.adoc#list-backups[`list-backups`]
 
 

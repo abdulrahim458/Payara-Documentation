@@ -23,7 +23,7 @@ you can use this instance for deploying applications without the need to adminis
 You administer the default instance when you administer its domain.
 
 If you require multiple instances, you must administer the instances explicitly. For more information, see
-"xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#administering-payara-server-instances[Administering Payara Server Instances]" in
+"xref:../high-availability/administering-payara-server-instances.adoc#administering-payara-server-instances[Administering Payara Server Instances]" in
 the Payara Server High Availability section.
 
 For an instance, you can also create virtual servers. Virtual servers do not span instances. For many purposes, you can use virtual servers
@@ -31,7 +31,7 @@ instead of multiple instances in operational deployments. Virtual servers enable
 names, IP addresses, and some administration capabilities to organizations or individuals. To these users, a virtual server behaves
 like a dedicated web server, but without the hardware and basic web server maintenance.
 
-For more information about virtual servers, see xref:technical-documentation/payara-server-documentation/general-administration/administering-http-connectivity.adoc#administering-virtual-servers[Administering Virtual Servers].
+For more information about virtual servers, see xref:administering-http-connectivity.adoc#administering-virtual-servers[Administering Virtual Servers].
 
 [#domains-for-administering-payara-server]
 === Domains for Administering Payara Server
@@ -48,7 +48,7 @@ At installation time, Payara Server creates a default domain that is named `doma
 
 When a domain is created, you are prompted for the administration username and password. If you accept the default, the user `admin` is
 created without password. To reset the administration password,
-see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#to-change-an-administration-password[To Change an Administration Password] in Payara Server Security Guide.
+see xref:../security-guide/administering-system-security.adoc#to-change-an-administration-password[To Change an Administration Password] in Payara Server Security Guide.
 
 [#domain-administration-server-das]
 === Domain Administration Server (DAS)
@@ -137,7 +137,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 A custom template enables you to customize the configuration of any domain that you create from the template.
 
 . Create a domain to use as the basis for the template. +
-For more information, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-create-a-domain[To Create a Domain].
+For more information, see xref:administering-domains.adoc#to-create-a-domain[To Create a Domain].
 . Use the `asadmin` utility or the Administration Console to configure the domain. +
 Your configuration changes will be included in the template that you create from the domain.
 . Copy the domain's `domain.xml` file under a new name to the as-install`/lib/templates` directory. +
@@ -169,7 +169,7 @@ TIP: For information about how these tokens are used in the default template, ex
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-create-a-domain[`To Create a Domain`]
+* xref:administering-domains.adoc#to-create-a-domain[`To Create a Domain`]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/verify-domain-xml.adoc[`verify-domain-xml`]
 
@@ -241,7 +241,7 @@ To list the existing domains:
 ----
 asadmin list-domains
 ----
-. Log in to the domain by using the xref:technical-documentation/payara-server-documentation/general-administration/subcommands-for-the-asadmin-cli.adoc#domain-subcommands[`login`] command.
+. Log in to the domain by using the xref:subcommands-for-the-asadmin-cli.adoc#domain-subcommands[`login`] command.
 
 [#example-to-log-in-to-a-domain]
 ==== Example 3-3 Logging in to a Domain on a Remote Machine
@@ -280,7 +280,7 @@ asadmin commands to manage associated domain.
 ----
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help login` at the command line. For additional
-information about passwords, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-passwords[Administering Passwords] in Payara Server Security Guide.
+information about passwords, see xref:../security-guide/administering-system-security.adoc#administering-passwords[Administering Passwords] in Payara Server Security Guide.
 
 [#to-delete-a-domain]
 === To Delete a Domain
@@ -295,7 +295,7 @@ A domain must be stopped before it can be deleted.
 . List domains by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand.
 . If necessary, notify domain users that the domain is being deleted.
 . Ensure that the domain you want to delete is stopped. +
-If needed, see xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-stop-a-domain[To Stop a Domain].
+If needed, see xref:administering-domains.adoc#to-stop-a-domain[To Stop a Domain].
 . Delete the domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-domain.adoc[`delete-domain`] subcommand.
 
 [#example-to-delete-a-domain]
@@ -701,9 +701,9 @@ full backups and configuration-only backups. Automatic backup configurations are
 . Ensure that the domain is stopped. +
 The `restore-domain` subcommand operates only when the domain is stopped. +
 To determine whether the domain is running, use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand, as described in
-xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-list-domains[To List Domains]. +
+xref:administering-domains.adoc#to-list-domains[To List Domains]. +
 To stop the domain, use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`] subcommand
-as described in xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-stop-a-domain[To Stop a Domain].
+as described in xref:administering-domains.adoc#to-stop-a-domain[To Stop a Domain].
 . Restore backup files for a domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/restore-domain.adoc[`restore-domain`] subcommand.
 . Verify that the restore has succeeded.
 . If necessary, notify users that the domain has been restored and is available.
@@ -765,11 +765,11 @@ running applications and catering to clients. The cluster is configured using th
 situation where the first host crashes or is being taken out of service.
 
 NOTE: You must maintain a backup of the DAS from the first host using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/backup-domain.adoc[`backup-domain`] subcommand as described in
-xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-back-up-a-domain[To Back Up a Domain]. You can automatically maintain a
+xref:administering-domains.adoc#to-back-up-a-domain[To Back Up a Domain]. You can automatically maintain a
 backup of the DAS using the automatic backups feature of Payara Server.
 
 NOTE: Payara Server includes `asadmin` subcommands that simplify this procedure. If you are using Payara Server, see
-xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-migrate-the-das[To Migrate the DAS].
+xref:administering-domains.adoc#to-migrate-the-das[To Migrate the DAS].
 
 [#to-migrate-the-das]
 === To Migrate the DAS
@@ -797,7 +797,7 @@ For example:
 asadmin> start-domain domain1
 ----
 . If the domain on `olddashost` was centrally administered, set up centralized administration on `newdashost`. +
-See xref:technical-documentation/payara-server-documentation/high-availability/enabling-centralized-administration-of-server-instances.adoc#enabling-centralized-administration-of-payara-server-instances[Enabling Centralized Administration of Payara Server Instances] in the Payara Server High Availability section for instructions.
+See xref:../high-availability/enabling-centralized-administration-of-server-instances.adoc#enabling-centralized-administration-of-payara-server-instances[Enabling Centralized Administration of Payara Server Instances] in the Payara Server High Availability section for instructions.
 . Verify that instances on other hosts are visible to the new DAS on `newdashost`:
 +
 [source,shell]

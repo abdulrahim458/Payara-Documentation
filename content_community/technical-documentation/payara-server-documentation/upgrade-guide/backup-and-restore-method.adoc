@@ -40,7 +40,7 @@ Command backup-domain executed successfully.
 ----
 
 Read more about the
-xref:technical-documentation/payara-server-documentation/command-reference/backup-domain.adoc[Backup Domain Command]
+xref:../command-reference/backup-domain.adoc[Backup Domain Command]
 
 == Restore a Payara Server Domain
 
@@ -74,7 +74,7 @@ Command restore-domain executed successfully.
 ----
 
 Read more about the
-xref:technical-documentation/payara-server-documentation/command-reference/restore-domain.adoc[Restore Domain Command]
+xref:../command-reference/restore-domain.adoc[Restore Domain Command]
 
 == Restoring an Instance
 Since all data in an instance directory is kept in sync with the DAS, there is no added data (besides logs, caches and some MQ data when a file-based store is used) and an instance can be completely restored simply by making sure there is an empty directory with the name of the instance inside a node folder of the correct name.
@@ -90,7 +90,7 @@ asadmin> start-local-instance --sync=full myInstance
 ----
 
 Read more about the
-xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc[Start Local Instance Command]
+xref:../command-reference/start-local-instance.adoc[Start Local Instance Command]
 
 == Considerations for Openmq
 If OpenMQ (Payara Server’s JMS broker) is being used, the default configuration is to use EMBEDDED mode, meaning that Payara Server will fully manage the JMS broker within the same JVM as the server instance and a file-based store is used for persistent messages.

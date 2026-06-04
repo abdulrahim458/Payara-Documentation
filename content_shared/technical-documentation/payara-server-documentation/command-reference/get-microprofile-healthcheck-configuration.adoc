@@ -20,7 +20,7 @@ The `get-microprofile-healthcheck-configuration` returns the current configurati
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -63,5 +63,5 @@ Command get-microprofile-healthcheck-configuration executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-microprofile-healthcheck-configuration.adoc#set-microprofile-healthcheck-configuration[`set-microprofile-healthcheck-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:set-microprofile-healthcheck-configuration.adoc#set-microprofile-healthcheck-configuration[`set-microprofile-healthcheck-configuration`]

@@ -40,7 +40,7 @@ The `jndi-name` for application-scoped-resources or module-scoped-resources are 
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -78,12 +78,12 @@ Command ping-connection-pool executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-connector-connection-pool.adoc#create-connector-connection-pool[`create-connector-connection-pool`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-connector-connection-pool.adoc#delete-connector-connection-pool[`delete-connector-connection-pool`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-jdbc-connection-pool.adoc#delete-jdbc-connection-pool[`delete-jdbc-connection-pool`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-connector-connection-pools.adoc#list-connector-connection-pools[`list-connector-connection-pools`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-connection-pools.adoc#list-jdbc-connection-pools[`list-jdbc-connection-pools`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-connector-connection-pool.adoc#create-connector-connection-pool[`create-connector-connection-pool`],
+* xref:create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`],
+* xref:delete-connector-connection-pool.adoc#delete-connector-connection-pool[`delete-connector-connection-pool`],
+* xref:delete-jdbc-connection-pool.adoc#delete-jdbc-connection-pool[`delete-jdbc-connection-pool`],
+* xref:list-connector-connection-pools.adoc#list-connector-connection-pools[`list-connector-connection-pools`],
+* xref:list-jdbc-connection-pools.adoc#list-jdbc-connection-pools[`list-jdbc-connection-pools`]
 
 

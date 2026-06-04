@@ -23,7 +23,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -54,8 +54,8 @@ This subcommand is supported in remote mode only.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-protocol-finder.adoc#create-protocol-finder[`create-protocol-finder`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-protocol-finder.adoc#delete-protocol-finder[`delete-protocol-finder`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-protocol-finder.adoc#create-protocol-finder[`create-protocol-finder`],
+* xref:delete-protocol-finder.adoc#delete-protocol-finder[`delete-protocol-finder`]
 
 

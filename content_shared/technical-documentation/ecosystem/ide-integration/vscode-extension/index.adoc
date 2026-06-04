@@ -21,7 +21,7 @@ IMPORTANT: If you are using Maven or Gradle as the build tool in your project, t
 [#vscode-tools]
 == Payara Platform Tools
 
-* xref:technical-documentation/ecosystem/ide-integration/vscode-extension/payara-server.adoc[Payara Server] - The Payara VS Code extension enables developers to easily configure Payara Server and manage applications from Visual Studio Code.
+* xref:payara-server.adoc[Payara Server] - The Payara VS Code extension enables developers to easily configure Payara Server and manage applications from Visual Studio Code.
 
 
-* xref:technical-documentation/ecosystem/ide-integration/vscode-extension/payara-micro.adoc[Payara Micro] - The Payara VS Code extension provides first-class support to create and run Payara Micro maven web applications from VS Code. Payara Micro is the microservices-ready version of the Payara Server.
+* xref:payara-micro.adoc[Payara Micro] - The Payara VS Code extension provides first-class support to create and run Payara Micro maven web applications from VS Code. Payara Micro is the microservices-ready version of the Payara Server.

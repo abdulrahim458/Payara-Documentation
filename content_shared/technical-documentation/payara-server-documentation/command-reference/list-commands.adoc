@@ -28,7 +28,7 @@ This subcommand is supported in local mode and remote mode.
 
 *asadmin-options*:
   Options for the `asadmin` utility. For information about these
-  options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -181,6 +181,6 @@ delete-admin-object                     list-logger-levels
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-containers.adoc#list-containers[`list-containers`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-modules.adoc#list-modules[`list-modules`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:list-containers.adoc#list-containers[`list-containers`],
+* xref:list-modules.adoc#list-modules[`list-modules`]

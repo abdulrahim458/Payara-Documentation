@@ -24,7 +24,7 @@ node-name
 
 The `update-node-docker` subcommand updates the configuration data of a DOCKER node. The domain administration server (DAS) contacts a Docker node's host through the Docker engine's REST API on its specific configured host and port. By default, the subcommand fails and the node is not created if the DAS cannot reach the configured Docker engine's process.
 
-The setup of a Docker node is more involved that other types of nodes, so it is recommended reading about the requirements and conditions for this command to work properly in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#creating-a-docker-node[corresponding section] in Payara Server's High Availability section.
+The setup of a Docker node is more involved that other types of nodes, so it is recommended reading about the requirements and conditions for this command to work properly in xref:../high-availability/administering-payara-server-nodes.adoc#creating-a-docker-node[corresponding section] in Payara Server's High Availability section.
 
 This subcommand is supported in remote mode only.
 
@@ -32,7 +32,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -90,7 +90,7 @@ error in executing the command
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-docker.adoc#create-node-docker[`create-node-docker`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-docker.adoc#delete-node-docker[`delete-node-docker`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-node-docker.adoc#create-node-docker[`create-node-docker`],
+* xref:delete-node-docker.adoc#delete-node-docker[`delete-node-docker`],
+* xref:list-nodes.adoc#list-nodes[`list-nodes`]

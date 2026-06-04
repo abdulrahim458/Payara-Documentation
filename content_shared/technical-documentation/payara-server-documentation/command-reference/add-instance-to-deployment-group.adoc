@@ -17,7 +17,7 @@ asadmin [asadmin-options] add-instance-to-deployment-group [--help]
 
 The `add-instance-to-deployment-group` subcommand will add the referenced instance to the referenced deployment group.
 
-This command will only work with standalone instances (see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#types-of-payara-server-instances[here] for more information).
+This command will only work with standalone instances (see xref:../high-availability/administering-payara-server-instances.adoc#types-of-payara-server-instances[here] for more information).
 
 This subcommand is supported in remote mode only.
 
@@ -25,7 +25,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -61,8 +61,8 @@ error in executing the command
 
 See Also
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-deployment-group.adoc#create-deployment-group[`create-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-deployment-group.adoc#delete-deployment-group[`delete-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`]
-* xref:technical-documentation/payara-server-documentation/command-reference/remove-instance-from-deployment-group.adoc#remove-instance-from-deployment-group[`remove-instance-from-deployment-group`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-deployment-group.adoc#create-deployment-group[`create-deployment-group`],
+* xref:delete-deployment-group.adoc#delete-deployment-group[`delete-deployment-group`],
+* xref:list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`]
+* xref:remove-instance-from-deployment-group.adoc#remove-instance-from-deployment-group[`remove-instance-from-deployment-group`]

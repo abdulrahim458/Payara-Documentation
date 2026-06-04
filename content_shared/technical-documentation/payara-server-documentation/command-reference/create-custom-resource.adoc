@@ -26,7 +26,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -89,9 +89,9 @@ Command create-custom-resource executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-custom-resource.adoc#delete-custom-resource[`delete-custom-resource`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-custom-resources.adoc#list-custom-resources[`list-custom-resources`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-resource-ref.adoc#create-resource-ref[`create-resource-ref`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:delete-custom-resource.adoc#delete-custom-resource[`delete-custom-resource`],
+* xref:list-custom-resources.adoc#list-custom-resources[`list-custom-resources`],
+* xref:create-resource-ref.adoc#create-resource-ref[`create-resource-ref`]
 
 

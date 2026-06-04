@@ -22,7 +22,7 @@ The `uninstall-node` subcommand uninstalls Payara Server software from the hosts
 subcommand requires secure shell (SSH) to be configured on the host where the subcommand is run and on each host where the Payara Server
 software is being uninstalled.
 
-NOTE: This subcommand is equivalent to the xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`]
+NOTE: This subcommand is equivalent to the xref:uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`]
 subcommand.
 
 By default, if any node except the predefined node `localhost-`domain resides on any host from which Payara Server software is being
@@ -46,7 +46,7 @@ This subcommand is supported in local mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -136,9 +136,9 @@ Command uninstall-node executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:install-node.adoc#install-node[`install-node`],
+* xref:install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
+* xref:uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`]
 
 

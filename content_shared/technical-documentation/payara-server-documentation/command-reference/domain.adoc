@@ -10,4 +10,4 @@ A domain provides a common authentication and administration point for a collect
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
+xref:asadmin.adoc#asadmin-1m[`asadmin`]

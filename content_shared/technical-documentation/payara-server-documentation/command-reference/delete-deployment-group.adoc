@@ -22,7 +22,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -57,16 +57,16 @@ error in executing the command
 
 See Also
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-deployment-group.adoc#create-deployment-group[`create-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-application-ref.adoc#delete-application-ref[`delete-application-ref`],
-* xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-deployment-group.adoc#start-deployment-group[`start-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-deployment-group.adoc#stop-deployment-group[`stop-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-deployment-group.adoc#restart-deployment-group[`restart-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/add-instance-to-deployment-group.adoc#add-instance-to-deployment-group[`add-instance-to-deployment-group`]
-* xref:technical-documentation/payara-server-documentation/command-reference/remove-instance-from-deployment-group.adoc#remove-instance-from-deployment-group[`remove-instance-from-deployment-group`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-deployment-group.adoc#create-deployment-group[`create-deployment-group`],
+* xref:create-instance.adoc#create-instance[`delete-instance`],
+* xref:delete-instance.adoc#delete-instance[`delete-instance`],
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
+* xref:delete-application-ref.adoc#delete-application-ref[`delete-application-ref`],
+* xref:deploy.adoc#deploy[`deploy`],
+* xref:list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`],
+* xref:start-deployment-group.adoc#start-deployment-group[`start-deployment-group`],
+* xref:stop-deployment-group.adoc#stop-deployment-group[`stop-deployment-group`],
+* xref:restart-deployment-group.adoc#restart-deployment-group[`restart-deployment-group`],
+* xref:add-instance-to-deployment-group.adoc#add-instance-to-deployment-group[`add-instance-to-deployment-group`]
+* xref:remove-instance-from-deployment-group.adoc#remove-instance-from-deployment-group[`remove-instance-from-deployment-group`]

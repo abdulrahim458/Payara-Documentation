@@ -306,7 +306,7 @@ This example should showcase the following steps:
 
 * Enable session-scoped OpenID Connect configuration
 * Resolve the tenant name from an HTTP request query parameter
-* Use the tenant name to read the configuration value from the respective xref:technical-documentation/microprofile/config/index.adoc[MicroProfile Config] property
+* Use the tenant name to read the configuration value from the respective xref:../microprofile/config/index.adoc[MicroProfile Config] property
 * Retrieve the value from an EL expression defined in the `@OpenIdAuthenticationDefinition` annotation
 
 TIP: The tenant can also be resolved from a cookie, which is set the first time a user loads the application; from the domain name in the URL (if different tenants use a different domain name to access the same application); from a path prefix that follows the context root and prepends all application URLs (e.g. `contextroot/tenant1/index.xhtml`, `contextroot/tenant2/index.xhtml`).
@@ -537,7 +537,7 @@ When these values, which correspond to lists (e.g. `scopesSupported`, `responseT
 [#secret-alias]
 == Client Secret Aliasing
 
-The client secret can be input directly, or for added security it can be aliased using xref:technical-documentation/microprofile/config/index.adoc[Microprofile Config]
+The client secret can be input directly, or for added security it can be aliased using xref:../microprofile/config/index.adoc[Microprofile Config]
 
 NOTE: Environment Variables and System Properties can be used indirectly through MicroProfile Config.
 
@@ -881,4 +881,4 @@ public class SecurityBean {
 * http://openid.net/specs/openid-connect-core-1_0.html[OpenID Connect Core^]
 * https://www.keycloak.org/documentation.html[KeyCloak Documentation^]
 * https://jakarta.ee/specifications/security/[Jakarta Security API^]
-* xref:technical-documentation/microprofile/jwt.adoc[MicroProfile JWT Authentication API]
+* xref:../microprofile/jwt.adoc[MicroProfile JWT Authentication API]

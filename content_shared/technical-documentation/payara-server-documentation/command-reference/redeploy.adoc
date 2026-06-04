@@ -48,7 +48,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -66,7 +66,7 @@ This subcommand is supported in remote mode only.
   Name of the deployable component. +
   The name can include an optional version identifier, which follows the name and is separated from the name by a colon (`:`). The version
   identifier must begin with a letter or number. It can contain alphanumeric characters plus underscore (`_`), dash (`-`), and period
-  (`.`) characters. For more information about module and application versions, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#module-and-application-versions[Module and Application Versions] in
+  (`.`) characters. For more information about module and application versions, see xref:../application-deployment/index.adoc#module-and-application-versions[Module and Application Versions] in
   Payara Server Application Deployment section.
 *`--upload`*:
   Specifies whether the subcommand uploads the file to the DAS. In most situations, this option can be omitted. +
@@ -219,7 +219,7 @@ This subcommand is supported in remote mode only.
   (Web Application Bundle) at the time of deployment. The subcommand looks for a key named `UriScheme` and, if present, uses the key as a
   URL stream handler to decorate the input stream. Other properties are used in the decoration process. For example, the Payara Server
   OSGi web container registers a URL stream handler named `webbundle`, which is used to wrap a plain WAR file as a WAB. For more information
-  about usage, see the related example in the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`] help page.
+  about usage, see the related example in the xref:deploy.adoc#deploy[`deploy`] help page.
 
 [#operands]
 == Operands
@@ -274,7 +274,7 @@ Command redeploy executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get.adoc#get[`get`],
-* xref:technical-documentation/payara-server-documentation/command-reference/undeploy.adoc#undeploy[`undeploy`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:deploy.adoc#deploy[`deploy`],
+* xref:get.adoc#get[`get`],
+* xref:undeploy.adoc#undeploy[`undeploy`]

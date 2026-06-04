@@ -19,7 +19,7 @@ The `get-asadmin-recorder-configuration` command is used to retrieve the current
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -49,11 +49,11 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-asadmin-recorder-configuration.adoc#set-asadmin-recorder-configuration[`set-asadmin-recorder-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-asadmin-recorder.adoc#enable-asadmin-recorder[`enable-asadmin-recorder`],
-* xref:technical-documentation/payara-server-documentation/command-reference/disable-asadmin-recorder.adoc#disable-asadmin-recorder[`disable-asadmin-recorder`],
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin-recorder-enabled.adoc#asadmin-recorder-enabled[`asadmin-recorder-enabled`],
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:set-asadmin-recorder-configuration.adoc#set-asadmin-recorder-configuration[`set-asadmin-recorder-configuration`],
+* xref:enable-asadmin-recorder.adoc#enable-asadmin-recorder[`enable-asadmin-recorder`],
+* xref:disable-asadmin-recorder.adoc#disable-asadmin-recorder[`disable-asadmin-recorder`],
+* xref:asadmin-recorder-enabled.adoc#asadmin-recorder-enabled[`asadmin-recorder-enabled`],
 
 
 

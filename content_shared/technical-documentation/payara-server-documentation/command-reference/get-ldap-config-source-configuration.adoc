@@ -19,7 +19,7 @@ The `get-ldap-config-source-configuration` gets the current configuration settin
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -58,6 +58,6 @@ true        ldap://ldap.forumsys.com:389    simple          false               
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-ldap-config-source-configuration.adoc#set-ldap-config-source-configuration[`set-ldap-config-source-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:set-ldap-config-source-configuration.adoc#set-ldap-config-source-configuration[`set-ldap-config-source-configuration`]
 

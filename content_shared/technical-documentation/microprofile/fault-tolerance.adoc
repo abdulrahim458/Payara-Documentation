@@ -68,9 +68,9 @@ image:microprofile/fault-tolerance.png[alt="Set Fault Tolerance Configuration",w
 
 Use the following commands to modify the configuration settings of the MicroProfile Fault Tolerance service:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/set-fault-tolerance-configuration.adoc#set-fault-tolerance-configuration[`set-fault-tolerance-configuration`]
+* xref:../payara-server-documentation/command-reference/set-fault-tolerance-configuration.adoc#set-fault-tolerance-configuration[`set-fault-tolerance-configuration`]
 
-* xref:technical-documentation/payara-server-documentation/command-reference/get-fault-tolerance-configuration.adoc#get-fault-tolerance-configuration[`get-fault-tolerance-configuration`]
+* xref:../payara-server-documentation/command-reference/get-fault-tolerance-configuration.adoc#get-fault-tolerance-configuration[`get-fault-tolerance-configuration`]
 
 [#microprofile-upgrade]
 == Upgrading from Eclipse Microprofile 3.x to 4.x

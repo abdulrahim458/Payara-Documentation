@@ -21,7 +21,7 @@ NOTE: SSH is not required if the instance resides on a node of type `CONFIG` tha
 You may run this subcommand from any machine that can contact the DAS.
 
 The subcommand can restart any Payara Server instance, regardless of how the instance was created. For example, this subcommand can restart an instance that was created by using the
-xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc#create-local-instance[`create-local-instance`] subcommand.
+xref:create-local-instance.adoc#create-local-instance[`create-local-instance`] subcommand.
 
 When this subcommand restarts an instance, the DAS synchronizes the instance with changes since the last synchronization as follows:
 
@@ -31,8 +31,8 @@ If a file below a top level subdirectory is changed without a change to a file i
 
 If different synchronization behavior is required, the instance must be stopped and restarted by using following sequence of subcommands:
 
-. xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc#stop-instance[`stop-instance`]
-. xref:technical-documentation/payara-server-documentation/command-reference/start-instance.adoc#start-instance[`start-instance`]
+. xref:stop-instance.adoc#stop-instance[`stop-instance`]
+. xref:start-instance.adoc#start-instance[`start-instance`]
 
 This subcommand is supported in remote mode only.
 
@@ -40,7 +40,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.

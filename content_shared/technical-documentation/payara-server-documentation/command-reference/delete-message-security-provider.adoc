@@ -33,7 +33,7 @@ This command is supported in remote mode only.
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -79,8 +79,8 @@ asadmin> delete-message-security-provider
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-message-security-provider.adoc#create-message-security-provider[`create-message-security-provider`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-message-security-providers.adoc#list-message-security-providers[`list-message-security-providers`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-message-security-provider.adoc#create-message-security-provider[`create-message-security-provider`],
+* xref:list-message-security-providers.adoc#list-message-security-providers[`list-message-security-providers`]
 
 

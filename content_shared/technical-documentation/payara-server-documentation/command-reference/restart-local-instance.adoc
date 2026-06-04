@@ -19,7 +19,7 @@ asadmin [asadmin-options] restart-local-instance [--help]
 
 The `restart-local-instance` subcommand restarts a Payara Server instance on the host where the subcommand is run. This subcommand does not require secure shell (SSH) to be configured. You must run this command from the host where the instance resides.
 
-The subcommand can restart any Payara Server instance, regardless of how the instance was created. For example, this subcommand can restart an instance that was created by using the xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`] subcommand.
+The subcommand can restart any Payara Server instance, regardless of how the instance was created. For example, this subcommand can restart an instance that was created by using the xref:create-instance.adoc#create-instance[`create-instance`] subcommand.
 
 The `restart-local-instance` subcommand does not contact the domain administration server (DAS) to determine the node on which the instance resides. To determine the node on which the instance resides, the subcommand searches the directory that contains the node directories. If multiple node directories exist, the node must be specified as an option of the subcommand.
 
@@ -31,8 +31,8 @@ If a file below a top level subdirectory is changed without a change to a file i
 
 If different synchronization behavior is required, the instance must be stopped and restarted by using following sequence of subcommands:
 
-. xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc#stop-local-instance[`stop-local-instance`]
-. xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc#start-local-instance[`start-local-instance`]
+. xref:stop-local-instance.adoc#stop-local-instance[`stop-local-instance`]
+. xref:start-local-instance.adoc#start-local-instance[`start-local-instance`]
 
 This subcommand is supported in local mode. However, to synchronize the instance with the DAS, this subcommand must be run in remote mode.
 
@@ -40,7 +40,7 @@ This subcommand is supported in local mode. However, to synchronize the instance
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -101,17 +101,17 @@ Command restart-local-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
 
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc#create-local-instance[`create-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-instance.adoc#restart-instance[`restart-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-instance.adoc#start-instance[`start-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc#start-local-instance[`start-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc#stop-instance[`stop-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc#stop-local-instance[`stop-local-instance`]
+* xref:create-instance.adoc#create-instance[`create-instance`],
+* xref:create-local-instance.adoc#create-local-instance[`create-local-instance`],
+* xref:delete-instance.adoc#delete-instance[`delete-instance`],
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
+* xref:restart-instance.adoc#restart-instance[`restart-instance`],
+* xref:start-instance.adoc#start-instance[`start-instance`],
+* xref:start-local-instance.adoc#start-local-instance[`start-local-instance`],
+* xref:stop-instance.adoc#stop-instance[`stop-instance`],
+* xref:stop-local-instance.adoc#stop-local-instance[`stop-local-instance`]
 * http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html[Java Platform Debugger Architecture (JPDA)^] (http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html)
 
 

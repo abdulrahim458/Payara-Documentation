@@ -20,7 +20,7 @@ This command can be used to retrieves the current settings of the JMS notifier i
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -57,5 +57,5 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-jms-notifier-configuration.adoc#set-jms-notifier-configuration[`set-jms-notifier-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:set-jms-notifier-configuration.adoc#set-jms-notifier-configuration[`set-jms-notifier-configuration`]

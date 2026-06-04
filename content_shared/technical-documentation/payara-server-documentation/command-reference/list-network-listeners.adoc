@@ -22,7 +22,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -67,9 +67,9 @@ Command list-network-listeners executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc#create-network-listener[`create-network-listener`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-network-listener-configuration.adoc#set-network-listener-configuration[`set-network-listener-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-network-listener.adoc#delete-network-listener[`delete-network-listener`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-network-listener.adoc#create-network-listener[`create-network-listener`],
+* xref:set-network-listener-configuration.adoc#set-network-listener-configuration[`set-network-listener-configuration`],
+* xref:delete-network-listener.adoc#delete-network-listener[`delete-network-listener`]
 
 

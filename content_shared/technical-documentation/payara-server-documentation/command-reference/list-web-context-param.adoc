@@ -22,7 +22,7 @@ The `list-web-context-param` subcommand lists the servlet context-initialization
 The application must already be deployed. Otherwise, an error occurs.
 
 The `list-web-context-param` subcommand lists only parameters that have previously been set by using the
-xref:technical-documentation/payara-server-documentation/command-reference/set-web-context-param.adoc#set-web-context-param[`set-web-context-param`] subcommand. The subcommand does not list parameters that are set only in
+xref:set-web-context-param.adoc#set-web-context-param[`set-web-context-param`] subcommand. The subcommand does not list parameters that are set only in
 the application's deployment descriptor.
 
 For each parameter, the following information is displayed:
@@ -36,7 +36,7 @@ For each parameter, the following information is displayed:
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -49,7 +49,7 @@ For each parameter, the following information is displayed:
 
 *application-name*:
   The name of the application. This name can be obtained from the Administration Console or by using the
-  xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`] subcommand. +
+  xref:list-applications.adoc#list-applications[`list-applications`] subcommand. +
   The application must already be deployed. Otherwise, an error occurs.
 *module*:
   The relative path to the module within the application's enterprise archive (EAR) file. The path to the module is specified in the
@@ -96,9 +96,9 @@ Command list-web-context-param executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-web-context-param.adoc#set-web-context-param[`set-web-context-param`],
-* xref:technical-documentation/payara-server-documentation/command-reference/unset-web-context-param.adoc#unset-web-context-param[`unset-web-context-param`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:list-applications.adoc#list-applications[`list-applications`],
+* xref:set-web-context-param.adoc#set-web-context-param[`set-web-context-param`],
+* xref:unset-web-context-param.adoc#unset-web-context-param[`unset-web-context-param`]
 
 

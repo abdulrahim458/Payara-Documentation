@@ -80,6 +80,6 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/security-guide/ssl-certificate-management.adoc[SSL Certificate Management],
-* xref:technical-documentation/payara-server-documentation/command-reference/remove-from-keystore.adoc[`remove-from-keystore`],
-* xref:technical-documentation/payara-server-documentation/command-reference/remove-from-truststore.adoc[`remove-from-truststore`]
+* xref:../security-guide/ssl-certificate-management.adoc[SSL Certificate Management],
+* xref:remove-from-keystore.adoc[`remove-from-keystore`],
+* xref:remove-from-truststore.adoc[`remove-from-truststore`]

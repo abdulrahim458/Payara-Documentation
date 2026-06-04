@@ -50,8 +50,8 @@ an application, for example in the _web.xml_ standard deployment descriptor:
 [#see-also]
 == See Also
 
-* xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/database-management/slow-sql-logger.adoc[Slow SQL Logging in Payara Micro]
-* xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/database-management/log-jdbc-calls.adoc[JDBC Call Logging in Payara Micro]
-* xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#sql-management-overview[SQL in Payara Server]
+* xref:slow-sql-logger.adoc[Slow SQL Logging in Payara Micro]
+* xref:log-jdbc-calls.adoc[JDBC Call Logging in Payara Micro]
+* xref:../../../payara-server-documentation/general-administration/administering-database-connectivity.adoc#sql-management-overview[SQL in Payara Server]
 
 

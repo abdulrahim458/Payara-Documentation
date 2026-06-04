@@ -5,7 +5,7 @@ This chapter provides information and procedures on configuring the message laye
 
 NOTE: Message security is supported only in the Full Profile of Payara Server, not in the Web Profile.
 
-Materials in this chapter assumes a basic understanding of security and web services concepts. For more information about security, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#about-system-security-in-payara-server[About System Security in Payara Server].
+Materials in this chapter assumes a basic understanding of security and web services concepts. For more information about security, see xref:administering-system-security.adoc#about-system-security-in-payara-server[About System Security in Payara Server].
 
 [#about-message-security-in-payara-server]
 == About Message Security in Payara Server
@@ -14,7 +14,7 @@ Message security enables a server to perform end-to-end authentication of web se
 
 SOAP Web services deployed on Payara Server are secured by binding SOAP layer message security providers and message protection policies to the containers in which the applications are deployed, or to web service endpoints served by the applications. SOAP layer message security functionality is configured in the client-side containers of Payara Server by binding SOAP layer message security providers and message protection policies to the client containers or to the portable service references declared by client applications.
 
-Message-level security can be configured for the entire Payara Server or for specific applications or methods. Configuring message security at the application level is discussed in the xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc[Application Development section].
+Message-level security can be configured for the entire Payara Server or for specific applications or methods. Configuring message security at the application level is discussed in the xref:../application-deployment/index.adoc[Application Development section].
 
 [#security-tokens-and-security-mechanisms]
 === Security Tokens and Security Mechanisms
@@ -69,7 +69,7 @@ Message protection policies are defined for request message processing and respo
 
 Request and response message protection policies are defined when a security provider is configured into a container. Application-specific message protection policies (at the granularity of the web service port or operation) can also be configured within the Payara Server deployment descriptors of the application or application client. In any situation where message protection policies are defined, the request and response message protection policies of the client must be equivalent t) the request and response message protection policies of the server.
 
-For more information about defining application-specific message protection policies, see "xref:technical-documentation/application-development/securing-applications.adoc#securing-applications[Securing Applications]" in the Application Development section.
+For more information about defining application-specific message protection policies, see "xref:../../application-development/securing-applications.adoc#securing-applications[Securing Applications]" in the Application Development section.
 
 [#application-specific-web-services-security]
 === Application-Specific Web Services Security
@@ -77,7 +77,7 @@ For more information about defining application-specific message protection poli
 Application-specific web services security functionality is configured (at application assembly) by defining the `message-security-binding` elements in the Payara Server deployment descriptors of the application. These `message-security-binding` elements are used to associate a specific security provider or message protection policy with a web service endpoint or service reference, and might be qualified so that they apply to a specific port or method of the corresponding endpoint or referenced service.
 
 For information about defining application-specific message protection
-policies, see "xref:technical-documentation/application-development/securing-applications.adoc#securing-applications[Securing Applications]" in the Application Development section.
+policies, see "xref:../../application-development/securing-applications.adoc#securing-applications[Securing Applications]" in the Application Development section.
 
 [#message-security-administration]
 === Message Security Administration
@@ -92,7 +92,7 @@ Payara Server administrative interfaces can be used as follows:
 * To bind the existing providers for use by the server-side containers of Payara Server
 * To create new security provider configurations with alternative message protection policies
 
-Analogous administrative operations can be performed on the SOAP message layer security configuration of the application client container. If you want web services security to protect all web services applications deployed on Payara Server, see xref:technical-documentation/payara-server-documentation/security-guide/administering-message-security.adoc#enabling-message-security-for-application-clients[Enabling Message Security for Application Clients].
+Analogous administrative operations can be performed on the SOAP message layer security configuration of the application client container. If you want web services security to protect all web services applications deployed on Payara Server, see xref:administering-message-security.adoc#enabling-message-security-for-application-clients[Enabling Message Security for Application Clients].
 
 [#message-security-tasks]
 ==== Message Security Tasks
@@ -155,7 +155,7 @@ By default, message security is disabled on Payara Server. Default message secur
 
 To enable message security for web services endpoints deployed in Payara Server, you must specify a security provider to be used by default on the server side. If you enable a default provider for message security, you also need to enable providers to be used by clients of the web services deployed in Payara Server.
 
-. Specify the default server provider by using the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`] subcommand.
+. Specify the default server provider by using the xref:../command-reference/set.adoc#set[`set`] subcommand.
 +
 Use the following syntax:
 +
@@ -171,7 +171,7 @@ asadmin set --port admin-port server-config.security-service.message-security-co
 
 To enable message security for web service invocations originating from deployed endpoints, you must specify a default client provider. If you enabled a default client provider for Payara Server, you must ensure that any services invoked from endpoints deployed in Payara Server are compatibly configured for message layer security.
 
-. Specify the default client provider by using the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`] subcommand.
+. Specify the default client provider by using the xref:../command-reference/set.adoc#set[`set`] subcommand.
 +
 Use the following syntax:
 +
@@ -262,9 +262,9 @@ The `xenc:EncryptedKey` contains the key used to encrypt the SOAP message body. 
 
 Typically, you would not reconfigure a provider. However, if needed for your situation, you can modify a provider's message protection policies  by changing provider type, implementation class, and provider-specific configuration properties. To understand the results of different  combinations, see the table in the above section.
 
-Use the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand to set the response policy, then replace the word `request` in the following commands with the word `response`.
+Use the xref:../command-reference/set.adoc[`set`] subcommand to set the response policy, then replace the word `request` in the following commands with the word `response`.
 
-. Add a request policy to the client and set the authentication source by using the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`] subcommand.
+. Add a request policy to the client and set the authentication source by using the xref:../command-reference/set.adoc#set[`set`] subcommand.
 +
 For example:
 +
@@ -309,7 +309,7 @@ Policies are expressed in message sender order such that a requirement that encr
 
 To achieve message security, the request and response policies must be enabled on both the server and client. When configuring the policies on the client and server, make sure that the client policy matches the server policy for request/response protection at application-level message binding.
 
-To set the request policy for the application client configuration, modify the Payara Server-specific configuration for the application client container as described in xref:technical-documentation/payara-server-documentation/security-guide/administering-message-security.adoc#enabling-message-security-for-application-clients[Enabling Message Security for Application Clients].
+To set the request policy for the application client configuration, modify the Payara Server-specific configuration for the application client container as described in xref:administering-message-security.adoc#enabling-message-security-for-application-clients[Enabling Message Security for Application Clients].
 
 [#message-security-policy-example]
 ==== Message Security Policy Setting Example
@@ -333,7 +333,7 @@ NOTE: Additional code in the snippet is provided as illustration and might diffe
 </client-container>
 ----
 
-Valid values for `auth-source` include `sender` and `content`. Valid values for `auth-recipient` include `before-content` and `after-content`. A table describing the results of various combinations of these values can be found in xref:technical-documentation/payara-server-documentation/security-guide/administering-message-security.adoc#configuring-message-protection-policies[Configuring Message Protection Policies].
+Valid values for `auth-source` include `sender` and `content`. Valid values for `auth-recipient` include `before-content` and `after-content`. A table describing the results of various combinations of these values can be found in xref:administering-message-security.adoc#configuring-message-protection-policies[Configuring Message Protection Policies].
 
 To not specify a request or response policy, leave the element with no content:
 
@@ -351,7 +351,7 @@ To not specify a request or response policy, leave the element with no content:
 Use the `create-message-security-provider` subcommand in remote mode to create a new message provider for the security service. If the message layer does not exist, the message layer is created, and the provider is created under it.
 
 . Ensure that the server is running.
-. Create the message security provider by using the xref:technical-documentation/payara-server-documentation/command-reference/create-message-security-provider.adoc#create-message-security-provider[`create-message-security-provider`] subcommand.
+. Create the message security provider by using the xref:../command-reference/create-message-security-provider.adoc#create-message-security-provider[`create-message-security-provider`] subcommand.
 . If needed, restart the server, as some properties require server restart.
 
 This example creates the new message security provider name `mySecurityProvider`:
@@ -369,7 +369,7 @@ Command create-message-security-provider executed successfully.
 Use the `list-message-security-providers` subcommand in remote mode to list the message providers for the security layer.
 
 . Ensure that the server is running.
-. List the message security providers by using the xref:technical-documentation/payara-server-documentation/command-reference/list-message-security-providers.adoc#list-message-security-providers[`list-message-security-providers`] subcommand.
+. List the message security providers by using the xref:../command-reference/list-message-security-providers.adoc#list-message-security-providers[`list-message-security-providers`] subcommand.
 
 This example lists the message security providers for a message layer.
 
@@ -389,8 +389,8 @@ Command list-message-security-providers executed successfully.
 === To Update a Message Security Provider
 
 . Ensure that the server is running.
-. List the message security providers by using the xref:technical-documentation/payara-server-documentation/command-reference/list-message-security-providers.adoc#list-message-security-providers[`list-message-security-providers`] subcommand.
-. Modify the values for the specified message security provider by using the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand.
+. List the message security providers by using the xref:../command-reference/list-message-security-providers.adoc#list-message-security-providers[`list-message-security-providers`] subcommand.
+. Modify the values for the specified message security provider by using the xref:../command-reference/set.adoc[`set`] subcommand.
 +
 The message security provider is identified by its *dotted name*.
 
@@ -400,8 +400,8 @@ The message security provider is identified by its *dotted name*.
 Use the `delete-message-security-provider` subcommand in remote mode to remove a message security provider.
 
 . Ensure that the server is running.
-. List the message security providers by using the xref:technical-documentation/payara-server-documentation/command-reference/list-message-security-providers.adoc[`list-message-security-providers`] subcommand.
-. Delete the message security provider by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-message-security-provider.adoc#delete-message-security-provider[`delete-message-security-provider`] subcommand.
+. List the message security providers by using the xref:../command-reference/list-message-security-providers.adoc[`list-message-security-providers`] subcommand.
+. Delete the message security provider by using the xref:../command-reference/delete-message-security-provider.adoc#delete-message-security-provider[`delete-message-security-provider`] subcommand.
 
 
 This example deletes the `myServerityProvider` message security provider.
@@ -419,7 +419,7 @@ Command delete-message-security-provider executed successfully.
 You can configure a Jakarta Authentication Server Authentication Module (SAM) as an HTTP Servlet-layer message security provider, either through the Administration Console or with the `create-message-security-provider` subcommand.
 
 . Ensure that the server is running.
-. Create the message security provider by using the xref:technical-documentation/payara-server-documentation/command-reference/create-message-security-provider.adoc#create-message-security-provider[`create-message-security-provider`] subcommand.
+. Create the message security provider by using the xref:../command-reference/create-message-security-provider.adoc#create-message-security-provider[`create-message-security-provider`] subcommand.
 . Bind the message security provider for use with your application.
 +
 You do this by defining the `httpservlet-security-provider` attribute in the `glassfish-web.xml` (deprecated) or `payara-web.xml` deployment descriptor corresponding to your application.
@@ -469,4 +469,4 @@ Command list-message-security-providers executed successfully.
 
 The message protection policies of client providers must be configured such that they are equivalent to the message protection policies of the server-side providers they will be interacting with. This is already the situation for the providers configured (but not enabled) when Payara Server is installed or a new domain is created.
 
-To enable message security for client applications, modify the Payara Server specific configuration for the application client container. The process is analogous to the process in xref:technical-documentation/payara-server-documentation/security-guide/administering-message-security.adoc#configuring-message-protection-policies[Configuring Message Protection Policies].
+To enable message security for client applications, modify the Payara Server specific configuration for the application client container. The process is analogous to the process in xref:administering-message-security.adoc#configuring-message-protection-policies[Configuring Message Protection Policies].

@@ -22,7 +22,7 @@ You must specify either the `--alias` option, or the DN.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -65,7 +65,7 @@ Command disable-secure-admin-principal executed successfully.
 *See Also*
 
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-secure-admin.adoc#enable-secure-admin[`enable-secure-admin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-secure-admin-principal.adoc#enable-secure-admin-principal[`enable-secure-admin-principal`]
+* xref:enable-secure-admin.adoc#enable-secure-admin[`enable-secure-admin`],
+* xref:enable-secure-admin-principal.adoc#enable-secure-admin-principal[`enable-secure-admin-principal`]
 
 

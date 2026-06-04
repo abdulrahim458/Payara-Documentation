@@ -32,7 +32,7 @@ information about each node is displayed:
 * The path to the parent of the base installation directory of Payara Server on the host that the node represents
 * A comma-separated list of the names of the Payara Server instances that reside on the node
 
-If the `--terse` option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] utility is `true` and the
+If the `--terse` option of the xref:asadmin.adoc#asadmin-1m[`asadmin`] utility is `true` and the
 `--long` option of the subcommand is `false`, the subcommand lists only the name of each node.
 
 This subcommand is supported in remote mode only.
@@ -41,7 +41,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -109,11 +109,11 @@ Command list-nodes executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc#create-node-config[`create-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc#list-nodes-config[`list-nodes-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-ssh.adoc#list-nodes-ssh[`list-nodes-ssh`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-node-config.adoc#create-node-config[`create-node-config`],
+* xref:create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
+* xref:delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
+* xref:list-nodes-config.adoc#list-nodes-config[`list-nodes-config`],
+* xref:list-nodes-ssh.adoc#list-nodes-ssh[`list-nodes-ssh`]
 
 

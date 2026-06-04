@@ -23,7 +23,7 @@ The `create-iiop-listener` subcommand creates an IIOP listener. This subcommand 
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -100,9 +100,9 @@ Command create-iiop-listener executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-ssl.adoc#create-ssl[`create-ssl`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-iiop-listener.adoc#delete-iiop-listener[`delete-iiop-listener`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-iiop-listeners.adoc#list-iiop-listeners[`list-iiop-listeners`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-ssl.adoc#create-ssl[`create-ssl`],
+* xref:delete-iiop-listener.adoc#delete-iiop-listener[`delete-iiop-listener`],
+* xref:list-iiop-listeners.adoc#list-iiop-listeners[`list-iiop-listeners`]
 
 

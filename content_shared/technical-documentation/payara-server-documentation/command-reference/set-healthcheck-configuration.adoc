@@ -31,7 +31,7 @@ This command can also be used to configure which notifiers will be used to broad
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -98,7 +98,7 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-healthcheck-service-configuration.adoc[`set-healthcheck-service-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get-healthcheck-configuration.adoc[`get-healthcheck-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-healthcheck-services.adoc[`list-healthcheck-services`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:set-healthcheck-service-configuration.adoc[`set-healthcheck-service-configuration`],
+* xref:get-healthcheck-configuration.adoc[`get-healthcheck-configuration`],
+* xref:list-healthcheck-services.adoc[`list-healthcheck-services`]

@@ -17,7 +17,7 @@ This single command is all you need to run Payara Micro instances; additional co
 [#starting-an-instance-from-rootdir-launcher]
 == Starting an Instance from Persistent Configuration Directory
 
-When using xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/jar-structure-and-configuration/root-directory.adoc[persistent root configuration directory], it is possible to generate a launcher bound to that directory using the command:
+When using xref:../jar-structure-and-configuration/root-directory.adoc[persistent root configuration directory], it is possible to generate a launcher bound to that directory using the command:
 
 [source,shell]
 ----
@@ -36,7 +36,7 @@ This makes configuration directory self-sufficient and the distribution file (`p
 [#starting-an-instance-programmatically]
 == Starting an Instance Programmatically
 
-You need to import two classes from the `fish.payara.micro` package (contained in the Payara Micro JAR, see section xref:technical-documentation/payara-micro-documentation/maven-support.adoc[Maven Support] for instructions on importing this JAR with **Maven**):
+You need to import two classes from the `fish.payara.micro` package (contained in the Payara Micro JAR, see section xref:../../../maven-support.adoc[Maven Support] for instructions on importing this JAR with **Maven**):
 
 [source, java]
 ----
@@ -61,7 +61,7 @@ public class EmbeddedPayara{
 }
 ----
 
-To start an instance with non-default settings (configuration changes or deploying applications upon startup), you have to call the `getInstance()` method before using `bootstrap()`. More details on this can be found in the xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/configuring-an-instance.adoc[Configuring an Instance Programmatically] section. The use of the `getInstance()` method does not exclude you from using the default settings however; calling the `bootstrap()` method on its own (as shown in the example above) is functionally equivalent to calling the `bootstrap()` method directly after the `getInstance()` method, such as in the example below:
+To start an instance with non-default settings (configuration changes or deploying applications upon startup), you have to call the `getInstance()` method before using `bootstrap()`. More details on this can be found in the xref:../configuring-an-instance.adoc[Configuring an Instance Programmatically] section. The use of the `getInstance()` method does not exclude you from using the default settings however; calling the `bootstrap()` method on its own (as shown in the example above) is functionally equivalent to calling the `bootstrap()` method directly after the `getInstance()` method, such as in the example below:
 
 [source, java]
 ----

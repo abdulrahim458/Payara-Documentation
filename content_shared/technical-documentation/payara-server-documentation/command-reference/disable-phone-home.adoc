@@ -40,8 +40,8 @@ error in executing the command
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-phone-home.adoc#enable-phone-home[`enable-phone-home`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-phone-home.adoc#list-phone-home[`list-phone-home`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:enable-phone-home.adoc#enable-phone-home[`enable-phone-home`],
+* xref:list-phone-home.adoc#list-phone-home[`list-phone-home`]
 
 

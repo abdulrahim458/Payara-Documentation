@@ -35,9 +35,9 @@ In the Administration Console, connector, JMS, and JDBC resources are handled di
 In Payara Server, all communication to an EIS, whether to a message provider or an RDBMS, happens through the Connector architecture.
 To provide JMS infrastructure to clients, Payara Server uses the *Open Message Queue* (OpenMQ) software. To provide JDBC infrastructure to clients, Payara Server uses its own JDBC system resource adapters. Payara Server automatically makes these system resource adapters available to any client that requires them.
 
-For more information about JMS in the Payara Server, see xref:technical-documentation/application-development/using-jakarta-messaging.adoc#using-jakarta-messaging[Using the Java Message Service].
+For more information about JMS in the Payara Server, see xref:using-jakarta-messaging.adoc#using-jakarta-messaging[Using the Java Message Service].
 
-For more information about JDBC in the Payara Server, see xref:technical-documentation/application-development/using-the-jdbc-api-for-database-access.adoc#using-the-jdbc-api-for-database-access[Using the JDBC API for Database Access].
+For more information about JDBC in the Payara Server, see xref:using-the-jdbc-api-for-database-access.adoc#using-the-jdbc-api-for-database-access[Using the JDBC API for Database Access].
 
 [#connector-configuration]
 === Connector Configuration
@@ -60,12 +60,12 @@ However, you can associate a specific user-created thread pool to service work r
 To create a thread pool:
 
 * In the Administration Console, select _Thread Pools_ under the relevant configuration.
-* Use the `asadmin create-threadpool` command. For details, see the xref:technical-documentation/payara-server-documentation/command-reference/create-threadpool.adoc[create-threadpool].
+* Use the `asadmin create-threadpool` command. For details, see the xref:../payara-server-documentation/command-reference/create-threadpool.adoc[create-threadpool].
 
 To associate a connector with a thread pool:
 
 * In the Administration Console, open the Applications component and select Resource Adapter Configs. Specify the name of the thread pool in the Thread Pool ID field.
-* Use the `--threadpoolid` option of the `asadmin create-resource-adapter-config` command. For details, see the xref:technical-documentation/payara-server-documentation/command-reference/create-resource-adapter-config.adoc[create-resource-adapter-config].
+* Use the `--threadpoolid` option of the `asadmin create-resource-adapter-config` command. For details, see the xref:../payara-server-documentation/command-reference/create-resource-adapter-config.adoc[create-resource-adapter-config].
 
 NOTE: If you create a resource adapter configuration for a connector module that is already deployed, the connector module deployment is restarted with the new configuration properties.
 
@@ -77,7 +77,7 @@ Create a security map for a connector connection pool to map an application prin
 To create or update security maps for a connector connection pool:
 
 * In the Administration Console, open the _Resources_ component, select _Connectors_, select _Connector Connection Pools_, then select the corresponding connector connection pool, and select the _ Security Maps_ tab.
-* Use the `asadmin create-connector-security-map` command. For details, see the"xref:technical-documentation/payara-server-documentation/command-reference/create-connector-security-map.adoc[create-connector-security-map].
+* Use the `asadmin create-connector-security-map` command. For details, see the"xref:../payara-server-documentation/command-reference/create-connector-security-map.adoc[create-connector-security-map].
 
 If a security map already exists for a connector connection pool, the new security map is appended to the previous one. The connector security map configuration supports the use of the wildcard asterisk (`*`) to indicate all users or all user groups.
 
@@ -88,7 +88,7 @@ When an application principal initiates a request to an EIS, Payara Server first
 
 A work security map for a resource adapter maps an EIS principal or group to an application principal or group. A work security map is useful in situations where one or more application principals execute operations initiated by principals or user groups in the EIS. A resource adapter can have multiple work security maps. A work security map can map either principals or groups, but not both.
 
-To create a work security map, use the `asadmin create-connector-work-security-map` command. For details, see the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-work-security-map.adoc[create-connector-work-security-map].
+To create a work security map, use the `asadmin create-connector-work-security-map` command. For details, see the xref:../payara-server-documentation/command-reference/create-connector-work-security-map.adoc[create-connector-work-security-map].
 
 The work security map configuration supports the wildcard asterisk (`*`) character to indicate all users or all user groups. When an EIS principal sends a request to Payara Server, it will first check for an exact match to a mapped application principal using the work security map defined for the resource adapter.
 
@@ -100,7 +100,7 @@ If there is no exact match, Payara Server uses the wild card character specifica
 You can override the properties (`config-property` elements) specified in the `ra.xml` file of a resource adapter:
 
 * In the Administration Console, open the _Resources_ component and select _Resource Adapter Configs_. Create a new resource adapter configuration or select an existing one to edit. Then enter property names and values in the _Additional Properties_ table.
-* Use the `asadmin create-resource-adapter-config` command to create a configuration for a resource adapter. Use this command's `--property` option to specify a name-value pair for a resource adapter property. For details, see the xref:technical-documentation/payara-server-documentation/command-reference/create-resource-adapter-config.adoc[create-resource-adapter-config].
+* Use the `asadmin create-resource-adapter-config` command to create a configuration for a resource adapter. Use this command's `--property` option to specify a name-value pair for a resource adapter property. For details, see the xref:../payara-server-documentation/command-reference/create-resource-adapter-config.adoc[create-resource-adapter-config].
 
 You can specify configuration properties either before or after resource adapter deployment. If you specify properties after deploying the resource adapter, the existing resource adapter is restarted with the new properties.
 
@@ -113,14 +113,14 @@ You can test a connector connection pool for usability in one of these ways:
 
 * In the Administration Console, open the _Resources_ component, open the _Connectors_ component, select _Connection Pools_, and select the connection pool you want to test. Then select the _Ping_ button in the top right corner of the page.
 
-* Use the `asadmin ping-connection-pool` command. For details, see the xref:technical-documentation/payara-server-documentation/command-reference/ping-connection-pool.adoc[ping-connection-pool].
+* Use the `asadmin ping-connection-pool` command. For details, see the xref:../payara-server-documentation/command-reference/ping-connection-pool.adoc[ping-connection-pool].
 
 Both these commands fail and display an error message unless they successfully connect to the connection pool.
 
 You can also specify that a connection pool is automatically tested when created or reconfigured by setting the _Ping_ attribute to `true` (the default is `false`) in one of the following ways:
 
 * Enter a _Ping_ value in the _Connector Connection Pools_ page in the Administration Console.
-* Specify the `--ping` option in the `asadmin create-connector-connection-pool` command. For more information, see the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-connection-pool.adoc[create-connector-connection-pool].
+* Specify the `--ping` option in the `asadmin create-connector-connection-pool` command. For more information, see the xref:../payara-server-documentation/command-reference/create-connector-connection-pool.adoc[create-connector-connection-pool].
 
 [#flushing-a-connector-connection-pool]
 === Flushing a Connector Connection Pool
@@ -130,7 +130,7 @@ Flushing a connector connection pool recreates all the connections in the pool a
 You can flush a connector connection pool in one of these ways:
 
 * In the Administration Console, open the _Resources_ component, open the _Connectors_ component, select _Connection Pools_, and select the connection pool you want to flush. Then select the _Flush_ button in the top right corner of the page.
-* Use the `asadmin flush-connection-pool` command. For details, see the xref:technical-documentation/payara-server-documentation/command-reference/flush-connection-pool.adoc[flush-connection-pool].
+* Use the `asadmin flush-connection-pool` command. For details, see the xref:../payara-server-documentation/command-reference/flush-connection-pool.adoc[flush-connection-pool].
 
 [#handling-invalid-connections]
 === Handling Invalid Connections
@@ -196,7 +196,7 @@ asadmin set server.connector-service.class-loading-policy="global"
 
 Transactions that involve multiple resources or multiple participant processes are distributed or global transactions. A global transaction can involve one non-XA resource if last agent optimization is enabled. Otherwise, ALL resources must be XA-aware.
 
-For more information about transactions in Payara Server, see xref:technical-documentation/application-development/using-the-transaction-service.adoc#using-the-transaction-service[Using the Transaction Service].
+For more information about transactions in Payara Server, see xref:using-the-transaction-service.adoc#using-the-transaction-service[Using the Transaction Service].
 
 The Jakarta Connectors specification requires that if a resource adapter supports `XATransaction`, the `ManagedConnection` created from that resource adapter must support BOTH distributed and local transactions. Therefore, even if a resource adapter supports `XATransaction`, you can configure its connector connection pools as non-XA or without transaction support for better performance.
 
@@ -212,12 +212,12 @@ The connection pool configuration property can override the `ra.xml` file proper
 To disable connection pooling, set the _Pooling_ attribute to `false`. The default is `true`. You can enable or disable connection pooling in one of the following ways:
 
 * Enter a _Pooling_ value in the _Connector Connection Pools_ page in the Administration Console.
-* Specify the `--pooling` option in the `asadmin create-connector-connection-pool` command. For more information, see the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-connection-pool.adoc[create-connector-connection-pool].
+* Specify the `--pooling` option in the `asadmin create-connector-connection-pool` command. For more information, see the xref:../payara-server-documentation/command-reference/create-connector-connection-pool.adoc[create-connector-connection-pool].
 
 [#using-application-scoped-connectors]
 === Using Application-Scoped Connectors
 
-You can define an application-scoped connector or other resource for an enterprise application, web module, EJB module, connector module, or application client module by supplying a `payara-resources.xml` or `glassfish-resources.xml` deployment descriptor file. For details, see "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Payara Server Application Deployment section.
+You can define an application-scoped connector or other resource for an enterprise application, web module, EJB module, connector module, or application client module by supplying a `payara-resources.xml` or `glassfish-resources.xml` deployment descriptor file. For details, see "xref:../payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Payara Server Application Deployment section.
 
 IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-resources.xml instead.
@@ -237,7 +237,7 @@ A resource adapter supporting inbound communication provides an instance of an `
 WARNING: An endpoint activation fails if the required property values
 are not specified. Values for the properties that are overridden in the message-driven bean's deployment descriptor are applied to the `ActivationSpec` JavaBean when the message-driven bean is deployed.
 
-Administered objects can also be specified for a resource adapter, and these JavaBeans are specific to a messaging style or message provider. For example, some messaging styles may need applications to use special administered objects (such as `Queue` and `Topic` objects in JMS). Applications use these objects to send and synchronously receive messages using connection objects using messaging style APIs. For more information about administered objects, see xref:technical-documentation/application-development/using-jakarta-messaging.adoc#using-jakarta-messaging[Using the Java Message Service].
+Administered objects can also be specified for a resource adapter, and these JavaBeans are specific to a messaging style or message provider. For example, some messaging styles may need applications to use special administered objects (such as `Queue` and `Topic` objects in JMS). Applications use these objects to send and synchronously receive messages using connection objects using messaging style APIs. For more information about administered objects, see xref:using-jakarta-messaging.adoc#using-jakarta-messaging[Using the Java Message Service].
 
 [#outbound-communication-support]
 == Outbound Communication Support

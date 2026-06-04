@@ -1,9 +1,9 @@
 = Administering Deployment Groups
 :ordinal: 4
 
-Deployment Groups were introduced in Payara Platform 5 as an effective replacement for xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc[clusters]. Deployment groups are a complement to the xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc[Data Grid] whereas the grid is responsible to managing distributed application data across multiple instances, deployment groups manage how application deployment is targeted in general.
+Deployment Groups were introduced in Payara Platform 5 as an effective replacement for xref:administering-payara-server-clusters.adoc[clusters]. Deployment groups are a complement to the xref:administering-the-domain-data-grid.adoc[Data Grid] whereas the grid is responsible to managing distributed application data across multiple instances, deployment groups manage how application deployment is targeted in general.
 
-A Deployment Group is a loose grouping of Payara Server instances that can be used as a target for *deployments*. Deployment Groups consist of one or more Payara Server xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#types-of-payara-server-instances[standalone instances] and each instance can belong to one or more deployment groups.
+A Deployment Group is a loose grouping of Payara Server instances that can be used as a target for *deployments*. Deployment Groups consist of one or more Payara Server xref:administering-payara-server-instances.adoc#types-of-payara-server-instances[standalone instances] and each instance can belong to one or more deployment groups.
 
 Deployment Groups can then be used to manage the lifecycle of the standalone instances in the group. All instances can be started, re-started and stopped via their corresponding deployment group.
 

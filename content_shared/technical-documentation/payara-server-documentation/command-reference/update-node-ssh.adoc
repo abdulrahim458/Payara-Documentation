@@ -37,7 +37,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -62,7 +62,7 @@ This subcommand is supported in remote mode only.
 *`--sshkeyfile`*:
   The absolute path to the SSH private key file for user that the `--sshuser` option specifies. This file is used for authentication to the `sshd` daemon on the node's host. +
 
-NOTE: Payara Server also supports password authentication through the `AS_ADMIN_SSHPASSWORD` entry in the password file. The password file is specified in the `--paswordfile` option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] utility.
+NOTE: Payara Server also supports password authentication through the `AS_ADMIN_SSHPASSWORD` entry in the password file. The password file is specified in the `--paswordfile` option of the xref:asadmin.adoc#asadmin-1m[`asadmin`] utility.
 
 If the SSH private key file is protected by a passphrase, the password file must contain the `AS_ADMIN_SSHKEYPASSPHRASE` entry.
 The path to the key file must be reachable by the DAS and the key file must be readable by the DAS. +
@@ -125,16 +125,16 @@ Command update-node-ssh executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc#create-node-config[`create-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-config.adoc#delete-node-config[`delete-node-config],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`],
-* xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node.adoc#uninstall-node[`uninstall-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc#update-node-config[`update-node-config`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-node-config.adoc#create-node-config[`create-node-config`],
+* xref:create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
+* xref:delete-node-config.adoc#delete-node-config[`delete-node-config],
+* xref:delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
+* xref:install-node.adoc#install-node[`install-node`],
+* xref:install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
+* xref:list-nodes.adoc#list-nodes[`list-nodes`],
+* xref:uninstall-node.adoc#uninstall-node[`uninstall-node`],
+* xref:uninstall-node-ssh.adoc#uninstall-node-ssh[`uninstall-node-ssh`],
+* xref:update-node-config.adoc#update-node-config[`update-node-config`]
 
 

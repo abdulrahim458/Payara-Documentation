@@ -24,7 +24,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -60,11 +60,11 @@ error in executing the command
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-docker.adoc#create-node-docker[`create-node-docker`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-docker.adoc#update-node-docker[`update-node-docker`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-node-docker.adoc#create-node-docker[`create-node-docker`],
+* xref:delete-instance.adoc#delete-instance[`delete-instance`],
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
+* xref:list-nodes.adoc#list-nodes[`list-nodes`],
+* xref:update-node-docker.adoc#update-node-docker[`update-node-docker`]
 
 

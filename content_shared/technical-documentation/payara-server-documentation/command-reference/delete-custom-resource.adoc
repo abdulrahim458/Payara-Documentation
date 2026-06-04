@@ -22,7 +22,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -69,8 +69,8 @@ Command delete-custom-resource executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-custom-resource.adoc#create-custom-resource[`create-custom-resource`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-custom-resources.adoc#list-custom-resources[`list-custom-resources`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-custom-resource.adoc#create-custom-resource[`create-custom-resource`],
+* xref:list-custom-resources.adoc#list-custom-resources[`list-custom-resources`]
 
 

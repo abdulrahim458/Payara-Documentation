@@ -2,7 +2,7 @@
 
 Amazon SQS (Simple Queue Service) is a hosted and highly scalable distributed message queue service.
 
-To get the correct version of the artifact to use in your application (since it depends on a specific version of the Amazon Web Services Java SDK), please follow the instructions detailed in xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/versioning.adoc[Versioning].
+To get the correct version of the artifact to use in your application (since it depends on a specific version of the Amazon Web Services Java SDK), please follow the instructions detailed in xref:versioning.adoc[Versioning].
 
 Once deployed, a message similar to this one should be printed out to the server's output:
 

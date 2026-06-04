@@ -32,7 +32,7 @@ NOTE: If you edit the `admin-listener` network listener, you must restart the se
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -103,12 +103,12 @@ Command set-network-listener-configuration executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-http-listener.adoc#create-http-listener[`create-http-listener`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-http-listeners.adoc#restart-http-listeners[`restart-http-listeners`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-protocol.adoc#create-protocol[`create-protocol`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-threadpool.adoc#create-threadpool[`create-threadpool`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-transport.adoc#create-transport[`create-transport`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc#create-network-listener[`create-network-listener`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-network-listener.adoc#delete-network-listener[`delete-network-listener`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-network-listeners.adoc#list-network-listeners[`list-network-listeners`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-http-listener.adoc#create-http-listener[`create-http-listener`],
+* xref:restart-http-listeners.adoc#restart-http-listeners[`restart-http-listeners`],
+* xref:create-protocol.adoc#create-protocol[`create-protocol`],
+* xref:create-threadpool.adoc#create-threadpool[`create-threadpool`],
+* xref:create-transport.adoc#create-transport[`create-transport`],
+* xref:create-network-listener.adoc#create-network-listener[`create-network-listener`],
+* xref:delete-network-listener.adoc#delete-network-listener[`delete-network-listener`],
+* xref:list-network-listeners.adoc#list-network-listeners[`list-network-listeners`]

@@ -19,7 +19,7 @@ The `get-jdbc-config-source-configuration` retrieves the current configuration f
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -57,5 +57,5 @@ jndi-name  Books       ISBN             Title
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-jdbc-config-source-configuration.adoc#set-jdbc-config-source-configuration[`set-jdbc-config-source-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:set-jdbc-config-source-configuration.adoc#set-jdbc-config-source-configuration[`set-jdbc-config-source-configuration`]

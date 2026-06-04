@@ -67,6 +67,6 @@ The relative path is relative to the directory where the command is being execut
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
 
 

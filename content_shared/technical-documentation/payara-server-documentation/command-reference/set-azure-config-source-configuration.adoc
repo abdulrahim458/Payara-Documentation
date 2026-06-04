@@ -27,7 +27,7 @@ The `set-azure-config-source-configuration` provides configuration options for t
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -86,6 +86,6 @@ asadmin set-azure-config-source-configuration --dynamic true --enabled true --ke
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/get-azure-config-source-configuration.adoc#get-azure-config-source-configuration[`get-azure-config-source-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:get-azure-config-source-configuration.adoc#get-azure-config-source-configuration[`get-azure-config-source-configuration`]
 

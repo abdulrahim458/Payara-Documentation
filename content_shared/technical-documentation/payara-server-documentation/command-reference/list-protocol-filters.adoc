@@ -21,7 +21,7 @@ The `list-protocol-filters` subcommand lists the existing protocol filters. This
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -68,8 +68,8 @@ Command list-protocol-filters executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-protocol-filter.adoc#create-protocol-filter[`create-protocol-filter`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-protocol-filter.adoc#delete-protocol-filter[`delete-protocol-filter`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-protocol-filter.adoc#create-protocol-filter[`create-protocol-filter`],
+* xref:delete-protocol-filter.adoc#delete-protocol-filter[`delete-protocol-filter`]
 
 

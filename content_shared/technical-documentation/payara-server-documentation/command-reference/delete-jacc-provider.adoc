@@ -30,7 +30,7 @@ This subcommand is supported in remote mode only.
 If an option has a short option name, then the short option precedes the long option name. Short options have one dash whereas long options have two dashes.
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -75,7 +75,7 @@ Command delete-jacc-provider executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
 * xref:technical-documentation/payara-server-documentation/command-reference/create-jacc-provider#create-jacc-provider[`create-jacc-provider`],
 * xref:technical-documentation/payara-server-documentation/command-reference/list-jacc-providers#list-jacc-providers[`list-jacc-providers`]
 

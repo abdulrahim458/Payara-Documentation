@@ -279,12 +279,12 @@ You can define an application-scoped JNDI resource for an enterprise application
 IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-resources.xml instead.
 
-For details, see "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Application Deployment section.
+For details, see "xref:../payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources]" in the Application Deployment section.
 
 [#using-a-custom-jndi.properties-file]
 == Using a Custom `jndi.properties` File
 
-To use a custom `jndi.properties` file, JAR it and place it in the `domain-dir/lib` directory. This adds the custom `jndi.properties` file to the Common class loader. For more information about class loading, see xref:technical-documentation/application-development/class-loaders.adoc[Class Loaders].
+To use a custom `jndi.properties` file, JAR it and place it in the `domain-dir/lib` directory. This adds the custom `jndi.properties` file to the Common class loader. For more information about class loading, see xref:class-loaders.adoc[Class Loaders].
 
 TIP: For each property found in more than one `jndi.properties` file, the Jakarta EE naming service either uses the first value found or concatenates all values, whichever makes sense at runtime.
 
@@ -306,7 +306,7 @@ These elements are part of the `glassfish-web.xml`/`payara-web.xml`, `glassfish-
 IMPORTANT: glassfish-* deployment descriptors are deprecated and support will be removed in a future release.
 It is recommended to use the payara-* equivalents instead.
 
-For more information about how these elements behave in each of the deployment descriptor files, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors]" in the Payara Server Application Deployment section.
+For more information about how these elements behave in each of the deployment descriptor files, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#elements-of-the-payara-platform-deployment-descriptors[Elements of the Payara Server Deployment Descriptors]" in the Payara Server Application Deployment section.
 
 The following is an example of a JDBC resource lookup to showcase how to reference resource factories. The same principle is applicable to all resources (such as JMS destinations, JavaMail sessions, and so on).
 

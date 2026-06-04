@@ -24,7 +24,7 @@ This command can be used to configure the behaviour of the log notifier in Payar
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -67,5 +67,5 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get-log-notifier-configuration.adoc#get-log-notifier-configuration[`get-log-notifier-configuration`],
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:get-log-notifier-configuration.adoc#get-log-notifier-configuration[`get-log-notifier-configuration`],

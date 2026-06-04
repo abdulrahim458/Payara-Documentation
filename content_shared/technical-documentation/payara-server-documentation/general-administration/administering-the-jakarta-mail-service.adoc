@@ -56,9 +56,9 @@ The name must be resolvable to an actual host name.
 Use the `create-javamail-resource` subcommand in remote mode to create a Jakarta Mail session resource. The JNDI name for a Jakarta Mail session resource customarily includes the mail/ naming subcontext, For example: `mail/MyMailSession.`
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Create a Jakarta Mail resource by using the xref:technical-documentation/payara-server-documentation/command-reference/create-javamail-resource.adoc[`create-javamail-resource`] subcommand.
+. Create a Jakarta Mail resource by using the xref:../command-reference/create-javamail-resource.adoc[`create-javamail-resource`] subcommand.
 Information about the properties for the subcommand is included in this help page.
-. To apply your changes, restart Payara Server. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. To apply your changes, restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 ==== Example - Creating a Jakarta Mail Resource
 
@@ -76,7 +76,7 @@ This example creates a Jakarta Mail resource named `mail/MyMailSession`. The esc
 Use the `list-javamail-resources` subcommand in remote mode to list the existing JavaMail session resources.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the Jakarta Mail resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommand.
+. List the Jakarta Mail resources by using the xref:../command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommand.
 
 ==== Example - Listing Jakarta Mail Resources
 
@@ -92,7 +92,7 @@ This example lists the Jakarta Mail resources on `localhost`.
 === To Update a Jakarta Mail Resource
 
 . List the Jakarta Mail resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommand.
-. Modify the values for the specified Jakarta Mail source by using the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand. The resource is identified by its dotted name.
+. Modify the values for the specified Jakarta Mail source by using the xref:../command-reference/set.adoc[`set`] subcommand. The resource is identified by its dotted name.
 
 ==== Example - Updating a Jakarta Mail Resource
 
@@ -113,9 +113,9 @@ Use the `delete-javamail-resource` subcommands in remote mode to delete a Jakart
 References to the specified resource must be removed before running the `delete-javamail-resource` subcommands.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the Jakarta Mail resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommands.
-. Delete a Jakarta Mail resource by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-javamail-resource.adoc[`delete-javamail-resource`] subcommands.
-. To apply your changes, restart Payara Server. xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. List the Jakarta Mail resources by using the xref:../command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommands.
+. Delete a Jakarta Mail resource by using the xref:../command-reference/delete-javamail-resource.adoc[`delete-javamail-resource`] subcommands.
+. To apply your changes, restart Payara Server. xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 ==== Example - Deleting a Jakarta Mail Resource
 

@@ -27,7 +27,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -63,7 +63,7 @@ error in executing the command
 
 See Also
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-deployment-group.adoc#create-deployment-group[`create-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-deployment-group.adoc#delete-deployment-group[`delete-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-deployment-group.adoc#create-deployment-group[`create-deployment-group`],
+* xref:delete-deployment-group.adoc#delete-deployment-group[`delete-deployment-group`],
+* xref:list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`]

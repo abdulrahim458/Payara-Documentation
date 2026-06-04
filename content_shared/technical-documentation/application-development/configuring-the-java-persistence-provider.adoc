@@ -21,7 +21,7 @@ For more information, see the https://jakarta.ee/specifications/persistence/[Jak
 
 *Jakarta XML Binding (JAXB)*: The EclipseLink JAXB implementation, plus EclipseLink extensions, is called *MOXy*. The `org.eclipse.persistence.moxy.jar` file is bundled as a module in Payara Server.
 +
-For more information about MOXy support in Payara Server, see xref:technical-documentation/application-development/developing-soap-webservices.adoc#the-databinding-provider[The Databinding Provider].
+For more information about MOXy support in Payara Server, see xref:developing-soap-webservices.adoc#the-databinding-provider[The Databinding Provider].
 +
 For the JAXB specification, see the https://jakarta.ee/specifications/xml-binding/[Jakarta XML Binding specification^].
 
@@ -43,7 +43,7 @@ For information about developing, deploying, and configuring EclipseLink, and ap
 
 To run EclipseLink JPA applications in Payara Server, you must configure the server and coordinate certain server and application settings. These are described in the following steps:
 
-. Set up the datasource. See "xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#administering-database-connectivity[Administering Database Connectivity]" in Payara Server General Administration section.
+. Set up the datasource. See "xref:../payara-server-documentation/general-administration/administering-database-connectivity.adoc#administering-database-connectivity[Administering Database Connectivity]" in Payara Server General Administration section.
 
 . Create the application. For guidance in writing your application, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#persistence[Persistence^]" in The Jakarta EE Tutorial.
 
@@ -51,7 +51,7 @@ To run EclipseLink JPA applications in Payara Server, you must configure the ser
 +
 If you are using the Jakarta Persistence API by calling `Persistence.createEMF()`, see xref:#specifying-the-persistence-provider-for-an-application[Specifying the Persistence Provider for an Application].
 
-. If the security manager is enabled, and you are using the Jakarta Persistence API by calling `Persistence.createEMF()`, see xref:technical-documentation/application-development/securing-applications.adoc#enabling-and-disabling-the-security-manager[Enabling and Disabling the Security Manager].
+. If the security manager is enabled, and you are using the Jakarta Persistence API by calling `Persistence.createEMF()`, see xref:securing-applications.adoc#enabling-and-disabling-the-security-manager[Enabling and Disabling the Security Manager].
 
 . Deploy the application.
 
@@ -145,7 +145,7 @@ If you are using the Java Persistence API by calling `Persistence.createEMF()`, 
 </persistence>
 ----
 
-For configurations of supported and other drivers, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#configuration-specifics-for-jdbc-drivers[Configuration Specifics for JDBC Drivers]" in the Payara Server General Administration section.
+For configurations of supported and other drivers, see "xref:../payara-server-documentation/general-administration/administering-database-connectivity.adoc#configuration-specifics-for-jdbc-drivers[Configuration Specifics for JDBC Drivers]" in the Payara Server General Administration section.
 
 [#specifying-the-persistence-provider-for-an-application]
 == Specifying the Persistence Provider for an Application

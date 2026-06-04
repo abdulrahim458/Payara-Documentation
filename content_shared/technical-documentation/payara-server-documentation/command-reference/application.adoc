@@ -12,8 +12,8 @@ The Payara Server infrastructure supports the deployment of many types of distri
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/create-application-ref.adoc#create-application-ref[`create-application-ref`],
-* xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`]
+* xref:create-application-ref.adoc#create-application-ref[`create-application-ref`],
+* xref:deploy.adoc#deploy[`deploy`],
+* xref:list-applications.adoc#list-applications[`list-applications`]
 
 

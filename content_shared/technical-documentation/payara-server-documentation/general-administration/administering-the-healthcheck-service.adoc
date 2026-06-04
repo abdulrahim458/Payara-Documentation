@@ -15,11 +15,11 @@ If there is a problem with any of these metrics, and they exceed a configurable 
 
 This allows operations teams to rapidly detect problems or work out what happened after these problems have occurred.
 
-NOTE: It is possible to display metrics produced by HealthCheck service on MicroProfile Health xref:technical-documentation/microprofile/healthcheck.adoc#rest-endpoints[REST endpoints].
+NOTE: It is possible to display metrics produced by HealthCheck service on MicroProfile Health xref:../../microprofile/healthcheck.adoc#rest-endpoints[REST endpoints].
 
 IMPORTANT: The Host Memory Usage currently only works on Linux and BSD operating system derivatives.
 
-If the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc#log-notifier[Log Notifier] is enabled, such events will be presented in the server's log file like in the following sample:
+If the xref:administering-the-notification-service.adoc#log-notifier[Log Notifier] is enabled, such events will be presented in the server's log file like in the following sample:
 
 [source, log, subs=attributes+]
 ----
@@ -51,7 +51,7 @@ NOTE: The default value is _SECONDS_.
 
 Aside from this configuration settings, you can also define which notifiers will be used to relay the HealthCheck events by moving them to the **Active Notifiers** box.
 
-IMPORTANT: Keep in mind that for HealthCheck events to be relayed to the active notifiers, both the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc[Notification Service] and each respective notifier must be enabled first.
+IMPORTANT: Keep in mind that for HealthCheck events to be relayed to the active notifiers, both the xref:administering-the-notification-service.adoc[Notification Service] and each respective notifier must be enabled first.
 
 TIP: You don't need to manually add each notifier on this screen. When enabling a notifier on its configuration screen, the server will **automatically** add it to the list of active notifiers for the HealthCheck service. +
 This same result occurs when enabling the notifier using the appropriate `asadmin` command.
@@ -171,4 +171,4 @@ A more complex example would be the following command that configures the stuck 
 asadmin set-healthcheck-service-configuration --service=st --enabled=true --dynamic=true --time=30 --time-unit=SECONDS --stuck-threads-threshold=5 --stuck-threads-threshold-unit=MINUTES
 ----
 
-For more information and examples for how to use these Asadmin CLI commands, see the xref:technical-documentation/payara-server-documentation/command-reference/set-healthcheck-configuration.adoc[`set-healthcheck-configuration`] and xref:technical-documentation/payara-server-documentation/command-reference/set-healthcheck-service-configuration.adoc[`set-healthcheck-service-configuration`] entries in the Command Reference section.
+For more information and examples for how to use these Asadmin CLI commands, see the xref:../command-reference/set-healthcheck-configuration.adoc[`set-healthcheck-configuration`] and xref:../command-reference/set-healthcheck-service-configuration.adoc[`set-healthcheck-service-configuration`] entries in the Command Reference section.

@@ -16,12 +16,12 @@ name
 
 The `create-deployment-group` subcommand creates a Payara Server deployment group. Initially the deployment group contains no Payara Server instances, applications, or resources.
 
-To add instances to the cluster, use the xref:technical-documentation/payara-server-documentation/command-reference/add-instance-to-deployment-group.adoc[`add-instance-to-deployment-group`].
+To add instances to the cluster, use the xref:add-instance-to-deployment-group.adoc[`add-instance-to-deployment-group`].
 
-* Deploying applications by using the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`] subcommand
-* Creating resources by using subcommands such as xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-resource.adoc#create-jdbc-resource[`create-jdbc-resource`]
-* Creating references to applications that are already deployed in other targets by using the xref:technical-documentation/payara-server-documentation/command-reference/create-application-ref.adoc#create-application-ref[`create-application-ref`] subcommand
-* Creating references to resources that are already created in other targets by using the xref:technical-documentation/payara-server-documentation/command-reference/create-resource-ref.adoc#create-resource-ref[`create-resource-ref`] subcommand
+* Deploying applications by using the xref:deploy.adoc#deploy[`deploy`] subcommand
+* Creating resources by using subcommands such as xref:create-jdbc-resource.adoc#create-jdbc-resource[`create-jdbc-resource`]
+* Creating references to applications that are already deployed in other targets by using the xref:create-application-ref.adoc#create-application-ref[`create-application-ref`] subcommand
+* Creating references to resources that are already created in other targets by using the xref:create-resource-ref.adoc#create-resource-ref[`create-resource-ref`] subcommand
 
 This subcommand is supported in remote mode only.
 
@@ -29,7 +29,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -78,20 +78,20 @@ error in executing the command
 
 See Also
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
 
-* xref:technical-documentation/payara-server-documentation/command-reference/create-application-ref.adoc#create-application-ref[`create-application-ref`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-resource.adoc#create-jdbc-resource[`create-jdbc-resource`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc#create-local-instance[`create-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-resource-ref.adoc#create-resource-ref[`create-resource-ref`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-deployment-group.adoc#delete-deployment-group[`delete-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-deployment-group.adoc#start-deployment-group[`start-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-deployment-group.adoc#stop-deployment-group[`stop-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-deployment-group.adoc#restart-deployment-group[`restart-deployment-group`],
-* xref:technical-documentation/payara-server-documentation/command-reference/add-instance-to-deployment-group.adoc#add-instance-to-deployment-group[`add-instance-to-deployment-group`]
-* xref:technical-documentation/payara-server-documentation/command-reference/remove-instance-from-deployment-group.adoc#remove-instance-from-deployment-group[`remove-instance-from-deployment-group`]
+* xref:create-application-ref.adoc#create-application-ref[`create-application-ref`],
+* xref:create-instance.adoc#create-instance[`create-instance`],
+* xref:create-jdbc-resource.adoc#create-jdbc-resource[`create-jdbc-resource`],
+* xref:create-local-instance.adoc#create-local-instance[`create-local-instance`],
+* xref:create-resource-ref.adoc#create-resource-ref[`create-resource-ref`],
+* xref:delete-deployment-group.adoc#delete-deployment-group[`delete-deployment-group`],
+* xref:delete-instance.adoc#delete-instance[`delete-instance`],
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
+* xref:deploy.adoc#deploy[`deploy`],
+* xref:list-deployment-groups.adoc#list-deployment-groups[`list-deployment-groups`],
+* xref:start-deployment-group.adoc#start-deployment-group[`start-deployment-group`],
+* xref:stop-deployment-group.adoc#stop-deployment-group[`stop-deployment-group`],
+* xref:restart-deployment-group.adoc#restart-deployment-group[`restart-deployment-group`],
+* xref:add-instance-to-deployment-group.adoc#add-instance-to-deployment-group[`add-instance-to-deployment-group`]
+* xref:remove-instance-from-deployment-group.adoc#remove-instance-from-deployment-group[`remove-instance-from-deployment-group`]

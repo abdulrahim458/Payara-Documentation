@@ -26,7 +26,7 @@ NOTE: A configuration that is referenced by only one cluster is a standalone con
 
 The type of un-clustered instances is determined by the type of the configuration that the instance references.
 
-For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#types-of-payara-server-instances[Types of Payara Server Instances].
+For more information, see xref:administering-payara-server-instances.adoc#types-of-payara-server-instances[Types of Payara Server Instances].
 
 [#the-default-config-configuration]
 === The `default-config` Configuration
@@ -40,13 +40,13 @@ When you create a cluster or an instance, you can choose whether to specify an e
 
 For more information, see the following sections:
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#to-create-a-cluster[To Create a Cluster]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
+* xref:administering-payara-server-clusters.adoc#to-create-a-cluster[To Create a Cluster]
+* xref:administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
 
 Payara Server automatically creates a configuration by copying the `default-config` configuration. If you require an instance or cluster to reference a copy of a different configuration, copy the configuration and specify the copy when you create the instance or cluster.
 
-For information about how to copy a configuration, see xref:technical-documentation/payara-server-documentation/high-availability/administering-named-configurations.adoc#to-create-a-named-configuration[To Create a Named Configuration].
+For information about how to copy a configuration, see xref:administering-named-configurations.adoc#to-create-a-named-configuration[To Create a Named Configuration].
 
 Payara Server assigns the name `<cluster-or-instance>-config` to an automatically created configuration. `<cluster-or-instance>` is the name of the cluster or instance for which the configuration is created.
 
@@ -107,9 +107,9 @@ Command copy-config executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#to-create-a-cluster[To Create a Cluster]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
+* xref:administering-payara-server-clusters.adoc#to-create-a-cluster[To Create a Cluster]
+* xref:administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/copy-config.adoc#copy-config[`copy-config`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help copy-config` at the command line.
@@ -256,9 +256,9 @@ Command delete-config executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-delete-an-instance-centrally[To Delete an Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#to-delete-a-cluster[To Delete a Cluster]
+* xref:administering-payara-server-instances.adoc#to-delete-an-instance-centrally[To Delete an Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
+* xref:administering-payara-server-clusters.adoc#to-delete-a-cluster[To Delete a Cluster]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-config.adoc#delete-config[`delete-config`]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-clusters.adoc#list-clusters[`list-clusters`]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc#list-instances[`list-instances`]
@@ -341,7 +341,7 @@ asadmin> get configs.config.config-name.system-property.property-name.value
 *config-name*:
   The name of the configuration whose properties you are modifying.
 *property-name*:
-  The name of the property that you are modifying. For a list of available properties, see xref:technical-documentation/payara-server-documentation/high-availability/administering-named-configurations.adoc#properties-for-port-numbers-in-a-named-configuration[Properties for Port Numbers in a Named Configuration].
+  The name of the property that you are modifying. For a list of available properties, see xref:administering-named-configurations.adoc#properties-for-port-numbers-in-a-named-configuration[Properties for Port Numbers in a Named Configuration].
 
 . Set the property to its new value.
 +
@@ -352,7 +352,7 @@ asadmin> set configs.config.config-name.system-property.property-name.value=new-
 *config-name*:
   The name of the configuration whose properties you are modifying.
 *property-name*:
-  The name of the property that you are modifying. For a list of available properties, see xref:technical-documentation/payara-server-documentation/high-availability/administering-named-configurations.adoc#properties-for-port-numbers-in-a-named-configuration[Properties for Port Numbers in a Named Configuration].
+  The name of the property that you are modifying. For a list of available properties, see xref:administering-named-configurations.adoc#properties-for-port-numbers-in-a-named-configuration[Properties for Port Numbers in a Named Configuration].
 *new-value*:
   The value to which you are setting the property.
 
@@ -405,7 +405,7 @@ servers.server.instance-name.system-property.port-property.value
 *instance-name*:
   The name of the instance whose port numbers you are modifying.
 *port-property*:
-  The name of the property that corresponds to the port number that you are modifying. For a list of available properties, see xref:technical-documentation/payara-server-documentation/high-availability/administering-named-configurations.adoc#properties-for-port-numbers-in-a-named-configuration[Properties for Port Numbers in a Named Configuration].
+  The name of the property that corresponds to the port number that you are modifying. For a list of available properties, see xref:administering-named-configurations.adoc#properties-for-port-numbers-in-a-named-configuration[Properties for Port Numbers in a Named Configuration].
 . Set the port number to its new value.
 +
 [source,shell]
@@ -416,7 +416,7 @@ servers.server.instance-name.system-property.port-property.value=new-value
 *instance-name*:
   The name of the instance whose port numbers you are modifying.
 *port-property*:
-  The name of the property that corresponds to the port number that you are modifying. For a list of available properties, see xref:technical-documentation/payara-server-documentation/high-availability/administering-named-configurations.adoc#properties-for-port-numbers-in-a-named-configuration[Properties for Port Numbers in a Named Configuration].
+  The name of the property that corresponds to the port number that you are modifying. For a list of available properties, see xref:administering-named-configurations.adoc#properties-for-port-numbers-in-a-named-configuration[Properties for Port Numbers in a Named Configuration].
 *new-value*:
   The value to which you are setting the port number.
 

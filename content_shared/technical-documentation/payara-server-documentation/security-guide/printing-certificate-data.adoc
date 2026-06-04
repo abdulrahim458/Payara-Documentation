@@ -37,7 +37,7 @@ The `print-certificate` is an offline command (it doesn't need a running domain 
 . The keystore does not contain a certificate entry under the given alias
 . The certificate type is not supported
 
-See the xref:technical-documentation/payara-server-documentation/command-reference/print-certificate.adoc[`print-certificate`] documentation in the Command Reference for more information on its structure.
+See the xref:../command-reference/print-certificate.adoc[`print-certificate`] documentation in the Command Reference for more information on its structure.
 
 [#examples]
 == Examples

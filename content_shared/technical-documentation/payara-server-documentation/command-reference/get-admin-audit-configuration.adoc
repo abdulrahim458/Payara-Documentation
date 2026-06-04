@@ -20,7 +20,7 @@ The `get-admin-audit-configuration` subcommand is used to list the configuration
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -53,10 +53,10 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-admin-audit-configuration.adoc#set-admin-audit-configuration[`set-admin-audit-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-asadmin-recorder.adoc#enable-asadmin-recorder[`enable-asadmin-recorder`],
-* xref:technical-documentation/payara-server-documentation/command-reference/disable-asadmin-recorder.adoc#disable-asadmin-recorder[`disable-asadmin-recorder`],
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin-recorder-enabled.adoc#asadmin-recorder-enabled[`asadmin-recorder-enabled`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:set-admin-audit-configuration.adoc#set-admin-audit-configuration[`set-admin-audit-configuration`],
+* xref:enable-asadmin-recorder.adoc#enable-asadmin-recorder[`enable-asadmin-recorder`],
+* xref:disable-asadmin-recorder.adoc#disable-asadmin-recorder[`disable-asadmin-recorder`],
+* xref:asadmin-recorder-enabled.adoc#asadmin-recorder-enabled[`asadmin-recorder-enabled`]
 
 

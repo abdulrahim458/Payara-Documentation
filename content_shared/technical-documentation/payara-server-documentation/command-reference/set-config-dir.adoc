@@ -25,7 +25,7 @@ The `set-config-dir` sets the directory to be used for the directory config sour
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -69,5 +69,5 @@ asadmin set-config-dir --directory=/home/payara/secrets --target=myAppCluster
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/get-config-dir.adoc#get-config-dir[`get-config-dir`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:get-config-dir.adoc#get-config-dir[`get-config-dir`]

@@ -46,4 +46,4 @@ To enable the *Hot Deploy* feature for Payara Micro on the Apache NetBeans IDE, 
 
 [#see-also]
 == See Also
-xref:technical-documentation/ecosystem/ide-integration/hot-deploy-and-auto-deploy.adoc[Hot Deploy and Auto Deploy]
+xref:../hot-deploy-and-auto-deploy.adoc[Hot Deploy and Auto Deploy]

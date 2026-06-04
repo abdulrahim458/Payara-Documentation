@@ -16,9 +16,9 @@ file-name
 [#description]
 == Description
 
-The `import-sync-bundle` subcommand imports the configuration data of a clustered instance or standalone instance from an archive file that was created by the xref:technical-documentation/payara-server-documentation/command-reference/export-sync-bundle.adoc#export-sync-bundle[`export-sync-bundle`] subcommand.
+The `import-sync-bundle` subcommand imports the configuration data of a clustered instance or standalone instance from an archive file that was created by the xref:export-sync-bundle.adoc#export-sync-bundle[`export-sync-bundle`] subcommand.
 
-You must run this subcommand on the host where the instance resides. To contact the domain administration server (DAS), this subcommand requires the name of the host where the DAS is running. If a non-default port is used for administration, this subcommand also requires the port number. You must provide this information through the `--host` option and the`--port` option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] utility.
+You must run this subcommand on the host where the instance resides. To contact the domain administration server (DAS), this subcommand requires the name of the host where the DAS is running. If a non-default port is used for administration, this subcommand also requires the port number. You must provide this information through the `--host` option and the`--port` option of the xref:asadmin.adoc#asadmin-1m[`asadmin`] utility.
 
 Importing an instance's configuration data transfers the data to a host for an instance without the need for the instance to be able to communicate with the DAS. Importing an instance's configuration data is typically required for the following reasons:
 
@@ -40,7 +40,7 @@ This subcommand is supported in local mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -83,7 +83,7 @@ Command import-sync-bundle executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/export-sync-bundle.adoc#export-sync-bundle[`export-sync-bundle`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:export-sync-bundle.adoc#export-sync-bundle[`export-sync-bundle`]
 
 

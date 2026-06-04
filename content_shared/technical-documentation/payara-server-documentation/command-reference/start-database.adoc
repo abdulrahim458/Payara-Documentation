@@ -39,7 +39,7 @@ This subcommand is supported in local mode only.
 
 *asadmin-options*:
   Options for the `asadmin` utility. For information about these
-  options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -104,6 +104,6 @@ The exit status applies to errors in executing the `asadmin` utility.For informa
 
 == See Also
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-database.adoc#stop-database[`stop-database`]
-* xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#administering-database-connectivity[Administering Database Connectivity] in Payara Server General Administration section
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:stop-database.adoc#stop-database[`stop-database`]
+* xref:../general-administration/administering-database-connectivity.adoc#administering-database-connectivity[Administering Database Connectivity] in Payara Server General Administration section

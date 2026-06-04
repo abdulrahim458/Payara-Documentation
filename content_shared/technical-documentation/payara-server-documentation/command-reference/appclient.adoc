@@ -104,8 +104,8 @@ http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5attributes-5[`attrib
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get-client-stubs.adoc#get-client-stubs[`get-client-stubs`],
-* xref:technical-documentation/payara-server-documentation/command-reference/package-appclient.adoc#package-appclient[`package-appclient`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:get-client-stubs.adoc#get-client-stubs[`get-client-stubs`],
+* xref:package-appclient.adoc#package-appclient[`package-appclient`]
 
 

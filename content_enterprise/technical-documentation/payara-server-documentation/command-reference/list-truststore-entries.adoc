@@ -85,8 +85,8 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/security-guide/ssl-certificate-management.adoc[SSL Certificate Management],
-* xref:technical-documentation/payara-server-documentation/command-reference/generate-csr.adoc[`generate-csr`],
-* xref:technical-documentation/payara-server-documentation/command-reference/renew-self-signed-certificates.adoc[`renew-self-signed-certificates`],
-* xref:technical-documentation/payara-server-documentation/command-reference/add-to-keystore.adoc[`add-to-keystore`],
-* xref:technical-documentation/payara-server-documentation/command-reference/add-to-truststore.adoc[`add-to-truststore`]
+* xref:../security-guide/ssl-certificate-management.adoc[SSL Certificate Management],
+* xref:generate-csr.adoc[`generate-csr`],
+* xref:renew-self-signed-certificates.adoc[`renew-self-signed-certificates`],
+* xref:add-to-keystore.adoc[`add-to-keystore`],
+* xref:add-to-truststore.adoc[`add-to-truststore`]

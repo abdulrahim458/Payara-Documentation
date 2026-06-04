@@ -43,7 +43,7 @@ Options are:
 |Sets the cluster group name.|
 |`--clusterpassword <cluster-password>`|Sets the cluster group password.|
 |`--contextroot <context-path>`|Sets the context root of the application originating from the `--deploy` option given first that does not specify a context root itself. See
-xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/deploying-applications/deploy-applications.adoc#define-context-root[Define context root] for more details.
+xref:../deploying-applications/deploy-applications.adoc#define-context-root[Define context root] for more details.
 |
 |`--copytouberjar <directory-path`
 |<directory-path> copy a directory into the root of an uber JAR|
@@ -73,7 +73,7 @@ and/or value.|
 |`--enablerequesttracingadaptivesampling <boolean>`|<boolean> Enables the adaptive sampling. Can also be enabled by configuring any one of the adaptive sampling configuration options|
 |`--globalcontextroot <context-path>`
 |Sets the global context root of any deployed application. This will prepend the context root. See
-xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/deploying-applications/deploy-applications.adoc#define-global-context-root[Define global context root] for more details.|
+xref:../deploying-applications/deploy-applications.adoc#define-global-context-root[Define global context root] for more details.|
 |`--group <group-name>`
 |Sets the instance's group.|
 |`--help`

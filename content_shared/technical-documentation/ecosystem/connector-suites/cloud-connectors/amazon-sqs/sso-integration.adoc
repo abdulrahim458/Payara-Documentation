@@ -42,7 +42,7 @@ Here's an example of a SQS Queue:
 [#download-install-amazon-sqs-connector-v2]
 == Download and Install Amazon SQS Connector Version 2 from Payara
 
-To download and install Amazon SQS Connector V2, please check xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/versioning.adoc#install-connector-server[How to use] of the Amazon SQS Versioning.
+To download and install Amazon SQS Connector V2, please check xref:versioning.adoc#install-connector-server[How to use] of the Amazon SQS Versioning.
 
 [#install-amazon-cli-local-environment]
 == Install Amazon CLI Locally
@@ -125,7 +125,7 @@ This process will open a local browser window so that the current user can provi
 [#deploy-and-test-application]
 == Deploy and Test Application
 
-Before deploying and testing a sample application, remember to install the JCA adapter and configuring the API dependencies as described in xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/versioning.adoc[Versioning].
+Before deploying and testing a sample application, remember to install the JCA adapter and configuring the API dependencies as described in xref:versioning.adoc[Versioning].
 
 Since the internal SSO credentials resolver will look for the required credentials on the local environment's configuration file, then you don't have to supply the AWS identity credentials on the configuration properties of your application's messaging components.
 

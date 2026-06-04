@@ -73,7 +73,7 @@ Operands specify the items on which the subcommand is to act. Operands must foll
 In single mode, you must type a separate `asadmin` command for each subcommand that you want to use. After the subcommand has run, you are returned to the operating system's command shell. Any `asadmin` utility options must be specified in each separate `asadmin` command that you run.
 
 If you require the same `asadmin` utility options for multiple subcommands, use the `asadmin` utility in multimode.
-For more information, see xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#to-start-a-multimode-session[To Start a Multimode Session].
+For more information, see xref:general-runtime-administration.adoc#to-start-a-multimode-session[To Start a Multimode Session].
 
 . In the operating system's command shell, run the `asadmin` utility, specifying the subcommand.
 . If necessary, also specify any required `asadmin` utility options, subcommand options, and operands.
@@ -128,7 +128,7 @@ In this example, the DAS is running on the host `srvr1.example.com` and applicat
 
 Payara Server provides help information about the syntax, purpose, and options of the `asadmin` utility and its subcommands.
 
-This help information is also available in the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[Payara Server Command Reference Manual].
+This help information is also available in the xref:../command-reference/asadmin.adoc[Payara Server Command Reference Manual].
 
 . If you are displaying help information for a remote subcommand, ensure that the server is running. Remote subcommands require a running server.
 
@@ -152,7 +152,7 @@ asadmin help create-jdbc-resource
 
 This example displays the help information for the `create-jdbc-resource` subcommand.
 
-To display the available subcommands, use the xref:technical-documentation/payara-server-documentation/command-reference/list-commands.adoc[`list-commands`] subcommand. Local subcommands are displayed before remote subcommands. If the server is not running, only local subcommands are displayed.
+To display the available subcommands, use the xref:../command-reference/list-commands.adoc[`list-commands`] subcommand. Local subcommands are displayed before remote subcommands. If the server is not running, only local subcommands are displayed.
 
 [#to-start-a-multimode-session]
 === To Start a Multimode Session
@@ -282,7 +282,7 @@ echo %AS_ADMIN_DISABLE_EVENT_EXPANSION%
 Running a set of `asadmin` subcommands from a file enables you to automate repetitive tasks.
 
 . Create a plain text file that contains the sequence of subcommands that you want to run.
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/multimode.adoc[`multimode`] subcommand, specifying the file that you created.
+. Run the xref:../command-reference/multimode.adoc[`multimode`] subcommand, specifying the file that you created.
 +
 If necessary, also specify any `asadmin` utility options that are required to enable subcommands in the file to run.
 
@@ -318,12 +318,12 @@ asadmin --port 9048 multimode --file commands_file.txt
 
 For more information about the subcommands in the preceding example, see the following help pages:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-domain.adoc[`delete-domain`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-commands.adoc[`list-commands`]
-* xref:technical-documentation/payara-server-documentation/command-reference/multimode.adoc[`multimode`]
-* xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`]
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`]
+* xref:../command-reference/create-domain.adoc[`create-domain`]
+* xref:../command-reference/delete-domain.adoc[`delete-domain`]
+* xref:../command-reference/list-commands.adoc[`list-commands`]
+* xref:../command-reference/multimode.adoc[`multimode`]
+* xref:../command-reference/start-domain.adoc[`start-domain`]
+* xref:../command-reference/stop-domain.adoc[`stop-domain`]
 
 //TODO - Review if these features are working properly in Payara Server: attach, detach, managed jobs
 //Also, update documentation on related commands
@@ -393,9 +393,9 @@ This example runs the `configure-managed-jobs` subcommand in multimode to set th
 
 For the full syntax and options of the subcommands in the preceding examples, see the following help pages:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/attach.adoc[`attach`]
-* xref:technical-documentation/payara-server-documentation/command-reference/configure-managed-jobs.adoc[`configure-managed-jobs`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jobs.adoc[`list-jobs`]
+* xref:../command-reference/attach.adoc[`attach`]
+* xref:../command-reference/configure-managed-jobs.adoc[`configure-managed-jobs`]
+* xref:../command-reference/list-jobs.adoc[`list-jobs`]
 
 [#administering-system-properties]
 == Administering System Properties
@@ -546,7 +546,7 @@ Defaults to `true`
 *`fish.payara.faces.integration.allowFacesCdiInitialisation`*:
 This option specifies whether scanning for Jakarta Faces content during application deployment is enabled. When enabled, if Faces content is detected, it forces an attempt to initialise CDI and Weld, even if bean discovery is set to "none".
 +
-A similar property can be set as a property `deploy` command. See xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[deploy] for details.
+A similar property can be set as a property `deploy` command. See xref:../command-reference/deploy.adoc#deploy[deploy] for details.
 +
 The `deploy` command property has precedence over the value defined by this property.
 +
@@ -709,7 +709,7 @@ The XML file must reside in the `domain-dir/config` directory. If you specify a 
 
 . Ensure that the server is running. Remote subcommands require a running server.
 . Add resources from an XML file by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/add-resources.adoc[`add-resources`] subcommand. Information about properties for the subcommand is included in this help page.
-. Restart Payara Server. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. Restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 ==== Example 2-21 Adding Resources
 

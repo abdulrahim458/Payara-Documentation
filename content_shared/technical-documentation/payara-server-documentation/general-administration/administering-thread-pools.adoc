@@ -47,7 +47,7 @@ into different thread pools.
 . Create a new thread pool by using the
 xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-threadpool.adoc[`create-threadpool`] subcommand. +
 Information about options for the subcommand is included in this help page.
-. To apply your changes, restart Payara Server. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+. To apply your changes, restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 NOTE: Restart is not necessary for thread pools used by the web container.
 
@@ -87,7 +87,7 @@ Use the `set` subcommand to update the values for a specified thread pool.
 . List the existing thread pools by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-threadpools.adoc[`list-threadpools`] subcommand.
 . Modify the values for a thread pool by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand. +
 The thread pool is identified by its dotted name.
-. To apply your changes, restart Payara Server. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain]. +
+. To apply your changes, restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain]. +
 
 NOTE: Restart is not necessary for thread pools used by the web container.
 
@@ -107,7 +107,7 @@ Use the `delete-threadpool` subcommand in remote mode to delete an existing thre
 . Ensure that the server is running. Remote subcommands require a running server.
 . List the existing thread pools by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-threadpools.adoc[`list-threadpools`] subcommand.
 . Delete the specified thread pool by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-threadpool.adoc[`delete-threadpool`] subcommand.
-. To apply your changes, restart Payara Server. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain]. +
+. To apply your changes, restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain]. +
 
 NOTE: Restart is not necessary for thread pools used by the web container.
 

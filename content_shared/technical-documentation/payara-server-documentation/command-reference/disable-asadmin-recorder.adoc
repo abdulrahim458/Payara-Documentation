@@ -19,7 +19,7 @@ The `disable-asadmin-recorder` subcommand deactivates the Asadmin Recorder featu
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -48,5 +48,5 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-asadmin-recorder.adoc#enable-asadmin-recorder[`enable-asadmin-recorder`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:enable-asadmin-recorder.adoc#enable-asadmin-recorder[`enable-asadmin-recorder`]

@@ -21,13 +21,13 @@ the node resides. You may run this command from any machine that can contact the
 If the node is usable, the subcommand displays a confirmation that the subcommand could connect to the node through SSH. This confirmation
 includes the name of the host that the node represents.
 
-Optionally, the subcommand can also validate the node to determine if the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] utility can run on the
-host that the node represents. To validate a node, the subcommand runs the xref:technical-documentation/payara-server-documentation/command-reference/version.adoc#version[`version`] subcommand. If the node is
+Optionally, the subcommand can also validate the node to determine if the xref:asadmin.adoc#asadmin-1m[`asadmin`] utility can run on the
+host that the node represents. To validate a node, the subcommand runs the xref:version.adoc#version[`version`] subcommand. If the node is
 valid, the subcommand displays the version that the `version` subcommand returns.
 
 The node that is specified as the operand of this subcommand must be enabled for communication over SSH. If the node is not enabled for
 communication over SSH, an error occurs. To determine whether a node is enabled for communication over SSH, use the
-xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`] subcommand.
+xref:list-nodes.adoc#list-nodes[`list-nodes`] subcommand.
 
 This subcommand is supported in remote mode only.
 
@@ -35,7 +35,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -94,12 +94,12 @@ Command ping-node-ssh executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc#list-nodes[`list-nodes`],
-* xref:technical-documentation/payara-server-documentation/command-reference/setup-ssh.adoc#setup-ssh[`setup-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc#update-node-ssh[`update-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/version.adoc#version[`version`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
+* xref:delete-node-ssh.adoc#delete-node-ssh[`delete-node-ssh`],
+* xref:list-nodes.adoc#list-nodes[`list-nodes`],
+* xref:setup-ssh.adoc#setup-ssh[`setup-ssh`],
+* xref:update-node-ssh.adoc#update-node-ssh[`update-node-ssh`],
+* xref:version.adoc#version[`version`]
 
 

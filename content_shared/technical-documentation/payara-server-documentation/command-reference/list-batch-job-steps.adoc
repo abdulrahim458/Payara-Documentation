@@ -24,7 +24,7 @@ The `list-batch-job-steps` subcommand lists steps for a specific batch job execu
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -106,10 +106,10 @@ Command list-batch-job-steps executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-batch-jobs.adoc#list-batch-jobs[`list-batch-jobs`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-batch-job-executions.adoc#list-batch-job-executions[`list-batch-job-executions`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-batch-runtime-configuration.adoc#list-batch-runtime-configuration[`list-batch-runtime-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-batch-runtime-configuration.adoc#set-batch-runtime-configuration[`set-batch-runtime-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:list-batch-jobs.adoc#list-batch-jobs[`list-batch-jobs`],
+* xref:list-batch-job-executions.adoc#list-batch-job-executions[`list-batch-job-executions`],
+* xref:list-batch-runtime-configuration.adoc#list-batch-runtime-configuration[`list-batch-runtime-configuration`],
+* xref:set-batch-runtime-configuration.adoc#set-batch-runtime-configuration[`set-batch-runtime-configuration`]
 
 

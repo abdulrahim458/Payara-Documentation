@@ -60,8 +60,8 @@ image:microprofile/health-check.png[alt="Set Health Check Configuration",width=1
 
 The following administration commands can be used to configure the MicroProfile Healthcheck service:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/set-microprofile-healthcheck-configuration.adoc#set-microprofile-healthcheck-configuration[`set-microprofile-healthcheck-configuration`]
-* xref:technical-documentation/payara-server-documentation/command-reference/get-microprofile-healthcheck-configuration.adoc#get-microprofile-healthcheck-configuration[`get-microprofile-healthcheck-configuration`]
+* xref:../payara-server-documentation/command-reference/set-microprofile-healthcheck-configuration.adoc#set-microprofile-healthcheck-configuration[`set-microprofile-healthcheck-configuration`]
+* xref:../payara-server-documentation/command-reference/get-microprofile-healthcheck-configuration.adoc#get-microprofile-healthcheck-configuration[`get-microprofile-healthcheck-configuration`]
 
 IMPORTANT: Changes made with this command will only be applied when the server or instance is restarted.
 

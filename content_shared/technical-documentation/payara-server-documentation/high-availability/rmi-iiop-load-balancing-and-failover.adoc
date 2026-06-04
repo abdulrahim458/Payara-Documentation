@@ -23,7 +23,7 @@ Payara Server provides high availability of remote EJB references and `NameServi
 
 Payara Server supports load balancing for Jakarta  applications executing in the Application Client Container (ACC).
 
-See xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#enabling-rmi-iiop-hardware-load-balancing-and-failover[Enabling RMI-IIOP Hardware Load Balancing and Failover].
+See xref:rmi-iiop-load-balancing-and-failover.adoc#enabling-rmi-iiop-hardware-load-balancing-and-failover[Enabling RMI-IIOP Hardware Load Balancing and Failover].
 
 CAUTION: Payara Server does not support RMI-IIOP load balancing and failover over secure sockets layer (SSL).
 
@@ -32,13 +32,13 @@ CAUTION: Payara Server does not support RMI-IIOP load balancing and failover ove
 
 Payara Server supports two general models for load balancing:
 
-==== xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#initialcontext-load-balancing[`InitialContext` Load Balancing]
+==== xref:rmi-iiop-load-balancing-and-failover.adoc#initialcontext-load-balancing[`InitialContext` Load Balancing]
 
 When a client performs a JNDI lookup for an object, the Naming Service creates a `InitialContext` (IC) object associated with a particular server instance.
 
 From then on, all lookup requests made using that IC object are sent to the same server instance. `InitialContext` load balancing can be configured automatically across an entire cluster.
 
-==== xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#per-request-load-balancing-prlb[Per-Request Load Balancing (PRLB)]
+==== xref:rmi-iiop-load-balancing-and-failover.adoc#per-request-load-balancing-prlb[Per-Request Load Balancing (PRLB)]
 
 Per Request Load Balancing (PRLB) is a method for load balancing stateless EJBs that enables load-balancing for each request to an EJB instance.
 
@@ -89,7 +89,7 @@ You can enable RMI-IIOP load balancing and failover for applications running in 
 [#to-enable-rmi-iiop-hardware-load-balancing-for-the-application-client-container]
 ==== To Enable RMI-IIOP Hardware Load Balancing for the Application Client Container
 
-This procedure provides an overview of the steps necessary to enable RMI-IIOP load balancing and failover with the application client container (ACC). For additional information on the ACC, see "xref:technical-documentation/application-development/developing-java-clients.adoc#developing-clients-using-the-acc[Developing Clients Using the ACC]" in Payara Server Application Development section.
+This procedure provides an overview of the steps necessary to enable RMI-IIOP load balancing and failover with the application client container (ACC). For additional information on the ACC, see "xref:../../application-development/developing-java-clients.adoc#developing-clients-using-the-acc[Developing Clients Using the ACC]" in Payara Server Application Development section.
 
 *Before You Begin*
 
@@ -115,7 +115,7 @@ For a list of the path variables to update, see xref:ROOT:technical-documentatio
 For example, on UNIX use `chmod 700`.
 . [[find-the-iiop-listener-port-number-for-at-least-two-instances-in-the-cluster]]Find the IIOP listener port number for at least two instances in the cluster.
 +
-You specify the IIOP listeners as endpoints in xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#add-at-least-two-target-server-elements-in-the-sun-acc.xml-file[Add at least two `target-server` elements in the `sun-acc.xml` file.].
+You specify the IIOP listeners as endpoints in xref:rmi-iiop-load-balancing-and-failover.adoc#add-at-least-two-target-server-elements-in-the-sun-acc.xml-file[Add at least two `target-server` elements in the `sun-acc.xml` file.].
 +
 For each instance, obtain the IIOP listener ports as follows:
 +
@@ -143,11 +143,11 @@ asadmin> get servers.server.in1.system-property.*.value
 
 . [[add-at-least-two-target-server-elements-in-the-sun-acc.xml-file]] Add at least two `target-server` elements in the `sun-acc.xml` file.
 +
-Use the endpoints that you obtained in xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#find-the-iiop-listener-port-number-for-at-least-two-instances-in-the-cluster[Find the IIOP listener port number for at least two instances in the cluster].
+Use the endpoints that you obtained in xref:rmi-iiop-load-balancing-and-failover.adoc#find-the-iiop-listener-port-number-for-at-least-two-instances-in-the-cluster[Find the IIOP listener port number for at least two instances in the cluster].
 +
 If the Payara Server instance on which the application client is deployed participates in a cluster, the ACC finds all currently active IIOP endpoints in the cluster automatically. However, a client should have at least two endpoints specified for bootstrapping purposes, in case one of the endpoints has failed.
 +
-The `target-server` element specifies one or more IIOP endpoints used for load balancing. The `address` attribute is an IPv4 address or hostname, and the `port` attribute specifies the port number. See "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#client-container[client-container]" in the Payara Server Application Deployment section.
+The `target-server` element specifies one or more IIOP endpoints used for load balancing. The `address` attribute is an IPv4 address or hostname, and the `port` attribute specifies the port number. See "xref:../application-deployment/elements-of-deployment-descriptors.adoc#client-container[client-container]" in the Payara Server Application Deployment section.
 +
 As an alternative to using `target-server` elements, you can use the `endpoints` property as follows:
 +
@@ -212,7 +212,7 @@ To test load balancing, use multiple clients and see how the load gets distribut
 
 *See Also*
 
-See xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#enabling-the-high-availability-session-persistence-service[Enabling the High Availability Session Persistence Service] for instructions on enabling the session availability service for a cluster or for a Web, EJB, or JMS container running in a cluster.
+See xref:configuring-ha-session-persistence-and-failover.adoc#enabling-the-high-availability-session-persistence-service[Enabling the High Availability Session Persistence Service] for instructions on enabling the session availability service for a cluster or for a Web, EJB, or JMS container running in a cluster.
 
 [#per-request-load-balancing-prlb]
 == Per-Request Load Balancing (PRLB)
@@ -237,12 +237,12 @@ This procedure describes how to enable PRLB for a stateless EJB that is deployed
 +
 For instructions on developing and assembling an EJB for deployment to Payara Server, refer to the following documentation:
 +
-* "xref:technical-documentation/application-development/using-jakarta-enterprise-beans-technology.adoc#using-enterprise-javabeans-technology[Using Jakarta Enterprise Beans Technology]" in the Payara Server Application Development section
-* "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#ejb-module-deployment-guidelines[EJB Module Deployment Guidelines]" in the Payara Server Application Deployment section
-* "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#assembling-and-deploying-an-application-client-module[Assembling and Deploying an Application Client Module]" in the Payara Server Application Deployment section
+* "xref:../../application-development/using-jakarta-enterprise-beans-technology.adoc#using-enterprise-javabeans-technology[Using Jakarta Enterprise Beans Technology]" in the Payara Server Application Development section
+* "xref:../application-deployment/deploying-applications.adoc#ejb-module-deployment-guidelines[EJB Module Deployment Guidelines]" in the Payara Server Application Deployment section
+* "xref:../application-deployment/deploying-applications.adoc#assembling-and-deploying-an-application-client-module[Assembling and Deploying an Application Client Module]" in the Payara Server Application Deployment section
 . Set the `per-request-load-balancing` property to `true` in the `glassfish-ejb-jar.xml` deployment descriptor file for the EJB.
 +
-For more information about the `glassfish-ejb-jar.xml` deployment descriptor file, refer to "xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The glassfish-ejb-jar.xml File]" in the Payara Server Application Deployment section.
+For more information about the `glassfish-ejb-jar.xml` deployment descriptor file, refer to "xref:../application-deployment/deployment-descriptor-files.adoc#the-payara-ejb-jar.xml-file[The glassfish-ejb-jar.xml File]" in the Payara Server Application Deployment section.
 +
 For example, the `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` file for a sample EJB named `TheGreeter` is listed below.
 +
@@ -265,8 +265,8 @@ For example, the `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` file for a sample 
 NOTE: If the EJB was previously deployed, it must be re-deployed.
 +
 For instructions on deploying EJBs, refer to the following documentation:
-* "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module]" in the Payara Server Application Deployment section
-* "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-redeploy-an-application-or-module[To Redeploy an Application or Module]" in the Payara Server Application Deployment section
+* "xref:../application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module]" in the Payara Server Application Deployment section
+* "xref:../application-deployment/deploying-applications.adoc#to-redeploy-an-application-or-module[To Redeploy an Application or Module]" in the Payara Server Application Deployment section
 . Verify the PRLB configuration by looking for the following `FINE` message in the CORBA log file:
 +
 [source,log]
@@ -298,4 +298,4 @@ public class EJBClient {
 [#see-also]
 == See Also
 
-See xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#enabling-the-high-availability-session-persistence-service[Enabling the High Availability Session Persistence Service] for instructions on enabling the session availability service for a cluster or for a Web, EJB, or JMS container running in a cluster.
+See xref:configuring-ha-session-persistence-and-failover.adoc#enabling-the-high-availability-session-persistence-service[Enabling the High Availability Session Persistence Service] for instructions on enabling the session availability service for a cluster or for a Web, EJB, or JMS container running in a cluster.

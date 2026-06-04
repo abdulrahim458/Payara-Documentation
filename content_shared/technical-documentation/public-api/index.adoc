@@ -40,4 +40,4 @@ The Public API is released as a Maven artifact in *Payara Nexus*, in the `payara
 </dependencies>
 ----
 
-For information on the Payara BOM, please see xref:technical-documentation/ecosystem/project-management-tools/maven-bom.adoc[Maven Bom].
+For information on the Payara BOM, please see xref:../ecosystem/project-management-tools/maven-bom.adoc[Maven Bom].

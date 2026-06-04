@@ -25,13 +25,13 @@ TIP: Monitoring Scripting Client or DTrace Monitoring are only usable if their m
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/monitor.adoc#monitor[`monitor`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-monitoring.adoc#enable-monitoring[`enable-monitoring`],
-* xref:technical-documentation/payara-server-documentation/command-reference/disable-monitoring.adoc#disable-monitoring[`disable-monitoring`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-monitoring-service-configuration.adoc#set-monitoring-service-configuration[`set-monitoring-service-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list.adoc#list[`list`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get.adoc#get[`get`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`],
-* xref:technical-documentation/payara-server-documentation/command-reference/dotted-names.adoc#dotted-names[`dotted-names`],
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:monitor.adoc#monitor[`monitor`],
+* xref:enable-monitoring.adoc#enable-monitoring[`enable-monitoring`],
+* xref:disable-monitoring.adoc#disable-monitoring[`disable-monitoring`],
+* xref:set-monitoring-service-configuration.adoc#set-monitoring-service-configuration[`set-monitoring-service-configuration`],
+* xref:list.adoc#list[`list`],
+* xref:get.adoc#get[`get`],
+* xref:set.adoc#set[`set`],
+* xref:dotted-names.adoc#dotted-names[`dotted-names`],
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#administering-the-monitoring-service[Administering the Monitoring Service] in the Payara Server General Administration section

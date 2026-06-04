@@ -27,20 +27,20 @@ A cluster requires a reference to the named configuration that defines the confi
 
 To add instances to the cluster, set the `--cluster` option to the name of the cluster when using either of the following subcommands:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc#create-local-instance[`create-local-instance`]
+* xref:create-instance.adoc#create-instance[`create-instance`]
+* xref:create-local-instance.adoc#create-local-instance[`create-local-instance`]
 
 To delete server instances from the cluster at any time, use one of the following subcommands:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`]
+* xref:delete-instance.adoc#delete-instance[`delete-instance`]
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`]
 
 To associate applications and resources with all instances in the cluster, set the `--target` option to the name of the cluster when performing the following operations:
 
-* Deploying applications by using the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`] subcommand
-* Creating resources by using subcommands such as xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-resource.adoc#create-jdbc-resource[`create-jdbc-resource`]
-* Creating references to applications that are already deployed in other targets by using the xref:technical-documentation/payara-server-documentation/command-reference/create-application-ref.adoc#create-application-ref[`create-application-ref`] subcommand
-* Creating references to resources that are already created in other targets by using the xref:technical-documentation/payara-server-documentation/command-reference/create-resource-ref.adoc#create-resource-ref[`create-resource-ref`] subcommand
+* Deploying applications by using the xref:deploy.adoc#deploy[`deploy`] subcommand
+* Creating resources by using subcommands such as xref:create-jdbc-resource.adoc#create-jdbc-resource[`create-jdbc-resource`]
+* Creating references to applications that are already deployed in other targets by using the xref:create-application-ref.adoc#create-application-ref[`create-application-ref`] subcommand
+* Creating references to resources that are already created in other targets by using the xref:create-resource-ref.adoc#create-resource-ref[`create-resource-ref`] subcommand
 
 This subcommand is supported in remote mode only.
 
@@ -48,7 +48,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -144,7 +144,7 @@ Possible values are as follows:
     * Membership changes
 +
 To match the configuration of the network on which the DAS and clustered instances are deployed, set this value as low as possible.
-    To determine the lowest possible value for your system, use the xref:technical-documentation/payara-server-documentation/command-reference/validate-multicast.adoc#validate-multicast[`validate-multicast`]
+    To determine the lowest possible value for your system, use the xref:validate-multicast.adoc#validate-multicast[`validate-multicast`]
     subcommand.
 +
 A value of 0 ensures that multicast messages never leave the host from which they are broadcast.
@@ -205,12 +205,12 @@ The name must meet the following requirements:
   ** Underscore
   * The name must be unique in the domain and must not be the name of another cluster, a named configuration, a Payara Server instance, or a node.
   * The name must not be `domain`, `server`, or any other keyword that   is reserved by Payara Server. +
-  If the xref:technical-documentation/payara-server-documentation/command-reference/configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`]
+  If the xref:configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`]
   subcommand is to be used to configure a Message Queue cluster to provide JMS services to the Payara Server cluster, the length of
   the Payara Server cluster name is might be restricted: +
-  * If `clustertype` is set to `enhanced` in the xref:technical-documentation/payara-server-documentation/command-reference/configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`]
+  * If `clustertype` is set to `enhanced` in the xref:configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`]
   subcommand, the name can be no longer than n–21 characters, where n is the maximum table name length allowed by the database.
-  * If `configstoretype` is set to `shareddb` in the xref:technical-documentation/payara-server-documentation/command-reference/configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`]
+  * If `configstoretype` is set to `shareddb` in the xref:configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`]
   subcommand, the name can be no longer than n–19 characters, where n is the maximum table name length allowed by the database.
 
 [#examples]
@@ -236,7 +236,7 @@ Therefore, the `GMS_DISCOVERY_URI_LIST` property is set to the locations of the 
 These instances reside on the host whose IP address is `10.152.23.224` and listen for GMS events on ports 9090, 9091, and 9092.
 
 To distinguish colon (`:`) characters in URIs from separators in a property list, colons in URIs are escaped with single quote characters (`'`) and backslash (`\`) characters.
-For more information about escape characters in options for the `asadmin` utility, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+For more information about escape characters in options for the `asadmin` utility, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 This example assumes that the port on which each instance listens for GMS messages is set independently for the instance through the `GMS_LISTENER_PORT-tcpcluster` system property.
 
@@ -285,22 +285,22 @@ Command create-cluster executed successfully.
 
 See Also
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
 
-* xref:technical-documentation/payara-server-documentation/command-reference/create-application-ref.adoc#create-application-ref[`create-application-ref`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-resource.adoc#create-jdbc-resource[`create-jdbc-resource`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc#create-local-instance[`create-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-resource-ref.adoc#create-resource-ref[`create-resource-ref`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-cluster.adoc#delete-cluster[`delete-cluster`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-clusters.adoc#list-clusters[`list-clusters`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-cluster.adoc#start-cluster[`start-cluster`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-cluster.adoc#stop-cluster[`stop-cluster`],
+* xref:create-application-ref.adoc#create-application-ref[`create-application-ref`],
+* xref:create-instance.adoc#create-instance[`create-instance`],
+* xref:create-jdbc-resource.adoc#create-jdbc-resource[`create-jdbc-resource`],
+* xref:create-local-instance.adoc#create-local-instance[`create-local-instance`],
+* xref:create-resource-ref.adoc#create-resource-ref[`create-resource-ref`],
+* xref:delete-cluster.adoc#delete-cluster[`delete-cluster`],
+* xref:delete-instance.adoc#delete-instance[`delete-instance`],
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
+* xref:deploy.adoc#deploy[`deploy`],
+* xref:list-clusters.adoc#list-clusters[`list-clusters`],
+* xref:start-cluster.adoc#start-cluster[`start-cluster`],
+* xref:stop-cluster.adoc#stop-cluster[`stop-cluster`],
 * xref:technical-documentation/payara-server-documentation/command-reference/restart-cluster#restart-cluster[`restart-cluster`],
-* xref:technical-documentation/payara-server-documentation/command-reference/validate-multicast.adoc#validate-multicast[`validate-multicast`]
+* xref:validate-multicast.adoc#validate-multicast[`validate-multicast`]
 * http://felix.apache.org/site/apache-felix-remote-shell.html[Apache Felix Remote Shell^] (http://felix.apache.org/site/apache-felix-remote-shell.html), Java
 * http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.htmlPlatform Debugger Architecture (JPDA) (http://www.oracle.com/technetwork/java/javase/tech/jpda-141715.html)
 

@@ -22,7 +22,7 @@ The `create-protocol` subcommand creates a protocol. This subcommand is supporte
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -69,9 +69,9 @@ Command create-protocol executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-protocol.adoc#delete-protocol[`delete-protocol`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-protocols.adoc#list-protocols[`list-protocols`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc#create-network-listener[`create-network-listener`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:delete-protocol.adoc#delete-protocol[`delete-protocol`],
+* xref:list-protocols.adoc#list-protocols[`list-protocols`],
+* xref:create-network-listener.adoc#create-network-listener[`create-network-listener`]
 
 

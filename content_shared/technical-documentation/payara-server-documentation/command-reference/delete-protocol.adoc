@@ -21,7 +21,7 @@ The `delete-protocol` subcommand removes the specified protocol. This subcommand
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -65,8 +65,8 @@ Command delete-protocol executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-protocol.adoc#create-protocol[`create-protocol`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-protocols.adoc#list-protocols[`list-protocols`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-protocol.adoc#create-protocol[`create-protocol`],
+* xref:list-protocols.adoc#list-protocols[`list-protocols`]
 
 

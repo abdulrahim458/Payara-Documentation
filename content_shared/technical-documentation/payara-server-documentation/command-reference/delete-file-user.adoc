@@ -22,7 +22,7 @@ The `delete-file-user` subcommand deletes the entry in the keyfile for the speci
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -69,10 +69,10 @@ Command delete-file-user executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-file-user.adoc#create-file-user[`create-file-user`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-file-groups.adoc#list-file-groups[`list-file-groups`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-file-users.adoc#list-file-users[`list-file-users`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-file-user.adoc#update-file-user[`update-file-user`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-file-user.adoc#create-file-user[`create-file-user`],
+* xref:list-file-groups.adoc#list-file-groups[`list-file-groups`],
+* xref:list-file-users.adoc#list-file-users[`list-file-users`],
+* xref:update-file-user.adoc#update-file-user[`update-file-user`]
 
 

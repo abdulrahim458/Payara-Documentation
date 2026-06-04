@@ -5,13 +5,13 @@ There are three valid methods of fully upgrading to a newer release of Payara En
 NOTE: If you are migrating from Payara Community edition to Payara Enterprise edition, you must use the backup and restore method.
 
 . Backing up and restoring the existing configuration to a new installation.
-xref:technical-documentation/payara-server-documentation/upgrade-guide/backup-and-restore-method.adoc[Read Backup and Restore Method]
+xref:backup-and-restore-method.adoc[Read Backup and Restore Method]
 
 . Maintaining completely separate domain and node directories and pointing the new version to the existing directories.
-xref:technical-documentation/payara-server-documentation/upgrade-guide/domain-and-node-directories-method.adoc[Read Domain and Node Directories Method]
+xref:domain-and-node-directories-method.adoc[Read Domain and Node Directories Method]
 
 . Using the Payara Upgrade Tool.
-xref:technical-documentation/payara-server-documentation/upgrade-guide/upgrade-tool.adoc[Read Payara Upgrade Tool Method]
+xref:upgrade-tool.adoc[Read Payara Upgrade Tool Method]
 
 [#jdk-11-upgrade-considerations]
 == JDK 11: Upgrade Considerations

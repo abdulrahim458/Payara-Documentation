@@ -314,9 +314,9 @@ Deploying an application installs the files that comprise the application into E
 [#to-deploy-an-application-from-an-archive-file-or-a-directory]
 ==== To Deploy an Application from an Archive File or a Directory
 
-An archive file contains the resources, deployment descriptor, and classes of an application. The content of the file must be organized in the directory structure that the Jakarta EE specifications define for the type of archive that the file contains. For more information, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#deploying-applications[Deploying Applications] in the Payara Server Application Deployment section.
+An archive file contains the resources, deployment descriptor, and classes of an application. The content of the file must be organized in the directory structure that the Jakarta EE specifications define for the type of archive that the file contains. For more information, see xref:../payara-server-documentation/application-deployment/deploying-applications.adoc#deploying-applications[Deploying Applications] in the Payara Server Application Deployment section.
 
-Deploying an application from a directory enables you to deploy an application without the need to package the application in an archive file. The contents of the directory must match the contents of the expanded Jakarta EE archive file as laid out by the Payara Server. The directory must be accessible to the machine on which the deploying application runs. For more information about the requirements for deploying an application from a directory, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module-in-a-directory-format[To Deploy an Application or Module in a Directory Format] in the Payara Server Application Deployment section.
+Deploying an application from a directory enables you to deploy an application without the need to package the application in an archive file. The contents of the directory must match the contents of the expanded Jakarta EE archive file as laid out by the Payara Server. The directory must be accessible to the machine on which the deploying application runs. For more information about the requirements for deploying an application from a directory, see xref:../payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module-in-a-directory-format[To Deploy an Application or Module in a Directory Format] in the Payara Server Application Deployment section.
 
 If some resources needed by an application are not under the application's directory, see xref:creating-a-scattered-archive[Creating a Scattered Archive].
 
@@ -326,7 +326,7 @@ If some resources needed by an application are not under the application's direc
 +
 Specify the `java.io.File` class instance you created previously as the first method parameter.
 +
-For information about optional parameters you can set, see the descriptions of the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`] subcommand parameters. Simply quote each parameter in the method, for example `"--force=true"`.
+For information about optional parameters you can set, see the descriptions of the xref:../payara-server-documentation/command-reference/deploy.adoc[`deploy`] subcommand parameters. Simply quote each parameter in the method, for example `"--force=true"`.
 
 This example shows code for deploying an application from the archive file `c:\samples\simple.war` and setting the name, context root, and force parameters.
 
@@ -359,7 +359,7 @@ Undeploy an application when the application is no longer required to run in Pay
 
 To undeploy an application, invoke the `undeploy` method of an existing `Deployer` object. In the method invocation, pass the name of the application as a parameter. This name is specified when the application is deployed.
 
-For information about optional parameters you can set, see the descriptions of the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`] command parameters. Simply quote each parameter in the method, for example `"--cascade=true"`.
+For information about optional parameters you can set, see the descriptions of the xref:../payara-server-documentation/command-reference/deploy.adoc[`deploy`] command parameters. Simply quote each parameter in the method, for example `"--cascade=true"`.
 
 To undeploy all deployed applications, invoke the `undeployAll` method of an existing `EmbeddedDeployer` object. This method takes no parameters.
 
@@ -790,14 +790,14 @@ a|In order of precedence:
 
 To change the JUL (Java Util Logging) log levels in Payara Server Embedded, you can follow the steps in this section, or you can use the Embedded Server API as shown in the previous examples.
 
-For more information about Payara Server logging, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#administering-the-logging-service[Administering the Logging Service] in the Payara Server General Administration section.
+For more information about Payara Server logging, see xref:../payara-server-documentation/general-administration/administering-the-logging-service.adoc#administering-the-logging-service[Administering the Logging Service] in the Payara Server General Administration section.
 
 You can change log levels in Payara Embedded Server in either of the following ways:
 
 * Using the Payara Server Embedded Server API
 * Creating a custom logging configuration file
 
-Both these ways require logger names. For a list of logger names, use the xref:technical-documentation/payara-server-documentation/command-reference/list-log-levels.adoc[`list-log-levels`] subcommand.
+Both these ways require logger names. For a list of logger names, use the xref:../payara-server-documentation/command-reference/list-log-levels.adoc[`list-log-levels`] subcommand.
 
 This example shows how to set log levels using the `getLogger` method in the API:
 
@@ -916,4 +916,4 @@ When running Payara Embedded on JDK 17, you must update your client side run con
 [#see-also]
 == See Also
 
-* xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-embedded.adoc[Payara Arquillian Connector]
+* xref:../ecosystem/connector-suites/arquillian-containers/payara-server-embedded.adoc[Payara Arquillian Connector]

@@ -3,7 +3,7 @@
 
 This chapter describes important information about running Payara Server in a secure environment.
 
-This chapter assumes that you are familiar with security features such as authentication, authorization and certificates. If you are not, see xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-system-security[Administering System Security] first.
+This chapter assumes that you are familiar with security features such as authentication, authorization and certificates. If you are not, see xref:administering-system-security.adoc#administering-system-security[Administering System Security] first.
 
 [#determining-your-security-needs]
 == Determining Your Security Needs
@@ -55,7 +55,7 @@ When you install Payara Server or create a new domain, secure admin is disabled 
 
 NOTE: Imposing a heightened level of security is optional.
 
-See xref:technical-documentation/payara-server-documentation/security-guide/managing-administrative-security.adoc#managing-administrative-security[Managing Administrative Security] for information on enabling the secure administration feature.
+See xref:managing-administrative-security.adoc#managing-administrative-security[Managing Administrative Security] for information on enabling the secure administration feature.
 
 [#run-on-the-web-profile-if-possible]
 == Run on the Web Profile If Possible
@@ -203,7 +203,7 @@ In addition, secure administration helps to prevent DAS-to-DAS and instance-to-i
 
 The secure administration feature provides a secure environment, in which you can be confident that rogue users or processes cannot intercept or corrupt administration traffic or impersonate legitimate Payara Server components.
 
-See xref:technical-documentation/payara-server-documentation/security-guide/managing-administrative-security.adoc#managing-administrative-security[Managing Administrative Security].
+See xref:managing-administrative-security.adoc#managing-administrative-security[Managing Administrative Security].
 
 |Protect the `.asadminpass` file
 |If you create a domain with the `--savelogin` option, `create-domain`
@@ -230,7 +230,7 @@ by clients by default because a certificate authority does not vouch for
 their authenticity.
 
 You can instead use your own custom CA-issued certificates, as described in
-xref:technical-documentation/payara-server-documentation/security-guide/managing-administrative-security.adoc#using-your-own-certificates[Using Your Own Certificates].
+xref:managing-administrative-security.adoc#using-your-own-certificates[Using Your Own Certificates].
 
 |Restrict the size and the time limit of requests on external channels
 to prevent *Denial of Service (DoS) attacks*.
@@ -242,7 +242,7 @@ NOTE: The default setting for maximum post size is `2097152` bytes and `900` sec
 |
 Consider setting module log levels for the `javax.enterprise.system.ssl.security.` and `javax.enterprise.system.core.security.` You can set a level from `SEVERE` to `FINEST` (the default is `INFO`), but be aware that the finer logging levels may produce a large log file.
 
-By default, Payara Server logging messages are recorded in the server log, and you can set the file rotation limit, as described in xref:technical-documentation/payara-server-documentation/command-reference/rotate-log.adoc[`rotate-log`]
+By default, Payara Server logging messages are recorded in the server log, and you can set the file rotation limit, as described in xref:../command-reference/rotate-log.adoc[`rotate-log`]
 
 |Ensure that you have correctly assigned users to the correct groups.
 |Make sure you have assigned the desired set of users to the right groups. In particular, make sure that users assigned to the `asadmin` group need to be members of that group.
@@ -294,7 +294,7 @@ If Java native code behaves in an errant manner, it is only constrained by the o
 |If your applications contain untrusted code, enable the Java security manager.
 |The Java security manager defines and enforces permissions for classes that run within a JVM. In many cases, where the threat model does not include malicious code being run in the JVM, the Java security manager is unnecessary.
 
-However, when third parties use Payara Server and untrusted classes are being run, the Java security manager may be useful. See "xref:technical-documentation/application-development/securing-applications.adoc#enabling-and-disabling-the-security-manager[Enabling and Disabling the Security Manager]" in the Application Development section.
+However, when third parties use Payara Server and untrusted classes are being run, the Java security manager may be useful. See "xref:../../application-development/securing-applications.adoc#enabling-and-disabling-the-security-manager[Enabling and Disabling the Security Manager]" in the Application Development section.
 
 |Replace HTML special characters when servlets or JSPs return user-supplied data.
 |

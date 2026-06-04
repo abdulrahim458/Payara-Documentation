@@ -1,6 +1,6 @@
 = Request Tracing in Payara Micro
 
-The Request Tracing service works the same on Payara Micro and will trace the same events described in its xref:technical-documentation/application-development/using-request-tracing-in-applications.adoc#request-tracing[documentation].
+The Request Tracing service works the same on Payara Micro and will trace the same events described in its xref:../../application-development/using-request-tracing-in-applications.adoc#request-tracing[documentation].
 
 [#usage]
 == Usage

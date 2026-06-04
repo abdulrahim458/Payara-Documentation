@@ -24,7 +24,7 @@ The `set-jdbc-config-source-configuration` provides configuration options to set
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -68,5 +68,5 @@ asadmin set-jdbc-config-source-configuration --jndiName jndi-name --tableName Bo
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/get-jdbc-config-source-configuration.adoc#get-jdbc-config-source-configuration[`get-jdbc-config-source-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:get-jdbc-config-source-configuration.adoc#get-jdbc-config-source-configuration[`get-jdbc-config-source-configuration`]

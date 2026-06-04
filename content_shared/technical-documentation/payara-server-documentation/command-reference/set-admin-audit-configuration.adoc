@@ -27,7 +27,7 @@ The `set-admin-audit-configuration` subcommand can be used to set the configurat
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -69,8 +69,8 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/get-admin-audit-configuration.adoc#get-admin-audit-configuration[`get-admin-audit-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:get-admin-audit-configuration.adoc#get-admin-audit-configuration[`get-admin-audit-configuration`]
 
 
 

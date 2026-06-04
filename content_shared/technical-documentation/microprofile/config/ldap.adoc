@@ -19,9 +19,9 @@ image:microprofile/config/ldap/admin-console-example.png[alt="Payara Server Admi
 
 The following administration commands can be used to configure the MicroProfile LDAP config source:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/set-ldap-config-source-configuration.adoc#set-ldap-config-source-configuration[`set-ldap-config-source-configuration`].
+* xref:../../payara-server-documentation/command-reference/set-ldap-config-source-configuration.adoc#set-ldap-config-source-configuration[`set-ldap-config-source-configuration`].
 
-* xref:technical-documentation/payara-server-documentation/command-reference/get-ldap-config-source-configuration.adoc#get-ldap-config-source-configuration[`get-ldap-config-source-configuration`].
+* xref:../../payara-server-documentation/command-reference/get-ldap-config-source-configuration.adoc#get-ldap-config-source-configuration[`get-ldap-config-source-configuration`].
 
 [#usage]
 == Usage

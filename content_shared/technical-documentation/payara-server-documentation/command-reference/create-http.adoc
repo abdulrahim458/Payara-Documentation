@@ -27,7 +27,7 @@ The `create-http` subcommand creates a set of HTTP parameters for a protocol, wh
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -84,10 +84,10 @@ Command create-http executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc#create-network-listener[`create-network-listener`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-protocol.adoc#create-protocol[`create-protocol`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-virtual-server.adoc#create-virtual-server[`create-virtual-server`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-http.adoc#delete-http[`delete-http`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-network-listener.adoc#create-network-listener[`create-network-listener`],
+* xref:create-protocol.adoc#create-protocol[`create-protocol`],
+* xref:create-virtual-server.adoc#create-virtual-server[`create-virtual-server`],
+* xref:delete-http.adoc#delete-http[`delete-http`]
 
 

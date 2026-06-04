@@ -21,7 +21,7 @@ This command can be used to restart the Data Grid/Hazelcast subsystem in the spe
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -58,13 +58,13 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc[Domain Data Grid],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-hazelcast-cluster-members.adoc[`list-hazelcast-cluster-members`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-hazelcast-members.adoc[`list-hazelcast-members`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-cache-keys.adoc[`list-cache-keys`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-caches.adoc[`list-caches`],
-* xref:technical-documentation/payara-server-documentation/command-reference/clear-cache.adoc[`clear-cache`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get-hazelcast-configuration.adoc[`get-hazelcast-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/generate-encryption-key.adoc[`generate-encryption-key`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:../high-availability/administering-the-domain-data-grid.adoc[Domain Data Grid],
+* xref:list-hazelcast-cluster-members.adoc[`list-hazelcast-cluster-members`],
+* xref:list-hazelcast-members.adoc[`list-hazelcast-members`],
+* xref:list-cache-keys.adoc[`list-cache-keys`],
+* xref:list-caches.adoc[`list-caches`],
+* xref:clear-cache.adoc[`clear-cache`],
+* xref:set-hazelcast-configuration.adoc[`set-hazelcast-configuration`],
+* xref:get-hazelcast-configuration.adoc[`get-hazelcast-configuration`],
+* xref:generate-encryption-key.adoc[`generate-encryption-key`]

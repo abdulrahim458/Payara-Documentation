@@ -1,17 +1,17 @@
 = Administering the Notification Service
 :ordinal: 11
 
-Payara Server comes with a general Notification service that can be used to log events which come from other services, such as the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc[Monitoring Service], the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-healthcheck-service.adoc[HealthCheck service] or the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-request-tracing-service.adoc[Request Tracing Service].
+Payara Server comes with a general Notification service that can be used to log events which come from other services, such as the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc[Monitoring Service], the xref:administering-the-healthcheck-service.adoc[HealthCheck service] or the xref:administering-the-request-tracing-service.adoc[Request Tracing Service].
 
 [#notification-service-command-reference]
 == Notification Service Configuration Commands
 
 The following Asadmin CLI subcommands can be used to configure the notification service in general:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/notification-configure.adoc[`notification-configure`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-notifiers.adoc[`list-notifiers`]
-* xref:technical-documentation/payara-server-documentation/command-reference/get-notification-configuration.adoc[`get-notification-configuration`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-notification-configuration.adoc[`set-notification-configuration`]
+* xref:../command-reference/notification-configure.adoc[`notification-configure`]
+* xref:../command-reference/list-notifiers.adoc[`list-notifiers`]
+* xref:../command-reference/get-notification-configuration.adoc[`get-notification-configuration`]
+* xref:../command-reference/set-notification-configuration.adoc[`set-notification-configuration`]
 
 [#notifiers]
 == Notifiers
@@ -63,7 +63,7 @@ true     WARNING  false
 Command get-log-notifier-configuration executed successfully.
 ----
 
-See xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#notification-logging[Notification Logging] for more information on how to configure specific details of the server logging settings.
+See xref:administering-the-logging-service.adoc#notification-logging[Notification Logging] for more information on how to configure specific details of the server logging settings.
 
 [#jms-notifier]
 === JMS Notifier
@@ -303,7 +303,7 @@ public class ObserverBean{
 }
 ----
 
-IMPORTANT: For an application to use the `Inbound` annotation and `EventbusMessage` class, it will have to define the xref:technical-documentation/public-api/index.adoc[Payara Public API] as a project dependency.
+IMPORTANT: For an application to use the `Inbound` annotation and `EventbusMessage` class, it will have to define the xref:../../public-api/index.adoc[Payara Public API] as a project dependency.
 
 [#monitoring-notification-configuration]
 == Monitoring Service Notifiers Configuration
@@ -373,4 +373,4 @@ TIP: You can get the list of all available notifiers by using the `list-notifier
 [#see-also]
 == See Also
 
-* xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc[Logging Configuration]
+* xref:administering-the-logging-service.adoc[Logging Configuration]

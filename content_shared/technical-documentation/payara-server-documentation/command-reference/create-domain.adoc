@@ -53,7 +53,7 @@ developer, cluster, or enterprise profile for the domain you create. This subcom
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -126,7 +126,7 @@ If this parameter is omitted, the default location will be used.
   If `false` (default), the keystore is encrypted with a well-known
   password that is built into the system. Encrypting the keystore with a password that is built into the system provides no additional security. +
   If `true`, the subcommand obtains the master password from the `AS_ADMIN_MASTERPASSWORD` entry in the password file or prompts for the master password. The password file is specified in the
-  `--passwordfile` option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]utility. +
+  `--passwordfile` option of the xref:asadmin.adoc#asadmin-1m[`asadmin`]utility. +
   If the `--savemasterpassword` option is `true`, this option is also true, regardless of the value that is specified on the command line.
 *`--domainproperties`*:
   Setting the optional name/value pairs overrides the default values for
@@ -385,12 +385,12 @@ Command create-domain executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-domain.adoc#delete-domain[`delete-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc#list-domains[`list-domains`],
-* xref:technical-documentation/payara-server-documentation/command-reference/login.adoc#login[`login`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc#start-domain[`start-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc#stop-domain[`stop-domain`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:delete-domain.adoc#delete-domain[`delete-domain`],
+* xref:list-domains.adoc#list-domains[`list-domains`],
+* xref:login.adoc#login[`login`],
+* xref:start-domain.adoc#start-domain[`start-domain`],
+* xref:stop-domain.adoc#stop-domain[`stop-domain`]
 * https://felix.apache.org/documentation/subprojects/apache-felix-remote-shell.html[Apache Felix Remote Shell^] (`https://felix.apache.org/documentation/subprojects/apache-felix-remote-shell.html`)
 * https://docs.oracle.com/javase/8/docs/technotes/guides/jpda/[Java Platform Debugger Architecture (JPDA)^] (`https://docs.oracle.com/javase/8/docs/technotes/guides/jpda/`)
 

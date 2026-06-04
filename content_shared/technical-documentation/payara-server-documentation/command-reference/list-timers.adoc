@@ -22,7 +22,7 @@ This command is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -63,6 +63,6 @@ The list-timers command was executed successfully.
 * xref:technical-documentation/payara-server-documentation/command-reference/asadmin#asadmin-1m[`asadmin`],
 * xref:technical-documentation/payara-server-documentation/command-reference/migrate-timers#migrate-timers[`migrate-timers`]
 * https://jakarta.ee/specifications/platform/8/apidocs/javax/ejb/timerservice[Using the Timer Service^] in The Java EE 8 Tutorial
-* xref:technical-documentation/application-development/using-jakarta-enterprise-beans-technology.adoc#ejb-timer-service[EJB Timer Service] in the Payara Server Application Development section
+* xref:../../application-development/using-jakarta-enterprise-beans-technology.adoc#ejb-timer-service[EJB Timer Service] in the Payara Server Application Development section
 
 

@@ -18,7 +18,7 @@ Payara Micro supports a number of commands to help you configure access logging.
 |Sets user defined prefix for access log filenames|
 |============================
 
-All options available for configuring Payara Micro can be seen by running the JAR with the `--help` option, or by consulting xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/command-line-options/command-line-options.adoc[Payara Micro Command Line Options]
+All options available for configuring Payara Micro can be seen by running the JAR with the `--help` option, or by consulting xref:../../payara-micro-configuration-and-management/micro-management/command-line-options/command-line-options.adoc[Payara Micro Command Line Options]
 
 [#usage-examples]
 == Usage Examples

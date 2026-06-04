@@ -28,7 +28,7 @@ For example, where the source is `server`, the `--sourceName` can be used to spe
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -77,6 +77,6 @@ asadmin get-config-property --propertyName=JMSBrokerURL --source=module --source
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-config-property.adoc#delete-config-property[`delete-config-property`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-config-property.adoc#set-config-property[`set-config-property`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:delete-config-property.adoc#delete-config-property[`delete-config-property`]
+* xref:set-config-property.adoc#set-config-property[`set-config-property`]

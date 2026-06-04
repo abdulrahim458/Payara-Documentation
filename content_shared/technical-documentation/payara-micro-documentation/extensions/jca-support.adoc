@@ -25,4 +25,4 @@ NOTE: When deploying multiple files to Payara Micro, the order of `--deploy` opt
 [#see-also]
 == See Also
 
-* xref:technical-documentation/payara-micro-documentation/extensions/jca-support.adoc[User Guide: Using Payara Micro as a JMS Client]
+* xref:jca-support.adoc[User Guide: Using Payara Micro as a JMS Client]

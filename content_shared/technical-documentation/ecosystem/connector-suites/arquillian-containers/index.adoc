@@ -7,11 +7,11 @@ Arquillian supports multiple containers (among them Payara Platform distribution
 In this context, the following container adapters have been implemented within the Payara Ecosystem tools to provide integration with Payara Platform distributions containers:
 
 * For Payara Server:
-** xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-embedded.adoc[Payara Server Embedded (`server-embedded`)]
-** xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-managed.adoc[Payara Server Managed (`server-managed`)]
-** xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-remote.adoc[Payara Server Remote (`server-remote`)]
+** xref:payara-server-embedded.adoc[Payara Server Embedded (`server-embedded`)]
+** xref:payara-server-managed.adoc[Payara Server Managed (`server-managed`)]
+** xref:payara-server-remote.adoc[Payara Server Remote (`server-remote`)]
 * For Payara Micro:
-** xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-micro-managed.adoc[Payara Micro Managed (`micro-managed`)]
+** xref:payara-micro-managed.adoc[Payara Micro Managed (`micro-managed`)]
 
 [#getting-the-adapters]
 == Where Can I Get the Adapters?

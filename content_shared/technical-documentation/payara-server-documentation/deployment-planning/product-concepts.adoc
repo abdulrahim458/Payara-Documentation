@@ -95,7 +95,7 @@ Since the DAS is a Payara Server instance, it can also host Jakarta EE applicati
 
 The DAS keeps a repository containing the configuration of its domain and all the deployed applications. If the DAS is inactive or down, there is no impact on the performance or availability of active server instances, however administrative changes cannot be made. In certain cases, for security purposes, it may be useful to intentionally stop the DAS process, for example to reboot the host operating system to install a kernel patch or a hardware upgrade.
 
-Administrative commands are provided in order to back up and restore the domain configuration and applications. With the standard backup and restore procedures, you can quickly restore working configurations. If the DAS host fails, you must create a new DAS installation to restore the previous domain configuration. For instructions, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#administering-domains[Administering Domains]" in the Payara Server General Administration section.
+Administrative commands are provided in order to back up and restore the domain configuration and applications. With the standard backup and restore procedures, you can quickly restore working configurations. If the DAS host fails, you must create a new DAS installation to restore the previous domain configuration. For instructions, see "xref:../general-administration/administering-domains.adoc#administering-domains[Administering Domains]" in the Payara Server General Administration section.
 
 [#clusters]
 === Clusters
@@ -147,11 +147,11 @@ With `memory` persistence, the state is always kept in memory and does not survi
 With `hazelcast` persistence, Payara Server stores session data in the Data Grid, implemented internally using a Hazelcast cluster. For SFSBs, if `hazelcast` persistence is not specified, Payara Server stores state information in the `session-store` subdirectory of its corresponding instance.
 
 Checking an SFSB state for changes that need to be saved is called *checkpointing*.
-When enabled, checkpointing generally occurs after any transaction involving the SFSB is completed, even if the transaction rolls back. For more information on developing stateful session beans,see "xref:technical-documentation/application-development/using-jakarta-enterprise-beans-technology.adoc#using-session-beans[Using Session Beans]" in the Payara Server Application Development section. For more information on enabling SFSB failover, see "xref:technical-documentation/application-development/using-jakarta-enterprise-beans-technology.adoc#stateful-session-bean-failover[Stateful Session Bean Failover]" in the Payara Server High Availability section.
+When enabled, checkpointing generally occurs after any transaction involving the SFSB is completed, even if the transaction rolls back. For more information on developing stateful session beans,see "xref:../../application-development/using-jakarta-enterprise-beans-technology.adoc#using-session-beans[Using Session Beans]" in the Payara Server Application Development section. For more information on enabling SFSB failover, see "xref:../../application-development/using-jakarta-enterprise-beans-technology.adoc#stateful-session-bean-failover[Stateful Session Bean Failover]" in the Payara Server High Availability section.
 
 Apart from the number of requests being served by Payara Server, the session persistence configuration settings also affect the session information in each request.
 
-For more information on configuring session persistence, see "xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#configuring-high-availability-session-persistence-and-failover[Configuring High Availability Session Persistence and Failover]" in the Payara Server High Availability section.
+For more information on configuring session persistence, see "xref:../high-availability/configuring-ha-session-persistence-and-failover.adoc#configuring-high-availability-session-persistence-and-failover[Configuring High Availability Session Persistence and Failover]" in the Payara Server High Availability section.
 
 [#iiop-load-balancing-in-a-cluster]
 === IIOP Load Balancing in a Cluster
@@ -179,7 +179,7 @@ For basic JMS administration tasks, use the Administration Console and `asadmin`
 
 For advanced tasks, including administering a Message Queue cluster, use the tools provided in the `as-install/mq/bin` directory.
 
-For information on deploying JMS applications and Message Queue clustering for message failover, see xref:technical-documentation/payara-server-documentation/deployment-planning/planning-your-deployment.adoc#planning-your-deployment[Planning Message Queue Broker Deployment].
+For information on deploying JMS applications and Message Queue clustering for message failover, see xref:planning-your-deployment.adoc#planning-your-deployment[Planning Message Queue Broker Deployment].
 
 [#configuration-roadmap-for-high-availability-of-payara-server]
 == Configuration Roadmap for High Availability of Payara Server
@@ -190,11 +190,11 @@ The following procedure lists the major tasks for configuring Payara Server for 
 === To Configure Payara Server for High Availability
 
 . Determine your requirements and goals for performance and QoS. For more information, see the following documentation:
-* xref:technical-documentation/payara-server-documentation/deployment-planning/planning-your-deployment.adoc#establishing-performance-goals[Establishing Performance Goals]
-* xref:technical-documentation/payara-server-documentation/deployment-planning/planning-your-deployment.adoc#planning-the-network-configuration[Planning the Network Configuration]
-* xref:technical-documentation/payara-server-documentation/deployment-planning/planning-your-deployment.adoc#planning-for-availability[Planning for Availability]
+* xref:planning-your-deployment.adoc#establishing-performance-goals[Establishing Performance Goals]
+* xref:planning-your-deployment.adoc#planning-the-network-configuration[Planning the Network Configuration]
+* xref:planning-your-deployment.adoc#planning-for-availability[Planning for Availability]
 
-. Size your system. For more information, see xref:technical-documentation/payara-server-documentation/deployment-planning/planning-your-deployment.adoc#design-decisions[Design Decisions].
+. Size your system. For more information, see xref:planning-your-deployment.adoc#design-decisions[Design Decisions].
 . Install Payara Server
 
 . If you plan to administer your clusters centrally, set up secure shell (SSH) for centralized administration.
@@ -202,20 +202,20 @@ The following procedure lists the major tasks for configuring Payara Server for 
 +
 For more information, see the following documentation:
 +
-* "xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#administering-domains[Administering Domains]" in the Payara Server General Administration section
-* "xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-nodes.adoc#administering-payara-server-nodes[Administering Payara Server Nodes]" in the Payara Server High Availability section
-* "xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-clusters.adoc#administering-payara-server-clusters[Administering Payara Server Clusters]" in the Payara Server High Availability section
-* "xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#administering-payara-server-instances[Administering Payara Server Instances]" in the Payara Server High Availability section
-* "xref:technical-documentation/payara-server-documentation/general-administration/administering-http-connectivity.adoc#administering-virtual-servers[Administering Virtual Servers]" in the Payara Server General Administration section
+* "xref:../general-administration/administering-domains.adoc#administering-domains[Administering Domains]" in the Payara Server General Administration section
+* "xref:../high-availability/administering-payara-server-nodes.adoc#administering-payara-server-nodes[Administering Payara Server Nodes]" in the Payara Server High Availability section
+* "xref:../high-availability/administering-payara-server-clusters.adoc#administering-payara-server-clusters[Administering Payara Server Clusters]" in the Payara Server High Availability section
+* "xref:../high-availability/administering-payara-server-instances.adoc#administering-payara-server-instances[Administering Payara Server Instances]" in the Payara Server High Availability section
+* "xref:../general-administration/administering-http-connectivity.adoc#administering-virtual-servers[Administering Virtual Servers]" in the Payara Server General Administration section
 
-. Configure your load balancer, tentatively, using Apache Mod JK. For more information, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-web-applications.adoc#administering-mod_jk[Administering mod_jk]" in the Payara Server General Administration section.
+. Configure your load balancer, tentatively, using Apache Mod JK. For more information, see "xref:../general-administration/administering-web-applications.adoc#administering-mod_jk[Administering mod_jk]" in the Payara Server General Administration section.
 
 . Configure the web container and EJB container for replicated session persistence. +
-For more information, see "xref:technical-documentation/payara-server-documentation/high-availability/configuring-ha-session-persistence-and-failover.adoc#configuring-high-availability-session-persistence-and-failover[Configuring High Availability Session Persistence and Failover]" in the Payara Server High Availability section.
+For more information, see "xref:../high-availability/configuring-ha-session-persistence-and-failover.adoc#configuring-high-availability-session-persistence-and-failover[Configuring High Availability Session Persistence and Failover]" in the Payara Server High Availability section.
 
 . If you are using messaging extensively, configure Java Message Service (JMS) clusters for failover.
 +
 For more information, see the following documentation:
 +
-* xref:technical-documentation/payara-server-documentation/deployment-planning/planning-your-deployment.adoc#planning-message-queue-broker-deployment[Planning Message Queue Broker Deployment]
-* "xref:technical-documentation/payara-server-documentation/high-availability/configuring-jms-high-availability.adoc#configuring-java-message-service-high-availability[Configuring Java Message Service High Availability]" in the Payara Server High Availability section
+* xref:planning-your-deployment.adoc#planning-message-queue-broker-deployment[Planning Message Queue Broker Deployment]
+* "xref:../high-availability/configuring-jms-high-availability.adoc#configuring-java-message-service-high-availability[Configuring Java Message Service High Availability]" in the Payara Server High Availability section

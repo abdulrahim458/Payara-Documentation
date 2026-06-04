@@ -7,13 +7,13 @@ This section details how to configure a Payara Micro instance.
 == Configuring an Instance from the Command Line
 
 As described in
-xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/deploying-applications/deploy-applications.adoc[Deploying From the Command Line],
+xref:deploying-applications/deploy-applications.adoc[Deploying From the Command Line],
 the starting and configuration of an instance can be done in its entirety on
 one line.
 
 The options available can be seen by running the JAR with the `--help` option,
 or by consulting the
-xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/command-line-options/command-line-options.adoc[Payara Micro Command Line Options]
+xref:command-line-options/command-line-options.adoc[Payara Micro Command Line Options]
 section.
 
 The general structure of starting, configuring, and deploying an application to
@@ -34,7 +34,7 @@ java -jar payara-micro.jar --port 2468
 [#warmup]
 === Separating Configuration from Production Run
 
-An instance can be configured separately, but only when xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/jar-structure-and-configuration/root-directory.adoc[persistent root configuration directory] is specified by means of command line argument `--rootDir`.
+An instance can be configured separately, but only when xref:jar-structure-and-configuration/root-directory.adoc[persistent root configuration directory] is specified by means of command line argument `--rootDir`.
 
 When switch `--warmup` is supplied all configuration and deployment command line parameters are applied to configuration directory and the instance immediately shuts down:
 
@@ -96,11 +96,11 @@ however.
 The configuration methods available to you should be detected by your IDE, allowing
 you to view them using the auto-complete feature common to most popular IDEs.
 Alternatively, you can consult the
-xref:technical-documentation/payara-micro-documentation/api/payara-micro-api/using-the-payara-micro-api.adoc[Payara Micro Configuration Methods]
+xref:../../api/payara-micro-api/using-the-payara-micro-api.adoc[Payara Micro Configuration Methods]
 section.
 
 As noted in the
-xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/deploying-applications/deploy-applications-programmatically.adoc[Deploying an Application Programmatically]
+xref:deploying-applications/deploy-applications-programmatically.adoc[Deploying an Application Programmatically]
 section, you can either call the desired configuration commands on one line during
 instance initialization, or on separate lines after creating a `PayaraMicro` variable.
 
@@ -276,7 +276,7 @@ total 304K
 IMPORTANT: Additional JAR files that are placed in the `$\{PAYARA_INSTALL_DIR}/lib`
 directory will be ignored when being packaged to the Uber JAR. To package additional
 JAR files into an Uber JAR, check the
-xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/jar-structure-and-configuration/adding-jars.adoc[Adding Third Party JARs section]
+xref:jar-structure-and-configuration/adding-jars.adoc[Adding Third Party JARs section]
 
 [#configuring-payara-micro-via-system-properties]
 == Configuring Payara Micro via System Properties and Environment Variables

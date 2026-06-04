@@ -25,7 +25,7 @@ This command can be used to configure the settings of the REST Monitoring subsys
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -66,6 +66,6 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/monitoring.adoc[Monitoring Basics]
-* xref:technical-documentation/payara-server-documentation/command-reference/get-rest-monitoring-configuration.adoc[`get-rest-monitoring-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:monitoring.adoc[Monitoring Basics]
+* xref:get-rest-monitoring-configuration.adoc[`get-rest-monitoring-configuration`]

@@ -50,6 +50,6 @@ an application, for example in the _web.xml_ standard deployment descriptor:
 [#see-also]
 == See Also
 
-* xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/database-management/log-jdbc-calls.adoc[JDBC Call Logging in Payara Micro]
-* xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/database-management/sql-trace-listeners.adoc[SQL Trace Listeners in Payara Micro]
-* * xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#sql-management-overview[SQL in Payara Server]
+* xref:log-jdbc-calls.adoc[JDBC Call Logging in Payara Micro]
+* xref:sql-trace-listeners.adoc[SQL Trace Listeners in Payara Micro]
+* * xref:../../../payara-server-documentation/general-administration/administering-database-connectivity.adoc#sql-management-overview[SQL in Payara Server]

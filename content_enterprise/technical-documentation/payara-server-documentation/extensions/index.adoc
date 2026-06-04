@@ -4,5 +4,5 @@ Payara Server Enterprise Edition allows plugin extensions to expand the features
 
 Currently, the following extensions are provided:
 
-xref:technical-documentation/payara-server-documentation/extensions/grpc-support/index.adoc[gRPC Support] +
+xref:grpc-support/index.adoc[gRPC Support] +
 The gRPC Support module allows web applications to define gRPC services which can be consumed by client applications.

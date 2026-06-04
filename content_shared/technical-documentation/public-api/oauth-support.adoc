@@ -124,9 +124,9 @@ public class SecurityBean {
 
 The client secret can be input directly, or for added security it can be aliased using any of the following features:
 
-* xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases]
-* xref:technical-documentation/payara-server-documentation/general-administration/configuration-variables-reference.adoc[Environment Variables / System Properties]
-* xref:technical-documentation/microprofile/config/index.adoc[Config API]
+* xref:../payara-server-documentation/security-guide/administering-system-security.adoc#administering-password-aliases[Password Aliases]
+* xref:../payara-server-documentation/general-administration/configuration-variables-reference.adoc[Environment Variables / System Properties]
+* xref:../microprofile/config/index.adoc[Config API]
 
 [#see-also]
 == See Also

@@ -22,7 +22,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -59,9 +59,9 @@ Command delete-connector-connection-pool executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-connector-connection-pool.adoc#create-connector-connection-pool[`create-connector-connection-pool`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-connector-connection-pools.adoc#list-connector-connection-pools[`list-connector-connection-pools`],
-* xref:technical-documentation/payara-server-documentation/command-reference/ping-connection-pool.adoc#ping-connection-pool[`ping-connection-pool`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-connector-connection-pool.adoc#create-connector-connection-pool[`create-connector-connection-pool`],
+* xref:list-connector-connection-pools.adoc#list-connector-connection-pools[`list-connector-connection-pools`],
+* xref:ping-connection-pool.adoc#ping-connection-pool[`ping-connection-pool`]
 
 

@@ -26,7 +26,7 @@ If a new password is not provided, this subcommand fails if secure administratio
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -73,10 +73,10 @@ Command update-file-user executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-file-user.adoc#create-file-user[`create-file-user`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-file-user.adoc#delete-file-user[`delete-file-user`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-file-groups.adoc#list-file-groups[`list-file-groups`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-file-users.adoc#list-file-users[`list-file-users`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-file-user.adoc#create-file-user[`create-file-user`],
+* xref:delete-file-user.adoc#delete-file-user[`delete-file-user`],
+* xref:list-file-groups.adoc#list-file-groups[`list-file-groups`],
+* xref:list-file-users.adoc#list-file-users[`list-file-users`]
 
 

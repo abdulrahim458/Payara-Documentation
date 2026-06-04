@@ -23,7 +23,7 @@ OSGi shell commands are executed on the server and results are printed on the cl
 accepted. Scripting is supported, which means that multiple commands can be executed in sequence from a text file.
 
 A related subcommand is the `osgi` subcommand, which passes a single command to the remote shell for execution. Results are returned by the
-`asadmin` utility. For more information about the `osgi` subcommand, see the xref:technical-documentation/payara-server-documentation/command-reference/osgi.adoc#osgi[`osgi`] help page.
+`asadmin` utility. For more information about the `osgi` subcommand, see the xref:osgi.adoc#osgi[`osgi`] help page.
 
 This subcommand is supported in local mode only. Unlike other local subcommands, however, the domain administration server (DAS) and the
 server instance whose shell is being accessed must be running.
@@ -32,7 +32,7 @@ server instance whose shell is being accessed must be running.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -111,7 +111,7 @@ gogo$
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/osgi.adoc#osgi[`osgi`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:osgi.adoc#osgi[`osgi`]
 
 

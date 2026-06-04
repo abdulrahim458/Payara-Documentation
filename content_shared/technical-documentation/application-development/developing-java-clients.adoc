@@ -6,7 +6,7 @@ This chapter describes how to develop, assemble, and deploy remote Java clients.
 NOTE: The Web Profile of Payara Server supports the Jakarta Enterprise Beans 4.0 Lite specification, which allows enterprise beans within web applications, among other features.
 The full Payara Server supports the entire EJB 4.0 specification. For details, see https://jakarta.ee/specifications/enterprise-beans/[Jakarta Enterprise Beans^]. +
 Accordingly, the Application Client Container is supported only in the Full Profile, not in the Web Profile. +
-JMS resources are supported only in the Full Profile, not in the Web Profile. See xref:technical-documentation/application-development/using-jakarta-messaging.adoc#using-jakarta-messaging[Using the Java Message Service].
+JMS resources are supported only in the Full Profile, not in the Web Profile. See xref:using-jakarta-messaging.adoc#using-jakarta-messaging[Using the Java Message Service].
 
 [#introducing-the-application-client-container]
 == Introducing the Application Client Container
@@ -17,7 +17,7 @@ The ACC communicates with Payara Server using RMI-IIOP protocol and manages the 
 
 NOTE: Compared to other Jakarta EE containers, the ACC is lightweight.
 
-For information about debugging application clients, see xref:technical-documentation/application-development/debugging-applications.adoc#application-client-debugging[Application Client Debugging].
+For information about debugging application clients, see xref:debugging-applications.adoc#application-client-debugging[Application Client Debugging].
 
 IMPORTANT: Interoperability between application clients and Payara Servers running under different Payara Platform major versions is not supported. The same can be said if both server and client are running under different major Java versions.
 
@@ -29,13 +29,13 @@ in turn, requires contact with the server's naming service.
 
 To authenticate the end user, the ACC prompts for any required information, such as a username and password. The ACC itself provides a very simple dialog box to prompt for and read these values.
 
-The ACC integrates with Payara Server's authentication system. It also supports SSL (Secure Socket Layer)/IIOP if configured and when necessary; see xref:technical-documentation/application-development/developing-java-clients.adoc#using-rmiiiop-over-ssl[Using RMI/IIOP Over SSL].
+The ACC integrates with Payara Server's authentication system. It also supports SSL (Secure Socket Layer)/IIOP if configured and when necessary; see xref:developing-java-clients.adoc#using-rmiiiop-over-ssl[Using RMI/IIOP Over SSL].
 
 You can provide an alternate implementation to gather authentication information, tailored to the needs of the application client. To do so, include the class to perform these duties in the application client and identify the fully-qualified name of this class in the `callback-handler` element of the `application-client.xml` descriptor for the client. The ACC uses this class instead of its default class for asking for and reading the authentication information.
 
 The class must implement the `javax.security.auth.callback.CallbackHandler` interface. See the https://jakarta.ee/specifications/platform/[Jakarta EE Platform specification^], section 10.2, **Application Clients: Security**, for more details.
 
-Application clients can use a programmatic login mechanism by xref:technical-documentation/application-development/securing-applications.adoc#programmatic-login-using-the-programmaticlogin-class[using the `ProgrammaticLogin` Class].
+Application clients can use a programmatic login mechanism by xref:securing-applications.adoc#programmatic-login-using-the-programmaticlogin-class[using the `ProgrammaticLogin` Class].
 
 [#acc-naming]
 === ACC Naming
@@ -46,7 +46,7 @@ The client container enables the application clients to use the Java Naming and 
 [#application-client-annotation]
 === Application Client Annotation
 
-Annotation is supported for the main class and the optional callback handler class in application clients. For more information, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#deployment-descriptors-and-annotations[Deployment Descriptors and Annotations]" in the Payara Server Application Deployment section.
+Annotation is supported for the main class and the optional callback handler class in application clients. For more information, see "xref:../payara-server-documentation/application-deployment/index.adoc#deployment-descriptors-and-annotations[Deployment Descriptors and Annotations]" in the Payara Server Application Deployment section.
 
 [#java-web-start]
 === Java Web Start
@@ -70,7 +70,7 @@ This section describes the procedure to develop, assemble, and deploy client app
 === To Access an EJB Component from an Application Client
 
 . In your client code, reference the EJB component by using an `@EJB` annotation or by looking up the JNDI name as defined in the `ejb-jar.xml` file. +
-For more information about naming and lookups, see xref:technical-documentation/application-development/using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context]. +
+For more information about naming and lookups, see xref:using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context]. +
 If load balancing is enabled as in Step 7 and the EJB components being accessed are in a different cluster, the endpoint list must be included in the lookup, as follows:
 +
 [source,text]
@@ -78,7 +78,7 @@ If load balancing is enabled as in Step 7 and the EJB components being accessed 
 corbaname:host1:port1,host2:port2,.../NameService#ejb/jndi-name
 ----
 . Define the `@EJB` annotations or the `ejb-ref` elements in the `application-client.xml` file. Define the corresponding `ejb-ref` elements in the`payara-application-client.xml` file. +
-For more information on the `payara-application-client.xml` file, see "xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-application-client.xml-file[The payara-application-client.xml file]" in the Payara Server Application Deployment section. For a general explanation of how to map JNDI names using reference elements, see xref:technical-documentation/application-development/using-the-java-naming-and-directory-interface.adoc#mapping-references[Mapping References].
+For more information on the `payara-application-client.xml` file, see "xref:../payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-application-client.xml-file[The payara-application-client.xml file]" in the Payara Server Application Deployment section. For a general explanation of how to map JNDI names using reference elements, see xref:using-the-java-naming-and-directory-interface.adoc#mapping-references[Mapping References].
 . Deploy the application client and EJB component together in an application. +
 To get the client JAR file, use the `--retrieve` option of the `asadmin deploy` command. +
 To retrieve the stubs and ties generated during deployment, use the `asadmin get-client-stubs` command.
@@ -86,14 +86,14 @@ To retrieve the stubs and ties generated during deployment, use the `asadmin get
 * A Java class to access the bean.
 * The `application-client.xml` - (optional) Jakarta EE application client deployment descriptor.
 * `payara-application-client.xml` - (optional) Payara Server specific client deployment descriptor. For information on the
-`payara-application-client.xml` file, see "xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-application-client.xml-file[The payara-application-client.xml file]" in the Payara Server Application Deployment section.
+`payara-application-client.xml` file, see "xref:../payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-application-client.xml-file[The payara-application-client.xml file]" in the Payara Server Application Deployment section.
 * The `MANIFEST.MF` file. This file contains a reference to the `main` class, which states the complete package prefix and class name of the Java client.
 .  Prepare the client machine. +
 If you are using the `appclient` script, package the Payara Server system files required to launch application clients on remote systems using the `package-appclient` script, then retrieve the application client itself using the `asadmin get-client-stubs` command.
 +
 For more information, see xref:#using-the-package-appclient-script[Using the `package-appclient` Script] .
 .  To access EJB components that are residing in a remote system, make the following changes to the `sun-acc.xml` file or the `appclient` script.
-* Define the `target-server` element's `address` and `port` attributes to reference the remote server machine and its ORB port. See "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#target-server[target-server]" in the Payara Server Application Deployment section.
+* Define the `target-server` element's `address` and `port` attributes to reference the remote server machine and its ORB port. See "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#target-server[target-server]" in the Payara Server Application Deployment section.
 * Use the `-targetserver` option of the `appclient` script to reference the remote server machine and its ORB port.For more information, see xref:#running-an-application-client-using-the-appclient-script[Running an Application Client Using the `appclient` Script].
 +
 To determine the ORB port on the remote server, use the `asadmin get` command. For example:
@@ -108,7 +108,7 @@ However, a client should have at least two endpoints specified for bootstrapping
 +
 The `target-server` elements in the `sun-acc.xml` file specify one or more IIOP endpoints used for load balancing. The `address` attribute is an IPv4 address or host name, and the `port` attribute specifies the port number.
 +
-See "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#client-container[client-container]" in the Payara Server Application Deployment section.
+See "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#client-container[client-container]" in the Payara Server Application Deployment section.
 +
 The `--targetserver` option of the `appclient` script specifies one or more IIOP endpoints used for load balancing. For more information, see
 xref:#running-an-application-client-using-the-appclient-script[Running an Application Client Using the `appclient` Script].
@@ -117,7 +117,7 @@ xref:#running-an-application-client-using-the-appclient-script[Running an Applic
 
 * For instructions on running the application client, see
 xref:#using-java-web-start[Using Java Web Start] or xref:#running-an-application-client-using-the-appclient-script[Running an Application Client Using the `appclient` Script].
-* For more information about RMI-IIOP load balancing and failover, see "xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#rmi-iiop-load-balancing-and-failover[RMI-IIOP Load Balancing and Failover]" in the Payara Server High Availability section.
+* For more information about RMI-IIOP load balancing and failover, see "xref:../payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#rmi-iiop-load-balancing-and-failover[RMI-IIOP Load Balancing and Failover]" in the Payara Server High Availability section.
 
 [#to-access-a-jms-resource-from-an-application-client]
 === To Access a JMS Resource from an Application Client
@@ -128,15 +128,15 @@ For detailed instructions on developing a JMS client, see "https://eclipse-ee4j.
 
 . Next, configure a JMS resource in Payara Server.
 +
-For information on configuring JMS resources, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-connection-factories-and-destinations[Administering JMS Connection Factories and Destinations]" in the Payara Server General Administration section.
+For information on configuring JMS resources, see "xref:../payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-connection-factories-and-destinations[Administering JMS Connection Factories and Destinations]" in the Payara Server General Administration section.
 
 . Define the `@Resource` or `@Resources` annotations or the `resource-ref` elements in the `application-client.xml` file. Define the corresponding `resource-ref` elements in the `payara-application-client.xml` file. +
-For more information on the `payara-application-client.xml` file, see "xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-application-client.xml-file[The payara-application-client.xml file]" in the Payara Server Application Deployment section. For a general explanation of how to map JNDI names using reference elements, see xref:technical-documentation/application-development/using-the-java-naming-and-directory-interface.adoc#mapping-references[Mapping References].
+For more information on the `payara-application-client.xml` file, see "xref:../payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-application-client.xml-file[The payara-application-client.xml file]" in the Payara Server Application Deployment section. For a general explanation of how to map JNDI names using reference elements, see xref:using-the-java-naming-and-directory-interface.adoc#mapping-references[Mapping References].
 
 . Ensure that the client JAR file includes the following files:
 * A Java class to access the resource.
 * `application-client.xml` - (optional) Jakarta EE application client deployment descriptor.
-* `payara-application-client.xml` - (optional) Payara Server specific client deployment descriptor. For information on the `payara-application-client.xml` file, see "xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-application-client.xml-file[The payara-application-client.xml file]" in the Payara Server Application Deployment section.
+* `payara-application-client.xml` - (optional) Payara Server specific client deployment descriptor. For information on the `payara-application-client.xml` file, see "xref:../payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-application-client.xml-file[The payara-application-client.xml file]" in the Payara Server Application Deployment section.
 * The `MANIFEST.MF` file. This file contains a reference to the `main` class, which states the complete package prefix and class name of the Java client.
 .  Prepare the client machine.
 +
@@ -234,7 +234,7 @@ If the context-root, `appclient-module-id`, or `application-id` is not specified
 If the application client module or application is not in JAR or EAR file format, an `appclient-module-id` or `application-id` is generated.
 
 Regardless of how the context-root or id is determined, it is written to the server log when you deploy the application.
-For details about naming, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#naming-standards[Naming Standards]" in the Payara Server Application Deployment section.
+For details about naming, see "xref:../payara-server-documentation/application-deployment/index.adoc#naming-standards[Naming Standards]" in the Payara Server Application Deployment section.
 
 To set a different URL for an application client, use the `context-root` sub-element of the `java-web-start-access` element in the `payara-application-client.xml` file. This overrides the `appclient-module-id` or `application-id`.
 
@@ -297,7 +297,7 @@ If you use the Payara Server Java Web Start feature or deploy applications that 
 +
 By default, the keystore is located at `domain-dir/config/keystore.p12`.
 +
-For more information about importing a trusted certificate into the domain keystore, see "xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-jsse-certificates[Administering JSSE Certificates]" in the Payara Server Security Guide.
+For more information about importing a trusted certificate into the domain keystore, see "xref:../payara-server-documentation/security-guide/administering-system-security.adoc#administering-jsse-certificates[Administering JSSE Certificates]" in the Payara Server Security Guide.
 
 . Delete any signed JARs already generated by Payara Server:
 .. At the command prompt, type:
@@ -325,7 +325,7 @@ The `asadmin deploy` command property `jar-signing-alias` specifies the alias fo
 
 Java Web Start won't execute code requiring elevated permissions unless it resides in a JAR file signed with a certificate that the user's system trusts. For your convenience, Payara Server signs the JAR file automatically using the self-signed certificate from the domain, `s1as`. Java Web Start then asks the user whether to trust the code and displays the server's certificate information.
 
-To sign this JAR file with a different certificate, first add the certificate to the domain keystore. You can use a certificate from a trusted authority, which avoids the Java Web Start prompt. To add a certificate to the domain keystore, see "xref:technical-documentation/payara-server-documentation/security-guide/administering-system-security.adoc#administering-jsse-certificates[Administering JSSE Certificates]" in the Payara Server Security Guide.
+To sign this JAR file with a different certificate, first add the certificate to the domain keystore. You can use a certificate from a trusted authority, which avoids the Java Web Start prompt. To add a certificate to the domain keystore, see "xref:../payara-server-documentation/security-guide/administering-system-security.adoc#administering-jsse-certificates[Administering JSSE Certificates]" in the Payara Server Security Guide.
 
 Next, deploy your application using the `jar-signing-alias` property. For example:
 
@@ -742,7 +742,7 @@ You can configure RMI/IIOP over SSL in two ways: using a username and password, 
 
 To use a username and password, configure the `ior-security-config` element in the `payara-ejb-jar.xml` file. The following configuration establishes SSL between an application client and an EJB component using a username and password.
 
-The user has to log in to the ACC using either the `sun-acc.xml` mechanism or the xref:technical-documentation/application-development/securing-applications.adoc#programmatic-login-using-the-programmaticlogin-class[Programmatic Login Using the `ProgrammaticLogin` Class] mechanism.
+The user has to log in to the ACC using either the `sun-acc.xml` mechanism or the xref:securing-applications.adoc#programmatic-login-using-the-programmaticlogin-class[Programmatic Login Using the `ProgrammaticLogin` Class] mechanism.
 
 [source,xml]
 ----
@@ -862,7 +862,7 @@ The Libraries field in the Administration Console's deployment page and the `--l
 
 Neither do the `as-install/lib`, `domain-dir/lib`, and `domain-dir/lib/classes` directories comprising the Common Class Loader.
 
-These apply only to applications and modules deployed to the server. For more information, see xref:technical-documentation/application-development/class-loaders.adoc#class-loaders[Class Loaders].
+These apply only to applications and modules deployed to the server. For more information, see xref:class-loaders.adoc#class-loaders[Class Loaders].
 
 To use libraries with an application client, package the application client in an application (EAR file).
 Then, either place the libraries in the `/lib` directory of the EAR file or specify their location in the application client JAR file's manifest `Class-Path`.
@@ -907,7 +907,7 @@ corbaname:host1:port1,host2:port2,.../NameService#ejb/jndi-name
 
 . Deploy the EJB component to be accessed.
 +
-For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in the Payara Server Application Deployment section.
+For more information on deployment, see "xref:../payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in the Payara Server Application Deployment section.
 
 . Copy the `as-install/lib/gf-client.jar` file to the client machine and include it in the classpath on the client side.
 +
@@ -995,9 +995,9 @@ If load balancing is enabled as in Step 1 and the EJB components being accessed 
 corbaname:host1:port1,host2:port2,.../NameService#ejb/jndi-name
 ----
 +
-For more information about naming and lookups, see xref:technical-documentation/application-development/using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context].
+For more information about naming and lookups, see xref:using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context].
 
-. Deploy the EJB component to be accessed. For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in the Application Deployment section.
+. Deploy the EJB component to be accessed. For more information on deployment, see "xref:../payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in the Application Deployment section.
 
 . To access EJB components that are residing in a remote system, set the following system properties for the Java Virtual Machine startup options:
 +
@@ -1010,7 +1010,7 @@ Here `ORBhost` is the Application Server hostname and `ORBport` is the ORB port 
 
 .  Deploy the module.
 +
-For more information on deployment, see "xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in Payara Server Application Deployment section.
+For more information on deployment, see "xref:../payara-server-documentation/application-deployment/index.adoc#about-deployment-tools[About Deployment Tools]" in Payara Server Application Deployment section.
 
 [#to-access-a-jms-resource-from-a-stand-alone-client]
 === To Access a JMS Resource from a Stand-Alone Client
@@ -1021,7 +1021,7 @@ For detailed instructions on developing a JMS client, see "https://eclipse-ee4j.
 
 . Configure a JMS resource on Payara Server.
 +
-For information on configuring JMS resources, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-connection-factories-and-destinations[Administering JMS Connection Factories and Destinations]" in the Payara Server General Administration section.
+For information on configuring JMS resources, see "xref:../payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-connection-factories-and-destinations[Administering JMS Connection Factories and Destinations]" in the Payara Server General Administration section.
 
 . Copy the following JAR files to the client machine and include them in the classpath on the client side:
 * `gf-client.jar` - available at `as-install/lib`

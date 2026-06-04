@@ -29,7 +29,7 @@ It functions as a combination of the `notification-configure` and `set-log-notif
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -76,6 +76,6 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/notification-configure.adoc#notification-configure[`notification-configure`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-log-notifier-configuration.adoc#set-log-notifier-configuration[`set-log-notifier-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:notification-configure.adoc#notification-configure[`notification-configure`],
+* xref:set-log-notifier-configuration.adoc#set-log-notifier-configuration[`set-log-notifier-configuration`]

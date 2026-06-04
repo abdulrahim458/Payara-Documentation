@@ -9,6 +9,6 @@ Payara Server provides support for JDBC, JMS, and JNDI resources.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
 
 

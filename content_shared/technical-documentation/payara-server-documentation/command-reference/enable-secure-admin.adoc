@@ -64,9 +64,9 @@ Command enable-secure-admin executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/disable-secure-admin.adoc#disable-secure-admin[`disable-secure-admin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-secure-admin-principal.adoc#enable-secure-admin-principal[`enable-secure-admin-principal`],
-* xref:technical-documentation/payara-server-documentation/command-reference/enable-secure-admin-internal-user.adoc#enable-secure-admin-internal-user[`enable-secure-admin-internal-user`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:disable-secure-admin.adoc#disable-secure-admin[`disable-secure-admin`],
+* xref:enable-secure-admin-principal.adoc#enable-secure-admin-principal[`enable-secure-admin-principal`],
+* xref:enable-secure-admin-internal-user.adoc#enable-secure-admin-internal-user[`enable-secure-admin-internal-user`]
 
 

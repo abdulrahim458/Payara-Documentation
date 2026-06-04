@@ -26,7 +26,7 @@ NOTE: The Data Grid must be enabled for the Event Bus to be available.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -69,5 +69,5 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get-eventbus-notifier-configuration.adoc#get-eventbus-notifier-configuration[`get-eventbus-notifier-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:get-eventbus-notifier-configuration.adoc#get-eventbus-notifier-configuration[`get-eventbus-notifier-configuration`]

@@ -18,6 +18,6 @@ The Payara Tools plugin enables integration between Payara Server and Payara Mic
 [#eclipse-tools]
 == Payara Platform Tools
 
-* xref:technical-documentation/ecosystem/ide-integration/eclipse-plugin/payara-server.adoc[Payara Server] - The Payara Eclipse plugin enables developers to easily configure Payara Server and manage applications from the Eclipse IDE.
+* xref:payara-server.adoc[Payara Server] - The Payara Eclipse plugin enables developers to easily configure Payara Server and manage applications from the Eclipse IDE.
 
-* xref:technical-documentation/ecosystem/ide-integration/eclipse-plugin/payara-micro.adoc[Payara Micro] - Payara Eclipse plugin provides the support to create, run and debug Payara Micro applications from the Eclipse IDE. Payara Micro is the microservices-ready version of Payara Server.
+* xref:payara-micro.adoc[Payara Micro] - Payara Eclipse plugin provides the support to create, run and debug Payara Micro applications from the Eclipse IDE. Payara Micro is the microservices-ready version of Payara Server.

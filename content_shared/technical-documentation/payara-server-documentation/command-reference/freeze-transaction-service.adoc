@@ -20,7 +20,7 @@ The `freeze-transaction-service` subcommand freezes the transaction subsystem, p
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -56,11 +56,11 @@ Command freeze-transaction-service executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/recover-transactions.adoc#recover-transactions[`recover-transactions`],
-* xref:technical-documentation/payara-server-documentation/command-reference/rollback-transaction.adoc#rollback-transaction[`rollback-transaction`],
-* xref:technical-documentation/payara-server-documentation/command-reference/unfreeze-transaction-service.adoc#unfreeze-transaction-service[`unfreeze-transaction-service`]
-* "xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc[Administering Transactions]" in Payara Server General Administration section
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:recover-transactions.adoc#recover-transactions[`recover-transactions`],
+* xref:rollback-transaction.adoc#rollback-transaction[`rollback-transaction`],
+* xref:unfreeze-transaction-service.adoc#unfreeze-transaction-service[`unfreeze-transaction-service`]
+* "xref:../general-administration/administering-transactions.adoc[Administering Transactions]" in Payara Server General Administration section
 * https://jakarta.ee/specifications/transactions/[Transactions^]" in Jakarta EE Specification
 
 

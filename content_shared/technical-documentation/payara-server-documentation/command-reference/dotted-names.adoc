@@ -35,7 +35,7 @@ The following rules apply to forming dotted names:
 * The top-level is configuration, server, or domain name. For example, `server-config` (default configuration), `server` (default server), or `domain1` (default domain).
 * A dot (.) always separates two sequential parts of the name.
 * A part of the name usually identifies a server subsystem or its specific instance. For example, `web-container`, `log-service`, `thread-pool-1`.
-* If any part of the name itself contains a dot (`.`), then the dot must be escaped with a leading `\` (backslash) so that the `.` (dot) does not act like a delimiter. For further information on escape characters, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+* If any part of the name itself contains a dot (`.`), then the dot must be escaped with a leading `\` (backslash) so that the `.` (dot) does not act like a delimiter. For further information on escape characters, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 * An `\*` (asterisk) character can be used anywhere in the dotted name and acts like the wildcard character in regular expressions. Additionally, an `\*` can collapse all the parts of the dotted name.
 +
 For example, a long dotted name such as `this.is.really.long.hierarchy` can be abbreviated to `th*.hierarchy`. The `.` (dot) always delimits the parts of the dotted name. +
@@ -169,7 +169,7 @@ Command list executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/get.adoc#get[`get`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list.adoc#list[`list`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:get.adoc#get[`get`],
+* xref:list.adoc#list[`list`],
+* xref:set.adoc#set[`set`]

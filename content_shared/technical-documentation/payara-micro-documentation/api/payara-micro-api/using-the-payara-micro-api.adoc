@@ -1,6 +1,6 @@
 = Running Asadmin Commands on Bootstrapped Instances Using the API
 
-It is possible to execute administration commands programmatically using the xref:technical-documentation/payara-micro-documentation/api/payara-micro-api/index.adoc[Payara Micro API], using the `PayaraMicroRuntime.run` method.
+It is possible to execute administration commands programmatically using the xref:index.adoc[Payara Micro API], using the `PayaraMicroRuntime.run` method.
 
 There are two overloaded forms that can be used:
 

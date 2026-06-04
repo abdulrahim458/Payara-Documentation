@@ -305,4 +305,4 @@ With `base` being the context where the application is deployed, e.g. `http://ex
 
 The out-of-the-box support of `@RolesAllowed` for Jakarta REST Services resources can be switched off by setting the `<jaxrs-roles-allowed-enabled>` tag in `WEB-INF/payara-web.xml` to `false`.
 
-For more information see the documentation for the xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#jaxrs-roles-allowed-enabled[jaxrs-roles-allowed-enabled] element.
+For more information see the documentation for the xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#jaxrs-roles-allowed-enabled[jaxrs-roles-allowed-enabled] element.

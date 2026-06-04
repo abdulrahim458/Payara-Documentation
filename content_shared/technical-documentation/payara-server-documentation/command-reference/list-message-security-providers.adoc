@@ -24,7 +24,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -73,8 +73,8 @@ Command list-message-security-providers executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-message-security-provider.adoc#create-message-security-provider[`create-message-security-provider`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-message-security-provider.adoc#delete-message-security-provider[`delete-message-security-provider`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-message-security-provider.adoc#create-message-security-provider[`create-message-security-provider`],
+* xref:delete-message-security-provider.adoc#delete-message-security-provider[`delete-message-security-provider`]
 
 

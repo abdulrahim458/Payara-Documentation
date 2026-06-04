@@ -40,7 +40,7 @@ By default, span names for JAX-RS endpoints follow  recommendations set forth by
 payara.telemetry.span-convention=opentracing-class-method
 ----
 
-All valid values for the property are documented in xref:technical-documentation/microprofile/opentelemetry-and-opentracing.adoc#span-convention-settings[OpenTelemetry Span Convention Settings]
+All valid values for the property are documented in xref:opentelemetry-and-opentracing.adoc#span-convention-settings[OpenTelemetry Span Convention Settings]
 
 [#alternative-implementation]
 == Using Alternate Opentracing Implementations
@@ -49,4 +49,4 @@ Currently, it is not possible to use other OpenTracing implementations in the Pa
 
 It is however possible to deploy and configure other OpenTelemetry exporters (i.e. Zipkin) into the server or ship them with application.
 
-Please consult xref:technical-documentation/microprofile/opentelemetry-and-opentracing.adoc#using-additional-components[OpenTelemetry Configuration].
+Please consult xref:opentelemetry-and-opentracing.adoc#using-additional-components[OpenTelemetry Configuration].

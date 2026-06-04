@@ -26,7 +26,7 @@ This subcommand is supported in remote mode only. Remote `asadmin` subcommands r
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -124,10 +124,10 @@ Command create-jmsdest executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jms-resource.adoc#create-jms-resource[`create-jms-resource`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-jmsdest.adoc#delete-jmsdest[`delete-jmsdest`],
-* xref:technical-documentation/payara-server-documentation/command-reference/flush-jmsdest.adoc#flush-jmsdest[`flush-jmsdest`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jmsdest.adoc#list-jmsdest[`list-jmsdest`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-jms-resource.adoc#create-jms-resource[`create-jms-resource`],
+* xref:delete-jmsdest.adoc#delete-jmsdest[`delete-jmsdest`],
+* xref:flush-jmsdest.adoc#flush-jmsdest[`flush-jmsdest`],
+* xref:list-jmsdest.adoc#list-jmsdest[`list-jmsdest`]
 
 

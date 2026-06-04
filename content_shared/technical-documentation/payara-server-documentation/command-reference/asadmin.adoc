@@ -121,7 +121,7 @@ Test\\Escape\\Character
 Test\Escape\Character
 ----
 +
-NOTE: In contexts where meta characters in the UNIX operating system are unambiguous, these characters do not require escape characters. For example, in the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`] subcommand, the value that is to be set is specified as `name=value`. +
+NOTE: In contexts where meta characters in the UNIX operating system are unambiguous, these characters do not require escape characters. For example, in the xref:set.adoc#set[`set`] subcommand, the value that is to be set is specified as `name=value`. +
 Because name can never include an equals sign, no escape character is required to disable the equals sign. Therefore, everything after the equals sign is an uninterpreted string that the `set` subcommand uses unchanged.
 
 * Spaces. The space is the separator in the command-line interface. To distinguish a space in a command-line argument from the separator in the command-line interface, the space must be escaped as follows:
@@ -135,7 +135,7 @@ Because name can never include an equals sign, no escape character is required t
 
 ** An option of the Virtual Machine for the Java platform (Java Virtual Machine or JVM machine)
 +
-For example, the operand of the subcommand xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc#create-jvm-options[`create-jvm-options`] specifies JVM machine options in the following format:
+For example, the operand of the subcommand xref:create-jvm-options.adoc#create-jvm-options[`create-jvm-options`] specifies JVM machine options in the following format:
 +
 [source,text]
 ----
@@ -172,11 +172,11 @@ To set this attribute, use the `set` subcommand.
 
 === Server Restart after Creation or Deletion
 
-When you use the `asadmin` subcommands to create or delete a configuration item, you must restart the DAS for the change to take effect. To restart the DAS, use the xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc#restart-domain[`restart-domain`] subcommand.
+When you use the `asadmin` subcommands to create or delete a configuration item, you must restart the DAS for the change to take effect. To restart the DAS, use the xref:restart-domain.adoc#restart-domain[`restart-domain`] subcommand.
 
 === Help Information for Subcommands and the Asadmin Utility
 
-To obtain help information for an `asadmin` utility subcommand, specify the subcommand of interest as the operand of the `help` subcommand. For example, to obtain help information for the xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc#start-domain[`start-domain`] subcommand, type:
+To obtain help information for an `asadmin` utility subcommand, specify the subcommand of interest as the operand of the `help` subcommand. For example, to obtain help information for the xref:start-domain.adoc#start-domain[`start-domain`] subcommand, type:
 
 [source,shell]
 ----
@@ -185,7 +185,7 @@ asadmin help start-domain
 
 If you run the `help` subcommand without an operand, this help information for the `asadmin` utility is displayed.
 
-To obtain a listing of available `asadmin` subcommands, use the xref:technical-documentation/payara-server-documentation/command-reference/list-commands.adoc#list-commands[`list-commands`] subcommand.
+To obtain a listing of available `asadmin` subcommands, use the xref:list-commands.adoc#list-commands[`list-commands`] subcommand.
 
 [#options]
 == Options
@@ -212,15 +212,15 @@ The entries in the file that are read by the `asadmin` utility are as follows:
 * `AS_ADMIN_PASSWORD`=administration-password
 * `AS_ADMIN_MASTERPASSWORD`=master-password +
 The entries in this file that are read by subcommands are as follows: +
-* `AS_ADMIN_NEWPASSWORD=`new-administration-password`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc#start-domain[`start-domain`] subcommand)
-* `AS_ADMIN_USERPASSWORD=`user-password`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-file-user.adoc#create-file-user[`create-file-user`]
+* `AS_ADMIN_NEWPASSWORD=`new-administration-password`` (read by the xref:start-domain.adoc#start-domain[`start-domain`] subcommand)
+* `AS_ADMIN_USERPASSWORD=`user-password`` (read by the xref:create-file-user.adoc#create-file-user[`create-file-user`]
 subcommand)
-* `AS_ADMIN_ALIASPASSWORD=`alias-password`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-password-alias.adoc#create-password-alias[`create-password-alias`] subcommand)
-* `AS_ADMIN_MAPPEDPASSWORD=`mapped-password`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-connector-security-map.adoc#create-connector-security-map[`create-connector-security-map`] subcommand)
-* `AS_ADMIN_SSHPASSWORD=`sshd-password`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`], xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
-  xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`], and xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc#update-node-ssh[`update-node-ssh`] subcommands)
-* `AS_ADMIN_SSHKEYPASSPHRASE=`sshd-passphrase`` (read by the xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`], xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`], xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`], and xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc#update-node-ssh[`update-node-ssh`] subcommands)
-* `AS_ADMIN_JMSDBPASSWORD=` jdbc-user-password (read by the xref:technical-documentation/payara-server-documentation/command-reference/configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`] subcommand)
+* `AS_ADMIN_ALIASPASSWORD=`alias-password`` (read by the xref:create-password-alias.adoc#create-password-alias[`create-password-alias`] subcommand)
+* `AS_ADMIN_MAPPEDPASSWORD=`mapped-password`` (read by the xref:create-connector-security-map.adoc#create-connector-security-map[`create-connector-security-map`] subcommand)
+* `AS_ADMIN_SSHPASSWORD=`sshd-password`` (read by the xref:create-node-ssh.adoc#create-node-ssh[`create-node-ssh`], xref:install-node.adoc#install-node[`install-node`],
+  xref:install-node-ssh.adoc#install-node-ssh[`install-node-ssh`], and xref:update-node-ssh.adoc#update-node-ssh[`update-node-ssh`] subcommands)
+* `AS_ADMIN_SSHKEYPASSPHRASE=`sshd-passphrase`` (read by the xref:create-node-ssh.adoc#create-node-ssh[`create-node-ssh`], xref:install-node.adoc#install-node[`install-node`], xref:install-node-ssh.adoc#install-node-ssh[`install-node-ssh`], and xref:update-node-ssh.adoc#update-node-ssh[`update-node-ssh`] subcommands)
+* `AS_ADMIN_JMSDBPASSWORD=` jdbc-user-password (read by the xref:configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`] subcommand)
 +
 These password entries are stored in clear text in the password file. To provide additional security, the `create-password-alias` subcommand can be used to create aliases for passwords that are used by remote subcommands. The password for which the alias is created is stored in an encrypted form. If an alias exists for a password, the alias is specified in the entry for the password as follows:
 +
@@ -265,7 +265,7 @@ NOTE: Currently, this option only works with the `create-instance` and `create-l
 +
 If `true`, the `create-instance` and `create-local-instance` commands should only return the name of the instance created.
 +
-See xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#the-extra-terse-option[`extraterse`] for more information.
+See xref:../high-availability/administering-payara-server-instances.adoc#the-extra-terse-option[`extraterse`] for more information.
 +
 IMPORTANT: The `extraterse` option implicitly enables the `terse` option - this is true for *all* commands (not just `create-instance` and `create-local-instance`).
 +
@@ -292,7 +292,7 @@ The `--detach` option is useful for long-running subcommands and enables you to 
 +
 The `--detach` option is specified before the subcommand. For example, in single mode, `asadmin --detach` subcommand.
 +
-Job IDs are assigned to subcommands that are started using `asadmin --detach`. You can use the xref:technical-documentation/payara-server-documentation/command-reference/list-jobs.adoc#list-jobs[`list-jobs`] subcommand to view the jobs and their job IDs, the xref:technical-documentation/payara-server-documentation/command-reference/attach.adoc#attach[`attach`] subcommand to reattach to the job and view its status and output, and the xref:technical-documentation/payara-server-documentation/command-reference/configure-managed-jobs.adoc#configure-managed-jobs[`configure-managed-jobs`] subcommand to configure how long information about the jobs is kept.
+Job IDs are assigned to subcommands that are started using `asadmin --detach`. You can use the xref:list-jobs.adoc#list-jobs[`list-jobs`] subcommand to view the jobs and their job IDs, the xref:attach.adoc#attach[`attach`] subcommand to reattach to the job and view its status and output, and the xref:configure-managed-jobs.adoc#configure-managed-jobs[`configure-managed-jobs`] subcommand to configure how long information about the jobs is kept.
 
 //TODO - Link relevant commands that may benefit from using the autoname feature.
 
@@ -300,7 +300,7 @@ Job IDs are assigned to subcommands that are started using `asadmin --detach`. Y
 *`-a`*:
 If `true`, this option allows the specified `asadmin` subcommand that accept `String` names as their primary parameter (the parameter that you don’t have to specify, e.g. the `instancename` parameter for the `create-instance` command) to generate a name.
 +
-Specifically for the `create-instance` and `create-local-instance` commands, the `autoname` option can also be used to automatically resolve any name conflicts. See xref:technical-documentation/payara-server-documentation/command-reference/auto-naming.adoc#auto-naming[`auto-naming`] for more information.
+Specifically for the `create-instance` and `create-local-instance` commands, the `autoname` option can also be used to automatically resolve any name conflicts. See xref:auto-naming.adoc#auto-naming[`auto-naming`] for more information.
 +
 Default to `false`.
 *`--help`*:
@@ -312,7 +312,7 @@ Default to `false`.
 [#example-1]
 *Example 1 Running an `asadmin` Utility Subcommand in Single Mode*
 
-This example runs the xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`] subcommand in single mode. In this example, the default values for all options are used.
+This example runs the xref:list-applications.adoc#list-applications[`list-applications`] subcommand in single mode. In this example, the default values for all options are used.
 
 The example shows that the application `hello` is deployed on the local host.
 
@@ -442,7 +442,7 @@ Command deploy executed successfully.
 [#example-7]
 *Example 7 Specifying a Meta Character and an Option Delimiter Character in a Property*
 
-The commands in this example specify the backslash (`\`) UNIX operating system meta character and the colon (:) option delimiter character in the `--property`option of the xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`] subcommand.
+The commands in this example specify the backslash (`\`) UNIX operating system meta character and the colon (:) option delimiter character in the `--property`option of the xref:create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`] subcommand.
 
 The name and value pairs for the `--property` option are as follows:
 
@@ -569,25 +569,25 @@ Environment variables modify the default values of `asadmin` utility options as 
 
 == See Also
 
-* xref:technical-documentation/payara-server-documentation/command-reference/attach.adoc#attach[`attach`],
-* xref:technical-documentation/payara-server-documentation/command-reference/configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`],
-* xref:technical-documentation/payara-server-documentation/command-reference/configure-managed-jobs.adoc#configure-managed-jobs[`configure-managed-jobs`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-connector-security-map.adoc#create-connector-security-map[`create-connector-security-map`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-file-user.adoc#create-file-user[`create-file-user`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc#create-jvm-options[`create-jvm-options`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-password-alias.adoc#create-password-alias[`create-password-alias`],
-* xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node.adoc#install-node[`install-node`],
-* xref:technical-documentation/payara-server-documentation/command-reference/install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-commands.adoc#list-commands[`list-commands`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jobs.adoc#list-jobs[`list-jobs`],
-* xref:technical-documentation/payara-server-documentation/command-reference/login.adoc#login[`login`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc#restart-domain[`restart-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-web-env-entry.adoc#set-web-env-entry[`set-web-env-entry`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc#start-domain[`start-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-file-user.adoc#update-file-user[`update-file-user`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc#update-node-ssh[`update-node-ssh`]
+* xref:attach.adoc#attach[`attach`],
+* xref:configure-jms-cluster.adoc#configure-jms-cluster[`configure-jms-cluster`],
+* xref:configure-managed-jobs.adoc#configure-managed-jobs[`configure-managed-jobs`],
+* xref:create-connector-security-map.adoc#create-connector-security-map[`create-connector-security-map`],
+* xref:create-file-user.adoc#create-file-user[`create-file-user`],
+* xref:create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`],
+* xref:create-jvm-options.adoc#create-jvm-options[`create-jvm-options`],
+* xref:create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
+* xref:create-password-alias.adoc#create-password-alias[`create-password-alias`],
+* xref:deploy.adoc#deploy[`deploy`],
+* xref:install-node.adoc#install-node[`install-node`],
+* xref:install-node-ssh.adoc#install-node-ssh[`install-node-ssh`],
+* xref:list-applications.adoc#list-applications[`list-applications`],
+* xref:list-commands.adoc#list-commands[`list-commands`],
+* xref:list-jobs.adoc#list-jobs[`list-jobs`],
+* xref:login.adoc#login[`login`],
+* xref:restart-domain.adoc#restart-domain[`restart-domain`],
+* xref:set.adoc#set[`set`],
+* xref:set-web-env-entry.adoc#set-web-env-entry[`set-web-env-entry`],
+* xref:start-domain.adoc#start-domain[`start-domain`],
+* xref:update-file-user.adoc#update-file-user[`update-file-user`],
+* xref:update-node-ssh.adoc#update-node-ssh[`update-node-ssh`]

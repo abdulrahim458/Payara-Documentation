@@ -4,8 +4,8 @@ The *Cloud Configuration Sources* can be used to extract configuration propertie
 
 The following sources are currently available:
 
-- xref:technical-documentation/microprofile/config/cloud/aws.adoc[AWS Secrets Manager]
-- xref:technical-documentation/microprofile/config/cloud/azure.adoc[Azure Secrets]
-- xref:technical-documentation/microprofile/config/cloud/dynamodb.adoc[DynamoDB Database]
-- xref:technical-documentation/microprofile/config/cloud/gcp.adoc[GCP Secret Manager]
-- xref:technical-documentation/microprofile/config/cloud/hashicorp.adoc[Hashicorp Secrets]
+- xref:aws.adoc[AWS Secrets Manager]
+- xref:azure.adoc[Azure Secrets]
+- xref:dynamodb.adoc[DynamoDB Database]
+- xref:gcp.adoc[GCP Secret Manager]
+- xref:hashicorp.adoc[Hashicorp Secrets]

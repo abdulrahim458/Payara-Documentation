@@ -21,7 +21,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -50,9 +50,9 @@ Command uptime executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc#list-domains[`list-domains`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc#start-domain[`start-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc#stop-domain[`stop-domain`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:list-domains.adoc#list-domains[`list-domains`],
+* xref:start-domain.adoc#start-domain[`start-domain`],
+* xref:stop-domain.adoc#stop-domain[`stop-domain`]
 
 

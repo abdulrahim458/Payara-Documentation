@@ -30,7 +30,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -90,9 +90,9 @@ Command create-connector-work-security-map executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-connector-work-security-map.adoc#delete-connector-work-security-map[`delete-connector-work-security-map`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-connector-work-security-maps.adoc#list-connector-work-security-maps[`list-connector-work-security-maps`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-connector-work-security-map.adoc#update-connector-work-security-map[`update-connector-work-security-map`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:delete-connector-work-security-map.adoc#delete-connector-work-security-map[`delete-connector-work-security-map`],
+* xref:list-connector-work-security-maps.adoc#list-connector-work-security-maps[`list-connector-work-security-maps`],
+* xref:update-connector-work-security-map.adoc#update-connector-work-security-map[`update-connector-work-security-map`]
 
 

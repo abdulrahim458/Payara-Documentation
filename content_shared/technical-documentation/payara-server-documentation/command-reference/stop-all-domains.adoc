@@ -74,13 +74,13 @@ Command stop-all-domains executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc#create-domain[`create-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-domain.adoc#delete-domain[`delete-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc#list-domains[`list-domains`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc#restart-domain[`restart-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-domains.adoc#restart-domains[`restart-domains`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc#start-domain[`start-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-domains.adoc#start-domains[`start-domains`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc#stop-domain[`stop-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-domains.adoc#stop-domains[`stop-domains`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-domain.adoc#create-domain[`create-domain`],
+* xref:delete-domain.adoc#delete-domain[`delete-domain`],
+* xref:list-domains.adoc#list-domains[`list-domains`],
+* xref:restart-domain.adoc#restart-domain[`restart-domain`],
+* xref:restart-domains.adoc#restart-domains[`restart-domains`],
+* xref:start-domain.adoc#start-domain[`start-domain`],
+* xref:start-domains.adoc#start-domains[`start-domains`],
+* xref:stop-domain.adoc#stop-domain[`stop-domain`],
+* xref:stop-domains.adoc#stop-domains[`stop-domains`]

@@ -28,13 +28,13 @@ NOTE: Where multiple configuration properties exist, the property from a source 
 |90
 |Reads configuration properties from files in a specified directory. Each file name is the configuration property name and the contents of the file are the config property value. This config source can be used to read https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-files-from-a-pod[Kubernetes secrets files^].
 +
-You can find out more about directory config sources here: xref:technical-documentation/microprofile/config/directory.adoc[Directory Config Sources]
+You can find out more about directory config sources here: xref:directory.adoc[Directory Config Sources]
 
 |`toml`
 |95
 |Reads configuration properties from a specified TOML configuration file.
 +
-You can find out more about TOML config sources here: xref:technical-documentation/microprofile/config/toml.adoc[TOML Config Sources]
+You can find out more about TOML config sources here: xref:toml.adoc[TOML Config Sources]
 
 |`password`
 |105
@@ -74,25 +74,25 @@ Property values will only apply on the named server instance
 |170
 |Reads configuration properties from a `payara-expression-config.properties` file. This should be stored in the same location as your `microprofile-config.properties` file This file can be used to reference properties containing variables which will be translated to their actual values upon retrieval.
 +
-The property values should be in the format referenced here: xref:technical-documentation/payara-server-documentation/general-administration/configuration-variables-reference.adoc[Types of Variables]
+The property values should be in the format referenced here: xref:../../payara-server-documentation/general-administration/configuration-variables-reference.adoc[Types of Variables]
 
 |`cloud`
 |180
 |Reads configuration properties from various Cloud provider secret stores.
 +
-You can find out more about our supported cloud config sources here: xref:technical-documentation/microprofile/config/cloud/index.adoc[Cloud Config Sources]
+You can find out more about our supported cloud config sources here: xref:cloud/index.adoc[Cloud Config Sources]
 
 |`jdbc`
 |190
 |Reads configuration properties from a specified database table.
 +
-You can find out more about JDBC config sources here: xref:technical-documentation/microprofile/config/jdbc.adoc[JDBC Config Sources]
+You can find out more about JDBC config sources here: xref:jdbc.adoc[JDBC Config Sources]
 
 |`ldap`
 |200
 |Reads configuration properties from a specified LDAP directory.
 +
-You can find out more about LDAP config sources here: xref:technical-documentation/microprofile/config/ldap.adoc[LDAP Config Sources]
+You can find out more about LDAP config sources here: xref:ldap.adoc[LDAP Config Sources]
 |===
 
 [#converters]
@@ -182,8 +182,8 @@ IMPORTANT: A `--source` value of `jndi` is not supported for these asadmin comma
 
 The following Asadmin commands can be used to manipulate configuration sources ordinal values:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/set-config-ordinal.adoc#set-config-ordinal[`set-config-ordinal`]
-* xref:technical-documentation/payara-server-documentation/command-reference/get-config-ordinal.adoc#get-config-ordinal[`get-config-ordinal`]
+* xref:../../payara-server-documentation/command-reference/set-config-ordinal.adoc#set-config-ordinal[`set-config-ordinal`]
+* xref:../../payara-server-documentation/command-reference/get-config-ordinal.adoc#get-config-ordinal[`get-config-ordinal`]
 
 [#config-property-manipulation]
 == Configuration Property Manipulation
@@ -202,11 +202,11 @@ image:microprofile/config-property.png[alt="Set Config Property",width=100%]
 
 The following Asadmin commands can be used to directly configure MicroProfile configuration properties:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/set-config-property.adoc#set-config-property[`set-config-property`]
+* xref:../../payara-server-documentation/command-reference/set-config-property.adoc#set-config-property[`set-config-property`]
 
-* xref:technical-documentation/payara-server-documentation/command-reference/get-config-property.adoc#get-config-property[`get-config-property`]
+* xref:../../payara-server-documentation/command-reference/get-config-property.adoc#get-config-property[`get-config-property`]
 
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-config-property.adoc#delete-config-property[`delete-config-property`]
+* xref:../../payara-server-documentation/command-reference/delete-config-property.adoc#delete-config-property[`delete-config-property`]
 
 [#config-cache-duration-configuration]
 == Cache Duration Configuration
@@ -217,4 +217,4 @@ That means each individual property does not change for `60` seconds since it ha
 
 TIP: If properties were not resolved recently, the change can become visible faster than the cache duration or even immediately because some time already passed since they had been last resolved and cached.
 
-Use the xref:technical-documentation/payara-server-documentation/command-reference/set-config-cache.adoc#set-config-cache[`set-config-cache`] to modify this setting.
+Use the xref:../../payara-server-documentation/command-reference/set-config-cache.adoc#set-config-cache[`set-config-cache`] to modify this setting.

@@ -57,7 +57,7 @@ For example, a response from `/garden/catalog?category=roses` is different from 
 ** `com.sun.appserv.web.cachedServletName`, the cached servlet target
 ** `com.sun.appserv.web.cachedURLPattern`, the URL pattern being cached
 
-* Results produced by resources that are the target of a `RequestDispatcher.include()` or `RequestDispatcher.forward()` call are cached if caching has been enabled for those resources. For details, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#cache-mapping[cache-mapping]" and "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#dispatcher[dispatcher] in the Payara Server Application Deployment section.
+* Results produced by resources that are the target of a `RequestDispatcher.include()` or `RequestDispatcher.forward()` call are cached if caching has been enabled for those resources. For details, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#cache-mapping[cache-mapping]" and "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#dispatcher[dispatcher] in the Payara Server Application Deployment section.
 
 [#default-cache-configuration]
 ==== Default Cache Configuration
@@ -119,7 +119,7 @@ Here is an example cache element in the `payara-web.xml` file:
 </cache>
 ----
 
-For more information about the `glassfish-web.xml`/`payara-web.xml` caching settings, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#cache[cache]" in the Payara Server Application Deployment section.
+For more information about the `glassfish-web.xml`/`payara-web.xml` caching settings, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#cache[cache]" in the Payara Server Application Deployment section.
 
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
@@ -131,7 +131,7 @@ The built-in default `CacheHelper` implementation allows web applications to cus
 
 The name of the context attribute is configurable as the `value` of the `cacheKeyGeneratorAttrName` property in the `default-helper` element of the `glassfish-web.xml`/`payara-web.xml` deployment descriptor.
 
-For more information, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#default-helper[default-helper]" in the Payara Server Application Deployment section.
+For more information, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#default-helper[default-helper]" in the Payara Server Application Deployment section.
 
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
@@ -366,7 +366,7 @@ This section describes how to create and manage HTTP sessions that allows users 
 [#http-sessions-cookies-and-url-rewriting]
 ==== HTTP Sessions, Cookies, and URL Rewriting
 
-To configure whether and how HTTP sessions use cookies and URL rewriting, edit the `session-properties` and `cookie-properties elements in the `glassfish-web.xml` or `payara-web.xml` file for an individual web application. For more details about the properties you can configure, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#session-properties[session-properties]" "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#cookie-properties[cookie-properties]" and in the Payara Server Application Deployment section.
+To configure whether and how HTTP sessions use cookies and URL rewriting, edit the `session-properties` and `cookie-properties elements in the `glassfish-web.xml` or `payara-web.xml` file for an individual web application. For more details about the properties you can configure, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#session-properties[session-properties]" "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#cookie-properties[cookie-properties]" and in the Payara Server Application Deployment section.
 
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
@@ -397,7 +397,7 @@ If any active web session fails to be preserved or restored, none of the session
 
 The new class loader of the redeployed application is used to deserialize any sessions previously saved. The usual restrictions about serialization and deserialization apply. For example, any application-specific class referenced by a session attribute may evolve only in a backward-compatible fashion.
 
-For more information about class loaders, see xref:technical-documentation/application-development/class-loaders.adoc[Class Loaders].
+For more information about class loaders, see xref:class-loaders.adoc[Class Loaders].
 
 [#logging-session-attributes]
 ==== Logging Session Attributes
@@ -434,9 +434,9 @@ In the event of an instance or hardware failure, another server instance can tak
 
 In the following table, *No* indicates that failover for the object type might not work in all cases and that no failover support is provided. However, failover might work in some cases for that object type. For example, failover might work because the class implementing that type is serializable.
 
-For more information about the `InitialContext`, see xref:technical-documentation/application-development/using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context].
+For more information about the `InitialContext`, see xref:using-the-java-naming-and-directory-interface.adoc#accessing-the-naming-context[Accessing the Naming Context].
 
-For more information about transaction recovery, see xref:technical-documentation/application-development/using-the-transaction-service.adoc#using-the-transaction-service[Using the Transaction Service]. For more information about Administered Objects, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-physical-destinations[Administering JMS Physical Destinations]" in the Payara Server General Administration section.
+For more information about transaction recovery, see xref:using-the-transaction-service.adoc#using-the-transaction-service[Using the Transaction Service]. For more information about Administered Objects, see "xref:../payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-physical-destinations[Administering JMS Physical Destinations]" in the Payara Server General Administration section.
 
 .Object Types Supported for Web Application Session State Failover
 [cols="3,4",options="header"]
@@ -479,7 +479,7 @@ It is recommended to use payara-web.xml instead.
 
 NOTE: If the session manager configuration contains an error, the error is written to the server log and the default (`memory`) configuration is used.
 
-For more information, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#session-manager[session-manager]" in the Payara Server Application Deployment section.
+For more information, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#session-manager[session-manager]" in the Payara Server Application Deployment section.
 
 [#the-memory-persistence-type]
 ==== The `memory` Persistence Type
@@ -505,7 +505,7 @@ IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a futu
 It is recommended to use payara-web.xml instead.
 
 The only manager property that the `memory` persistence type supports is
-`sessionFilename`, which is listed under "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#manager-properties[manager-properties]" in the Payara Server Application Deployment section.
+`sessionFilename`, which is listed under "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#manager-properties[manager-properties]" in the Payara Server Application Deployment section.
 
 The `sessionFilename` property specifies the name of the file where sessions are serialized and persisted if the web application or the server is stopped. To disable this behavior, specify an empty string as the value of `sessionFilename`. The default value is an empty string.
 
@@ -516,7 +516,7 @@ This persistence type provides session persistence to the local file system, and
 
 The store also provides passivation and activation of the session state to help control the amount of memory used. This option is not supported in a production environment since it is not adequate for any high-availability environments. However, it is useful for a development system with a single server instance.
 
-NOTE: Make sure the `delete` option is set in the `server.policy` file, or expired file-based sessions might not be deleted properly. For more information about `server.policy`, see xref:technical-documentation/application-development/securing-applications.adoc#the-server.policy-file[The`server.policy` File].
+NOTE: Make sure the `delete` option is set in the `server.policy` file, or expired file-based sessions might not be deleted properly. For more information about `server.policy`, see xref:securing-applications.adoc#the-server.policy-file[The`server.policy` File].
 
 To specify the `file` persistence type for a specific web application, edit the `glassfish-web.xml` or `payara-web.xml` file as in the following example. Note that `persistence-type` must be set to `file`. This overrides the web container availability settings for the web application.
 
@@ -536,7 +536,7 @@ To specify the `file` persistence type for a specific web application, edit the 
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-The `file` persistence type supports all the manager properties listed under "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#manager-properties[manager-properties]" in the Payara Server Application Deployment section except `sessionFilename`, and supports the `directory` store property listed under "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#store-properties[store-properties]" in the same document.
+The `file` persistence type supports all the manager properties listed under "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#manager-properties[manager-properties]" in the Payara Server Application Deployment section except `sessionFilename`, and supports the `directory` store property listed under "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#store-properties[store-properties]" in the same document.
 
 [#the-hazelcast-persistence-type]
 ==== The `hazelcast` Persistence Type
@@ -698,7 +698,7 @@ When processing a servlet request, the server uses the following order of preced
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-For details about the `parameter-encoding` element, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#parameter-encoding[parameter-encoding]" in the Payara Server Application Deployment section.
+For details about the `parameter-encoding` element, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#parameter-encoding[parameter-encoding]" in the Payara Server Application Deployment section.
 
 [#servlet-response]
 ==== Servlet Response
@@ -721,7 +721,7 @@ You can set virtual server properties in the following ways:
 asadmin create-virtual-server --hosts localhost --property authRealm=ldap MyVS
 ----
 +
-For more details and a complete list of virtual server properties, see xref:technical-documentation/payara-server-documentation/command-reference/create-virtual-server.adoc[`create-virtual-server`].
+For more details and a complete list of virtual server properties, see xref:../payara-server-documentation/command-reference/create-virtual-server.adoc[`create-virtual-server`].
 
 * You can define virtual server properties using the `asadmin set` command.
 +
@@ -920,7 +920,7 @@ Then define a security role mapping in your `glassfish-web.xml` or `payara-web.x
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
-Enable the security manager as described in xref:technical-documentation/application-development/securing-applications.adoc#enabling-and-disabling-the-security-manager[Enabling and Disabling the Security Manager].
+Enable the security manager as described in xref:securing-applications.adoc#enabling-and-disabling-the-security-manager[Enabling and Disabling the Security Manager].
 
 You can now use any WebDav client by connecting to the WebDav servlet URL, which has this format:
 
@@ -1061,7 +1061,7 @@ To specify an alternate document root for a web application or a virtual server,
 
 This property can be a sub-element of a `glassfish-web-app`/`payara-web-app` element in the `glassfish-web.xml`/`payara-web.xml` file or a virtual server property.
 
-For more information about this element, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#payara-web-app[payara-web-app]" in the Payara Server Application Deployment section.
+For more information about this element, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#payara-web-app[payara-web-app]" in the Payara Server Application Deployment section.
 
 A virtual server's alternate document roots are considered only if a request does not map to any of the web modules deployed on that virtual server. A web module's alternate document roots are considered only once a request has been mapped to that web module.
 

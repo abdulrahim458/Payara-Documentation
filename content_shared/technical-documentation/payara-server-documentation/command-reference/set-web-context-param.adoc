@@ -32,7 +32,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -53,7 +53,7 @@ This subcommand is supported in remote mode only.
   Either the `--value` option or the `--ignoredescriptoritem` option must be set. +
 
 NOTE: Do not use the `--ignoredescriptoritem` option to unset a servlet context-initialization parameter that has previously been set by using
-the `set-web-context-param` subcommand. Instead, use the xref:technical-documentation/payara-server-documentation/command-reference/unset-web-context-param.adoc#unset-web-context-param[`unset-web-context-param`]
+the `set-web-context-param` subcommand. Instead, use the xref:unset-web-context-param.adoc#unset-web-context-param[`unset-web-context-param`]
 subcommand for this purpose.
 
 *`--description`*:
@@ -64,7 +64,7 @@ subcommand for this purpose.
 
 *application-name*:
   The name of the application. This name can be obtained from the
-  Administration Console or by using the xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`]
+  Administration Console or by using the xref:list-applications.adoc#list-applications[`list-applications`]
   subcommand. +
   The application must already be deployed. Otherwise, an error occurs.
 *module*:
@@ -123,8 +123,8 @@ Command set-web-context-param executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-web-context-param.adoc#list-web-context-param[`list-web-context-param`],
-* xref:technical-documentation/payara-server-documentation/command-reference/unset-web-context-param.adoc#unset-web-context-param[`unset-web-context-param`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:list-web-context-param.adoc#list-web-context-param[`list-web-context-param`],
+* xref:unset-web-context-param.adoc#unset-web-context-param[`unset-web-context-param`]
 
 

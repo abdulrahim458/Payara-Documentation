@@ -21,7 +21,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -66,6 +66,6 @@ Command list-javamail-resources executed successfuly.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-javamail-resource.adoc#create-javamail-resource[`create-javamail-resource`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-javamail-resource.adoc#delete-javamail-resource[`delete-javamail-resource`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-javamail-resource.adoc#create-javamail-resource[`create-javamail-resource`],
+* xref:delete-javamail-resource.adoc#delete-javamail-resource[`delete-javamail-resource`]

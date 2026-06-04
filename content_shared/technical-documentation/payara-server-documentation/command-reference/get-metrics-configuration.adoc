@@ -20,7 +20,7 @@ The `get-metrics-configuration` returns the current configuration options for th
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -59,7 +59,7 @@ asadmin get-metrics-configuration --target dg1
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-metrics-configuration.adoc#set-metrics-configuration[`set-metrics-configuration`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:set-metrics-configuration.adoc#set-metrics-configuration[`set-metrics-configuration`]
 
 

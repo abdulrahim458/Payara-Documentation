@@ -22,7 +22,7 @@ The `clean-jbatch-repository` subcommand will remove the history of all job reco
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -63,10 +63,10 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-batch-jobs.adoc#list-batch-jobs[`list-batch-jobs`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-batch-job-executions.adoc#list-batch-job-executions[`list-batch-job-executions`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-batch-job-steps.adoc#list-batch-job-steps[`list-batch-job-steps`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-batch-runtime-configuration.adoc#list-batch-runtime-configuration[`list-batch-runtime-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/purge-jbatch-repository.adoc#purge-jbatch-repository[`purge-jbatch-repository`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:list-batch-jobs.adoc#list-batch-jobs[`list-batch-jobs`],
+* xref:list-batch-job-executions.adoc#list-batch-job-executions[`list-batch-job-executions`],
+* xref:list-batch-job-steps.adoc#list-batch-job-steps[`list-batch-job-steps`],
+* xref:list-batch-runtime-configuration.adoc#list-batch-runtime-configuration[`list-batch-runtime-configuration`],
+* xref:purge-jbatch-repository.adoc#purge-jbatch-repository[`purge-jbatch-repository`]
 

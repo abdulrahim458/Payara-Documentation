@@ -3,7 +3,7 @@
 
 The Jakarta EE platform provides several abstractions that simplify development of dependable transaction processing for applications. This chapter discusses Jakarta EE transactions and transaction support in the Payara Platform.
 
-For more information about the Jakarta Transactions API (JTA) and Java Transaction Service (JTS), see "xref:technical-documentation/payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in Payara Server General Administration section and in the https://jakarta.ee/specifications/transactions[Jakarta Transactions specification^].
+For more information about the Jakarta Transactions API (JTA) and Java Transaction Service (JTS), see "xref:../payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in Payara Server General Administration section and in the https://jakarta.ee/specifications/transactions[Jakarta Transactions specification^].
 
 You might also want to read "https://eclipse-ee4j.github.io/jakartaee-tutorial/#transactions[Transactions^]" in The Jakarta EE Tutorial.
 
@@ -39,7 +39,7 @@ asadmin set domain1.resources.jdbc-connection-pool.H2Pool.transaction-isolation-
 
 NOTE: You cannot execute the `setTransactionIsolation` method during a transaction.
 
-You can set the default transaction isolation level for a JDBC connection pool. For details, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-database-connectivity.adoc#to-create-a-jdbc-connection-pool[To Create a JDBC Connection Pool]" in the Payara Server General Administration section.
+You can set the default transaction isolation level for a JDBC connection pool. For details, see "xref:../payara-server-documentation/general-administration/administering-database-connectivity.adoc#to-create-a-jdbc-connection-pool[To Create a JDBC Connection Pool]" in the Payara Server General Administration section.
 
 To verify that a level is supported by your database management system, test your database programmatically using the `supportsTransactionIsolationLevel` method in `java.sql.DatabaseMetaData`, as shown in the following example:
 
@@ -203,7 +203,7 @@ To access a `UserTransaction` instance, you can either look it up using the `jav
 
 Accessing a `DataSource` using the `Synchronization.beforeCompletion()` method requires setting the _Allow Non-Component Callers_ option of its corresponding JDBC Connection Pool to `true`.
 
-The default setting is `false`. For more information about non-component callers, see xref:technical-documentation/application-development/using-the-jdbc-api-for-database-access.adoc#allowing-non-component-callers[Allowing Non-Component Callers].
+The default setting is `false`. For more information about non-component callers, see xref:using-the-jdbc-api-for-database-access.adoc#allowing-non-component-callers[Allowing Non-Component Callers].
 
 If possible, you should use the `jakarta.transaction.TransactionSynchronizationRegistry` interface instead of `jakarta.transaction.TransactionManager` , for portability. You can look up the implementation of this interface by using the JNDI name `java:comp/TransactionSynchronizationRegistry`.
 

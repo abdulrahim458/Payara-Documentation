@@ -47,7 +47,7 @@ The addition of some options requires a server restart for changes to become eff
 `-Xmx1024m` +
 `-d64`
 
-To restart the DAS, use the xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc#restart-domain[`restart-domain`] command.
+To restart the DAS, use the xref:restart-domain.adoc#restart-domain[`restart-domain`] command.
 
 This subcommand is supported in remote mode only.
 
@@ -56,7 +56,7 @@ This subcommand is supported in remote mode only.
 
 *asadmin-options*:
   Options for the `asadmin` utility. For information about these
-  options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -94,7 +94,7 @@ create-jvm-options -- -server
 ----
 
 NOTE: If an option name or option value contains a colon, the backslash (`\`) must be used to escape the colon in the name or value. Other characters might also require an escape character.
-For more information about escape characters in subcommand options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] man page.
+For more information about escape characters in subcommand options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] man page.
 
 [#examples]
 == Examples
@@ -145,11 +145,11 @@ In this case, one of the two parameters already exists, so the subcommand report
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-option.adoc#create-jvm-option[`create-jvm-option`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-jvm-options.adoc#delete-jvm-options[`delete-jvm-options`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-jvm-options.adoc#list-jvm-options[`list-jvm-options`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc#restart-domain[`restart-domain`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-jvm-option.adoc#create-jvm-option[`create-jvm-option`],
+* xref:delete-jvm-options.adoc#delete-jvm-options[`delete-jvm-options`],
+* xref:list-jvm-options.adoc#list-jvm-options[`list-jvm-options`],
+* xref:restart-domain.adoc#restart-domain[`restart-domain`]
 
 For more information about the Java application launcher, see the reference page for the operating system that you are using:
 

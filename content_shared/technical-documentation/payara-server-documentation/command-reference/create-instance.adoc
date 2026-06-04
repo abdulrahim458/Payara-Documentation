@@ -52,7 +52,7 @@ Any instance that is not part of a cluster is considered an un-clustered server 
 
 By default, this subcommand attempts to resolve possible port conflicts for the instance that is being created. The subcommand also assigns ports that are currently not in use and not already assigned to other instances on the same node. The subcommand assigns these ports on the basis of an algorithm that is internal to the subcommand.
 
-Use the `--systemproperties` option to resolve port conflicts for additional instances on the same node. System properties of an instance can be manipulated by using the xref:technical-documentation/payara-server-documentation/command-reference/create-system-properties.adoc#create-system-properties[`create-system-properties`] subcommand and the xref:technical-documentation/payara-server-documentation/command-reference/delete-system-property.adoc#delete-system-property[`delete-system-property`] subcommand.
+Use the `--systemproperties` option to resolve port conflicts for additional instances on the same node. System properties of an instance can be manipulated by using the xref:create-system-properties.adoc#create-system-properties[`create-system-properties`] subcommand and the xref:delete-system-property.adoc#delete-system-property[`delete-system-property`] subcommand.
 
 This subcommand is supported in remote mode only.
 
@@ -60,7 +60,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -267,16 +267,16 @@ Command create-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc#create-local-instance[`create-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc#create-node-config[`create-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-system-properties.adoc#create-system-properties[`create-system-properties`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-system-property.adoc#delete-system-property[`delete-system-property`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc#list-instances[`list-instances`],
-* xref:technical-documentation/payara-server-documentation/command-reference/setup-ssh.adoc#setup-ssh[`setup-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-instance.adoc#start-instance[`start-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc#stop-instance[`stop-instance`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-local-instance.adoc#create-local-instance[`create-local-instance`],
+* xref:create-node-config.adoc#create-node-config[`create-node-config`],
+* xref:create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
+* xref:create-system-properties.adoc#create-system-properties[`create-system-properties`],
+* xref:delete-instance.adoc#delete-instance[`delete-instance`],
+* xref:delete-system-property.adoc#delete-system-property[`delete-system-property`],
+* xref:list-instances.adoc#list-instances[`list-instances`],
+* xref:setup-ssh.adoc#setup-ssh[`setup-ssh`],
+* xref:start-instance.adoc#start-instance[`start-instance`],
+* xref:stop-instance.adoc#stop-instance[`stop-instance`]
 
 

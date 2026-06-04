@@ -4,6 +4,6 @@ The Payara Maven Plugins provide seamless integration with Maven, enabling devel
 
 [#plugins]
 == Plugins
-* xref:technical-documentation/ecosystem/project-management-tools/maven-plugin/payara-server-maven-plugin.adoc[Payara Server Maven Plugin] - The Payara Server Maven Plugin allows developers to start, stop, and deploy applications to Payara Server directly from Maven, streamlining the development and deployment process.
+* xref:payara-server-maven-plugin.adoc[Payara Server Maven Plugin] - The Payara Server Maven Plugin allows developers to start, stop, and deploy applications to Payara Server directly from Maven, streamlining the development and deployment process.
 
-* xref:technical-documentation/ecosystem/project-management-tools/maven-plugin/payara-micro-maven-plugin.adoc[Payara Micro Maven Plugin] - The Payara Micro Maven Plugin enables seamless integration with Payara Micro, providing goals to start, stop, and package lightweight, microservice-based Jakarta EE applications.
+* xref:payara-micro-maven-plugin.adoc[Payara Micro Maven Plugin] - The Payara Micro Maven Plugin enables seamless integration with Payara Micro, providing goals to start, stop, and package lightweight, microservice-based Jakarta EE applications.

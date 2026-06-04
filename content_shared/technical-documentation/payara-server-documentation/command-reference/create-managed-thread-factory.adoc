@@ -30,7 +30,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
 Displays the help text for the subcommand.
@@ -101,8 +101,8 @@ error in executing the subcommand
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-managed-thread-factory.adoc#delete-managed-thread-factory[`delete-managed-thread-factory`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-managed-thread-factories.adoc#list-managed-thread-factories[`list-managed-thread-factories`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:delete-managed-thread-factory.adoc#delete-managed-thread-factory[`delete-managed-thread-factory`],
+* xref:list-managed-thread-factories.adoc#list-managed-thread-factories[`list-managed-thread-factories`]
 
 

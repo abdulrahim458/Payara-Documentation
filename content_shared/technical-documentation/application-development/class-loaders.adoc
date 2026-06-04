@@ -9,14 +9,14 @@ Understanding Payara Server class loaders can help you determine where to place 
 
 In a JVM implementation, the class loaders dynamically load a specific Java class file needed for resolving a dependency. For example, when an instance of `java.util.Enumeration` needs to be created, one of the class loaders loads the relevant class into the environment.
 
-For information about class loader debugging, see xref:technical-documentation/application-development/debugging-applications.adoc#class-loader-debugging[Class Loader Debugging].
+For information about class loader debugging, see xref:debugging-applications.adoc#class-loader-debugging[Class Loader Debugging].
 
 [#standard-classloading]
 == Standard Classloading
 
 In a JVM implementation, the class loaders dynamically load a specific Java class file needed for resolving a dependency. For example, when an instance of `java.util.Enumeration` needs to be created, one of the class loaders loads the relevant class into the environment.
 
-For information about class loader debugging, see xref:technical-documentation/application-development/debugging-applications.adoc#class-loader-debugging[Class Loader Debugging].
+For information about class loader debugging, see xref:debugging-applications.adoc#class-loader-debugging[Class Loader Debugging].
 
 Class loaders in Payara Server follow a delegation hierarchy by default.
 
@@ -90,7 +90,7 @@ The Jakarta Servlet specification recommends that a web module's class loader lo
 
 You can make this class loader follow the delegation inversion model in the Servlet specification by setting `delegate="false"` in the `class-loader` element of the `payara-web.xml` file. It is safe to do this only for a web module that does not interact with any other modules.
 
-For more details, see "xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#class-loader[class-loader]" in the Payara Server Application Deployment section. An example of how to use this element is given in the xref:#disabling-classloading-delegation-on-webapps[disabling classloading delegation on web application] section.
+For more details, see "xref:../payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#class-loader[class-loader]" in the Payara Server Application Deployment section. An example of how to use this element is given in the xref:#disabling-classloading-delegation-on-webapps[disabling classloading delegation on web application] section.
 
 The default value is `delegate="true"`, which causes a web module's class loader to delegate in the same manner as the other class loaders. You must use `delegate="true"` for a web application that accesses EJB components or that acts as a web service client or endpoint.
 
@@ -128,7 +128,7 @@ To circumvent this limitation for libraries, utility classes, or individually de
 
 If an internal server resource, such as a JDBC connection pool, requires an additional library, you can install it directly into the Payara Server domain too.
 
-To install a library into a server domain, use the asadmin xref:technical-documentation/payara-server-documentation/command-reference/add-library.adoc#add-library[add-library] command.
+To install a library into a server domain, use the asadmin xref:../payara-server-documentation/command-reference/add-library.adoc#add-library[add-library] command.
 
 This command accepts the `--type` argument, which accepts the following options:
 
@@ -174,11 +174,11 @@ You can specify module or application-specific library classes in one of the fol
 
 * Use the Administration Console. Open the _Applications_ component, then go to the page for the type of application or module. Select the _Deploy_ button. Type the comma-separated paths in the _Libraries_ field.
 
-* Use the `asadmin deploy` command with the `--libraries` option and specify comma-separated paths. For more details, see the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[Payara Server Reference Manual].
+* Use the `asadmin deploy` command with the `--libraries` option and specify comma-separated paths. For more details, see the xref:../payara-server-documentation/command-reference/deploy.adoc[Payara Server Reference Manual].
 
-* Use the `asadmin add-library` command with the `--type app` option. For details, see the xref:technical-documentation/payara-server-documentation/command-reference/add-library.adoc[add-library].
+* Use the `asadmin add-library` command with the `--type app` option. For details, see the xref:../payara-server-documentation/command-reference/add-library.adoc[add-library].
 
-NOTE: None of these alternatives apply to application clients. For more information, see xref:technical-documentation/application-development/developing-java-clients.adoc#using-libraries-with-application-clients[Using Libraries with Application Clients].
+NOTE: None of these alternatives apply to application clients. For more information, see xref:developing-java-clients.adoc#using-libraries-with-application-clients[Using Libraries with Application Clients].
 
 You can update a library JAR file using dynamic reloading or by restarting (disabling and re-enabling) a module or application. To add or remove library JAR files, you can redeploy the module or application. Application libraries are included in the _Applib_ class loader. Paths to libraries can be relative or absolute.
 
@@ -189,7 +189,7 @@ TIP: You can also use application-specific class loading to access different ver
 If multiple applications or modules refer to the same libraries, classes in those libraries are automatically shared. This can reduce the memory footprint and allow sharing of static information. However, applications or modules using application-specific libraries are not portable.
 
 NOTE: If you see an access control error message when you try to use a library, you may need to grant permission to the library in the
-`server.policy` file. For more information, see xref:technical-documentation/application-development/securing-applications.adoc#changing-permissions-for-an-application[Changing Permissions for an Application].
+`server.policy` file. For more information, see xref:securing-applications.adoc#changing-permissions-for-an-application[Changing Permissions for an Application].
 
 *ifeval*: ["{page-site-edition}" == "community"]
 
@@ -199,7 +199,7 @@ NOTE: If you see an access control error message when you try to use a library, 
 Libraries stored in this directory allows a developer to create and deploy skinny WARs, because they are subject to additional annotation and extension scanning as well as processing for CDI, EJB, Servlet, and more.
 Unlike common and application libraries (stored in `domain_dir/lib` and `domain_dir/lib/applibs` respectively), warlibs are cached and don't dynamically update if the files within the directory are modified.
 
-These libraries are only used by applications that are deployed with the `warlibs` property set to `true`. See the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[deploy] command documentation for additional information.
+These libraries are only used by applications that are deployed with the `warlibs` property set to `true`. See the xref:../payara-server-documentation/command-reference/deploy.adoc[deploy] command documentation for additional information.
 
 *endif*: []
 

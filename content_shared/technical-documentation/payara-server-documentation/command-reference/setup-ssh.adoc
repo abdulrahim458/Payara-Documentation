@@ -59,7 +59,7 @@ If the user-home`/.ssh/authorized_keys` file does not exist on a host, the subco
 To distribute the public key, authentication of the user's SSH login is required. If the private key is protected by a passphrase, the
 passphrase is also required. By default, the subcommand prompts the user for the password and, if necessary, the passphrase. To distribute the public key without being prompted, run the subcommand as follows:
 
-** Set the `--interactive` option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] utility to `false`.
+** Set the `--interactive` option of the xref:asadmin.adoc#asadmin-1m[`asadmin`] utility to `false`.
 
 ** Set the `--passwordfile` option of the `asadmin` utility to a file in which the `AS_ADMIN_SSHPASSWORD` entry specifies the SSH user's password for logging in to the specified hosts.
 
@@ -70,7 +70,7 @@ If public key authentication is already set up on a host, the subcommand informs
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -163,7 +163,7 @@ Command setup-ssh executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
 * https://docs.oracle.com/cd/E18752_01/html/816-5165/ssh-1.html[`ssh`^],
 * http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1ssh-keygen-1[`ssh-keygen`^]
 * http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1Msshd-1m[`sshd`^]

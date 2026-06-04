@@ -42,15 +42,15 @@ You can also deploy a component to a specific stand-alone server instance or clu
 
 If the component is already deployed or already exists, you can forcefully redeploy if you set the `--force` option of the `deploy` subcommand to true. The `redeploy` subcommand also accomplishes this. See xref:example-redeploy-app-force[this example].
 
-You can see the enabled or disabled status of an application or module by using the xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc[`show-component-status`] subcommand.
+You can see the enabled or disabled status of an application or module by using the xref:../command-reference/show-component-status.adoc[`show-component-status`] subcommand.
 
-For information about how the application or module name is derived, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#naming-standards[Naming Standards].
+For information about how the application or module name is derived, see xref:index.adoc#naming-standards[Naming Standards].
 
 Use the `--altdd` or `--runtimealtdd` options of the `deploy` (and `redeploy`) subcommand to deploy an application or module using a top-level alternate deployment descriptor. The `--altdd` option specifies a top-level alternate Jakarta EE standard deployment descriptor.
 
 The `--runtimealtdd` option specifies a top-level alternate Payara Server runtime deployment descriptor. See xref:example-using-alt-dd[this example] for more information.
 
-For more information about deployment descriptors associated with Payara Server, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#deployment-descriptors-and-annotations[Deployment Descriptors and Annotations].
+For more information about deployment descriptors associated with Payara Server, see xref:index.adoc#deployment-descriptors-and-annotations[Deployment Descriptors and Annotations].
 
 You can also specify the deployment order of an application by using the `--deploymentorder` option of the `deploy` (and `redeploy`) subcommand.
 This is useful for applications that must be loaded in a certain order at server startup. Applications with lower deployment order numbers are loaded first. See xref:example-deployment-order[this example] for more information.
@@ -58,8 +58,8 @@ This is useful for applications that must be loaded in a certain order at server
 If a deployment order is not specified at the time an application is deployed, the default deployment order of `100` is assigned. If two applications have the same deployment order, the application that was deployed first is loaded first at server startup.
 
 . Ensure that the server is running. Remote commands require a running server.
-. List deployed applications by using the xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc[`list-applications`] subcommand.
-. Deploy the application or module by using the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`] subcommand.
+. List deployed applications by using the xref:../command-reference/list-applications.adoc[`list-applications`] subcommand.
+. Deploy the application or module by using the xref:../command-reference/deploy.adoc[`deploy`] subcommand.
 +
 Information about the options and properties of the subcommand is included in this help page.
 . If needed, fix issues and rerun the `deploy` subcommand.
@@ -127,8 +127,8 @@ Because the application or module itself is stored in the central repository, ad
 
 . Ensure that the server is running. Remote commands require a running server.
 . Add and remove targets by using the
-xref:technical-documentation/payara-server-documentation/command-reference/create-application-ref.adoc[`create-application-ref`] and
-xref:technical-documentation/payara-server-documentation/command-reference/delete-application-ref.adoc[`delete-application-ref`] subcommands.
+xref:../command-reference/create-application-ref.adoc[`create-application-ref`] and
+xref:../command-reference/delete-application-ref.adoc[`delete-application-ref`] subcommands.
 
 TIP: You can also view the full syntax and options of the subcommand by typing`asadmin help create-application-ref` or `asadmin help delete-application-ref` at the command line.
 
@@ -139,10 +139,10 @@ There are a number of commands that can be used to list deployed applications or
 
 . Ensure that the server is running. Remote commands require a running server.
 . List the desired applications by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc[`list-applications`] subcommand or
-the xref:technical-documentation/payara-server-documentation/command-reference/list-sub-components.adoc[`list-sub-components`] subcommand.
+the xref:../command-reference/list-sub-components.adoc[`list-sub-components`] subcommand.
 +
 Information about these commands is included in these help pages.
-. Show the status of a deployed component by using the xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc[`show-component-status`] subcommand.
+. Show the status of a deployed component by using the xref:../command-reference/show-component-status.adoc[`show-component-status`] subcommand.
 
 [#example-list-apps]
 ==== Example Listing Applications
@@ -198,7 +198,7 @@ You must remove a preconfigured resource before it can be updated.
 +
 Remote commands require a running server.
 . Redeploy an application or module by using the
-xref:technical-documentation/payara-server-documentation/command-reference/redeploy.adoc[`redeploy`] subcommand or the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`] subcommand with the `--force` option.
+xref:../command-reference/redeploy.adoc[`redeploy`] subcommand or the xref:../command-reference/deploy.adoc[`deploy`] subcommand with the `--force` option.
 +
 Information about the options and properties of these commands is included in these help pages.
 
@@ -258,8 +258,8 @@ An application or module is enabled by default.
 To list deployed applications or modules, use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc[`list-applications`] subcommand.
 If you do not specify a type, all deployed applications and modules are listed.
 For example, valid types can be `web`, `ejb`, `connector`, `application`, and `webservice`. +
-To see the status of deployed components, use the xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc[`show-component-status`] subcommand.
-. Deactivate the application or module by using the xref:technical-documentation/payara-server-documentation/command-reference/disable.adoc[`disable`] subcommand.
+To see the status of deployed components, use the xref:../command-reference/show-component-status.adoc[`show-component-status`] subcommand.
+. Deactivate the application or module by using the xref:../command-reference/disable.adoc[`disable`] subcommand.
 +
 Information about the options and properties of the subcommand is included in this help page.
 
@@ -298,11 +298,11 @@ Use the `enable` subcommand in remote mode to enable an application or module th
 An application or module that is deployed to more than one target can be enabled on one target and disabled on another. If a component is referenced by a target, it is not available to users unless it is enabled on that target.
 
 . Ensure that the server is running. Remote commands require a running server.
-. Enable the application or module by using the xref:technical-documentation/payara-server-documentation/command-reference/enable.adoc[`enable`] subcommand.
+. Enable the application or module by using the xref:../command-reference/enable.adoc[`enable`] subcommand.
 +
 If the component has not been deployed, an error message is displayed. If the component is already enabled, it is re-enabled.
 +
-To see the status of deployed components, use the xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc[`show-component-status`] subcommand.
+To see the status of deployed components, use the xref:../command-reference/show-component-status.adoc[`show-component-status`] subcommand.
 +
 Information about the options and properties of the subcommand is included in this help page.
 
@@ -327,12 +327,12 @@ Use the `undeploy` subcommand in remote mode to uninstall a deployed application
 . Ensure that the server is running. Remote commands require a running server.
 . Obtain the exact name of the application or module you are un-deploying.
 +
-To list deployed applications or modules, use the xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc[`list-applications`] subcommand.
+To list deployed applications or modules, use the xref:../command-reference/list-applications.adoc[`list-applications`] subcommand.
 +
 If you do not specify a type, all deployed applications and modules are listed. For example, valid types can be `web`, `ejb`, `connector`, `application`, and `webservice`.
 +
-To see the status of deployed components, use the xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc[`show-component-status`] subcommand.
-. Undeploy the application or module by using the xref:technical-documentation/payara-server-documentation/command-reference/undeploy.adoc[`undeploy`] subcommand.
+To see the status of deployed components, use the xref:../command-reference/show-component-status.adoc[`show-component-status`] subcommand.
+. Undeploy the application or module by using the xref:../command-reference/undeploy.adoc[`undeploy`] subcommand.
 +
 Information about the options and properties of the subcommand is included in this help page.
 
@@ -405,11 +405,11 @@ Automatic deployment involves copying an archive file into a special auto-deploy
 
 This method is useful in a development environment because it allows new code to be tested quickly. Automatic deployment is enabled by default, and is available only on the default server instance.
 
-. Use the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand to adjust the auto-deployment interval.
+. Use the xref:../command-reference/set.adoc[`set`] subcommand to adjust the auto-deployment interval.
 +
 This sets the interval at which applications and modules are checked for code changes and dynamically reloaded. The default is `2`.
 
-. Use the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand to enable JSP precompilation.
+. Use the xref:../command-reference/set.adoc[`set`] subcommand to enable JSP precompilation.
 . Copy your archive file to the auto-deploy directory.
 +
 The default location is `domain-dir/autodeploy`. The application will be deployed at the next interval.
@@ -451,7 +451,7 @@ In the deployment plan for an EAR file, the `payara-application.xml` file is loc
 Each `/` (forward slash) is replaced by a `#` (pound sign).
 
 . Ensure that the server is running. Remote commands require a running server.
-. Deploy the application or module by using the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`] subcommand with the `--deploymentplan` option.
+. Deploy the application or module by using the xref:../command-reference/deploy.adoc[`deploy`] subcommand with the `--deploymentplan` option.
 +
 NOTE: Deployment directories might change between Payara Server releases.
 
@@ -517,7 +517,7 @@ On Windows, if you are deploying a directory on a mapped drive, you must be runn
 . Verify that the expanded directory contents match the archive file.
 +
 For information about the required directory contents, see the appropriate specifications.
-. Deploy the directory by using the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`] subcommand and specifying the path to the expanded directory.
+. Deploy the directory by using the xref:../command-reference/deploy.adoc[`deploy`] subcommand and specifying the path to the expanded directory.
 +
 NOTE: Deployment directories might change between Payara Server releases.
 
@@ -591,7 +591,7 @@ There are some considerations to have on how to structure command scripts:
 [#to-deploy-from-a-url]
 === To Deploy from a URL
 
-Payara Server also has the ability to deploy applications whose archives are hosted on a remote location. To deploy an application archive that can be reached via its URL, use the xref:technical-documentation/payara-server-documentation/command-reference/deploy-remote-archive.adoc[`deploy-remote-archive`] subcommand, which works similarly to the standard `deploy` command, and can be used in the same way.
+Payara Server also has the ability to deploy applications whose archives are hosted on a remote location. To deploy an application archive that can be reached via its URL, use the xref:../command-reference/deploy-remote-archive.adoc[`deploy-remote-archive`] subcommand, which works similarly to the standard `deploy` command, and can be used in the same way.
 
 The only difference in the command is that it takes a valid URL instead of a file location in the host's filesystem.
 
@@ -610,7 +610,7 @@ WARNING: The command will only accept HTTP and HTTPS URLs.
 [#to-deploy-using-maven-artifact]
 === To Deploy Using a Maven Artifact
 
-Payara Server also has the ability to deploy applications whose archives are hosted as Maven artifacts on remote repositories. To deploy an application archive in this manner, use the xref:technical-documentation/payara-server-documentation/command-reference/deploy-remote-archive.adoc[`deploy-remote-archive`] subcommand, which works similarly to the standard `deploy` command, and point it to a set of Maven GAV (Group ID/Artifact ID/Version) coordinates where the artifact is located.
+Payara Server also has the ability to deploy applications whose archives are hosted as Maven artifacts on remote repositories. To deploy an application archive in this manner, use the xref:../command-reference/deploy-remote-archive.adoc[`deploy-remote-archive`] subcommand, which works similarly to the standard `deploy` command, and point it to a set of Maven GAV (Group ID/Artifact ID/Version) coordinates where the artifact is located.
 
 By default, the command will search for the artifact in Maven Central, but specific Maven repositories can be added as search locations by using the `additionalRepositories` option, which accepts a comma separated list of repository URLs.
 
@@ -668,7 +668,7 @@ The application must already be deployed. Otherwise, an error occurs.
 . Ensure that the server is running.
 +
 Remote commands require a running server.
-. Set a servlet context-initialization parameter by using the xref:technical-documentation/payara-server-documentation/command-reference/set-web-context-param.adoc[`set-web-context-param`] subcommand.
+. Set a servlet context-initialization parameter by using the xref:../command-reference/set-web-context-param.adoc[`set-web-context-param`] subcommand.
 +
 Information about the options for the subcommand is included in this help page.
 
@@ -698,7 +698,7 @@ This subcommand unsets an environment entry for one of the following items:
 
 When an entry is unset, its value reverts to the value, if any, that is set in the application's deployment descriptor. This subcommand cannot be used to change the value of an environment entry that is set in an application's deployment descriptor.
 
-Instead, use the xref:technical-documentation/payara-server-documentation/command-reference/set-web-context-param.adoc[`set-web-context-param`] subcommand for this purpose.
+Instead, use the xref:../command-reference/set-web-context-param.adoc[`set-web-context-param`] subcommand for this purpose.
 
 *Before You Begin*
 
@@ -707,7 +707,7 @@ The application must already be deployed, and the entry must have previously bee
 . Ensure that the server is running.
 +
 Remote commands require a running server.
-. Unset an environment entry by using the xref:technical-documentation/payara-server-documentation/command-reference/unset-web-context-param.adoc[`unset-web-context-param`] subcommand.
+. Unset an environment entry by using the xref:../command-reference/unset-web-context-param.adoc[`unset-web-context-param`] subcommand.
 +
 Information about the options for the subcommand is included in this help page.
 
@@ -727,7 +727,7 @@ TIP: You can also view the full syntax and options of the subcommand by typing `
 [#to-list-web-context-parameters]
 === To List Web Context Parameters
 
-Use the `list-web-context-param` subcommand in remote mode to list the parameters that have previously been set by using the xref:technical-documentation/payara-server-documentation/command-reference/set-web-context-param.adoc[`set-web-context-param`] subcommand.
+Use the `list-web-context-param` subcommand in remote mode to list the parameters that have previously been set by using the xref:../command-reference/set-web-context-param.adoc[`set-web-context-param`] subcommand.
 
 The subcommand does not list parameters that are set only in the application's deployment descriptor. For each parameter, the following information is displayed:
 
@@ -739,7 +739,7 @@ The subcommand does not list parameters that are set only in the application's d
 . Ensure that the server is running.
 +
 Remote commands require a running server.
-. List servlet context-initialization parameters by using the xref:technical-documentation/payara-server-documentation/command-reference/list-web-context-param.adoc[`list-web-context-param`] subcommand.
+. List servlet context-initialization parameters by using the xref:../command-reference/list-web-context-param.adoc[`list-web-context-param`] subcommand.
 
 [#example-list-servlet-context-init-params]
 ==== Example - Listing Servlet Context-Initialization Parameters for a Web Application
@@ -777,7 +777,7 @@ The application must already be deployed. Otherwise, an error occurs.
 . Ensure that the server is running.
 +
 Remote commands require a running server.
-. Set an environment entry for a deployed web application or module by using the xref:technical-documentation/payara-server-documentation/command-reference/set-web-env-entry.adoc[`set-web-env-entry`] subcommand.
+. Set an environment entry for a deployed web application or module by using the xref:../command-reference/set-web-env-entry.adoc[`set-web-env-entry`] subcommand.
 +
 Information about the options for the subcommand is included in this help page.
 
@@ -803,7 +803,7 @@ Use the `unset-web-env-entry` subcommand in remote mode to unset an environment 
 . Ensure that the server is running.
 +
 Remote commands require a running server.
-. Unset a web environment entry by using the xref:technical-documentation/payara-server-documentation/command-reference/unset-web-env-entry.adoc[`unset-web-env-entry`] subcommand.
+. Unset a web environment entry by using the xref:../command-reference/unset-web-env-entry.adoc[`unset-web-env-entry`] subcommand.
 +
 Information about the options for the subcommand is included in this help page.
 
@@ -832,7 +832,7 @@ Use the `list-web-env-entry` subcommand to list environment entries for a deploy
 . Ensure that the server is running.
 +
 Remote commands require a running server.
-. List the environment entries by using the xref:technical-documentation/payara-server-documentation/command-reference/list-web-env-entry.adoc[`list-web-env-entry`] subcommand.
+. List the environment entries by using the xref:../command-reference/list-web-env-entry.adoc[`list-web-env-entry`] subcommand.
 
 [#example-list-env-var-entries-webapp]
 ==== Example - Listing Environment Entries for a Web Application
@@ -873,7 +873,7 @@ If you then create additional virtual servers and want to assign existing web ap
 +
 This option is not supported and  ignored in a clustered environment. See xref:#example-retain-http-session[this example].
 +
-For information about HTTP session persistence, see the xref:technical-documentation/payara-server-documentation/high-availability/index.adoc[Payara Server High Availability section].
+For information about HTTP session persistence, see the xref:../high-availability/index.adoc[Payara Server High Availability section].
 
 * *JSP Precompilation*. You can precompile JSP files during deployment by checking the appropriate box in the Administration Console, or by using the `--precompilejsp` option of the `deploy` subcommand.
 +
@@ -896,7 +896,7 @@ It is recommended to use payara-web.xml instead.
 +
 If you include this property when you deploy the WAR file, the generated source is kept in `domain-dir/generated/jsp/app-name/module-name` for an application, or `domain-dir/generated/jsp/module-name` for an individually-deployed web module.
 +
-For more information about JSP precompilation, see xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#jsp-config[`jsp-config`].
+For more information about JSP precompilation, see xref:elements-of-deployment-descriptors.adoc#jsp-config[`jsp-config`].
 
 * *Web Context Parameters*. You can set web context parameters after deployment. See the following sections:
 
@@ -925,15 +925,15 @@ Because the Jakarta Enterprise Beans 4.0 specification defines portable EJB JNDI
 +
 To disable Payara Server specific JNDI names for an EJB module, set the value of the `<disable-nonportable-jndi-names>` element in the `glassfish-ejb-jar.xml` file to `true`. The default is `false`.
 
-* *Stateful Session Bean and Timer State*. — Use the `--keepstate` option of the xref:technical-documentation/payara-server-documentation/command-reference/redeploy.adoc[`redeploy`] subcommand or the `<keepstate>` element in the `glassfish-ejb-jar.xml` file to retain stateful session bean instances and persistently created EJB timers across re-deployments.
+* *Stateful Session Bean and Timer State*. — Use the `--keepstate` option of the xref:../command-reference/redeploy.adoc[`redeploy`] subcommand or the `<keepstate>` element in the `glassfish-ejb-jar.xml` file to retain stateful session bean instances and persistently created EJB timers across re-deployments.
 +
 The `--keepstate` option of the `redeploy` subcommand takes precedence. The default for both is `false`. This option is not supported and ignored in a clustered environment.
 +
 Some changes to an application between re-deployments can prevent this feature from working properly. For example, do not change the set of instance variables in the SFSB bean class. Other examples would be changes to EJB names, or adding or removing EJBs to or from an application.
 
-* *EJB Singletons*. — EJB Singletons are created for each server instance in a cluster, and not once per cluster or deployment group. Check the xref:technical-documentation/public-api/clustered-singleton.adoc[Clustered Singleton] proprietary feature of the Public API on how to achieve this.
+* *EJB Singletons*. — EJB Singletons are created for each server instance in a cluster, and not once per cluster or deployment group. Check the xref:../../public-api/clustered-singleton.adoc[Clustered Singleton] proprietary feature of the Public API on how to achieve this.
 
-* *Stubs and Ties*. — Use the xref:technical-documentation/payara-server-documentation/command-reference/get-client-stubs.adoc[`get-client-stubs`] subcommand in remote mode to retrieve stubs and ties.
+* *Stubs and Ties*. — Use the xref:../command-reference/get-client-stubs.adoc[`get-client-stubs`] subcommand in remote mode to retrieve stubs and ties.
 
 * *Compatibility of JAR Visibility Requirements*. — Use the `compatibility` element of the `payara-application.xml` or `payara-ejb-jar.xml` file to specify the Payara Server release with which to be backward compatible in terms of JAR visibility requirements for applications.
 +
@@ -960,19 +960,19 @@ As an alternative to Step 3 through Step 6, you can define application-scoped re
 IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-resources.xml instead.
 
-For more information, see xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources].
+For more information, see xref:deploying-applications.adoc#application-scoped-resources[Application-Scoped Resources].
 
 . Ensure that the server is running.
 +
 Remote commands require a running server.
-. Deploy the connector module by using the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`] subcommand.
+. Deploy the connector module by using the xref:../command-reference/deploy.adoc#deploy[`deploy`] subcommand.
 . Configure connector connection pools for the deployed connector module.
 +
-Use the `create-connector-connection-pool` subcommand. For procedures, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-eis-connectivity.adoc#to-create-a-connector-connection-pool[To Create a Connector Connection Pool]" in the __General Administration section__.
+Use the `create-connector-connection-pool` subcommand. For procedures, see "xref:../general-administration/administering-eis-connectivity.adoc#to-create-a-connector-connection-pool[To Create a Connector Connection Pool]" in the __General Administration section__.
 
 . Configure connector resources for the connector connection pools.
 +
-Use the `create-resource-adapter-config` subcommand. For procedures, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-eis-connectivity.adoc#to-create-configuration-information-for-a-resource-adapter[To Create Configuration Information for a Resource Adapter]" in the __General Administration section__.
+Use the `create-resource-adapter-config` subcommand. For procedures, see "xref:../general-administration/administering-eis-connectivity.adoc#to-create-configuration-information-for-a-resource-adapter[To Create Configuration Information for a Resource Adapter]" in the __General Administration section__.
 +
 If needed, you can override the default configuration properties of a resource adapter.
 +
@@ -980,13 +980,13 @@ This step associates a connector resource with a JNDI name.
 . Configure a resource adapter.
 +
 Use the `create-resource-adapter-config` subcommand. For procedures, see
-"xref:technical-documentation/payara-server-documentation/general-administration/administering-eis-connectivity.adoc#to-create-configuration-information-for-a-resource-adapter[To Create Configuration Information for a Resource Adapter]" in the __ General Administration section__.
+"xref:../general-administration/administering-eis-connectivity.adoc#to-create-configuration-information-for-a-resource-adapter[To Create Configuration Information for a Resource Adapter]" in the __ General Administration section__.
 +
 If needed, you can override the default configuration properties of a resource adapter.
 . If needed, create an administered object for an inbound resource adapter.
 +
 Use the `create-admin-object` subcommand. For procedures, see
-"xref:technical-documentation/payara-server-documentation/general-administration/administering-eis-connectivity.adoc#to-create-an-administered-object[To Create an Administered Object]" in the __General Administration section__.
+"xref:../general-administration/administering-eis-connectivity.adoc#to-create-an-administered-object[To Create an Administered Object]" in the __General Administration section__.
 
 [#redeploying-a-stand-alone-connector-module]
 === Redeploying a Stand-Alone Connector Module
@@ -995,7 +995,7 @@ Redeployment of a connector module maintains all connector connection pools, con
 
 However, you should redeploy any dependent modules. A dependent module uses or refers to a connector resource of the redeployed connector module. Redeployment of a connector module results in the shared class loader reloading the new classes. Other modules that refer to the old resource adapter classes must be redeployed to gain access to the new classes.
 
-For more information about class loaders, see "xref:technical-documentation/application-development/class-loaders.adoc#class-loaders[Class Loaders]" in the Application Development section.
+For more information about class loaders, see "xref:../../application-development/class-loaders.adoc#class-loaders[Class Loaders]" in the Application Development section.
 
 During connector module redeployment, the server log provides a warning indicating that all dependent applications should be redeployed.
 
@@ -1043,15 +1043,15 @@ The EJB JAR file is created.
 An EAR file contains all the components of the application.
 . Deploy the application.
 +
-Instructions are contained in xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module].
+Instructions are contained in xref:deploying-applications.adoc#to-deploy-an-application-or-module[To Deploy an Application or Module].
 . If you are using the `appclient` script to run the application client, retrieve the client files.
 +
 The client artifacts contain the ties and necessary classes for the application client. Client artifacts include multiple files.
 +
 You can use either the `get-client-stubs` subcommand or the `--retrieve` option of the `deploy` subcommand, but you do not need to use both.
 
-* Use the xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`] subcommand with the `--retrieve` option to retrieve the client files as part of deploying the application.
-* Use the xref:technical-documentation/payara-server-documentation/command-reference/get-client-stubs.adoc[`get-client-stubs`] subcommand to retrieve client files for a previously-deployed application.
+* Use the xref:../command-reference/deploy.adoc[`deploy`] subcommand with the `--retrieve` option to retrieve the client files as part of deploying the application.
+* Use the xref:../command-reference/get-client-stubs.adoc[`get-client-stubs`] subcommand to retrieve client files for a previously-deployed application.
 . Test the client on the Payara Server machine by using the `appclient` script.
 +
 The `appclient` script is located in the `as-install/bin` directory.
@@ -1064,10 +1064,10 @@ appclient -client converterClient.jar
 ----
 The `-xml` parameter, which specifies the location of the `sun-acc.xml` file, is also required if you are not using the default instance.
 +
-TIP: For more detailed information about the `appclient` script, see xref:technical-documentation/payara-server-documentation/command-reference/appclient.adoc[`appclient`].
+TIP: For more detailed information about the `appclient` script, see xref:../command-reference/appclient.adoc[`appclient`].
 
 For more detailed information about creating application clients, see
-"xref:technical-documentation/application-development/developing-java-clients.adoc[Developing Java Clients]" in the Application Development section. This chapter includes information on the following topics:
+"xref:../../application-development/developing-java-clients.adoc[Developing Java Clients]" in the Application Development section. This chapter includes information on the following topics:
 
 * Accessing EJB components and JMS resources from application clients
 * Connecting to a remote EJB module through a firewall
@@ -1080,7 +1080,7 @@ For more detailed information about creating application clients, see
 
 If the __context-root__ or __module-id__ is not specified during deployment, the name of the EAR or JAR file without the `.ear` or `.jar` extension is used. For an application, the relative path to the application client JAR file is also included. If the application or module is not in EAR or JAR file format, a __context-root__ or __module-id__ is generated.
 
-For details about naming, see xref:technical-documentation/payara-server-documentation/application-deployment/index.adoc#naming-standards[Naming Standards].
+For details about naming, see xref:index.adoc#naming-standards[Naming Standards].
 
 *Before You Begin* +
 This task applies if you want to use the `appclient` script to run the application client on a system other than where the server runs.
@@ -1103,7 +1103,7 @@ This file is located in `appclient/appserv/bin` by default if you used the `pack
 +
 You are now ready to run the client.
 
-TIP: For more detailed information about the `package-appclient` script, see xref:technical-documentation/payara-server-documentation/command-reference/appclient.adoc[`appclient`(1M)].
+TIP: For more detailed information about the `package-appclient` script, see xref:../command-reference/appclient.adoc[`appclient`(1M)].
 
 [#to-undeploy-an-application-client]
 === To Undeploy an Application Client
@@ -1124,14 +1124,14 @@ The following guidelines apply when deploying a web service in Payara Server:
 +
 If the deployed application or module has a web service endpoint, the endpoint is detected automatically during deployment.
 +
-The Payara Server specific deployment descriptor files, `glassfish-web.xml`, `payara-web.xml` and `glassfish-ejb-jar.xml`, provide optional web service enhancements in their xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#webservice-endpoint[`webservice-endpoint`] and xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#webservice-description[`webservice-description`] elements.
+The Payara Server specific deployment descriptor files, `glassfish-web.xml`, `payara-web.xml` and `glassfish-ejb-jar.xml`, provide optional web service enhancements in their xref:elements-of-deployment-descriptors.adoc#webservice-endpoint[`webservice-endpoint`] and xref:elements-of-deployment-descriptors.adoc#webservice-description[`webservice-description`] elements.
 
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
 
 * *Web Service Management*. Web service management is fully supported in the Administration Console. After the application or module is deployed, click the Web Service component. The table in the right frame lists deployed web service endpoints.
 
-For more information about web services, see "xref:technical-documentation/application-development/developing-soap-webservices.adoc#developing-web-services[Developing Web Services]" in the Application Development section.
+For more information about web services, see "xref:../../application-development/developing-soap-webservices.adoc#developing-web-services[Developing Web Services]" in the Application Development section.
 
 [#osgi-bundle-deployment-guidelines]
 == Osgi Bundle Deployment Guidelines
@@ -1162,7 +1162,7 @@ To enable transparent pool reconfiguration, set the `dynamic-reconfiguration-wai
 In-progress connection requests must complete before this timeout expires, or they must be retried. New connection requests wait for this timeout to expire before acquiring connections to the reconfigured pool.
 If this property exists and has a positive value, it is enabled.
 
-You can set this property in the `glassfish-resources.xml` or `payara-resources.xml` file. For more information, see the property descriptions under xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc#jdbc-connection-pool[`jdbc-connection-pool`].
+You can set this property in the `glassfish-resources.xml` or `payara-resources.xml` file. For more information, see the property descriptions under xref:elements-of-deployment-descriptors.adoc#jdbc-connection-pool[`jdbc-connection-pool`].
 
 IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-resources.xml instead.
@@ -1204,7 +1204,7 @@ This file is placed in the `META-INF` directory of the module or application arc
 For web applications or modules, this file is placed in the `WEB-INF` directory.
 If any submodule archives of an enterprise application archive have their own `glassfish-resources.xml` or `payara-resources.xml` files, the resource definitions are scoped to those modules only.
 
-For more information about the `glassfish-resources.xml` and `payara-resources.xml` file, see xref:technical-documentation/payara-server-documentation/application-deployment/deployment-descriptor-files.adoc#the-payara-resources.xml-file[Payara Server Deployment Descriptor Files] and xref:technical-documentation/payara-server-documentation/application-deployment/elements-of-deployment-descriptors.adoc[Elements of the Payara Server Deployment Descriptors].
+For more information about the `glassfish-resources.xml` and `payara-resources.xml` file, see xref:deployment-descriptor-files.adoc#the-payara-resources.xml-file[Payara Server Deployment Descriptor Files] and xref:elements-of-deployment-descriptors.adoc[Elements of the Payara Server Deployment Descriptors].
 
 IMPORTANT: glassfish-resources.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-resources.xml instead.
@@ -1226,13 +1226,13 @@ asadmin> redeploy --property preserveAppScopedResources=true MyApp.ear
 asadmin> deploy --force=true --property preserveAppScopedResources=true MyApp.ear
 ----
 
-For more information, see xref:technical-documentation/payara-server-documentation/command-reference/redeploy.adoc[`redeploy`] and xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`].
+For more information, see xref:../command-reference/redeploy.adoc[`redeploy`] and xref:../command-reference/deploy.adoc[`deploy`].
 
 *Listing*: Use the `--resources` option of the `list-applications` subcommand to list application-scoped resources. Use the `--subcomponents` option in addition to list scoped resources for enterprise application modules or for module subcomponents.
 
 To list scoped resources for subcomponents only, use the `--resources` option of the `list-subcomponents` subcommand
 
-For more information, see xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc[`list-applications`] and xref:technical-documentation/payara-server-documentation/command-reference/list-sub-components.adoc[`list-sub-components`].
+For more information, see xref:../command-reference/list-applications.adoc[`list-applications`] and xref:../command-reference/list-sub-components.adoc[`list-sub-components`].
 
 *Restrictions*. Use of application-scoped resources is subject to the following restrictions:
 

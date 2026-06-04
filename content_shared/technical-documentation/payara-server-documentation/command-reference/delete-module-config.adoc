@@ -68,8 +68,8 @@ Command delete-module-config executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-module-config.adoc#create-module-config[`create-module-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get-active-module-config.adoc#get-active-module-config[`get-active-module-config`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-module-config.adoc#create-module-config[`create-module-config`],
+* xref:get-active-module-config.adoc#get-active-module-config[`get-active-module-config`]
 
 

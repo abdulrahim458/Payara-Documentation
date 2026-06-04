@@ -21,7 +21,7 @@ Multiple groups can be created by separating them with a colon (`:`). If auth_re
 
 If auth_realm_name is specified, an entry is created in the keyfile using the `auth_realm_name`.
 
-You can use the `--passwordfile` option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] command to specify the password for the user. The password file entry must be of the form `AS_ADMIN_USERPASSWORD`=user-password.
+You can use the `--passwordfile` option of the xref:asadmin.adoc#asadmin-1m[`asadmin`] command to specify the password for the user. The password file entry must be of the form `AS_ADMIN_USERPASSWORD`=user-password.
 
 If a password is not provided, this subcommand fails if secure administration is enabled and the user being created is an administrative user.
 
@@ -31,7 +31,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -73,11 +73,11 @@ Command create-file-user executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-auth-realm.adoc#create-auth-realm[`create-auth-realm`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-file-user.adoc#delete-file-user[`delete-file-user`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-file-groups.adoc#list-file-groups[`list-file-groups`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-file-users.adoc#list-file-users[`list-file-users`],
-* xref:technical-documentation/payara-server-documentation/command-reference/update-file-user.adoc#update-file-user[`update-file-user`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-auth-realm.adoc#create-auth-realm[`create-auth-realm`],
+* xref:delete-file-user.adoc#delete-file-user[`delete-file-user`],
+* xref:list-file-groups.adoc#list-file-groups[`list-file-groups`],
+* xref:list-file-users.adoc#list-file-users[`list-file-users`],
+* xref:update-file-user.adoc#update-file-user[`update-file-user`]
 
 

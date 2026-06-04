@@ -24,7 +24,7 @@ NOTE: Traces of request types marked in (*) are using higher-level APIs and are 
 Traces have form of nested spans following the model found in modern tracing APIs such as *OpenTelemetry* and *OpenTracing*.
 
 The OpenTracing specification, found link:https://github.com/opentracing/specification/blob/master/specification.md[here^], gives a more detailed description of what Spans are and the general trace format.
-Alternatively you can view a short summary xref:technical-documentation/application-development/using-request-tracing-in-applications.adoc#terminology[here]
+Alternatively you can view a short summary xref:../../application-development/using-request-tracing-in-applications.adoc#terminology[here]
 
 The Request Tracing service has the concept of sample rates, affording you extra options to limit the amount of traces processed. The Payara Platform offers two options:
 
@@ -38,12 +38,12 @@ An option to perform this sampling before or after the threshold checks is offer
 
 As Payara Platform offers support for MicroProfile Telemetry, it is possible to manually instrument your application code for creating spans.
 
-For the full details, see the xref:technical-documentation/microprofile/opentelemetry-and-opentracing.adoc#opentelemetry-and-opentracing[OpenTelemetry support] in the Payara Platform Application Development section.
+For the full details, see the xref:../../microprofile/opentelemetry-and-opentracing.adoc#opentelemetry-and-opentracing[OpenTelemetry support] in the Payara Platform Application Development section.
 
 [#opentracing-support]
 == Opentracing Support
 
-In-line with Payara Platform's support for xref:technical-documentation/microprofile/opentracing.adoc[MicroProfile OpenTracing], there's added support for http://opentracing.io/[OpenTracing.io^] code instrumentation.
+In-line with Payara Platform's support for xref:../../microprofile/opentracing.adoc[MicroProfile OpenTracing], there's added support for http://opentracing.io/[OpenTracing.io^] code instrumentation.
 
 NOTE: Since OpenTracing is just a wrapper around OpenTelemetry, it is advised to use OpenTelemetry APIs instead.
 
@@ -83,7 +83,7 @@ Aside from this configuration settings, you can also define which notifiers will
 
 image:request-tracing/select-notifiers.png[alt="Activate Notifiers in the Admin Console",width=600px]
 
-IMPORTANT: Keep in mind that for request tracing events to be relayed to the selected notifiers, both the xref:technical-documentation/payara-server-documentation/general-administration/administering-the-notification-service.adoc[Notification Service] and each respective notifier must be enabled first.
+IMPORTANT: Keep in mind that for request tracing events to be relayed to the selected notifiers, both the xref:administering-the-notification-service.adoc[Notification Service] and each respective notifier must be enabled first.
 
 TIP: You don't need to manually add each notifier on this screen. When enabling a notifier on its configuration screen, the server will **automatically** add it to the list of selected notifiers for the Request Tracing service. This same result occurs when enabling the notifier using the appropriate _asadmin_ command.
 
@@ -94,5 +94,5 @@ TIP: You don't need to manually add each notifier on this screen. When enabling 
 
 You can configure the Request Tracing Service by using these administrations commands:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/get-requesttracing-configuration.adoc[`get-requesttracing-configuration`]
-* xref:technical-documentation/payara-server-documentation/command-reference/set-requesttracing-configuration.adoc[`set-requesttracing-configuration`]
+* xref:../command-reference/get-requesttracing-configuration.adoc[`get-requesttracing-configuration`]
+* xref:../command-reference/set-requesttracing-configuration.adoc[`set-requesttracing-configuration`]

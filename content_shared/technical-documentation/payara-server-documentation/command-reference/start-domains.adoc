@@ -24,7 +24,7 @@ NOTE: The domains will be started assuming default values for all options you wo
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--timeout`*:
 Specifies how long to take for the domains to start in seconds. If starting the domains takes longer than this amount then this command will fail.
@@ -77,13 +77,13 @@ Command start-domains executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc#list-domains[`list-domains`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc#restart-domain[`restart-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-domains.adoc#restart-domains[`restart-domains`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc#start-domain[`start-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc#stop-domain[`stop-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-domains.adoc#stop-domains[`stop-domains`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-all-domains.adoc#stop-all-domains[`stop-all-domains`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:list-domains.adoc#list-domains[`list-domains`],
+* xref:restart-domain.adoc#restart-domain[`restart-domain`],
+* xref:restart-domains.adoc#restart-domains[`restart-domains`],
+* xref:start-domain.adoc#start-domain[`start-domain`],
+* xref:stop-domain.adoc#stop-domain[`stop-domain`],
+* xref:stop-domains.adoc#stop-domains[`stop-domains`],
+* xref:stop-all-domains.adoc#stop-all-domains[`stop-all-domains`]
 
 

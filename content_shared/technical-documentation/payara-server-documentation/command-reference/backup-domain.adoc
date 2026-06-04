@@ -27,7 +27,7 @@ To complete the command, however, *the domain must be stopped first*. This will 
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these   options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these   options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -76,8 +76,8 @@ This operand is optional if only one domain exists in the Payara Server installa
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-backups.adoc#list-backups[`list-backups`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restore-domain.adoc#restore-domain[`restore-domain`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:list-backups.adoc#list-backups[`list-backups`],
+* xref:restore-domain.adoc#restore-domain[`restore-domain`]
 
 

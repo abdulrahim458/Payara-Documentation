@@ -346,4 +346,4 @@ The following `@OsgiService` attributes are currently available:
 [#deploying-osgi-bundles-in-payara-server]
 == Deploying Osgi Bundles in Payara Server
 
-For instruction on deploying OSGi bundle, see "xref:technical-documentation/payara-server-documentation/application-deployment/deploying-applications.adoc#osgi-bundle-deployment-guidelines[OSGi Bundle Deployment Guidelines]" in the Payara Server Application Deployment section.
+For instruction on deploying OSGi bundle, see "xref:../payara-server-documentation/application-deployment/deploying-applications.adoc#osgi-bundle-deployment-guidelines[OSGi Bundle Deployment Guidelines]" in the Payara Server Application Deployment section.

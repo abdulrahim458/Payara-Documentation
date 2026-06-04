@@ -20,7 +20,7 @@ The `delete-virtual-server` subcommand removes the virtual server with the speci
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -64,8 +64,8 @@ Command delete-virtual-server executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-virtual-server.adoc#create-virtual-server[`create-virtual-server`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-virtual-servers.adoc#list-virtual-servers[`list-virtual-servers`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-virtual-server.adoc#create-virtual-server[`create-virtual-server`],
+* xref:list-virtual-servers.adoc#list-virtual-servers[`list-virtual-servers`]
 
 

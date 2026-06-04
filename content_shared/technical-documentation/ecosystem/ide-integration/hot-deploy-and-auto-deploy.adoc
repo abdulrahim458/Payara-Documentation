@@ -26,14 +26,14 @@ WARNING: As the Auto Deploy feature performs a full redeploy of an application, 
 To configure the settings of these features on your IDE of choice, follow the instructions on the corresponding sections of each integration's documentation:
 
 * Eclipse IDE:
-** xref:technical-documentation/ecosystem/ide-integration/eclipse-plugin/payara-server.adoc#hot-deploy-and-auto-deploy-settings[Payara Server]
-** xref:technical-documentation/ecosystem/ide-integration/eclipse-plugin/payara-micro.adoc#hot-deploy-and-auto-deploy-settings[Payara Micro]
+** xref:eclipse-plugin/payara-server.adoc#hot-deploy-and-auto-deploy-settings[Payara Server]
+** xref:eclipse-plugin/payara-micro.adoc#hot-deploy-and-auto-deploy-settings[Payara Micro]
 
 * Apache Netbeans:
-** xref:technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/payara-server.adoc#hot-deploy-and-auto-deploy-settings[Payara Server]
-** xref:technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/payara-micro.adoc#hot-deploy-and-auto-deploy-settings[Payara Micro]
+** xref:apache-netbeans-ide/payara-server.adoc#hot-deploy-and-auto-deploy-settings[Payara Server]
+** xref:apache-netbeans-ide/payara-micro.adoc#hot-deploy-and-auto-deploy-settings[Payara Micro]
 
 * Visual Studio Code:
-** xref:technical-documentation/ecosystem/ide-integration/vscode-extension/payara-server.adoc#hot-deploy-and-auto-deploy-settings[Payara Server]
+** xref:vscode-extension/payara-server.adoc#hot-deploy-and-auto-deploy-settings[Payara Server]
 // TODO: Payara Micro VS Code documentation is missing on this branch!
-** xref:technical-documentation/ecosystem/ide-integration/vscode-extension/payara-micro.adoc#hot-deploy-and-auto-deploy-settings[Payara Micro]
+** xref:vscode-extension/payara-micro.adoc#hot-deploy-and-auto-deploy-settings[Payara Micro]

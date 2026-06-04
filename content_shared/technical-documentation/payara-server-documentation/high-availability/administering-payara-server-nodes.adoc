@@ -88,8 +88,8 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 After creating a node, you can create instances on the node as explained in the following sections:
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
+* xref:administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
 
 [#to-list-ssh-nodes-in-a-domain]
 === To List `SSH` Nodes in a Domain
@@ -185,8 +185,8 @@ Deleting a node removes the node from the configuration of the DAS. The node's d
 
 Ensure that no Payara Server instances reside on the node that you are deleting. For information about how to delete an instance, see the following sections.
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-delete-an-instance-centrally[To Delete an Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
+* xref:administering-payara-server-instances.adoc#to-delete-an-instance-centrally[To Delete an Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Confirm that no instances reside on the node that you are deleting.
@@ -219,10 +219,10 @@ Command delete-node-ssh executed successfully.
 
 *See also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-delete-an-instance-centrally[To Delete an Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc[`delete-node-ssh`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-ssh.adoc[`list-nodes-ssh`]
+* xref:administering-payara-server-instances.adoc#to-delete-an-instance-centrally[To Delete an Instance Centrally]
+* xref:administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
+* xref:../command-reference/delete-node-ssh.adoc[`delete-node-ssh`]
+* xref:../command-reference/list-nodes-ssh.adoc[`list-nodes-ssh`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 
@@ -249,7 +249,7 @@ Use the `create-node-config` command in remote mode to create a `CONFIG` node.
 
 NOTE: If you create an instance locally on a host for which no nodes are defined, you can create the instance without creating a node beforehand. +
 In this situation, Payara Server creates a `CONFIG` node for you. The name of the node is the unqualified name of the host. +
-For more information, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
+For more information, see xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Run the `create-node-config` subcommand.
@@ -285,7 +285,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 *Next Steps*
 
-After creating a node, you can create instances on the node as explained in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
+After creating a node, you can create instances on the node as explained in xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
 
 [#to-list-config-nodes-in-a-domain]
 === To List `CONFIG` Nodes in a Domain
@@ -345,7 +345,7 @@ Deleting a node removes the node from the configuration of the DAS. The node's d
 
 *Before You Begin*
 
-Ensure that no Payara Server instances reside on the node that you are deleting. For information about how to delete an instance that resides on a `CONFIG` node, see xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally].
+Ensure that no Payara Server instances reside on the node that you are deleting. For information about how to delete an instance that resides on a `CONFIG` node, see xref:administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally].
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Confirm that no instances reside on the node that you are deleting.
@@ -381,7 +381,7 @@ Command delete-node-config executed successfully.
 
 *See also*
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
+* xref:administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-node-config.adoc[`delete-node-config`]
 * xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc[`list-nodes-config`]
 
@@ -506,7 +506,7 @@ Deleting a node removes the node from the configuration of the DAS and the Docke
 asadmin list-nodes-config --long=true
 ----
 +
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/delete-node-docker.adoc[`delete-node-docker`] subcommand.
+. Run the xref:../command-reference/delete-node-docker.adoc[`delete-node-docker`] subcommand.
 +
 [source,shell]
 ----
@@ -594,7 +594,7 @@ Command update-node-config executed successfully.
 
 *See also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc[`update-node-config`]
+xref:../command-reference/update-node-config.adoc[`update-node-config`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help update-node-config` at the command line.
 
@@ -659,8 +659,8 @@ Command update-node-ssh executed successfully.
 
 *See also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc[`update-node-config`]
-* xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc[`update-node-ssh`]
+* xref:../command-reference/update-node-config.adoc[`update-node-config`]
+* xref:../command-reference/update-node-ssh.adoc[`update-node-ssh`]
 
 You can also view the full syntax and options of the subcommand by
 typing the following commands at the command line.

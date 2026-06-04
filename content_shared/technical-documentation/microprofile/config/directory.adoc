@@ -19,16 +19,16 @@ image:microprofile/config-property.png[alt="Set Config Property",width=100%]
 
 Use the following commands to configure and get the current settings of this configuration source:
 
-* xref:technical-documentation/payara-server-documentation/command-reference/set-config-dir.adoc#set-config-dir[`set-config-dir`]
+* xref:../../payara-server-documentation/command-reference/set-config-dir.adoc#set-config-dir[`set-config-dir`]
 
-* xref:technical-documentation/payara-server-documentation/command-reference/get-config-dir.adoc#get-config-dir[`get-config-dir`]
+* xref:../../payara-server-documentation/command-reference/get-config-dir.adoc#get-config-dir[`get-config-dir`]
 
 [#using-boot-scripts]
 === Using Pre-Boot And/or Postboot Scripts
 
 When running a Payara Platform distribution in a container, there is no way to restart a running instance after configuring via an `asadmin` command without losing the changes to the domain configuration.
 
-Thus, you should add the corresponding command to a boot script as described at xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/asadmin-commands/pre-and-post-boot-commands.adoc[Pre- and Postboot scripts].
+Thus, you should add the corresponding command to a boot script as described at xref:../../payara-micro-documentation/payara-micro-configuration-and-management/micro-management/asadmin-commands/pre-and-post-boot-commands.adoc[Pre- and Postboot scripts].
 
 See xref:technical-documentation/payara-server-documentation/payara-server-docker-image.adoc#using-environment-variables[Payara Server Docker Image environment variables] for details how to use this within non-micro containers.
 

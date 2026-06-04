@@ -23,7 +23,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -43,7 +43,7 @@ This subcommand is supported in remote mode only.
 *attribute-value*:
   The value to apply to the specified attribute. +
   The attribute values that can be specified include the following.
-  Refer to "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#administering-the-logging-service[Administering the Logging Service]" in
+  Refer to "xref:../general-administration/administering-the-logging-service.adoc#administering-the-logging-service[Administering the Logging Service]" in
   Payara Server General Administration section for complete explanations of each of these values. +
   `com.sun.enterprise.server.logging.GFFileHandler.alarms`;;
     Default is `false`.
@@ -111,12 +111,12 @@ Command set-log-attributes executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/collect-log-files.adoc#collect-log-files[`collect-log-files`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-log-attributes.adoc#list-log-attributes[`list-log-attributes`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-log-levels.adoc#list-log-levels[`list-log-levels`],
-* xref:technical-documentation/payara-server-documentation/command-reference/rotate-log.adoc#rotate-log[`rotate-log`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-log-levels.adoc#set-log-levels[`set-log-levels`]
-* "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-logging-service.adoc#administering-the-logging-service[Administering the Logging Service]" in Payara Server General Administration section
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:collect-log-files.adoc#collect-log-files[`collect-log-files`],
+* xref:list-log-attributes.adoc#list-log-attributes[`list-log-attributes`],
+* xref:list-log-levels.adoc#list-log-levels[`list-log-levels`],
+* xref:rotate-log.adoc#rotate-log[`rotate-log`],
+* xref:set-log-levels.adoc#set-log-levels[`set-log-levels`]
+* "xref:../general-administration/administering-the-logging-service.adoc#administering-the-logging-service[Administering the Logging Service]" in Payara Server General Administration section
 
 

@@ -20,7 +20,7 @@ Removes the thread pool with the specified ID. This subcommand is supported in r
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -65,8 +65,8 @@ Command delete-threadpool executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-threadpool.adoc#create-threadpool[`create-threadpool`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-threadpools.adoc#list-threadpools[`list-threadpools`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-threadpool.adoc#create-threadpool[`create-threadpool`],
+* xref:list-threadpools.adoc#list-threadpools[`list-threadpools`]
 
 

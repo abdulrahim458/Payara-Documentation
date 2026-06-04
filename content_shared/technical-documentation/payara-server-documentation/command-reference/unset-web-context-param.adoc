@@ -26,7 +26,7 @@ The application must already be deployed. Otherwise, an error occurs.
 The parameter must have previously been set by using the `set-web-context-param` subcommand. Otherwise, an error occurs.
 
 NOTE: Do not use the `unset-web-context-param` subcommand to change the value of a servlet context-initialization parameter that is set in an
-application's deployment descriptor. Instead, use the xref:technical-documentation/payara-server-documentation/command-reference/set-web-context-param.adoc#set-web-context-param[`set-web-context-param`] subcommand for this purpose.
+application's deployment descriptor. Instead, use the xref:set-web-context-param.adoc#set-web-context-param[`set-web-context-param`] subcommand for this purpose.
 
 This subcommand enables you to change the configuration of a deployed application without the need to modify the application's deployment
 descriptors and repackage and redeploy the application.
@@ -37,7 +37,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -50,7 +50,7 @@ This subcommand is supported in remote mode only.
 
 *application-name*:
   The name of the application. This name can be obtained from the Administration Console or by using the
-  xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`] subcommand. +
+  xref:list-applications.adoc#list-applications[`list-applications`] subcommand. +
   The application must already be deployed. Otherwise, an error occurs.
 *module*:
   The relative path to the module within the application's enterprise archive (EAR) file. The path to the module is specified in the
@@ -95,9 +95,9 @@ Command unset-web-context-param executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc#list-applications[`list-applications`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-web-context-param.adoc#list-web-context-param[`list-web-context-param`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-web-context-param.adoc#set-web-context-param[`set-web-context-param`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:list-applications.adoc#list-applications[`list-applications`],
+* xref:list-web-context-param.adoc#list-web-context-param[`list-web-context-param`],
+* xref:set-web-context-param.adoc#set-web-context-param[`set-web-context-param`]
 
 

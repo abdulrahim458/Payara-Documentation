@@ -27,7 +27,7 @@ The `create-local-instance` subcommand creates a Payara Server instance on the n
 
 You must run this subcommand from the host that is represented by the node where the instance is to reside. To contact the domain administration server (DAS), this subcommand requires the name of the host where the DAS is running.
 
-If a non-default port is used for administration, this subcommand also requires the port number. If you are adding the first instance to a node, you must provide this information through the `--host` option and the `--port` option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] utility. For the second and later instances, this information is obtained from the DAS properties of the node.
+If a non-default port is used for administration, this subcommand also requires the port number. If you are adding the first instance to a node, you must provide this information through the `--host` option and the `--port` option of the xref:asadmin.adoc#asadmin-1m[`asadmin`] utility. For the second and later instances, this information is obtained from the DAS properties of the node.
 
 A Payara Server instance is a single Virtual Machine for the Java platform (Java Virtual Machine or JVM machine) on a single node in which Payara Server is running. A node defines the host where the Payara Server instance resides. The JVM machine must be compatible with the Java Platform, Enterprise Edition (Jakarta EE).
 
@@ -56,7 +56,7 @@ Any instance that is not part of a cluster is considered an unclustered server i
 
 By default, this subcommand attempts to resolve possible port conflicts for the instance that is being created. The subcommand also assigns ports that are currently not in use and not already assigned to other instances on the same node.
 
-The subcommand assigns these ports on the basis of an algorithm that is internal to the subcommand. Use the `--systemproperties` option to resolve port conflicts for additional instances on the same node. System properties of an instance can be manipulated by using the xref:technical-documentation/payara-server-documentation/command-reference/create-system-properties.adoc#create-system-properties[`create-system-properties`] subcommand and the xref:technical-documentation/payara-server-documentation/command-reference/delete-system-property.adoc#delete-system-property[`delete-system-property`] subcommand.
+The subcommand assigns these ports on the basis of an algorithm that is internal to the subcommand. Use the `--systemproperties` option to resolve port conflicts for additional instances on the same node. System properties of an instance can be manipulated by using the xref:create-system-properties.adoc#create-system-properties[`create-system-properties`] subcommand and the xref:delete-system-property.adoc#delete-system-property[`delete-system-property`] subcommand.
 
 When creating an instance, the subcommand retrieves the files that are required for secure synchronization with the domain administration server (DAS). The instance is synchronized with the DAS when the instance is started
 
@@ -64,7 +64,7 @@ When creating an instance, the subcommand retrieves the files that are required 
 == Options
 
 *asadmin-options*:
-Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -117,7 +117,7 @@ If this parameter is omitted, the default location will be used.
   password that is built into the system. Encrypting the keystore with a password that is built into the system provides no additional security. +
   If `true`, the subcommand obtains the master password from the `AS_ADMIN_MASTERPASSWORD` entry in the password file or prompts for
   the master password. The password file is specified in the `--passwordfile` option of the
-  xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]utility. +
+  xref:asadmin.adoc#asadmin-1m[`asadmin`]utility. +
   If the `--savemasterpassword` option is `true`, this option is also true, regardless of the value that is specified on the command line. +
   The master password must be the same for all instances in a domain.
 *`--systemproperties`*:
@@ -260,15 +260,15 @@ Command create-local-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc#create-node-config[`create-node-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-system-properties.adoc#create-system-properties[`create-system-properties`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-system-property.adoc#delete-system-property[`delete-system-property`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc#list-instances[`list-instances`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc#start-local-instance[`start-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc#stop-local-instance[`stop-local-instance`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-instance.adoc#create-instance[`create-instance`],
+* xref:create-node-config.adoc#create-node-config[`create-node-config`],
+* xref:create-node-ssh.adoc#create-node-ssh[`create-node-ssh`],
+* xref:create-system-properties.adoc#create-system-properties[`create-system-properties`],
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
+* xref:delete-system-property.adoc#delete-system-property[`delete-system-property`],
+* xref:list-instances.adoc#list-instances[`list-instances`],
+* xref:start-local-instance.adoc#start-local-instance[`start-local-instance`],
+* xref:stop-local-instance.adoc#stop-local-instance[`stop-local-instance`]
 
 

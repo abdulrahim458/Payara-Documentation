@@ -23,7 +23,7 @@ This subcommand is supported in remote mode only.
 
 *asadmin-options*:
   Options for the `asadmin` utility. For information about these
-  options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -67,6 +67,6 @@ Command list-admin-objects executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-admin-object.adoc#create-admin-object[`create-admin-object`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-admin-object.adoc#delete-admin-object[`delete-admin-object`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-admin-object.adoc#create-admin-object[`create-admin-object`],
+* xref:delete-admin-object.adoc#delete-admin-object[`delete-admin-object`]

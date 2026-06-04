@@ -48,7 +48,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these  options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these  options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 
 *`--help`*:
 *`-?`*:
@@ -71,7 +71,7 @@ Adds the library files to the war-packaged class loader directory, `domain-dir/l
 
 +
 For more information about these directories, see
-xref:technical-documentation/application-development/class-loaders.adoc#class-loaders[Class Loaders] in the Payara Server Application Development section.
+xref:../../application-development/class-loaders.adoc#class-loaders[Class Loaders] in the Payara Server Application Development section.
 
 *`--upload`*:
 Specifies whether the subcommand uploads the file to the DAS. In most situations, this option can be omitted.
@@ -122,7 +122,7 @@ Command add-library executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-libraries.adoc#list-libraries[`list-libraries`],
-* xref:technical-documentation/payara-server-documentation/command-reference/remove-library.adoc#remove-library[`remove-library`],
-* xref:technical-documentation/application-development/class-loaders.adoc[Class Loaders]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:list-libraries.adoc#list-libraries[`list-libraries`],
+* xref:remove-library.adoc#remove-library[`remove-library`],
+* xref:../../application-development/class-loaders.adoc[Class Loaders]

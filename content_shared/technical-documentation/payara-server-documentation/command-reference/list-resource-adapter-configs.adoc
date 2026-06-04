@@ -23,7 +23,7 @@ This command is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -57,8 +57,8 @@ Command list-resource-adapter-configs executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-resource-adapter-config.adoc#create-resource-adapter-config[`create-resource-adapter-config`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-resource-adapter-config.adoc#delete-resource-adapter-config[`delete-resource-adapter-config`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-resource-adapter-config.adoc#create-resource-adapter-config[`create-resource-adapter-config`],
+* xref:delete-resource-adapter-config.adoc#delete-resource-adapter-config[`delete-resource-adapter-config`]
 
 

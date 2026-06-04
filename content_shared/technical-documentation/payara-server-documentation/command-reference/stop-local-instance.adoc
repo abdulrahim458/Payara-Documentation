@@ -20,7 +20,7 @@ The `stop-local-instance` subcommand stops a Payara Server instance on the machi
 require secure shell (SSH) to be configured. You must run this command from the machine where the instance resides.
 
 The subcommand can stop any Payara Server instance, regardless of how the instance was created. For example, this subcommand can stop an
-instance that was created by using the xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`] subcommand.
+instance that was created by using the xref:create-instance.adoc#create-instance[`create-instance`] subcommand.
 
 The `stop-local-instance` subcommand does not contact the DAS to determine the node on which the instance resides. To determine the node
 on which the instance resides, the subcommand searches the directory that contains the node directories. If multiple node directories exist,
@@ -32,7 +32,7 @@ This subcommand is supported in local mode.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -87,13 +87,13 @@ Command stop-local-instance executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc#create-local-instance[`create-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc#delete-instance[`delete-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-instance.adoc#start-instance[`start-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc#start-local-instance[`start-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc#stop-instance[`stop-instance`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`],
+* xref:create-instance.adoc#create-instance[`create-instance`],
+* xref:create-local-instance.adoc#create-local-instance[`create-local-instance`],
+* xref:delete-instance.adoc#delete-instance[`delete-instance`],
+* xref:delete-local-instance.adoc#delete-local-instance[`delete-local-instance`],
+* xref:start-instance.adoc#start-instance[`start-instance`],
+* xref:start-local-instance.adoc#start-local-instance[`start-local-instance`],
+* xref:stop-instance.adoc#stop-instance[`stop-instance`]
 
 

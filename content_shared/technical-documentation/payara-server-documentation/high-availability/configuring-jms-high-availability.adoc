@@ -105,7 +105,7 @@ Note that the `Embedded` mode brokers configuration is the default for Payara Se
 
 *Before You Begin*: Perform the following steps after you have created the Payara Server cluster, but before you have added instances to the cluster or started the cluster.
 
-CAUTION: Before using this procedure to reconfigure an existing cluster, you must follow the special procedures to migrate to another type of broker cluster, as described in xref:technical-documentation/payara-server-documentation/high-availability/configuring-jms-high-availability.adoc#to-migrate-between-types-of-embedded-or-local-conventional-broker-clusters[To Migrate Between Types of Embedded or Local Conventional Broker Clusters]. +
+CAUTION: Before using this procedure to reconfigure an existing cluster, you must follow the special procedures to migrate to another type of broker cluster, as described in xref:configuring-jms-high-availability.adoc#to-migrate-between-types-of-embedded-or-local-conventional-broker-clusters[To Migrate Between Types of Embedded or Local Conventional Broker Clusters]. +
 Failing to perform these special procedures could lead to data loss or corruption and even render your setup unusable, depending on the JMS operations performed on the existing cluster.
 
 .  Ensure that the server is running. Remote `asadmin` subcommands require a running server.
@@ -127,7 +127,7 @@ Use the `configure-jms-cluster` subcommand in remote `asadmin` mode to configure
 
 *Before You Begin*: Perform the following steps after you have created the Payara Server cluster, but before you have added instances to the cluster or started it.
 
-CAUTION: Before using this procedure to reconfigure an existing cluster, you must follow the special procedures to migrate to another type of broker cluster, as described in xref:technical-documentation/payara-server-documentation/high-availability/configuring-jms-high-availability.adoc#to-migrate-between-types-of-embedded-or-local-conventional-broker-clusters[To Migrate Between Types of Embedded or Local Conventional Broker Clusters]. +
+CAUTION: Before using this procedure to reconfigure an existing cluster, you must follow the special procedures to migrate to another type of broker cluster, as described in xref:configuring-jms-high-availability.adoc#to-migrate-between-types-of-embedded-or-local-conventional-broker-clusters[To Migrate Between Types of Embedded or Local Conventional Broker Clusters]. +
 Failing to perform these special procedures could lead to data loss or corruption and even render your setup unusable, depending on the JMS operations performed on the existing cluster.
 
 . Ensure that the server is running. Remote `asadmin` subcommands require a running server.
@@ -228,7 +228,7 @@ For each broker, use an `asadmin create-jms-host` command instruction like this:
 asadmin create-jms-host --target payara-cluster-name --mqhost broker-host --mqport broker-port --mquser mq-user --mqpassword mq-user-password <jms-host-name-for-broker>
 ----
 . Start the brokers in the cluster by using the Message Queue `imqbrokerd` command, as described in the *Managing Broker Clusters* section the in OpenMQ Administration Guide.
-. Create instances in the Payara Server cluster, as described in xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally] and xref:technical-documentation/payara-server-documentation/high-availability/administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
+. Create instances in the Payara Server cluster, as described in xref:administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally] and xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally].
 
 [#connection-failover]
 == Connection Failover
@@ -287,7 +287,7 @@ If the broker fails, this field specifies the number of times the Java Message S
 +
 For enhanced clusters, this field specifies the number of times the Java Message Service iterates through the JMS hosts list in an effort to establish its initial connection. If the broker fails, this field is not used when performing reconnection.
 
-You can override these settings using JMS connection factory settings. For details, see "xref:technical-documentation/payara-server-documentation/general-administration/administering-the-java-message-service.adoc#administering-jms-connection-factories-and-destinations[Administering JMS Connection Factories and Destinations]" in the Payara Server General Administration section.
+You can override these settings using JMS connection factory settings. For details, see "xref:../general-administration/administering-the-java-message-service.adoc#administering-jms-connection-factories-and-destinations[Administering JMS Connection Factories and Destinations]" in the Payara Server General Administration section.
 
 [#load-balanced-delivery-to-mdbs]
 == Load-Balanced Delivery to Mdbs

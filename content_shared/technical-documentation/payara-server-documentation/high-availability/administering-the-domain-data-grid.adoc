@@ -3,7 +3,7 @@
 
 The Domain Data Grid uses https://hazelcast.com/[Hazelcast^] as its clustering technology to provide an in-memory data structure that is distributed amongst all the Payara Server instances within a Payara Domain.
 
-The Data Grid is highly available and highly scalable and enables in-memory data storage and sharing between all Payara Server instances in a domain. The Domain Data Grid is used as the backing store for web session data, Stateful Session Bean state, xref:technical-documentation/application-development/using-the-jcache-api.adoc[JCache] caches, Clustered Singletons, and Single Sign On state as well as internal Payara domain data like performance metrics and traces. In addition, Persistent EJB Timers can also be configured to be stored in the grid. The Domain Data Grid also enables light-weight messaging between server instances and is the foundation of the CDI Clustered Event Bus.
+The Data Grid is highly available and highly scalable and enables in-memory data storage and sharing between all Payara Server instances in a domain. The Domain Data Grid is used as the backing store for web session data, Stateful Session Bean state, xref:../../application-development/using-the-jcache-api.adoc[JCache] caches, Clustered Singletons, and Single Sign On state as well as internal Payara domain data like performance metrics and traces. In addition, Persistent EJB Timers can also be configured to be stored in the grid. The Domain Data Grid also enables light-weight messaging between server instances and is the foundation of the CDI Clustered Event Bus.
 
 The Domain Data Grid greatly simplifies traditional clustering as by default it is always on, always available and usually requires no special configuration.
 
@@ -125,7 +125,7 @@ image:domain-datagrid/discovery-mode.png[alt="Domain Discovery Mode",width=100%]
 [#configuration-discovery-mode-via-asadmin-CLI]
 === Configuration Discovery Mode via Asadmin CLI
 
-The discovery mode can be set via the asadmin CLI, depending on the specific mode to be selected, by running the xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] commands.
+The discovery mode can be set via the asadmin CLI, depending on the specific mode to be selected, by running the xref:../command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] commands.
 
 [#set-tcpip-mode]
 ==== Set TCP-IP Mode
@@ -206,7 +206,7 @@ If this is a problem, ensure not to select the dynamic option and restart each a
 [#enabling-hazelcast-asadmin]
 === Disabling Datagrid Using Asadmin CLI
 
-The xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] asadmin command can be used to enable or disable Hazelcast and therefore the Data Grid.
+The xref:../command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] asadmin command can be used to enable or disable Hazelcast and therefore the Data Grid.
 
 This command is also used to configure other aspects of Hazelcast, which is covered in this same section. The command requires the Admin Server to be running, and will expect it to be listening on port **4848** unless specified differently with the asadmin utility `--port` option.
 
@@ -272,7 +272,7 @@ To set the Hazelcast configuration from a Hazelcast Configuration file:
 [#setting-hazelcast-configuration-file-asadmin]
 ==== Setting a Hazelcast Configuration File Using Asadmin
 
-The xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] command can be used to set the configuration file:
+The xref:../command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] command can be used to set the configuration file:
 
 [source, shell]
 ----
@@ -309,7 +309,7 @@ Using this option to point to a valid Hazelcast configuration file will cause al
 |Start Port|The port the other Payara Server instances use to run Hazelcast on. If this port is busy, the port specified will be incremented until a valid port is found.
 |License Key |Enables https://hazelcast.com/products/enterprise/[Hazelcast Enterprise^] features.
 |Host Aware Partitioning |Whether to enable http://docs.hazelcast.org/docs/latest/manual/html-single/index.html#grouping-types[host-aware partitioning^] for the cluster. Host aware partitioning *must be* enabled on all members of the cluster (including Payara Micro instances) for this feature to work correctly. This is default in Payara Server 5.181 onwards for both Payara Server domains and Payara Micro instances.
-|Data Grid Discovery Mode | See xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc#domain-discovery-mode[Discovery Modes]
+|Data Grid Discovery Mode | See xref:administering-the-domain-data-grid.adoc#domain-discovery-mode[Discovery Modes]
 |====
 
 [#configuring-config-specifc-hazelcast-with-the-admin-console]
@@ -325,7 +325,7 @@ The following configuration options are available here:
 |====
 |Property |Description
 
-|Enabled | See xref:technical-documentation/payara-server-documentation/high-availability/administering-the-domain-data-grid.adoc#enabling-and-disabling-the-data-grid[Disabling Data Grid] for detailed information
+|Enabled | See xref:administering-the-domain-data-grid.adoc#enabling-and-disabling-the-data-grid[Disabling Data Grid] for detailed information
 
 |Restart Data Grid |Determines if the Hazelcast member embedded in Payara will be restarted to apply any changes made
 |Lite Data Grid Instance|If set to true, cluster members with this configuration will be Hazelcast "lite" nodes, meaning they will not store any cache data locally and rely on other cluster members to store data.
@@ -346,7 +346,7 @@ Enter your required values, and click _Save_. Restarting the domain or instance/
 [#configuring-hazelcast-on-domain-creation]
 === Configuring Hazelcast on Domain Creation
 
-The following options can be used with the xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`] command to specify certain Hazelcast settings when a domain is created. An example of create-domain command with Hazelcast specific options:
+The following options can be used with the xref:../command-reference/create-domain.adoc[`create-domain`] command to specify certain Hazelcast settings when a domain is created. An example of create-domain command with Hazelcast specific options:
 
 [source, shell]
 ----
@@ -360,7 +360,7 @@ It is possible to configure the port used by Hazelcast to bind the corresponding
 
 [#configuring-config-specific-data-grid-start-port-on-instance-creation]
 ==== Configuring Config Specific Data Grid Start Port on Instance Creation
-The `--dataGridStartPort` option can be used with the xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc[`create-instance`] or the xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc[`create-local-instance`] commands to specify config Specific Data Grid Start Port when an instance is created.
+The `--dataGridStartPort` option can be used with the xref:../command-reference/create-instance.adoc[`create-instance`] or the xref:../command-reference/create-local-instance.adoc[`create-local-instance`] commands to specify config Specific Data Grid Start Port when an instance is created.
 
 [#configuring-data-grid-start-port-After-instance-creation]
 ==== Configuring Data Grid Start Port after Instance Creation
@@ -378,7 +378,7 @@ You can configure the start port used by an instance after its creation by eithe
 [#setting-data-grid-start-port-with-the-asadmin-cli]
 ===== Setting Data Grid Start Port Using Asadmin CLI
 
-The xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] command can be used to set the Data Grid start port:
+The xref:../command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] command can be used to set the Data Grid start port:
 
 [source, shell]
 ----
@@ -418,7 +418,7 @@ image:hazelcast/hazelcast-admin-console-view-cluster-members-from-domain.png[alt
 [#viewing-cluster-members-asadmin]
 === Viewing Cluster Members via Asadmin
 
-To view the current cluster members from the command line, run either the xref:technical-documentation/payara-server-documentation/command-reference/list-hazelcast-members.adoc[`list-hazelcast-members`] or the xref:technical-documentation/payara-server-documentation/command-reference/list-hazelcast-cluster-members.adoc[`list-hazelcast-cluster-members`] asadmin commands:
+To view the current cluster members from the command line, run either the xref:../command-reference/list-hazelcast-members.adoc[`list-hazelcast-members`] or the xref:../command-reference/list-hazelcast-cluster-members.adoc[`list-hazelcast-cluster-members`] asadmin commands:
 
 [source, shell]
 ----
@@ -479,14 +479,14 @@ Documentation around configuration of the data sources for encryption assumes th
 [#generating-an-encryption-key]
 ==== Generating an Encryption Key
 
-The key to be used by Payara Server to perform the actual encryption and decryption of data can be generated using the xref:technical-documentation/payara-server-documentation/command-reference/generate-encryption-key.adoc[generate-encryption-key] asadmin command:
+The key to be used by Payara Server to perform the actual encryption and decryption of data can be generated using the xref:../command-reference/generate-encryption-key.adoc[generate-encryption-key] asadmin command:
 
 [source, shell]
 ----
 asadmin> generate-encryption-key
 ----
 
-This command generates a key using the master password – the same one used to access the key store used by Payara Server. Similar to the xref:technical-documentation/payara-server-documentation/command-reference/change-master-password.adoc[`change-master-password`] command, this command requires you to shut down the DAS first.
+This command generates a key using the master password – the same one used to access the key store used by Payara Server. Similar to the xref:../command-reference/change-master-password.adoc[`change-master-password`] command, this command requires you to shut down the DAS first.
 
 IMPORTANT: This command should only be run on the DAS since this is the _master_ instance, and will be the instance propagating the key out to other instances in the domain.
 
@@ -509,7 +509,7 @@ NOTE: If you change the master password after generating your key, you’ll need
 [#enabling-encryption-in-hazelcast]
 === Enabling Encryption in Hazelcast
 
-Enabling encryption of the data grid itself is controlled by the xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] asadmin command, with the `--encryptdatagrid` parameter:
+Enabling encryption of the data grid itself is controlled by the xref:../command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`] asadmin command, with the `--encryptdatagrid` parameter:
 
 [source, shell]
 ----
@@ -555,7 +555,7 @@ No additional actions necessary.
 [#hazelcast-phonehome]
 == The Hazelcast Phonehome Service
 
-In a similar manner to the server's xref:technical-documentation/payara-server-documentation/general-administration/index.adoc#phone-home[Phone Home] service,  Hazelcast Community Edition also comes with an link:https://docs.hazelcast.com/hazelcast/5.3/phone-homes[internal service^] that makes all instances that belong to the DataGrid send phone data regularly.
+In a similar manner to the server's xref:../general-administration/index.adoc#phone-home[Phone Home] service,  Hazelcast Community Edition also comes with an link:https://docs.hazelcast.com/hazelcast/5.3/phone-homes[internal service^] that makes all instances that belong to the DataGrid send phone data regularly.
 
 As with the Platform's phone home service, if you want to disable Hazelcast Phone Home service, it can be done via either the `HZ_PHONE_HOME_ENABLED` environment variable (set it to `false`) or by using the `hazelcast.phone.home.enabled` system property:
 
@@ -567,17 +567,17 @@ asadmin create-jvm-options --target server-config "-Dhazelcast.phone.home.enable
 [#see-also]
 == See Also
 
-* xref:technical-documentation/payara-server-documentation/high-availability/administering-deployment-groups.adoc[Deployment Groups],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc[`create-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc[`create-local-instance`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-hazelcast-cluster-members.adoc[`list-hazelcast-cluster-members`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-hazelcast-members.adoc[`list-hazelcast-members`],
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-hazelcast.adoc[`restart-hazelcast`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-cache-keys.adoc[`list-cache-keys`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-caches.adoc[`list-caches`],
-* xref:technical-documentation/payara-server-documentation/command-reference/clear-cache.adoc[`clear-cache`],
-* xref:technical-documentation/payara-server-documentation/command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/get-hazelcast-configuration.adoc[`get-hazelcast-configuration`],
-* xref:technical-documentation/payara-server-documentation/command-reference/generate-encryption-key.adoc[`generate-encryption-key`]
+* xref:administering-deployment-groups.adoc[Deployment Groups],
+* xref:../command-reference/create-domain.adoc[`create-domain`],
+* xref:../command-reference/create-instance.adoc[`create-instance`],
+* xref:../command-reference/create-local-instance.adoc[`create-local-instance`],
+* xref:../command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`],
+* xref:../command-reference/list-hazelcast-cluster-members.adoc[`list-hazelcast-cluster-members`],
+* xref:../command-reference/list-hazelcast-members.adoc[`list-hazelcast-members`],
+* xref:../command-reference/restart-hazelcast.adoc[`restart-hazelcast`],
+* xref:../command-reference/list-cache-keys.adoc[`list-cache-keys`],
+* xref:../command-reference/list-caches.adoc[`list-caches`],
+* xref:../command-reference/clear-cache.adoc[`clear-cache`],
+* xref:../command-reference/set-hazelcast-configuration.adoc[`set-hazelcast-configuration`],
+* xref:../command-reference/get-hazelcast-configuration.adoc[`get-hazelcast-configuration`],
+* xref:../command-reference/generate-encryption-key.adoc[`generate-encryption-key`]

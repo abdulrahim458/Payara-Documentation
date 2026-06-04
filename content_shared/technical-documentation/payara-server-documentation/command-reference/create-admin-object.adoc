@@ -29,7 +29,7 @@ This subcommand is supported in remote mode only.
 == Options
 
 *asadmin-options*:
-  Options for the `asadmin` utility. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`] help page.
+  Options for the `asadmin` utility. For information about these options, see the xref:asadmin.adoc#asadmin-1m[`asadmin`] help page.
 *`--help`*:
 *`-?`*:
   Displays the help text for the subcommand.
@@ -57,7 +57,7 @@ NOTE: The resource is always created for the domain as a whole, but the `resourc
 *`--description`*:
   Text string describing the administered object.
 *`--property`*:
-  Description of the name/values pairs for configuring the resource. Dependent on the resource adapter. For JMS properties, see xref:technical-documentation/payara-server-documentation/command-reference/create-jms-resource.adoc#create-jms-resource[`create-jms-resource`] for JMS destination resources.
+  Description of the name/values pairs for configuring the resource. Dependent on the resource adapter. For JMS properties, see xref:create-jms-resource.adoc#create-jms-resource[`create-jms-resource`] for JMS destination resources.
 
 [#operands]
 == Operands
@@ -91,9 +91,9 @@ Command create-admin-object executed successfully
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc#asadmin-1m[`asadmin`]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-resource-ref.adoc#create-resource-ref[`create-resource-ref`],
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-admin-object.adoc#delete-admin-object[`delete-admin-object`],
-* xref:technical-documentation/payara-server-documentation/command-reference/list-admin-objects.adoc#list-admin-objects[`list-admin-objects`]
+* xref:asadmin.adoc#asadmin-1m[`asadmin`]
+* xref:create-resource-ref.adoc#create-resource-ref[`create-resource-ref`],
+* xref:delete-admin-object.adoc#delete-admin-object[`delete-admin-object`],
+* xref:list-admin-objects.adoc#list-admin-objects[`list-admin-objects`]
 
 

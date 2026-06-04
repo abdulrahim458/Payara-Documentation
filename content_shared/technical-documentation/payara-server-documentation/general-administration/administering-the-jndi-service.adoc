@@ -72,8 +72,8 @@ factories
 
 Within Payara Server, you can configure your environment for custom and external JNDI resources. A custom resource accesses a local JNDI repository; an external resource accesses an external JNDI repository. Both types of resources need user-specified factory class elements, JNDI name attributes, and so on.
 
-* xref:technical-documentation/payara-server-documentation/general-administration/administering-the-jndi-service.adoc#administering-custom-jndi-resources[Administering Custom JNDI Resources]
-* xref:technical-documentation/payara-server-documentation/general-administration/administering-the-jndi-service.adoc#administering-external-jndi-resources[Administering External JNDI Resources]
+* xref:administering-the-jndi-service.adoc#administering-custom-jndi-resources[Administering Custom JNDI Resources]
+* xref:administering-the-jndi-service.adoc#administering-external-jndi-resources[Administering External JNDI Resources]
 
 [#administering-custom-jndi-resources]
 === Administering Custom JNDI Resources
@@ -87,7 +87,7 @@ Use the `create-custom-resource` subcommand in remote mode to create a custom re
 
 . Ensure that the server is running. Remote subcommands require a running server.
 . Create a custom resource by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-custom-resource.adoc[`create-custom-resource`] subcommand. +
-Information on properties for the subcommand is contained in this help page. Restart Payara Server. See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+Information on properties for the subcommand is contained in this help page. Restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 .Example 18-1 Creating a Custom Resource
 [source,shell]
@@ -166,7 +166,7 @@ The external JNDI factory must implement the `javax.naming.spi.InitialContextFac
 . Register an external JNDI resource by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-jndi-resource.adoc[`create-jndi-resource`] subcommand. +
 Information on properties for the subcommand is contained in this help page.
 . Restart Payara Server. +
-See xref:technical-documentation/payara-server-documentation/general-administration/administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
+See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 .Example 18-5 Registering an External JNDI Resource
 [source,shell]
