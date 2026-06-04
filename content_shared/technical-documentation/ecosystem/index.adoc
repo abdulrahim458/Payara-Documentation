@@ -1,15 +1,14 @@
-= Connector Suites/arquillian Containers/ecosystem/connector Suites/arquillian Containers
+= Azul Payara Ecosystem
 
-The Payara Foundation not only provides application servers in the form of Payara
-Server and Payara Micro; there are also satellite projects
+Azul Payara not only provides application servers in the form of Payara Server and Payara Micro; there are also satellite projects
 which complement and enhance the developer experience.
 
 These include:
 
-xref:technical-documentation/ecosystem/project-management-tools/maven-plugin.adoc[Payara Micro Maven Plugin]::
+xref:technical-documentation/ecosystem/project-management-tools/maven-plugin/index.adoc[Payara Micro Maven Plugin] +
 A plugin for Apache Maven is available for Payara Micro.
 
-xref:technical-documentation/ecosystem/project-management-tools/maven-archetype.adoc[Payara Micro Maven Archetype]::
+xref:technical-documentation/ecosystem/project-management-tools/maven-archetype.adoc[Payara Micro Maven Archetype] +
 An archetype for Apache Maven is available for Payara Micro.
 
 xref:technical-documentation/ecosystem/project-management-tools/gradle-plugin.adoc[Payara Micro Gradle Plugin]::

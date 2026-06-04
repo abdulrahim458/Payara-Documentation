@@ -652,8 +652,8 @@ sections:
           - file: technical-documentation/microprofile/telemetry
       - title: Ecosystem
         sections:
-          - file: technical-documentation/ecosystem/index
           - title: Project Management Tools
+            file: technical-documentation/ecosystem/index
             sections:
               - file: technical-documentation/ecosystem/project-management-tools/maven-bom
               - title: Maven Plugin

@@ -68,7 +68,7 @@ The administration tools, such as the browser-based Administration Console, comm
 [#server-instances]
 === Server Instances
 
-A server instance is a Payara Server running in a single Java Virtual Machine (JVM) process. The supported platforms for Payara Server are described in this following article: xref:docs:root:general-info/supported-platforms.adoc[Supported Platforms].
+A server instance is a Payara Server running in a single Java Virtual Machine (JVM) process. The supported platforms for Payara Server are described in this following article: xref:../../../general-info/supported-platforms.adoc[Supported Platforms].
 
 It is usually sufficient to create a single server instance on a machine, since Payara Server and accompanying JVM are both designed to scale to multiple processors. However, it can be beneficial to create multiple instances on one machine for application isolation and rolling upgrades. In some cases, a large server with multiple instances can be used in more than one administrative domain. The administration tools makes it easy to create, delete, and manage server instances across multiple machines.
 

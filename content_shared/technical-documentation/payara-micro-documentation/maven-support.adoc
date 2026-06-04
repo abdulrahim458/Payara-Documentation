@@ -24,11 +24,11 @@ IMPORTANT: The xref:technical-documentation/public-api/index.adoc[Public API] de
 [#run-payara-micro-using-the-maven-plugin]
 == Run Payara Micro Using the Maven Plugin
 
-There is a maven plugin built specifically for use with Payara Micro. It has goals to `bundle` the application into an Uber JAR, `start` and `stop` Payara Micro. This plugin is xref:technical-documentation/ecosystem/project-management-tools/maven-plugin.adoc[fully documented in the Ecosystem section].
+There is a maven plugin built specifically for use with Payara Micro. It has goals to `bundle` the application into an Uber JAR, `start` and `stop` Payara Micro. This plugin is xref:../ecosystem/project-management-tools/maven-plugin/index.adoc[fully documented in the Ecosystem section].
 
 [#run-payara-micro-using-netbeans]
 == Run Payara Micro Using the Netbeans IDE
 
 There is a Payara Platform tools plugin built for the Apache NetBeans IDE, specifically designed for Payara Micro to create and manage application actions (e.g., run, reload, and debug).
 
-This plugin is fully documented in the xref:technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/payara-micro.adoc[Payara Micro Apache NetBeans IDE] integration.
+This plugin is fully documented in the xref:../ecosystem/ide-integration/apache-netbeans-ide/payara-micro.adoc[Payara Micro Apache NetBeans IDE] integration.
