@@ -32,14 +32,16 @@ CAUTION: Payara Server does not support RMI-IIOP load balancing and failover ove
 
 Payara Server supports two general models for load balancing:
 
-xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#initialcontext-load-balancing[`InitialContext` Load Balancing]::
+==== xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#initialcontext-load-balancing[`InitialContext` Load Balancing]
+
 When a client performs a JNDI lookup for an object, the Naming Service creates a `InitialContext` (IC) object associated with a particular server instance.
-+
+
 From then on, all lookup requests made using that IC object are sent to the same server instance. `InitialContext` load balancing can be configured automatically across an entire cluster.
 
-xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#per-request-load-balancing-prlb[Per-Request Load Balancing (PRLB)]::
+==== xref:technical-documentation/payara-server-documentation/high-availability/rmi-iiop-load-balancing-and-failover.adoc#per-request-load-balancing-prlb[Per-Request Load Balancing (PRLB)]
+
 Per Request Load Balancing (PRLB) is a method for load balancing stateless EJBs that enables load-balancing for each request to an EJB instance.
-+
+
 NOTE: PRLB chooses the first node in a cluster to use on each request. PRLB is configured on a per-EJB basis.
 
 [#initialcontext-load-balancing]

@@ -5,9 +5,11 @@ The SQS connector's behavior and features are affected by the exact version of t
 
 The tags below are for the https://github.com/payara/Cloud-Connectors[Cloud Connectors repository^]. You should use the one corresponding to the SQS and Jakarta version you require.
 
-https://github.com/payara/Cloud-Connectors/releases/tag/0.8.0[0.8.0^]:: Amazon SQS Version 1 using JakartaEE 8 and the `javax` namespace
-https://github.com/payara/Cloud-Connectors/releases/tag/AmazonSQS-1.1.0[AmazonSQS-1.1.0^]:: Amazon SQS Version 2 using JakartaEE 8 and the `javax` namespace
-https://github.com/payara/Cloud-Connectors/releases/tag/AmazonSQS-2.1.0[AmazonSQS-2.1.0^]:: Amazon SQS Version 2 using JakartaEE 10 and the `jakarta` namespace
+* *https://github.com/payara/Cloud-Connectors/releases/tag/0.8.0[0.8.0^]*: Amazon SQS Version 1 using JakartaEE 8 and the `javax` namespace
+
+* *https://github.com/payara/Cloud-Connectors/releases/tag/AmazonSQS-1.1.0[AmazonSQS-1.1.0^]*: Amazon SQS Version 2 using JakartaEE 8 and the `javax` namespace
+
+* *https://github.com/payara/Cloud-Connectors/releases/tag/AmazonSQS-2.1.0[AmazonSQS-2.1.0^]*: Amazon SQS Version 2 using JakartaEE 10 and the `jakarta` namespace
 
 [#amazon-sqs-connector-version-1]
 == Amazon SQS Connector Version 1

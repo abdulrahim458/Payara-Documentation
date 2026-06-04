@@ -11,33 +11,35 @@ A plugin for Apache Maven is available for Payara Micro.
 xref:technical-documentation/ecosystem/project-management-tools/maven-archetype.adoc[Payara Micro Maven Archetype] +
 An archetype for Apache Maven is available for Payara Micro.
 
-xref:technical-documentation/ecosystem/project-management-tools/gradle-plugin.adoc[Payara Micro Gradle Plugin]::
+xref:technical-documentation/ecosystem/project-management-tools/gradle-plugin.adoc[Payara Micro Gradle Plugin] +
 A plugin for Gradle is available for Payara Micro.
 
-xref:technical-documentation/ecosystem/project-management-tools/payara-starter.adoc[Payara Starter]::
+xref:technical-documentation/ecosystem/project-management-tools/payara-starter.adoc[Payara Starter] +
 An archetype is available for Payara Platform.
 
-xref:technical-documentation/ecosystem/ide-integration/eclipse-plugin/index.adoc[Payara Tools Eclipse Plugin]::
+xref:technical-documentation/ecosystem/ide-integration/eclipse-plugin/index.adoc[Payara Tools Eclipse Plugin] +
 A plugin for using Payara is available for Eclipse.
 
-xref:technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/index.adoc[Payara Tools for Apache NetBeans]::
+xref:technical-documentation/ecosystem/ide-integration/apache-netbeans-ide/index.adoc[Payara Tools for Apache NetBeans] +
 The tools for using Payara are available in the Apache NetBeans.
 
-xref:technical-documentation/ecosystem/ide-integration/intellij-plugin/index.adoc[Payara IntelliJ IDEA Plugin]::
+xref:technical-documentation/ecosystem/ide-integration/intellij-plugin/index.adoc[Payara IntelliJ IDEA Plugin] +
 A plugin for using Payara is available for IntelliJ IDEA.
 
-xref:technical-documentation/ecosystem/ide-integration/vscode-extension/index.adoc[Payara Visual Studio Code Extension]::
+xref:technical-documentation/ecosystem/ide-integration/vscode-extension/index.adoc[Payara Visual Studio Code Extension] +
 An extension for using Payara is available for Visual Studio Code.
 
-xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/index.adoc[Cloud Connectors]::
+xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/index.adoc[Cloud Connectors] +
 Cloud Connectors are a collection of JCA adapters which can interact with popular message brokers, including:
+
 * xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/amazon-sqs/index.adoc[Amazon SQS]
 * xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/apache-kafka.adoc[Apache Kafka]
 * xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/azure-sb.adoc[Azure Service Bus]
 * xref:technical-documentation/ecosystem/connector-suites/cloud-connectors/mqtt.adoc[MQTT]
 
-xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/index.adoc[Arquillian Containers]::
+xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/index.adoc[Arquillian Containers] +
 Arquillian containers help perform integration tests for application servers. There are various containers available for Payara:
+
 * xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-micro-managed.adoc[Payara Micro Managed]
 * xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-remote.adoc[Payara Server Remote]
 * xref:technical-documentation/ecosystem/connector-suites/arquillian-containers/payara-server-managed.adoc[Payara Server Managed]

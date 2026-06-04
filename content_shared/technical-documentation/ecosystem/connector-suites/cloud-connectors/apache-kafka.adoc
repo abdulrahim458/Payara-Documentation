@@ -6,8 +6,8 @@ Apache Kafka is an open-source stream processing platform. It is based on a mass
 == Versioning
 The tags below are for the https://github.com/payara/Cloud-Connectors[Cloud Connectors repository^]. You should use the one corresponding to the Jakarta version you require.
 
-https://github.com/payara/Cloud-Connectors/releases/tag/0.8.0[0.8.0^]:: Kafka Connector using JakartaEE 8 and the `javax` namespace
-https://github.com/payara/Cloud-Connectors/releases/tag/Kafka-1.0.0[Kafka-1.0.0^]:: Kafka Connector using JakartaEE 10 and the `jakarta` namespace
+* *https://github.com/payara/Cloud-Connectors/releases/tag/0.8.0[0.8.0^]*: Kafka Connector using JakartaEE 8 and the `javax` namespace
+* *https://github.com/payara/Cloud-Connectors/releases/tag/Kafka-1.0.0[Kafka-1.0.0^]*: Kafka Connector using JakartaEE 10 and the `jakarta` namespace
 
 [#usage]
 == Usage
