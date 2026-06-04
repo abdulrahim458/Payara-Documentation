@@ -71,6 +71,6 @@ Command disable executed successfully
 * xref:deploy.adoc#deploy[`deploy`],
 * xref:enable.adoc#enable[`enable`],
 * xref:undeploy.adoc#undeploy[`undeploy`]
-* link:../application-deployment-guide/toc.html#GSDPG[Payara Server Application Deployment section]
+* xref:../application-deployment/index.adoc[Payara Server Application Deployment section]
 
 

@@ -313,6 +313,6 @@ Command deploy executed successfully
 * xref:redeploy.adoc#redeploy[`redeploy`],
 * xref:set.adoc#set[`set`],
 * xref:undeploy.adoc#undeploy[`undeploy`]
-* link:../application-deployment-guide/toc.html#GSDPG[Payara Server Application Deployment section]
+* xref:../application-deployment/index.adoc[Payara Server Application Deployment section]
 
 

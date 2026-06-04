@@ -125,7 +125,7 @@ asadmin> create-jms-host --mqhost hostName --mqport portNumber --mquser adminUse
 * *`--mqport`*: The port number of the Message Queue broker.
 * *`--mquser`*: The username of the administrative user of the Message Queue broker.
 * *`--mqpassword`*: The password of the administrative user of the Message Queue broker.
-* *`--target`*: The Payara Server object for which the JMS host is being created. For details, see link:../reference-manual/create-jms-host.html#GSRFM00039[`create-jms-host`].
+* *`--target`*: The Payara Server object for which the JMS host is being created. For details, see xref:../command-reference/create-jms-host.adoc[`create-jms-host`].
 * *`--property`*: A list of one or more Message Queue broker properties to configure the broker. The list is colon-separated (`:`) and has the form:
 +
 [source,text]
