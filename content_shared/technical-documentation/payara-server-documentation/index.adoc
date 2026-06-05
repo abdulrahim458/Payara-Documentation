@@ -87,11 +87,11 @@ a| Represents the directory in which a domain's configuration is stored.
 In configuration files, `domain-dir` is represented as follows:
 `${com.sun.aas.instanceRoot}`
 
-|`domain-root-dir/<domain-name>`
+a|[.breakable]`domain-root-dir/<domain-name>`
 
 |`node-dir`
 |Represents the directory for a configured node.
-|`as-install/glassfish/nodes/<node-name>`
+a|[.breakable]`as-install/glassfish/nodes/<node-name>`
 
 |`instance-dir`
 |Represents the directory for a server instance.

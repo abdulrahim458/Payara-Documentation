@@ -33,13 +33,13 @@ In a Payara Server domain, log files have the following name and location by def
 |Default Log File Name and Location
 
 |DAS
-|`domain-dir/logs/server.log`
+a|[.breakable]`domain-dir/logs/server.log`
 
 |Server instance
-|`instance-dir/logs/server.log`
+a|[.breakable]`instance-dir/logs/server.log`
 
 |Cluster instance
-|`instance-dir/logs/server.log`
+a|[.breakable]`instance-dir/logs/server.log`
 |===
 
 For example, in a domain hosted on a given machine that includes a cluster with two managed servers (`ClusterServer1` and `ClusterServer1`) and a standalone instance (`StandaloneServer`), the log files might be arranged in the following directory structure. In this directory structure, the `server.log` file for the DAS is located in `domain-dir/logs`.
@@ -271,7 +271,7 @@ By default, in a Payara Server domain, logging properties files are created in t
 |Default Location of Logging Properties File
 
 |DAS
-|`domain-dir/config/logging.properties`
+a|[.breakable]`domain-dir/config/logging.properties`
 
 |A configuration
 |`domain-dir/config/<config-name>/logging.properties`, where `<config-name>` represents the name of a configuration that is shared by one or more instances or clusters.

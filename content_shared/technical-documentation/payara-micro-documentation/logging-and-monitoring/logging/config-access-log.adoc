@@ -6,7 +6,7 @@ Payara Micro supports a number of commands to help you configure access logging.
 [cols=",,",options="header",]
 |============================
 |Configuration Option| Description| Default Value
-|`--accesslog <directory-path>`
+a|[.breakable]`--accesslog <directory-path>`
 |Sets user defined directory path for the access log|
 |`--accesslogformat`
 |Sets user defined log format for the access log|`%client.name% %auth-user-name% %datetime% %request% %status% %response.length%`

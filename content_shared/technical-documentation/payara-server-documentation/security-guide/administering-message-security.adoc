@@ -242,7 +242,7 @@ The message contains a `wsse:Security` header that contains an `xenc:EncryptedKe
 
 The `xenc:EncryptedKey` contains the key used to encrypt the SOAP message body. The key is encrypted in the public key of the recipient.
 
-|`auth-recipient="before-content"`
+a|[.breakable]`auth-recipient="before-content"`
 
 OR
 

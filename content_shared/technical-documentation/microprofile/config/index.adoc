@@ -124,40 +124,40 @@ In addition to the standard configuration properties, Payara Server and Micro pr
 |`payara.domain.name`
 |The name of the Payara domain
 
-|`payara.domain.installroot`
+a|[.breakable]`payara.domain.installroot`
 |The directory which is the root of the Payara software installation
 
 |`payara.config.dir`
 |The directory in which the server's configuration files reside
 
-|`payara.instance.starttime`
+a|[.breakable]`payara.instance.starttime`
 |The start time of the server in `System.currentTimeMillis`
 
-|`payara.instance.config.name`
+a|[.breakable]`payara.instance.config.name`
 |The name of the configuration this server is using
 
-|`payara.instance.admin.port`
+a|[.breakable]`payara.instance.admin.port`
 |The administration port number of this instance
 
-|`payara.instance.admin.host`
+a|[.breakable]`payara.instance.admin.host`
 |The host IP address which the admin listener is listening on
 
-|`payara.instance.http.port`
+a|[.breakable]`payara.instance.http.port`
 |The HTTP port for http-listener
 
-|`payara.instance.http.address`
+a|[.breakable]`payara.instance.http.address`
 |The IP address the http listener is listening on
 
-|`payara.instance.http.enabled`
+a|[.breakable]`payara.instance.http.enabled`
 |Whether the http listener is enabled
 
-|`payara.instance.https.port`
+a|[.breakable]`payara.instance.https.port`
 |The HTTP port for https-listener
 
-|`payara.instance.https.address`
+a|[.breakable]`payara.instance.https.address`
 |The IP address the https listener is listening on
 
-|`payara.instance.https.enabled`
+a|[.breakable]`payara.instance.https.enabled`
 |Whether the https listener is enabled
 |===
 

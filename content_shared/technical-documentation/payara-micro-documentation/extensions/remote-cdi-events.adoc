@@ -9,15 +9,15 @@ These methods are used for firing CDI Events across running instances.
 [cols=",",options="header",]
 |=======================================================================
 |Method |Description
-|`void addCDIEventListener(CDIEventListener listener)`
+a|[.breakable]`void addCDIEventListener(CDIEventListener listener)`
 |Adds a CDI Event Listener.
-|`void removeCDIEventListener(CDIEventListener listener)`
+a|[.breakable]`void removeCDIEventListener(CDIEventListener listener)`
 |Removes a CDI Event Listener.
-|`void addClusterListener(PayaraClusterListener listener)`
+a|[.breakable]`void addClusterListener(PayaraClusterListener listener)`
 |Adds a Cluster Listener.
-|`void removeClusterListener(PayaraClusterListener listener)`
+a|[.breakable]`void removeClusterListener(PayaraClusterListener listener)`
 |Removes a Cluster Listener.
-|`void publishCDIEvent(PayaraClusteredCDIEvent event)`
+a|[.breakable]`void publishCDIEvent(PayaraClusteredCDIEvent event)`
 |Publishes a CDI Event.
 |=======================================================================
 

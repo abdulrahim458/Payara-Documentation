@@ -857,7 +857,7 @@ only to stateful session beans.
 |CountStatistic
 |Number of errors during passivation. Applies only to stateful session beans.
 
-|`numexpiredsessionsremoved`
+a|[.breakable]`numexpiredsessionsremoved`
 |CountStatistic
 |Number of expired sessions removed by the cleanup thread. Applies only to stateful session beans.
 
@@ -1206,7 +1206,7 @@ NOTE: In order to improve system performance, connection pools are initialized l
 |CountStatistic
 |Average wait time of connections before they are serviced by the connection pool.
 
-|`connectionrequestwaittime`
+a|[.breakable]`connectionrequestwaittime`
 |RangeStatistic
 |The longest and shortest wait times of connection requests. The current value indicates the wait time of the last request that was serviced by the pool.
 
@@ -1485,7 +1485,7 @@ The statistics that are available for memory in the JVM for Java SE are shown in
 |CountStatistic
 |Maximum amount of non-heap memory (in bytes) that can be used for memory management
 
-|`objectpendingfinalizationcount`
+a|[.breakable]`objectpendingfinalizationcount`
 |CountStatistic
 |Approximate number of objects that are pending finalization
 
@@ -1567,7 +1567,7 @@ The statistics that are available for the runtime in the JVM runtime for Java SE
 |StringStatistic
 |Input arguments passed to the JVM; not including arguments to the `main` method
 
-|`managementspecversion-current`
+a|[.breakable]`managementspecversion-current`
 |StringStatistic
 |Management specification version implemented by the JVM
 
@@ -1696,15 +1696,15 @@ Statistics available for network connection queue are shown in the following tab
 |CountStatistic
 |Number of connections currently in the queue
 
-|`countqueued15minutesaverage`
+a|[.breakable]`countqueued15minutesaverage`
 |CountStatistic
 |Average number of connections queued in the last 15 minutes
 
-|`countqueued1minuteaverage`
+a|[.breakable]`countqueued1minuteaverage`
 |CountStatistic
 |Average number of connections queued in the last 1 minute
 
-|`countqueued5minutesaverage`
+a|[.breakable]`countqueued5minutesaverage`
 |CountStatistic
 |Average number of connections queued in the last 5 minutes
 
@@ -1946,7 +1946,7 @@ last sampling time
 |RangeStatistic
 |Number of free connections in the pool as of the last sampling
 
-|`numconnnotsuccessfullymatched`
+a|[.breakable]`numconnnotsuccessfullymatched`
 |CountStatistic
 |Number of connections rejected during matching
 
@@ -1954,7 +1954,7 @@ last sampling time
 |CountStatistic
 |Number of connections released back to the pool since the last sampling
 
-|`numconnsuccessfullymatched`
+a|[.breakable]`numconnsuccessfullymatched`
 |CountStatistic
 |Number of connections successfully matched
 
@@ -1974,7 +1974,7 @@ last sampling time
 |CountStatistic
 |Number of potential connection leaks
 
-|`numpotentialstatementleak`
+a|[.breakable]`numpotentialstatementleak`
 |CountStatistic
 |Number of potential statement leaks (Available only when Statement Leak Detection is enabled)
 
@@ -2076,7 +2076,7 @@ The statistics available for web security are listed in the following table.
 |CountStatistic
 |Number of security managers
 
-|`webpolicyconfigurationcount`
+a|[.breakable]`webpolicyconfigurationcount`
 |CountStatistic
 |Number of policy configuration objects
 |===
@@ -2140,7 +2140,7 @@ table.
 |BoundedRangeStatistic
 |Average amount of time (in  milliseconds) a request waited in the queue before being processed
 
-|`averageworkcompletiontime`
+a|[.breakable]`averageworkcompletiontime`
 |BoundedRangeStatistic
 |Average amount of 0time (in milliseconds) taken to complete an assignment
 
@@ -2421,7 +2421,7 @@ The available web servlet statistics are shown in the following table.
 |Data Type
 |Description
 
-|`activeservletsloadedcount`
+a|[.breakable]`activeservletsloadedcount`
 |RangeStatistic
 |Number of currently loaded servlets
 

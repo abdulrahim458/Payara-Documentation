@@ -121,12 +121,12 @@ The full list of config properties is given below:
 
 |`valueSerializer`
 |String
-|`org.apache.kafka.common .serialization.StringSerializer`
+a|[.breakable]`org.apache.kafka.common .serialization.StringSerializer`
 |Serializer class for value
 
 |`keySerializer`
 |String
-|`org.apache.kafka.common .serialization.StringSerializer`
+a|[.breakable]`org.apache.kafka.common .serialization.StringSerializer`
 |Serializer class for key
 
 |`bufferMemory`

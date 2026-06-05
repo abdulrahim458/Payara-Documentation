@@ -1041,11 +1041,11 @@ See below for some examples:
 |Example| Original JSON |Payara System Properties
 
 |Arrays must be surrounded with square braces & array values separated using the vertical bar symbol `\|`
-|`{ENV: [arg1=foo,arg2=bar]}`
-|`Docker.Env=[arg1:foo\|arg2:bar]`
+a|[.breakable]`{ENV: [arg1=foo,arg2=bar]}`
+a|[.breakable]`Docker.Env=[arg1:foo\|arg2:bar]`
 
 |Each child object of a parent object is specified individually
-|`{HostConfig: {Memory: 2048, CpuShares: 3}`
+a|[.breakable]`{HostConfig: {Memory: 2048, CpuShares: 3}`
 |
 `Docker.HostConfig.Memory=2048`
 
@@ -1053,8 +1053,8 @@ See below for some examples:
 
 |The colon character is used to denote the value of an object within an array & objects within an array are
 separated using a comma `,`
-|`{HostConfig: {BlkioDeviceReadBps: [{Path: /opt/foo, Rate: 24},{Path: /opt/bar, Rate: 48}]}`
-|`Docker.HostConfig.BlkioDeviceReadBps=[Path:/opt/foo,Rate:24\|Path:/opt/bar,Rate:48]`
+a|[.breakable]`{HostConfig: {BlkioDeviceReadBps: [{Path: /opt/foo, Rate: 24},{Path: /opt/bar, Rate: 48}]}`
+a|[.breakable]`Docker.HostConfig.BlkioDeviceReadBps=[Path:/opt/foo,Rate:24\|Path:/opt/bar,Rate:48]`
 |===
 
 [#reserved-environment-properties]
@@ -1409,10 +1409,10 @@ library file as shown in the following table.
 |Optional packages for all applications in a domain.
 |`domain-dir/lib/ext`
 |Library files for all applications that are deployed to a specific cluster or standalone instance.
-|`domain-dir/config/<config-name>/lib`
+a|[.breakable]`domain-dir/config/<config-name>/lib`
 |Optional packages for all applications that are deployed to a specific
 cluster or standalone instance.
-|`domain-dir/config/<config-name>/lib/ext`
+a|[.breakable]`domain-dir/config/<config-name>/lib/ext`
 |=======================================================================
 
 *domain-dir*:

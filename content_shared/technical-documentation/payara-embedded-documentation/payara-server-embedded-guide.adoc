@@ -765,7 +765,7 @@ a|In order of precedence:
 |The xref:instance-root-directory[Instance Root Directory].
 
 |`configuration.file`
-|`domain-dir/config/domain.xml`
+a|[.breakable]`domain-dir/config/domain.xml`
 |The server's configuration file.
 
 |`keep-temporary-files`

@@ -61,7 +61,7 @@ The following table lists the Payara Platform deployment descriptors and their D
 `glassfish-resources.xml` (deprecated)
 
 `payara-resources.xml`
-|`glassfish-resources_1_5.dtd`
+a|[.breakable]`glassfish-resources_1_5.dtd`
 
 `payara-resources_1_8.dtd`
 | Configures application-scoped resources.

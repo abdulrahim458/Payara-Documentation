@@ -71,7 +71,7 @@ Example:
 |_none_
 |Sets context root of the deployed artifact if `autoDeployArtifact` is `true`. `autoDeployContextRoot` has the higher precedence compared to the `autoDeployEmptyContextRoot`.
 
-|`autoDeployEmptyContextRoot`
+a|[.breakable]`autoDeployEmptyContextRoot`
 |payara.auto.deploy.empty.context.root
 |PAYARA_AUTO_DEPLOY_EMPTY_CONTEXT_ROOT
 |`true`

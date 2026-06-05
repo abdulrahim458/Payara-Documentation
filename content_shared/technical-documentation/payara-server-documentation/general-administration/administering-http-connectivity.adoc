@@ -1307,14 +1307,14 @@ In some cases, to support backwards compatibility it might be necessary to allow
 |===
 |Property |Description
 
-|`org.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110`
+a|[.breakable]`org.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110`
 |This property enables the validation of all header field names on incoming HTTP requests to prevent any usage of invalid characters on it.
 
 When set to `true`, the presence of these characters will trigger the server to invalidate the request with a `400 - Bad Request` response.
 
 The default value is `true`.
 
-|`org.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110`
+a|[.breakable]`org.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110`
 |This property enables the validation of all header field values on incoming HTTP requests to prevent any usage of invalid characters on it.
 
 When set to `true`, the presence of these characters will trigger the server to invalidate the request with a `400 - Bad Request` response.

@@ -2943,7 +2943,7 @@ With this property, you can set whether to enable the default group to role mapp
 ----
 
 Enabling the default group to role mappings will cause all named groups in the application's linked *security realm* to be mapped to a role of the same name. This will save you the time of having to redefine the same roles and map them to the realm groups each time they are modified.
-a|`container-initializer-enabled`
+a|[.breakable]`container-initializer-enabled`
 |`true`
 |This property configures whether to enable or disable the calling of `ServletContainerInitializer` component classes defined in JAR files bundled inside a WAR assembly.
 
