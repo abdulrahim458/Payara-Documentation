@@ -192,7 +192,12 @@ deploy_to_staging_server:
       echo "Uploading HTML ${VERSION} to STAGING server in version directory '${VERSION_DIRECTORY}/${VERSION}'"
       ssh ${PROD_SERVER} mkdir -p ${STAGING_DIR}/${VERSION_DIRECTORY}/${VERSION}
       rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${STAGING_DIR}/${VERSION_DIRECTORY}/${VERSION}
-
+      
+      echo "Uploading PDFs ${VERSION} to STAGING server in directory 'pdfs/${VERSION}'"
+      if [ -d "${PDF_BUILD_DIR}/${VERSION}" ]; then
+        ssh ${PROD_SERVER} mkdir -p ${STAGING_DIR}/pdfs/${VERSION}
+        rsync -vahze ssh ${PDF_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${STAGING_DIR}/pdfs/${VERSION}
+      fi
 deploy_to_prod_server:
   stage: deploy
   <<: *docs_matrix
@@ -207,6 +212,12 @@ deploy_to_prod_server:
       echo "Uploading HTML ${VERSION} to PRODUCTION server version directory '${VERSION_DIRECTORY}/${VERSION}'"
       ssh ${PROD_SERVER} mkdir -p ${PROD_DIR}/${VERSION_DIRECTORY}/${VERSION}
       rsync -vahze ssh ${HTML_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${PROD_DIR}/${VERSION_DIRECTORY}/${VERSION}
+      
+      echo "Uploading PDFs ${VERSION} to PRODUCTION server in directory 'pdfs/${VERSION}'"
+      if [ -d "${PDF_BUILD_DIR}/${VERSION}" ]; then
+        ssh ${PROD_SERVER} mkdir -p ${PROD_DIR}/pdfs/${VERSION}
+        rsync -vahze ssh ${PDF_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${PROD_DIR}/pdfs/${VERSION}
+      fi
       
       # Start the purge CDN cache pipeline
       - "curl -X POST -F token=${CICD_TRIGGER_TOKEN_PURGE} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2016/trigger/pipeline"
