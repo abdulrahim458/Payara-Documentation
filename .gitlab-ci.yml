@@ -14,8 +14,6 @@ variables:
   GIT_STRATEGY: clone
   GIT_DEPTH: 1
   TEMPLATES_DIR: docs_templates
-  PDF_BUILD_DIR: build/pdf
-  TPL_BUILD_DIR: build/tpl
   ZIP_NEXUS_BUILD_DIR: build/zip_nexus
   TEST_DEPLOY_BASE_DIR: "/var/www/html/docs"
   TEST_DEPLOY_DIR_HTML: $TEST_DEPLOY_BASE_DIR/$DOCS_ID/$CI_COMMIT_REF_NAME
@@ -34,12 +32,16 @@ variables:
       - DOCS_ID: payara
         CONTENT_DIR: content_enterprise
         HTML_BUILD_DIR: build/html_enterprise
+        PDF_BUILD_DIR: build/pdf_enterprise
+        TPL_BUILD_DIR: build/tpl_enterprise
         INDEX_GROUP_LABEL: "Azul Payara"
         SITE_URL: https://docs.azul.com/payara
         VERSION: 7
       - DOCS_ID: payara-community
         CONTENT_DIR: content_community
         HTML_BUILD_DIR: build/html_community
+        PDF_BUILD_DIR: build/pdf_community
+        TPL_BUILD_DIR: build/tpl_community
         INDEX_GROUP_LABEL: "Azul Payara Community"
         SITE_URL: https://docs.azul.com/payara-community
         VERSION: 7
@@ -99,6 +101,40 @@ docs_html:
       - $HTML_BUILD_DIR
     name: docs-html-${DOCS_ID}
   interruptible: true
+
+docs_pdf:
+  stage: build
+  resource_group: docs_html_build
+  <<: [*docs_matrix, *cache_configuration]
+  script:
+    - |
+      RELEASE_ID=$(grep "^release-id" ${CONTENT_DIR}/project.properties | cut -d'=' -f2 | tr -d ' ')
+      echo "Building PDF for ${DOCS_ID} (${CONTENT_DIR}) release ${RELEASE_ID}"
+
+      MERGED=build/merged-${DOCS_ID}
+      rm -rf ${MERGED}
+      mkdir -p ${MERGED}
+      cp -a ${CONTENT_DIR}/. ${MERGED}/
+      cp -a content_shared/. ${MERGED}/
+
+      mkdir -p ${PDF_BUILD_DIR}/${VERSION}
+
+      ruby ${TEMPLATES_DIR}/build.rb \
+        -d ${MERGED} \
+        -f pdf \
+        -a ca \
+        -a pdf_file_name="${DOCS_ID}-${RELEASE_ID}" \
+        -a RELEASE_ID=${RELEASE_ID} \
+        -o ${PDF_BUILD_DIR}/${VERSION}
+
+      rm -rf ${MERGED}
+      echo "Generated PDFs:"
+      ls -lR ${PDF_BUILD_DIR}
+  interruptible: true
+  artifacts:
+    paths:
+      - ${PDF_BUILD_DIR}/*
+    name: docs-pdf-${DOCS_ID}
 
 deploy_to_test_server:
   stage: deploy
