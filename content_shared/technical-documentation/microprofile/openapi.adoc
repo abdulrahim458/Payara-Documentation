@@ -44,28 +44,50 @@ MicroProfile OpenAPI specifies several ways of configuring the data in the produ
 
 The OpenAPI document generation process can be configured through the xref:config/index.adoc[Config API]. The following are the standard configuration properties as presented by the specification:
 
+[cols="2,3", options="header"]
 |===
 | Property key | Description
 
-| `mp.openapi.model.reader` | Configuration property to specify the fully qualified name of the <<sources-model-reader, OASModelReader>> implementation.
-| `mp.openapi.filter` | Configuration property to specify the fully qualified name of the <<sources-filter, OASFilter>> implementation.
-| `mp.openapi.scan.disable`  |  Configuration property to disable annotation scanning. Default value is `false`.
-| `mp.openapi.scan.packages`  |  Configuration property to specify the list of packages to scan. For example,
+a| `mp.openapi.model.reader`
+| Configuration property to specify the fully qualified name of the <<sources-model-reader, OASModelReader>> implementation.
+
+a| `mp.openapi.filter`
+| Configuration property to specify the fully qualified name of the <<sources-filter, OASFilter>> implementation.
+
+a| `mp.openapi.scan.disable`
+a|  Configuration property to disable annotation scanning. Default value is `false`.
+
+a| `mp.openapi.scan.packages`
+a|  Configuration property to specify the list of packages to scan. For example,
 `mp.openapi.scan.packages=com.xyz.PackageA,com.xyz.PackageB`
-| `mp.openapi.scan.classes`  |  Configuration property to specify the list of classes to scan. For example,
+
+a| `mp.openapi.scan.classes`
+a|  Configuration property to specify the list of classes to scan. For example,
 `mp.openapi.scan.classes=com.xyz.MyClassA,com.xyz.MyClassB`
-| `mp.openapi.scan.exclude.packages`  |  Configuration property to specify the list of packages to exclude from scans. For example,
+
+a| `mp.openapi.scan.exclude.packages`
+a|  Configuration property to specify the list of packages to exclude from scans. For example,
 `mp.openapi.scan.exclude.packages=com.xyz.PackageC,com.xyz.PackageD`
-| `mp.openapi.scan.exclude.classes`  |  Configuration property to specify the list of classes to exclude from scans. For example,
+
+a| `mp.openapi.scan.exclude.classes`
+a|  Configuration property to specify the list of classes to exclude from scans. For example,
 `mp.openapi.scan.exclude.classes=com.xyz.MyClassC,com.xyz.MyClassD`
-| `mp.openapi.servers`  |  Configuration property to specify the list of global servers that provide connectivity information. For example,
+
+a| `mp.openapi.servers`
+a|  Configuration property to specify the list of global servers that provide connectivity information. For example,
 `mp.openapi.servers=https://xyz.com/v1,https://abc.com/v1`
-| `mp.openapi.servers.path.`   |  Prefix of the configuration property to specify an alternative list of servers to service all operations in a path. For example,
+
+a| `mp.openapi.servers.path.`
+a|  Prefix of the configuration property to specify an alternative list of servers to service all operations in a path. For example,
 `mp.openapi.servers.path./airlines/ngs/{id}=https://xyz.io/v1`
-| `mp.openapi.servers.operation.` | Prefix of the configuration property to specify an alternative list of servers to service an operation.
+
+a| `mp.openapi.servers.operation.`
+a| Prefix of the configuration property to specify an alternative list of servers to service an operation.
 Operations that want to specify an alternative list of servers must define an `operationId`, a unique string used to identify the operation. For example,
 `mp.openapi.servers.operation.getBooking=https://abc.io/v1`
-| `mp.openapi.schema.` a| Prefix of the configuration property to specify an alternative list of servers to service an operation.
+
+a| `mp.openapi.schema.`
+a| Prefix of the configuration property to specify an alternative list of servers to service an operation.
 Prefix of the configuration property to specify a schema for a specific class, in JSON format. The remainder of the property key must be the fully-qualified class name. The value must be a valid OpenAPI schema object, specified in the JSON format. The use of this property is functionally equivalent to the use of the `@Schema` annotation on a Java class, but may be used in cases where the application developer does not have access to the source code of a class.
 
 When a `name` key is provided with a string value, the schema will be added to the `schemas` collection in the `components` object of the resulting OpenAPI document using ``name```'s value as the key.
@@ -81,13 +103,18 @@ mp.openapi.schema.java.util.Date = { \
   "description": "Milliseconds since January 1, 1970, 00:00:00 GMT" \
 }
 ----
+
 |===
 
 In addition to the standard properties, the following properties have been added as extensions within the Payara Platform:
 
+[cols="2,3", options="header"]
 |===
 | Property key | Description
-| `mp.openapi.extensions.scan.lib`  |  Configuration property that allows the server to scan packaged JAR files inside the WAR's library directory (`WEB-INF/lib`). If the WAR is inside EAR, the server also scans JAR files inside the EAR's `lib/` directory. Default value is `false`.
+
+a| `mp.openapi.extensions.scan.lib`
+a|  Configuration property that allows the server to scan packaged JAR files inside the WAR's library directory (`WEB-INF/lib`). If the WAR is inside EAR, the server also scans JAR files inside the EAR's `lib/` directory. Default value is `false`.
+
 |===
 
 [#sources-model-reader]
@@ -126,10 +153,16 @@ The MicroProfile OpenAPI supports using a static OpenAPI document to build from.
 
 The following file names are allowed for this file. The file given must also be in the specified format.
 
+[cols="2,3", options="header"]
 |===
 | File Format | Allowed File Names
-| `yaml` | `openapi.yaml`, `openapi.yml`
-| `json` | `openapi.json`
+
+a| `yaml`
+a| `openapi.yaml`, `openapi.yml`
+
+a| `json`
+a| `openapi.json`
+
 |===
 
 [#sources-annotations]

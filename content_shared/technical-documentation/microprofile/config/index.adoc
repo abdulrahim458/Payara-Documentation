@@ -18,81 +18,80 @@ A `ConfigSource` is a definition of a source of configuration values that can be
 
 NOTE: Where multiple configuration properties exist, the property from a source with a higher ordinal number is preferred.
 
-[cols="2,1,10", options="header"]
+[cols="2,1,5", options="header"]
 |===
-|Source
-|Ordinal
-|Description
+|Source |Ordinal |Description
 
-|`directory`
+a|`directory`
 |90
-|Reads configuration properties from files in a specified directory. Each file name is the configuration property name and the contents of the file are the config property value. This config source can be used to read https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-files-from-a-pod[Kubernetes secrets files^].
+a|Reads configuration properties from files in a specified directory. Each file name is the configuration property name and the contents of the file are the config property value. This config source can be used to read https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-files-from-a-pod[Kubernetes secrets files^].
 +
 You can find out more about directory config sources here: xref:directory.adoc[Directory Config Sources]
 
-|`toml`
+a|`toml`
 |95
-|Reads configuration properties from a specified TOML configuration file.
+a|Reads configuration properties from a specified TOML configuration file.
 +
 You can find out more about TOML config sources here: xref:toml.adoc[TOML Config Sources]
 
-|`password`
+a|`password`
 |105
 |Retrieves and stores config values in the password alias store. These will be available to all server instances in a domain.
 
-|`domain`
+a|`domain`
 |110
-|Retrieves and stores config values in the domain.xml as key values. These will
+a|Retrieves and stores config values in the domain.xml as key values. These will
 then apply to all instances within a domain
 
-|`jndi`
+a|`jndi`
 |115
 |Retrieves and stores config values within the JNDI tree. The property name being the dotted name path in the JNDI tree and the value being stored in the JNDI tree. These are modifiable by current admin console functionality.
 
-|`config`
+a|`config`
 |120
-|Retrieves and stores config values at the level of the named configuration in the domain.xml; `server-config`, for example. MicroProfile Configuration property values will apply to all instances that use the Payara configuration specified.
+a|Retrieves and stores config values at the level of the named configuration in the domain.xml; `server-config`, for example. MicroProfile Configuration property values will apply to all instances that use the Payara configuration specified.
 
-|`server`
+a|`server`
 |130
-|Retrieves and stores config values at the level of the server in the domain.xml.
+a|Retrieves and stores config values at the level of the server in the domain.xml.
 Property values will only apply on the named server instance
 
-|`application`
+a|`application`
 |140
 |Retrieves and stores config values at the level of the application. Property values will only be available for the specified application on all server instances it is deployed
 
-|`module`
+a|`module`
 |150
 |Retrieves and stores config values at the level of an individual module within an application. Property values will only be available for the specified module on all server instances it is deployed
 
-|`cluster`
+a|`cluster`
 |160
 |Retrieves and stores config values in the *Hazelcast* cluster as name value pairs. These will be available for all server instances that are members of the cluster.
 
-|`payara-expression`
+a|`payara-expression`
 |170
-|Reads configuration properties from a `payara-expression-config.properties` file. This should be stored in the same location as your `microprofile-config.properties` file This file can be used to reference properties containing variables which will be translated to their actual values upon retrieval.
+a|Reads configuration properties from a `payara-expression-config.properties` file. This should be stored in the same location as your `microprofile-config.properties` file This file can be used to reference properties containing variables which will be translated to their actual values upon retrieval.
 +
 The property values should be in the format referenced here: xref:../../payara-server-documentation/general-administration/configuration-variables-reference.adoc[Types of Variables]
 
-|`cloud`
+a|`cloud`
 |180
-|Reads configuration properties from various Cloud provider secret stores.
+a|Reads configuration properties from various Cloud provider secret stores.
 +
 You can find out more about our supported cloud config sources here: xref:cloud/index.adoc[Cloud Config Sources]
 
-|`jdbc`
+a|`jdbc`
 |190
-|Reads configuration properties from a specified database table.
+a|Reads configuration properties from a specified database table.
 +
 You can find out more about JDBC config sources here: xref:jdbc.adoc[JDBC Config Sources]
 
-|`ldap`
+a|`ldap`
 |200
-|Reads configuration properties from a specified LDAP directory.
+a|Reads configuration properties from a specified LDAP directory.
 +
 You can find out more about LDAP config sources here: xref:ldap.adoc[LDAP Config Sources]
+
 |===
 
 [#converters]
@@ -109,29 +108,28 @@ In addition to the standard configuration properties, Payara Server and Micro pr
 
 [cols="7,10", options="header"]
 |===
-|Property
-|Description
+|Property |Description
 
-|`payara.instance.type`
-|The type of the runtime from `DAS`, `INSTANCE`, `EMBEDDED`, `MICRO`
+a|`payara.instance.type`
+a|The type of the runtime from `DAS`, `INSTANCE`, `EMBEDDED`, `MICRO`
 
-|`payara.instance.name`
-|The name of the instance e.g. `server`
+a|`payara.instance.name`
+a|The name of the instance e.g. `server`
 
-|`payara.instance.root`
+a|`payara.instance.root`
 |The directory which is the root of the instance installation
 
-|`payara.domain.name`
+a|`payara.domain.name`
 |The name of the Payara domain
 
 a|[.breakable]`payara.domain.installroot`
 |The directory which is the root of the Payara software installation
 
-|`payara.config.dir`
+a|`payara.config.dir`
 |The directory in which the server's configuration files reside
 
 a|[.breakable]`payara.instance.starttime`
-|The start time of the server in `System.currentTimeMillis`
+a|The start time of the server in `System.currentTimeMillis`
 
 a|[.breakable]`payara.instance.config.name`
 |The name of the configuration this server is using
@@ -159,6 +157,7 @@ a|[.breakable]`payara.instance.https.address`
 
 a|[.breakable]`payara.instance.https.enabled`
 |Whether the https listener is enabled
+
 |===
 
 Payara Server offers additional facilities to configure specific settings of the MicroProfile Configuration API, described next.

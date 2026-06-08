@@ -173,11 +173,20 @@ xref:../../payara-server-documentation/general-administration/administering-the-
 
 The following statistics are the integrated HealthCheck services metrics that are automatically exposed to the Microprofile Metrics service:
 
+[cols="1,1,1,1", options="header"]
 |===
 | HealthCheck Service | Service ID | Attributes | Sub-Attributes
 
-| Stuck Threads | `healthcheck-stuck` | NA | `count`, `maxDuration`
-| Connection Pool | `healthcheck-cpool` | by default `H2Pool`, `__TimerPool` | `usedConnection`, `freeConnection`, `totalConnection`
+| Stuck Threads
+a| `healthcheck-stuck`
+| NA
+a| `count`, `maxDuration`
+
+| Connection Pool
+a| `healthcheck-cpool`
+a| by default `H2Pool`, `__TimerPool`
+a| `usedConnection`, `freeConnection`, `totalConnection`
+
 |===
 
 [#example-2]
@@ -204,7 +213,6 @@ Which will yield the following results:
 # TYPE vendor_thread_stuck_count gauge
 # HELP vendor_thread_stuck_count Displays the stuck thread count which is blocked, and can't return to the threadpool for a certain amount of time.
 vendor_thread_stuck_count 0
-......
 ......
 ----
 
@@ -262,6 +270,5 @@ vendor_connection_pool___TimerPool_totalConnection_total 0
 # TYPE vendor_connection_pool___TimerPool_usedConnection_total counter
 # HELP vendor_connection_pool___TimerPool_usedConnection_total Displays the number of usedConnection in the Connection Pool __TimerPool.
 vendor_connection_pool___TimerPool_usedConnection_total 0
-......
 ......
 ----

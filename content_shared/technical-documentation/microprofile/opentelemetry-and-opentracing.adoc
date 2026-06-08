@@ -74,13 +74,22 @@ Let's assume `GET` request made to `/app/rest/resource/method`, where
 
 The following span names will be created for this request for different Span Convention settings:
 
+[cols="2,2", options="header"]
 |===
 | span-convention setting| Server Span Name
 
-| `opentelemetry` | `GET /app/rest/resource/method`
-| `opentracing-class-method` | `GET:example.Resource.restMethod` 
-| `opentracing-http-path` | `GET:/resource/method`
-| `microprofile-telemetry` | `/app/rest/resource/method`
+a| `opentelemetry`
+a| `GET /app/rest/resource/method`
+
+a| `opentracing-class-method`
+a| `GET:example.Resource.restMethod`
+
+a| `opentracing-http-path`
+a| `GET:/resource/method`
+
+a| `microprofile-telemetry`
+a| `/app/rest/resource/method`
+
 |===
 
 [#suppressin-export-warning-message]
