@@ -41,18 +41,20 @@ The `@RolesPermitted` annotation has several configuration options.
 They are detailed below.
 
 .Configuration Options
+[cols="1,1,1,3", options="header"]
 |===
 | Option | Type | Required | Description
 
-| `value`
-| `String`
+a| `value`
+a| `String`
 | true
 | A static list of comma-separated roles which are allowed to access this method, or an EL expression used to resolve this list at runtime (_see below_).
 
-| `semantics`
-| `String`
+a| `semantics`
+a| `String`
 | no
-| Whether accessing caller must be in any one of the given roles (`OR`) or all given roles (`AND`). Defaults to `OR`.
+a| Whether accessing caller must be in any one of the given roles (`OR`) or all given roles (`AND`). Defaults to `OR`.
+
 |===
 
 [#dynamic-roles]

@@ -62,43 +62,45 @@ The `@OAuth2AuthenticationDefinition` annotation has several configuration optio
 They are detailed below.
 
 .Configuration Options
+[cols="2,1,3,3", options="header"]
 |===
 | Option | Required | Description | Requirements
 
-| `authEndpoint`
+a| `authEndpoint`
 | true
 | The URL for the OAuth2 provider to provide authentication.
 | The endpoint must be HTTPS.
 
-| `tokenEndpoint`
+a| `tokenEndpoint`
 | true
 | The URL for the OAuth2 provider to give the authorisation token.
 | The endpoint must be HTTPS.
 
-| `clientId`
+a| `clientId`
 | true
 | The client identifier issued when the application was registered.
 | N/A.
 
-| `clientSecret`
+a| `clientSecret`
 | true
 | The client secret for the registered application.
 | N/A.
 
-| `scope`
+a| `scope`
 | false
 | The scopes requested from the OAuth provider.
 | N/A.
 
-| `redirectURI`
+a| `redirectURI`
 | false
 | The URL to redirect the user to upon successful authentication.
 | Must be equal to one set in the OAuth2 Authentication provider.
 
-| `extraParameters`
+a| `extraParameters`
 | false
 | An array of extra options to be sent to the OAuth provider.
-| Must be in the form `"key=value"`.
+a| Must be in the form `"key=value"`.
+
 |===
 
 [#el-support]

@@ -58,9 +58,15 @@ NOTE: No additional configuration settings or properties are available, so in ca
 
 The `@RealmIdentityStoreDefinition` annotation is configured with the options as shown below.
 
+[cols="1,3,1,1", options="header"]
 |===
 | Option | Description | Default | Required
-| `value`| The name of an existing security realm.| <Default Realm>| `true`
+
+a| `value`
+| The name of an existing security realm.
+| <Default Realm>
+a| `true`
+
 |===
 
 [#realm-identity-stores-usage-example]
@@ -105,12 +111,34 @@ IMPORTANT: If no realm is found with the defined name then a new realm will regi
 
 The file realm identity store can be configured via both `@FileIdentityStoreDefinition` annotation attributes and MicroProfile Configuration properties. Here's a list of all available and equivalent settings:
 
+[cols="2,3,3,1,1", options="header"]
 |===
 | Option | MP Config Property | Description | Default | Required
-| `value` | | The name of the realm. | `file` | `true`
-| `file`| `payara.security.file`| The location of the file to store user credentials locally. If no file name is defined then the realm name is used as the file name. | <Realm Name> |`false`
-| `assignGroups`| `payara.security.file.assignGroups`| Users will get assigned membership to these groups automatically on successful authentication | | `false`
-| `jaasContext` | `payara.security.file.jaasContext` | The JAAS Context of the file realm. | `fileRealm` | `false`
+
+a| `value`
+|
+| The name of the realm.
+a| `file`
+a| `true`
+
+a| `file`
+a|[.breakable]`payara.security.file`
+| The location of the file to store user credentials locally. If no file name is defined then the realm name is used as the file name.
+| <Realm Name>
+a|`false`
+
+a| `assignGroups`
+a|[.breakable]`payara.security.file.assignGroups`
+| Users will get assigned membership to these groups automatically on successful authentication
+|
+a| `false`
+
+a| `jaasContext`
+a|[.breakable]`payara.security.file.jaasContext`
+| The JAAS Context of the file realm.
+a| `fileRealm`
+a| `false`
+
 |===
 
 CAUTION: If both an annotation attribute and a MicroProfile Configuration property are defined for the same option then the configuration property always takes precedence.
@@ -143,10 +171,22 @@ IMPORTANT: If no realm is found with the defined name then a new realm will regi
 
 The certificate realm identity store can be configured via both `@CertificateIdentityStoreDefinition` annotation attributes and MicroProfile Configuration properties. Here's a list of all available and equivalent settings:
 
+[cols="2,3,3,1,1", options="header"]
 |===
 | Option | MP Config property | Description | Default | Required
-| `value`| | The name of the certificate realm. | `certificate` | `true`
-| `assignGroups` | `payara.security.certificate.assignGroups` | Users will get assigned membership to these groups automatically on successful authentication.| |`false`
+
+a| `value`
+|
+| The name of the certificate realm.
+a| `certificate`
+a| `true`
+
+a| `assignGroups`
+a|[.breakable]`payara.security.certificate.assignGroups`
+| Users will get assigned membership to these groups automatically on successful authentication.
+|
+a|`false`
+
 |===
 
 CAUTION: If both an annotation attribute and a MicroProfile Configuration property are defined for the same option then the configuration property always takes precedence.
@@ -179,11 +219,28 @@ IMPORTANT: If no realm is found with the defined name then a new realm will regi
 
 The pam realm identity store can be configured via both `@PamIdentityStoreDefinition` annotation attributes and MicroProfile Configuration properties. Here's a list of all available and equivalent settings:
 
+[cols="2,3,3,1,1", options="header"]
 |===
 | Option | MP Config property | Description | Default | Required
-| `value`| | The name of PAM realm.| | `true`
-| `assignGroups`| `payara.security.pam.assignGroups`| Users will get assigned membership to these groups automatically on successful authentication.| | `false`
-| `jaasContext`| `payara.security.pam.jaasContext` | The JAAS Context of the PAM realm. | `pamRealm`| `false`
+
+a| `value`
+|
+| The name of PAM realm.
+|
+a| `true`
+
+a| `assignGroups`
+a|[.breakable]`payara.security.pam.assignGroups`
+| Users will get assigned membership to these groups automatically on successful authentication.
+|
+a| `false`
+
+a| `jaasContext`
+a|[.breakable]`payara.security.pam.jaasContext`
+| The JAAS Context of the PAM realm.
+a| `pamRealm`
+a| `false`
+
 |===
 
 [#pam-identity-store-usage-example]
@@ -216,11 +273,29 @@ IMPORTANT: If no realm is found with the defined name then a new realm will regi
 
 The Solaris realm identity store can be configured via both `@SolarisIdentityStoreDefinition` annotation attributes and MicroProfile Configuration properties. Here's a list of all available and equivalent settings:
 
+[cols="2,3,3,1,1", options="header"]
 |===
 | Option | MP Config property | Description | Default | Required
-| `value`|| The name of the Solaris realm.|| `true`
-| `assignGroups`| `payara.security.solaris.assignGroups`| Users will get assigned membership to these groups automatically on successful authentication.|| `false`
-| `jaasContext`| `payara.security.solaris.jaasContext`| The JAAS Context of the Solaris realm.| `solarisRealm`|`false`
+
+a| `value`
+|
+| The name of the Solaris realm.
+|
+a| `true`
+
+a| `assignGroups`
+a|[.breakable]`payara.security.solaris.assignGroups`
+| Users will get assigned membership to these groups automatically on successful authentication.
+|
+a| `false`
+
+a| `jaasContext`
+a|[.breakable]`payara.security.solaris.jaasContext`
+| The JAAS Context of the Solaris realm.
+a| `solarisRealm`
+a|`false`
+
+
 |===
 
 CAUTION: If both an annotation attribute and a MicroProfile Configuration property are defined for the same option then the configuration property always takes precedence.

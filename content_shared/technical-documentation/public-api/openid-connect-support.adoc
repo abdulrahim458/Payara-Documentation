@@ -91,179 +91,183 @@ Here's an example how such a value should be escaped: `payara.security.openid.re
 The annotation and MicroProfile properties has several configuration options. They are detailed below.
 
 .Configuration Options for `@OpenIdAuthenticationDefinition`
+[cols="2,3,1,3,1,1", options="header"]
 |===
 | Option | MP Config property | Required/Type | Description | Default value | Requirements
 
-| `providerURI`
-| `payara.security.openid.providerURI`
-| `false`
-| The provider URI to discover the metadata of the OpenID Connect provider. If not specified, metadata are read from `providerMetadata`.
+a| `providerURI`
+a| `payara.security.openid.providerURI`
+a| `false`
+a| The provider URI to discover the metadata of the OpenID Connect provider. If not specified, metadata are read from `providerMetadata`.
 |
 | The endpoint must be HTTPS.
 
-| `providerMetadata`
+a| `providerMetadata`
 |
-| required if `providerURI` not specified, type: `@OpenIdProviderMetadata`
-| Alternative way to specify metadata if auto-configuration from `providerURI` can't be used.
-| `payara.security.openid.provider.*`
+a| required if `providerURI` not specified, type: `@OpenIdProviderMetadata`
+a| Alternative way to specify metadata if auto-configuration from `providerURI` can't be used.
+a| `payara.security.openid.provider.*`
 | The endpoint must be HTTPS.
 
-| `clientId`
-| `payara.security.openid.clientId`
-| `true`
+a| `clientId`
+a| `payara.security.openid.clientId`
+a| `true`
 | The client identifier issued when the application was registered.
 |
 | N/A.
 
-| `clientSecret`
-| `payara.security.openid.clientSecret`
-| `true`
+a| `clientSecret`
+a| `payara.security.openid.clientSecret`
+a| `true`
 | The client secret for the registered application.
 |
 | N/A.
 
-| `redirectURI`
-| `payara.security.openid.redirectURI`
-| `true`
-| The URL to redirect the user to upon successful authentication. Can include the variable `${baseURL}`, which is replaced by the URL of the application's context path (e.g. `https://myhost:8080/myapp`)
-| `${baseURL}/Callback`
+a| `redirectURI`
+a| `payara.security.openid.redirectURI`
+a| `true`
+a| The URL to redirect the user to upon successful authentication. Can include the variable `${baseURL}`, which is replaced by the URL of the application's context path (e.g. `https://myhost:8080/myapp`)
+a| `${baseURL}/Callback`
 | Must be equal to one set in the OpenID Connect provider.
 
-| `scope`
-| `payara.security.openid.scope`
-| `false`
+a| `scope`
+a| `payara.security.openid.scope`
+a| `false`
 | The scopes requested from the OpenID Connect provider.
 | {"openid", "email", "profile"}
 | N/A.
 
-| `responseType`
-| `payara.security.openid.responseType`
-| `false`
+a| `responseType`
+a| `payara.security.openid.responseType`
+a| `false`
 | Response Type value defines the processing flow to be used.
 | code
 | N/A.
 
-| `responseMode`
-| `payara.security.openid.responseMode`
-| `false`
+a| `responseMode`
+a| `payara.security.openid.responseMode`
+a| `false`
 | Informs the Authorization Server of the mechanism to be used for returning parameters from the Authorization Endpoint.
 |
 | N/A.
 
-| `prompt`
-| `payara.security.openid.prompt`
-| `false`
+a| `prompt`
+a| `payara.security.openid.prompt`
+a| `false`
 | The prompt value specifies whether the authorization server prompts the user for re-authentication and consent.
 |
 | N/A.
 
-| `display`
-| `payara.security.openid.display`
-| `false`
+a| `display`
+a| `payara.security.openid.display`
+a| `false`
 | The display value specifying how the authorization server displays the authentication and consent user interface pages.
 | page
 | N/A.
 
-| `useNonce`
-| `payara.security.openid.useNonce`
-| `false`
+a| `useNonce`
+a| `payara.security.openid.useNonce`
+a| `false`
 | Enables string value used to mitigate replay attacks.
-| `true`
+a| `true`
 | N/A.
 
-| `useSession`
-| `payara.security.openid.useSession`
-| `false`
+a| `useSession`
+a| `payara.security.openid.useSession`
+a| `false`
 | If enabled state & nonce value stored in session otherwise in cookies.
-| `true`
+a| `true`
 | N/A.
 
-| `jwksConnectTimeout`
-| `payara.security.openid.jwks.connect.timeout`
-| `false`
+a| `jwksConnectTimeout`
+a| `payara.security.openid.jwks.connect.timeout`
+a| `false`
 | Sets the connect timeout(in milliseconds) for remote JWKS retrieval.
-| `500`
+a| `500`
 | Value must not be negative and if value is zero then infinite timeout.
 
-| `jwksReadTimeout`
-| `payara.security.openid.jwks.read.timeout`
-| `false`
+a| `jwksReadTimeout`
+a| `payara.security.openid.jwks.read.timeout`
+a| `false`
 | Sets the read timeout(in milliseconds) for remote JWKS retrieval.
 | 500
 | Value must not be negative and if value is zero then infinite timeout.
 
-| `tokenAutoRefresh`
-| `payara.security.openid.token.autoRefresh`
-| `false`
+a| `tokenAutoRefresh`
+a| `payara.security.openid.token.autoRefresh`
+a| `false`
 | Enables or disables the automatically performed refresh of Access and Refresh Token.
 | false
 | N/A.
 
-| `tokenMinValidity`
-| `payara.security.openid.token.minValidity`
-| `false`
+a| `tokenMinValidity`
+a| `payara.security.openid.token.minValidity`
+a| `false`
 | Sets the minimum validity time(in milliseconds) the Access Token must be valid before it is considered expired.
-| `10000`
+a| `10000`
 | Value must not be negative.
 
-| `claimsDefinition.callerNameClaim`
-| `payara.security.openid.callerNameClaim`
-| `false`
+a| `claimsDefinition.callerNameClaim`
+a| `payara.security.openid.callerNameClaim`
+a| `false`
 | Defines the name of callerName claim and maps the claim's value to caller name value in IdentityStore#validate.
 | preferred_username
 | N/A.
 
-| `claimsDefinition.callerGroupsClaim`
-| `payara.security.openid.callerGroupsClaim`
-| `false`
+a| `claimsDefinition.callerGroupsClaim`
+a| `payara.security.openid.callerGroupsClaim`
+a| `false`
 | Defines the name of callerGroups claim and maps the claim's value to caller groups value in IdentityStore#validate.
 | groups
 | N/A.
 
-| `proxyDefinition.hostName`
-| `payara.security.openid.proxyHostname`
-| `false`
+a| `proxyDefinition.hostName`
+a| `payara.security.openid.proxyHostname`
+a| `false`
 | Defines the hostname of the proxied server.
-| 
-| N/A.
-
-| `proxyDefinition.port`
-| `payara.security.openid.proxyPort`
-| `false`
-| Defines the port of the proxied server.
-| 
-| N/A.
-
-| `extraParameters`
 |
-| `false`
+| N/A.
+
+a| `proxyDefinition.port`
+a| `payara.security.openid.proxyPort`
+a| `false`
+| Defines the port of the proxied server.
+|
+| N/A.
+
+a| `extraParameters`
+|
+a| `false`
 | An array of extra options to be sent to the OpenID Connect provider.
 |
-| Must be in the form `key=value` and follow URL query pattern, i.e. `key1=value1&key2=value2&key2=value+with+spaces`. Key entries can be repeated
+a| Must be in the form `key=value` and follow URL query pattern, i.e. `key1=value1&key2=value2&key2=value+with+spaces`. Key entries can be repeated
 
-| `logout`
+a| `logout`
 |
 | @LogoutDefinition
 | Defines the functionality that is performed when the user logs out and defines the RP Session Management configuration.
 |
-| 
+|
+
 |===
 
 NOTE: If both an annotation attribute and a MicroProfile Config property are defined for the same option then the MicroProfile Config property value always takes precedence over the `@OpenIdAuthenticationDefinition` annotation value.
 
 .Configuration Options For `@OpenIdProviderMetadata`
+[cols="2,3,3,1", options="header"]
 |===
 | Option | MP Config property | Description | Default value
 
-| `endSessionEndpoint`
-| `payara.security.openid.provider.endSessionEndpoint`
-| OIDC provider’s logout endpoint URL. If set, overrides the URL obtained via the `end_session_endpoint` element of the OIDC provider’s metadata.
-|  
+a| `endSessionEndpoint`
+a| `payara.security.openid.provider.endSessionEndpoint`
+a| OIDC provider’s logout endpoint URL. If set, overrides the URL obtained via the `end_session_endpoint` element of the OIDC provider’s metadata.
+|
 
-| `disableScopeValidation`
-| `payara.security.openid.disableScopeValidation`
+a| `disableScopeValidation`
+a| `payara.security.openid.disableScopeValidation`
 | This property disables the scope validation for custom scope configurations
-| false 
+| false
+
 |===
 
 [#el-support]
@@ -378,35 +382,37 @@ public class SecurityBean {
 With the `logout` parameter of the `OpenIdAuthenticationDefinition` you can define the behavior when the user logs out of the application and defines how the RP session is managed.
 
 .Configuration Options
+[cols="2,3,1,3,1", options="header"]
 |===
 | Option | MP Config property | Required | Description | Default value 
 
-| `notifyProvider`
-| `payara.security.openid.provider.notify.logout`
-| `false`
-| Notify the OIDC provider (OP) that the user has logged out of the application and might want to log out of the OP as well.
+a| `notifyProvider`
+a| `payara.security.openid.provider.notify.logout`
+a| `false`
+a| Notify the OIDC provider (OP) that the user has logged out of the application and might want to log out of the OP as well.
 If `true` then after having logged out the user from RP, redirects the End-User's User Agent to the OP's logout endpoint URL. This URL is normally obtained via the `end_session_endpoint` element of the OP's metadata or can be customized via `fish.payara.security.annotations.OpenIdProviderMetadata#endSessionEndpoint`
-| `false`
+a| `false`
 
-| `redirectURI`
-| `payara.security.openid.logout.redirectURI`
-| `false`
-| The post logout redirect URI to which the RP is requesting that the End-User's User Agent be redirected after a logout has been performed.
+a| `redirectURI`
+a| `payara.security.openid.logout.redirectURI`
+a| `false`
+a| The post logout redirect URI to which the RP is requesting that the End-User's User Agent be redirected after a logout has been performed.
 
 If the redirect URI is empty then redirect to OpenID connect provider _authorization_endpoint_ for re-authentication.
-| 
+|
 
-| `accessTokenExpiry`
-| `payara.security.openid.logout.access.token.expiry`
-| `false`
+a| `accessTokenExpiry`
+a| `payara.security.openid.logout.access.token.expiry`
+a| `false`
 | Whether the application session times out when the Access Token expires.
-| `false`
+a| `false`
 
-| `identityTokenExpiry`
-| `payara.security.openid.logout.identity.token.expiry`
-| `false`
+a| `identityTokenExpiry`
+a| `payara.security.openid.logout.identity.token.expiry`
+a| `false`
 | Whether the application session times out when the Identity Token expires.
-| `false`
+a| `false`
+
 |===
 
 A programmatic logout is performed by calling `OpenIdContext#logout()` which invalidates the RP's active OpenId Connect session.
@@ -465,73 +471,75 @@ TIP: The order of evaluation is: MicroProfile Config ->  `@OpenIdProviderMetadat
 When these values, which correspond to lists (e.g. `scopesSupported`, `responseTypesSupported`), are loaded from MicroProfile Config, they are separated by a comma, following link:https://download.eclipse.org/microprofile/microprofile-config-2.0/microprofile-config-spec-2.0.html#_array_converters[MicroProfile Config Array conventions^].
 
 .Provider Metadata Options
+[cols="2,3,1,3", options="header"]
 |===
 | Option | MP Config property | Required | Description
 
-| `issuer`
-| `payara.security.openid.provider.issuer`
-| `true`
+a| `issuer`
+a| `payara.security.openid.provider.issuer`
+a| `true`
 | The base address of OpenId Connect Provider (OIDC Provider).
 
-| `authorizationEndpoint`
-| `payara.security.openid.provider.authorizationEndpoint`
-| `true`
+a| `authorizationEndpoint`
+a| `payara.security.openid.provider.authorizationEndpoint`
+a| `true`
 | The URL for the OAuth2 provider to provide authentication.
 
-| `tokenEndpoint`
-| `payara.security.openid.provider.tokenEndpoint`
-| `true`
+a| `tokenEndpoint`
+a| `payara.security.openid.provider.tokenEndpoint`
+a| `true`
 | The URL for the OAuth2 provider to give the authorization token.
 
-| `userinfoEndpoint`
-| `payara.security.openid.provider.userinfoEndpoint`
-| `true`
+a| `userinfoEndpoint`
+a| `payara.security.openid.provider.userinfoEndpoint`
+a| `true`
 | An OAuth 2.0 Protected Resource that returns Claims about the authenticated End-User.
 
-| `endSessionEndpoint`
-| `payara.security.openid.provider.endSessionEndpoint`
-| `false`
+a| `endSessionEndpoint`
+a| `payara.security.openid.provider.endSessionEndpoint`
+a| `false`
 | OIDC Provider's endpoint to notify that the End-User has logged out of the site and might want to log out of the OIDC Provider as well.
 
-| `jwksURI`
-| `payara.security.openid.provider.jwksURI`
-| `true`
+a| `jwksURI`
+a| `payara.security.openid.provider.jwksURI`
+a| `true`
 | An OIDC Provider's JSON Web Key Set document.
 
-| `scopesSupported`
-| `payara.security.openid.provider.scopesSupported`
+a| `scopesSupported`
+a| `payara.security.openid.provider.scopesSupported`
 | recommended
-| List of the OAuth 2.0 scope values that this server supports, e.g. `openid`.
+a| List of the OAuth 2.0 scope values that this server supports, e.g. `openid`.
 
-| `responseTypesSupported`
-| `payara.security.openid.provider.responseTypeSupported`
-| `true`
-| List of the OAuth 2.0 response_type values that this OIDC Provider supports, e.g. `code`, `id_token`, `token id_token`.
+a| `responseTypesSupported`
+a| `payara.security.openid.provider.responseTypeSupported`
+a| `true`
+a| List of the OAuth 2.0 response_type values that this OIDC Provider supports, e.g. `code`, `id_token`, `token id_token`.
 
-| `subjectTypesSupported`
-| `payara.security.openid.provider.subjectTypesSupported`
-| `true`
-| List of the Subject Identifier types that this OIDC Provider supports. Valid types include `pairwise` and `public`.
+a| `subjectTypesSupported`
+a| `payara.security.openid.provider.subjectTypesSupported`
+a| `true`
+a| List of the Subject Identifier types that this OIDC Provider supports. Valid types include `pairwise` and `public`.
 
-| `idTokenSigningAlgValuesSupported`
-| `payara.security.openid.provider.idTokenSigningAlgorithmsSupported`
-| `true`
-| List of the JWS signing algorithms (algorithm values) supported by the OIDC Provider for the ID Token to encode the Claims in a JWT, e.g. `RS256`.
+a| `idTokenSigningAlgValuesSupported`
+a| `payara.security.openid.provider.idTokenSigningAlgorithmsSupported`
+a| `true`
+a| List of the JWS signing algorithms (algorithm values) supported by the OIDC Provider for the ID Token to encode the Claims in a JWT, e.g. `RS256`.
 
-| `idTokenEncryptionAlgValuesSupported`
-| `payara.security.openid.provider.idTokenEncryptionAlgValuesSupported`
-| `false`
-| List of the JWE encryption algorithms (`alg` values) supported by the OIDC Provider for the ID Token to encode the Claims in a JWT.
+a| `idTokenEncryptionAlgValuesSupported`
+a| `payara.security.openid.provider.idTokenEncryptionAlgValuesSupported`
+a| `false`
+a| List of the JWE encryption algorithms (`alg` values) supported by the OIDC Provider for the ID Token to encode the Claims in a JWT.
 
-| `idTokenEncryptionEncValuesSupported`
-| `payara.security.openid.provider.idTokenEncryptionEncValuesSupported`
-| `false`
-| List of the JWE encryption algorithms (`enc` values) supported by the OIDC Provider for the ID Token to encode the Claims in a JWT.
+a| `idTokenEncryptionEncValuesSupported`
+a| `payara.security.openid.provider.idTokenEncryptionEncValuesSupported`
+a| `false`
+a| List of the JWE encryption algorithms (`enc` values) supported by the OIDC Provider for the ID Token to encode the Claims in a JWT.
 
-| `claimsSupported`
-| `payara.security.openid.provider.claimsSupported`
+a| `claimsSupported`
+a| `payara.security.openid.provider.claimsSupported`
 | recommended
 | List of the Claim Names of the Claims that the OIDC Provider MAY be able to supply values for. Note that for privacy or other reasons, this might not be an exhaustive list.
+
 |===
 
 [#secret-alias]
@@ -570,14 +578,15 @@ As such, this behaviour is non-standard and should be used on special cases.
 TIP: To properly connect an application with Microsoft ADFS this property is required because by default Microsoft ADFS doesn't allow calls to the `userinfo` endpoint.
 
 .Configuration Option
+[cols="2,3,1,3,1", options="header"]
 |===
 | Option | MP Config Property Name | Required | Description | Default value
 
-| `userClaimsFromIDToken`
-| `payara.security.openid.userClaimsFromIDToken`
-| `false`
+a| `userClaimsFromIDToken`
+a| `payara.security.openid.userClaimsFromIDToken`
+a| `false`
 | Instructs the container to retrieve user information from the ID Token
-| `false`
+a| `false`
 
 |===
 
