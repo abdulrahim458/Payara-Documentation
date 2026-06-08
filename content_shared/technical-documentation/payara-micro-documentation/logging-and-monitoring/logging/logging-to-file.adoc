@@ -38,8 +38,19 @@ You can specify a `Logging Properties File` to configure the JUL logger for Paya
 [cols="3,2,3,2,2",options="header"]
 |===
 |Options | Type | Description | Default | Mandatory
-| `--logProperties`| `String` | File with logging configuration| | No
-| `--enableDynamicLogging`| `Boolean` | Enable dynamic reloading of configuration| False | No
+
+a| `--logProperties`
+a| `String`
+| File with logging configuration
+|
+| No
+
+a| `--enableDynamicLogging`
+a| `Boolean`
+| Enable dynamic reloading of configuration
+| False
+| No
+
 |===
 
 [#example]

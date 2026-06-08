@@ -10,10 +10,11 @@ Payara Micro exposes a number of command line options to configure request traci
 [#configuration-options]
 === Configuration Options
 
-[cols="<,a", options="header"]
+[cols="2,3", options="header"]
 |===
 | Parameter | Summary
-| `enableRequestTracing`
+
+a| `enableRequestTracing`
 | Enables the service when present.
 
 A supplementary parameter can be provided with this option to encapsulate the value and unit options, for example, the following will enable the service with a threshold of `4ms`:
@@ -23,8 +24,8 @@ A supplementary parameter can be provided with this option to encapsulate the va
 java -jar payara-micro.jar --enableRequestTracing 4ms
 ----
 
-| `requestTracingThresholdUnit`
-| Accepts a String value determining the time unit, defaulting to seconds if no
+a| `requestTracingThresholdUnit`
+a| Accepts a String value determining the time unit, defaulting to seconds if no
 value is given. The accepted strings are (case-insensitive):
 
 * `NANOSECONDS`
@@ -37,27 +38,27 @@ value is given. The accepted strings are (case-insensitive):
 
 This is combined with the `requestTracingThresholdValue` setting to determine the threshold time period.
 
-| `requestTracingThresholdValue`
-| Accepts an integer value to determine the threshold value before a request is traced,
+a| `requestTracingThresholdValue`
+a| Accepts an integer value to determine the threshold value before a request is traced,
 defaulting to 30 if no value is entered. This is combined with the `requestTracingThresholdUnit` setting to determine
 the threshold time period.
 
-| `enablerequesttracingadaptivesampling`
-| Enables the _Adaptive Sampling_ option when present. When enabled, this allows the sample rate to change to attempt to
+a| `enablerequesttracingadaptivesampling`
+a| Enables the _Adaptive Sampling_ option when present. When enabled, this allows the sample rate to change to attempt to
 meet a target count of traces over a specified period of time.
 
-| `requesttracingadaptivesamplingtargetcount`
-| Accepts an integer value to determine the threshold value before a request is traced,
+a| `requesttracingadaptivesamplingtargetcount`
+a| Accepts an integer value to determine the threshold value before a request is traced,
 defaulting to 6 if no value is entered. Only used if adaptive sampling is enabled.
 
-| `requesttracingadaptivesamplingtimevalue`
-| Accepts an integer value to determine the threshold value before a request is traced,
+a| `requesttracingadaptivesamplingtimevalue`
+a| Accepts an integer value to determine the threshold value before a request is traced,
 defaulting to 1 if no value is entered. Only used if adaptive sampling is enabled.
 This is combined with the `requesttracingadaptivesamplingtimeunit` setting to determine
 the adaptive sampling time period.
 
-| `requesttracingadaptivesamplingtimeunit`
-| Accepts a String value determining the time unit, defaulting to minutes if no
+a| `requesttracingadaptivesamplingtimeunit`
+a| Accepts a String value determining the time unit, defaulting to minutes if no
 value is given. The accepted strings are (case-insensitive):
 
 * `NANOSECONDS`
@@ -69,6 +70,7 @@ value is given. The accepted strings are (case-insensitive):
 * `DAYS`
 
 This is combined with the `requesttracingadaptivesamplingtimevalue` setting to determine the adaptive sampling time period. Only used if adaptive sampling is enabled.
+
 |===
 
 [#shorthand-notation]
@@ -122,6 +124,7 @@ Notation for units is as follows:
 * `Days` (case-insensitive)
 * `Day` (case-insensitive)
 * `d`
+
 |===
 
 == Example Usages
