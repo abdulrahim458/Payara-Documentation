@@ -156,7 +156,7 @@ The following is a list of variables used by the Docker image to configure the P
 
 [width="100%",cols="29%,50%,21%",options="header",]
 |===
-|Name| Description| Value
+| Name | Description | Value
 
 a|`HOME_DIR`
 a| The home directory for the `payara` user

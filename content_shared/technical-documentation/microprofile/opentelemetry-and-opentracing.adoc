@@ -76,7 +76,7 @@ The following span names will be created for this request for different Span Con
 
 [cols="2,2", options="header"]
 |===
-| span-convention setting| Server Span Name
+| Span-Convention Setting | Server Span Name
 
 a| `opentelemetry`
 a| `GET /app/rest/resource/method`

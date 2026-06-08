@@ -13,7 +13,7 @@ This table provides a checklist of the steps to be performed before deploying an
 .Checklist
 [cols="3,7",options="header"]
 |===
-|Component/Feature |Description
+| Component/Feature | Description
 
 |Application
 a| Determine the following requirements for the application to be deployed.
@@ -78,6 +78,7 @@ a|
 *`removal-timeout-in-seconds`*: Time that an EJB remains passivated (idle in the backup store). Default value is 60 minutes. Adjust this value based on the need for SFSB failover.
 
 //TODO - Garbage Collection advice out of date, depends on JVM in use
+
 |Tune VM Garbage Collection (GC)
 a|
 Garbage collection pauses of four seconds or more can cause intermittent problems in persisting session state. To avoid this problem, tune the VM heap. In cases where even a single failure to persist data is unacceptable or when the system is not fully loaded, use the CMS collector or the throughput collector.

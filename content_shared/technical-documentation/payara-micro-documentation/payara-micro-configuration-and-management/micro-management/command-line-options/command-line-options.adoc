@@ -4,7 +4,7 @@ All of the options listed below are case-insensitive starting from release `4.1.
 
 [cols="2,3,2",options="header",]
 |=======================================================================
-|Configuration Option| Description| Default Value
+| Configuration Option | Description | Default Value
 
 a|[.breakable]`--accesslog <directory-path>`
 |Sets user defined directory path for the access log.
