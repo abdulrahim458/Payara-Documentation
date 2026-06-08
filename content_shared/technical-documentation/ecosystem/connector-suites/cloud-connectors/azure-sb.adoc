@@ -102,10 +102,7 @@ The full list of config properties is given below:
 
 [cols="2,1,1,7",options="header"]
 |===
-|Config Property Name
-|Type
-|Default
-|Notes
+|Config Property Name |Type |Default |Notes
 
 |sasKeyName
 |String
@@ -115,7 +112,7 @@ The full list of config properties is given below:
 |sasKey
 |String
 |none
-|The SAS Key. Environment variable replacement can be used so that this is not
+a|The SAS Key. Environment variable replacement can be used so that this is not
 exposed in the code
 
 |nameSpace
@@ -131,19 +128,19 @@ exposed in the code
 |initialPollDelay
 |Integer
 |1
-|The Initial Poll Delay (in seconds) before the Adapter starts polling for
+a|The Initial Poll Delay (in seconds) before the Adapter starts polling for
 messages after deployment (MDB Property Only)
 
 |pollInterval
 |Integer
 |1
-|The Poll interval (in seconds). This is how often the MDB polls for new
+a|The Poll interval (in seconds). This is how often the MDB polls for new
 messages (MDB Property Only)
 
 |pollTimeout
 |Integer
 |1
-|The Poll Timeout (in seconds). This is how long the MDB should wait for
+a|The Poll Timeout (in seconds). This is how long the MDB should wait for
 messages in a single poll (MDB Property Only)
 
 |===

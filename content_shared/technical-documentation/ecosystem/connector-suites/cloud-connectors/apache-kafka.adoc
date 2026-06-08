@@ -104,102 +104,99 @@ The full list of config properties is given below:
 
 [cols="2,1,1,7",options="header"]
 |===
-|Config Property Name
-|Type
-|Default
-|Notes
+|Config Property Name |Type |Default |Notes
 
-|`bootstrapServersConfig`
+a|`bootstrapServersConfig`
 |String
 |localhost:9092
 |Kafka Servers to connect to
 
-|`clientId`
+a|`clientId`
 |String
 |KafkaJCAClient
 |Client ID of the Producer
 
-|`valueSerializer`
+a|`valueSerializer`
 |String
 a|[.breakable]`org.apache.kafka.common .serialization.StringSerializer`
 |Serializer class for value
 
-|`keySerializer`
+a|`keySerializer`
 |String
 a|[.breakable]`org.apache.kafka.common .serialization.StringSerializer`
 |Serializer class for key
 
-|`bufferMemory`
+a|`bufferMemory`
 |Long
 |33554432
 |The total bytes the producer can use to buffer messages
 
-|`acks`
+a|`acks`
 |String
 |1
 |The number of acks the producer requires
 
-|`retries`
+a|`retries`
 |Integer
 |0
 |The number of retries if there is a transient error
 
-|`batchSize`
+a|`batchSize`
 |Long
 |16384
 |The producer will attempt to batch records together into fewer requests whenever multiple records are being sent to the same partition
 
-|`lingerMS`
+a|`lingerMS`
 |Long
 |0
 |The producer groups together any records that arrive in between request transmissions into a single batched request.
 
-|`maxBlockMS`
+a|`maxBlockMS`
 |Long
 |60000
 |How long can send block
 
-|`maxRequestSize`
+a|`maxRequestSize`
 |Long
 |1048576
 |Maximum size of request (bytes)
 
-|`receiveBufferBytes`
+a|`receiveBufferBytes`
 |Integer
 |32768
 |Receive Buffer (bytes)
 
-|`requestTimeout`
+a|`requestTimeout`
 |Integer
 |30000
 |Request Timeout (ms)
 
-|`compression`
+a|`compression`
 |String
 |"none"
 |Compression type of data sent
 
-|`connectionsMaxIdle`
+a|`connectionsMaxIdle`
 |Long
 |540000
 |Close Idle Kafka Connections
 
-|`maxInflightConnections`
+a|`maxInflightConnections`
 |Integer
 |5
 |Maximum unacknowledged requests to send before blocking
 
-|`metadataMaxAge`
+a|`metadataMaxAge`
 |Long
 |300000
 |Period of time before a refresh of Metadata (ms)
 
-|`retryBackoff`
+a|`retryBackoff`
 |Long
 |100
 |The amount of time to wait before attempting a retry (ms)
 
-|`reconnectBackoff`
+a|`reconnectBackoff`
 |Long
 |100
 |The amount of time to wait before attempting a reconnection (ms)

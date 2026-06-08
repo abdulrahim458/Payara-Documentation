@@ -161,75 +161,72 @@ The full list of configuration properties is given below:
 
 [cols="2,1,1,7",options="header"]
 |===
-|Config Property Name
-|Type
-|Default
-|Notes
+|Config Property Name |Type |Default |Notes
 
-|`awsAccessKeyId`
+a|`awsAccessKeyId`
 |String
 |None
 |Must be set to the access key of your AWS account
 
-|`awsSecretKey`
+a|`awsSecretKey`
 |String
 |None
 |Must be set to the secret key of your AWS account
 
-|`queueURL`
+a|`queueURL`
 |String
 |None
 |Must be set to the URL for an SQS queue
 
-|`region`
+a|`region`
 |String
 |None
 |Must be set to the AWS region name of your queue
 
-|`maxMessages`
+a|`maxMessages`
 |Integer
 |10
 |The maximum number of messages to download on a poll
 
-|`initialPollDelay`
+a|`initialPollDelay`
 |Integer
 |1
 |The delay (in seconds) before polling the queue after MDB activation (MDB only)
 
-|`pollInterval`
+a|`pollInterval`
 |Integer
 |3
 |How often should the adapter poll for messages (in seconds) (MDB Only)
 
-|`messageAttributeNames`
+a|`messageAttributeNames`
 |String
 |All
-|The list of message attribute names that should be fetched with the message
+a|The list of message attribute names that should be fetched with the message
 (MDB Only)
 
-|`attributeNames`
+a|`attributeNames`
 |String
 |All
 |The list of attribute names that should be fetched with the message (MDB Only)
 
-|`s3BucketName`
+a|`s3BucketName`
 |String
 |None
 |AWS S3 bucket name for storing larger messages
 
-|`s3SizeThreshold`
+a|`s3SizeThreshold`
 |Integer
 |0
 |AWS S3 size threshold for storing messages (in bytes)
 
-|`s3KeyPrefix`
+a|`s3KeyPrefix`
 |String
 |None
 |AWS S3 key prefix for organizing stored messages
 
-|`s3FetchMessage`
+a|`s3FetchMessage`
 |Boolean
 |true
-|Flag to fetch the full message from S3 when it exceeds the size threshold. If set to `false`, only the message metadata for larger messages, including the bucket name and message key, will be returned instead of the full message.
+a|Flag to fetch the full message from S3 when it exceeds the size threshold. If set to `false`, only the message metadata for larger messages, including the bucket name and message key, will be returned instead of the full message.
 
 |===

@@ -92,68 +92,65 @@ public class ReceiveMQTTMessage implements MQTTListener {
 
 [cols="2,1,1,7",options="header"]
 |===
-|Config Property Name
-|Type
-|Default
-|Notes
+|Config Property Name |Type |Default |Notes
 
-|`serverURIs`
+a|`serverURIs`
 |String
 |tcp://localhost:1883
 |Server URIs for connection, comma separated
 
-|`cleanSession`
+a|`cleanSession`
 |Boolean
 |false
 |Sets whether the client and server should remember state across reconnects
 
-|`automaticReconnect`
+a|`automaticReconnect`
 |Boolean
 |true
-|Sets whether the client will automatically reconnect to the server if the
+a|Sets whether the client will automatically reconnect to the server if the
 connection is lost
 
-|`filePersistance`
+a|`filePersistance`
 |Boolean
 |false
 |Whether the client should use file persistence for un-acknowledged messages
 
-|`persistenceDirectory`
+a|`persistenceDirectory`
 |String
 |.
 |Directory to use for file persistence
 
-|`connectionTimeout`
+a|`connectionTimeout`
 |Integer
 |30
 |Sets the connection timeout value in seconds
 
-|`maxInflight`
+a|`maxInflight`
 |Integer
 |10
 |Sets the maximum messages that can be sent without acknowledgements
 
-|`keepAliveInterval`
+a|`keepAliveInterval`
 |Integer
 |60
 |Sets the keep alive interval in seconds
 
-|`userName`
+a|`userName`
 |String
 |None
 |The username for the connection.
 
-|`password`
+a|`password`
 |String
 |None
 |The password for the connection.
 
-|`topicFilter`
+a|`topicFilter`
 |String
 |None
 |Topic Filter (For MDBs only)
 
-|`qos`
+a|`qos`
 |String
 |0
 |Quality of Service for the subscription (For MDBs only)
