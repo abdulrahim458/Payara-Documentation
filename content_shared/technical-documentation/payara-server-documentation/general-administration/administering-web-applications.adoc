@@ -16,21 +16,23 @@ http://server:port/context-root/servlet-mapping?name=value
 ----
 
 .Table 6-1 URL Fields for Servlets Within an Application
-[header, cols="3,7,1,1"]
+[header, cols="3,7"]
 |===
 |URL element
 |Description
-|server`:`port
+
+a|`server:port`
 | The IP address (or host name) and optional port number. To access the default web module for a virtual server, specify only this URL section. You do not need to specify the context-root or servlet-name unless you also wish to specify name-value parameters.
 
 | context-root
-| For an application, the context root is defined in the `context-root` element of the `application.xml`, `sun-application.xml`, or `payara-web.xml`/`sun-web.xml` (deprecated) file. For an individually deployed web module, the context  root is specified during deployment. For both applications and individually deployed web modules, the default context root is the name of the WAR file minus the `.war` suffix.
+a| For an application, the context root is defined in the `context-root` element of the `application.xml`, `sun-application.xml`, or `payara-web.xml`/`sun-web.xml` (deprecated) file. For an individually deployed web module, the context  root is specified during deployment. For both applications and individually deployed web modules, the default context root is the name of the WAR file minus the `.war` suffix.
 
 | servlet-mapping
-| The `servlet-mapping` as configured in the `web.xml` file.
+a| The `servlet-mapping` as configured in the `web.xml` file.
 
-| `?`name`=`value`...`
+a| `?`name`=`value`...`
 | Optional request parameters.
+
 |===
 
 In this example, `localhost` is the host name, `MortPages` is the context root, and `calcMortgage` is the servlet mapping.
@@ -138,7 +140,7 @@ xref:administering-web-applications.adoc#example-6-5[Example 6-5] provide exampl
 . Start Apache HTTP Server (`httpd`).
 . Start Payara Server with at least one web application deployed. +
 In order for the `mod_jk`-enabled network listener to start listening for requests, the web container must be started. Normally, this is achieved by deploying a web application.
-. Create a jk-enabled network listener by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc[`create-network-listener`] subcommand.
+. Create a jk-enabled network listener by using the xref:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc[`create-network-listener`] subcommand.
 +
 [source,shell]
 ----
@@ -215,7 +217,7 @@ In order to support stickiness, the Apache `mod_jk` load balancer relies on a `j
 .  On each of the instances, perform the steps in  xref:administering-web-applications.adoc#to-enable-mod_jk[To Enable `mod_jk`]. +
 If your instances run on the same machine, you must choose different JK ports. The ports must match `worker.worker*.port` in your `workers.properties` file. See the properties file in xref:administering-web-applications.adoc#example-6-5[Example 6-5].
 
-. On each of the instances, create the `jvmRoute` system property of Payara Server by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc[`create-jvm-options`] subcommand. +
+. On each of the instances, create the `jvmRoute` system property of Payara Server by using the xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc[`create-jvm-options`] subcommand. +
 Use the following format:
 +
 [source,shell]

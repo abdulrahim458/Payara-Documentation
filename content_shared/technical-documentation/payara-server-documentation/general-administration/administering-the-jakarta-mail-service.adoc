@@ -29,10 +29,10 @@ When you create a mail session, the server-side components and applications are 
 | Jakarta Mail settings  | Description
 
 | JNDI Name
-| The unique name for the mail session. Use the naming sub-context prefix mail/ for Jakarta Mail resources. For example: `mail/MySession`
+a| The unique name for the mail session. Use the naming sub-context prefix mail/ for Jakarta Mail resources. For example: `mail/MySession`
 
 | Mail Host
-| The host name of the default mail server. The connect methods of the store and transport objects use this value if a protocol-specific host property is not supplied.
+a| The host name of the default mail server. The connect methods of the store and transport objects use this value if a protocol-specific host property is not supplied.
 +
 The name must be resolvable to an actual host name.
 
@@ -40,7 +40,7 @@ The name must be resolvable to an actual host name.
 | The default username to provide when connecting to a mail server. The connect methods of the store and transport objects use this value if a protocol-specific username property is not supplied.
 
 | Default Return Address
-| The email address of the default user, in the form: `username@host.domain`.
+a| The email address of the default user, in the form: `username@host.domain`.
 
 | Description
 | A descriptive statement for the component.
@@ -91,7 +91,7 @@ This example lists the Jakarta Mail resources on `localhost`.
 [#to-update-a-javamail-resource]
 === To Update a Jakarta Mail Resource
 
-. List the Jakarta Mail resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommand.
+. List the Jakarta Mail resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommand.
 . Modify the values for the specified Jakarta Mail source by using the xref:../command-reference/set.adoc[`set`] subcommand. The resource is identified by its dotted name.
 
 ==== Example - Updating a Jakarta Mail Resource

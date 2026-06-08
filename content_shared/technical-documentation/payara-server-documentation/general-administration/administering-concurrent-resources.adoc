@@ -62,7 +62,7 @@ Because all JNDI names are in the `java:comp/env` subcontext, when specifying th
 IMPORTANT: Creating a context service resource is a dynamic event and typically does not require server restart. Applications can use a resource as soon as it is created. However, if an application tried to use a resource before it was created, and that resource is created later, the application or the server must be restarted. Otherwise, the application will not be able to locate the resource.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Create a context service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-context-service.adoc[`create-context-service`] subcommand.
+. Create a context service by using the xref:technical-documentation/payara-server-documentation/command-reference/create-context-service.adoc[`create-context-service`] subcommand.
 . If necessary, notify users that the new resource has been created.
 
 [#example-configuring-context-services]
@@ -86,7 +86,7 @@ Use the `list-context-services` subcommand in remote mode to list the existing c
 
 . Ensure that the server is running. +
 Remote subcommands require a running server.
-. List context service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-context-services.adoc[`list-context-services`] subcommand.
+. List context service resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-context-services.adoc[`list-context-services`] subcommand.
 
 [#example-to-list-context-services]
 ==== Example 14-2 to List a Context Service
@@ -111,7 +111,7 @@ IMPORTANT: When a resource is updated, the existing resource is shut down and re
 the application or the server must be restarted.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the context service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-context-services.adoc[`list-context-services`] subcommand.
+. List the context service resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-context-services.adoc[`list-context-services`] subcommand.
 . View the attributes of a specific context service by using the `get` subcommand. +
 For example:
 +
@@ -135,9 +135,9 @@ Use the `delete-context-service` subcommand in remote mode to delete an existing
 Before deleting a context service resource, all associations to the resource must be removed.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the context service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-context-services.adoc[`list-context-services`] subcommand.
+. List the context service resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-context-services.adoc[`list-context-services`] subcommand.
 . If necessary, notify users that the context service is being deleted.
-. Delete the context service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-context-service.adoc[`delete-context-service`] subcommand.
+. Delete the context service by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-context-service.adoc[`delete-context-service`] subcommand.
 
 [#example-to-delete-a-context-service]
 ==== Example 14-3 to Delete a Context Service
@@ -178,7 +178,7 @@ For more information about the default managed thread factory resource included 
 NOTE: Creating a managed thread factory resource is a dynamic event and typically does not require server restart. Applications can use a resource as soon as it is created. However, if an application tried to use a resource before it was created, and that resource is created later, the application or the server must be restarted. Otherwise, the application will not be able to locate the resource.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Create a managed thread factory by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-managed-thread-factory.adoc[`create-managed-thread-factory`] subcommand.
+. Create a managed thread factory by using the xref:technical-documentation/payara-server-documentation/command-reference/create-managed-thread-factory.adoc[`create-managed-thread-factory`] subcommand.
 . If necessary, notify users that the new resource has been created.
 
 [#example-to-create-a-managed-thread-factory]
@@ -201,7 +201,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Use the `list-managed-thread-factories` subcommand in remote mode to list the existing managed thread factory resources.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List managed thread factory resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-thread-factories.adoc[`list-managed-thread-factories`] subcommand.
+. List managed thread factory resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-managed-thread-factories.adoc[`list-managed-thread-factories`] subcommand.
 
 [#example-to-list-managed-thread-factories]
 ==== Example 14-5 to List a Managed Thread Factory
@@ -227,7 +227,7 @@ You can change all of the settings for an existing managed thread factory resour
 IMPORTANT: When a resource is updated, the existing resource is shut down and recreated. If applications used the resource prior to the update, the application or the server must be restarted.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the managed thread factory resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-thread-factories.adoc[`list-managed-thread-factories`] subcommand.
+. List the managed thread factory resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-managed-thread-factories.adoc[`list-managed-thread-factories`] subcommand.
 . View the attributes of a managed thread factory by using the `get` subcommand. +
 For example:
 +
@@ -252,9 +252,9 @@ Before deleting a managed thread factory resource, all associations to the resou
 Before deleting a managed thread factory resource, all associations to the resource must be removed.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the managed thread factory resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-thread-factories.adoc[`list-managed-thread-factories`] subcommand.
+. List the managed thread factory resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-managed-thread-factories.adoc[`list-managed-thread-factories`] subcommand.
 . If necessary, notify users that the managed thread factory is being deleted.
-. Delete the managed thread factory by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-managed-thread-factory.adoc[`delete-managed-thread-factory`] subcommand.
+. Delete the managed thread factory by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-managed-thread-factory.adoc[`delete-managed-thread-factory`] subcommand.
 
 [#example-to-delete-a-managed-thread-factory]
 ==== Example 14-6 to Delete a Managed Thread Factory
@@ -298,7 +298,7 @@ For more information about the default managed executor service resource include
 NOTE: Creating a managed executor service resource is a dynamic event and typically does not require server restart. Applications can use a resource as soon as it is created. However, if an application tried to use a resource before it was created, and that resource is created later, the application or the server must be restarted. Otherwise, the application will not be able to locate the resource.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Create a managed executor service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-managed-executor-service.adoc[`create-managed-executor-service`] subcommand.
+. Create a managed executor service by using the xref:technical-documentation/payara-server-documentation/command-reference/create-managed-executor-service.adoc[`create-managed-executor-service`] subcommand.
 . If necessary, notify users that the new resource has been created.
 
 [#example-to-create-a-managed-executor-service]
@@ -321,7 +321,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 The `list-managed-executor-services` asadmin command can be used to list the existing managed executor service resources.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List managed executor service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-executor-services.adoc[`list-managed-executor-services`] subcommand.
+. List managed executor service resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-managed-executor-services.adoc[`list-managed-executor-services`] subcommand.
 
 [#example-to-list-managed-executor-services]
 ==== Example 14-8 to List a Managed Executor Service
@@ -346,7 +346,7 @@ You can change all of the settings for an existing managed executor service reso
 IMPORTANT: When a resource is updated, the existing resource is shut down and recreated. If applications used the resource prior to the update, the application or the server must be restarted.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the managed executor service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-executor-services.adoc[`list-managed-executor-services`] subcommand.
+. List the managed executor service resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-managed-executor-services.adoc[`list-managed-executor-services`] subcommand.
 . View the attributes of a managed executor service by using the `get` subcommand. +
 For example:
 +
@@ -371,9 +371,9 @@ Use the `delete-managed-executor-service` subcommand in remote mode to delete an
 Before deleting a managed executor service resource, all associations to the resource must be removed.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the managed executor service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-executor-services.adoc[`list-managed-executor-services`] subcommand.
+. List the managed executor service resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-managed-executor-services.adoc[`list-managed-executor-services`] subcommand.
 . If necessary, notify users that the managed executor service is being deleted.
-. Delete the managed executor service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-managed-executor-service.adoc[`delete-managed-executor-service`] subcommand.
+. Delete the managed executor service by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-managed-executor-service.adoc[`delete-managed-executor-service`] subcommand.
 
 [#example-to-delete-a-managed-executor-service]
 ==== Example 14-9 to Delete a Managed Executor Service
@@ -417,7 +417,7 @@ For more information about the default managed scheduled executor service resour
 NOTE: Creating a managed scheduled executor service resource is a dynamic event and typically does not require server restart. Applications can use a resource as soon as it is created. However, if an application tried to use a resource before it was created, and that resource is created later, the application or the server must be restarted. Otherwise, the application will not be able to locate the resource.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Create a managed scheduled executor service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-managed-executor-service.adoc[`create-managed-scheduled-executor-service`] subcommand.
+. Create a managed scheduled executor service by using the xref:technical-documentation/payara-server-documentation/command-reference/create-managed-executor-service.adoc[`create-managed-scheduled-executor-service`] subcommand.
 . If necessary, notify users that the new resource has been created.
 
 [#example-to-create-a-managed-scheduled-executor-service]
@@ -440,7 +440,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Use the `list-managed-scheduled-executor-services` subcommand in remote mode to list the existing managed scheduled executor service resources.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List managed scheduled executor service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-scheduled-executor-services.adoc[`list-managed-scheduled-executor-services`] subcommand.
+. List managed scheduled executor service resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-managed-scheduled-executor-services.adoc[`list-managed-scheduled-executor-services`] subcommand.
 
 [#example-to-list-managed-scheduled-executor-services]
 ==== Example 14-11 to List a Managed Scheduled Executor Service
@@ -466,7 +466,7 @@ You can change all of the settings for an existing managed scheduled executor se
 IMPORTANT: When a resource is updated, the existing resource is shut down and recreated. If applications used the resource prior to the update, the application or the server must be restarted.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the managed scheduled executor service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-scheduled-executor-services.adoc[`list-managed-scheduled-executor-services`] subcommand.
+. List the managed scheduled executor service resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-managed-scheduled-executor-services.adoc[`list-managed-scheduled-executor-services`] subcommand.
 . View the attributes of a managed scheduled executor service by using the `get` subcommand. +
 For example:
 +
@@ -490,9 +490,9 @@ Use the `delete-managed-scheduled-executor-service` subcommand in remote mode to
 Before deleting a managed scheduled executor service resource, all associations to the resource must be removed.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the managed scheduled executor service resources by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-managed-scheduled-executor-services.adoc[`list-managed-scheduled-executor-service`] subcommand.
+. List the managed scheduled executor service resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-managed-scheduled-executor-services.adoc[`list-managed-scheduled-executor-service`] subcommand.
 . If necessary, notify users that the managed scheduled executor service is being deleted.
-. Delete the managed scheduled executor service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-managed-scheduled-executor-service.adoc[`delete-managed-scheduled-executor-service`]
+. Delete the managed scheduled executor service by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-managed-scheduled-executor-service.adoc[`delete-managed-scheduled-executor-service`]
 subcommand.
 
 [#example-to-delete-a-managed-scheduled-executor-service]

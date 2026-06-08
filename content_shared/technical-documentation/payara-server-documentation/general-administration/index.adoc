@@ -29,37 +29,38 @@ NOTE: The default administrator login is `admin`, with no password, which means 
 |Default
 
 |Domain Name
-|`domain1`
+a|`domain1`
 
 |Master Password
-|`changeit`
+a|`changeit`
 
 |Administration User
-|`admin`
+a|`admin`
 
 |Administration Server Port
-|`4848`
+a|`4848`
 
 |HTTP Port
-|`8080`
+a|`8080`
 
 |HTTPS Port
-|`8181`
+a|`8181`
 
 |Pure JMX Clients Port
-|`8686`
+a|`8686`
 
 |Message Queue Port
-|`7676`
+a|`7676`
 
 |IIOP Port
-|`3700`
+a|`3700`
 
 |IIOP/SSL Port
-|`3820`
+a|`3820`
 
 |IIOP/SSL Port With Mutual Authentication
-|`3920`
+a|`3920`
+
 |===
 
 [#table-default-settings-and-locations-2]
@@ -70,14 +71,14 @@ NOTE: The default administrator login is `admin`, with no password, which means 
 |Item
 |Default
 
-|Command-line Utility (`asadmin`)
-|`as-install/bin`
+a|Command-line Utility (`asadmin`)
+a|`as-install/bin`
 
 |Configuration Files
-|`domain-dir/config`
+a|`domain-dir/config`
 
 |Log Files
-|`domain-dir/logs`
+a|`domain-dir/logs`
 
 |===
 

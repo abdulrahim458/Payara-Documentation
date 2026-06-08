@@ -92,16 +92,14 @@ The following table shows the REST methods for administering monitoring and conf
 |`GET`
 
 |Retrieve data for an object in the tree
-|`GET`
-
+a|`GET`
 |Add an object to the tree
-|`POST`
+a|`POST`
 
 |Update an object in the tree
-|`POST`
-
+a|`POST`
 |Delete an object from the tree
-|`DELETE`
+a|`DELETE`
 
 |===
 

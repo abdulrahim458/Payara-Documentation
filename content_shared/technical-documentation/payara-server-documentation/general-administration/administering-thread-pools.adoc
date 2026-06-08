@@ -45,7 +45,7 @@ into different thread pools.
 
 . Ensure that the server is running. Remote subcommands require a running server.
 . Create a new thread pool by using the
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-threadpool.adoc[`create-threadpool`] subcommand. +
+xref:technical-documentation/payara-server-documentation/command-reference/create-threadpool.adoc[`create-threadpool`] subcommand. +
 Information about options for the subcommand is included in this help page.
 . To apply your changes, restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
@@ -67,7 +67,7 @@ This example creates `threadpool-l`.
 Use the `list-threadpools` subcommand in remote mode to list the existing thread pools.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the existing thread pools by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-threadpools.adoc[`list-threadpools`] subcommand.
+. List the existing thread pools by using the xref:technical-documentation/payara-server-documentation/command-reference/list-threadpools.adoc[`list-threadpools`] subcommand.
 
 ==== Example 5-2 Listing Thread Pools
 
@@ -84,8 +84,8 @@ This example lists the existing thread pools.
 
 Use the `set` subcommand to update the values for a specified thread pool.
 
-. List the existing thread pools by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-threadpools.adoc[`list-threadpools`] subcommand.
-. Modify the values for a thread pool by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand. +
+. List the existing thread pools by using the xref:technical-documentation/payara-server-documentation/command-reference/list-threadpools.adoc[`list-threadpools`] subcommand.
+. Modify the values for a thread pool by using the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand. +
 The thread pool is identified by its dotted name.
 . To apply your changes, restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain]. +
 
@@ -105,8 +105,8 @@ This example sets the `max-thread-pool-size` from its previous value to 8.
 Use the `delete-threadpool` subcommand in remote mode to delete an existing thread pool. Deleting a thread pool will fail if that pool is referenced by a network listener.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the existing thread pools by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-threadpools.adoc[`list-threadpools`] subcommand.
-. Delete the specified thread pool by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-threadpool.adoc[`delete-threadpool`] subcommand.
+. List the existing thread pools by using the xref:technical-documentation/payara-server-documentation/command-reference/list-threadpools.adoc[`list-threadpools`] subcommand.
+. Delete the specified thread pool by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-threadpool.adoc[`delete-threadpool`] subcommand.
 . To apply your changes, restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain]. +
 
 NOTE: Restart is not necessary for thread pools used by the web container.
@@ -141,6 +141,7 @@ The EJB Thread Pool has the following properties configured by default.
 |Queue Capacity |Integer.MAX_VALUE (2,147,483,647) |The size, in bytes, of the thread pool queue which stores new requests while new threads are created if more than thread-core-pool-size number of threads are running.
 |Allow Core Thread Timeout |false |All threads, including core threads, are subject to termination after thread-keep-alive-seconds
 |Prestart All Core Threads |false |Threads in the EJB container thread pool are started even if no requests have arrived, and the pool has a non-empty queue
+
 |=======================================================================
 
 [#configuring-the-pool]
@@ -151,12 +152,25 @@ The EJB thread pool can be configured with either the admin console or the asadm
 [cols="35,65",options="header"]
 |=======================================================================
 |Property Name |Value Constraints
-|thread-core-pool-size |Cannot be less than 0, larger than max int, and must be larger than `thread-max-pool-size`
-|thread-max-pool-size |Cannot be less than 1 or greater than max int
-|thread-keep-alive-seconds |Cannot be less than 0 or greater than max int
-|thread-queue-capacity |Cannot be less than 1 or greater than max int
-|allow-core-thread-timeout |Must be true or false
-|prestart-all-core-threads |Must be true or false
+
+|thread-core-pool-size
+|Cannot be less than 0, larger than max int, and must be larger than `thread-max-pool-size`
+
+|thread-max-pool-size
+|Cannot be less than 1 or greater than max int
+
+|thread-keep-alive-seconds
+|Cannot be less than 0 or greater than max int
+
+|thread-queue-capacity
+|Cannot be less than 1 or greater than max int
+
+|allow-core-thread-timeout
+|Must be true or false
+
+|prestart-all-core-threads
+|Must be true or false
+
 |=======================================================================
 
 === Using the Admin Console

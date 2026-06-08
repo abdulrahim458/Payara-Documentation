@@ -40,6 +40,7 @@ a|[.breakable]`instance-dir/logs/server.log`
 
 |Cluster instance
 a|[.breakable]`instance-dir/logs/server.log`
+
 |===
 
 For example, in a domain hosted on a given machine that includes a cluster with two managed servers (`ClusterServer1` and `ClusterServer1`) and a standalone instance (`StandaloneServer`), the log files might be arranged in the following directory structure. In this directory structure, the `server.log` file for the DAS is located in `domain-dir/logs`.
@@ -223,33 +224,34 @@ The following subcommands optionally accept a target specification. A target can
 |Description
 |Target Specification
 
-|xref:../command-reference/collect-log-files.adoc[`collect-log-files`]
+a|xref:../command-reference/collect-log-files.adoc[`collect-log-files`]
 |Collects all available log files into a ZIP archive.
-|`--target``=`target-name
+a|`--target=target-name`
 
-|xref:../command-reference/list-log-attributes.adoc[`list-log-attributes`]
+a|xref:../command-reference/list-log-attributes.adoc[`list-log-attributes`]
 |Lists logging attributes in the logging properties file.
 |target-name operand
 
-|xref:../command-reference/list-log-levels.adoc[`list-log-levels`]
+a|xref:../command-reference/list-log-levels.adoc[`list-log-levels`]
 |Lists the loggers in the logging properties file and their log levels
 |target-name operand
 
-|xref:../command-reference/rotate-log.adoc[`rotate-log`]
+a|xref:../command-reference/rotate-log.adoc[`rotate-log`]
 |Rotates the log file by renaming it and creating a new log file to store new messages.
-|`--target``=`target-name
+a|`--target=target-name`
 
-|xref:../command-reference/set-log-attributes.adoc[`set-log-attributes`]
+a|xref:../command-reference/set-log-attributes.adoc[`set-log-attributes`]
 |Sets the specified logging attributes in the logging properties file.
-|`--target``=`target-name
+a|`--target=target-name`
 
-|xref:../command-reference/set-log-file-format.adoc[`set-log-file-format`]
+a|xref:../command-reference/set-log-file-format.adoc[`set-log-file-format`]
 |Sets the log file formatter.
-|`--target``=`target-name
+a|`--target=target-name`
 
-|xref:../command-reference/set-log-levels.adoc[`set-log-levels`]
+a|xref:../command-reference/set-log-levels.adoc[`set-log-levels`]
 |Sets the log level for one or more loggers listed in the logging properties file.
-|`--target``=`target-name
+a|`--target=target-name`
+
 |====
 
 
@@ -274,13 +276,14 @@ By default, in a Payara Server domain, logging properties files are created in t
 a|[.breakable]`domain-dir/config/logging.properties`
 
 |A configuration
-|`domain-dir/config/<config-name>/logging.properties`, where `<config-name>` represents the name of a configuration that is shared by one or more instances or clusters.
+a|`domain-dir/config/<config-name>/logging.properties`, where `<config-name>` represents the name of a configuration that is shared by one or more instances or clusters.
 
 |An instance
-|`domain-dir/config/<instance-name>-config/logging.properties`, where `<instance-name>` represents the name of the instance.
+a|`domain-dir/config/<instance-name>-config/logging.properties`, where `<instance-name>` represents the name of the instance.
 
 |A cluster
-|`domain-dir/config/<cluster-name>-config/logging.properties`, where `<cluster-name>` represents the name of the cluster.
+a|`domain-dir/config/<cluster-name>-config/logging.properties`, where `<cluster-name>` represents the name of the cluster.
+
 |====
 
 [#configuring-the-logging-service]
@@ -579,7 +582,7 @@ Log formats for all server instances in a cluster will be the same. For informat
 NOTE: Changing the log format forces log rotation to avoid mixed format in the same file.
 
 . Ensure that the target server or cluster is running. Remote commands require a running server.
-. Set the formatter by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/set-log-file-format.adoc[`set-log-file-format`] subcommand.
+. Set the formatter by using the xref:technical-documentation/payara-server-documentation/command-reference/set-log-file-format.adoc[`set-log-file-format`] subcommand.
 . To apply your change, restart Payara Server.
 
 [#example-to-set-the-log-file-format]
@@ -855,7 +858,7 @@ You can view the full syntax and options of the subcommand by typing `asadmin he
 Use the `set-log-attributes` subcommand in remote mode to change the limit on the number of log files that the server creates to store old log messages. The default target of this subcommand is the DAS.Optionally, you can target a configuration, server, instance, or cluster. The default limit value is `0`, which results in no limit placed on the number of rotated log files that are retained.
 
 . Ensure that the target server or cluster is running.
-. Change the limit number of retained log files by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/set-log-attributes.adoc[`set-log-attributes`] subcommand, specifying the following attribute and the desired file limit number: `com.sun.enterprise.server.logging.GFFileHandler.maxHistoryFiles=minutes`
+. Change the limit number of retained log files by using the xref:technical-documentation/payara-server-documentation/command-reference/set-log-attributes.adoc[`set-log-attributes`] subcommand, specifying the following attribute and the desired file limit number: `com.sun.enterprise.server.logging.GFFileHandler.maxHistoryFiles=minutes`
 
 The behavior of the `com.sun.enterprise.server.logging.GFFileHandler.maxHistoryFiles` attribute is as follows:
 
@@ -912,7 +915,7 @@ You can rotate log files manually by using the `rotate-log` subcommand in remote
 Because log rotation is a dynamic operation, you do not need to restart Payara Server for changes to take effect.
 
 . Ensure that the target server or cluster is running.
-. Rotate log files by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/rotate-log.adoc[`rotate-log`] subcommand.
+. Rotate log files by using the xref:technical-documentation/payara-server-documentation/command-reference/rotate-log.adoc[`rotate-log`] subcommand.
 
 [#example-to-rotate-log-files-manually]
 ==== Example - to Rotate Log Files Manually

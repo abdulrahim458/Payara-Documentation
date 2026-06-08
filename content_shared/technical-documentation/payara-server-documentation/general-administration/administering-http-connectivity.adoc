@@ -69,14 +69,19 @@ The following table describes the Payara Server default ports for the listeners 
 [width="100%",cols="18%,13%,69%",options="header",]
 |=======================================================================
 |Listener |Default Port |Description
-|Administrative server |`4848` |A domain's administrative server is accessed by the Administration Console and the `asadmin` utility.
 
-For the Administration Console, specify the port number in the URL of the browser. When running an `asadmin` subcommand remotely, specify the port number by using the `--port` option.
+|Administrative server
+a|`4848`
+a|A domain's administrative server is accessed by the Administration Console and the `asadmin` utility.
 
-|HTTP |`8080` |The web server listens for HTTP requests on a port.
+|HTTP
+a|`8080`
+a|The web server listens for HTTP requests on a port.
 To access deployed web applications and services, clients connect to this port.
 
-|HTTPS |`8181` |Web applications configured for secure communications listen on a separate port.
+|HTTPS
+a|`8181`
+|Web applications configured for secure communications listen on a separate port.
 
 |=======================================================================
 
@@ -95,43 +100,43 @@ The following fields can be configured for network listeners:
 .Network Listeners Configuration
 [header, cols="2,6,8"]
 |===
-| configuration settings  | Description | Asadmin Command
+| Configuration settings  | Description | Asadmin Command
 
 | Name
 | The unique name of the network listener. This cannot be edited from the admin console.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.name=value`
+a| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.name=value`
 
 | Protocol
 | The protocol used by the network listener. This cannot be edited from the admin console.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.protocol=$+{protocol-name}+`
+a| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.protocol=$+{protocol-name}+`
 
 | Status
 | The status of the network listener. This determines whether the listener will be actively listening for requests.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.enabled=[true/false]`
+a| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.enabled=[true/false]`
 
 | JK Enabled
 | Whether mod_jk support should be enabled for this listener. Should only be enabled if mod_jk is being explicitly configured on an Apache Web Server in conjunction with Payara Server.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.jk-enabled=[true/false]`
+a| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.jk-enabled=[true/false]`
 
 | JK Configuration File
 | The location of the mod_jk configuration file. Defaults to ${com.sun.aas.instanceRoot}/config/glassfish-jk.properties.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.jk-configuration-file=/location/to/file`
+a| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.jk-configuration-file=/location/to/file`
 
 | Port
 | The port used by the network listener. The selected port will be used to listen for requests.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.port=value`
+a| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.port=value`
 
 | Address
 | The address used by the network listener. 0.0.0.0 corresponds to all addresses.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.address=value`
+a| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.address=value`
 
 | Transport
 | The transport used by the network listener. This cannot be edited from the admin console. Defaults to tcp.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.transport=$+{transport-name}+`
+a| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.transport=$+{transport-name}+`
 
 | Thread Pool
 | The thread pool used by the network listener. This determines the pool of threads used to service requests.
-| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.thread-pool=$+{thread-pool-name}+`
+a| `set configs.config.server-config.network-config.network-listeners.network-listener.$+{network-listener-name}+.thread-pool=$+{thread-pool-name}+`
 
 |===
 
@@ -173,7 +178,7 @@ Use the `create-http-listener` subcommand or the `create-network-listener` subco
 Behind the scenes, a network listener is created as well as its associated protocol, transport, and HTTP configuration. This method is a convenient shortcut, but it gives access to only a limited number of options. If you want to specify the full range of listener options, follow the instructions in xref:administering-http-connectivity.adoc#to-create-an-internet-connection[To Create an Internet Connection].
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Create an HTTP network listener by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc[`create-network-listener`] subcommand or the xref:../command-reference/create-http-listener.adoc[`create-http-listener`] subcommand.
+. Create an HTTP network listener by using the xref:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc[`create-network-listener`] subcommand or the xref:../command-reference/create-http-listener.adoc[`create-http-listener`] subcommand.
 . If needed, restart the server. If you edit the special HTTP network listener named `admin-listener`, you must restart the server for changes to take effect.
 +
 See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
@@ -229,7 +234,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 [#to-update-an-http-network-listener]
 === To Update an HTTP Network Listener
 
-. List HTTP listeners by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-http-listeners.adoc[`list-http-listeners`] or xref:../command-reference/list-network-listeners.adoc[`list-network-listeners`] subcommand.
+. List HTTP listeners by using the xref:technical-documentation/payara-server-documentation/command-reference/list-http-listeners.adoc[`list-http-listeners`] or xref:../command-reference/list-network-listeners.adoc[`list-network-listeners`] subcommand.
 . Modify the values for the specified listener by using the xref:../command-reference/set.adoc[`set`] subcommand.
 +
 The listener is identified by its dotted name.
@@ -356,7 +361,7 @@ Use the `delete-ssl` subcommand in remote mode to delete the SSL element in the 
 . Ensure that the server is running.
 +
 Remote subcommands require a running server.
-. Delete SSL from an HTTP listener by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-ssl[`delete-ssl`] subcommand.
+. Delete SSL from an HTTP listener by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-ssl[`delete-ssl`] subcommand.
 . To apply your changes, restart Payara Server.
 +
 See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
@@ -401,42 +406,42 @@ Each HTTP listener has an HTTP protocol, which is created either by using the `c
 .Security
 [header, cols="2,6,8"]
 |===
-| configuration settings  | Description | Asadmin Command
+| Configuration settings  | Description | Asadmin Command
 
 | Security
 | Whether security is enabled for the protocol. When disabled, all the SSL/TLS options are ignored.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.security-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.security-enabled=[true\|false]`
 
 |===
 
 .HTTP Settings
 [header, cols="2,6,8"]
 |===
-| configuration settings  | Description | Asadmin Command
+| Configuration settings  | Description | Asadmin Command
 
 | Server Name
-| The name of the server. This will be sent as the `Server` header in responses.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.server-name-enabled=value`
+a| The name of the server. This will be sent as the `Server` header in responses.
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.server-name-enabled=value`
 
 | Default Virtual Server
 | The default virtual server used for the protocol. Establishes the request priority when multiple virtual servers are configured.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.default-virtual-server=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.default-virtual-server=value`
 
 | Redirect Port
 | The port used for SSL transport redirection.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.redirect-port=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.redirect-port=value`
 
 | Max Connections
 | The maximum number of requests per connection to keep in keep-alive mode.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.max-connections=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.max-connections=value`
 
 | Timeout
 | The amount of time in seconds before a connection is deemed as idle. After this, the connection will no longer be in keep-alive state.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.timeout-seconds=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.timeout-seconds=value`
 
 | Upload Timeout Enabled
-| Enables closing a connection that is reading bytes slowly after the `configuration-http-upload-timeout-millis` setting is reached.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.upload-timeout-enabled=value`
+a| Enables closing a connection that is reading bytes slowly after the `configuration-http-upload-timeout-millis` setting is reached.
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.upload-timeout-enabled=value`
 
 | Connection Upload Timeout
 a| The timeout, in milliseconds, for uploads.
@@ -444,7 +449,7 @@ a| The timeout, in milliseconds, for uploads.
 ====
 To disable this timeout, set the value to `-1`.
 ====
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.connection-upload-timeout-millis=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.connection-upload-timeout-millis=value`
 
 | Request Timeout
 a| The timeout, in seconds, for requests.
@@ -452,35 +457,35 @@ a| The timeout, in seconds, for requests.
 ====
 To disable this timeout, set the value to `-1`.
 ====
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.request-timeout-seconds=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.request-timeout-seconds=value`
 
 | Send Buffer Size
 | The size, in bytes, of the send buffer.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.send-buffer-size-bytes=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.send-buffer-size-bytes=value`
 
 | Header Buffer Length
 | The size, in bytes, of the buffer used to read the request data.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.header-buffer-length-bytes=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.header-buffer-length-bytes=value`
 
 | Max Post Size
 | The maximum size, in bytes, of POST actions.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.max-post-size-bytes=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.max-post-size-bytes=value`
 
 | Max Form Post Size
 | The maximum size, in bytes, of a POST form.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.max-form-post-size-bytes=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.max-form-post-size-bytes=value`
 
 | Max Save Post Size
 | The maximum size, in bytes, of a POST request that will be saved during authentication.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.max-save-post-size-bytes=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.max-save-post-size-bytes=value`
 
 | URI Encoding
 | The character set used to decode the request URIs received.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.uri-encoding=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.uri-encoding=value`
 
 | Compression
 | Whether to enable HTTP/1.1 GZIP compression to save server bandwidth. Will be ignored when HTTP/2 is used.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compression=[off/on/force]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compression=[off/on/force]`
 
 | Compression Level
 a| The level of compression to be used:
@@ -489,81 +494,81 @@ a| The level of compression to be used:
 * `0` is no compression
 * `1` is the best speed
 * `9` is the best compression
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compression-level=[-1-9]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compression-level=[-1-9]`
 
 | Compression Strategy
 | Sets the strategy to be used during HTTP compression.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compression-strategy=[Default/Filtered/Huffman Only]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compression-strategy=[Default/Filtered/Huffman Only]`
 
 | Compressible Mime Types
 | Comma separated list of MIME types for which HTTP compression is used.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compressable-mime-type=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compressable-mime-type=value`
 
 | Compression Minimum Size
 | The minimum size of a file that determines whether compression is applied.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compression-min-size-bytes=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.compression-min-size-bytes=value`
 
 | No-Compression User Agents
 | Comma separated list of regular expressions matching user agents for which compression should not be used.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.no-compression-user-agents=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.no-compression-user-agents=value`
 
 | Restricted User Agents
 | List of restricted user agents for which HTTP compression is applied.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.restricted-user-agents=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.restricted-user-agents=value`
 
 | Default Response Type
 | The default response type if none are matched. Specified as a semicolon delimited string consisting of content type, encoding, language, charset.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.default-response-type=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.default-response-type=value`
 
 | Adapter
 | The class name of the static resources adapter.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.adapter=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.adapter=value`
 
 | Comet Support
 | Whether comet support is enabled or not.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.comet-support-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.comet-support-enabled=[true\|false]`
 
 | DNS Lookup
 | Enables Domain Name System lookups.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.dns-lookup-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.dns-lookup-enabled=[true\|false]`
 
 | Trace Enabled
 a| Enables the TRACE operation
 
 TIP: Setting this to false helps prevent cross-site scripting attacks.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.trace-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.trace-enabled=[true\|false]`
 
 | Auth Pass Through
 | Enable this if the network listener receives traffic from an SSL terminating proxy server.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.auth-pass-through-enabled=[`true`\|`false`]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.auth-pass-through-enabled=[`true`\|`false`]`
 
 | Chunking Enabled
 | Enables HTTP response chunking.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.chunking-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.chunking-enabled=[true\|false]`
 
 | XFrame Options
-| When enabled, the `X-Frame-Options` header will be set to `SAMEORIGIN`. This can still be overridden by a deployed application.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.xframe-options=[true\|false]`
+a| When enabled, the `X-Frame-Options` header will be set to `SAMEORIGIN`. This can still be overridden by a deployed application.
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.xframe-options=[true\|false]`
 
 | Encoded Slash
-| Allow encoded slashes (e.g. `%2F`) in URIs.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.encoded-slash-enabled=[true\|false]`
+a| Allow encoded slashes (e.g. `%2F`) in URIs.
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.encoded-slash-enabled=[true\|false]`
 
 | Websockets Support Enabled
 | Allows Websockets to be used.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.websockets-support-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.websockets-support-enabled=[true\|false]`
 
 | Scheme Mapping
 | HTTP header name used for identifying the originating protocol of an HTTP request.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.scheme-mapping=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.scheme-mapping=value`
 
 | Remote User Mapping
 | HTTP header name used for identifying the originating user of an HTTP request.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.remote-user-mapping=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.remote-user-mapping=value`
 
 | Enable Cookie SameSite
 | Enabling to set all cookies to use the SameSite value.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.cookie-same-site-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.cookie-same-site-enabled=[true\|false]`
 
 | Cookie SameSite Value
 a| The values to be used:
@@ -583,69 +588,69 @@ Set this attribute by using the `cookie-properties` tag with a child property na
     </cookie-properties>
 </payara-web-app>
 ----
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.cookie-same-site-value=[`Lax`\|`Strict`\|`None`]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.cookie-same-site-value=[`Lax`\|`Strict`\|`None`]`
 
 |===
 
 .HTTP/2 Settings
 [header, cols="2,6,8"]
 |===
-| configuration settings  | Description | Asadmin Command
+| Configuration settings  | Description | Asadmin Command
 
 | HTTP/2 Enabled
 a| Whether to enable HTTP/2 support.
 
 IMPORTANT: HTTP/2 support can only be enabled on a secure network listener
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-enabled=[true\|false]`
 
 | Disable HTTP/2 Cipher Check
 | Whether TLS connections can be established using insecure cipher suites.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-disable-cipher-check=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-disable-cipher-check=[true\|false]`
 
 | HTTP/2 Max Concurrent Streams
 | The number of maximum concurrent streams allowed per HTTP/2 connection.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-max-concurrent-streams=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-max-concurrent-streams=value`
 
 | HTTP/2 Initial Window Size
 | The initial window size in bytes.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-initial-window-size-in-bytes=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-initial-window-size-in-bytes=value`
 
 | HTTP/2 Max Frame Payload Size
 | The maximum size of the HTTP/2 frame payload to be accepted.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-max-frame-payload-size-in-bytes=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-max-frame-payload-size-in-bytes=value`
 
 | HTTP/2 Max Header List Size
 | The maximum size, in bytes, of the header list.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-max-header-list-size-in-bytes=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-max-header-list-size-in-bytes=value`
 
 | Streams High Watermark
 | The maximum number of streams that are allowed. Excess streams will be cleaned out periodically in proportion to the maximum number of streams.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-streams-high-water-mark=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-streams-high-water-mark=value`
 
 | Streams Clean Percentage
 a| The number of streams to process when the high watermark is exceeded.
 
 NOTE: Only closed streams will be removed.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-clean-percentage=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-clean-percentage=value`
 
 | Streams Clean Frequency Check
 | The number of streams that must be closed before checking if the number of streams exceeds the high watermark.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-clean-frequency-check=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-clean-frequency-check=value`
 
 | HTTP/2 Push
 | Enables server push. This is enabled by default.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-push-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.http.http2-push-enabled=[true\|false]`
 
 |===
 
 .HTTP/2 Settings
 [header, cols="2,6,8"]
 |===
-| configuration settings  | Description | Asadmin Command
+| Configuration settings  | Description | Asadmin Command
 
 | TLS V1.2 Enabled
 | Whether to enable TLS V1.2 or not. Will be ignored if TLS is disabled.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.tls12-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.tls12-enabled=[true\|false]`
 
 | TLS V1.3 Enabled
 a| Whether to enable TLS V1.3 or not. Will be ignored if TLS is disabled.
@@ -654,43 +659,43 @@ NOTE: Support for TLS 1.3 is available with JDK 8 versions after JDK 1.8.0u261, 
 OpenJSEE is a JSEE provider created by Azul to support TLS 1.3 on JDK 8. See TLS 1.3 Support in Zulu 8 with OpenJSSE for more information. Also note that this flag can cause problems with the HTTP/2 support. If you’re using a lower version than 1.8.0u222, checkbox to enable TLS 1.3 will not be visible on the web administration console.
 
 IMPORTANT: You will need to add the following Java Option: -Dfish.payara.clientHttpsProtocol=TLSv1.3 to the asadmin script for TLS 1.3 to work with asadmin CLI. This sets the TLS version to 1.3 which will be used by the asadmin client.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.tls13-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.tls13-enabled=[true\|false]`
 
 | Client Authentication
 | When enabled, clients will be required to authenticate themselves to the server.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.client-auth-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.client-auth-enabled=[true\|false]`
 
 | Certificate Nickname
 | The alias of the certificate to be supplied on secure requests. The certificate should be present in the server keystore.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.cert-nickname=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.cert-nickname=value`
 
 | Key Store
 | The name of the keystore file used to secure communication handled by this network listener.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.key-store=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.key-store=value`
 
 | Trust Store
 | The name of the trust store file where trusted certificates are stored.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.trust-store=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.trust-store=value`
 
 | Trust Algorithm
 | The name of the trust management algorithm (e.g. PKIX) to use for certification path validation.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.trust-algorithm=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.trust-algorithm=value`
 
 | Max Certificate Length
 | Maximum number of non self-issued intermediate certificates that can exist in a certification path. Only used if the trust algorithm is set to PKIX.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.trust-max-cert-length=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.trust-max-cert-length=value`
 
 | Enabled Ciphers
-| A list of the server enabled ciphers. This string is stores as a comma separated list of the enabled ciphers with a `+` or a `-` at the start of each, depending on whether the cipher is enabled or disabled. E.g. `+TLS_RSA_WITH_AES_256_CBC_SHA,+SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.ssl3-tls-ciphers=value`
+a| A list of the server enabled ciphers. This string is stores as a comma separated list of the enabled ciphers with a `+` or a `-` at the start of each, depending on whether the cipher is enabled or disabled. E.g. `+TLS_RSA_WITH_AES_256_CBC_SHA,+SSL_RSA_WITH_3DES_EDE_CBC_SHA`.
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.ssl3-tls-ciphers=value`
 
 | Handshake Timeout
 | The timeout, in milliseconds, for a handshake. After this timeout the handshake will be aborted.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.handshake-timeout-millis=value`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.handshake-timeout-millis=value`
 
 | TLS Rollback
 | Whether TLS rollback is enabled or not.
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.tls-rollback-enabled=[true\|false]`
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.tls-rollback-enabled=[true\|false]`
 
 | HSTS Enabled
 a| Whether HSTS is enabled. When enabled, the server will respond to requests with the `Strict-Transport-Security` header. While these requests often return a 301 directing the client to the secure site, this header instructs the requester to make all connections to this site secure for the next year.
@@ -711,12 +716,12 @@ a| `set configs.config.server-config.network-config.protocols.protocol.$+{protoc
 NOTE: When the configuration value is set to true, the HSTS header is added with a max-age property value of 31536000. The max-age property is not configurable.
 
 | HSTS Subdomains
-| When enabled in combination with HSTS, `Strict-Transport-Security` headers will include the includeSubDomains attribute. When this is configured, the client will also assume subdomains of the targeted resource require secure connections. The subdomains property is not enabled by default and has to be enabled with the following command:
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.hsts-sub-domains=[true\|false]`
+a| When enabled in combination with HSTS, `Strict-Transport-Security` headers will include the includeSubDomains attribute. When this is configured, the client will also assume subdomains of the targeted resource require secure connections. The subdomains property is not enabled by default and has to be enabled with the following command:
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.hsts-sub-domains=[true\|false]`
 
 | HSTS Preload
-| When enabled in combination with HSTS, `Strict-Transport-Security` headers will include the `preload` attribute. When this is configured, the domain of the target resource will be added to the browser `preload` list, meaning that initial requests to this resource in future won’t be insecure. The `preload` property is not enabled by default and has to be enabled with the following command:
-| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.hsts-preload=[true\|false]`
+a| When enabled in combination with HSTS, `Strict-Transport-Security` headers will include the `preload` attribute. When this is configured, the domain of the target resource will be added to the browser `preload` list, meaning that initial requests to this resource in future won’t be insecure. The `preload` property is not enabled by default and has to be enabled with the following command:
+a| `set configs.config.server-config.network-config.protocols.protocol.$+{protocol-name}+.ssl.hsts-preload=[true\|false]`
 
 |===
 
@@ -728,7 +733,7 @@ Use the `create-protocol` subcommand in remote mode to create a protocol.
 . Ensure that the server is running.
 +
 Remote subcommands require a running server.
-. Create a protocol by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-protocol.adoc[`create-protocol`]
+. Create a protocol by using the xref:technical-documentation/payara-server-documentation/command-reference/create-protocol.adoc[`create-protocol`]
 +
 Information about options and properties for the subcommand are included in this help page.
 
@@ -960,15 +965,15 @@ The following fields can be configured:
 .Virtual Server Configuration
 [header, cols="2,6,8"]
 |===
-| configuration settings  | Description | Asadmin Command
+| Configuration settings  | Description | Asadmin Command
 
 | ID
 | The unique ID for the virtual server. The only field which cannot be altered from the admin console. The ID cannot begin with a number.
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.id=value`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.id=value`
 
 | Hosts
 | A comma separated list of values allowed in the host request header to select this virtual server. Each virtual server with the same connection group must have a unique host for that group.
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.hosts=value,value2`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.hosts=value,value2`
 
 | State
 a| The enabled state of the virtual server. There are 3 options for this property:
@@ -976,8 +981,7 @@ a| The enabled state of the virtual server. There are 3 options for this propert
 - *On* -> This means that the virtual server is active and will be ready to serve requests.
 - *Off* -> This means that the virtual server is inactive, and will return a 404 error for all requests made through it. This will look from the outside as if no applications are deployed to this server.
 - *Disabled* -> This means that the virtual server is inactive, and will return a 403 error for all requests made through it. This will look from the outside as if the server is intentionally down for maintenance.
-
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.state=on/off/disabled`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.state=on/off/disabled`
 
 | SSO
 a| Allows multiple web applications deployed to the same virtual server to share the user authentication state. This would mean that signing in to one application would implicitly sign you into all others.
@@ -987,43 +991,41 @@ There are 3 options for this property:
 - *True* (enabled) -> This enables SSO for applications on the same virtual server.
 - *False* (disabled) -> This disables SSO for applications on the same virtual server.
 - *Inherit* (controlled by HTTP service) -> This will inherit from the value specified in the *HTTP Service*.
-
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.sso-enabled=true/false/inherit`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.sso-enabled=true/false/inherit`
 
 | SSO Cookie Http Only
-| Determines whether to add the `HttpOnly` flag to the `JSESSIONIDSSO` cookie. In practice, this disallows JavaScript access to the cookie in the browser.
+a| Determines whether to add the `HttpOnly` flag to the `JSESSIONIDSSO` cookie. In practice, this disallows JavaScript access to the cookie in the browser.
 
 This prevents malicious XSS attacks hijacking a Java session. It is enabled by default.
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.sso-cookie-http-only=true/false`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.sso-cookie-http-only=true/false`
 
 | Session Cookie Http Only
-| Determines whether to add the `HttpOnly` flag to the `JSESSIONID` cookie. In practice, this disallows JavaScript access to the cookie in the browser.
+a| Determines whether to add the `HttpOnly` flag to the `JSESSIONID` cookie. In practice, this disallows JavaScript access to the cookie in the browser.
 
 This prevents malicious XSS attacks hijacking a Java session. It is enabled by default.
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.session-cookie-http-only=true/false`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.session-cookie-http-only=true/false`
 
 | Session Cookie Secure
-| Determines whether to add the `Secure` flag to the `JSESSIONID` cookie. In practice, this specifies that the cookie may only be transmitted using HTTPS connections.
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.session-cookie-secure=true/false/dynamic`
+a| Determines whether to add the `Secure` flag to the `JSESSIONID` cookie. In practice, this specifies that the cookie may only be transmitted using HTTPS connections.
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.session-cookie-secure=true/false/dynamic`
 
 | Network Listeners
 | Comma separated list of network listeners which applications deployed to this virtual server are available on.
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.network-listeners=listener-1,listener-2`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.network-listeners=listener-1,listener-2`
 
 | Default Web Module
-| This defines which application deployed to this virtual server will be requested if no modules are resolved in the request. For example if `app1` and `app2` have context roots of `/app1` and `/app2` respectively, `app1` will be returned when the user requests `/`.
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.default-web-module=app1`
+a| This defines which application deployed to this virtual server will be requested if no modules are resolved in the request. For example if `app1` and `app2` have context roots of `/app1` and `/app2` respectively, `app1` will be returned when the user requests `/`.
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.default-web-module=app1`
 
 | Log File
 | This defines a file where log messages coming from this virtual server are redirected to. This allows you to separate application logs from server logs.
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.log-file=/dir/to/logs/file.log`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.log-file=/dir/to/logs/file.log`
 
 | Docroot
-| This defines the directory used as the document root for this virtual server. A document root is a directory where static files can be placed and served from.
+a| This defines the directory used as the document root for this virtual server. A document root is a directory where static files can be placed and served from.
 
 For example, if you have a web application deployed to `http://localhost:8080/app1` and the corresponding virtual server has a docroot value of `/opt/server/docs`, then requesting `http://localhost:8080/app1/img.jpg` will fetch the file at `/opt/server/docs/img.jpg`.
-
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.docroot=/dir/to/docs/`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.docroot=/dir/to/docs/`
 
 | Access Logging
 a| Enables access logging for this virtual server. Access logging logs all requests made to that virtual server.
@@ -1036,12 +1038,12 @@ virtual server.
 same virtual server.
 - *Inherit* (controlled by HTTP service) -> This will inherit from the value
 specified in the *HTTP Service*.
-
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.access-logging=true/false/inherit`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.access-logging=true/false/inherit`
 
 | Access Log Directory
 | Defines the directory used for access logs.
-| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.access-log=/dir/to/logs`
+a| `set configs.config.server-config.http-service.virtual-server.$+{virtual-server-name}+.access-log=/dir/to/logs`
+
 |===
 
 [#additional-properties]
@@ -1052,11 +1054,21 @@ Defines additional properties for the configuration of a virtual server.
 [cols="20,70,10",options="header",]
 |===
 | Key                         | Description | Default Value
-| *sso-max-inactive-seconds*  | The number of seconds of no activity after which a user's SSO record becomes eligible for purging.
+
+| *sso-max-inactive-seconds*
+| The number of seconds of no activity after which a user's SSO record becomes eligible for purging.
 | `300`
-| *sso-reap-interval-seconds* | The number of seconds between purges of SSO records. | `60`
-| *setCacheControl*           | Comma separated list of Cache-Control response directives (See section 14.9 of: https://www.ietf.org/rfc/rfc2616.txt). | none
-| *allowLinking*             a| If set to `true`, resources that are symbolic links will be served for all applications deployed to this virtual server.
+
+| *sso-reap-interval-seconds*
+| The number of seconds between purges of SSO records.
+| `60`
+
+| *setCacheControl*
+| Comma separated list of Cache-Control response directives (See section 14.9 of: https://www.ietf.org/rfc/rfc2616.txt).
+| none
+
+| *allowLinking*
+a| If set to `true`, resources that are symbolic links will be served for all applications deployed to this virtual server.
 
 Can be overridden for an individual application in the `glassfish-web.xml`/`payara-web.xml` deployment descriptor with:
 
@@ -1072,36 +1084,79 @@ It is recommended to use payara-web.xml instead.
 
 NOTE: Setting this property to `true` on Windows systems exposes JSP source code.
 | false
-| *accessLogWriteInterval*    | The number of seconds between each time the log is written to disk. The access log is written when the buffer is full or when the interval expires. If the value is 0, the buffer is always written even if it's not full. | 300
-| *accessLogBufferSize*       | The size, in bytes, of the buffer where access log calls are stored. | 32768
-| *allowRemoteAddress*        | Comma separated list of regular expression patterns to which the remote client's IP address is compared. The IP must match one of the patterns to be accepted. | none
-| *denyRemoteAddress*         | Comma separated list of regular expression patterns to which the remote client's IP address is compared. The IP must not match any of the patterns to be accepted. | none
-| *allowRemoteHost*           | Comma separated list of regular expression patterns to which the remote client's host name is compared. The host name must match one of the patterns to be accepted. | none
-| *denyRemoteHost*            | Comma separated list of regular expression patterns to which the remote client's host name is compared. The host name must not match any of the patterns to be accepted. | none
-| *authRealm*                 | Specifies the name attribute of a security realm, which overrides the server's default realm for standalone web applications deployed to this virtual server. Can be overridden for an individual application with a realm defined in the web.xml. | none
-| *securePagesWithPragma*     | Set this property to `false` to ensure that for all web applications on this server file downloads using SSL work properly in Internet Explorer. | true
-| *contextXmlDefault*         | Sets the directory of the `context.xml` used for this virtual server, if one is used. | none
-| *alternatedocroot_n*        | Specifies an alternate document root, where n is a positive integer that allows specification of more than one. | none
-| *send-error_n*             a| Specifies custom error page mappings for the virtual server, which are inherited by all web applications deployed on the virtual server, unless overridden in the web.xml. The value is a string, composed of three values:
+
+| *accessLogWriteInterval*
+| The number of seconds between each time the log is written to disk. The access log is written when the buffer is full or when the interval expires. If the value is 0, the buffer is always written even if it's not full.
+| 300
+
+| *accessLogBufferSize*
+| The size, in bytes, of the buffer where access log calls are stored.
+| 32768
+
+| *allowRemoteAddress*
+| Comma separated list of regular expression patterns to which the remote client's IP address is compared. The IP must match one of the patterns to be accepted.
+| none
+
+| *denyRemoteAddress*
+| Comma separated list of regular expression patterns to which the remote client's IP address is compared. The IP must not match any of the patterns to be accepted.
+| none
+
+| *allowRemoteHost*
+| Comma separated list of regular expression patterns to which the remote client's host name is compared. The host name must match one of the patterns to be accepted.
+| none
+
+| *denyRemoteHost*
+| Comma separated list of regular expression patterns to which the remote client's host name is compared. The host name must not match any of the patterns to be accepted.
+| none
+
+| *authRealm*
+| Specifies the name attribute of a security realm, which overrides the server's default realm for standalone web applications deployed to this virtual server. Can be overridden for an individual application with a realm defined in the web.xml.
+| none
+
+| *securePagesWithPragma*
+a| Set this property to `false` to ensure that for all web applications on this server file downloads using SSL work properly in Internet Explorer.
+| true
+
+| *contextXmlDefault*
+a| Sets the directory of the `context.xml` used for this virtual server, if one is used.
+| none
+
+| *alternatedocroot_n*
+| Specifies an alternate document root, where n is a positive integer that allows specification of more than one.
+| none
+
+| *send-error_n*
+a| Specifies custom error page mappings for the virtual server, which are inherited by all web applications deployed on the virtual server, unless overridden in the web.xml. The value is a string, composed of three values:
 
 - code -> The HTTP response status code for the custom error page.
 - path -> The path of the file to be returned, relative to the `/config` directory.
 - reason (optional) -> The text of the reason string.
 
 E.g. `send-error_1="code=404 path=/dir/of/file/error.html reason=UNAUTHORIZED"`.
-
 | none
-| *redirect_n*               a| Specifies a redirect from an old url to a new one. The value is a string, composed of two values:
+
+| *redirect_n*
+a| Specifies a redirect from an old url to a new one. The value is a string, composed of two values:
 
 - `from` -> The prefix of the requested URI to match.
 - `url-prefix` -> The prefix of the new URI to return to the client. The *from* prefix is replaced by this value.
 
 E.g. `redirect_1="from=/fake url-prefix=http://another"`.
 | none
-| *listener_n*                | Specifies the fully qualified class name of a custom Catalina listener, where n is a positive integer that allows the specification of more than one. The listener class must implement the *`org.apache.catalina.ContainerListener`* or *`org.apache.catalina.LifecycleListener`* interface. | none
 
-| *errorReportValve*          | Specifies the fully qualified class name of a custom valve that produces default error pages for applications on this virtual server. Specify an empty string to disable the default error page mechanism for this virtual server. | *`org.apache.catalina.valves.ErrorReportValve`*
-| *cacheTTL*                  | Specifies the time to live (TTL), expressed in milliseconds, for the virtual server cache used to serve files. | 5000
+| *listener_n*
+a| Specifies the fully qualified class name of a custom Catalina listener, where n is a positive integer that allows the specification of more than one. The listener class must implement the *`org.apache.catalina.ContainerListener`* or *`org.apache.catalina.LifecycleListener`* interface.
+| none
+
+| *errorReportValve*
+| Specifies the fully qualified class name of a custom valve that produces default error pages for applications on this virtual server. Specify an empty string to disable the default error page mechanism for this virtual server.
+
+a| *`org.apache.catalina.valves.ErrorReportValve`*
+
+| *cacheTTL*
+| Specifies the time to live (TTL), expressed in milliseconds, for the virtual server cache used to serve files.
+| 5000
+
 |===
 
 [#create-a-virtual-server]
@@ -1287,13 +1342,13 @@ By default, The following characters are stipulated to be dangerous to parse in 
 |Character |Representation
 
 |NUL character
-|This character is expressed in the following forms on a literal value: `\0  \x00` https://en.wikipedia.org/wiki/Null_character[review explanation here^]
+a|This character is expressed in the following forms on a literal value: `\0  \x00` https://en.wikipedia.org/wiki/Null_character[review explanation here^]
 
 |LF Character (new line)
-|This character is expressed in the following forms on a literal value: `\n \x0A` https://en.wikipedia.org/wiki/Newline[review explanation here^]
+a|This character is expressed in the following forms on a literal value: `\n \x0A` https://en.wikipedia.org/wiki/Newline[review explanation here^]
 
 |CR Character (carriage return)
-|This character is expressed in the following forms on a literal value: `\r \x0D` https://en.wikipedia.org/wiki/Carriage_return[review explanation here^]
+a|This character is expressed in the following forms on a literal value: `\r \x0D` https://en.wikipedia.org/wiki/Carriage_return[review explanation here^]
 
 |===
 
@@ -1308,14 +1363,14 @@ In some cases, to support backwards compatibility it might be necessary to allow
 |Property |Description
 
 a|[.breakable]`org.glassfish.grizzly.http.STRICT_HEADER_NAME_VALIDATION_RFC_9110`
-|This property enables the validation of all header field names on incoming HTTP requests to prevent any usage of invalid characters on it.
+a|This property enables the validation of all header field names on incoming HTTP requests to prevent any usage of invalid characters on it.
 
 When set to `true`, the presence of these characters will trigger the server to invalidate the request with a `400 - Bad Request` response.
 
 The default value is `true`.
 
 a|[.breakable]`org.glassfish.grizzly.http.STRICT_HEADER_VALUE_VALIDATION_RFC_9110`
-|This property enables the validation of all header field values on incoming HTTP requests to prevent any usage of invalid characters on it.
+a|This property enables the validation of all header field values on incoming HTTP requests to prevent any usage of invalid characters on it.
 
 When set to `true`, the presence of these characters will trigger the server to invalidate the request with a `400 - Bad Request` response.
 

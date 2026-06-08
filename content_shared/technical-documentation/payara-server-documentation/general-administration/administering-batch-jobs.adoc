@@ -27,7 +27,7 @@ Use the `list-batch-jobs` subcommand in remote mode to list batch jobs and job d
 
 . Ensure that the server is running. +
 Remote subcommands require a running server.
-. List batch jobs by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-jdbc-resources.adoc[list-batch-jobs] subcommand.
+. List batch jobs by using the xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-resources.adoc[list-batch-jobs] subcommand.
 
 [#example-list-batch-jobs]
 ==== To List Batch Jobs
@@ -52,7 +52,7 @@ When the batch runtime executes a job, the execution is given a unique execution
 Use the `list-batch-job-executions` subcommand in remote mode to list batch job executions and execution details.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List batch job executions by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-batch-job-executions.adoc[list-batch-job-executions] subcommand.
+. List batch job executions by using the xref:technical-documentation/payara-server-documentation/command-reference/list-batch-job-executions.adoc[list-batch-job-executions] subcommand.
 
 [#example-list-batch-job-executions]
 ==== To List Batch Jobs Executions
@@ -122,7 +122,7 @@ For more information about data sources, see xref:administering-database-connect
 Use the `list-batch-runtime-configuration` subcommand in remote mode to display the configuration of the batch runtime.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Display the configuration of the batch runtime by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-batch-runtime-configuration.adoc[list-batch-runtime-configuration] subcommand.
+. Display the configuration of the batch runtime by using the xref:technical-documentation/payara-server-documentation/command-reference/list-batch-runtime-configuration.adoc[list-batch-runtime-configuration] subcommand.
 . If desired, use the `get` subcommand to view the attributes of the data source and managed executor service resources. For example (output omitted): +
 
 [source,shell]
@@ -159,7 +159,7 @@ submitted to the batch runtime without affecting execution of the job.
 
 .  Ensure that the server is running. +
 Remote subcommands require a running server.
-.  Configure the batch runtime by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/set-batch-runtime-configuration.adoc[set-batch-runtime-configuration] subcommand.
+.  Configure the batch runtime by using the xref:technical-documentation/payara-server-documentation/command-reference/set-batch-runtime-configuration.adoc[set-batch-runtime-configuration] subcommand.
 
 [#example-set-batch-runtime-configuration]
 ==== To Set Batch Runtime Configuration
@@ -299,6 +299,7 @@ For MySQL (5/8) database use, it is recommended the following additional propert
 |Name |Value |Description
 |`zeroDateTimeBehavior` |`convertToNull` |
 Action for `DATETIME` values that are composed entirely of zeros (used by MySQL to represent invalid dates)
+
 |=====
 
 IMPORTANT: Depending on the version of MySQL you may also need to set the server property `sql_mode` to blank as JBatch uses `null` and zero dates.

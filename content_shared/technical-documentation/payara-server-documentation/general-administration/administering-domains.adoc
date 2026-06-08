@@ -86,8 +86,8 @@ You are required to specify an administrative user when you create a domain, or 
 `admin` with no password.
 
 . Select a name for the domain that you are creating. +
-You can verify that a name is not already in use by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand
-. Create a domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`] subcommand. +
+You can verify that a name is not already in use by using the xref:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand
+. Create a domain by using the xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`] subcommand. +
 Information about the options for this subcommand is included in this help page.
 . Type an admin user name and password for the domain. +
 To avoid setting up an admin login, you can accept the default `admin`, with no password. Pressing Return also selects the default.
@@ -160,9 +160,9 @@ Each token is identified as `token-name` where token-name is one of the followin
 * *`SERVER_ID`*: Represents the name of the DAS for the domain that is being created. This token is replaced with the string `server`. +
 . Create the domain that you want to be based on a custom template. +
 In the command to create the domain, pass the name of file that you edited in the previous step as the `--template` option of the
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`] subcommand.
+xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`] subcommand.
 . Before starting the domain, verify that the domain's `domain.xml` file is valid. +
-Use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/verify-domain-xml.adoc[`verify-domain-xml`] subcommand for this purpose. +
+Use the xref:technical-documentation/payara-server-documentation/command-reference/verify-domain-xml.adoc[`verify-domain-xml`] subcommand for this purpose. +
 Information about the options for this subcommand is included in the subcommand's help page.
 
 TIP: For information about how these tokens are used in the default template, examine the `as-install/lib/templates/domain.xml` file.
@@ -170,8 +170,8 @@ TIP: For information about how these tokens are used in the default template, ex
 *See Also*
 
 * xref:administering-domains.adoc#to-create-a-domain[`To Create a Domain`]
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`]
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/verify-domain-xml.adoc[`verify-domain-xml`]
+* xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`]
+* xref:technical-documentation/payara-server-documentation/command-reference/verify-domain-xml.adoc[`verify-domain-xml`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line.
 
@@ -186,7 +186,7 @@ domain-root-dir, the default for which is as-install`/domains`, is listed. If th
 
 To list domains that were created in other directories, specify the `--domaindir` option.
 
-List domains by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand.
+List domains by using the xref:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand.
 
 [#example-to-list-domains]
 ==== Example 3-2 Listing Domains
@@ -292,11 +292,11 @@ authorized to administer the domain can run this subcommand.
 
 A domain must be stopped before it can be deleted.
 
-. List domains by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand.
+. List domains by using the xref:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand.
 . If necessary, notify domain users that the domain is being deleted.
 . Ensure that the domain you want to delete is stopped. +
 If needed, see xref:administering-domains.adoc#to-stop-a-domain[To Stop a Domain].
-. Delete the domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-domain.adoc[`delete-domain`] subcommand.
+. Delete the domain by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-domain.adoc[`delete-domain`] subcommand.
 
 [#example-to-delete-a-domain]
 ==== Example 3-5 Deleting a Domain
@@ -326,7 +326,7 @@ If the domain directory is not specified, the domain in the default domain root 
 
 This subcommand is supported in local mode only.
 
-Start a domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`] subcommand.
+Start a domain by using the xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`] subcommand.
 
 [#example-to-start-a-domain]
 ==== Example 3-6 Starting a Domain
@@ -356,11 +356,11 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Stopping a domain or server shuts down its domain administration server (DAS). When stopping a domain, the DAS stops accepting new connections
 and then waits for all outstanding connections to complete. This shutdown process takes a few seconds. While the domain is stopped, the
 Administration Console and most of the `asadmin` subcommands cannot be used. This subcommand is particularly useful in stopping a runaway
-server. For more controlled situations, you can use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc[`restart-domain`] subcommand.
+server. For more controlled situations, you can use the xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc[`restart-domain`] subcommand.
 
 
 . If necessary, notify users that you are going to stop the domain.
-. Stop the domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`] subcommand.
+. Stop the domain by using the xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`] subcommand.
 
 [#example-to-stop-a-domain]
 ==== Example 3-7 Stopping a Domain (or Server)
@@ -386,12 +386,12 @@ seconds. Until the domain has restarted, the Administration Console and most of 
 This subcommand is particularly useful for environments where the server machine is secured and difficult to get to. With the right credentials,
 you can restart the server from a remote location as well as from the same machine.
 
-If the server will not restart, use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`]
-subcommand followed by the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`] subcommand.
+If the server will not restart, use the xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`]
+subcommand followed by the xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`] subcommand.
 
 . Ensure that the server is running. +
 Remote subcommands require a running server.
-. Restart the domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc[`restart-domain`] subcommand.
+. Restart the domain by using the xref:technical-documentation/payara-server-documentation/command-reference/restart-domain.adoc[`restart-domain`] subcommand.
 
 [#example-to-restart-a-domain]
 ==== Example 3-8 Restarting a Domain (or Server)
@@ -438,7 +438,7 @@ stop, uninstall, or install the service. To administer the service from the Wind
 
 This subcommand must be run as the OS-level administrator user.
 
-. Create the service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-service.adoc[`create-service`] subcommand.
+. Create the service by using the xref:technical-documentation/payara-server-documentation/command-reference/create-service.adoc[`create-service`] subcommand.
 . After the service is created, start the service by using the Windows Services Manager or the Windows Services Wrapper. +
 For example, to start the service for the default domain by using the `sc.exe` tool, type:
 +
@@ -520,7 +520,7 @@ to delete the initialization script and the link to the script that the `create-
 
 The `create-service` subcommand must be run as the OS-level root user.
 
-Create the service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-service.adoc[`create-service`] subcommand.
+Create the service by using the xref:technical-documentation/payara-server-documentation/command-reference/create-service.adoc[`create-service`] subcommand.
 
 [#example-to-configure-a-das-or-an-instance-for-automatic-restart-on-linux]
 ==== Example 3-12 Creating a Service to Restart a DAS Automatically on Linux
@@ -574,7 +574,7 @@ http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN1auths-1[`auths`^] mu
 
 If a particular Payara Server domain or instance should not have default user privileges, modify the manifest of the service and reimport the service.
 
-. Create the service by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-service.adoc[`create-service`] subcommand.
+. Create the service by using the xref:technical-documentation/payara-server-documentation/command-reference/create-service.adoc[`create-service`] subcommand.
 . After the service is created, enable the service by using the `svacdm enable` command. +
 For example, to enable the SMF service for the default domain, type:
 +
@@ -630,7 +630,7 @@ prevent the service from shutting down when a user logs out, you must set the `-
 
 . Ensure that the DAS is running.
 . Set the `-Xrs` Java VM option for the DAS. +
-Use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc[`create-jvm-options`] subcommand for this purpose.
+Use the xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc[`create-jvm-options`] subcommand for this purpose.
 +
 [source,shell]
 ----
@@ -671,7 +671,7 @@ The `backup-domain` subcommand provides several options to meet particular needs
 
 . Ensure that the domain is stopped . +
 The `backup-domain` subcommand operates only when the domain is stopped.
-. Back up the domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/backup-domain.adoc[`backup-domain`] subcommand.
+. Back up the domain by using the xref:technical-documentation/payara-server-documentation/command-reference/backup-domain.adoc[`backup-domain`] subcommand.
 . Restore the domain to its previous state, if necessary. +
 Start or resume the domain.
 
@@ -700,11 +700,11 @@ full backups and configuration-only backups. Automatic backup configurations are
 . If necessary, notify domain users that the domain is being restored from backup.
 . Ensure that the domain is stopped. +
 The `restore-domain` subcommand operates only when the domain is stopped. +
-To determine whether the domain is running, use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand, as described in
+To determine whether the domain is running, use the xref:technical-documentation/payara-server-documentation/command-reference/list-domains.adoc[`list-domains`] subcommand, as described in
 xref:administering-domains.adoc#to-list-domains[To List Domains]. +
-To stop the domain, use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`] subcommand
+To stop the domain, use the xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`] subcommand
 as described in xref:administering-domains.adoc#to-stop-a-domain[To Stop a Domain].
-. Restore backup files for a domain by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/restore-domain.adoc[`restore-domain`] subcommand.
+. Restore backup files for a domain by using the xref:technical-documentation/payara-server-documentation/command-reference/restore-domain.adoc[`restore-domain`] subcommand.
 . Verify that the restore has succeeded.
 . If necessary, notify users that the domain has been restored and is available.
 
@@ -764,7 +764,7 @@ running applications and catering to clients. The cluster is configured using th
 * A third host (`newdashost`) where the DAS needs to be re-created in a
 situation where the first host crashes or is being taken out of service.
 
-NOTE: You must maintain a backup of the DAS from the first host using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/backup-domain.adoc[`backup-domain`] subcommand as described in
+NOTE: You must maintain a backup of the DAS from the first host using the xref:technical-documentation/payara-server-documentation/command-reference/backup-domain.adoc[`backup-domain`] subcommand as described in
 xref:administering-domains.adoc#to-back-up-a-domain[To Back Up a Domain]. You can automatically maintain a
 backup of the DAS using the automatic backups feature of Payara Server.
 
@@ -789,7 +789,7 @@ This example assumes that backups are stored in a network-accessible location. I
 from offline storage to a directory on `newdashost`. +
 You can backup any domain. However, while re-creating the domain, the domain name should be same as the original.
 . Stop the domain on `olddashost`, if it is running.
-. Start the domain on `newdashost` by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`] subcommand. +
+. Start the domain on `newdashost` by using the xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`] subcommand. +
 For example:
 +
 [source,shell]
@@ -834,7 +834,7 @@ Use the `uptime` subcommand in remote mode to display the length of time that th
 
 . Ensure that the server is running. +
 Remote subcommands require a running server.
-. Display uptime by using the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/uptime.adoc[`uptime`] subcommand.
+. Display uptime by using the xref:technical-documentation/payara-server-documentation/command-reference/uptime.adoc[`uptime`] subcommand.
 
 [#example-to-display-domain-uptime]
 ==== Example 3-17 Displaying the DAS Uptime
@@ -885,13 +885,13 @@ as-install/bin/asadmin set "server.java-config.java-home=path-to-java-home"
 Use the `set` subcommand in remote mode to change the administration port of a domain.
 
 The HTTP port or the HTTPS port for administration of a domain is defined by the `--adminport` option of the
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`] subcommand when the domain is created.
+xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`] subcommand when the domain is created.
 If this port must be reallocated for another purpose, change the port on which the DAS listens for administration requests.
 
 . Ensure that the server is running. +
 Remote subcommands require a running server.
 . Set the port number to its new value. +
-Use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand for this purpose.
+Use the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand for this purpose.
 +
 [source,shell]
 ----
@@ -909,7 +909,7 @@ You must specify the old port number because the DAS is still listening for admi
 the command fails because the `stop-domain` subcommand attempts to contact the DAS through the new port number.
 +
 NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for controlling the
-behavior of the domain, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`] help page.
+behavior of the domain, see the xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`] help page.
 
 [source,shell]
 ----
@@ -921,7 +921,7 @@ $ asadmin --host host-name --port old-port-number stop-domain
 . Start the domain. +
 
 NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for controlling the
-behavior of the domain, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`] help page.
+behavior of the domain, see the xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`] help page.
 
 [source,shell]
 ----
@@ -955,10 +955,10 @@ Command start-domain executed successfully.
 
 *See Also*
 
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`]
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`]
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`]
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`]
+* xref:technical-documentation/payara-server-documentation/command-reference/create-domain.adoc[`create-domain`]
+* xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`]
+* xref:technical-documentation/payara-server-documentation/command-reference/start-domain.adoc[`start-domain`]
+* xref:technical-documentation/payara-server-documentation/command-reference/stop-domain.adoc[`stop-domain`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 

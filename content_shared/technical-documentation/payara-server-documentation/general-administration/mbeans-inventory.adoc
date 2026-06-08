@@ -16,17 +16,18 @@ In JMX Monitoring logging set the value to `java.lang:type=ClassLoading` to moni
 |===
 | Attribute | Description | Comment
 
-| `loadedclass-count`
+a| `loadedclass-count`
 | Number of classes currently loaded in the Java virtual machine
 |
 
-| `totalloadedclass-count`
+a| `totalloadedclass-count`
 | Total number of classes that have been loaded since the Java virtual machine has started execution
 |
 
-| `unloadedclass-count`
+a| `unloadedclass-count`
 | Total number of classes unloaded since the Java virtual machine has started execution
 | Classes are only unloaded from Payara when the application they are in is un-deployed.
+
 |===
 
 [#compilation]
@@ -37,9 +38,10 @@ In JMX Monitoring logging set the value to `java.lang:type=Compilation` to monit
 |===
 | Attribute | Description | Comment
 
-| `totalcompilationtime-current`
+a| `totalcompilationtime-current`
 | Approximate accumulated elapsed time (in milliseconds) spent in compilation
 |
+
 |===
 
 [#garbage-collectors]
@@ -58,13 +60,14 @@ In JMX Monitoring logging set the value to `java.lang:type=GarbageCollector,name
 |===
 | Attribute | Description | Comment
 
-| `collectioncount-count`
+a| `collectioncount-count`
 | Total number of collections that have occurred
 | The number of times this garbage collector has been called since Payara Server was started
 
-| `collectiontime-count`
+a| `collectiontime-count`
 | Approximate accumulated collection elapsed time in milliseconds
 | How much time has been spent on garbage collection since Payara Server was started
+
 |===
 
 [#memory]
@@ -75,17 +78,18 @@ In JMX Monitoring logging set the value to `java.lang:type=Memory` to monitor th
 |===
 | Attribute | Description | Comment
 
-| `ObjectsPendingFinalization`
+a| `ObjectsPendingFinalization`
 | Approximate number of objects for which finalization is pending
 |
 
-| `UsedHeapSize`
+a| `UsedHeapSize`
 | Amount of used memory in bytes
 |
 
-| `UsedNonHeapSize`
+a| `UsedNonHeapSize`
 | Amount of used memory in bytes
 |
+
 |===
 
 [#runtime]
@@ -96,9 +100,10 @@ In JMX Monitoring logging set the value to `java.lang:type=Runtime` to monitor t
 |===
 | Attribute | Description | Comment
 
-| `uptime-count`
+a| `uptime-count`
 | Uptime of the Java virtual machine in milliseconds
 |
+
 |===
 
 [#thread-system]
@@ -109,37 +114,38 @@ In JMX Monitoring logging set the value to `java.lang:type=Threading` to monitor
 |===
 | Attribute | Description | Comment
 
-| `currentthreadcputime`
+a| `currentthreadcputime`
 | Returns the total CPU time for the current thread in nanoseconds
 |
 
-| `currentthreadusertime`
+a| `currentthreadusertime`
 | Returns the CPU time that the current thread has executed in user mode in nanoseconds
 |
 
-| `daemonthreadcount`
+a| `daemonthreadcount`
 | Returns the current number of live daemon threads
 |
 
-| `deadlockedthreads`
+a| `deadlockedthreads`
 | Finds cycles of threads that are in deadlock waiting to acquire object monitors
 | Is either a list of deadlocked threads or the sentence "None of the threads are monitor deadlocked."
 
-| `monitordeadlockedthreads`
+a| `monitordeadlockedthreads`
 | Finds cycles of threads that are in deadlock waiting to acquire object monitors
 | Is either a list of deadlocked threads or the sentence "None of the threads are monitor deadlocked."
 
-| `peakthreadcount`
+a| `peakthreadcount`
 | Returns the peak live thread count since the Java virtual machine started or peak was reset
 |
 
-| `threadcount`
+a| `threadcount`
 | Returns the current number of live threads including both daemon and non-daemon threads
 |
 
-| `totalstartedthreadcount`
+a| `totalstartedthreadcount`
 | Returns the total number of threads created and also started since the Java virtual machine started
 |
+
 |===
 
 [#payara-platform-mbeans]
@@ -168,41 +174,42 @@ To monitor a specific network connection set the name value to be `network/name-
 |===
 | Attribute | Description | Comment
 
-| `peakqueued`
+a| `peakqueued`
 | Largest number of connections that were in the queue simultaneously
 |
 
-| `countoverflows`
+a| `countoverflows`
 | Number of times the queue has been too full to accommodate a connection
 |
 
-| `counttotalconnections`
+a| `counttotalconnections`
 | Total number of connections that have been accepted
 |
 
-| `countopenconnections`
+a| `countopenconnections`
 | The number of open/active connections
 |
 
-| `countqueued`
+a| `countqueued`
 | Number of connections currently in the queue
 |
 
-| `countqueued1minuteaverage`
+a| `countqueued1minuteaverage`
 | Average number of connections queued in the last 1 minute
 |
 
-| `countqueued5minutesaverage`
+a| `countqueued5minutesaverage`
 | Average number of connections queued in the last 5 minutes
 |
 
-| `countqueued15minutesaverage`
+a| `countqueued15minutesaverage`
 | Average number of connections queued in the last 15 minutes
 |
 
-| `counttotalqueued`
+a| `counttotalqueued`
 | Total number of connections that have been queued
 |
+
 |===
 
 [#connector-service]
@@ -216,29 +223,30 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=connector-servi
 |===
 | Attribute | Description | Comment
 
-| `activeworkcount`
+a| `activeworkcount`
 | Number of active work objects
 |
 
-| `workrequestwaittime`
+a| `workrequestwaittime`
 | Wait time of a work object before it gets executed
 |
 
-| `waitqueuelength`
+a| `waitqueuelength`
 | Number of work objects waiting in the queue for execution
 |
 
-| `rejectedworkcount`
+a| `rejectedworkcount`
 | Number of work objects rejected by the application server
 |
 
-| `submittedworkcount`
+a| `submittedworkcount`
 | Number of work objects submitted by a connector module for execution
 |
 
-| `completedworkcount`
+a| `completedworkcount`
 | Number of work objects completed execution
 |
+
 |===
 
 [#deployment]
@@ -252,13 +260,14 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=deployment-mon,
 |===
 | Attribute | Description | Comment
 
-| `activeapplicationsdeployedcount`
+a| `activeapplicationsdeployedcount`
 | Number of applications deployed
 |
 
-| `totalapplicationsdeployedcount`
+a| `totalapplicationsdeployedcount`
 | Total number of applications ever deployed
 | This does not persist across restarts
+
 |===
 
 [#ejb-security]
@@ -272,13 +281,14 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=ejb-security-mo
 |===
 | Attribute | Description | Comment
 
-| `policyconfigurationcount`
+a| `policyconfigurationcount`
 | Count of EJB policy configurations
 |
 
-| `securitymanagercount`
+a| `securitymanagercount`
 | Count of EJB security managers
 |
+
 |===
 
 [#thread-pool-executor]
@@ -292,37 +302,38 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=exec-pool-mon,n
 |===
 | Attribute | Description | Comment
 
-| `corenumthreads`
+a| `corenumthreads`
 | Core number of threads in the associated pool
 |
 
-| `maxnumthreads`
+a| `maxnumthreads`
 | Maximum number of threads in the associated pool
 |
 
-| `numthreads`
+a| `numthreads`
 | Current number of threads in the associated pool
 |
 
-| `activenumthreads`
+a| `activenumthreads`
 | Number of active threads in the associated pool
 |
 
-| `totaltaskscreated`
+a| `totaltaskscreated`
 | Number of tasks created in the associated pool
 |
 
-| `keepalivetime`
+a| `keepalivetime`
 | Keep-Alive time for threads in the associated pool
 |
 
-| `numtaskscompleted`
+a| `numtaskscompleted`
 | Number of tasks completed in the associated pool
 |
 
-| `largestnumthreads`
+a| `largestnumthreads`
 | Largest number of simultaneous threads in the associated pool
 |
+
 |===
 
 [#jdbc-connection-pool]
@@ -336,56 +347,58 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=jdbc-connection
 |===
 | Attribute | Description | Comment
 
-| `numconncreated`
+a| `numconncreated`
 | The number of physical connections that were created since the last reset
 |
 
-| `numconndestroyed`
+a| `numconndestroyed`
 | Number of physical connections that were destroyed since the last reset.
 |
 
-| `numconnfree`
+a| `numconnfree`
 | The total number of free connections in the pool as of the last sampling
 |
 
-| `numpotentialconnleak`
+a| `numpotentialconnleak`
 | Number of potential connection leaks
 |
 
-| `numconnfailedvalidation`
+a| `numconnfailedvalidation`
 | The total number of connections in the connection pool that failed validation from the start time until the last sample time
 |
-| `connrequestwaittime`
+
+a| `connrequestwaittime`
 | The longest and shortest wait times of connection requests. The current value indicates the wait time of the last request that was serviced by the pool.
 | Unit is milliseconds
 
-| `numconnacquired`
+a| `numconnacquired`
 | Number of logical connections acquired from the pool
 |
 
-| `numconnreleased`
+a| `numconnreleased`
 | Number of logical connections released to the pool
 |
 
-| `averageconnwaittime`
+a| `averageconnwaittime`
 | Average wait-time-duration per successful connection request
 | Unit is milliseconds
 
-| `numconnsuccessfullymatched`
+a| `numconnsuccessfullymatched`
 | Number of connections successfully matched
 |
 
-| `numconnnotsuccessfullymatched`
+a| `numconnnotsuccessfullymatched`
 | Number of connections rejected during matching
 |
 
-| `waitqueuelength`
+a| `waitqueuelength`
 | Number of connection requests in the queue waiting to be serviced
 |
 
-| `numconntimedout`
+a| `numconntimedout`
 | The total number of connections in the pool that timed out between the start time and the last sample time
 |
+
 |===
 
 [#keep-alive]
@@ -403,25 +416,26 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=keep-alive-mon,
 |===
 | Attribute | Description | Comment
 
-| `counttimeouts`
+a| `counttimeouts`
 | Number of keep-alive connections that timed out
 |
 
-| `counthits`
+a| `counthits`
 | Number of requests received by connections in keep-alive mode
 |
 
-| `countconnections`
+a| `countconnections`
 | Number of connections in keep-alive mode
 |
 
-| `countflushes`
+a| `countflushes`
 | Number of keep-alive connections that were closed
 |
 
-| `countrefusals`
+a| `countrefusals`
 | Number of keep-alive connections that were rejected
 |
+
 |===
 
 [#managed-executor-service]
@@ -435,25 +449,26 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=managed-executo
 |===
 | Attribute | Description | Comment
 
-| `PoolSize`
+a| `PoolSize`
 | The current number of threads in the pool
 |
 
-| `ActiveCount`
+a| `ActiveCount`
 | The approximate number of active threads
 |
 
-| `CompletedTaskCount`
+a| `CompletedTaskCount`
 | Number of tasks completed
 |
 
-| `LargestPoolSize`
+a| `LargestPoolSize`
 | The largest number of threads that have ever simultaneously been in the pool
 |
 
-| `TaskCount`
+a| `TaskCount`
 | The number of tasks executed by the executor service
 |
+
 |===
 
 [#message-driven-beans]
@@ -464,17 +479,18 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=message-driven-
 |===
 | Attribute | Description | Comment
 
-| `createcount`
+a| `createcount`
 | Number of times EJB create method is called
 |
 
-| `removecount`
+a| `removecount`
 | Number of times EJB remove method is called
 |
 
-| `messagecount`
+a| `messagecount`
 | Number of messages received for the message-driven bean
 |
+
 |===
 
 [#request]
@@ -490,89 +506,90 @@ This MBean differs from Connection Queue statistics by being selected  by virtua
 |===
 | Attribute | Description | Comment
 
-| `method`
+a| `method`
 | The method of the last request serviced
-| This will be one of `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `TRACE`, `OPTIONS`, `CONNECT` or `PATCH`
+a| This will be one of `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `TRACE`, `OPTIONS`, `CONNECT` or `PATCH`
 
-| `countopenconnections`
+a| `countopenconnections`
 | The number of open connections
 | Unlike most other attributes with count in the name, this one is the current number rather than total over the server lifetime
 
-| `countrequests`
+a| `countrequests`
 | The number of requests received
 | The number of requests received since the server was started
 
-| `uri`
+a| `uri`
 | The URI of the last request serviced
 |
 
-| `maxtime`
+a| `maxtime`
 | Longest response time for a request; not a cumulative value, but the largest response time from among the response times
 |
 
-| `count200`
+a| `count200`
 | Number of responses with a status code equal to *200*
 | This is the total since the server started
 
-| `count2xx`
+a| `count2xx`
 | Number of responses with a status code in the *2xx* range
 | This is the total since the server started
 
-| `count302`
+a| `count302`
 | Number of responses with a status code equal to *302*
 | This is the total since the server started
 
-| `count304`
+a| `count304`
 | Number of responses with a status code equal to *304*
 | This is the total since the server started
 
-| `count3xx`
+a| `count3xx`
 | Number of responses with a status code in the *3xx* range
 | This is the total since the server started
 
-| `count400`
+a| `count400`
 | Number of responses with a status code equal to *400*
 | This is the total since the server started
 
-| `count401`
+a| `count401`
 | Number of responses with a status code equal to *401*
 | This is the total since the server started
 
-| `count403`
+a| `count403`
 | Number of responses with a status code equal to *403*
 | This is the total since the server started
 
-| `count404`
+a| `count404`
 | Number of responses with a status code equal to *404*
 | This is the total since the server started
 
-| `count4xx`
+a| `count4xx`
 | Number of responses with a status code in the *4xx* range
 | This is the total since the server started
 
-| `count503`
+a| `count503`
 | Number of responses with a status code in the *5xx* range
 | This is the total since the server started
 
-| `countother`
+a| `countother`
 | Number of responses with a status code outside the *2xx*, *3xx*, *4xx*, and *5xx* range
 | This is the total since the server started
 
-| `countbytestransmitted`
+a| `countbytestransmitted`
 | The number of bytes transmitted
 |
 
-| `countbytesreceived`
+a| `countbytesreceived`
 | The number of bytes received
 |
 
-| `errorcount`
+a| `errorcount`
 | Cumulative value of the error count, with error count representing the number of cases where the response code was greater than or equal to *400*
 |
 
-| `processingtime`
+a| `processingtime`
 | Average request processing time
 | Unit is milliseconds
+
 |===
 
 [#security-realm]
@@ -584,9 +601,10 @@ to use this MBean.
 |===
 | Attribute | Description | Comment
 
-| `RealmCount`
+a| `RealmCount`
 | Security Realm Count
 |
+
 |===
 
 [#server]
@@ -597,13 +615,14 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=server-runtime-
 |===
 | Attribute | Description | Comment
 
-| `state`
+a| `state`
 | state of the server such as *Running*, *Stopped*, *Failed*
 |
 
-| `uptime`
+a| `uptime`
 | uptime of the Java virtual machine in milliseconds
 |
+
 |===
 
 [#servlet]
@@ -619,17 +638,18 @@ This MBean provides information on all servlets within an application.
 |===
 | Attribute | Description | Comment
 
-| `totalservletsloadedcount`
+a| `totalservletsloadedcount`
 | Total number of Servlets ever loaded
 |
 
-| `activeservletsloadedcount`
+a| `activeservletsloadedcount`
 | Number of Servlets loaded
 |
 
-| `servletprocessingtimes`
+a| `servletprocessingtimes`
 | Cumulative Servlet processing times
 | Unit is milliseconds
+
 |===
 
 [#web-container-servlet-instance-statistics]
@@ -642,25 +662,26 @@ If the servlet is annotation with  `@WebServlet(name = "ServletName")` then the 
 |===
 | Attribute | Description | Comment
 
-| `errorcount`
+a| `errorcount`
 | Number of error responses (that is, responses with a status code greater than or equal to 400)
 |
 
-| `requestcount`
+a| `requestcount`
 | Number of requests processed
 |
 
-| `processingtime`
+a| `processingtime`
 | Average response time
 | Unit is milliseconds
 
-| `maxtime`
+a| `maxtime`
 | Maximum response time
 | Unit is milliseconds
 
-| `servicetime`
+a| `servicetime`
 | Aggregate response time
 |
+
 |===
 
 [#singleton-bean]
@@ -671,13 +692,14 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=singleton-bean-
 |===
 | Attribute | Description | Comment
 
-| `createcount`
+a| `createcount`
 | Number of times EJB create method is called
 |
 
-| `removecount`
+a| `removecount`
 | Number of times EJB remove method is called
 |
+
 |===
 
 [#stateful-bean]
@@ -691,21 +713,22 @@ name of the Stateful EJB class.
 |===
 | Attribute | Description | Comment
 
-| `createcount`
+a| `createcount`
 | Number of times EJB create method is called
 |
 
-| `removecount`
+a| `removecount`
 | Number of times EJB remove method is called
 |
 
-| `methodreadycount`
-| Number of stateful session beans in `MethodReady` state
+a| `methodreadycount`
+a| Number of stateful session beans in `MethodReady` state
 |
 
-| `passivecount`
+a| `passivecount`
 | Number of stateful session beans in Passive state
 |
+
 |===
 
 [#stateless-bean]
@@ -716,17 +739,18 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=stateless-bean-
 |===
 | Attribute | Description | Comment
 
-| `createcount`
+a| `createcount`
 | Number of times EJB create method is called
 |
 
-| `removecount`
+a| `removecount`
 | Number of times EJB remove method is called
 |
 
-| `methodreadycount`
-| Number of stateful session beans in `MethodReady` state
+a| `methodreadycount`
+a| Number of stateful session beans in `MethodReady` state
 |
+
 |===
 
 [#thread-pool]
@@ -742,25 +766,26 @@ Alternatively set the value to `amx:pp=/mon/server-mon[server],type=thread-pool-
 |===
 | Attribute | Description | Comment
 
-| `corethreads`
+a| `corethreads`
 | Core number of threads in the thread pool
 |
 
-| `totalexecutedtasks`
+a| `totalexecutedtasks`
 | Provides the total number of tasks, which were executed by the thread pool
 |
 
-| `maxthreads`
+a| `maxthreads`
 | Maximum number of threads allowed in the thread pool
 |
 
-| `currentthreadcount`
+a| `currentthreadcount`
 | Provides the number of request processing threads currently in the listener thread pool
 |
 
-| `currentthreadsbusy`
+a| `currentthreadsbusy`
 | Provides the number of request processing threads currently in use in the listener thread pool serving requests
 |
+
 |===
 
 [#transaction-service]
@@ -771,21 +796,22 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=transaction-ser
 |===
 | Attribute | Description | Comment
 
-| `activecount`
+a| `activecount`
 | Provides the number of transactions that are currently active.
 |
 
-| `committedcount`
+a| `committedcount`
 | Provides the number of transactions that have been committed.
 |
 
-| `rolledbackcount`
+a| `rolledbackcount`
 | Provides the number of transactions that have been rolled back.
 |
 
-| `state`
+a| `state`
 | Indicates if the transaction service has been frozen.
-| Returns `false` if service is working fine
+a| Returns `false` if service is working fine
+
 |===
 
 [#virtual-server]
@@ -796,21 +822,22 @@ In JMX Logging set value to `amx:pp=/mon/server-mon[server],type=virtualserverin
 |===
 | Attribute | Description | Comment
 
-| `id`
+a| `id`
 | The id of the virtual server
 |
 
-| `hosts`
+a| `hosts`
 | The host (alias) names of the virtual server"
 |
 
-| `mode`
+a| `mode`
 | The mode of the virtual server
 | Is either active or unknown
 
-| `state`
+a| `state`
 | The state of the virtual server
 |
+
 |===
 
 [#web-request]
@@ -822,21 +849,22 @@ In JMX Logging set value to
 |===
 | Attribute | Description | Comment
 
-| `errorcount`
+a| `errorcount`
 | Cumulative value of the error count, with error count representing the number of cases where the response code was greater than or equal to *400*
 |
 
-| `requestcount`
+a| `requestcount`
 | Cumulative number of requests processed so far
 |
 
-| `processingtime`
+a| `processingtime`
 | Average request processing time
 |
 
-| `maxtime`
+a| `maxtime`
 | Longest response time for a request; not a cumulative value, but the largest response time from among the response times
 |
+
 |===
 
 [#openmq-mbeans]

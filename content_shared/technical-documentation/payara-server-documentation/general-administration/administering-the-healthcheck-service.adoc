@@ -82,16 +82,31 @@ The following are the configurable attributes available to *ALL* the HealthCheck
 *_Dynamic_*: Determine whether the changes done to the checker's configuration are applied immediately or after the server/instance's restart.
 *_Name_*: The name or label that the checker will use to identify itself on the notification events. The default names for all checkers are the following:
 +
-[cols=",",options="header",]
+[cols="3,1",options="header",]
 |====
 |Checker |Default name
-|*CPU Usage* |`CPUC`
-|*Connection Pool* |`CONP`
-|*Heap Memory Usage* |`HEAP`
-|*Machine Memory Usage* |`MEMM`
-|*Hogging Threads* |`HOGT`
-|*Stuck Threads* |`STUCK`
-|*Garbage Collector* |`GBGC`
+
+|*CPU Usage*
+a|`CPUC`
+
+|*Connection Pool*
+a|`CONP`
+
+|*Heap Memory Usage*
+a|`HEAP`
+
+|*Machine Memory Usage*
+a|`MEMM`
+
+|*Hogging Threads*
+a|`HOGT`
+
+|*Stuck Threads*
+a|`STUCK`
+
+|*Garbage Collector*
+a|`GBGC`
+
 |====
 *_Time_*: The time interval value (as an `Integer`) specified in given unit to execute the checker for the metric. The default value is **5**.
 *_Unit_*: This defines the time duration per unit. The accepted options are any valid https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/TimeUnit.html[java.util.concurrent.TimeUnit^] values.
