@@ -32,7 +32,7 @@ Here's a brief summary of the folders and files that belong to the structure sho
 
 [cols="2,3",options="header"]
 |====
-|File|Description
+|File |Description
 
 a|`fish/payara`
 |Payara Micro's class files.

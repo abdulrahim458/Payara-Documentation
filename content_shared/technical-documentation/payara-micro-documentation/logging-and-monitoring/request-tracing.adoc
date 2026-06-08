@@ -15,7 +15,7 @@ Payara Micro exposes a number of command line options to configure request traci
 | Parameter | Summary
 
 a| `enableRequestTracing`
-| Enables the service when present.
+a| Enables the service when present.
 
 A supplementary parameter can be provided with this option to encapsulate the value and unit options, for example, the following will enable the service with a threshold of `4ms`:
 

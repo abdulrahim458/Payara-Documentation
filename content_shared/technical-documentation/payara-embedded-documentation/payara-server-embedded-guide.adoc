@@ -119,13 +119,12 @@ The methods of the `BootstrapProperties` class for setting the server configurat
 |===
 |Purpose |Method |Default Value
 
-|References an existing xref:installation-root-directory[Installation Root Directory], also called `as-install`
+a|References an existing xref:installation-root-directory[Installation Root Directory], also called `as-install`
 a|
 [source,java]
 ----
 setInstallRoot(String as-install)
 ----
-
 |None.
 
 |===
@@ -137,7 +136,7 @@ The methods of the `GlassFishProperties` class for setting the server configurat
 |===
 |Purpose |Method |Default Value
 
-|References an existing xref:instance-root-directory[Instance Root Directory], also called `domain-dir`
+a|References an existing xref:instance-root-directory[Instance Root Directory], also called `domain-dir`
 a|
 [source,java]
 ----

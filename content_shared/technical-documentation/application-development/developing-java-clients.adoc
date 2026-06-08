@@ -527,6 +527,7 @@ a|
 <jnlp href="xxx">...</jnlp>
 ----
 |Payara Server controls this content for application clients packaged in EAR files. The developer controls this content for application clients packaged in WAR files.
+
 a|
 [source,xml]
 ----
@@ -595,7 +596,7 @@ a|
   <information os="" platform="" arch="" locale=""></information>
 </jnlp>
 ----
-|You can specify one or more of the `os`, `arch`, `platform`, and `locale` attributes for the `<information>` element. You can also specify child elements; Payara Server provides no default children.
+a|You can specify one or more of the `os`, `arch`, `platform`, and `locale` attributes for the `<information>` element. You can also specify child elements; Payara Server provides no default children.
 
 a|
 [source,xml]
@@ -604,7 +605,7 @@ a|
   <resources os="" platform="" arch="" locale=""></resources>
 </jnlp>
 ----
-|You can specify one or more of the `os`, `arch`, `platform`, and `locale` attributes for the `<resources>` element. You can also specify child elements; Payara Server provides no default children.
+a|You can specify one or more of the `os`, `arch`, `platform`, and `locale` attributes for the `<resources>` element. You can also specify child elements; Payara Server provides no default children.
 
 a|
 [source,xml]
@@ -626,7 +627,7 @@ a|
   </resources>
 </jnlp>
 ----
-|Adds native libraries to be included in the application. Each entry in a JAR listed in a `<nativelib>` element must be a native library for the correct platform. The full syntax of the `<nativelib>` element lets the developer specify the platform for that native library.
+a|Adds native libraries to be included in the application. Each entry in a JAR listed in a `<nativelib>` element must be a native library for the correct platform. The full syntax of the `<nativelib>` element lets the developer specify the platform for that native library.
 
 a|
 [source,xml]

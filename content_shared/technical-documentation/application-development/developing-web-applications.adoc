@@ -323,7 +323,7 @@ The following table describes the attributes used for the `flush` tag.
 
 a|`key`
 a|`ServletPath_Suffix`
-|(optional) The name used by the container to access the cached entry. The cache key is suffixed to the servlet path to generate a key to access the cached entry.
+a|(optional) The name used by the container to access the cached entry. The cache key is suffixed to the servlet path to generate a key to access the cached entry.
 
 If no key is specified, a number is generated according to the position of the tag in the page.
 

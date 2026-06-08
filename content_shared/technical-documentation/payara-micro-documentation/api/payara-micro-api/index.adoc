@@ -19,8 +19,8 @@ Configuration Methods of `PayaraMicro.class` are detailed here.
 |Gets or sets the domain.xml used to override the default server configuration.
 a|[.breakable]`File getAlternateDomainXML()`
 a|[.breakable]`PayaraMicro setAlternateDomainXML(File alternateDomainXML)`
-|`null`
-|`--domainConfig`
+a|`null`
+a|`--domainConfig`
 
 |Cluster Multicast Group
 |Gets or sets the cluster multicast group for the instance.

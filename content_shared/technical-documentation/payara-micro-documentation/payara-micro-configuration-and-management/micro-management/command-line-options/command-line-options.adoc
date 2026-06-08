@@ -27,7 +27,7 @@ a|`--accesslogprefix`
 |
 
 a|[.breakable]`--additionalrepository <repo-url>`
-|Specifies an additional repository to search for deployable artefacts in.
+a|Specifies an additional repository to search for deployable artefacts in.
 Supports BASIC authentication. 
 For example https://USER:PASSWORD@example.payara.fish/repositories/repo/.
 
@@ -70,10 +70,10 @@ a|[.breakable]`--clustername <cluster-name>`
 
 a|`--clusterpassword <cluster-password>`
 |Sets the cluster group password.
-
 |
+
 a|`--contextroot <context-path>`
-|Sets the context root of the application originating from the `--deploy` option given first that does not specify a context root itself. See
+a|Sets the context root of the application originating from the `--deploy` option given first that does not specify a context root itself. See
 xref:../deploying-applications/deploy-applications.adoc#define-context-root[Define context root] for more details.
 |
 
@@ -149,7 +149,7 @@ cluster configuration.
 | If not set, the built-in Hazelcast configuration file is used.
 
 a|`--hzinitialjoinwait <time in seconds>`
-|Sets the time in seconds for Payara Micro to wait before attempting to join the
+a|Sets the time in seconds for Payara Micro to wait before attempting to join the
 data grid.
 |1
 
@@ -158,7 +158,7 @@ a|`--hzPublicAddress <host-name or ip>`
 |
 
 a|`--instancegroup <group-name>`
-|See `--group`
+a|See `--group`
 |
 
 a|`--interfaces`
@@ -216,7 +216,8 @@ a|`--noHazelcast`
 |Disables Hazelcast and clustering for this instance.
 | _false_
 
-a|`--nohostaware`|Disables Host Aware Partitioning. See `--hostaware`
+a|`--nohostaware`
+|Disables Host Aware Partitioning. See `--hostaware`
 |
 
 a|[.breakable]`--outputuberjar <file-path>`
@@ -249,7 +250,7 @@ a|`--requesttracingadaptivesamplingtargetcount`
 | 6
 
 a|`--requesttracingadaptivesamplingtimeunit`
-| The time unit for the adaptive sample time; a `java.util.concurrent.TimeUnit` value (also in singular) or one of the short forms: `ns`, `us`/`µs`, `ms`, `s`, `m`/`min`/`mins`, `h` or `d`.
+a| The time unit for the adaptive sample time; a `java.util.concurrent.TimeUnit` value (also in singular) or one of the short forms: `ns`, `us`/`µs`, `ms`, `s`, `m`/`min`/`mins`, `h` or `d`.
 | MINUTES
 
 a|`--requesttracingadaptivesamplingtimevalue`
@@ -279,12 +280,12 @@ a|`--shutdowngrace <duration-ms>`
 
 a|[.breakable]`--sslport <ssl-port-number>`
 a|Sets the HTTPs port that the instance will bind to.
-| If not set, has no value
+a| If not set, has no value
 and HTTPS is disabled.
 
 a|[.breakable]`--sslcert <certificate-name>`
 a|Sets the SSL certificate name to be used from the keystore for SSL
-| `s1as`
+a| `s1as`
 
 a|[.breakable]`--startport <cluster-start-port-number>`
 |Sets the cluster start port number.
