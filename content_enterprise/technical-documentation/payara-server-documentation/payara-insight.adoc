@@ -327,7 +327,6 @@ The _General_ widget settings are concerned with the widget's position within th
 | Size   | 1 / 1
 | How many width (number of columns) and height (number of rows) the widget should span. Note that this is a target size.
 
-If the number of columns is reduced the width might be reduced to match the page layout.
 |====================
 
 The _Data_ settings are concerned with what and how the data is shown in the graph of a widget.
@@ -335,50 +334,76 @@ The _Data_ settings are concerned with what and how the data is shown in the gra
 *image*: monitoring-console/mc_settings_widget_data-h.png[Widget Data Settings]
 
 .Widget Data Settings
-[cols="1,1,4a",options="header"]
+[cols="1,1,4",options="header"]
 |====================
 | Property | Default | Description
-| Type | `Time Curve`
+
+| Type
+| `Time Curve`
 |Changes the type of graph used to show the metric. This also affects which data of the metric a widget is focussed on. Possible choices:
 
-* `Time Curve`: a line chart of current values (usually last 60 seconds),
-* `Range Indicator`: show distributions of values (of last 60 seconds),
-* `Alerts`: shows a table of alerts,
-* `Annotations`: shows a table or list of annotations; these are key-value attributes associated with a metric series.
-* `RAG Status`: Shows UP/DOWN status generally used in connection with health checks
-* `Top N`: Shows just the numbers (legend), use with _Legend_ ordering by value for top highest or lowest table
-| Mode | _(Default)_
-| If available for the type of widget the display mode can be switched between _Table_ and _List_.
+| Mode
+| _(Default)_
+a| If available for the type of widget the display mode can be switched between _Table_ and _List_.
 
 Table view is best fitted for annotations that share common attributes, lists are better fitted for annotations with potentially differing attributes.
-| Series | - | The metric key as given when adding the metric, use pencil icon to edit
-| Unit | `Count`
-| The unit controls how the raw number of a metric is interpreted and represented e.g. when displaying in axis labels.
+| Series
+| -
+| The metric key as given when adding the metric, use pencil icon to edit
+
+| Unit
+a| `Count`
+a| The unit controls how the raw number of a metric is interpreted and represented e.g. when displaying in axis labels.
 
 The unit also controls what values are accepted as input for numbers, like thresholds, that are on the same axis.
 
 Possible units are: `Count`, `Milliseconds`, `Nanoseconds`, `Bytes`, `Percentage` and `Up/Down`.
-| Unit 1/sec | `false` | Whether to show the metric as a change per second (delta between two points in the series normalised to average delta per second).
-| Upscaling | `(undefined)` | When defined all values are multiplied by this factor. This can e.g. be used to move a decimal range between zero and one to a percentage range `0-100`.
-| Upscaling _decimal value_ | `false`
-| Check to mark the metric as one that is provided as a decimal value during collection (floats or doubles and alike).
+| Unit 1/sec
+a| `false`
+| Whether to show the metric as a change per second (delta between two points in the series normalised to average delta per second).
+
+| Upscaling
+a| `(undefined)`
+a| When defined all values are multiplied by this factor. This can e.g. be used to move a decimal range between zero and one to a percentage range `0-100`.
+| Upscaling _decimal value_
+a| `false`
+a| Check to mark the metric as one that is provided as a decimal value during collection (floats or doubles and alike).
 
 This will then revert the conversion applied during collection which converts decimal values to an integer number with 4 available decimal digits by multiplying them by `10,000`.
 
 This divides values by 10,000 again to move them back into their original value range.
-| Line Style | `(none checked)` | Options on how to display the current value line in the graph: Check _Points_ to show individual data points on the line, check _Curvy_ to use Bézier curves instead of straight line connections.
-| Background | _Fill_ | When _Fill_ is checked the area between line and axis is filled. The background transparency can be configured globally in the _Appearance_ application settings.
-| X-Axis | _Labels_ | Whether to show labels for the x-axis.
-| Y-Axis | `(undefined)` | Set a minimum or maximum number for the y-axis instead. When not set range is derived automatically from the data points.
-| Legend | _Alphabetical_ | The order applied to the legend. Possible choices:
+
+| Line Style
+a| `(none checked)`
+| Options on how to display the current value line in the graph: Check _Points_ to show individual data points on the line, check _Curvy_ to use Bézier curves instead of straight line connections.
+| Background
+| _Fill_
+| When _Fill_ is checked the area between line and axis is filled. The background transparency can be configured globally in the _Appearance_ application settings.
+
+| X-Axis
+| _Labels_
+| Whether to show labels for the x-axis.
+| Y-Axis
+a| `(undefined)`
+| Set a minimum or maximum number for the y-axis instead. When not set range is derived automatically from the data points.
+
+| Legend
+| _Alphabetical_
+a| The order applied to the legend. Possible choices:
 `None`: Items are shown as send by the server,
 `Alphabetically`: Items are shown in alphabetical order (instance name first, series based label second),
 `Increasing Value`: Items are shown ordered from smallest to largest current value,
 `Decreasing Value`: Items are shown ordered from largest to smallest current value,
-| Limit  | (undefined) | When set the maximum number of legend items shown (especially useful when ordering legend items)
-| Limit Hide Constant Zero | `false` | When set series that have been zero for a while are not shown in legend and line graph
-| Coloring | _Instance Name_
-| Used to select the colours the data is shown with.
+| Limit
+| (undefined)
+| When set the maximum number of legend items shown (especially useful when ordering legend items)
+
+| Limit Hide Constant Zero
+a| `false`
+| When set series that have been zero for a while are not shown in legend and line graph
+| Coloring
+| _Instance Name_
+a| Used to select the colours the data is shown with.
 
 _Instance Name_ will show data in the same colour that belongs to the same instance.
 
@@ -387,7 +412,11 @@ _Series Name_ shows the metric series in the same colour (independent of instanc
 _Result Set Index_ will show each matching series in a different colour.
 
 _Instance and Series Name_ shows the same instance and series in the same colour. This is global. This means another widget using this colouring with the same instance and series will have the same colour as well.
-| Coloring Mapping | (undefined) | A space separated mapping of series group values to a named colour value as defined by the application appearance _Defaults_ settings. For example to color a series shown with label _AmberAck_ in amber color the entry is `AmberAck:amber` (`amber` here refers to the default name used for _Degraded_ (internal name)).
+
+| Coloring Mapping
+| (undefined)
+a| A space separated mapping of series group values to a named colour value as defined by the application appearance _Defaults_ settings. For example to color a series shown with label _AmberAck_ in amber color the entry is `AmberAck:amber` (`amber` here refers to the default name used for _Degraded_ (internal name)).
+
 |====================
 
 [#configuring-widget-extras]
@@ -402,11 +431,13 @@ In particular these are reference lines and threshold indications.
 *image*: monitoring-console/mc_settings_widget_extras-h.png[Widget Extras Settings]
 
 .Widget Extras Settings
-[cols="1,1,4a",options="header"]
+[cols="1,1,4",options="header"]
 |====================
 | Property | Default | Description
-| History | _None_
-| What period of additional aggregated data to show in the graph:
+
+| History
+|_None_
+a| What period of additional aggregated data to show in the graph:
 
 * _None_ shows just the recent minute ("real-time")
 * _1 Hour_ adds 1 point per minute in the recent hour (the most recent minute continues to show 1 point per second)
@@ -414,30 +445,47 @@ In particular these are reference lines and threshold indications.
 * _1 Month_ adds 1 point per day in the recent 31 days (again recent day continues 1 point per hour, recent hour per minute and recent minute per second).
 
 NOTE: This data is only available after enabling the history aggregation using the asadmin command.
-| Annotations | (checked) |  Whether to show annotations for in an alert table.
-| Annotations (Fields) | _(blank)_ | A comma or space separated list of fields to show for an annotation list or table. The given field order is reflected in the view.
-| Aggregates | (none checked) | Check to add the all time minimum, maximum or average line to the graph
-| Waterline | (undefined) | Adds a simple reference line that could mark an upper or lower limit. Enter in unit of y-axis, e.g. 20ms, 5s, 2GB, 4%, 123
-| Threshold Reference | `Off`
-| Controls what value the _Alarming Threshold_ and _Critical Threshold_ are compared to.
+
+| Annotations
+| (checked)
+|  Whether to show annotations for in an alert table.
+
+| Annotations (Fields)
+| _(blank)_
+| A comma or space separated list of fields to show for an annotation list or table. The given field order is reflected in the view.
+
+| Aggregates
+| (none checked)
+| Check to add the all time minimum, maximum or average line to the graph
+| Waterline
+| (undefined)
+| Adds a simple reference line that could mark an upper or lower limit. Enter in unit of y-axis, e.g. 20ms, 5s, 2GB, 4%, 123
+
+| Threshold Reference
+a| `Off`
+a| Controls what value the _Alarming Threshold_ and _Critical Threshold_ are compared to.
 
 Usually this is the most recent value but in some cases the all time minimum, maximum or average are useful too.
-| Alarming Threshold | (undefined)
-| The limit for the _"Alarming"_ state.
+| Alarming Threshold
+| (undefined)
+a| The limit for the _"Alarming"_ state.
 
 If _Critical Threshold_ is undefined or if its value is larger than this value the alarming threshold is exceeded if the reference value is larger than the threshold.
 
 Otherwise, if the _Critical Threshold_ is lower than the _Alarming Threshold_, the threshold becomes 'inverse', and is exceeded when the reference value falls below the alarming value.
 
 When exceeded the status becomes _"Alarming"_. Enter in unit of y-axis, e.g. `20ms, 5s, 2GB, 4%, 123`
-| Critical Threshold | (undefined)
-| The limit of the _"Critical"_ state.
+
+| Critical Threshold
+| (undefined)
+a| The limit of the _"Critical"_ state.
 
 If _Alarming Threshold_ is undefined or its value is smaller than this value the critical threshold is exceeded if the reference value is larger than the threshold.
 
 Otherwise, if the _Critical Threshold_ is lower than the _Alarming Threshold_, the threshold becomes 'inverse', and is exceeded when the reference value falls below the critical value.
 
 When exceeded the status becomes _"Critical"_, overrides status _"Alarming"_. Enter in unit of y-axis, e.g. `20ms, 5s, 2GB, 4%, 123`
+
 |====================
 
 Besides adding a reference line to the graph the critical and alarming thresholds affect the status evaluation.
@@ -458,9 +506,19 @@ For example based on the threshold values of decorations or by encountered error
 [cols="1,1,4",options="header"]
 |====================
 | Property | Default | Description
-| `No Data` | `(undefined)` | The message to show when no data for a metric is available. For example to hint about configurations needed to make the metric available.
-| `Alarming` | `(undefined)` | The message to show when the threshold got exceeded and the status evaluates to _Alarming_.
-| `Critical` | `(undefined)` | The message to show when the threshold got exceeded and the status evaluates to _Critical_.
+
+| `No Data`
+| `(undefined)`
+| The message to show when no data for a metric is available. For example to hint about configurations needed to make the metric available.
+
+| `Alarming`
+| `(undefined)`
+| The message to show when the threshold got exceeded and the status evaluates to _Alarming_.
+
+| `Critical`
+| `(undefined)`
+| The message to show when the threshold got exceeded and the status evaluates to _Critical_.
+
 |====================
 
 The messages support simple markup using `pass:[*]boldpass:[*]` and `pass:[_]italicpass:[_]`.
@@ -486,11 +544,11 @@ The settings allow filtering these related alerts to prevent them from showing. 
 [cols="1,1,4",options="header"]
 |====================
 | Property | Default | Description
-| Filter | (none checked) | Do not show (when checked) _Amber_ and/or _Red_ alerts, _Ongoing_ and/or _Stopped_ alerts, _Acknowledged_ and/or _Unacknowledged_ alerts.
 
-If for any of these 3 groups of pairs both are checked no alerts would be shown. Widgets of type _Time Curve_ automatically exclude stopped and acknowledged alerts to avoid cluttering the graph with alerts that aren't relevant anymore.
+| Filter
+| (none checked)
+| Do not show (when checked) _Amber_ and/or _Red_ alerts, _Ongoing_ and/or _Stopped_ alerts, _Acknowledged_ and/or _Unacknowledged_ alerts.
 
-Use a widget of type _Alerts Table_ to show all alerts according to the filter at all times.
 |====================
 
 [#handling-alerts]
@@ -547,22 +605,29 @@ The common page settings are those used by pages of _Type_ _Manual_ and _Query_.
 *image*: monitoring-console/mc_settings_page_general-h.png[Common Page Settings]
 
 .Common Page Settings
-[cols="1,1,4a",options="header"]
+[cols="1,1,4",options="header"]
 |====================
 | Property | Default | Description
+
 | Name | - | The name as given by the user when the page was created or as defined in the page preset, only user-created pages can be renamed
+
 | Type | `Manual` |
 * `Manual`: user populates pages with widget using add widget
 * `Query`: a query is used to populate page in intervals
+
 | Number Of Columns | 1 | The number of columns available to place widgets in
+
 | Include In Rotation | Yes
 |
 * Yes: Page is included in the set of pages rotated during page rotation
 * No: page is excluded from this set
+
 | Fill Empty Cells | No |
 * Yes: empty cells in widget grid are filled by extending the span of the widget above
 * No: empty cells left empty shown with a button to add a widget
+
 | Server Sync | (checked) | `Auto`: Changes made by an administrator to the page or the widgets of this page are automatically pushed to the shared configuration if and only if the page has been explicitly pushed to the shared configuration at some point in the past.
+
 |====================
 
 NOTE: Pages of _Type: Query_ have more settings to configure the contents of the page.
@@ -573,10 +638,23 @@ NOTE: Pages of _Type: Query_ have more settings to configure the contents of the
 [cols="1,1,4",options="header"]
 |====================
 | Property | Default | Description
-| Max Size | `32` | Maximum number of widgets added to the page when populating it from query matches (even if there are more metrics matching the query)
-| Query Series | - | A series pattern used to query for metrics, matches are used to populate the page
-| Query Interval | `1m` | The interval in which the query is run and the page is repopulated with matches
-| Filter Type | - | When selecting a type only metrics inferred to prefer that type are shown on the page
+
+| Max Size
+| `32`
+| Maximum number of widgets added to the page when populating it from query matches (even if there are more metrics matching the query)
+
+| Query Series
+| -
+| A series pattern used to query for metrics, matches are used to populate the page
+
+| Query Interval
+| `1m`
+| The interval in which the query is run and the page is repopulated with matches
+
+| Filter Type
+| -
+| When selecting a type only metrics inferred to prefer that type are shown on the page
+
 |====================
 
 See xref:#application-metrics-page[Application Metrics page] for an example of a query page.
@@ -597,10 +675,23 @@ NOTE: These settings cannot be shared.
 [cols="1,1,4",options="header"]
 |====================
 | Property | Default | Description
-| Data Refresh | `2s` | Interval duration used to update the currently shown page with new data (poll duration). To pause data update toggle the _play/pause_ toggle switch.
-| Page Rotation | `1m` | Duration each page is shown during a page rotation. To run or stop the rotation toggle the _on/off_ toggle switch. See section xref:#page-rotation[Page Rotation] for details.
-| Role | _User_ | Select the used user role. See section xref:#changing-user-role[Changing User Role] for details.
-| Watches | - | Click the _Go to Watch Settings_ button to open the xref:#watch-management[Watch Management]
+
+| Data Refresh
+| `2s`
+| Interval duration used to update the currently shown page with new data (poll duration). To pause data update toggle the _play/pause_ toggle switch.
+
+| Page Rotation
+| `1m`
+| Duration each page is shown during a page rotation. To run or stop the rotation toggle the _on/off_ toggle switch. See section xref:#page-rotation[Page Rotation] for details.
+
+| Role
+| _User_
+| Select the used user role. See section xref:#changing-user-role[Changing User Role] for details.
+
+| Watches
+| -
+| Click the _Go to Watch Settings_ button to open the xref:#watch-management[Watch Management]
+
 |====================
 
 [#pages-settings]
@@ -618,12 +709,14 @@ The _Alerts_ application settings contain general alert configuration that appli
 *image*: monitoring-console/mc_settings_app_alerts-h.png[Application Alerts Settings]
 
 .Alerts Settings
-[cols="1,1,4a",options="header"]
+[cols="1,1,4",options="header"]
 |====================
 | Property | Default | Description
-| Popups | _On_ | When _On_ any alert status change is shown in form of a pop-up dialogue regardless of the currently viewed page.
 
-TIP: With this feature no alarms will be missed.
+| Popups
+| _On_
+| When _On_ any alert status change is shown in form of a pop-up dialogue regardless of the currently viewed page.
+
 |====================
 
 [#appearance-settings]
@@ -637,14 +730,14 @@ Payara InSight allows you to configure the colours used in graphs. There is a gl
 [cols="1,1,4",options="header"]
 |====================
 | Property | Default | Description
-| Scheme | (Payara Branding)
+
+| Scheme
+| (Payara Branding)
 | The selected scheme is applied to set the colour palette for _Data_ as well as _Defaults_ and _Opacity_.
 
-This is only a convenient way to switch all of these between different settings.
-
-The individual properties can be changed afterward as usual without affecting the scheme.
-| Data # (Palette) | (colours of _Payara Branding_ scheme)
-| The list of colours to use when colouring data series in graphs.
+| Data # (Palette)
+| (colours of _Payara Branding_ scheme)
+a| The list of colours to use when colouring data series in graphs.
 
 This is the line colour in line charts or the bar colour in bar charts. Background will use the same colour with _Opacity_.
 
@@ -655,14 +748,23 @@ If there are fewer colours in this palette than needed for different lines in a 
 The derived colours focus on bright colours with high contrast but might not always fit well with the rest of the palette.
 
 In such case consider adding more colours to the palette.
-| Defaults | (default of _Payara_ scheme)
-| Sets the default colours for _Waterline_, _Alarming_ and _Critical_ as well as _Red_, _Amber_, _Green_ and _White_ state lines, backgrounds and texts.
+
+| Defaults
+| (default of _Payara_ scheme)
+a| Sets the default colours for _Waterline_, _Alarming_ and _Critical_ as well as _Red_, _Amber_, _Green_ and _White_ state lines, backgrounds and texts.
 
 Some of these can be individually overridden in the widget's configuration for these lines.
-| Opacity | 10 | Background opacity for lines or bars in graphs, 0 (fully transparent) to 100 (solid).
-| Thickness | (3) | Line width on a scale `1-8`.
+
+| Opacity
+| 10
+| Background opacity for lines or bars in graphs, 0 (fully transparent) to 100 (solid).
+
+| Thickness
+| (3)
+a| Line width on a scale `1-8`.
 
 Each point corresponds to 0.5px with. Default for lines in a line graph is 3, so 1.5px.
+
 |====================
 
 Themes act as a (p)reset of the data colour palette, default colours and _Opacity_ setting. When switching theme these settings are reset to the theme's value:
@@ -783,16 +885,35 @@ The below table describes possible choices for each step of a watch condition.
 [cols="1,1,3",options="header"]
 |====================
 | Segment | Type | Description
-| `is` _operator_ | Start | Select the comparison operator to use when comparing the actual value(s) to the threshold. The comparison is of form _actual operator threshold_.
-| `is` _threshold_ | Start | The numeric threshold. The upper/lower limit. With the right unit selected the number can be given with a unit such as `5min` for time units, or `4KB` for bytes.
-| `is` _scope_ | Start | Select a scope for the actual values that are compared to the threshold. The semantics of different scopes are described in a separate table below.
-| `is` _scope-length_ | Start |
-The length defines how many of the most recent data points of the watched metric are included in the scope of the comparison.
 
-A number with time unit refers to the number of the points, a number with time unit to the duration of points to consider for the scope.
-| `until` _operator_ | Stop | same as for `start`
-| `until` _scope_ | Stop | same as for `start`
-| `until` _scope-length_ | Stop | same as for `start`
+| `is` _operator_
+| Start
+| Select the comparison operator to use when comparing the actual value(s) to the threshold. The comparison is of form _actual operator threshold_.
+
+| `is` _threshold_
+| Start
+| The numeric threshold. The upper/lower limit. With the right unit selected the number can be given with a unit such as `5min` for time units, or `4KB` for bytes.
+
+| `is` _scope_
+| Start
+| Select a scope for the actual values that are compared to the threshold. The semantics of different scopes are described in a separate table below.
+
+| `is` _scope-length_
+| Start
+| The length defines how many of the most recent data points of the watched metric are included in the scope of the comparison.
+
+a| `until` _operator_
+| Stop
+a| same as for `start`
+
+a| `until` _scope_
+| Stop
+a| same as for `start`
+
+a| `until` _scope-length_
+| Stop
+a| same as for `start`
+
 |====================
 
 The below table describes the semantics of the different types of comparison scopes.
@@ -801,23 +922,25 @@ The below table describes the semantics of the different types of comparison sco
 [cols="1,3",options="header"]
 |====================
 | Scope | Description
-| `for last`
-| The comparison must be true for each point in the scope for the condition to be met. Similar to an _all_ logic.
 
-The number of points included is specified afterward.
+a| `for last`
+a| The comparison must be true for each point in the scope for the condition to be met. Similar to an _all_ logic.
 
-This is either a bare number referring number of points to include or a number with a time unit referring to a duration where all points within the duration from most recent point backwards are included in the scope.
-| `for average of last` | The comparison must be true for the single average value of all points in the scope for the condition to be met.
-
-The number of points included is specified afterward as number of duration from which to consider points.
-| `in last`
-| The comparison must be true for at least one of the points included in the scope for the condition to be met. Similar to an _any_ logic.
+a| `for average of last`
+a| The comparison must be true for the single average value of all points in the scope for the condition to be met.
 
 The number of points included is specified afterward as number of duration from which to consider points.
-| `in sample`
-| The comparison must be true for at least one of the points available for the condition to be met.
+
+a| `in last`
+a| The comparison must be true for at least one of the points included in the scope for the condition to be met. Similar to an _any_ logic.
+
+The number of points included is specified afterward as number of duration from which to consider points.
+
+a| `in sample`
+a| The comparison must be true for at least one of the points available for the condition to be met.
 
 For this scope type no length is given as all available points are considered. This can vary but usually consists of the last minute of data.
+
 |====================
 
 After composing the watch conditions press _Save_ to install the watch.

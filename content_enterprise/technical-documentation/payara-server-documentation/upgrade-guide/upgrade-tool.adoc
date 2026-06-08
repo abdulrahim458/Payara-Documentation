@@ -35,13 +35,49 @@ The command will also back up the old version and domains in the default locatio
 [cols="2,1,4,1,1",options="header",]
 |=======================================================================
 |Option |Type |Description |Default |Mandatory
-|`--username` |String | The username for the Payara Nexus server.||Yes, unless `--usedownloaded` is specified
-|`--version` |String |Specifies the version number of the new version of Payara to use.| |Yes, unless `--usedownloaded` is specified
-|`--distribution` |Enum |Specifies the distribution of Payara Server to download. This can payara, payara-web, payara-ml, or payara-web-ml.|payara|No
-|`--stage` |Boolean |Determines if the upgrade should be installed in-place, or staged into "_x.new_" directories. Scripts are provided that can be used to apply and rollback the staged install. This option is automatically enabled when running the command on Windows. |False on Unix, True on Windows| No
-|`--domaindir` |String |The directory containing the domains. The domains in this directory are backed up, and their config is used to determine the nodes which will also be upgraded. | `${as-install}/domains` | No
-|`--usedownloaded` |String |The path to the local Payara Server zip archive to use for upgrading instead of downloading from the Payara Enterprise repository. When this parameter is specified, the `--username`, `--password`, and `--version` parameters are not required.| |No
-|`--nodes` |String |Specifies the nodes to upgrade if you want to selectively upgrade certain nodes. Provide as a comma-separated list of node names. |All nodes in the cluster| No
+
+|`--username`
+|String
+| The username for the Payara Nexus server.
+|
+|Yes, unless `--usedownloaded` is specified
+
+|`--version`
+|String
+|Specifies the version number of the new version of Payara to use.
+|
+|Yes, unless `--usedownloaded` is specified
+
+|`--distribution`
+|Enum
+|Specifies the distribution of Payara Server to download. This can payara, payara-web, payara-ml, or payara-web-ml.
+|payara
+|No
+
+|`--stage`
+|Boolean
+|Determines if the upgrade should be installed in-place, or staged into "_x.new_" directories. Scripts are provided that can be used to apply and rollback the staged install. This option is automatically enabled when running the command on Windows.
+|False on Unix, True on Windows
+| No
+
+|`--domaindir`
+|String
+|The directory containing the domains. The domains in this directory are backed up, and their config is used to determine the nodes which will also be upgraded.
+| `${as-install}/domains`
+| No
+
+|`--usedownloaded`
+|String
+|The path to the local Payara Server zip archive to use for upgrading instead of downloading from the Payara Enterprise repository. When this parameter is specified, the `--username`, `--password`, and `--version` parameters are not required.
+|
+|No
+
+|`--nodes`
+|String
+|Specifies the nodes to upgrade if you want to selectively upgrade certain nodes. Provide as a comma-separated list of node names.
+|All nodes in the cluster
+|No
+
 |=======================================================================
 
 [#upgrade-example]
@@ -77,8 +113,19 @@ WARNING: This command is not supported on Windows OS, please use the `rollbackUp
 [cols="1,1,4,1,1",options="header",]
 |=======================================================================
 |Option |Type |Description |Default |Mandatory
-|`--domaindir` |String |The directory containing the domains. The domains in this directory are backed up, and their config is used to determine the nodes which will also be upgraded. | `${as-install}/domains` | No
-|`--nodes` |String |Specifies the nodes to rollback if you want to selectively rollback certain nodes. Provide as a comma-separated list of node names. |All nodes in the cluster| No
+
+|`--domaindir`
+|String
+|The directory containing the domains. The domains in this directory are backed up, and their config is used to determine the nodes which will also be upgraded.
+| `${as-install}/domains`
+| No
+
+|`--nodes`
+|String
+|Specifies the nodes to rollback if you want to selectively rollback certain nodes. Provide as a comma-separated list of node names.
+|All nodes in the cluster
+| No
+
 |=======================================================================
 
 [#staged-upgrades]
@@ -103,8 +150,19 @@ It will then upgrade the nodes of the domains in the default domain dir, or the 
 [cols="1,1,4,1,1",options="header",]
 |=======================================================================
 |Option |Type |Description |Default |Mandatory
-|`--domaindir` |String |The directory containing the domains. The config of the domains in this directory are used to determine the nodes which will also be upgraded. | ${as-install}/domains | No
-|`--nodes` |String |Specifies the nodes to upgrade if you want to selectively upgrade certain nodes. Provide as a comma-separated list of node names. |All nodes in the cluster| No
+
+|`--domaindir`
+|String
+|The directory containing the domains. The config of the domains in this directory are used to determine the nodes which will also be upgraded.
+| ${as-install}/domains
+| No
+
+|`--nodes`
+|String
+|Specifies the nodes to upgrade if you want to selectively upgrade certain nodes. Provide as a comma-separated list of node names.
+|All nodes in the cluster
+| No
+
 |=======================================================================
 
 [#rollback-upgrade-script]
@@ -124,8 +182,19 @@ It will then rollback the nodes of the domains in the default domain dir, or the
 [cols="1,1,4,1,1",options="header",]
 |=======================================================================
 |Option |Type |Description |Default |Mandatory
-|`--domaindir` |String |The directory containing the domains. The config of the domains in this directory are used to determine the nodes which will also be rolled back. | `${as-install}/domains` | No
-|`--nodes` |String |Specifies the nodes to rollback if you want to selectively rollback certain nodes. Provide as a comma-separated list of node names. |All nodes in the cluster| No
+
+|`--domaindir`
+|String
+|The directory containing the domains. The config of the domains in this directory are used to determine the nodes which will also be rolled back.
+| `${as-install}/domains`
+| No
+
+|`--nodes`
+|String
+|Specifies the nodes to rollback if you want to selectively rollback certain nodes. Provide as a comma-separated list of node names.
+|All nodes in the cluster
+| No
+
 |=======================================================================
 
 [#cleanup-upgrade]
