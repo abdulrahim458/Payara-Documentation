@@ -295,7 +295,6 @@ a|[.breakable]`payara.security.solaris.jaasContext`
 a| `solarisRealm`
 a|`false`
 
-
 |===
 
 CAUTION: If both an annotation attribute and a MicroProfile Configuration property are defined for the same option then the configuration property always takes precedence.

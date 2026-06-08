@@ -1057,11 +1057,11 @@ Defines additional properties for the configuration of a virtual server.
 
 | *sso-max-inactive-seconds*
 | The number of seconds of no activity after which a user's SSO record becomes eligible for purging.
-| `300`
+a| `300`
 
 | *sso-reap-interval-seconds*
 | The number of seconds between purges of SSO records.
-| `60`
+a| `60`
 
 | *setCacheControl*
 | Comma separated list of Cache-Control response directives (See section 14.9 of: https://www.ietf.org/rfc/rfc2616.txt).
@@ -1150,7 +1150,6 @@ a| Specifies the fully qualified class name of a custom Catalina listener, where
 
 | *errorReportValve*
 | Specifies the fully qualified class name of a custom valve that produces default error pages for applications on this virtual server. Specify an empty string to disable the default error page mechanism for this virtual server.
-
 a| *`org.apache.catalina.valves.ErrorReportValve`*
 
 | *cacheTTL*

@@ -4688,11 +4688,11 @@ The following table describes subelements for the `message-destination` element.
 |===
 |Element |Required |Description
 
-a |xref:elements-of-deployment-descriptors.adoc#message-destination-name[`message-destination-name`]
+a|xref:elements-of-deployment-descriptors.adoc#message-destination-name[`message-destination-name`]
 |only one
 |Specifies the name of a logical message destination defined within the corresponding Jakarta EE deployment descriptor file.
 
-a| xref:elements-of-deployment-descriptors.adoc#jndi-name[`jndi-name`]
+a|xref:elements-of-deployment-descriptors.adoc#jndi-name[`jndi-name`]
 |only one
 a|Specifies the `jndi-name` of the associated entity.
 

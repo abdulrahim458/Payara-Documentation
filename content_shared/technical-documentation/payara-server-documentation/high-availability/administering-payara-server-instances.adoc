@@ -1067,7 +1067,7 @@ The following Docker Environment properties are used by the default Docker image
 
 [cols="50%,25%,25%", options="header"]
 |===
-|Environment Property| Use| Default Value
+|Environment Property |Use | Default Value
 
 a| `PAYARA_DAS_HOST`
 | The IP address or hostname of the Domain Administration Server that the instance will register itself to.

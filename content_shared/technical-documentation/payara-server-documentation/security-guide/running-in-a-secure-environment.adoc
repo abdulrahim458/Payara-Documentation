@@ -147,6 +147,7 @@ a|The `-passwordfile` option of the `asadmin` command specifies the name of a fi
 These password entries are stored in clear text in the password file, and rely on file system mechanisms for protection. Therefore, any password file created for use with the `-passwordfile` option should be protected with file system permissions.
 
 Additionally, any password file being used for a transient purpose, such as setting up SSH among nodes, should be deleted after it has served its purpose.
+
 |Use password aliases
 a|A password alias stores a password in encrypted form in the domain keystore, providing a clear-text alias name to use instead of the password.
 
@@ -154,6 +155,7 @@ To provide additional security, use the `create-password-alias` subcommand to cr
 
 |Do not run Payara Server as root
 a| Payara Server should run only as an unprivileged user, never as the `root` in *Nix systems or as an Administrator user in Windows systems.
+
 |Do not develop code on a production machine.
 a|Develop your applications first on a development machine and then move code to the production machine when it is completed and tested.
 
@@ -161,6 +163,7 @@ This process prevents bugs in the development environment from affecting the sec
 
 |Do not install development or sample software on a production machine.
 |Do not install development tools on production machines. Keeping development tools off the production machine reduces the leverage intruders have should they get partial access to a production machine.
+
 |Enable security auditing.
 a|If the operating system on which Payara Server runs supports security auditing of file and directory access, it is recommended using audit logging to track any denied directory or file access violations.
 
@@ -170,6 +173,7 @@ NOTE: Administrators should ensure that sufficient disk space is available for t
 a|Most operating systems can run additional software to secure a production environment. For example, an Intrusion Detection System (IDS) can detect attempts to modify the production environment.
 
 Refer to the vendor of your operating system for information about available software that can be used for this purpose.
+
 |Apply operating system patch sets and security patches.
 a|Refer to the
 vendor of your operating system for a list of recommended patch sets and

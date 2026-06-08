@@ -240,17 +240,17 @@ In some deployment-related `asadmin` commands, you can use an asterisk (`*`) as 
 |==============================================================
 |Version Expression |Selected Versions
 
-|`foo:*`
-|All versions of `foo`, including the untagged version
+a|`foo:*`
+a|All versions of `foo`, including the untagged version
 
-|`foo:BETA*`
-|All `BETA` versions of `foo`
+a|`foo:BETA*`
+a|All `BETA` versions of `foo`
 
-|`foo:3.*`
-|All `3.`x versions of `foo`
+a|`foo:3.*`
+a|All `3.`x versions of `foo`
 
-|`foo:patch*`
-|All `patch` versions of `foo`
+a|`foo:patch*`
+a|All `patch` versions of `foo`
 
 |==============================================================
 
@@ -260,17 +260,17 @@ The following table summarizes which `asadmin` subcommands are identifier-aware 
 |======================================================================
 |Identifier-Aware Subcommands |Expression-Aware Subcommands
 
-|`deploy`, `redeploy`
-|`undeploy`
+a|`deploy`, `redeploy`
+a|`undeploy`
 
-|`enable`
-|`disable`
+a|`enable`
+a|`disable`
 
-|`list-sub-components`
-|`show-component-status`
+a|`list-sub-components`
+a|`show-component-status`
 
-|`get-client-stubs`
-|`create-application-ref`, `delete-application-ref`
+a|`get-client-stubs`
+a|`create-application-ref`, `delete-application-ref`
 
 |======================================================================
 

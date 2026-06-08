@@ -299,7 +299,7 @@ The following configuration options are available here:
 |Determines if the Hazelcast member embedded in Payara will be restarted to apply any changes made
 
 |DAS Bind Address
-|Explicitly specifies the IP Address the DAS should bind the Hazelcast instance to.
+a|Explicitly specifies the IP Address the DAS should bind the Hazelcast instance to.
 By default, Hazelcast will try to choose the correct bind address from the IP addresses available on the host. If you find the DAS is binding to an incorrect IP Address the correct address can be specified here.
 
 |DAS Public Address

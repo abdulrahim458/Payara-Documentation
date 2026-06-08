@@ -154,7 +154,7 @@ The EJB thread pool can be configured with either the admin console or the asadm
 |Property Name |Value Constraints
 
 |thread-core-pool-size
-|Cannot be less than 0, larger than max int, and must be larger than `thread-max-pool-size`
+a|Cannot be less than 0, larger than max int, and must be larger than `thread-max-pool-size`
 
 |thread-max-pool-size
 |Cannot be less than 1 or greater than max int
