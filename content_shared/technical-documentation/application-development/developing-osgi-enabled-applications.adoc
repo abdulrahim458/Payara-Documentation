@@ -151,17 +151,23 @@ Their service mappings are as follows.
 |===
 |JMS Object |Service Interface |Service Properties |Comments
 
-|JMS Queue destination |`jakarta.jms.Queue` |`jndi-name` |`jndi-name` is set to the JNDI name of the queue
+|JMS Queue destination
+a|`jakarta.jms.Queue`
+a|`jndi-name`
+a|`jndi-name` is set to the JNDI name of the queue
 
-|JMS Topic destination |`jakarta.jms.Topic` |`jndi-name` |`jndi-name` is set to the JNDI name of the topic
+|JMS Topic destination
+a|`jakarta.jms.Topic`
+a|`jndi-name`
+a|`jndi-name` is set to the JNDI name of the topic
 
 |JMS connection factory
-|
+a|
 * `jakarta.jms.QueueConnectionFactory`
 * `jakarta.jms.TopicConnectionFactory`
 * `jakarta.jms.ConnectionFactory`
-|`jndi-name`
-|`jndi-name` is set to the JNDI name of the topic.
+a|`jndi-name`
+a|`jndi-name` is set to the JNDI name of the topic.
 
 The actual service interface depends on which type of connection factory was created.
 

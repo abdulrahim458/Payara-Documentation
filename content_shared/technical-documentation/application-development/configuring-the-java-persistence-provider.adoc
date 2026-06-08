@@ -275,13 +275,16 @@ Optional schema generation properties control the automatic creation of database
 The following options of the `asadmin deploy` command control the automatic creation of database tables at deployment.
 
 .The `asadmin deploy` Generation Options
-[cols="3,1,6a", options="header"]
+[cols="3,1,6", options="header"]
 |===
 |Option |Default |Description
 
-|`--createtables` |none |If `true`, causes database tables to be created for entities that need them. No unique constraints are created. If `false`, does not create tables. If not specified, the value of the `eclipselink.ddl-generation` property in `persistence.xml` is used.
+a|`--createtables`
+|none
+a|If `true`, causes database tables to be created for entities that need them. No unique constraints are created. If `false`, does not create tables. If not specified, the value of the `eclipselink.ddl-generation` property in `persistence.xml` is used.
 
-|`--dropandcreatetables` |none| If `true`, and if tables were automatically created when this  application was last deployed, tables from the earlier deployment are dropped and fresh ones are created.
+a|`--dropandcreatetables`
+a|none| If `true`, and if tables were automatically created when this  application was last deployed, tables from the earlier deployment are dropped and fresh ones are created.
 
 If `true`, and if tables were not automatically created when this application was last deployed, no attempt is made to drop any tables.
 
@@ -299,7 +302,9 @@ The following options of the `asadmin undeploy` command control the automatic re
 |===
 |Option |Default |Description
 
-|`--droptables` |none | If `true`, causes database tables that were automatically created when the entities were last deployed to be dropped when the entities are un-deployed.
+a|`--droptables`
+|none
+a| If `true`, causes database tables that were automatically created when the entities were last deployed to be dropped when the entities are un-deployed.
 
 If `false`, does not drop tables.
 

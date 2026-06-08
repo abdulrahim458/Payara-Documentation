@@ -510,24 +510,24 @@ This flexibility allows you to add JAR files to the application (including platf
 The following tables provide more detail about what parts of the JNLP file you can add to and modify.
 
 .Owned JNLP File Content
-[cols="4a,5",options="header"]
+[cols="4,5",options="header"]
 |===
 |JNLP File Fragment |Description
-|
+
+a|
 [source,xml]
 ----
 <jnlp codebase="xxx">...</jnlp>
 ----
 |Payara Server controls this content for application clients packaged in EAR files. The developer controls this content for application clients packaged in WAR files.
 
-|
+a|
 [source,xml]
 ----
 <jnlp href="xxx">...</jnlp>
 ----
 |Payara Server controls this content for application clients packaged in EAR files. The developer controls this content for application clients packaged in WAR files.
-
-|
+a|
 [source,xml]
 ----
 <jnlp>
@@ -536,7 +536,7 @@ The following tables provide more detail about what parts of the JNLP file you c
 ----
 |Payara Server must control the permissions requested for each JNLP file. All permissions are needed for the main file, which launches the ACC. The permissions requested for other JNLP documents depend on whether the JAR files referenced in those documents are signed.
 
-|
+a|
 [source,xml]
 ----
 <jnlp>
@@ -545,21 +545,23 @@ The following tables provide more detail about what parts of the JNLP file you c
   </application-desc>
 </jnlp>
 ----
-|Payara Server sets the `main-class` and the arguments to be passed to the client.
+a|Payara Server sets the `main-class` and the arguments to be passed to the client.
 
 |===
 
 .Defaulted JNLP File Content
-[cols="4a,5",options="header"]
+[cols="4,5",options="header"]
 |===
 |JNLP File Fragment |Description
-|
+
+a|
 [source,xml]
 ----
 <jnlp spec="xxx">...</jnlp>
 ----
 |Specifies the JNLP specification version.
-|
+
+a|
 [source,xml]
 ----
 <jnlp>
@@ -567,7 +569,8 @@ The following tables provide more detail about what parts of the JNLP file you c
 </jnlp>
 ----
 |Specifies the application title, vendor, home page, various description text values, icon images, and whether offline execution is allowed.
-|
+
+a|
 [source,xml]
 ----
 <jnlp>
@@ -581,10 +584,11 @@ The following tables provide more detail about what parts of the JNLP file you c
 |===
 
 .Merged JNLP File Content
-[cols="4a,5",options="header"]
+[cols="4,5",options="header"]
 |===
 |JNLP File Fragment |Description
-|
+
+a|
 [source,xml]
 ----
 <jnlp>
@@ -592,7 +596,8 @@ The following tables provide more detail about what parts of the JNLP file you c
 </jnlp>
 ----
 |You can specify one or more of the `os`, `arch`, `platform`, and `locale` attributes for the `<information>` element. You can also specify child elements; Payara Server provides no default children.
-|
+
+a|
 [source,xml]
 ----
 <jnlp>
@@ -600,7 +605,8 @@ The following tables provide more detail about what parts of the JNLP file you c
 </jnlp>
 ----
 |You can specify one or more of the `os`, `arch`, `platform`, and `locale` attributes for the `<resources>` element. You can also specify child elements; Payara Server provides no default children.
-|
+
+a|
 [source,xml]
 ----
 <jnlp>
@@ -610,7 +616,8 @@ The following tables provide more detail about what parts of the JNLP file you c
 </jnlp>
 ----
 |Adds JAR files to be included in the application to the JAR files provided by Payara Server.
-|
+
+a|
 [source,xml]
 ----
 <jnlp>
@@ -620,7 +627,8 @@ The following tables provide more detail about what parts of the JNLP file you c
 </jnlp>
 ----
 |Adds native libraries to be included in the application. Each entry in a JAR listed in a `<nativelib>` element must be a native library for the correct platform. The full syntax of the `<nativelib>` element lets the developer specify the platform for that native library.
-|
+
+a|
 [source,xml]
 ----
 <jnlp>
@@ -630,6 +638,7 @@ The following tables provide more detail about what parts of the JNLP file you c
 </jnlp>
 ----
 |Adds system properties to be included in the application to the system properties defined by Payara Server.
+
 a|
 [source,xml]
 ----
@@ -640,7 +649,8 @@ a|
 </jnlp>
 ----
 |Specifies another custom JNLP file.
-|
+
+a|
 [source,xml]
 ----
 <jnlp>
@@ -648,7 +658,8 @@ a|
 </jnlp>
 ----
 |Includes another custom JNLP file that specifies a component extension.
-|
+
+a|
 [source,xml]
 ----
 <jnlp>

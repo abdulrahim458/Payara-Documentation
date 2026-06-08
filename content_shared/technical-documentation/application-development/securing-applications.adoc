@@ -454,25 +454,43 @@ NOTE: The system property most frequently used in the `server.policy` file is `$
 |===
 |Property |Default |Description
 
-|`com.sun.aas.installRoot` |Depends on operating system |Specifies the directory where Payara Server is installed.
+a|`com.sun.aas.installRoot`
+|Depends on operating system
+|Specifies the directory where Payara Server is installed.
 
-|`com.sun.aas.instanceRoot` |Depends on operating system |Specifies the top level directory for a server instance.
+a|`com.sun.aas.instanceRoot`
+|Depends on operating system
+|Specifies the top level directory for a server instance.
 
-|`com.sun.aas.hostName` |`none` |Specifies the name of the host (machine).
+a|`com.sun.aas.hostName`
+a|`none`
+|Specifies the name of the host (machine).
 
-|`com.sun.aas.javaRoot` |Depends on operating system |Specifies the installation directory for the Java runtime.
+a|`com.sun.aas.javaRoot`
+|Depends on operating system
+|Specifies the installation directory for the Java runtime.
 
-|`com.sun.aas.imqLib` |Depends on operating system |Specifies the library directory for the Open Message Queue software.
+a|`com.sun.aas.imqLib`
+|Depends on operating system
+|Specifies the library directory for the Open Message Queue software.
 
-|`com.sun.aas.configName` |`server-config` |Specifies the name of the configuration used by a server instance.
+a|`com.sun.aas.configName`
+a|`server-config`
+|Specifies the name of the configuration used by a server instance.
 
-|`com.sun.aas.instanceName` |`server1` |Specifies the name of the server instance.
+a|`com.sun.aas.instanceName`
+a|`server1`
+|Specifies the name of the server instance.
 
-|`com.sun.aas.clusterName` |`cluster1` |Specifies the name of the cluster. This property is only set on clustered server instances.
+a|`com.sun.aas.clusterName`
+a|`cluster1`
+a|Specifies the name of the cluster. This property is only set on clustered server instances.
 
 WARNING: This property is not supported for *deployment groups*.
 
-|`com.sun.aas.domainName` |`domain1` |Specifies the name of the domain.
+a|`com.sun.aas.domainName`
+a|`domain1`
+|Specifies the name of the domain.
 
 |===
 
@@ -654,12 +672,13 @@ asadmin set server-config.security-service.message-security-config.provider-conf
 The following table describes these message security provider properties.
 
 .Message Security Provider Properties
-[cols="2,4,4a",options="header"]
+[cols="2,4,4",options="header"]
 |===
-
 |Property |Default |Description
-|`security.config` |`domain-dir/config/wss-server-config-1.0.xml`
-|
+
+a|`security.config`
+a|`domain-dir/config/wss-server-config-1.0.xml`
+a|
 Specifies the location of the message security configuration file. To point to a configuration file in the `domain-dir/config` directory, use the system property like this:
 
 [source,text]
@@ -667,15 +686,23 @@ Specifies the location of the message security configuration file. To point to a
 ${com.sun.aas.instanceRoot}/config/wss-server-config-1.0.xml
 ----
 
-|`debug` |`false` |If `true`, enables dumping of server provider debug messages to the server log.
+a|`debug`
+a|`false`
+a|If `true`, enables dumping of server provider debug messages to the server log.
 
-|`dynamic.username.password` |`false` |If `true`, signals the provider runtime to collect the username and password from the `CallbackHandler` for each request.
+a|`dynamic.username.password`
+a|`false`
+a|If `true`, signals the provider runtime to collect the username and password from the `CallbackHandler` for each request.
 
 If `false`, the username and password for `wsse:UsernameToken(s)` is collected once, during module initialization. This property is only applicable for a `ClientAuthModule`.
 
-|`encryption.key.alias` |`s1as` |Specifies the encryption key used by the provider. The key is identified by its `keystore` alias.
+a|`encryption.key.alias`
+a|`s1as`
+a|Specifies the encryption key used by the provider. The key is identified by its `keystore` alias.
 
-|`signature.key.alias` |`s1as` |Specifies the signature key used by the provider. The key is identified by its `keystore` alias.
+a|`signature.key.alias`
+a|`s1as`
+a|Specifies the signature key used by the provider. The key is identified by its `keystore` alias.
 
 |===
 
@@ -1178,15 +1205,34 @@ The following mechanisms can be used:
 [cols="2,10", options="header"]
 |===
 |Value |Description
-|`Basic` |Use _BasicAuthenticationMechanism_ as mechanism.
-|`Form` |Use _FormAuthenticationMechanism_ as mechanism.
-|`CustomForm` | Use _CustomFormAuthenticationMechanism_ as mechanism.
-|`JWT` | Use the custom Payara _JWTAuthenticationMechanism_ as mechanism.
-|`Certificate` | Use the custom Payara _CertificateAuthenticationMechanism_ as mechanism.
-|`Azure` | Use the custom Payara _AzureOpenIdAuthenticationMechanism_ as mechanism.
-|`Google` | Use the custom Payara _GoogleOpenIdAuthenticationMechanism_ as mechanism.
-|`OAuth2` |Use the custom Payara _OAuth2AuthenticationMechanism_ as mechanism.
-|<any Fully Qualified Class Name> |Use the `HttpAuthenticationMechanism` indicated by the class name.
+
+a|`Basic`
+|Use _BasicAuthenticationMechanism_ as mechanism.
+
+a|`Form`
+|Use _FormAuthenticationMechanism_ as mechanism.
+
+a|`CustomForm`
+| Use _CustomFormAuthenticationMechanism_ as mechanism.
+
+a|`JWT`
+| Use the custom Payara _JWTAuthenticationMechanism_ as mechanism.
+
+a|`Certificate`
+| Use the custom Payara _CertificateAuthenticationMechanism_ as mechanism.
+
+a|`Azure`
+| Use the custom Payara _AzureOpenIdAuthenticationMechanism_ as mechanism.
+
+a|`Google`
+| Use the custom Payara _GoogleOpenIdAuthenticationMechanism_ as mechanism.
+
+a|`OAuth2`
+|Use the custom Payara _OAuth2AuthenticationMechanism_ as mechanism.
+
+a|<any Fully Qualified Class Name>
+a|Use the `HttpAuthenticationMechanism` indicated by the class name.
+
 |===
 
 NOTE: When no parameter is specified, the standard rules of Jakarta Security are active (only 1 mechanism allowed per application/module).
@@ -1490,24 +1536,43 @@ Not all DN parts are supported. The following is the list of all parts that are 
 [cols="2,4,6", options="header"]
 |===
 |DN Part | Description |Object ID
+
 |CN |Common Name |2.5.4.3
+
 |SURNAME |Surname |2.5.4.4
+
 |SERIALNUMBER |Serial Number of the certificate |2.5.4.5
+
 |C |Country |2.5.4.6
+
 |L |Locality |2.5.4.7
+
 |ST |State |2.5.4.8
+
 |STREET |Street |2.5.4.9
+
 |O |Organisation |2.5.4.10
+
 |OU |Organisation Unit |2.5.4.11
+
 |T |Title |2.5.4.12
+
 |GIVENNAME |Given Name |2.5.4.42
+
 |INITIALS |Initials |2.5.4.43
+
 |GENERATION |Generation |2.5.4.44
+
 |DNQUALIFIER |DN Qualifier |2.5.4.46
+
 |UID |User ID |0.9.2342.19200300.100.1.1
+
 |DC |Domain Component |0.9.2342.19200300.100.1.25
+
 |EMAILADDRESS |E-Mail address |1.2.840.113549.1.9.1
+
 |IP |IP Address |1.3.6.1.4.1.42.2.11.2.1
+
 |===
 
 [#advanced-groups-conf-using-admin-console]

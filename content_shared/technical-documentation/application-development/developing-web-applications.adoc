@@ -254,24 +254,28 @@ The following table describes attributes for the `cache` tag.
 [cols="2,2,6a",options="header"]
 |===
 |Attribute |Default |Description
-|`key` |`ServletPath_Suffix`
+
+a|`key`
+a|`ServletPath_Suffix`
 |(optional) The name used by the container to access the cached entry. The cache key is suffixed to the servlet path to generate a key to access the cached entry.
 
-If no key is specified, a number is generated according to the position of the tag in the page.
-
-|`timeout` |`60s`
-|(optional) The time in seconds after which the body of the tag is executed and the cache is refreshed. By default, this value is interpreted in seconds.
+a|`timeout`
+a|`60s`
+a|(optional) The time in seconds after which the body of the tag is executed and the cache is refreshed. By default, this value is interpreted in seconds.
 
 To specify a different unit of time, add a suffix to the timeout value as follows: `s` for seconds, `m` for minutes, `h` for hours, `d` for days. For example, `2h` specifies two hours.
 
-|`nocache` |`false`
-|(optional) If set to `true`, the body content is executed and served as if there were no `cache` tag. This offers a way to programmatically decide whether the cached response is sent or whether the body has to be executed, though the response is not cached.
+a|`nocache`
+a|`false`
+a|(optional) If set to `true`, the body content is executed and served as if there were no `cache` tag. This offers a way to programmatically decide whether the cached response is sent or whether the body has to be executed, though the response is not cached.
 
-|`refresh` |`false`
-|(optional) If set to `true`, the body content is executed and the response is cached again. This lets you programmatically refresh the cache immediately regardless of the `timeout` setting.
+a|`refresh`
+a|`false`
+a|(optional) If set to `true`, the body content is executed and the response is cached again. This lets you programmatically refresh the cache immediately regardless of the `timeout` setting.
 
-|`scope` |`application`
-|(optional) The scope of the cache. Can be `request`, `session`, or `application`.
+a|`scope`
+a|`application`
+a|(optional) The scope of the cache. Can be `request`, `session`, or `application`.
 
 See xref:#caching-scope[Caching Scope].
 
@@ -316,15 +320,19 @@ The following table describes the attributes used for the `flush` tag.
 [cols="2,2,6a",options="header"]
 |===
 |Attribute |Default |Description
-|`key` |`ServletPath_Suffix`
+
+a|`key`
+a|`ServletPath_Suffix`
 |(optional) The name used by the container to access the cached entry. The cache key is suffixed to the servlet path to generate a key to access the cached entry.
 
 If no key is specified, a number is generated according to the position of the tag in the page.
 
-|`scope` |`application`
-|(optional) The scope of the cache. Can be `request`, `session`, or `application`.
+a|`scope`
+a|`application`
+a|(optional) The scope of the cache. Can be `request`, `session`, or `application`.
 
 See xref:#caching-scope[Caching Scope]
+
 |===
 
 [#examples-of-flush]
@@ -443,23 +451,41 @@ For more information about transaction recovery, see xref:using-the-transaction-
 |===
 |Java Object Type |Failover Support
 
-|Co-located or distributed stateless session, stateful session, or entity
-bean references |Yes
+a|Co-located or distributed stateless session, stateful session, or entity
+bean references
+|Yes
 
-|JNDI context |Yes, for `InitialContext` and `java:comp/env` namespace references
+a|JNDI context
+a|Yes, for `InitialContext` and `java:comp/env` namespace references
 
-|`UserTransaction` |Yes, but if the instance that fails is never
+a|`UserTransaction`
+a|Yes, but if the instance that fails is never
 restarted, any prepared global transactions are lost and might not be
 correctly rolled back or committed.
 
-|JDBC DataSource |No
-|Jakarta Messaging (JMS) ConnectionFactory and Destination |No
-|Jakarta Mail Session |No
-|Connection Factory |No
-|Administered Object |No
-|SOAP Web Service reference |No
-|Serializable Java types |Yes
-|Extended persistence context |No
+|JDBC DataSource
+|No
+
+|Jakarta Messaging (JMS) ConnectionFactory and Destination
+|No
+
+|Jakarta Mail Session
+|No
+
+|Connection Factory
+|No
+
+|Administered Object
+|No
+
+|SOAP Web Service reference
+|No
+
+|Serializable Java types
+|Yes
+
+|Extended persistence context
+|No
 
 |===
 
@@ -972,17 +998,35 @@ You can configure the following `init-param` values for the `SSIServlet`.
 |===
 |init-param |Type |Default |Description
 
-|`buffered` |`boolean` |`false` |Specifies whether the output should be buffered.
+a|`buffered`
+a|`boolean`
+a|`false`
+|Specifies whether the output should be buffered.
 
-|`debug` |`int` |`0` (for no debugging) |Specifies the debugging level.
+a|`debug`
+a|`int`
+a|`0` (for no debugging)
+|Specifies the debugging level.
 
-|`expires` |`Long` |`Expires` header in HTTP response not set |Specifies the expiration time in seconds.
+a|`expires`
+a|`Long`
+a|`Expires` header in HTTP response not set
+|Specifies the expiration time in seconds.
 
-|`inputEncoding` |`String` |OS encoding |Specifies encoding for the SSI input if there is no URL content encoding specified.
+a|`inputEncoding`
+a|`String`
+|OS encoding
+|Specifies encoding for the SSI input if there is no URL content encoding specified.
 
-|`isVirtualWebappRelative` |`boolean` |`false` (relative to the given SSI file) |Specifies whether the virtual path of the `#include` directive is relative to the `content-root`.
+a|`isVirtualWebappRelative`
+a|`boolean`
+a|`false` (relative to the given SSI file)
+a|Specifies whether the virtual path of the `#include` directive is relative to the `content-root`.
 
-|`outputEncoding` |`String` |`UTF-8` |Specifies encoding for the SSI output.
+a|`outputEncoding`
+a|`String`
+a|`UTF-8`
+|Specifies encoding for the SSI output.
 
 |===
 
@@ -1034,15 +1078,30 @@ You can configure the following `init-param` values for the `CGIServlet`.
 |===
 |Parameter |Type |Default |Description
 
-|`cgiPathPrefix` |`String` |`WEB-INF/cgi` |Specifies the subdirectory containing the CGI programs.
+a|`cgiPathPrefix`
+a|`String`
+a|`WEB-INF/cgi`
+|Specifies the subdirectory containing the CGI programs.
 
-|`debug` |`int` |`0` (for no debugging) |Specifies the debugging level.
+a|`debug`
+a|`int`
+a|`0` (for no debugging)
+|Specifies the debugging level.
 
-|`executable` |`String` |`perl` |Specifies the executable for running the CGI script.
+a|`executable`
+a|`String`
+a|`perl`
+|Specifies the executable for running the CGI script.
 
-|`parameterEncoding` |`String` |`System.getProperty("file.encoding",  "UTF-8")` |Specifies the parameter's encoding.
+a|`parameterEncoding`
+a|`String`
+a|`System.getProperty("file.encoding",  "UTF-8")`
+|Specifies the parameter's encoding.
 
-|`passShellEnvironment` |`boolean` |`false` |Specifies whether to pass shell environment properties to the CGI program.
+a|`passShellEnvironment`
+a|`boolean`
+a|`false`
+|Specifies whether to pass shell environment properties to the CGI program.
 
 |===
 

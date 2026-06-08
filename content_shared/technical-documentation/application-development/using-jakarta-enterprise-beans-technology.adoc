@@ -416,27 +416,39 @@ For example, failover might work because the class implementing that type is *se
 |===
 |Java Object Type |Failover Support
 
-|Co-located or distributed stateless session, stateful session, or entity bean reference |Yes
+|Co-located or distributed stateless session, stateful session, or entity bean reference
+|Yes
 
-|JNDI context |Yes, `InitialContext` and `java:comp/env`
+|JNDI context
+a|Yes, `InitialContext` and `java:comp/env`
 
-|`UserTransaction` |Yes, but if the instance that fails is never restarted, any prepared global transactions are lost and might not be correctly rolled back or committed.
+a|`UserTransaction`
+|Yes, but if the instance that fails is never restarted, any prepared global transactions are lost and might not be correctly rolled back or committed.
 
-|JDBC DataSource |No
+|JDBC DataSource
+|No
 
-|Java Message Service (JMS) ConnectionFactory, Destination |No
+|Java Message Service (JMS) ConnectionFactory, Destination
+|No
 
-|JavaMail Session |No
+|JavaMail Session
+|No
 
-|Connection Factory |No
+|Connection Factory
+|No
 
-|Administered Object |No
+|Administered Object
+|No
 
-|Web service reference |No
+|Web service reference
+|No
 
-|Serializable Java types |Yes
+|Serializable Java types
+|Yes
 
-|Extended persistence context |No
+|Extended persistence context
+|No
+
 |===
 
 For more information about the `InitialContext`, see

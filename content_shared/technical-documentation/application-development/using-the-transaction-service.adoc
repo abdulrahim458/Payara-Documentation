@@ -18,12 +18,24 @@ Not all database vendors support all transaction isolation levels available in t
 .Transaction Isolation Levels
 [cols="2,3,5", options="header"]
 |===
-|Transaction Isolation Level |`getTransactionIsolation` Return Value |Description
+|Transaction Isolation Level a|`getTransactionIsolation` Return Value |Description
 
-|`read-uncommitted` |`1` |Dirty reads, non-repeatable reads, and phantom reads can occur.
-|`read-committed` |`2` |Dirty reads are prevented; non-repeatable reads and phantom reads can occur.
-|`repeatable-read` |`4` |Dirty reads and non-repeatable reads are prevented; phantom reads can occur.
-|`serializable` |`8` |Dirty reads, non-repeatable reads and phantom reads are prevented.
+a|`read-uncommitted`
+a|`1`
+|Dirty reads, non-repeatable reads, and phantom reads can occur.
+
+a|`read-committed`
+a|`2`
+|Dirty reads are prevented; non-repeatable reads and phantom reads can occur.
+
+a|`repeatable-read`
+a|`4`
+|Dirty reads and non-repeatable reads are prevented; phantom reads can occur.
+
+a|`serializable`
+a|`8`
+|Dirty reads, non-repeatable reads and phantom reads are prevented.
+
 |===
 
 By default, the transaction isolation level is undefined (empty), and the JDBC driver's default isolation level is used. You can specify the transaction isolation level in the following ways:
