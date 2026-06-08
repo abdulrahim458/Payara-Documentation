@@ -2,36 +2,60 @@
 
 All of the options listed below are case-insensitive starting from release `4.1.1.171`; prior versions need the option to be set with https://en.wikipedia.org/wiki/Camel_case[camelCase notation^]
 
-[cols=",a,",options="header",]
+[cols="2,3,2",options="header",]
 |=======================================================================
 |Configuration Option| Description| Default Value
-a|[.breakable]`--accesslog <directory-path>`
-|Sets user defined directory path for the access log.|
-|`--accesslogformat`
-|Sets user defined log format for the access log.|"%client.name% %auth-user-name% %datetime% %request% %status% %response.length%"
-|`--accessloginterval`
-|Sets user defined access log write interval.|300
-|`--accesslogsuffix`
-|Sets user defined simple date time suffix for access log filenames.|`yyyy-MM-dd`
-|`--accesslogprefix`
-|Sets user defined prefix for access log filenames.|
-a|[.breakable]`--additionalrepository <repo-url>`
-|Specifies an additional repository to search for deployable artefacts in. 
-Supports BASIC authentication. 
-For example https://USER:PASSWORD@example.payara.fish/repositories/repo/. 
 
-You may also use aliases https://USER:{ALIAS=ALIAS_NAME}@example.payara.fish/repositories/repo/|
-|`--addjars <jar-path>`
-|__Deprecated__. Use `--addlibs` instead|
-|`--addlibs <file or directory path>`|<file-or-directory-path> add specified jar files into classloader, or packaged into an Uber JAR. Multiple files can be specified as colon separated values.|
-|`--autobindhttp`
-|Enables auto-binding for the HTTP port.|_false_
+a|[.breakable]`--accesslog <directory-path>`
+|Sets user defined directory path for the access log.
+|
+
+a|`--accesslogformat`
+|Sets user defined log format for the access log.
+|"%client.name% %auth-user-name% %datetime% %request% %status% %response.length%"
+
+a|`--accessloginterval`
+|Sets user defined access log write interval.
+|300
+
+a|`--accesslogsuffix`
+|Sets user defined simple date time suffix for access log filenames.
+a|`yyyy-MM-dd`
+
+a|`--accesslogprefix`
+|Sets user defined prefix for access log filenames.
+|
+
+a|[.breakable]`--additionalrepository <repo-url>`
+|Specifies an additional repository to search for deployable artefacts in.
+Supports BASIC authentication. 
+For example https://USER:PASSWORD@example.payara.fish/repositories/repo/.
+
+You may also use aliases https://USER:{ALIAS=ALIAS_NAME}@example.payara.fish/repositories/repo/
+|
+
+a|`--addjars <jar-path>`
+a|__Deprecated__. Use `--addlibs` instead
+|
+
+a|`--addlibs <file or directory path>`
+|<file-or-directory-path> add specified jar files into classloader, or packaged into an Uber JAR. Multiple files can be specified as colon separated values.
+|
+
+a|`--autobindhttp`
+|Enables auto-binding for the HTTP port.
+|_false_
+
 a|[.breakable]`--autobindrange <number-of-ports>`
-|Sets the range for HTTP and HTTPS port auto-binding.|5
-|`--autobindssl`
-|Enables auto-binding for the HTTPS port.|_false_
-|`--clustermode`
-|Modifies the cluster discovery mode of  Payara Micro when finding members of the cluster. 
+|Sets the range for HTTP and HTTPS port auto-binding.
+|5
+
+a|`--autobindssl`
+|Enables auto-binding for the HTTPS port.
+|_false_
+
+a|`--clustermode`
+a|Modifies the cluster discovery mode of  Payara Micro when finding members of the cluster.
 
 Options are:
 
@@ -39,126 +63,247 @@ Options are:
 * `tcpip:host:port`
 * `domain:dashost:port`
 |multicast
+
 a|[.breakable]`--clustername <cluster-name>`
-|Sets the cluster group name.|
-|`--clusterpassword <cluster-password>`|Sets the cluster group password.|
-|`--contextroot <context-path>`|Sets the context root of the application originating from the `--deploy` option given first that does not specify a context root itself. See
+|Sets the cluster group name.
+|
+
+a|`--clusterpassword <cluster-password>`
+|Sets the cluster group password.
+
+|
+a|`--contextroot <context-path>`
+|Sets the context root of the application originating from the `--deploy` option given first that does not specify a context root itself. See
 xref:../deploying-applications/deploy-applications.adoc#define-context-root[Define context root] for more details.
 |
+
 a|[.breakable]`--copytouberjar <directory-path`
-|<directory-path> copy a directory into the root of an uber JAR|
+|<directory-path> copy a directory into the root of an uber JAR
+|
+
 a|[.breakable]`--deploy <file-path>[:<context-path]`
-|Specifies a WAR file to deploy and optionally the context path to use for that application.| If not set, has no value and is not used.
+|Specifies a WAR file to deploy and optionally the context path to use for that application.
+| If not set, has no value and is not used.
+
 a|[.breakable]`--deploydir <directory-path>`
 |Sets a directory which will be scanned for EAR, WAR, and RAR files for auto-deployment.
 |If not set, has no value and is not used.
+
 a|[.breakable]`--deployfromgav <list-of-artefacts>`
-|Specifies a comma separated `groupId, artifactId, versionNumber` of an artefact
-to deploy from a repository.|
+a|Specifies a comma separated `groupId, artifactId, versionNumber` of an artefact
+to deploy from a repository.
+|
+
 a|[.breakable]`--deploymentdir <directory-path>`
-|See `--deploydir`.|
-|`--disablephonehome`
-|Disables the _Phone Home_ service for this instance. |If not set, the _Phone Home_
+a|See `--deploydir`.
+|
+
+a|`--disablephonehome`
+|Disables the _Phone Home_ service for this instance.
+a|If not set, the _Phone Home_
 service is active.
+
 a|[.breakable]`--domainconfig <file-path>`
 |Overrides the server configuration with an alternative _domain.xml_ file.
 |If not set, the domain.xml contained in the Payara Micro JAR is used.
-|`--enableDynamicLogging`
-|Watch the logging properties file for changes, and apply them dynamically |
+
+a|`--enableDynamicLogging`
+|Watch the logging properties file for changes, and apply them dynamically
+|
+
 a|[.breakable]`--enablehealthcheck <boolean>`
-|enables/disables the HealthCheck Service.|_false_
-|`--enablerequesttracing`
-|Enables the Request Tracing Service and optionally sets the threshold unit
-and/or value.|
-|`--enablerequesttracingadaptivesampling <boolean>`|<boolean> Enables the adaptive sampling. Can also be enabled by configuring any one of the adaptive sampling configuration options|
+|enables/disables the HealthCheck Service.
+|_false_
+
+a|`--enablerequesttracing`
+a|Enables the Request Tracing Service and optionally sets the threshold unit
+and/or value.
+|
+
+a|`--enablerequesttracingadaptivesampling <boolean>`
+|<boolean> Enables the adaptive sampling. Can also be enabled by configuring any one of the adaptive sampling configuration options
+|
+
 a|[.breakable]`--globalcontextroot <context-path>`
-|Sets the global context root of any deployed application. This will prepend the context root. See
-xref:../deploying-applications/deploy-applications.adoc#define-global-context-root[Define global context root] for more details.|
-|`--group <group-name>`
-|Sets the instance's group.|
-|`--help`
-|Displays the configuration options and then exits. |If not set, this option is
+a|Sets the global context root of any deployed application. This will prepend the context root. See
+xref:../deploying-applications/deploy-applications.adoc#define-global-context-root[Define global context root] for more details.
+|
+
+a|`--group <group-name>`
+|Sets the instance's group.
+|
+
+a|`--help`
+|Displays the configuration options and then exits.
+a|If not set, this option is
 not used.
-|`--hostaware`
-|Enable Host Aware Partitioning. When enabled cluster backups will not be stored
-on members with the same IP Address.| _false_
+
+a|`--hostaware`
+a|Enable Host Aware Partitioning. When enabled cluster backups will not be stored
+on members with the same IP Address.
+| _false_
+
 a|[.breakable]`--hzconfigfile <file-path>`
-|Sets the Hazelcast configuration file to use for overriding the built-in Hazelcast
-cluster configuration.| If not set, the built-in Hazelcast configuration file
-is used.
-|`--hzinitialjoinwait <time in seconds>`|Sets the time in seconds for Payara Micro to wait before attempting to join the
-data grid.|1
-|`--hzPublicAddress <host-name or ip>`|The Public Address to use for this Data Grid Node. Used when the node is behind a NAT|
-|`--instancegroup <group-name>`|See `--group`|
-|`--interfaces`|Specifies the Interfaces that the data grid discovery mode should use to listen. Can be comma separated, e.g. 127.0.0.1,192.168.0.*|
-|`--lite`
-|Sets the micro container to lite mode, which means it clusters with other Payara
-Micro instances but does not store clustered data.| _false_
-|`--logo`
-|Reveals either the **#BadAssFish** or a custom logo on boot.|
+a|Sets the Hazelcast configuration file to use for overriding the built-in Hazelcast
+cluster configuration.
+| If not set, the built-in Hazelcast configuration file is used.
+
+a|`--hzinitialjoinwait <time in seconds>`
+|Sets the time in seconds for Payara Micro to wait before attempting to join the
+data grid.
+|1
+
+a|`--hzPublicAddress <host-name or ip>`
+|The Public Address to use for this Data Grid Node. Used when the node is behind a NAT
+|
+
+a|`--instancegroup <group-name>`
+|See `--group`
+|
+
+a|`--interfaces`
+|Specifies the Interfaces that the data grid discovery mode should use to listen. Can be comma separated, e.g. 127.0.0.1,192.168.0.*
+|
+
+a|`--lite`
+a|Sets the micro container to lite mode, which means it clusters with other Payara
+Micro instances but does not store clustered data.
+| _false_
+
+a|`--logo`
+|Reveals either the **#BadAssFish** or a custom logo on boot.
+|
+
 a|[.breakable]`--logproperties <file-path>`
-|Allows user to set their own logging properties file.|
-|`--logtofile <file-path>`
-|Outputs all the Log entries to a user defined file.|
+|Allows user to set their own logging properties file.
+|
+
+a|`--logtofile <file-path>`
+|Outputs all the Log entries to a user defined file.
+|
+
 a|[.breakable]`--maxhttpthreads <max-thread-count>`
-|Sets the maximum number of threads in the HTTP thread pool.|10
+|Sets the maximum number of threads in the HTTP thread pool.
+|10
+
 a|[.breakable]`--mcaddress <multicast-address>`
-|Sets the cluster multicast group if multicast cluster mode is selected. See `--clustermode`.|
+a|Sets the cluster multicast group if multicast cluster mode is selected. See `--clustermode`.
+|
+
 a|[.breakable]`--mcport <multicast-port>`
-|Sets the cluster multicast port if multicast cluster mode is selected.  See `--clustermode`.|2904
+a|Sets the cluster multicast port if multicast cluster mode is selected.  See `--clustermode`.
+|2904
+
 a|[.breakable]`--minhttpthreads <min-thread-count>`
-|Sets the minimum number of threads in the HTTP thread pool.|10
-|`--name <instance-name>`
-|Sets the instance name. |Generated Universally Unique Identifier
+|Sets the minimum number of threads in the HTTP thread pool.
+|10
+
+a|`--name <instance-name>`
+|Sets the instance name.
+a|Generated Universally Unique Identifier
 _(Adjective-Fish)_.
-|`--nested`
-|Do not unpack the Nested Jars when booting the server. This is generally slower
-than unpacking the runtime.| _false_
-|`--nocluster`
-|Disables clustering for this instance.| _false_
-|`--noHazelcast`
-|Disables Hazelcast and clustering for this instance.| _false_
-|`--nohostaware`|Disables Host Aware Partitioning. See `--hostaware`|
+
+a|`--nested`
+a|Do not unpack the Nested Jars when booting the server. This is generally slower
+than unpacking the runtime.
+| _false_
+
+a|`--nocluster`
+|Disables clustering for this instance.
+| _false_
+
+a|`--noHazelcast`
+|Disables Hazelcast and clustering for this instance.
+| _false_
+
+a|`--nohostaware`|Disables Host Aware Partitioning. See `--hostaware`
+|
+
 a|[.breakable]`--outputuberjar <file-path>`
-|Packages up an Uber JAR at the specified path based on the provided command
-line arguments and exit.|
-|`--outputlauncher`
-|Create launcher `launch-micro.jar` into the root directory that is specified by `--rootdir` and exit.|
+a|Packages up an Uber JAR at the specified path based on the provided command
+line arguments and exit.
+|
+
+a|`--outputlauncher`
+a|Create launcher `launch-micro.jar` into the root directory that is specified by `--rootdir` and exit.
+|
+
 a|[.breakable]`--port <http-port-number>`
-|Sets the HTTP port that the instance will bind to.| 8080
+|Sets the HTTP port that the instance will bind to.
+| 8080
+
 a|[.breakable]`--postbootcommandfile <file-path>`
-|Provides a file of asadmin commands to run *after booting the server*.|
+|Provides a file of asadmin commands to run *after booting the server*.
+|
+
 a|[.breakable]`--postdeploycommandfile <file-path>`
-|Provides a file of asadmin commands to run *after all deployments have completed*.|
+|Provides a file of asadmin commands to run *after all deployments have completed*.
+|
+
 a|[.breakable]`--prebootcommandfile <file-path>`
-|Provides a file of asadmin commands to run *before booting the server*.|
-|`--requesttracingadaptivesamplingtargetcount`|The target number of traces to sample per the configured time window | 6
-|`--requesttracingadaptivesamplingtimeunit`| The time unit for the adaptive sample time; a `java.util.concurrent.TimeUnit` value (also in singular) or one of the short forms: `ns`, `us`/`µs`, `ms`, `s`, `m`/`min`/`mins`, `h` or `d`.  | MINUTES
-|`--requesttracingadaptivesamplingtimevalue`| The period of time to attempt to hit the adaptive sample target count in | 1
+|Provides a file of asadmin commands to run *before booting the server*.
+|
+
+a|`--requesttracingadaptivesamplingtargetcount`
+|The target number of traces to sample per the configured time window
+| 6
+
+a|`--requesttracingadaptivesamplingtimeunit`
+| The time unit for the adaptive sample time; a `java.util.concurrent.TimeUnit` value (also in singular) or one of the short forms: `ns`, `us`/`µs`, `ms`, `s`, `m`/`min`/`mins`, `h` or `d`.
+| MINUTES
+
+a|`--requesttracingadaptivesamplingtimevalue`
+| The period of time to attempt to hit the adaptive sample target count in
+| 1
+
 a|[.breakable]`--requesttracingthresholdunit <threshold-unit-notation>`
-|Sets the time unit for the requestTracingThresholdValue option, i.e. `SECONDS`,
-`ms`, `days` etc.|
+a|Sets the time unit for the requestTracingThresholdValue option, i.e. `SECONDS`,
+`ms`, `days` etc.
+|
+
 a|[.breakable]`--requesttracingthresholdvalue <threshold-unit-value>`
-|Sets the threshold time before a request is traced.|
+|Sets the threshold time before a request is traced.
+|
+
 a|[.breakable]`--rootdir <directory-path>`
 |Sets the root configuration directory and saves the configuration across restarts.
-|Defaults to `java.io.tmpdir`.
-|`--secretsdir`|Directory to read configuration from key-value files using the Microprofile config api.|
-|`--shutdowngrace <duration-ms>`|  After server shutdown is initiated the server waits this period of time to finish ongoing requests before terminating. Currently, new requests are still accepted during this grace period. | 0
+a|Defaults to `java.io.tmpdir`.
+
+a|`--secretsdir`
+|Directory to read configuration from key-value files using the Microprofile config api.
+|
+
+a|`--shutdowngrace <duration-ms>`
+|  After server shutdown is initiated the server waits this period of time to finish ongoing requests before terminating. Currently, new requests are still accepted during this grace period.
+| 0
+
 a|[.breakable]`--sslport <ssl-port-number>`
-|Sets the HTTPs port that the instance will bind to.| If not set, has no value
+a|Sets the HTTPs port that the instance will bind to.
+| If not set, has no value
 and HTTPS is disabled.
+
 a|[.breakable]`--sslcert <certificate-name>`
-|Sets the SSL certificate name to be used from the keystore for SSL| `s1as`
+a|Sets the SSL certificate name to be used from the keystore for SSL
+| `s1as`
+
 a|[.breakable]`--startport <cluster-start-port-number>`
-|Sets the cluster start port number.|5900
+|Sets the cluster start port number.
+|5900
+
 a|[.breakable]`--systemproperties <file-path>`
-|Reads system properties from a file.|
+|Reads system properties from a file.
+|
+
 a|[.breakable]`--unpackdir <directory-path>`
-|Unpack the Nested Jar runtime jars to the specified directory.| Unpack to
-`java.io.tmpdir`.
-|`--version`
-|Displays the version information|
-|`--warmup`
-|Exit the server immediately after configuration is done, applications are deployed and it's ready to serve requests. |
+a|Unpack the Nested Jar runtime jars to the specified directory.
+a| Unpack to `java.io.tmpdir`.
+
+a|`--version`
+|Displays the version information
+|
+
+a|`--warmup`
+|Exit the server immediately after configuration is done, applications are deployed and it's ready to serve requests.
+|
+
 |=======================================================================

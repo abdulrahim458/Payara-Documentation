@@ -328,6 +328,7 @@ Payara Micro supports the following system properties:
 |*payaramicro.name*|`--name`
 |*payaramicro.instanceGroup*|`--instancegroup`
 |*payaramicro.initialJoinWait*|`--hzinitialjoinwait`
+
 |==================================================
 
 [#configuring-alternate-keystores-for-ssl]
