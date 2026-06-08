@@ -1902,13 +1902,14 @@ NOTE: In order to improve system performance, connection pools are initialized l
 |===
 |Statistic |Data Type |Description
 
-|`averageconnwaittime`
+a|`averageconnwaittime`
 |CountStatistic
 |Average wait-time-duration per successful connection request
 
 a|`connrequestwaittime`
 |RangeStatistic
 |Longest and shortest wait times, in milliseconds, of connection requests since the last sampling. current value indicates the wait time of the last request that was serviced by the pool
+
 a|`numconnacquired`
 |CountStatistic
 |Number of logical connections acquired from the pool since the last sampling
@@ -1916,6 +1917,7 @@ a|`numconnacquired`
 a|`numconncreated`
 |CountStatistic
 |Number of physical connections that were created by the pool since the last reset
+
 a|`numconndestroyed`
 |CountStatistic
 |Number of physical connections that were destroyed since the last reset
@@ -1924,6 +1926,7 @@ a|`numconnfailedvalidation`
 |CountStatistic
 a|Number of connections in the connection pool that failed validation from the start time until the
 last sampling time
+
 a|`numconnfree`
 |RangeStatistic
 |Number of free connections in the pool as of the last sampling
@@ -1931,6 +1934,7 @@ a|`numconnfree`
 a|[.breakable]`numconnnotsuccessfullymatched`
 |CountStatistic
 |Number of connections rejected during matching
+
 a|`numconnreleased`
 |CountStatistic
 |Number of connections released back to the pool since the last sampling
@@ -1946,6 +1950,7 @@ a|`numconntimedout`
 a|`numconnused`
 |RangeStatistic
 |Number of connections that are currently being used, as well as information about the maximum number of connections that were used (high watermark)
+
 a|`frequsedsqlqueries`
 |StringStatistic
 |List of the most frequently used SQL queries (Available only when SQL Tracing is enabled)
@@ -1953,6 +1958,7 @@ a|`frequsedsqlqueries`
 a|`numpotentialconnleak`
 |CountStatistic
 |Number of potential connection leaks
+
 a|[.breakable]`numpotentialstatementleak`
 |CountStatistic
 |Number of potential statement leaks (Available only when Statement Leak Detection is enabled)
@@ -1960,6 +1966,7 @@ a|[.breakable]`numpotentialstatementleak`
 a|`numstatementcachehit`
 |CountStatistic
 |Number of statements that were found in the statement cache (Available only when the Statement Cache is enabled)
+
 a|`numstatementcachemiss`
 |CountStatistic
 |Number of statements that were not found in the statement cache (Available only when the Statement Cache is enabled)

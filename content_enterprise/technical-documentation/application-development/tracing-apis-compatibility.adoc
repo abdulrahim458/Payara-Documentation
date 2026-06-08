@@ -6,22 +6,26 @@ The following is an up-to-date compatibility matrix that list the compatible ver
 [cols="a,a,a", options="header"]
 |===
 |Payara Server & Micro Version |OpenTracing.io API Version |OpenTelemetry API Version
-| 6.0.0 - {release-id}
-| 0.33
-| {openTelemetryVersion}
-| 5.36.0+
-| 0.33
-| -
-| 4.1.2.183 - 4.1.2.191
+
+a| 6.0.0 - {release-id}
+a| 0.33
+a| {openTelemetryVersion}
+
+a| 5.36.0+
+a| 0.33
+a| -
+
+a| 4.1.2.183 - 4.1.2.191
 
 5.183 - 5.35.0
-| 0.31
-| -
-| 4.1.2.182
+a| 0.31
+a| -
+
+a| 4.1.2.182
 
 5.182
-| 0.30
-| -
+a| 0.30
+a| -
 
 |===
 

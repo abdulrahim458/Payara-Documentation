@@ -339,7 +339,7 @@ The _Data_ settings are concerned with what and how the data is shown in the gra
 | Property | Default | Description
 
 | Type
-| `Time Curve`
+a| `Time Curve`
 |Changes the type of graph used to show the metric. This also affects which data of the metric a widget is focussed on. Possible choices:
 
 | Mode
@@ -347,6 +347,7 @@ The _Data_ settings are concerned with what and how the data is shown in the gra
 a| If available for the type of widget the display mode can be switched between _Table_ and _List_.
 
 Table view is best fitted for annotations that share common attributes, lists are better fitted for annotations with potentially differing attributes.
+
 | Series
 | -
 | The metric key as given when adding the metric, use pencil icon to edit
@@ -358,6 +359,7 @@ a| The unit controls how the raw number of a metric is interpreted and represent
 The unit also controls what values are accepted as input for numbers, like thresholds, that are on the same axis.
 
 Possible units are: `Count`, `Milliseconds`, `Nanoseconds`, `Bytes`, `Percentage` and `Up/Down`.
+
 | Unit 1/sec
 a| `false`
 | Whether to show the metric as a change per second (delta between two points in the series normalised to average delta per second).
@@ -365,6 +367,7 @@ a| `false`
 | Upscaling
 a| `(undefined)`
 a| When defined all values are multiplied by this factor. This can e.g. be used to move a decimal range between zero and one to a percentage range `0-100`.
+
 | Upscaling _decimal value_
 a| `false`
 a| Check to mark the metric as one that is provided as a decimal value during collection (floats or doubles and alike).
@@ -376,6 +379,7 @@ This divides values by 10,000 again to move them back into their original value 
 | Line Style
 a| `(none checked)`
 | Options on how to display the current value line in the graph: Check _Points_ to show individual data points on the line, check _Curvy_ to use Bézier curves instead of straight line connections.
+
 | Background
 | _Fill_
 | When _Fill_ is checked the area between line and axis is filled. The background transparency can be configured globally in the _Appearance_ application settings.
@@ -383,6 +387,7 @@ a| `(none checked)`
 | X-Axis
 | _Labels_
 | Whether to show labels for the x-axis.
+
 | Y-Axis
 a| `(undefined)`
 | Set a minimum or maximum number for the y-axis instead. When not set range is derived automatically from the data points.
@@ -394,6 +399,7 @@ a| The order applied to the legend. Possible choices:
 `Alphabetically`: Items are shown in alphabetical order (instance name first, series based label second),
 `Increasing Value`: Items are shown ordered from smallest to largest current value,
 `Decreasing Value`: Items are shown ordered from largest to smallest current value,
+
 | Limit
 | (undefined)
 | When set the maximum number of legend items shown (especially useful when ordering legend items)
@@ -401,6 +407,7 @@ a| The order applied to the legend. Possible choices:
 | Limit Hide Constant Zero
 a| `false`
 | When set series that have been zero for a while are not shown in legend and line graph
+
 | Coloring
 | _Instance Name_
 a| Used to select the colours the data is shown with.
@@ -457,6 +464,7 @@ NOTE: This data is only available after enabling the history aggregation using t
 | Aggregates
 | (none checked)
 | Check to add the all time minimum, maximum or average line to the graph
+
 | Waterline
 | (undefined)
 | Adds a simple reference line that could mark an upper or lower limit. Enter in unit of y-axis, e.g. 20ms, 5s, 2GB, 4%, 123
@@ -466,6 +474,7 @@ a| `Off`
 a| Controls what value the _Alarming Threshold_ and _Critical Threshold_ are compared to.
 
 Usually this is the most recent value but in some cases the all time minimum, maximum or average are useful too.
+
 | Alarming Threshold
 | (undefined)
 a| The limit for the _"Alarming"_ state.
@@ -507,16 +516,16 @@ For example based on the threshold values of decorations or by encountered error
 |====================
 | Property | Default | Description
 
-| `No Data`
-| `(undefined)`
+a| `No Data`
+a| `(undefined)`
 | The message to show when no data for a metric is available. For example to hint about configurations needed to make the metric available.
 
-| `Alarming`
-| `(undefined)`
+a| `Alarming`
+a| `(undefined)`
 | The message to show when the threshold got exceeded and the status evaluates to _Alarming_.
 
-| `Critical`
-| `(undefined)`
+a| `Critical`
+a| `(undefined)`
 | The message to show when the threshold got exceeded and the status evaluates to _Critical_.
 
 |====================
@@ -609,24 +618,35 @@ The common page settings are those used by pages of _Type_ _Manual_ and _Query_.
 |====================
 | Property | Default | Description
 
-| Name | - | The name as given by the user when the page was created or as defined in the page preset, only user-created pages can be renamed
+| Name
+| -
+| The name as given by the user when the page was created or as defined in the page preset, only user-created pages can be renamed
 
-| Type | `Manual` |
+| Type
+a| `Manual`
+a|
 * `Manual`: user populates pages with widget using add widget
 * `Query`: a query is used to populate page in intervals
 
-| Number Of Columns | 1 | The number of columns available to place widgets in
+| Number Of Columns
+| 1
+| The number of columns available to place widgets in
 
-| Include In Rotation | Yes
-|
+| Include In Rotation
+| Yes
+a|
 * Yes: Page is included in the set of pages rotated during page rotation
 * No: page is excluded from this set
 
-| Fill Empty Cells | No |
+| Fill Empty Cells
+| No
+a|
 * Yes: empty cells in widget grid are filled by extending the span of the widget above
 * No: empty cells left empty shown with a button to add a widget
 
-| Server Sync | (checked) | `Auto`: Changes made by an administrator to the page or the widgets of this page are automatically pushed to the shared configuration if and only if the page has been explicitly pushed to the shared configuration at some point in the past.
+| Server Sync
+| (checked)
+a| `Auto`: Changes made by an administrator to the page or the widgets of this page are automatically pushed to the shared configuration if and only if the page has been explicitly pushed to the shared configuration at some point in the past.
 
 |====================
 
@@ -640,7 +660,7 @@ NOTE: Pages of _Type: Query_ have more settings to configure the contents of the
 | Property | Default | Description
 
 | Max Size
-| `32`
+a| `32`
 | Maximum number of widgets added to the page when populating it from query matches (even if there are more metrics matching the query)
 
 | Query Series
@@ -648,7 +668,7 @@ NOTE: Pages of _Type: Query_ have more settings to configure the contents of the
 | A series pattern used to query for metrics, matches are used to populate the page
 
 | Query Interval
-| `1m`
+a| `1m`
 | The interval in which the query is run and the page is repopulated with matches
 
 | Filter Type
@@ -677,11 +697,11 @@ NOTE: These settings cannot be shared.
 | Property | Default | Description
 
 | Data Refresh
-| `2s`
+a| `2s`
 | Interval duration used to update the currently shown page with new data (poll duration). To pause data update toggle the _play/pause_ toggle switch.
 
 | Page Rotation
-| `1m`
+a| `1m`
 | Duration each page is shown during a page rotation. To run or stop the rotation toggle the _on/off_ toggle switch. See section xref:#page-rotation[Page Rotation] for details.
 
 | Role
@@ -886,19 +906,19 @@ The below table describes possible choices for each step of a watch condition.
 |====================
 | Segment | Type | Description
 
-| `is` _operator_
+a| `is` _operator_
 | Start
 | Select the comparison operator to use when comparing the actual value(s) to the threshold. The comparison is of form _actual operator threshold_.
 
-| `is` _threshold_
+a| `is` _threshold_
 | Start
-| The numeric threshold. The upper/lower limit. With the right unit selected the number can be given with a unit such as `5min` for time units, or `4KB` for bytes.
+a| The numeric threshold. The upper/lower limit. With the right unit selected the number can be given with a unit such as `5min` for time units, or `4KB` for bytes.
 
-| `is` _scope_
+a| `is` _scope_
 | Start
 | Select a scope for the actual values that are compared to the threshold. The semantics of different scopes are described in a separate table below.
 
-| `is` _scope-length_
+a| `is` _scope-length_
 | Start
 | The length defines how many of the most recent data points of the watched metric are included in the scope of the comparison.
 
