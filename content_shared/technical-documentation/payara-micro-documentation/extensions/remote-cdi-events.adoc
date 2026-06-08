@@ -9,16 +9,22 @@ These methods are used for firing CDI Events across running instances.
 [cols=",",options="header",]
 |=======================================================================
 |Method |Description
+
 a|[.breakable]`void addCDIEventListener(CDIEventListener listener)`
 |Adds a CDI Event Listener.
+
 a|[.breakable]`void removeCDIEventListener(CDIEventListener listener)`
 |Removes a CDI Event Listener.
+
 a|[.breakable]`void addClusterListener(PayaraClusterListener listener)`
 |Adds a Cluster Listener.
+
 a|[.breakable]`void removeClusterListener(PayaraClusterListener listener)`
 |Removes a Cluster Listener.
+
 a|[.breakable]`void publishCDIEvent(PayaraClusteredCDIEvent event)`
 |Publishes a CDI Event.
+
 |=======================================================================
 
 NOTE: This feature has been available in Payara Micro long before it was available in Payara Server.

@@ -11,10 +11,10 @@ process, whereas `PayaraMicroRuntime.class` methods are used on running instance
 
 Configuration Methods of `PayaraMicro.class` are detailed here. 
 
-[cols=",,,,,",options="header",]
-|=======================================================================
-|Configuration Operand |Description |Get Method |Set Method |Default Value
-|Command Line Equivalent
+[cols="2,3,2,2,1,1",options="header",]
+|====
+|Configuration Operand |Description |Get Method |Set Method |Default Value |Command Line Equivalent
+
 |Alternate Domain XML
 |Gets or sets the domain.xml used to override the default server configuration.
 a|[.breakable]`File getAlternateDomainXML()`
@@ -26,100 +26,101 @@ a|[.breakable]`PayaraMicro setAlternateDomainXML(File alternateDomainXML)`
 |Gets or sets the cluster multicast group for the instance.
 a|[.breakable]`String getClusterMulticastGroup()`
 a|[.breakable]`PayaraMicro setClusterMulticastGroup(String hzMulticastGroup)`
-|`null` (Default value of 224.2.2.4 set in default domain.xml is not read into instance variable)
-|`--mcAddress`
+a|`null` (Default value of 224.2.2.4 set in default domain.xml is not read into instance variable)
+a|`--mcAddress`
 
 |Cluster Port
 |Gets or sets the multicast cluster port.
-|`int getClusterPort()`
+a|`int getClusterPort()`
 a|[.breakable]`PayaraMicro setClusterPort(int hzPort)`
 |-2147483648 (MIN_VALUE) (Default value of 2904 set in default domain.xml is not read into instance variable)
-|`--mcPort`
+a|`--mcPort`
 
 |Cluster Start Port
 |Gets or sets the start port number for the Payara Micro instance to listen on for cluster communications.
 a|[.breakable]`int getClusterStartPort()`
 a|[.breakable]`PayaraMicro setClusterStartPort(int hzStartPort)`
 |-2147483648 (MIN_VALUE) (Default value of 5900 set in default configuration files is not read into instance variable)
-|`--startPort`
+a|`--startPort`
 
 |Deployment Directory
 |Gets or sets the directory to be scanned for archives to deploy.
-|`File getDeploymentDir()`
+a|`File getDeploymentDir()`
 a|[.breakable]`PayaraMicro setDeploymentDir(File deploymentRoot)`
-|`null`
-|`--deploymentDir`
+a|`null`
+a|`--deploymentDir`
 
 |HTTP Port
 |Gets or sets the HTTP port for the instance to bind to.
-|`int getHttpPort()`
+a|`int getHttpPort()`
 a|[.breakable]`PayaraMicro setHttpPort(int httpPort)`
 |-2147483648 (MIN_VALUE) (Default value of 8080 set in default domain.xml is not read into instance variable)
-|`--port`
+a|`--port`
 
 |Instance Name
 |Gets or sets the name of the instance.
-|`String getInstanceName()`
+a|`String getInstanceName()`
 a|[.breakable]`PayaraMicro setInstanceName(String instanceName)`
 |Generated Universally Unique Identifier.
-|`--name`
+a|`--name`
 
 |Maximum HTTP Threads
 |Gets or sets the maximum number of threads in the HTTP thread pool.
-|`int getMaxHttpThreads()`
+a|`int getMaxHttpThreads()`
 a|[.breakable]`PayaraMicro setMaxHttpThreads(int maxHttpThreads)`
 |-2147483648 (MIN_VALUE) (Default value of 10 set in default domain.xml is not read into instance variable)
-|`--maxHttpThreads`
+a|`--maxHttpThreads`
 
 |Minimum HTTP Threads
 |Gets or sets the minimum number of threads in the HTTP thread pool.
-|`int getMinHttpThreads()`
+a|`int getMinHttpThreads()`
 a|[.breakable]`PayaraMicro setMinHttpThreads(int minHttpThreads)`
 |-2147483648 (MIN_VALUE) (Default value of 10 set in default domain.xml is not read into instance variable)
-|`--minHttpThreads`
+a|`--minHttpThreads`
 
 |Root Directory
 |Gets or sets the root configuration directory.
-|`File getRootDir()`
+a|`File getRootDir()`
 a|[.breakable]`PayaraMicro setRootDir(File rootDir)`
-|`null`
-|`--rootDir`
+a|`null`
+a|`--rootDir`
 
 |HTTPS Port
 |Gets or sets the HTTPS port for the instance to bind to. An HTTPS port is not bound unless this value is manually set.
-|`int getSslPort()`
+a|`int getSslPort()`
 a|[.breakable]`PayaraMicro setSslPort(int sslPort)`
 |-2147483648 (MIN_VALUE) (Default value of 8443 set in default domain.xml is not read into instance variable)
-|`--sslPort`
+a|`--sslPort`
 
 |No Clustering
 |Gets or sets whether clustering is enabled or disabled for an instance.
-|`boolean isNoCluster()`
+a|`boolean isNoCluster()`
 a|[.breakable]`PayaraMicro setNoCluster(boolean noCluster)`
 |_false_
-|`--noCluster`
+a|`--noCluster`
 
 |HTTP Auto-Binding
 |Enables or Disables auto-binding of the HTTP port for an instance.
 a|[.breakable]`boolean getHttpAutoBind()`
 a|[.breakable]`PayaraMicro setHttpAutoBind(boolean httpAutoBind)`
 |_false_
-|`--autoBindHttp`
+a|`--autoBindHttp`
 
 |HTTPS Auto-Binding
 |Enables or Disables auto-binding of the HTTPS port for an instance.
-|`boolean getSslAutoBind()`
+a|`boolean getSslAutoBind()`
 a|[.breakable]`PayaraMicro setSslAutoBind(boolean sslAutoBind)`
 |_false_
-|`--autoBindSsl`
+a|`--autoBindSsl`
 
 |Auto-Bind Range
 |Sets the range for HTTP and HTTPS port auto-binding.
-|`int getAutoBindRange()`
+a|`int getAutoBindRange()`
 a|[.breakable]`PayaraMicro setAutoBindRange(int autoBindRange)`
 |5
-|`--autoBindRange`
-|=======================================================================
+a|`--autoBindRange`
+
+|====
 
 [#operation-methods]
 == Operation Methods
@@ -154,9 +155,10 @@ files to be deployed upon starting the instance.
 |`--deploy`
 
 a|[.breakable]`PayaraMicro addDeploymentFile(File file)`
-|Adds the file associated with the `file` parameter to the list of files to be
+a|Adds the file associated with the `file` parameter to the list of files to be
 deployed upon starting the instance.
-|`--deploy`
+a|`--deploy`
+
 |=======================================================================
 
 [#payaramicroruntime.class-methods]
@@ -171,10 +173,11 @@ a|[.breakable]`boolean deploy(String name, String contextRoot, InputStream is)`
 |Deploys an application from an `InputStream`, with the specified name and
 context root.
 
-|`boolean deploy(File war)`
+a|`boolean deploy(File war)`
 |Deploys the application located at the _war_ parameter path.
 a|[.breakable]`boolean undeploy(String name)`
 |Un-deploys the specified application.
+
 |=======================================================================
 
 [#setup-and-shutdown-methods]
@@ -199,6 +202,7 @@ not exist and `create` is set to true, one will be created and returned, otherwi
 returns _null_.
 a|[.breakable]`void shutdown() throws BootstrapException`
 |Stops and shuts down the Payara Micro instance.
+
 |=======================================================================
 
 [#payaramicroruntime.class-methods-1]
@@ -209,6 +213,7 @@ a|[.breakable]`void shutdown() throws BootstrapException`
 |Method |Description
 a|[.breakable]`void shutdown() throws BootstrapException`
 |Stops and shuts down the Payara Micro instance.
+
 |=======================================================================
 
 [#cdi-methods]
@@ -229,6 +234,7 @@ a|[.breakable]`void removeClusterListener(PayaraClusterListener listener)`
 |Removes a Cluster Listener.
 a|[.breakable]`void publishCDIEvent(PayaraClusteredCDIEvent event)`
 |Publishes a CDI Event.
+
 |=======================================================================
 
 [#run-methods]
@@ -248,6 +254,7 @@ a|[.breakable]`<T extends Serializable> Map<InstanceDescriptor, Future<T>> run (
 |Runs a Callable object on all members of a Payara Micro Cluster.
 a|[.breakable]`<T extends Serializable> Map<InstanceDescriptor, Future<T>> run (Collection<InstanceDescriptor> members, Callable<T> callable)`
 |Runs a Callable object on specified members of a Payara Micro Cluster.
+
 |=======================================================================
 
 [#get-methods]
@@ -269,6 +276,7 @@ a|[.breakable]`Collection<String> getDeployedApplicationNames()`
 |Returns the instance name.
 a|[.breakable]`InstanceDescriptor getLocalDescriptor()`
 |Returns the instance descriptor of the instance the method is run on.
+
 |=======================================================================
 
 [#library-methods]
@@ -283,4 +291,5 @@ classpath.
 |`void addLibrary(File)`
 |Adds a new library source (a JAR file or a directory with multiple JAR files)
 to be considered for the instance's classpath
+
 |=======================================================================
