@@ -361,7 +361,7 @@ Use the `delete-ssl` subcommand in remote mode to delete the SSL element in the 
 . Ensure that the server is running.
 +
 Remote subcommands require a running server.
-. Delete SSL from an HTTP listener by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-ssl[`delete-ssl`] subcommand.
+. Delete SSL from an HTTP listener by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-ssl.adoc[`delete-ssl`] subcommand.
 . To apply your changes, restart Payara Server.
 +
 See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
