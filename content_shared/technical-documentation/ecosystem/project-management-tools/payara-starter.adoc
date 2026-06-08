@@ -52,37 +52,35 @@ This command generates a new application based on specified options. Adjust prop
 
 The Payara Starter Archetype has a robust set of parameters that allows the customization of various aspects during the application generation process. Below is a table detailing each parameter, its default value, and additional notes:
 
-[cols="5,5,12a",options="header"]
+[cols="5,5,12",options="header"]
 |===
-| Element
-| Default Value
-| Notes
+| Element | Default Value | Notes
 
-| `build`
-| `maven`
-| Specifies the preferred build system for the project.
+a| `build`
+a| `maven`
+a| Specifies the preferred build system for the project.
 
 Options include: `maven`, `gradle`.
 
-| `groupId`
-| `fish.payara`
+a| `groupId`
+a| `fish.payara`
 | Specifies the Group ID for the generated project.
 
-| `artifactId`
-| `hello-world`
+a| `artifactId`
+a| `hello-world`
 | Determines the Artifact ID for the generated project.
 
-| `version`
-| `0.1-SNAPSHOT`
+a| `version`
+a| `0.1-SNAPSHOT`
 | Sets the version of the generated project.
 
-| `package`
-| `fish.payara`
+a| `package`
+a| `fish.payara`
 | Defines the base package name for the project.
 
-| `javaVersion`
-| `21`
-| Sets the Java version for the project.
+a| `javaVersion`
+a| `21`
+a| Sets the Java version for the project.
 
 Available options:
 
@@ -93,9 +91,9 @@ Available options:
 
 WARNING: Keep in mind that versions older than `11` are not supported in Payara Platform {release-id}
 
-| `jakartaEEVersion`
-| `10`
-| Specifies the targeted Jakarta EE version.
+a| `jakartaEEVersion`
+a| `10`
+a| Specifies the targeted Jakarta EE version.
 
 Valid options:
 
@@ -106,94 +104,94 @@ Valid options:
 
 WARNING: For compatibility with the Payara Platform {release-id}, versions older than `10` are not supported.
 
-| `profile`
-| `full`
+a| `profile`
+a| `full`
 | Specifies the Jakarta EE profile options: 'core', 'web', or 'full'.
 
-| `platform`
-| `server`
-| Specifies the target distribution where the application will be deployed
+a| `platform`
+a| `server`
+a| Specifies the target distribution where the application will be deployed
 
 Options include:
 
 * `server` for Payara Server.
 * `micro` for Payara Micro.
 
-| `payaraVersion`
-| `{release-id}`
+a| `payaraVersion`
+a| `{release-id}`
 | Sets the targeted Payara version. Retrieved from Maven Central.
 
-| `addConcurrentApi`
-| `false`
-| Includes support for the Concurrent API if `true`.
+a| `addConcurrentApi`
+a| `false`
+a| Includes support for the Concurrent API if `true`.
 
-| `addResourceApi`
-| `false`
-| Includes support for the Resource API if `true`.
+a| `addResourceApi`
+a| `false`
+a| Includes support for the Resource API if `true`.
 
-| `addJBatchApi`
-| `false`
-| Includes support for the JBatch API if `true`.
+a| `addJBatchApi`
+a| `false`
+a| Includes support for the JBatch API if `true`.
 
-| `addMicroprofileApi`
-| `true`
-| Includes support for the MicroProfile API if `true`.
+a| `addMicroprofileApi`
+a| `true`
+a| Includes support for the MicroProfile API if `true`.
 
-| `addJcache`
-| `false`
-| Includes support for the JCache if `true`.
+a| `addJcache`
+a| `false`
+a| Includes support for the JCache if `true`.
 
-| `addPayaraApi`
-| `true`
-| Includes support for the Payara Public API if `true`.
+a| `addPayaraApi`
+a| `true`
+a| Includes support for the Payara Public API if `true`.
 
-| `deployWar`
-| `true`
-| Automatically deploys the WAR file if `true`.
-
-NOTE: Applicable only for Payara Micro deployments.
-
-| `autoBindHttp`
-| `true`
-| Enables automatic HTTP binding.
+a| `deployWar`
+a| `true`
+a| Automatically deploys the WAR file if `true`.
 
 NOTE: Applicable only for Payara Micro deployments.
 
-| `contextRoot`
-| `/`
-| Sets the web context root for the deployed artifact.
+a| `autoBindHttp`
+a| `true`
+a| Enables automatic HTTP binding.
 
 NOTE: Applicable only for Payara Micro deployments.
 
-| `includeTests`
-| `false`
-| Includes a set of generated Unit tests if `true`.
+a| `contextRoot`
+a| `/`
+a| Sets the web context root for the deployed artifact.
+
+NOTE: Applicable only for Payara Micro deployments.
+
+a| `includeTests`
+a| `false`
+a| Includes a set of generated Unit tests if `true`.
 
 WARNING: Currently limited to Maven projects.
 
-| `docker`
-| `false`
+a| `docker`
+a| `false`
 | Enables Docker compatibility.
 
-| `mpConfig`
-| `false`
+a| `mpConfig`
+a| `false`
 | Enables support for the MicroProfile Config API.
 
-| `mpOpenAPI`
-| `false`
+a| `mpOpenAPI`
+a| `false`
 | Enables support for MicroProfile OpenAPI.
 
-| `mpFaultTolerance`
-| `false`
+a| `mpFaultTolerance`
+a| `false`
 | Enables support for MicroProfile Fault Tolerance.
 
-| `mpMetrics`
-| `false`
+a| `mpMetrics`
+a| `false`
 | Enables support for MicroProfile Metrics.
 
-| `auth`
-| `none`
-| Specifies the authentication type for the application.
+a| `auth`
+a| `none`
+a| Specifies the authentication type for the application.
 
 Available choices:
 

@@ -60,12 +60,12 @@ The following is a summary of all dependencies included in the BOM, grouped by c
 
 Distribution artifacts do not define a Maven scope and are therefore imported in `compile` scope.
 
-[%header, cols=",a,1"]
+[cols="1,3,3",options="header"]
 |===
 |Artifact | Example usage | Note
 
 | Payara Server
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -74,10 +74,10 @@ Distribution artifacts do not define a Maven scope and are therefore imported in
   <type>zip</type>
 </dependency>
 ----
-| Also available are `payara-ml`, `payara-web`, `payara-web-ml`
+a| Also available are `payara-ml`, `payara-web`, `payara-web-ml`
 
 | Payara Micro
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -88,7 +88,7 @@ Distribution artifacts do not define a Maven scope and are therefore imported in
 |
 
 | Payara Embedded
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -96,10 +96,10 @@ Distribution artifacts do not define a Maven scope and are therefore imported in
   <artifactId>payara-embedded-all</artifactId>
 </dependency>
 ----
-| Also available `payara-embedded-web`
+a| Also available `payara-embedded-web`
 
 | EJB HTTP Client
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -110,7 +110,7 @@ Distribution artifacts do not define a Maven scope and are therefore imported in
 |
 
 | Appclient
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -121,7 +121,7 @@ Distribution artifacts do not define a Maven scope and are therefore imported in
 |
 
 | Payara Public API
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -138,12 +138,12 @@ Distribution artifacts do not define a Maven scope and are therefore imported in
 
 Standard APIs are defined in `provided` scope, as they already include classes that are present in the server's runtime.
 
-[%header, cols=",a,1"]
+[cols="1,3,3",options="header"]
 |===
 |Artifact | Example usage | Note
 
 | Jakarta EE
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -151,10 +151,10 @@ Standard APIs are defined in `provided` scope, as they already include classes t
   <artifactId>jakarta.jakartaee-api</artifactId>
 </dependency>
 ----
-|Also available `jakarta.jakartaee-web-api`, and all individual API artifacts.
+a|Also available `jakarta.jakartaee-web-api`, and all individual API artifacts.
 
 | Eclipse Microprofile
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -166,7 +166,7 @@ Standard APIs are defined in `provided` scope, as they already include classes t
 | Individual APIs are also declared.
 
 | OSGi
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -174,7 +174,7 @@ Standard APIs are defined in `provided` scope, as they already include classes t
   <artifactId>osgi.core</artifactId>
 </dependency>
 ----
-| Also available are `org.cmpn`, `osgi.annotation`, `org.osgi.dto`, and `osgi.enterprise`
+a| Also available are `org.cmpn`, `osgi.annotation`, `org.osgi.dto`, and `osgi.enterprise`
 
 |===
 
@@ -185,12 +185,12 @@ Arquillian is the recommended way to run integration tests written for Payara Se
 
 Payara Server includes the H2 database, so their matching versions are also declared, but in their default scope.
 
-[%header, cols=",a"]
+[cols="2,3",options="header"]
 |===
 |Artifact | Example usage
 
 | Arquillian container - Remote
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -200,7 +200,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 ----
 
 | Arquillian container - Embedded
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -210,7 +210,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 ----
 
 | Arquillian container - Managed
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -220,7 +220,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 ----
 
 | Arquillian container - Payara Micro Managed
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -230,7 +230,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 ----
 
 | Arquillian container - Payara Micro Remote
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -240,7 +240,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 ----
 
 | Arquillian container - Payara Micro Remote Deployer
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -250,7 +250,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 ----
 
 | Payara Arquillian Client Dependencies
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -260,7 +260,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
 ----
 
 | H2 Database
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -269,6 +269,7 @@ Payara Server includes the H2 database, so their matching versions are also decl
   <scope>test</scope>
 </dependency>
 ----
+
 |===
 
 [#api-implementation]
@@ -276,12 +277,12 @@ Payara Server includes the H2 database, so their matching versions are also decl
 
 This is a non-exhaustive list of dependencies. By default all are declared in their respective default scopes, but it is more correct to use them with scope `provided` if they are already present in the server's internal modules.
 
-[%header, cols=",a,1"]
+[cols="1,3,3",options="header"]
 |===
 |Artifact | Example usage | Note
 
 | Jersey
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -298,7 +299,7 @@ This is a non-exhaustive list of dependencies. By default all are declared in th
 | Example: JAX-RS clients in tests. All artifacts of the Jersey BOM are imported.
 
 | Hibernate Validator
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -310,7 +311,7 @@ This is a non-exhaustive list of dependencies. By default all are declared in th
 |
 
 | EclipseLink - JPA Metamodel generator
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -318,10 +319,10 @@ This is a non-exhaustive list of dependencies. By default all are declared in th
   <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
 </dependency>
 ----
-| The only dependency that is `provided` scoped, as it is an annotation processor.
+a| The only dependency that is `provided` scoped, as it is an annotation processor.
 
 | EclipseLink
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -333,7 +334,7 @@ This is a non-exhaustive list of dependencies. By default all are declared in th
 |
 
 | Hazelcast
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -342,10 +343,10 @@ This is a non-exhaustive list of dependencies. By default all are declared in th
   <scope>provided</scope>
 </dependency>
 ----
-| The `hazelcast-kubernetes` dependency is also available.
+a| The `hazelcast-kubernetes` dependency is also available.
 
 | Jackson
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -356,7 +357,7 @@ This is a non-exhaustive list of dependencies. By default all are declared in th
 | All artifacts of the Jackson BOM are imported.
 
 | Yasson
-|
+a|
 [source, xml]
 ----
 <dependency>
@@ -365,10 +366,10 @@ This is a non-exhaustive list of dependencies. By default all are declared in th
   <scope>test</scope>
 </dependency>
 ----
-| 
+|
 
 | Tyrus
-| 
+a|
 [source, xml]
 ----
 <dependency>
@@ -383,4 +384,5 @@ This is a non-exhaustive list of dependencies. By default all are declared in th
 </dependency>
 ----
 |
+
 |===

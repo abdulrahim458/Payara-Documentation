@@ -44,17 +44,16 @@ payaraMicro {
 .Configuration tags
 [cols="2,1,7",options="header"]
 |===
-|Element
-|Default
-|Notes
+|Element |Default |Notes
 
-|`javaPath`
+a|`javaPath`
 |java
 |Absolute path to the java executable
 
-|`payaraVersion`
+a|`payaraVersion`
 |{release-id}
-|By default `microBundle` task fetches payara-micro with version {release-id}
+a|By default `microBundle` task fetches payara-micro with version {release-id}
+
 |=== 
 
 [#start]
@@ -66,49 +65,48 @@ payaraMicro {
 .Configuration tags
 [cols="2,1,7",options="header"]
 |===
-|Element
-|Default
-|Notes
+|Element |Default |Notes
 
-|`useUberJar`
+a|`useUberJar`
 |false
-|Use created uber-jar that resides in target folder. The name of the JAR artifact will be resolved automatically by evaluating its final name, artifact ID and version. This configuration element has the higher precedence compared to `payaraMicroAbsolutePath` and `payaraVersion`.
+a|Use created uber-jar that resides in target folder. The name of the JAR artifact will be resolved automatically by evaluating its final name, artifact ID and version. This configuration element has the higher precedence compared to `payaraMicroAbsolutePath` and `payaraVersion`.
 
-|`payaraMicroAbsolutePath`
+a|`payaraMicroAbsolutePath`
 |_none_
 |Absolute path to payara-micro executable.
 
-|`payaraVersion`
+a|`payaraVersion`
 |{release-id}
-|By default `microStart` task fetches Payara Micro with version {release-id}.
+a|By default `microStart` task fetches Payara Micro with version {release-id}.
 
-|`daemon`
+a|`daemon`
 |false
 |Starts Payara Micro in separate JVM process and continues with the Gradle build.
 
-|`immediateExit`
+a|`immediateExit`
 |false
-|If Payara Micro is executed in daemon mode, the executor thread will wait for the ready message before shutting down its process. By setting `immediateExit` to `true` you can skip this and instantly interrupt the executor thread.
+a|If Payara Micro is executed in daemon mode, the executor thread will wait for the ready message before shutting down its process. By setting `immediateExit` to `true` you can skip this and instantly interrupt the executor thread.
 
-|`javaPath`
-|`java`
+a|`javaPath`
+a|`java`
 |Absolute path to the java executable.
 
-|`deployWar`
+a|`deployWar`
 |false
-|If the attached project is of type WAR, it will automatically be deployed to Payara Micro if `deployWar` is set to `true`.
+a|If the attached project is of type WAR, it will automatically be deployed to Payara Micro if `deployWar` is set to `true`.
 
-|`javaCommandLineOptions`
+a|`javaCommandLineOptions`
 |_none_
-|Defines a list of command line options that will be passed to `java` executable. Command line options can either be defined as key-value pairs or just as list of values. key-value pairs will be formatted as `key=value`.
+a|Defines a list of command line options that will be passed to `java` executable. Command line options can either be defined as key-value pairs or just as list of values. key-value pairs will be formatted as `key=value`.
 
-|`commandLineOptions`
+a|`commandLineOptions`
 |_none_
 |Defines a list of command line options that will be passed onto Payara Micro.
 
-|`hotDeploy`
+a|`hotDeploy`
 |false
 |Enables the hot reload mode.
+
 |===
 
 [#stop]
@@ -120,17 +118,16 @@ payaraMicro {
 .Configuration tags
 [cols="2,1,7",options="header"]
 |===
-|Element
-|Default
-|Notes
+|Element |Default |Notes
 
-|`processId`
+a|`processId`
 |_none_
 |Process id of the running Payara Micro instance.
 
-|`useUberJar`
+a|`useUberJar`
 | false
 |Use created uber-jar that resides in build\libs folder. The name of the jar artifact will be resolved automatically by evaluating its final name.
+
 |===
 
 [#reload]
@@ -143,20 +140,18 @@ IMPORTANT: This task is specifically designed for integration with the IDEs and 
 .Configuration tags
 [cols="2,1,7",options="header"]
 |===
-|Element
-|Default
-|Notes
+|Element |Default |Notes
 
-|`hotDeploy`
+a|`hotDeploy`
 |false
 |Enables the hot reload mode.
 
-|`sourcesChanged`
+a|`sourcesChanged`
 |_none_
-|Defines a list(comma separated) of the absolute paths to the source file which need
+a|Defines a list(comma separated) of the absolute paths to the source file which need
 to be reloaded via the Hot Reload feature.
 
-|`metadataChanged`
+a|`metadataChanged`
 |false
 |If set to true, reloads deployment descriptors metadata in hot deploy mode
 
