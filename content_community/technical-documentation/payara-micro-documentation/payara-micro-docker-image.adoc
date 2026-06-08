@@ -173,15 +173,15 @@ The following environment variables can be used to configure multiple settings o
 |===
 |Name |Description |Default Value
 
-|`MEM_MAX_RAM_PERCENTAGE`
-| Value for the JVM argument `-XX:MaxRAMPercentage` which indicates the percentage of memory assigned to the container that can be used by the Java process
+a|`MEM_MAX_RAM_PERCENTAGE`
+a| Value for the JVM argument `-XX:MaxRAMPercentage` which indicates the percentage of memory assigned to the container that can be used by the Java process
 a| `70`
 
-|`MEM_XSS`
-| Value for the JVM argument `-Xss` which controls the stack size
+a|`MEM_XSS`
+a| Value for the JVM argument `-Xss` which controls the stack size
 a| `512K`
 
-|`JVM_ARGS`
+a|`JVM_ARGS`
 | Additional JVM arguments which will be used to configure the Payara Servers DAS JVM settings
 a|[.breakable]`-Djdk.util.zip.disableZip64ExtraFieldValidation=true`
 
@@ -193,9 +193,9 @@ The following is a list of variables used by the Docker image to set up the Paya
 |===
 |Variable name |Description | Value
 
-|`HOME_DIR`
+a|`HOME_DIR`
 |The directory containing the Payara Micro JAR binary and the scripts used to run the instance.
-a| `/opt/payara`|
+a| `/opt/payara`
 
 |===
 

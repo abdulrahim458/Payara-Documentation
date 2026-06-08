@@ -9,5 +9,6 @@ The following is an up-to-date compatibility matrix that list the compatible ver
 | 7.2025.1 - {release-id}
 | 0.33
 | {openTelemetryVersion}
+
 |===
 

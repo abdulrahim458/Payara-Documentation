@@ -124,6 +124,7 @@ The following environment variables can be used to configure multiple settings o
 |`DEPLOY_PROPS`| Specifies a list of properties to be passed with the deploy commands generated in the `generate_deploy_commands.sh` script|
 |`PAYARA_ARGS`| Additional arguments passed to the `start-domain` command that starts the DAS. _Use with caution._|
 |`JVM_ARGS`| Additional JVM arguments which will be used to configure the Payara Servers DAS JVM settings|
+
 |===
 
 IMPORTANT: Preboot and post-boot command files will not be modified by the Docker container.
@@ -143,6 +144,7 @@ The following is a list of variables used by the Docker image to configure the P
 |`PASSWORD_FILE`| The location of the password file for asadmin. This can be passed to asadmin using the `--passwordfile` parameter| `/opt/payara/passwordFile`
 |`DOMAIN_NAME`| The name of the domain running within the container | `domain1`
 |`AS_ADMIN_MASTERPASSWORD`| The master password to pass to Payara Server. This is overridden if one is specified in the `$PASSWORD_FILE`| `changeit`
+
 |===
 
 [#executing-admin-commands-domain-startup]
