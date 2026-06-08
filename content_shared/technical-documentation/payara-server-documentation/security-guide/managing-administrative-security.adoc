@@ -94,18 +94,24 @@ The following table shows which authentication methods are employed when secure 
 [width="100%",cols="30%,30%,40%",options="header",]
 |=======================================================================
 |Access Method |Secure Admin is Disabled |Secure Admin is Enabled
-|Remote administration access to the DAS |Rejected.
+
+|Remote administration access to the DAS
+|Rejected.
 |Username/password authentication. (Client must also accept server certificate.)
 
-|Communication between DAS and instances |Cleartext messages.
+|Communication between DAS and instances
+a|Cleartext messages.
 No mutual authentication.
 |SSL-encrypted messages. SSL mutual authentication using certificates.
 
-|Communication between administration clients and DAS |Cleartext messages. No DAS authentication.
+|Communication between administration clients and DAS
+|Cleartext messages. No DAS authentication.
 |SSL-encrypted messages. DAS uses SSL certificate server authentication.
 
-|Local asadmin client to instance on same node |Cleartext messages. Locally-provisioned password mechanism is used.
+|Local asadmin client to instance on same node
+|Cleartext messages. Locally-provisioned password mechanism is used.
 |SSL-encrypted messages. Locally-provisioned password mechanism is used.
+
 |=======================================================================
 
 [#understanding-how-certificate-authentication-is-performed]
@@ -390,17 +396,21 @@ NOTE: When secure admin is disabled, Payara Server does allow remote monitoring 
 |=======================================================================
 |Operation |Run Locally |Run Remotely
 
-|`start-local-instance` |Functions as expected
-|Cannot sync with DAS.
+a|`start-local-instance`
+|Functions as expected
+a|Cannot sync with DAS.
 
 The instance starts but cannot communicate with the DAS. DAS will not properly recognize the instance and synchronize with it.
 
-|Any other `asadmin` subcommand |Functions as expected
+a|Any other `asadmin` subcommand
+|Functions as expected
 |Rejected. The user sees the credentials prompt, but even correct entries are rejected.
 
-|Commands that use SSH. For example, `create-instance`. |Functions as
+a|Commands that use SSH. For example, `create-instance`.
+a|Functions as
 expected but requires prior SSH configuration.
 |Functions as expected but requires prior SSH configuration.
+
 |=======================================================================
 
 [#running-secure-admin]
@@ -505,7 +515,7 @@ In addition to the flow described here, certificate authentication is also perfo
 | +
 
 | +
-|Returns `3xx` status and redirects HTTP to HTTPS.
+a|Returns `3xx` status and redirects HTTP to HTTPS.
 | +
 
 |Follows redirection, this time adding the Authorization header (because transport is now HTTPS).
@@ -515,4 +525,5 @@ In addition to the flow described here, certificate authentication is also perfo
 | +
 | +
 |Authenticates admin user and password from HTTP Authorization header in the realm Executes command, and responds with success status.
+
 |===

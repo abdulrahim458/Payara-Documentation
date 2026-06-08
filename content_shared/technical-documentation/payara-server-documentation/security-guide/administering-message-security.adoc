@@ -196,25 +196,24 @@ The following table shows message protection policy configurations and the resul
 
 .Message Protection Policy Mapping to WS-Security SOAP Operations
 
-[width="100%",cols="35%,65%a",options="header",]
+[width="100%",cols="35%,65%",options="header",]
 |=======================================================================
 |Message Protection Policy |Resulting WS-Security SOAP Message Protection Operations
-|`auth-source="sender"`
-|The message contains a `wsse:Security` header that contains a `wsse:UsernameToken` (with password).
 
-|`auth-source="content"`
-|The content of the SOAP message Body is signed.
+a|[.breakable]`auth-source="sender"`
+a|The message contains a `wsse:Security` header that contains a `wsse:UsernameToken` (with password).
+
+a|[.breakable]`auth-source="content"`
+a|The content of the SOAP message Body is signed.
 
 The message contains a `wsse:Security` header that contains the message body signature represented as a `ds`:`Signature`.
 
-|
-`auth-source="sender" auth-recipient="before-content"`
+a|[.breakable]`auth-source="sender" auth-recipient="before-content"`
 
 OR
 
 `auth-recipient="after-content"`
-
-|The content of the SOAP message Body is encrypted and replaced with the resulting `xend:EncryptedData`.
+a|The content of the SOAP message Body is encrypted and replaced with the resulting `xend:EncryptedData`.
 
 The message contains `a wsse:Security` header that contains a
 `wsse:UsernameToken (with password)` and an `xenc:EncryptedKey`.
@@ -222,20 +221,16 @@ The message contains `a wsse:Security` header that contains a
 The `xenc:EncryptedKey` contains the key used to encrypt the SOAP message
 body. The key is encrypted in the public key of the recipient.
 
-|
-`auth-source="content" auth-recipient="before-content"`
-
-|The content of the SOAP message body is encrypted and replaced with
+a|[.breakable]`auth-source="content" auth-recipient="before-content"`
+a|The content of the SOAP message body is encrypted and replaced with
 the resulting `xend:EncryptedData`.
 
 The `xenc:EncryptedData` is signed.The message contains `a wsse:Security` header that contains an `xenc:EncryptedKey` and a `ds`:`Signature`.
 
 The `xenc:EncryptedKey` contains the key used to encrypt the SOAP message body. The key is encrypted in the public key of the recipient.
 
-|
-`auth-source="content" auth-recipient="after-content"`
-
-|The content of the SOAP message Body is signed, then encrypted, and
+a|[.breakable]`auth-source="content" auth-recipient="after-content"`
+a|The content of the SOAP message Body is signed, then encrypted, and
 then replaced with the resulting `xend:EncryptedData`.
 
 The message contains a `wsse:Security` header that contains an `xenc:EncryptedKey` and a `ds:Signature`.
@@ -247,7 +242,7 @@ a|[.breakable]`auth-recipient="before-content"`
 OR
 
 `auth-recipient="after-content"`
-|The content of the SOAP message Body is encrypted and replaced with the resulting `xend:EncryptedData`.
+a|The content of the SOAP message Body is encrypted and replaced with the resulting `xend:EncryptedData`.
 
 The message contains `a wsse:Security` header that contains an `xenc:EncryptedKey`.
 
@@ -255,6 +250,7 @@ The `xenc:EncryptedKey` contains the key used to encrypt the SOAP message body. 
 
 |No policy specified.
 |No security operations are performed by the modules.
+
 |=======================================================================
 
 [#to-configure-the-message-protection-policies-for-a-provider]

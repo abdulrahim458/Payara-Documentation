@@ -21,25 +21,41 @@ The following conventions are applied through the pages in this section to impro
 
 The following table explains symbols that might be used in this section.
 
-[width="100%", cols="10%,25%,25%,40% a",options="header",]
+[width="100%", cols="10%,25%,25%,40%",options="header",]
 |=======================================================================
 |Symbol |Description |Example |Meaning
-|`[ ]` |Contains optional arguments and command options. |`ls [-l]` |The `-l` option is not required.
 
-|`{ \| }` |Contains a set of choices for a required command option.
-|`-d {y\|n}` |The `-d` option requires that you use either the `y` argument or the `n` argument.
+a|`[ ]`
+|Contains optional arguments and command options.
+a|`ls [-l]`
+a|The `-l` option is not required.
 
-|`${ }` |Indicates a variable reference or a placeholder reference for a default path.
-|`${com.sun.javaRoot}`
-|References the value of the `com.sun.javaRoot` variable.
+a|`{ \| }`
+|Contains a set of choices for a required command option.
+a|`-d {y\|n}`
+a|The `-d` option requires that you use either the `y` argument or the `n` argument.
 
-|- |Joins simultaneous multiple keystrokes. |`Control-A` |Press the `Control key while you press the A key.
+a|`${ }`
+|Indicates a variable reference or a placeholder reference for a default path.
+a|`${com.sun.javaRoot}`
+a|References the value of the `com.sun.javaRoot` variable.
 
-|+ + |Joins consecutive multiple keystrokes. |`Ctrl+A+N` |Press the Control key, release it, and then press the subsequent keys.
+|-
+|Joins simultaneous multiple keystrokes.
+a|`Control-A`
+a|Press the `Control key while you press the A key.
 
-| -> |Indicates menu item selection in a graphical user interface. |File ->
+|+ +
+|Joins consecutive multiple keystrokes.
+a|`Ctrl+A+N`
+|Press the Control key, release it, and then press the subsequent keys.
+
+| ->
+|Indicates menu item selection in a graphical user interface.
+a|File ->
 New -> Templates |From the _File_ menu, choose New. From the _New_ submenu,
 choose _Templates_.
+
 |=======================================================================
 
 [#default-paths-and-file-names]
@@ -51,13 +67,12 @@ The following table describes the default paths and file names that are used in 
 |===
 |Placeholder |Description |Default Value
 
-|`as-install`
+a|`as-install`
 a| Represents the base installation directory for Payara Server.
 
 In configuration files, as-install is represented as follows:
 
 `${com.sun.aas.installRoot}`
-
 a| Installations on a Linux operating system, and macOS operating system:
 
 `+{USER_HOME}+/payara7/glassfish`
@@ -66,9 +81,8 @@ Installations on a Windows operating system:
 
 `+{SystemDrive}+:\payara7\glassfish`
 
-|`as-install-parent`
+a|`as-install-parent`
 |Represents the parent of the base installation directory for Payara Server.
-
 a| Installations on a Linux operating system, and Mac operating system:
 
 `+{USER_HOME}+/payara7`
@@ -77,25 +91,24 @@ Installations on a Windows operating system:
 
 `+{SystemDrive}+\payara7`
 
-|`domain-root-dir`
+a|`domain-root-dir`
 |Represents the directory in which a domain is created by default.
-|`as-install/domains/`
+a|`as-install/domains/`
 
-|`domain-dir`
+a|`domain-dir`
 a| Represents the directory in which a domain's configuration is stored.
 
 In configuration files, `domain-dir` is represented as follows:
 `${com.sun.aas.instanceRoot}`
-
 a|[.breakable]`domain-root-dir/<domain-name>`
 
-|`node-dir`
+a|`node-dir`
 |Represents the directory for a configured node.
 a|[.breakable]`as-install/glassfish/nodes/<node-name>`
 
-|`instance-dir`
+a|`instance-dir`
 |Represents the directory for a server instance.
-|`node-dir/<instance-name>`
+a|`node-dir/<instance-name>`
 
 |===
 
