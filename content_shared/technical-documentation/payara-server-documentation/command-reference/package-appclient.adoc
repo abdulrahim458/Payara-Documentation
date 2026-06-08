@@ -47,8 +47,12 @@ See http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5attributes-5[`at
 
 [width="100%",cols="50%,50%",options="header",]
 |===============================
-|ATTRIBUTE TYPE |ATTRIBUTE VALUE
-|Interface Stability |Unstable
+|ATTRIBUTE TYPE
+|ATTRIBUTE VALUE
+
+|Interface Stability
+|Unstable
+
 |===============================
 
 *See Also*

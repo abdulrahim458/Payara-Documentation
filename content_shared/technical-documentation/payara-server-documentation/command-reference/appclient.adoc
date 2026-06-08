@@ -99,7 +99,10 @@ http://www.oracle.com/pls/topic/lookup?ctx=E18752&id=REFMAN5attributes-5[`attrib
 [width="100%",cols="50%,50%",options="header",]
 |===
 |ATTRIBUTE TYPE |ATTRIBUTE VALUE
-|Interface Stability |Unstable
+
+|Interface Stability
+|Unstable
+
 |===
 
 *See Also*

@@ -536,35 +536,37 @@ Environment variables modify the default values of `asadmin` utility options as 
 [width="100%",cols="44%,56%",options="header",]
 |===
 |Environment Variable |`asadmin` Utility Option
-|`AS_ADMIN_TERSE`
-|`--terse`
 
-|`AS_ADMIN_EXTRATERSE`
-|`--extraterse`
+a|`AS_ADMIN_TERSE`
+a|`--terse`
 
-|`AS_ADMIN_ECHO`
-|`--echo`
+a|`AS_ADMIN_EXTRATERSE`
+a|`--extraterse`
 
-|`AS_ADMIN_INTERACTIVE`
-|`--interactive`
+a|`AS_ADMIN_ECHO`
+a|`--echo`
 
-|`AS_ADMIN_HOST`
-|`--host`
+a|`AS_ADMIN_INTERACTIVE`
+a|`--interactive`
 
-|`AS_ADMIN_PORT`
-|`--port`
+a|`AS_ADMIN_HOST`
+a|`--host`
 
-|`AS_ADMIN_SECURE`
-|`--secure`
+a|`AS_ADMIN_PORT`
+a|`--port`
 
-|`AS_ADMIN_USER`
-|`--user`
+a|`AS_ADMIN_SECURE`
+a|`--secure`
 
-|`AS_ADMIN_PASSWORDFILE`
-|`--passwordfile`
+a|`AS_ADMIN_USER`
+a|`--user`
 
-|`AS_ADMIN_HELP`
-|`--help`
+a|`AS_ADMIN_PASSWORDFILE`
+a|`--passwordfile`
+
+a|`AS_ADMIN_HELP`
+a|`--help`
+
 |===
 
 == See Also
