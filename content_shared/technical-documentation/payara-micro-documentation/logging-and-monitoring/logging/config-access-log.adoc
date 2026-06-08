@@ -36,7 +36,7 @@ All options available for configuring Payara Micro can be seen by running the JA
 
 [cols="2,3,2",options="header",]
 |============================
-|Configuration Option| Usage| Result
+| Configuration Option | Usage | Result
 
 a|[.breakable]`--accesslog`
 a|[.breakable]`java -jar payara-micro --accesslog ~/logs/accesslogs`

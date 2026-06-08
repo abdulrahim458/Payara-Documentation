@@ -217,7 +217,7 @@ a|`--noHazelcast`
 | _false_
 
 a|`--nohostaware`
-|Disables Host Aware Partitioning. See `--hostaware`
+a|Disables Host Aware Partitioning. See `--hostaware`
 |
 
 a|[.breakable]`--outputuberjar <file-path>`

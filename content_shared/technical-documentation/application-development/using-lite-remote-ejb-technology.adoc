@@ -177,62 +177,70 @@ Under the covers the remote EJB proxy uses a JAX-RS (Jersey) REST client builder
 
 a|[.breakable]`fish.payara.connectTimeout`
 | The connection timeout. A value of *0* represents that the wait is indefinite. Negative values are not allowed. Unit is microseconds.
-a| `Number` (from which it's `Long` value is taken) or a `String` that can be converted to a `Long` value.
 
+a| `Number` (from which it's `Long` value is taken) or a `String` that can be converted to a `Long` value.
 a|[.breakable]`fish.payara.readTimeout`
+
 a| The timeout to read a response. If the remote Payara doesn't respond within the defined time a ProcessingException is thrown with a `TimeoutException` as its cause. A value of *0* represents that the wait is indefinite. Negative values are not allowed. Unit is microseconds.
 a| `Number` (from which it's `Long` value is taken) or a `String` that can be converted to a `Long` value.
 
 a|[.breakable]`fish.payara.keyStore`
 | The key store to be used by the proxy. The key store contains the private key as well as certificates with its associated public keys.
-a| Instance of `java.security.KeyStore` or a `String` representing its fully qualified classname.
 
+a| Instance of `java.security.KeyStore` or a `String` representing its fully qualified classname.
 a|[.breakable]`fish.payara.trustStore`
+
 | The trust store to be used by the proxy. The trust store must contain the certificates that are needed to communicate with the remote Payara Server.
 a| Instance of `java.security.KeyStore` or a `String` representing its fully qualified classname.
 
 a|[.breakable]`fish.payara.sslContext`
 a| The SSL context that will be used by the proxy for creating secured connections to the Payara remote server. This context *must* be fully initialized, including the trust and key managers. Should not be used in conjunction with the `fish.payara.keyStore` and/or `fish.payara.trustStore` properties.
-a| Instance of `javax.net.ssl.SSLContext` or a `String` representing its fully qualified classname.
 
+a| Instance of `javax.net.ssl.SSLContext` or a `String` representing its fully qualified classname.
 a|[.breakable]`fish.payara.hostnameVerifier`
+
 | The hostname verifier to be used by the proxy to verify the endpoint's hostname against the identification information of it.
 a| Instance of a `javax.net.ssl.HostnameVerifier` or a `String` representing its fully qualified classname.
 
 a|[.breakable]`fish.payara.provider.principal`
 | The principal to be used by the proxy to access the secured endpoint.
-a| Instance of a `String`.
 
+a| Instance of a `String`.
 a|[.breakable]`fish.payara.provider.credentials`
+
 | The credentials to be used by the proxy to access the secured endpoint.
 a| Instance of a `String`.
 
 a|[.breakable]`fish.payara.provider.authType`
 a| To specify the authentication type of the secured endpoint. By default `BASIC` is defined.
-a| Instance of a `String`.
 
+a| Instance of a `String`.
 a|[.breakable]`fish.payara.requestFilter`
+
 | To register the custom filter for the client request invoked by proxy.
 a| Instance of a `jakarta.ws.rs.client.ClientRequestFilter` or a `Class` implementing `jakarta.ws.rs.client.ClientRequestFilter`.
 
 a|[.breakable]`fish.payara.responseFilter`
 | To register the custom filter for the client response received by proxy.
-a| Instance of a `jakarta.ws.rs.client.ClientResponseFilter ` or a `Class` implementing `jakarta.ws.rs.client.ClientResponseFilter`.
 
+a| Instance of a `jakarta.ws.rs.client.ClientResponseFilter ` or a `Class` implementing `jakarta.ws.rs.client.ClientResponseFilter`.
 a|[.breakable]`fish.payara.executorService`
+
 | The executor service that will be used for executing asynchronous tasks. _(for future use)_
 a| Instance of `java.util.concurrent.ExecutorService` or a `String` representing its fully qualified classname.
 
 a|[.breakable]`fish.payara.scheduledExecutorService`
 | The executor service that will be used for executing scheduled asynchronous tasks. _(For future use)_
-a| Instance of `java.util.concurrent.ScheduledExecutorService` or string representing fully qualified classname.
 
+a| Instance of `java.util.concurrent.ScheduledExecutorService` or string representing fully qualified classname.
 a|[.breakable]`fish.payara.withConfig`
+
 | The configuration for the internal JAX-RS/Jersey REST client.
 a| Instance of `jakarta.ws.rs.core.Configuration` or a `String` representing its fully qualified classname.
 
 a|[.breakable]`fish.payara.clientAdapter`
 | Implementation of client side adapter to use for intercepting JNDI lookups (see below)
+
 a| Instance of `fish.payara.ejb.http.client.adapter.ClientAdapter`
 
 |===
