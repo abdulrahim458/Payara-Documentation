@@ -135,21 +135,21 @@ The following table describes attributes for the `admin-object-resource` element
 |===
 |Attribute |Default |Description
 
-|`jndi-name`
+a|`jndi-name`
 |none
 |Specifies the JNDI name for the resource.
 
-|`res-type`
+a|`res-type`
 |none
 |Specifies the fully qualified type of the resource.
 
-|`res-adapter`
+a|`res-adapter`
 |none
-|Specifies the name of the inbound resource
+a|Specifies the name of the inbound resource
 adapter.
 
-|`object-type`
-|`user`
+a|`object-type`
+a|`user`
 a|
 (optional) Defines the type of the resource. Allowed values are:
 
@@ -158,8 +158,8 @@ a|
 * `system-instance` - A system resource for all server instances only.
 * `user` - A user resource.
 
-|`enabled`
-|`true`
+a|`enabled`
+a|`true`
 |(optional) Determines whether this resource is enabled at runtime.
 
 |===
@@ -194,7 +194,7 @@ The following table describes subelements for the `as-context` element.
 
 a|xref:elements-of-deployment-descriptors.adoc#auth-method[`auth-method`]
 |only one
-|Specifies the authentication method. The only supported value is `USERNAME_PASSWORD`.
+a|Specifies the authentication method. The only supported value is `USERNAME_PASSWORD`.
 
 a| xref:elements-of-deployment-descriptors.adoc#realm[`realm`]
 |only one
@@ -202,7 +202,7 @@ a| xref:elements-of-deployment-descriptors.adoc#realm[`realm`]
 
 a| xref:elements-of-deployment-descriptors.adoc#required[`required`]
 |only one
-|Specifies whether the authentication method specified in the `auth-method` element must be used for client authentication.
+a|Specifies whether the authentication method specified in the `auth-method` element must be used for client authentication.
 
 |===
 
@@ -282,9 +282,14 @@ The following table describes attributes for the `auth-realm` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Defines the name of this realm.
+a|`name`
+|none
+|Defines the name of this realm.
 
-|`classname` |none |Defines the Jakarta class which implements this realm.
+a|`classname`
+|none
+|Defines the Jakarta class which implements this realm.
+
 |===
 
 [#example]
@@ -330,11 +335,11 @@ The following table describes attributes for the `backend-principal` element.
 |===
 |Attribute |Default |Description
 
-|`user-name`
+a|`user-name`
 |none
 |Specifies the user name required by the EIS.
 
-|`password`
+a|`password`
 |none
 |(optional) Specifies the password required by the EIS, if any.
 
@@ -370,11 +375,11 @@ a| xref:elements-of-deployment-descriptors.adoc#cache-idle-timeout-in-seconds[`c
 
 a| xref:elements-of-deployment-descriptors.adoc#removal-timeout-in-seconds[`removal-timeout-in-seconds`]
 |zero or one
-|Specifies the amount of time a bean remains before being removed. If `removal-timeout-in-seconds` is less than `idle-timeout`, the bean is removed without being passivated.
+a|Specifies the amount of time a bean remains before being removed. If `removal-timeout-in-seconds` is less than `idle-timeout`, the bean is removed without being passivated.
 
 a| xref:elements-of-deployment-descriptors.adoc#resize-quantity[`resize-quantity`]
 |zero or one
-|Specifies the number of beans to be created if the pool is empty (subject to the `max-pool-size` limit). Values are from 0 to MAX_INTEGER.
+a|Specifies the number of beans to be created if the pool is empty (subject to the `max-pool-size` limit). Values are from 0 to MAX_INTEGER.
 
 a| xref:elements-of-deployment-descriptors.adoc#victim-selection-policy[`victim-selection-policy`]
 |zero or one
@@ -423,7 +428,7 @@ a| xref:elements-of-deployment-descriptors.adoc#steady-pool-size[`steady-pool-si
 
 a| xref:elements-of-deployment-descriptors.adoc#resize-quantity[`resize-quantity`]
 |zero or one
-|Specifies the number of beans to be created if the pool is empty (subject to the `max-pool-size` limit). Values are from 0 to MAX_INTEGER.
+a|Specifies the number of beans to be created if the pool is empty (subject to the `max-pool-size` limit). Values are from 0 to MAX_INTEGER.
 
 a| xref:elements-of-deployment-descriptors.adoc#max-pool-size[`max-pool-size`]
 |zero or one
@@ -474,7 +479,7 @@ a| xref:elements-of-deployment-descriptors.adoc#cache-helper[`cache-helper`]
 
 a| xref:elements-of-deployment-descriptors.adoc#default-helper[`default-helper`]
 |zero or one
-|Allows you to change the properties of the default, built-in  xref:elements-of-deployment-descriptors.adoc#cache-helper[`cache-helper`] class.
+a|Allows you to change the properties of the default, built-in  xref:elements-of-deployment-descriptors.adoc#cache-helper[`cache-helper`] class.
 
 a| xref:elements-of-deployment-descriptors.adoc#property-with-attributes[`property` (with attributes)]
 |zero or more
@@ -496,11 +501,17 @@ The following table describes attributes for the `cache` element.
 |===
 |Attribute |Default |Description
 
-|`max-entries` |`4096` |(optional) Specifies the maximum number of entries the cache can contain. Must be a positive integer.
+a|`max-entries`
+a|`4096`
+|(optional) Specifies the maximum number of entries the cache can contain. Must be a positive integer.
 
-|`timeout-in-seconds` |`30` |(optional) Specifies the maximum amount of time in seconds that an entry can remain in the cache after it is created or refreshed. Can be overridden by a xref:elements-of-deployment-descriptors.adoc#timeout[`timeout`] element.
+a|`timeout-in-seconds`
+a|`30`
+a|(optional) Specifies the maximum amount of time in seconds that an entry can remain in the cache after it is created or refreshed. Can be overridden by a xref:elements-of-deployment-descriptors.adoc#timeout[`timeout`] element.
 
-|`enabled` |`true` |(optional) Determines whether servlet and JSP caching is enabled.
+a|`enabled`
+a|`true`
+|(optional) Determines whether servlet and JSP caching is enabled.
 
 |===
 
@@ -514,11 +525,18 @@ The following table describes properties for the `cache` element.
 |===
 |Property |Default |Description
 
-|`cacheClassName` |`com.sun.appserv.web.cache.LruCache` |Specifies the fully qualified name of the class that implements the cache functionality. See xref:elements-of-deployment-descriptors.adoc#cache-class-names[Cache Class Names] for possible values.
+a|`cacheClassName`
+a|`com.sun.appserv.web.cache.LruCache`
+|Specifies the fully qualified name of the class that implements the cache functionality. See xref:elements-of-deployment-descriptors.adoc#cache-class-names[Cache Class Names] for possible values.
 
-|`MultiLRUSegmentSize` |`4096` |Specifies the number of entries in a segment of the cache table that should have its own LRU (least recently used) list. Applicable only if `cacheClassName` is set to `com.sun.appserv.web.cache.MultiLruCache`.
+a|`MultiLRUSegmentSize`
+a|`4096`
+a|Specifies the number of entries in a segment of the cache table that should have its own LRU (least recently used) list. Applicable only if `cacheClassName` is set to `com.sun.appserv.web.cache.MultiLruCache`.
 
-|`MaxSize` |unlimited; `Long.MAX_VALUE` |Specifies an upper bound on the cache memory size in bytes (KB or MB units). Example values are `32 KB` or `2 MB`. Applicable only if `cacheClassName` is set to `com.sun.appserv.web.cache.BoundedMultiLruCache`.
+a|`MaxSize`
+a|unlimited; `Long.MAX_VALUE`
+a|Specifies an upper bound on the cache memory size in bytes (KB or MB units). Example values are `32 KB` or `2 MB`. Applicable only if `cacheClassName` is set to `com.sun.appserv.web.cache.BoundedMultiLruCache`.
+
 |===
 
 [#cache-class-names]
@@ -531,13 +549,17 @@ The following table lists possible values of the `cacheClassName` property.
 |===
 |Value |Description
 
-|`com.sun.appserv.web.cache.LruCache` |A bounded cache with an LRU (least recently used) cache replacement policy.
+a|`com.sun.appserv.web.cache.LruCache`
+|A bounded cache with an LRU (least recently used) cache replacement policy.
 
-|`com.sun.appserv.web.cache.BaseCache` |An unbounded cache suitable if the maximum number of entries is known.
+a|`com.sun.appserv.web.cache.BaseCache`
+|An unbounded cache suitable if the maximum number of entries is known.
 
-|`com.sun.appserv.web.cache.MultiLruCache` |A cache suitable for a large number of entries (>4096). Uses the `MultiLRUSegmentSize` property.
+a|`com.sun.appserv.web.cache.MultiLruCache`
+a|A cache suitable for a large number of entries (>4096). Uses the `MultiLRUSegmentSize` property.
 
-|`com.sun.appserv.web.cache.BoundedMultiLruCache` |A cache suitable for limiting the cache size by memory rather than number of entries. Uses the `MaxSize` property.
+a|`com.sun.appserv.web.cache.BoundedMultiLruCache`
+a|A cache suitable for limiting the cache size by memory rather than number of entries. Uses the `MaxSize` property.
 
 |===
 
@@ -577,9 +599,13 @@ The following table describes attributes for the `cache-helper` element.
 |===
 |Attribute |Default |Description
 
-|`name` |`default` |Specifies a unique name for the helper class, which is referenced in the  xref:elements-of-deployment-descriptors.adoc#cache-mapping[`cache-mapping`] element.
+a|`name`
+a|`default`
+a|Specifies a unique name for the helper class, which is referenced in the  xref:elements-of-deployment-descriptors.adoc#cache-mapping[`cache-mapping`] element.
 
-|`class-name` |none |Specifies the fully qualified class name of the cache helper, which must implement the com.sun.appserv.web.CacheHelper interface.
+a|`class-name`
+|none
+|Specifies the fully qualified class name of the cache helper, which must implement the com.sun.appserv.web.CacheHelper interface.
 
 |===
 
@@ -637,40 +663,40 @@ The following table describes subelements for the `cache-mapping` element.
 |Element |Required |Description
 
 a| xref:elements-of-deployment-descriptors.adoc#servlet-name[`servlet-name`]
-|requires one `servlet-name` or `url-pattern`
+a|requires one `servlet-name` or `url-pattern`
 |Contains the name of a servlet.
 
 a| xref:elements-of-deployment-descriptors.adoc#url-pattern[`url-pattern`]
-|requires one `servlet-name` or `url-pattern`
+a|requires one `servlet-name` or `url-pattern`
 |Contains a servlet URL pattern for which caching is enabled.
 
 a| xref:elements-of-deployment-descriptors.adoc#cache-helper-ref[`cache-helper-ref`]
-|required if `dispatcher`, `timeout`, `refresh-field`, `http-method`, `key-field`, and `constraint-field` are not used
-|Contains the `name` of the  xref:elements-of-deployment-descriptors.adoc#cache-helper[`cache-helper`] used by the parent `cache-mapping` element.
+a|required if `dispatcher`, `timeout`, `refresh-field`, `http-method`, `key-field`, and `constraint-field` are not used
+a|Contains the `name` of the  xref:elements-of-deployment-descriptors.adoc#cache-helper[`cache-helper`] used by the parent `cache-mapping` element.
 
 a|  xref:elements-of-deployment-descriptors.adoc#dispatcher[`dispatcher`]
-|zero or one if `cache-helper-ref` is not used
-|Contains a comma-separated list of `RequestDispatcher` methods for which caching is enabled.
+a|zero or one if `cache-helper-ref` is not used
+a|Contains a comma-separated list of `RequestDispatcher` methods for which caching is enabled.
 
 a| xref:elements-of-deployment-descriptors.adoc#timeout[`timeout`]
-|zero or one if `cache-helper-ref` is not used
-|Contains the xref:elements-of-deployment-descriptors.adoc#cache-mapping[`cache-mapping`] specific maximum amount of time in seconds that an entry can remain in the cache after it is created or refreshed.
+a|zero or one if `cache-helper-ref` is not used
+a|Contains the xref:elements-of-deployment-descriptors.adoc#cache-mapping[`cache-mapping`] specific maximum amount of time in seconds that an entry can remain in the cache after it is created or refreshed.
 
 a| xref:elements-of-deployment-descriptors.adoc#refresh-field[`refresh-field`]
-|zero or one if `cache-helper-ref` is not used
+a|zero or one if `cache-helper-ref` is not used
 |Specifies a field that gives the application component a programmatic way to refresh a cached entry.
 
 a| xref:elements-of-deployment-descriptors.adoc#http-method[`http-method`]
-|zero or more if `cache-helper-ref` is not used
+a|zero or more if `cache-helper-ref` is not used
 |Contains an HTTP method that is eligible for caching.
 
 a| xref:elements-of-deployment-descriptors.adoc#key-field[`key-field`]
-|zero or more if `cache-helper-ref` is not used
+a|zero or more if `cache-helper-ref` is not used
 |Specifies a component of the key used to look up and extract cache entries.
 
 a| xref:elements-of-deployment-descriptors.adoc#constraint-field[`constraint-field`]
-|zero or more if `cache-helper-ref` is not used
-|Specifies a cacheability constraint for the given `url-pattern` or `servlet-name`.
+a|zero or more if `cache-helper-ref` is not used
+a|Specifies a cacheability constraint for the given `url-pattern` or `servlet-name`.
 
 |===
 
@@ -744,9 +770,13 @@ The following table describes attributes for the `cert-db` element.
 |===
 |Attribute |Default |Description
 
-|`path` |none |Specifies the absolute path of the certificate database.
+a|`path`
+|none
+|Specifies the absolute path of the certificate database.
 
-|`password` |none |Specifies the password to access the certificate database.
+a|`password`
+|none
+|Specifies the password to access the certificate database.
 
 |===
 
@@ -812,13 +842,17 @@ The following table describes attributes for the `class-loader` element.
 |===
 |Attribute |Default |Description
 
-|`extra-class-path` |null a| (optional) Specifies a colon or semicolon separated list of additional classpaths for this web module. Paths can be absolute or relative to the web module's root, for example:
+a|`extra-class-path`
+|null
+a| (optional) Specifies a colon or semicolon separated list of additional classpaths for this web module. Paths can be absolute or relative to the web module's root, for example:
 [source,text]
 ----
 extra-class-path="WEB-INF/lib/extra/extra.jar"
 ----
 
-|`delegate` |`true` a|
+a|`delegate`
+a|`true`
+a|
 (optional) If `true`, the web module follows the standard class loader
 delegation model and delegates to its parent class loader first before
 looking in the local class loader. You must set this to `true` for a web
@@ -836,7 +870,9 @@ the delegate setting. This prevents applications from overriding core
 Java runtime classes or changing the API versions of specifications that
 are part of the Jakarta EE platform.
 
-|`dynamic-reload-interval` | + |(optional) Not implemented. Included
+a|`dynamic-reload-interval`
+| +
+a|(optional) Not implemented. Included
 for backward compatibility with previous Oracle Web Server versions.
 
 |===
@@ -856,7 +892,9 @@ The following table describes properties for the `class-loader` element.
 |===
 |Property |Default |Description
 
-|`ignoreHiddenJarFiles` |`false` |If `true`, specifies that all JAR and ZIP files in the `WEB-INF/lib` directory that start with a period (`.`) are ignored by the class loader.
+a|`ignoreHiddenJarFiles`
+a|`false`
+a|If `true`, specifies that all JAR and ZIP files in the `WEB-INF/lib` directory that start with a period (`.`) are ignored by the class loader.
 
 |===
 
@@ -915,7 +953,7 @@ IP address or host name, and the port specifies the port number.
 
 a| xref:elements-of-deployment-descriptors.adoc#auth-realm[`auth-realm`]
 |zero or one
-|Specifies the optional configuration for JAAS
+a|Specifies the optional configuration for JAAS
 authentication realm.
 
 a| xref:elements-of-deployment-descriptors.adoc#client-credential[`client-credential`]
@@ -946,7 +984,9 @@ The following table describes attributes for the `client-container` element.
 |===
 |Attribute |Default |Description
 
-|`send-password` |`true` |If `true`, specifies that client
+a|`send-password`
+a|`true`
+a|If `true`, specifies that client
 authentication credentials must be sent to the server. Without
 authentication credentials, all access to protected EJB components
 results in exceptions.
@@ -990,11 +1030,17 @@ The following table describes attributes for the `client-credential` element.
 |===
 |Attribute |Default |Description
 
-|`user-name` |none |The user name used to authenticate the Application client container.
+a|`user-name`
+|none
+|The user name used to authenticate the Application client container.
 
-|`password` |none |The password used to authenticate the Application client container.
+a|`password`
+|none
+|The password used to authenticate the Application client container.
 
-|`realm` |default realm for the domain |(optional) The realm (specified by name) where credentials are to be resolved.
+a|`realm`
+|default realm for the domain
+|(optional) The realm (specified by name) where credentials are to be resolved.
 
 |===
 
@@ -1199,32 +1245,52 @@ The following table describes attributes for the `connector-connection-pool` ele
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies the name of the connection pool. A xref:elements-of-deployment-descriptors.adoc#connector-resource[`connector-resource`] element's `pool-name` attribute refers to this `name`.
+a|`name`
+|none
+a|Specifies the name of the connection pool. A xref:elements-of-deployment-descriptors.adoc#connector-resource[`connector-resource`] element's `pool-name` attribute refers to this `name`.
 
-|`resource-adapter-name` |none |Specifies the name of the deployed connector module or application. If no name is specified during deployment, the name of the `.rar` file is used.
+a|`resource-adapter-name`
+|none
+a|Specifies the name of the deployed connector module or application. If no name is specified during deployment, the name of the `.rar` file is used.
 If the resource adapter is embedded in an application, then it is `app_name#rar_name`.
 
-|`connection-definition-name` |none |Specifies a unique name, identifying a resource adapter's `connection-definition` element in the `ra.xml` file.
+a|`connection-definition-name`
+|none
+a|Specifies a unique name, identifying a resource adapter's `connection-definition` element in the `ra.xml` file.
 This is usually the `connectionfactory-interface` of the `connection-definition` element.
 
-|`steady-pool-size` |`8` |(optional) Specifies the initial and minimum number of connections maintained in the pool.
+a|`steady-pool-size`
+a|`8`
+|(optional) Specifies the initial and minimum number of connections maintained in the pool.
 
-|`max-pool-size` |`32` |(optional) Specifies the maximum number of connections that can be created to satisfy client requests.
+a|`max-pool-size`
+a|`32`
+|(optional) Specifies the maximum number of connections that can be created to satisfy client requests.
 
-|`max-wait-time-in-millis` |`60000` |(optional) Specifies the amount of time, in milliseconds, that the caller is willing to wait for a connection.
+a|`max-wait-time-in-millis`
+a|`60000`
+a|(optional) Specifies the amount of time, in milliseconds, that the caller is willing to wait for a connection.
 If `0`, the caller is blocked indefinitely until a resource is available or an error occurs.
 
-|`pool-resize-quantity` |`2` a|
+a|`pool-resize-quantity`
+a|`2`
+a|
 (optional) Specifies the number of idle connections to be destroyed if the existing number of connections is above the `steady-pool-size` (subject to the `max-pool-size` limit).
 
 This is enforced periodically at the `idle-timeout-in-seconds` interval.
 An idle connection is one that has not been used for a period of `idle-timeout-in-seconds`. When the pool size reaches `steady-pool-size`, connection removal stops.
 
-|`idle-timeout-in-seconds` |`300` |(optional) Specifies the maximum time that a connection can remain idle in the pool. After this amount of time, the pool can close this connection.
+a|`idle-timeout-in-seconds`
+a|`300`
+|(optional) Specifies the maximum time that a connection can remain idle in the pool. After this amount of time, the pool can close this connection.
 
-|`fail-all-connections` |`false` |(optional) If `true`, closes all connections in the pool if a single validation check fails.
+a|`fail-all-connections`
+a|`false`
+a|(optional) If `true`, closes all connections in the pool if a single validation check fails.
 
-|`transaction-support` |none a|
+a|`transaction-support`
+|none
+a|
 (optional) Specifies the transaction support for this connection pool.
 Overrides the transaction support defined in the resource adapter in a
 downward compatible way: supports a transaction level lower than or
@@ -1235,29 +1301,47 @@ descending order are:
 * `LocalTransaction` - Supports local transactions only.
 * `NoTransaction` - No transaction support.
 
-|`is-connection-validation-required` |`false` |(optional) Specifies whether connections have to be validated before being given to the application. If a resource's validation fails, it is destroyed, and a new resource is created and returned.
+a|`is-connection-validation-required`
+a|`false`
+|(optional) Specifies whether connections have to be validated before being given to the application. If a resource's validation fails, it is destroyed, and a new resource is created and returned.
 
-|`validate-atmost-once-period-in-seconds` |`0` |Specifies the time interval within which a connection is validated at most once. Minimizes the number of validation calls. A value of zero allows unlimited validation calls.
+a|`validate-atmost-once-period-in-seconds`
+a|`0`
+|Specifies the time interval within which a connection is validated at most once. Minimizes the number of validation calls. A value of zero allows unlimited validation calls.
 
-|`connection-leak-timeout-in-seconds` |`0` |Detects potential
+a|`connection-leak-timeout-in-seconds`
+a|`0`
+a|Detects potential
 connection leaks by the application. A connection that is not returned
 back to the pool by the application within the specified period is
 assumed to be potentially leaking, and a stack trace of the caller is
 logged. A zero value disables leak detection. A nonzero value enables
 leak tracing.
 
-|`connection-leak-reclaim` |`false` |If `true`, the pool will reclaim a connection after `connection-leak-timeout-in-seconds` occurs.
+a|`connection-leak-reclaim`
+a|`false`
+a|If `true`, the pool will reclaim a connection after `connection-leak-timeout-in-seconds` occurs.
 
-|`connection-creation-retry-attempts` |`0` |Specifies the number of attempts to create a new connection.
+a|`connection-creation-retry-attempts`
+a|`0`
+|Specifies the number of attempts to create a new connection.
 
-|`connection-creation-retry-interval-in-seconds` |`10` |Specifies the time interval between attempts to create a connection when `connection-creation-retry-attempts` is greater than `0`.
+a|`connection-creation-retry-interval-in-seconds`
+a|`10`
+a|Specifies the time interval between attempts to create a connection when `connection-creation-retry-attempts` is greater than `0`.
 
-|`lazy-connection-enlistment` |`false` |If `true`, a connection is not enlisted in a transaction until it is used. If `false`, any connection object available to a transaction is enlisted in the transaction.
+a|`lazy-connection-enlistment`
+a|`false`
+a|If `true`, a connection is not enlisted in a transaction until it is used. If `false`, any connection object available to a transaction is enlisted in the transaction.
 
-|`lazy-connection-association` |`false` |If `true`, a physical connection is not associated with a logical connection until it is used.
+a|`lazy-connection-association`
+a|`false`
+a|If `true`, a physical connection is not associated with a logical connection until it is used.
 If `false`, a physical connection is associated with a logical connection even before it is used.
 
-|`associate-with-thread` |`false` a|
+a|`associate-with-thread`
+a|`false`
+a|
 If `true`, allows connections to be saved as `ThreadLocal` in the
 calling thread. Connections get reclaimed only when the calling thread
 dies or when the calling thread is not in use and the pool has run out
@@ -1276,18 +1360,26 @@ spent associating connections with a new thread after dissociating them
 from an older one. Use this attribute in cases where the thread pool
 should reuse connections to avoid this overhead.
 
-|`match-connections` |`true` |If `true`, enables connection matching.
+a|`match-connections`
+a|`true`
+a|If `true`, enables connection matching.
 You can set to `false` if connections are homogeneous.
 
-|`max-connection-usage-count` |`0` |Specifies the number of times a
+a|`max-connection-usage-count`
+a|`0`
+a|Specifies the number of times a
 connections is reused by the pool, after which it is closed. A zero
 value disables this feature.
 
-|`ping` |`false` |(optional) Specifies whether to ping the pool during
+a|`ping`
+a|`false`
+a|(optional) Specifies whether to ping the pool during
 pool creation or reconfiguration to identify and warn of any erroneous
 attribute values.
 
-|`pooling` |`true` |(optional) If `false`, disables connection pooling.
+a|`pooling`
+a|`true`
+a|(optional) If `false`, disables connection pooling.
 
 |===
 
@@ -1305,44 +1397,63 @@ Changes to `connector-connection-pool` properties require a server restart.
 |===
 |Property |Default |Description
 
-|`AddressList` |none |Specifies a list of host/port combinations of the
+a|`AddressList`
+|none
+a|Specifies a list of host/port combinations of the
 Message Queue software. For JMS resources of the Type `jakarta.jms.TopicConnectionFactory` or `jakarta.jms.QueueConnectionFactory`.
 
-|`ClientId` |none a|
+a|`ClientId`
+|none
+a|
 Specifies the JMS Client Identifier to be associated with a `Connection` created using the `createTopicConnection` method of the `TopicConnectionFactory` class. For JMS resources of the Type `jakarta.jms.TopicConnectionFactory` .
 
 Durable subscription names are unique and only valid within the scope of a client identifier. To create or reactivate a durable subscriber, the connection must have a valid client identifier.
 The JMS specification ensures that client identifiers are unique and that a given client identifier is allowed to be used by only one active connection at a time.
 
-|`UserName` |`guest` |Specifies the user name for connecting to the
+a|`UserName`
+a|`guest`
+a|Specifies the user name for connecting to the
 Message Queue software. For JMS resources of the Type `jakarta.jms.TopicConnectionFactory` or `jakarta.jms.QueueConnectionFactory`.
 
-|`Password` |`guest` |Specifies the password for connecting to the
+a|`Password`
+a|`guest`
+a|Specifies the password for connecting to the
 Message Queue software. For JMS resources of the Type `jakarta.jms.TopicConnectionFactory` or `jakarta.jms.QueueConnectionFactory`.
 
-|`ReconnectAttempts` |`6` |Specifies the number of attempts to connect (or reconnect) for each address in the `imqAddressList` before the client runtime moves on to try the next address in the list.
+a|`ReconnectAttempts`
+a|`6`
+a|Specifies the number of attempts to connect (or reconnect) for each address in the `imqAddressList` before the client runtime moves on to try the next address in the list.
 A value of `-1` indicates that the number of reconnect attempts is unlimited (the client runtime attempts to connect to the first address until it succeeds).
 
-|`ReconnectInterval` |`30000` |Specifies the interval between reconnect
+a|`ReconnectInterval`
+a|`30000`
+a|Specifies the interval between reconnect
 attempts in milliseconds. This applies to attempts on each address in
 the `imqAddressList` and on successive addresses in the list. If too
 short, this time interval does not give a broker time to recover. If too
 long, the reconnect might represent an unacceptable delay.
 
-|`ReconnectEnabled` |`false` |If `true`, specifies that the client
+a|`ReconnectEnabled`
+a|`false`
+a|If `true`, specifies that the client
 runtime attempts to reconnect to a message server (or the list of
 addresses in `imqAddressList`) when a connection is lost.
 
-|`AddressListBehavior` |`priority` |Specifies whether connection
+a|`AddressListBehavior`
+a|`priority`
+a|Specifies whether connection
 attempts are in the order of addresses in the `imqAddressList` attribute
 (`priority`) or in a random order (`random`). If many clients are
 attempting a connection using the same connection factory, use a random
 order to prevent them from all being connected to the same address.
 
-|`AddressListIterations` |`-1` |Specifies the number of times the client
+a|`AddressListIterations`
+a|`-1`
+a|Specifies the number of times the client
 runtime iterates through the `imqAddressList` in an effort to establish
 (or reestablish) a connection. A value of `-1` indicates that the number
 of attempts is unlimited.
+
 |===
 
 [#connector-resource]
@@ -1385,12 +1496,18 @@ The following table describes attributes for the `connector-resource` element.
 |===
 |Attribute |Default |Description
 
-|`jndi-name` |none |Specifies the JNDI name for the resource.
+a|`jndi-name`
+|none
+|Specifies the JNDI name for the resource.
 
-|`pool-name` |none |Specifies the `name` of the associated
+a|`pool-name`
+|none
+a|Specifies the `name` of the associated
 xref:elements-of-deployment-descriptors.adoc#connector-connection-pool[`connector-connection-pool`].
 
-|`object-type` |`user` a|
+a|`object-type`
+a|`user`
+a|
 (optional) Defines the type of the resource. Allowed values are:
 
 * `system-all` - A system resource for all server instances and the domain application server.
@@ -1398,7 +1515,9 @@ xref:elements-of-deployment-descriptors.adoc#connector-connection-pool[`connecto
 * `system-instance` - A system resource for all server instances only.
 * `user` - A user resource.
 
-|`enabled` |`true` |(optional) Determines whether this resource is enabled at runtime.
+a|`enabled`
+a|`true`
+|(optional) Determines whether this resource is enabled at runtime.
 
 |===
 
@@ -1425,7 +1544,8 @@ The following table describes subelements for the `constraint-field` element.
 |Element |Required |Description
 
 a| xref:elements-of-deployment-descriptors.adoc#constraint-field-value[`constraint-field-value`]
-|zero or more |Contains a value to be matched to the input parameter value.
+|zero or more
+|Contains a value to be matched to the input parameter value.
 
 |===
 
@@ -1439,18 +1559,26 @@ The following table describes attributes for the `constraint-field` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies the input parameter name.
+a|`name`
+|none
+|Specifies the input parameter name.
 
-|`scope` |`request.parameter` |(optional) Specifies the scope from which
+a|`scope`
+a|`request.parameter`
+a|(optional) Specifies the scope from which
 the input parameter is retrieved. Allowed values are
 `context.attribute`, `request.header`, `request.parameter`,
 `request.cookie`, `request.attribute`, and `session.attribute`.
 
-|`cache-on-match` |`true` |(optional) If `true`, caches the response if
+a|`cache-on-match`
+a|`true`
+a|(optional) If `true`, caches the response if
 matching succeeds. Overrides the same attribute in a
 xref:elements-of-deployment-descriptors.adoc#constraint-field-value[`constraint-field-value`] subelement.
 
-|`cache-on-match-failure` |`false` |(optional) If `true`, caches the
+a|`cache-on-match-failure`
+a|`false`
+a|(optional) If `true`, caches the
 response if matching fails. Overrides the same attribute in a
 xref:elements-of-deployment-descriptors.adoc#constraint-field-value[`constraint-field-value`] subelement.
 
@@ -1487,7 +1615,9 @@ The following table describes attributes for the `constraint-field-value` elemen
 |===
 |Attribute |Default |Description
 
-|`match-expr` |`equals` a|
+a|`match-expr`
+a|`equals`
+a|
 (optional) Specifies the type of comparison performed with the value.
 Allowed values are `equals`, `not-equals`, `greater`, `lesser`, and
 `in-range`.
@@ -1496,9 +1626,13 @@ If `match-expr` is `greater` or `lesser`, the value must be a number. If
 `match-expr` is `in-range`, the value must be of the form `n1-n2`, where
 `n1` and `n2` are numbers.
 
-|`cache-on-match` |`true` |(optional) If `true`, caches the response if matching succeeds.
+a|`cache-on-match`
+a|`true`
+a|(optional) If `true`, caches the response if matching succeeds.
 
-|`cache-on-match-failure` |`false` |(optional) If `true`, caches the response if matching fails.
+a|`cache-on-match-failure`
+a|`false`
+a|(optional) If `true`, caches the response if matching fails.
 
 |===
 
@@ -1559,28 +1693,39 @@ a| xref:elements-of-deployment-descriptors.adoc#property-with-attributes[`proper
 The following table describes properties for the `cookie-properties` element.
 
 .`cookie-properties` Properties
-[cols="3,2,6a",options="header"]
+[cols="3,2,6",options="header"]
 |===
 |Property |Default |Description
 
-|`cookieName` |none |Specifies the cookie name.
+a|`cookieName`
+|none
+|Specifies the cookie name.
 
-|`cookiePath` |Context path at which the web module is installed.
-|Specifies the pathname that is set when the cookie is created. The
+a|`cookiePath`
+|Context path at which the web module is installed.
+a|Specifies the pathname that is set when the cookie is created. The
 browser sends the cookie if the pathname for the request contains this
 pathname. If set to `/` (slash), the browser sends cookies to all URLs
 served by Payara Server. You can set the path to a narrower mapping
 to limit the request URLs to which the browser sends cookies.
 
-|`cookieMaxAgeSeconds` |none |Specifies the expiration time (in seconds)
+a|`cookieMaxAgeSeconds`
+|none
+a|Specifies the expiration time (in seconds)
 after which the browser expires the cookie. If this is unset, the cookie
 doesn't expire.
 
-|`cookieDomain` |(unset) |Specifies the domain for which the cookie is valid.
+a|`cookieDomain`
+|(unset)
+|Specifies the domain for which the cookie is valid.
 
-|`cookieComment` |none |Specifies the comment that identifies the session tracking cookie in the cookie file.
+a|`cookieComment`
+|none
+|Specifies the comment that identifies the session tracking cookie in the cookie file.
 
-|`cookieSecure` |`dynamic` a|
+a|`cookieSecure`
+a|`dynamic`
+a|
 Sets the `Secure` attribute of any `JSESSIONID` cookies associated with the web application. Allowed values are as follows:
 
 * `true` — Sets `Secure` to `true`.
@@ -1591,8 +1736,13 @@ To set the `Secure` attribute of a `JSESSIONIDSSO` cookie, use the `ssoCookieSec
 
 For details, see xref:../command-reference/create-virtual-server.adoc[`create-virtual-server`].
 
-|`cookieHttpOnly` |none |Specifies that the cookie is marked HTTP only. Allowed values are `true` or `false`.
-|`cookieSameSite` |none |Users can set up the link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value[`SameSite`^] Cookie attribute for the corresponding web application. Can be one of `Strict`, `Lax` or `None`. For example:
+a|`cookieHttpOnly`
+|none
+a|Specifies that the cookie is marked HTTP only. Allowed values are `true` or `false`.
+
+a|`cookieSameSite`
+|none
+a|Users can set up the link:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value[`SameSite`^] Cookie attribute for the corresponding web application. Can be one of `Strict`, `Lax` or `None`. For example:
 
 [source, xml]
 ----
@@ -1627,7 +1777,8 @@ a| xref:elements-of-deployment-descriptors.adoc#description[`description`]
 |Contains a text description of this element.
 
 a| xref:elements-of-deployment-descriptors.adoc#property-with-attributes[`property` (with attributes)]
-|zero or more |Specifies a property or a variable.
+|zero or more
+|Specifies a property or a variable.
 
 |===
 
@@ -1641,15 +1792,23 @@ The following table describes attributes for the `custom-resource` element.
 |===
 |Attribute |Default |Description
 
-|`jndi-name` |none |Specifies the JNDI name for the resource.
+a|`jndi-name`
+|none
+|Specifies the JNDI name for the resource.
 
-|`res-type` |none |Specifies the fully qualified type of the resource.
+a|`res-type`
+|none
+|Specifies the fully qualified type of the resource.
 
-|`factory-class` |none |Specifies the fully qualified name of the
+a|`factory-class`
+|none
+a|Specifies the fully qualified name of the
 user-written factory class, which implements
 `javax.naming.spi.ObjectFactory`.
 
-|`object-type` |`user` a|
+a|`object-type`
+a|`user`
+a|
 (optional) Defines the type of the resource. Allowed values are:
 
 * `system-all` - A system resource for all server instances and the
@@ -1659,8 +1818,11 @@ server.
 * `system-instance` - A system resource for all server instances only.
 * `user` - A user resource.
 
-|`enabled` |`true` |(optional) Determines whether this resource is
+a|`enabled`
+a|`true`
+a|(optional) Determines whether this resource is
 enabled at runtime.
+
 |===
 
 //TODO - Consider removing JavaDB/Derby support
@@ -1717,7 +1879,8 @@ The following table describes properties for the `default-helper` element.
 |===
 |Property |Default |Description
 
-|`cacheKeyGeneratorAttrName` |Uses the built-in `default`
+a|`cacheKeyGeneratorAttrName`
+a|Uses the built-in `default`
 xref:elements-of-deployment-descriptors.adoc#cache-helper[`cache-helper`] key generation, which concatenates the
 servlet path with xref:elements-of-deployment-descriptors.adoc#key-field[`key-field`] values, if any. |The caching
 engine looks in the `ServletContext` for an attribute with a name equal
@@ -1755,7 +1918,7 @@ The following table describes subelements for the `default-resource-principal` e
 
 a| xref:elements-of-deployment-descriptors.adoc#name[`name`]
 |only one
-|Specifies the default resource principal name used to sign
+a|Specifies the default resource principal name used to sign
 on to a resource manager.
 
 a| xref:elements-of-deployment-descriptors.adoc#password[`password`]
@@ -1862,23 +2025,23 @@ The following table describes subelements for the `ejb` element.
 
 a| xref:elements-of-deployment-descriptors.adoc#ejb-name[`ejb-name`]
 |only one
-|Matches the `ejb-name` in the corresponding `ejb-jar.xml` file.
+a|Matches the `ejb-name` in the corresponding `ejb-jar.xml` file.
 
 a| xref:elements-of-deployment-descriptors.adoc#jndi-name[`jndi-name`]
 |zero or more
-|Specifies the absolute `jndi-name`.
+a|Specifies the absolute `jndi-name`.
 
 a| xref:elements-of-deployment-descriptors.adoc#ejb-ref[`ejb-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `ejb-ref` element in the corresponding Jakarta EE XML file.
+a|Maps the absolute JNDI name to the `ejb-ref` element in the corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#resource-ref[`resource-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `resource-ref` in the corresponding Jakarta EE XML file.
+a|Maps the absolute JNDI name to the `resource-ref` in the corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#resource-env-ref[`resource-env-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `resource-env-ref` in the corresponding Jakarta EE XML file.
+a|Maps the absolute JNDI name to the `resource-env-ref` in the corresponding Jakarta EE XML file.
 
 a|xref:elements-of-deployment-descriptors.adoc#service-ref[`service-ref`]
 |zero or more
@@ -1890,12 +2053,13 @@ a| xref:elements-of-deployment-descriptors.adoc#message-destination-ref[`message
 
 a| xref:elements-of-deployment-descriptors.adoc#pass-by-reference[`pass-by-reference`]
 |zero or one
-|Specifies the passing method used by an enterprise bean
+a|Specifies the passing method used by an enterprise bean
 calling a remote interface method in another bean that is colocated
 within the same process.
 
 a| xref:elements-of-deployment-descriptors.adoc#principal[`principal`]
-|zero or one |Specifies the principal (user) name in an enterprise bean that has the `run-as` role specified.
+|zero or one
+a|Specifies the principal (user) name in an enterprise bean that has the `run-as` role specified.
 
 a| xref:elements-of-deployment-descriptors.adoc#mdb-connection-factory[`mdb-connection-factory`]
 |zero or one
@@ -1958,7 +2122,8 @@ a| xref:elements-of-deployment-descriptors.adoc#flush-at-end-of-method[`flush-at
 |Specifies the methods that force a database flush after execution. Used for entity beans.
 
 a| xref:elements-of-deployment-descriptors.adoc#checkpoint-at-end-of-method[`checkpoint-at-end-of-method`]
-|zero or one |Specifies that the stateful session bean state is checkpointed, or persisted, after the specified methods are executed.
+|zero or one
+a|Specifies that the stateful session bean state is checkpointed, or persisted, after the specified methods are executed.
 The `availability-enabled` attribute must be set to `true`.
 
 a| xref:elements-of-deployment-descriptors.adoc#per-request-load-balancing[`per-request-load-balancing`]
@@ -1967,7 +2132,7 @@ a| xref:elements-of-deployment-descriptors.adoc#per-request-load-balancing[`per-
 
 a| xref:elements-of-deployment-descriptors.adoc#clustered-attach-postconstruct[`clustered-attach-postconstruct`]
 |zero or one
-|Used for clustered singletons. Defines whether the bean's `@PostConstruct` event is called each time it is created on different nodes.
+a|Used for clustered singletons. Defines whether the bean's `@PostConstruct` event is called each time it is created on different nodes.
 
 a| xref:elements-of-deployment-descriptors.adoc#clustered-bean[`clustered-bean`]
 |zero or one
@@ -1975,7 +2140,7 @@ a| xref:elements-of-deployment-descriptors.adoc#clustered-bean[`clustered-bean`]
 
 a| xref:elements-of-deployment-descriptors.adoc#clustered-detach-predestroy[`clustered-detach-predestroy`]
 |zero or one
-|Used for clustered singletons. Defines whether the bean's `@PreDestroy` event is called when the bean is destroyed on a node while available on another.
+a|Used for clustered singletons. Defines whether the bean's `@PreDestroy` event is called when the bean is destroyed on a node while available on another.
 
 a| xref:elements-of-deployment-descriptors.adoc#clustered-key-name[`clustered-key-name`]
 |zero or one
@@ -1997,7 +2162,9 @@ The following table describes attributes for the `ejb` element.
 |===
 |Attribute |Default |Description
 
-|`availability-enabled` |`false` |(optional) If set to `true`, and if availability is enabled in the EJB container, high-availability features apply to this bean if it is a stateful session bean.
+a|`availability-enabled`
+a|`false`
+a|(optional) If set to `true`, and if availability is enabled in the EJB container, high-availability features apply to this bean if it is a stateful session bean.
 
 |===
 
@@ -2073,11 +2240,11 @@ The following table describes subelements for the `ejb-ref` element.
 
 a| xref:elements-of-deployment-descriptors.adoc#ejb-ref-name[`ejb-ref-name`]
 |only one
-|Specifies the `ejb-ref-name` in the corresponding Jakarta EE deployment descriptor file `ejb-ref` entry.
+a|Specifies the `ejb-ref-name` in the corresponding Jakarta EE deployment descriptor file `ejb-ref` entry.
 
 a| xref:elements-of-deployment-descriptors.adoc#jndi-name[`jndi-name`]
 |only one
-|Specifies the absolute `jndi-name` of a resource.
+a|Specifies the absolute `jndi-name` of a resource.
 
 |===
 
@@ -2210,13 +2377,13 @@ a| xref:elements-of-deployment-descriptors.adoc#name[`name`]
 
 a| xref:elements-of-deployment-descriptors.adoc#unique-id[`unique-id`]
 |zero or one
-|Specifies a unique system identifier. This data is
+a|Specifies a unique system identifier. This data is
 automatically generated and updated at deployment/redeployment. Do not
 specify or edit this value.
 
 a| xref:elements-of-deployment-descriptors.adoc#ejb[`ejb`]
 |zero or more
-|Defines runtime properties for a single enterprise bean
+a|Defines runtime properties for a single enterprise bean
 within the application.
 
 a| xref:elements-of-deployment-descriptors.adoc#message-destination[`message-destination`]
@@ -2274,8 +2441,8 @@ The following table describes properties for the `enterprise-beans` element.
 |===
 |Property |Default |Description
 
-|`default-role-mapping`
-|`false`
+a|`default-role-mapping`
+a|`false`
 a|
 With this property, you can set whether to enable the default group to role mappings for your application's security settings. This element is set up as a `property` element with a `Boolean` value attribute like this:
 
@@ -2287,6 +2454,7 @@ With this property, you can set whether to enable the default group to role mapp
 ----
 
 Enabling the default group to role mappings will cause all named groups in the module's linked *security realm* to be mapped to a role of the same name. This will save you the time of having to redefine the same roles and map them to the realm groups each time they are modified.
+
 |===
 
 [#establish-trust-in-client]
@@ -2366,18 +2534,28 @@ The following table describes attributes for the
 |===
 |Attribute |Default |Description
 
-|`jndi-name` |none |Specifies the JNDI name for the resource.
+a|`jndi-name`
+|none
+|Specifies the JNDI name for the resource.
 
-|`jndi-lookup-name` |none |Specifies the JNDI lookup name for the
+a|`jndi-lookup-name`
+|none
+a|Specifies the JNDI lookup name for the
 resource.
 
-|`res-type` |none |Specifies the fully qualified type of the resource.
+a|`res-type`
+|none
+|Specifies the fully qualified type of the resource.
 
-|`factory-class` |none a|
+a|`factory-class`
+|none
+a|
 Specifies the fully qualified name of the factory class, which
 implements javax.naming.spi.InitialContextFactory .
 
-|`object-type` |`user` a|
+a|`object-type`
+a|`user`
+a|
 (optional) Defines the type of the resource. Allowed values are:
 
 * `system-all` - A system resource for all server instances and the
@@ -2387,8 +2565,11 @@ server.
 * `system-instance` - A system resource for all server instances only.
 * `user` - A user resource.
 
-|`enabled` |`true` |(optional) Determines whether this resource is
+a|`enabled`
+a|`true`
+a|(optional) Determines whether this resource is
 enabled at runtime.
+
 |===
 
 [#flush-at-end-of-method]
@@ -2441,18 +2622,19 @@ The following table describes subelements for the `gen-classes` element.
 
 a| xref:elements-of-deployment-descriptors.adoc#remote-impl[`remote-impl`]
 |zero or one
-|Specifies the fully-qualified class name of the generated `EJBObject` impl class.
+a|Specifies the fully-qualified class name of the generated `EJBObject` impl class.
 
 a| xref:elements-of-deployment-descriptors.adoc#local-impl[`local-impl`]
 |zero or one
-|Specifies the fully-qualified class name of the generated `EJBLocalObject` impl class.
+a|Specifies the fully-qualified class name of the generated `EJBLocalObject` impl class.
 
 a| xref:elements-of-deployment-descriptors.adoc#remote-home-impl[`remote-home-impl`]
-|zero or one |Specifies the fully-qualified class name of the generated `EJBHome` impl class.
+|zero or one
+a|Specifies the fully-qualified class name of the generated `EJBHome` impl class.
 
 a| xref:elements-of-deployment-descriptors.adoc#local-home-impl[`local-home-impl`]
 |zero or one
-|Specifies the fully-qualified class name of the generated `EJBLocalHome` impl class.
+a|Specifies the fully-qualified class name of the generated `EJBLocalHome` impl class.
 
 |===
 
@@ -2498,16 +2680,16 @@ a| xref:elements-of-deployment-descriptors.adoc#realm[`realm`]
 
 a| xref:elements-of-deployment-descriptors.adoc#ejb-ref[`ejb-ref`]
 |zero or more
-| Maps the absolute JNDI name to the `ejb-ref` in the
+a| Maps the absolute JNDI name to the `ejb-ref` in the
 corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#resource-ref[`resource-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `resource-ref` in the corresponding Jakarta EE XML file.
+a|Maps the absolute JNDI name to the `resource-ref` in the corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#resource-env-ref[`resource-env-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `resource-env-ref` in
+a|Maps the absolute JNDI name to the `resource-env-ref` in
 the corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#service-ref[`service-ref`]
@@ -2570,8 +2752,8 @@ The following table describes properties for the `payara-application` element.
 |===
 |Property |Default |Description
 
-|`default-role-mapping`
-|`false`
+a|`default-role-mapping`
+a|`false`
 a|
 With this property, you can set whether to enable the default group to role mappings for your application's security settings. This element is set up as a `property` element with a `Boolean` value attribute like this:
 
@@ -2594,6 +2776,7 @@ asadmin set configs.config.server-config.security-service.activate-default-princ
 Except its effect will only limit itself to the application instead of all applications deployed on the server.
 
 WARNING: When set using this property, this configuration will ALWAYS take effect and if set in the `payara-web.xml` or `payara-ejb-jar.xml` deployment descriptors, it will be ignored.
+
 |===
 
 [#payara-application-client]
@@ -2619,15 +2802,15 @@ The following table describes subelements for the `payara-application-client` el
 
 a|  xref:elements-of-deployment-descriptors.adoc#ejb-ref[`ejb-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `ejb-ref` in the corresponding Jakarta EE XML file.
+a|Maps the absolute JNDI name to the `ejb-ref` in the corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#resource-ref[`resource-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `resource-ref` in the corresponding Jakarta EE XML file.
+a|Maps the absolute JNDI name to the `resource-ref` in the corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#resource-env-ref[`resource-env-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `resource-env-ref` in
+a|Maps the absolute JNDI name to the `resource-env-ref` in
 the corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#service-ref[`service-ref`]
@@ -2735,7 +2918,7 @@ a| xref:elements-of-deployment-descriptors.adoc#security-role-mapping[`security-
 
 a| xref:elements-of-deployment-descriptors.adoc#servlet[`servlet`]
 |zero or more
-|Specifies a principal name for a servlet, which is used for the `run-as` role defined in `web.xml`.
+a|Specifies a principal name for a servlet, which is used for the `run-as` role defined in `web.xml`.
 
 a| xref:elements-of-deployment-descriptors.adoc#idempotent-url-pattern[`idempotent-url-pattern`]
 |zero or more
@@ -2747,16 +2930,16 @@ a| xref:elements-of-deployment-descriptors.adoc#session-config[`session-config`]
 
 a| xref:elements-of-deployment-descriptors.adoc#ejb-ref[`ejb-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `ejb-ref` in the corresponding Jakarta EE XML file.
+a|Maps the absolute JNDI name to the `ejb-ref` in the corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#resource-ref[`resource-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `resource-ref` in the
+a|Maps the absolute JNDI name to the `resource-ref` in the
 corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#resource-env-ref[`resource-env-ref`]
 |zero or more
-|Maps the absolute JNDI name to the `resource-env-ref` in the corresponding Jakarta EE XML file.
+a|Maps the absolute JNDI name to the `resource-env-ref` in the corresponding Jakarta EE XML file.
 
 a| xref:elements-of-deployment-descriptors.adoc#service-ref[`service-ref`]
 |zero or more
@@ -2812,7 +2995,7 @@ a| xref:elements-of-deployment-descriptors.adoc#classloading-delegate[`classload
 
 a| xref:elements-of-deployment-descriptors.adoc#jaxrs-roles-allowed-enabled[`jaxrs-roles-allowed-enabled`]
 |zero or one
-|Configures out of the box support for the `@RolesAllowed` annotation in a web application.
+a|Configures out of the box support for the `@RolesAllowed` annotation in a web application.
 
 a| xref:elements-of-deployment-descriptors.adoc#scanning-exclude-and-scanning-include[`scanning-include`]
 |zero or one
@@ -2838,9 +3021,13 @@ The following table describes attributes for the `payara-web-app` element.
 |===
 |Attribute |Default |Description
 
-|`error-url` |(blank) |(optional) Not implemented. Do not use.
+a|`error-url`
+|(blank)
+|(optional) Not implemented. Do not use.
 
-|`httpservlet-security-provider` |none |(optional) Specifies the `HttpServlet` message layer provider that the web container's servlet `auth-constraint` processing calls.
+a|`httpservlet-security-provider`
+|none
+a|(optional) Specifies the `HttpServlet` message layer provider that the web container's servlet `auth-constraint` processing calls.
 
 |===
 
@@ -2854,14 +3041,18 @@ The following table describes properties for the `payara-web-app` element.
 |===
 |Property |Default |Description
 
-|`allowLinking` |`false` a|
+a|`allowLinking`
+a|`false`
+a|
 If `true`, resources in this web application that are symbolic links are served. You can also define this property for a virtual server.
 Web applications on the virtual server that do not define this property use the virtual server's value.
 For details, see xref:../command-reference/create-virtual-server.adoc[`create-virtual-server`(1)].
 
 CAUTION: Setting this property to `true` on Windows systems exposes JSP source code.
 
-|`alternatedocroot_n` |none a|
+a|`alternatedocroot_n`
+|none
+a|
 Specifies an alternate document root (docroot), where n is a positive integer that allows specification of more than one. Alternate docroots allow web applications to serve requests for certain resources from outside their own docroot, based on whether those requests match one (or more) of the URI patterns of the web application's alternate docroots. +
 
 If a request matches an alternate docroot's URI pattern, it is mapped to the alternate docroot by appending the request URI (minus the web application's context root) to the alternate docroot's physical location (directory).
@@ -2888,7 +3079,9 @@ and  the second component, `dir`, specifies the alternate docroot's physical loc
 
 You can set this property for all the web applications on a specific virtual server. For details, see xref:../command-reference/create-virtual-server.adoc[`create-virtual-server`].
 
-|`listener_n` |none a|
+a|`listener_n`
+|none
+a|
 Specifies a fully qualified class name of a custom Catalina listener,
 where n is a positive integer that allows specification of more than
 one. The listener class must implement the
@@ -2905,33 +3098,45 @@ org.apache.catalina.InstanceListener interface. For example:
 You can set this property for all the web applications on a specific
 virtual server. For details, see xref:../command-reference/create-virtual-server.adoc[`create-virtual-server`].
 
-|`crossContextAllowed` |`true` |If `true`, allows this web application to access the contexts of other web applications using the `ServletContext.getContext()` method.
+a|`crossContextAllowed`
+a|`true`
+a|If `true`, allows this web application to access the contexts of other web applications using the `ServletContext.getContext()` method.
 
-|`relativeRedirectAllowed` |`false` |If `true`, allows this web application to send a relative URL to the client using `HttpServletResponse.sendRedirect()`, and instructs the web container not to translate any relative URLs to fully qualified ones.
+a|`relativeRedirectAllowed`
+a|`false`
+a|If `true`, allows this web application to send a relative URL to the client using `HttpServletResponse.sendRedirect()`, and instructs the web container not to translate any relative URLs to fully qualified ones.
 
-|`reuseSessionID` |`false` |If `true`, sessions generated for this web application use the session ID specified in the request.
+a|`reuseSessionID`
+a|`false`
+a|If `true`, sessions generated for this web application use the session ID specified in the request.
 
-|`securePagesWithPragma` |`true` a| Set this property to `false` to ensure that for this web application file downloads using SSL work properly in Internet Explorer.
+a|`securePagesWithPragma`
+a|`true`
+a| Set this property to `false` to ensure that for this web application file downloads using SSL work properly in Internet Explorer.
 
 You can set this property for all the web applications on a specific
 virtual server. For details, see xref:../command-reference/create-virtual-server.adoc[`create-virtual-server`(1)].
 
-|`singleThreadedServletPoolSize` |`5` |Specifies the maximum number of servlet instances allocated for each `SingleThreadModel` servlet in the web application.
+a|`singleThreadedServletPoolSize`
+a|`5`
+a|Specifies the maximum number of servlet instances allocated for each `SingleThreadModel` servlet in the web application.
 
-|`tempdir` a| `domain-dir/generated/app-name`
+a|`tempdir`
+a| `domain-dir/generated/app-name`
 
 or
 
 `domain-dir/generated/module-name`
-
- |Specifies a temporary directory for use by this web module. This value
+a|Specifies a temporary directory for use by this web module. This value
 is used to construct the value of the `javax.servlet.context.tempdir`
 context attribute. Compiled JSP files are also placed in this directory.
 
-|`useResponseCTForHeaders` |`false` |If `true`, response headers are encoded using the response's charset instead of the default (UTF-8).
+a|`useResponseCTForHeaders`
+a|`false`
+a|If `true`, response headers are encoded using the response's charset instead of the default (UTF-8).
 
-|`default-role-mapping`
-|`false`
+a|`default-role-mapping`
+a|`false`
 a|
 With this property, you can set whether to enable the default group to role mappings for your application's security settings. This element is set up as a `property` element with a `Boolean` value attribute like this:
 
@@ -2943,15 +3148,18 @@ With this property, you can set whether to enable the default group to role mapp
 ----
 
 Enabling the default group to role mappings will cause all named groups in the application's linked *security realm* to be mapped to a role of the same name. This will save you the time of having to redefine the same roles and map them to the realm groups each time they are modified.
+
 a|[.breakable]`container-initializer-enabled`
-|`true`
-|This property configures whether to enable or disable the calling of `ServletContainerInitializer` component classes defined in JAR files bundled inside a WAR assembly.
+a|`true`
+a|This property configures whether to enable or disable the calling of `ServletContainerInitializer` component classes defined in JAR files bundled inside a WAR assembly.
 
 For performance considerations, you can explicitly disable the servlet container initializer by setting the `container-initializer-enabled` element to `false`.
 
 This can help solve the deployment of web applications that can suffer from conflicts with a custom bootstrapping process.
 
-|`cacheTTL` |`5000` |This property sets the time to live (TTL), in milliseconds, for the virtual server cache used when serving files.
+a|`cacheTTL`
+a|`5000`
+a|This property sets the time to live (TTL), in milliseconds, for the virtual server cache used when serving files.
 
 It can also be applied to all web applications on a specific virtual server.
 When set at the application level, this property overrides the virtual server configuration.
@@ -2983,9 +3191,13 @@ The following table describes attributes for the `group-map` element.
 |===
 |Attribute |Default |Description
 
-|`eis-group` |none |Specifies an EIS group.
+a|`eis-group`
+|none
+|Specifies an EIS group.
 
-|`mapped-group` |none |Specifies a group defined in the Payara Server domain.
+a|`mapped-group`
+|none
+|Specifies a group defined in the Payara Server domain.
 
 |===
 
@@ -3044,9 +3256,13 @@ The following table describes attributes for the `idempotent-url-pattern` elemen
 |===
 |Attribute |Default |Description
 
-|`url-pattern` |none |Specifies a URL pattern, which can contain wildcards. The URL pattern must conform to the mappings specified in section 12.2 of the Servlet 6.0 specification.
+a|`url-pattern`
+|none
+|Specifies a URL pattern, which can contain wildcards. The URL pattern must conform to the mappings specified in section 12.2 of the Servlet 6.0 specification.
 
-|`no-of-retries` |`-1` |(optional) Specifies the number of times the load balancer retries an idempotent request. A value of `-1` indicates infinite retries.
+a|`no-of-retries`
+a|`-1`
+a|(optional) Specifies the number of times the load balancer retries an idempotent request. A value of `-1` indicates infinite retries.
 
 |===
 
@@ -3101,7 +3317,7 @@ a| xref:elements-of-deployment-descriptors.adoc#transport-config[`transport-conf
 
 a| xref:elements-of-deployment-descriptors.adoc#as-context[`as-context`]
 |zero or one
-|Specifies the authentication mechanism used to authenticate the client. If specified, it is `USERNAME_PASSWORD`.
+a|Specifies the authentication mechanism used to authenticate the client. If specified, it is `USERNAME_PASSWORD`.
 
 a| xref:elements-of-deployment-descriptors.adoc#sas-context[`sas-context`]
 |zero or one
@@ -3154,7 +3370,8 @@ a| xref:elements-of-deployment-descriptors.adoc#method-name[`method-name`]
 |Specifies a method name.
 
 a| xref:elements-of-deployment-descriptors.adoc#method-params[`method-params`]
-|zero or one |Specifies fully qualified Java type names of method parameters.
+|zero or one
+|Specifies fully qualified Java type names of method parameters.
 
 |===
 
@@ -3180,7 +3397,8 @@ The following table describes subelements for the `java-web-start-access` elemen
 |Element |Required |Description
 
 a| xref:elements-of-deployment-descriptors.adoc#context-root[`context-root`]
-|zero or one a| Contains the context root for the Java Web Start enabled application client module. If none is specified, a default is generated. +
+|zero or one
+a| Contains the context root for the Java Web Start enabled application client module. If none is specified, a default is generated. +
 
 The default for a web module is as follows:
 
@@ -3201,11 +3419,11 @@ If the web module is not in EAR or JAR file format, a name is generated and writ
 
 a| xref:elements-of-deployment-descriptors.adoc#eligible[`eligible`]
 |zero or one
-|Specifies whether the application client module is eligible to be Java Web Start enabled. Allowed values are `true` (the default) and `false`.
+a|Specifies whether the application client module is eligible to be Java Web Start enabled. Allowed values are `true` (the default) and `false`.
 
 a| xref:elements-of-deployment-descriptors.adoc#vendor[`vendor`]
 |zero or one
-|Specifies the name of the vendor as it appears in Java Web Start download and launch screens. The default value is `Application Client`.
+a|Specifies the name of the vendor as it appears in Java Web Start download and launch screens. The default value is `Application Client`.
 
 a| xref:elements-of-deployment-descriptors.adoc#jnlp-doc[`jnlp-doc`]
 |zero or one
@@ -3275,48 +3493,76 @@ Changing the following attributes requires a server restart or the redeployment 
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies the name of the connection pool. A xref:jdbc-resource[`jdbc-resource`] element's `pool-name` attribute refers to this `name`.
+a|`name`
+|none
+a|Specifies the name of the connection pool. A xref:jdbc-resource[`jdbc-resource`] element's `pool-name` attribute refers to this `name`.
 
-|`datasource-classname` |none |(optional) Specifies the class name of the associated vendor-supplied data source. This class must implement javax.sql.DataSource, javax.sql.XADataSource, javax.sql.ConnectionPoolDatasource , or a combination.
+a|`datasource-classname`
+|none
+|(optional) Specifies the class name of the associated vendor-supplied data source. This class must implement javax.sql.DataSource, javax.sql.XADataSource, javax.sql.ConnectionPoolDatasource , or a combination.
 
-|`res-type` |none |(optional) Specifies the interface the data source class implements.
+a|`res-type`
+|none
+a|(optional) Specifies the interface the data source class implements.
 The value of this attribute can be javax.sql.DataSource, javax.sql.XADataSource , javax.sql.ConnectionPoolDatasource , or java.sql.Driver.
 To support configuration of JDBC drivers and applications that use java.sql.Driver implementations, set this attribute to java.sql.Driver.
 This attribute must be specified to avoid ambiguity when a data source class implements two or more of these interfaces or when a `driver-classname` is specified.
 An error occurs if this attribute has a legal value and the
 indicated interface is not implemented by the data source class.
 
-|`driver-classname` |none |(optional) Specifies the vendor-supplied JDBC driver class name. This driver must implement the java.sql.Driver interface.
+a|`driver-classname`
+|none
+|(optional) Specifies the vendor-supplied JDBC driver class name. This driver must implement the java.sql.Driver interface.
 
-|`ping` |`false` |(optional) Specifies whether to ping the pool during pool creation or reconfiguration to identify and warn of any erroneous attribute values.
+a|`ping`
+a|`false`
+|(optional) Specifies whether to ping the pool during pool creation or reconfiguration to identify and warn of any erroneous attribute values.
 
-|`steady-pool-size` |`8` |(optional) Specifies the initial and minimum number of connections maintained in the pool.
+a|`steady-pool-size`
+a|`8`
+|(optional) Specifies the initial and minimum number of connections maintained in the pool.
 
-|`max-pool-size` |`32` |(optional) Specifies the maximum number of connections that can be created to satisfy client requests.
+a|`max-pool-size`
+a|`32`
+|(optional) Specifies the maximum number of connections that can be created to satisfy client requests.
 
-|`max-wait-time-in-millis` |`60000` |(optional) Specifies the amount of time, in milliseconds, that the caller is willing to wait for a connection. If `0`, the caller is blocked indefinitely until a resource is available or an error occurs.
+a|`max-wait-time-in-millis`
+a|`60000`
+a|(optional) Specifies the amount of time, in milliseconds, that the caller is willing to wait for a connection. If `0`, the caller is blocked indefinitely until a resource is available or an error occurs.
 
-|`pool-resize-quantity` |`2` a| (optional) Specifies the number of idle connections to be destroyed if the existing number of connections is above the `steady-pool-size` (subject to the `max-pool-size` limit).
+a|`pool-resize-quantity`
+a|`2`
+a| (optional) Specifies the number of idle connections to be destroyed if the existing number of connections is above the `steady-pool-size` (subject to the `max-pool-size` limit).
 
 This is enforced periodically at the `idle-timeout-in-seconds` interval. An idle connection is one that has not been used for a period of `idle-timeout-in-seconds`.
 When the pool size reaches `steady-pool-size`, connection removal stops.
 
-|`idle-timeout-in-seconds` |`300` a| (optional) Specifies the maximum time that a connection can remain idle in the pool. After this amount of time, the pool can close this connection.
+a|`idle-timeout-in-seconds`
+a|`300`
+a| (optional) Specifies the maximum time that a connection can remain idle in the pool. After this amount of time, the pool can close this connection.
 
 This timeout value must be kept shorter than the server side (database) timeout value to prevent the accumulation of unusable connections in the application.
 
-|`transaction-isolation-level` |default JDBC driver isolation level a|(optional) Specifies the transaction isolation level on the pooled database connections.
+a|`transaction-isolation-level`
+|default JDBC driver isolation level
+a|(optional) Specifies the transaction isolation level on the pooled database connections.
 Allowed values are `read-uncommitted`, `read-committed` , `repeatable-read`,  `serializable`, or `snapshot`(snapshot isolation level is only supported by Microsoft SQL Server) .
 
 Applications that change the isolation level on a pooled connection programmatically risk polluting the pool, which can lead to errors. See `is-isolation-level-guaranteed` for more details.
 
-|`is-isolation-level-guaranteed` |`true` |(optional) Applicable only when `transaction-isolation-level` is explicitly set.
+a|`is-isolation-level-guaranteed`
+a|`true`
+a|(optional) Applicable only when `transaction-isolation-level` is explicitly set.
 If `true`, every connection obtained from the pool is guaranteed to have the desired isolation level.
 This might impact performance on some JDBC drivers. Only set this attribute to `false` if you are certain that the hosted applications do not return connections with altered isolation levels.
 
-|`is-connection-validation-required` |`false` |(optional) Specifies whether connections have to be validated before being given to the application. If a resource's validation fails, it is destroyed, and a new resource is created and returned.
+a|`is-connection-validation-required`
+a|`false`
+|(optional) Specifies whether connections have to be validated before being given to the application. If a resource's validation fails, it is destroyed, and a new resource is created and returned.
 
-|`connection-validation-method` |`table` a|
+a|`connection-validation-method`
+a|`table`
+a|
 (optional) Legal values are as follows:
 
 * `auto-commit`, which uses `Connection.setAutoCommit(Connection.getAutoCommit())`
@@ -3329,9 +3575,13 @@ Check with the driver vendor to determine whether these calls are cached or not.
 
 The `table` must exist and be accessible, but it doesn't require any rows. Do not use an existing table that has a large number of rows or a table that is already frequently accessed.
 
-|`validation-table-name` |none |(optional) Specifies the table name to be used to perform a query to validate a connection. This parameter is mandatory if and only if `connection-validation-method` is set to `table`.
+a|`validation-table-name`
+|none
+a|(optional) Specifies the table name to be used to perform a query to validate a connection. This parameter is mandatory if and only if `connection-validation-method` is set to `table`.
 
-|`validation-classname` |none a|(optional) Specifies the custom validation implementation class name. This parameter is mandatory if `connection-validation-method` is set to `custom-validation`.
+a|`validation-classname`
+|none
+a|(optional) Specifies the custom validation implementation class name. This parameter is mandatory if `connection-validation-method` is set to `custom-validation`.
 The classname provided must be accessible to the Payara Server. The specified class must implement the org.glassfish.api.jdbc.ConnectionValidation interface.
 
 Payara Server provides the following custom validation class templates for MSSQL, DB2, and Sybase databases. All of them implement the org.glassfish.api.jdbc.ConnectionValidation interface.
@@ -3340,55 +3590,85 @@ Payara Server provides the following custom validation class templates for MSSQL
 * `org.glassfish.api.jdbc.DB2ConnectionValidation`
 * `org.glassfish.api.jdbc.SybaseConnectionValidation`
 
-|`init-sql` |none |(optional) Specifies an SQL string to be executed whenever a connection is created (not reused) in the pool. This initializes the state of the connection.
+a|`init-sql`
+|none
+|(optional) Specifies an SQL string to be executed whenever a connection is created (not reused) in the pool. This initializes the state of the connection.
 
-|`fail-all-connections` |`false` |(optional) If `true`, closes all connections in the pool if a single validation check fails.
+a|`fail-all-connections`
+a|`false`
+a|(optional) If `true`, closes all connections in the pool if a single validation check fails.
 This parameter is mandatory if and only if `is-connection-validation-required` is set to `true`.
 
-|`non-transactional-connections` |`false` |(optional) If `true`, non-transactional connections can be made to the JDBC connection pool.
+a|`non-transactional-connections`
+a|`false`
+a|(optional) If `true`, non-transactional connections can be made to the JDBC connection pool.
 These connections are not automatically enlisted with the transaction manager.
 
-|`allow-non-component-callers` |`false` |(optional) If `true`, non-Java-EE components, such as servlet filters, and third party persistence managers, can use this JDBC connection pool.
+a|`allow-non-component-callers`
+a|`false`
+a|(optional) If `true`, non-Java-EE components, such as servlet filters, and third party persistence managers, can use this JDBC connection pool.
 The returned connection is automatically enlisted with the transaction context obtained from the transaction manager. Standard Jakarta EE components can also use such pools.
 Connections obtained by non-component callers are not automatically closed at the end of a transaction by the container. They must be explicitly closed by the caller.
 
-|`validate-atmost-once-period-in-seconds` |`0` a| (optional) Specifies the time interval within which a connection is validated at most once. Minimizes the number of validation calls.
+a|`validate-atmost-once-period-in-seconds`
+a|`0`
+a| (optional) Specifies the time interval within which a connection is validated at most once. Minimizes the number of validation calls.
 
 A value of zero implies that Payara Server does not attempt to minimize the number of validation requests by a connection.
 That is, a value of zero disables this attribute. As a result, the same connection is validated every time the application acquires the connection.
 
-|`connection-leak-timeout-in-seconds` |`0` a|(optional) Detects potential connection leaks by the application.
+a|`connection-leak-timeout-in-seconds`
+a|`0`
+a|(optional) Detects potential connection leaks by the application.
 A connection that is not returned back to the pool by the application  within the specified period is assumed to be potentially leaking, and a stack trace of the caller is logged.
 A zero value disables leak detection. A nonzero value enables leak tracing.
 
 Use this attribute along with `connection-leak-reclaim` to avoid potential connection leaks from the application.
 
-|`connection-leak-reclaim` |`false` |(optional) If `true`, the pool will reclaim a connection after `connection-leak-timeout-in-seconds` occurs.
+a|`connection-leak-reclaim`
+a|`false`
+a|(optional) If `true`, the pool will reclaim a connection after `connection-leak-timeout-in-seconds` occurs.
 
-|`connection-creation-retry-attempts` |`0` |(optional) Specifies the number of attempts to create a new connection in case of a failure.
+a|`connection-creation-retry-attempts`
+a|`0`
+|(optional) Specifies the number of attempts to create a new connection in case of a failure.
 
-|`connection-creation-retry-interval-in-seconds` |`10` |(optional) Specifies the time interval between attempts to create a connection when `connection-creation-retry-attempts` is greater than `0`.
+a|`connection-creation-retry-interval-in-seconds`
+a|`10`
+a|(optional) Specifies the time interval between attempts to create a connection when `connection-creation-retry-attempts` is greater than `0`.
 
-|`statement-leak-timeout-in-seconds` |`0` a|(optional) Detects potential statement leaks by the application.
+a|`statement-leak-timeout-in-seconds`
+a|`0`
+a|(optional) Detects potential statement leaks by the application.
 A statement that is not closed by the application within the specified period is assumed to be potentially leaking, and a stack trace of the caller is logged. A zero value disables leak detection. A nonzero value enables leak tracing.
 
 Use this attribute along with `statement-leak-reclaim` to avoid potential statement leaks from the application.
 
-|`statement-leak-reclaim` |`false` |(optional) If `true`, the reclaim of a statement after `statement-leak-timeout-in-seconds` occurs.
+a|`statement-leak-reclaim`
+a|`false`
+a|(optional) If `true`, the reclaim of a statement after `statement-leak-timeout-in-seconds` occurs.
 
-|`statement-timeout-in-seconds` |`-1` a| (optional) Sets the query timeout property of a statement to enable termination of abnormally long running queries. The default value of `-1` disables this feature.
+a|`statement-timeout-in-seconds`
+a|`-1`
+a| (optional) Sets the query timeout property of a statement to enable termination of abnormally long running queries. The default value of `-1` disables this feature.
 
 An abnormally long running JDBC query executed by an application may leave it in a hanging state unless a timeout is explicitly set on the statement.
 This attribute guarantees that all queries automatically time out if not completed within the specified period. When statements are created, the `queryTimeout` is set according to the value specified in this attribute.
 This works only when the underlying JDBC driver supports `queryTimeout` for `Statement`, `PreparedStatement`, `CallableStatement`, and `ResultSet`.
 
-|`lazy-connection-enlistment` |`false` |(optional) If `true`, a connection is not enlisted in a transaction until it is used.
+a|`lazy-connection-enlistment`
+a|`false`
+a|(optional) If `true`, a connection is not enlisted in a transaction until it is used.
 If `false`, any connection object available to a transaction is enlisted in the transaction.
 
-|`lazy-connection-association` |`false` |(optional) If `true`, a physical connection is not associated with a logical connection until it is used.
+a|`lazy-connection-association`
+a|`false`
+a|(optional) If `true`, a physical connection is not associated with a logical connection until it is used.
 If `false`, a physical connection is associated with a logical connection even before it is used.
 
-|`associate-with-thread` |`false` a| (optional) Specifies whether connections are associated with the thread to enable the thread to reuse the connections. If `true`, allows connections to be saved as `ThreadLocal` in the calling thread.
+a|`associate-with-thread`
+a|`false`
+a| (optional) Specifies whether connections are associated with the thread to enable the thread to reuse the connections. If `true`, allows connections to be saved as `ThreadLocal` in the calling thread.
 Connections get reclaimed only when the calling thread dies or when the calling thread is not in use and the pool has run out of connections.
 If `false`, the thread must obtain a connection from the pool each time the thread requires a connection. +
 
@@ -3397,7 +3677,9 @@ However, when this value is set to `true`, you should verify that the value of t
 If the `max-thread-pool-size` value is much higher than the `max-pool-size` value, a lot of time is spent associating connections with a new thread after dissociating them from an older one.
 Use this attribute in cases where the thread pool should reuse connections to avoid this overhead.
 
-|`match-connections` |`false` a|
+a|`match-connections`
+a|`false`
+a|
 (optional) Specifies whether a connection that is selected from the pool should be matched with the connections with certain credentials. If `true`, enables connection matching. You can set to `false` if connections are homogeneous.
 
 If the connection pool is used by applications that have multiple user credentials, `match-connections` must be `true`.
@@ -3405,18 +3687,28 @@ The connection pool matches the request's credential with the connections in the
 For new requests with different credentials, unmatched free connections are automatically purged to provide new connections to satisfy the new requests.
 This attribute need not be `true` if it is known that there is only one credential used by the applications and therefore the pool has homogeneous connections.
 
-|`max-connection-usage-count` |`0` |(optional) Specifies the number of times a connections is reused by the pool, after which it is closed. A zero value disables this feature.
+a|`max-connection-usage-count`
+a|`0`
+a|(optional) Specifies the number of times a connections is reused by the pool, after which it is closed. A zero value disables this feature.
 By limiting the maximum number of times a connection can be reused, you can avoid statement leaks if the application does not close statements.
 
-|`sql-trace-listeners` |none |(optional) Specifies that SQL statements executed by applications need to be traced. Helps administrators analyze the statements.
+a|`sql-trace-listeners`
+|none
+a|(optional) Specifies that SQL statements executed by applications need to be traced. Helps administrators analyze the statements.
 Expects as a value a comma-separated list of listener implementation class names. Enables easy filtering of log messages for the SQL statements.
 SQL trace listeners must implement the org.glassfish.api.jdbc.SQLTraceListener interface.
 
-|`statement-cache-size` |`0` |(optional) Specifies the number of statements to be cached using the `lru` (Least Recently Used) caching mechanism. The default value of `0` disables statement caching.
+a|`statement-cache-size`
+a|`0`
+a|(optional) Specifies the number of statements to be cached using the `lru` (Least Recently Used) caching mechanism. The default value of `0` disables statement caching.
 
-|`pooling` |`true` |(optional) If `false`, disables connection pooling.
+a|`pooling`
+a|`true`
+a|(optional) If `false`, disables connection pooling.
 
-|`wrap-jdbc-objects` |`true` a|(optional) If `true`, wrapped JDBC objects are returned for `Statement`, `PreparedStatement`, `CallableStatement`, `ResultSet`, and `DatabaseMetaData`.
+a|`wrap-jdbc-objects`
+a|`true`
+a|(optional) If `true`, wrapped JDBC objects are returned for `Statement`, `PreparedStatement`, `CallableStatement`, `ResultSet`, and `DatabaseMetaData`.
 
 This option ensures that `Statement.getConnection()` is the same as `DataSource.getConnection()`.
 Therefore, this option should be `true` when both `Statement.getConnection()` and `DataSource.getConnection()` are done. The default is `false` to avoid breaking existing applications.
@@ -3433,18 +3725,24 @@ The following table describes properties for the `jdbc-connection-pool` element 
 |===
 |Property |Default |Description
 
-|`dynamic-reconfiguration-wait-timeout-in-seconds` |none a| Specifies the timeout for dynamic reconfiguration of the pool.
+a|`dynamic-reconfiguration-wait-timeout-in-seconds`
+|none
+a| Specifies the timeout for dynamic reconfiguration of the pool.
 In-progress connection requests must complete before this timeout expires or they must be retried. New connection requests wait for this
 timeout to expire before acquiring connections to the reconfigured pool.
 If this property exists and has a positive value, it is enabled. +
 
 If this property is not set and pool reconfiguration results in pool recreation, in-progress connection requests must be retried.
 
-|`number-of-top-queries-to-report` |`10` a| Specifies the number of most frequently used queries to display. For example, the default value of `10` displays the top ten queries. +
+a|`number-of-top-queries-to-report`
+a|`10`
+a| Specifies the number of most frequently used queries to display. For example, the default value of `10` displays the top ten queries. +
 
 This property is disabled when `jdbc-connection-pool` monitoring is set to `LOW` or `OFF`. It is enabled when `jdbc-connection-pool` monitoring is set to `HIGH` and the `sql-trace-listeners` attribute is set.
 
-|`time-to-keep-queries-in-minutes` |`5` a| Specifies the time to retain queries in a cache before they are purged. +
+a|`time-to-keep-queries-in-minutes`
+a|`5`
+a| Specifies the time to retain queries in a cache before they are purged. +
 
 This property is disabled when `jdbc-connection-pool` monitoring is set to `LOW` or `OFF`. It is enabled when `jdbc-connection-pool` monitoring is set to `HIGH` and the `sql-trace-listeners` attribute is set.
 
@@ -3469,25 +3767,35 @@ Changing JDBC driver properties requires a server restart.
 |===
 |Property |Description
 
-|`user` |Specifies the user name for connecting to the database.
+a|`user`
+|Specifies the user name for connecting to the database.
 
-|`password` |Specifies the password for connecting to the database.
+a|`password`
+|Specifies the password for connecting to the database.
 
-|`databaseName` |Specifies the database for this connection pool.
+a|`databaseName`
+|Specifies the database for this connection pool.
 
-|`serverName` |Specifies the database server for this connection pool.
+a|`serverName`
+|Specifies the database server for this connection pool.
 
-|`port` |Specifies the port on which the database server listens for requests.
+a|`port`
+|Specifies the port on which the database server listens for requests.
 
-|`networkProtocol` |Specifies the communication protocol.
+a|`networkProtocol`
+|Specifies the communication protocol.
 
-|`roleName` |Specifies the initial SQL role name.
+a|`roleName`
+|Specifies the initial SQL role name.
 
-|`datasourceName` |Specifies an underlying XADataSource, or a ConnectionPoolDataSource if connection pooling is done.
+a|`datasourceName`
+|Specifies an underlying XADataSource, or a ConnectionPoolDataSource if connection pooling is done.
 
-|`description` |Specifies a text description.
+a|`description`
+|Specifies a text description.
 
-|`url` |Specifies the URL for this connection pool. Although this is not a standard property, it is commonly used.
+a|`url`
+|Specifies the URL for this connection pool. Although this is not a standard property, it is commonly used.
 
 |===
 
@@ -3531,21 +3839,31 @@ The following table describes attributes for the `jdbc-resource` element.
 |===
 |Attribute |Default |Description
 
-|`jndi-name` |none |Specifies the JNDI name for the resource.
+a|`jndi-name`
+|none
+|Specifies the JNDI name for the resource.
 
-|`description` |none |(optional) Specifies a text description of this
+a|`description`
+|none
+a|(optional) Specifies a text description of this
 element.
 
-|`pool-name` |none |Specifies the `name` of the associated xref:elements-of-deployment-descriptors.adoc#jdbc-connection-pool[`jdbc-connection-pool`].
+a|`pool-name`
+|none
+a|Specifies the `name` of the associated xref:elements-of-deployment-descriptors.adoc#jdbc-connection-pool[`jdbc-connection-pool`].
 
-|`object-type` |`user` a| (optional) Defines the type of the resource. Allowed values are:
+a|`object-type`
+a|`user`
+a| (optional) Defines the type of the resource. Allowed values are:
 
 * `system-all` - A system resource for all server instances and the domain application server.
 * `system-admin` - A system resource only for the domain application server.
 * `system-instance` - A system resource for all server instances only.
 * `user` - A user resource.
 
-|`enabled` |`true` |(optional) Determines whether this resource is enabled at runtime.
+a|`enabled`
+a|`true`
+|(optional) Determines whether this resource is enabled at runtime.
 
 |===
 
@@ -3692,68 +4010,126 @@ The following table describes properties for the `jsp-config` element.
 |===
 |Property |Default |Description
 
-|`checkInterval` |`0` |If `development` is set to `false` and `checkInterval` is greater than zero, background compilations are enabled. The `checkInterval` is the time in seconds between checks to see if a JSP file needs to be recompiled.
+a|`checkInterval`
+a|`0`
+a|If `development` is set to `false` and `checkInterval` is greater than zero, background compilations are enabled. The `checkInterval` is the time in seconds between checks to see if a JSP file needs to be recompiled.
 
-|`classdebuginfo` |`true` |Specifies whether the generated Java servlets are compiled with the debug option set (`-g` for `javac`).
+a|`classdebuginfo`
+a|`true`
+a|Specifies whether the generated Java servlets are compiled with the debug option set (`-g` for `javac`).
 
-|`classpath` |created dynamically based on the current web application |Specifies the classpath to use when compiling generated servlets.
+a|`classpath`
+|created dynamically based on the current web application
+|Specifies the classpath to use when compiling generated servlets.
 
-|`compiler` |`javac` a| Specifies the compiler Ant uses to compile JSP files. See the Ant
+a|`compiler`
+a|`javac`
+a| Specifies the compiler Ant uses to compile JSP files. See the Ant
 documentation for more information: https://ant.apache.org/manual/index.html
 
-|`compilerSourceVM` |Depends on Payara Server's Java runtime a| Specifies the JDK release with which source compatibility of the generated servlets is provided. Same as the `-source` release option of `javac`.
+a|`compilerSourceVM`
+|Depends on Payara Server's Java runtime
+a| Specifies the JDK release with which source compatibility of the generated servlets is provided. Same as the `-source` release option of `javac`.
 
-|`compilerTargetVM` |Depends on Payara Server's Java runtime a| Specifies the Virtual Machine for the Java platform (JVM software) version for which the servlet class files are generated. Same as the `-target` release option of `javac`.
+a|`compilerTargetVM`
+|Depends on Payara Server's Java runtime
+a| Specifies the Virtual Machine for the Java platform (JVM software) version for which the servlet class files are generated. Same as the `-target` release option of `javac`.
 
-|`defaultBufferNone` |`false` |If `true`, the default for the `buffer` attribute of the `page` directive is `none`.
+a|`defaultBufferNone`
+a|`false`
+a|If `true`, the default for the `buffer` attribute of the `page` directive is `none`.
 
-|`development` |`true` |If set to `true`, enables development mode, which allows JSP files to be checked for modification.
+a|`development`
+a|`true`
+a|If set to `true`, enables development mode, which allows JSP files to be checked for modification.
 Specify the frequency at which JSPs are checked using the `modificationTestInterval` property.
 
-|`dumpSmap` |`false` |If set to `true`, dumps SMAP information for JSR 45 debugging to a file. Set to `false` if `suppressSmap` is `true`.
+a|`dumpSmap`
+a|`false`
+a|If set to `true`, dumps SMAP information for JSR 45 debugging to a file. Set to `false` if `suppressSmap` is `true`.
 
-|`enablePooling` |`true` |If set to `true`, tag handler pooling is enabled.
+a|`enablePooling`
+a|`true`
+a|If set to `true`, tag handler pooling is enabled.
 
-|`enableTldValidation` |`false` |If set to `true`, all Tag Library Descriptor (TLD) files referenced by the web application are validated against their underlying schema or DTD file.
+a|`enableTldValidation`
+a|`false`
+a|If set to `true`, all Tag Library Descriptor (TLD) files referenced by the web application are validated against their underlying schema or DTD file.
 
-|`errorOnUseBeanInvalidClassAttribute` |`false` |If set to `true`, issues an error when the value of the `class` attribute in a `useBean` action is not a valid bean class.
+a|`errorOnUseBeanInvalidClassAttribute`
+a|`false`
+a|If set to `true`, issues an error when the value of the `class` attribute in a `useBean` action is not a valid bean class.
 
-|`fork` |`true` |Specifies that Ant forks the compiling of JSP files, using a JVM machine separate from the one in which Tomcat is running.
+a|`fork`
+a|`true`
+|Specifies that Ant forks the compiling of JSP files, using a JVM machine separate from the one in which Tomcat is running.
 
-|`genStrAsByteArray` |`true` |If `true`, text strings are generated as bytes (encoded with the page encoding), if the page is not buffered.
+a|`genStrAsByteArray`
+a|`true`
+a|If `true`, text strings are generated as bytes (encoded with the page encoding), if the page is not buffered.
 
-|`genStrAsCharArray` |`false` |If set to `true`, generates text strings as `char` arrays, which improves performance in some cases.
+a|`genStrAsCharArray`
+a|`false`
+a|If set to `true`, generates text strings as `char` arrays, which improves performance in some cases.
 
-|`httpMethods` |`*` for all methods |Specifies a comma separated list of HTTP methods supported by the `JspServlet`.
+a|`httpMethods`
+a|`*` for all methods
+a|Specifies a comma separated list of HTTP methods supported by the `JspServlet`.
 
-|`ieClassId` |`clsid:8AD9C840-044E-11D1-B3E9-00805F499D93` |Specifies the Java plug-in COM class ID for Internet Explorer. Used by the `<jsp:plugin>` tags.
+a|`ieClassId`
+a|`clsid:8AD9C840-044E-11D1-B3E9-00805F499D93`
+a|Specifies the Java plug-in COM class ID for Internet Explorer. Used by the `<jsp:plugin>` tags.
 
-|`ignoreJspFragmentErrors` |`false` |If set to `true`, instructs the compiler to ignore any JSP precompilation errors pertaining to statically included JSP segments that, despite not being top level JSP files, use the `.jsp` or `.jspx` extension (instead of the recommended `.jspf`).
+a|`ignoreJspFragmentErrors`
+a|`false`
+a|If set to `true`, instructs the compiler to ignore any JSP precompilation errors pertaining to statically included JSP segments that, despite not being top level JSP files, use the `.jsp` or `.jspx` extension (instead of the recommended `.jspf`).
 
-|`initialCapacity` |`32` |Specifies the initial capacity of the `HashMap` that maps JSP files to their corresponding servlets.
+a|`initialCapacity`
+a|`32`
+a|Specifies the initial capacity of the `HashMap` that maps JSP files to their corresponding servlets.
 
-|`javaEncoding` |`UTF8` a| Specifies the encoding for the generated Java servlet. This encoding is passed to the Java compiler that is used to compile the servlet as well. By default, the web container tries to use `UTF8`. If that fails, it tries to use the `javaEncoding` value.
+a|`javaEncoding`
+a|`UTF8`
+a| Specifies the encoding for the generated Java servlet. This encoding is passed to the Java compiler that is used to compile the servlet as well. By default, the web container tries to use `UTF8`. If that fails, it tries to use the `javaEncoding` value.
 For encodings, see: `https://docs.oracle.com/javase/8/docs/technotes/guides/intl/encoding.doc.html`
 
-|`keepgenerated` |`true` with JDK 5 and before and for `jspc`, otherwise `false` |If set to `true`, keeps the generated Java files. If `false`, deletes the Java files.
+a|`keepgenerated`
+a|`true` with JDK 5 and before and for `jspc`, otherwise `false`
+a|If set to `true`, keeps the generated Java files. If `false`, deletes the Java files.
 
-|`mappedfile` |`true` |If set to `true`, generates static content with one print statement per input line, to ease debugging.
+a|`mappedfile`
+a|`true`
+a|If set to `true`, generates static content with one print statement per input line, to ease debugging.
 
-|`modificationTestInterval` |`0` |Specifies the frequency in seconds at which JSPs are checked for modification. A value of `0` causes the JSP to be checked on every access. Used only if `development` is set to `true`.
+a|`modificationTestInterval`
+a|`0`
+a|Specifies the frequency in seconds at which JSPs are checked for modification. A value of `0` causes the JSP to be checked on every access. Used only if `development` is set to `true`.
 
-|`reload-interval` |`0` |Specifies the frequency in seconds at which JSP files are checked for modifications.
+a|`reload-interval`
+a|`0`
+a|Specifies the frequency in seconds at which JSP files are checked for modifications.
 Setting this value to `0` checks JSP files for modifications on every request. Setting this value to `-1` disables checks for JSP modifications and JSP recompilation.
 
-|`saveBytecode` |`true` for `jspc`, otherwise `false` |If `true`, generated byte code is saved to `.class` files.
+a|`saveBytecode`
+a|`true` for `jspc`, otherwise `false`
+a|If `true`, generated byte code is saved to `.class` files.
 This option is meaningful only when the Java compiler API, JSR 199 (available with and used as the default on Java 6) is used for `javac` compilations.
 
-|`scratchdir` |The default work directory for the web application |Specifies the working directory created for storing all the generated code.
+a|`scratchdir`
+|The default work directory for the web application
+|Specifies the working directory created for storing all the generated code.
 
-|`suppressSmap` |`false` |If set to `true`, generation of SMAP information for JSR 45 debugging is suppressed.
+a|`suppressSmap`
+a|`false`
+a|If set to `true`, generation of SMAP information for JSR 45 debugging is suppressed.
 
-|`trimSpaces` |`false` |If set to `true`, trims white spaces in template text between actions or directives.
+a|`trimSpaces`
+a|`false`
+a|If set to `true`, trims white spaces in template text between actions or directives.
 
-|`usePrecompiled` |`false` a| If set to `true`, an accessed JSP file is not compiled. Its precompiled servlet class is used instead.
+a|`usePrecompiled`
+a|`false`
+a| If set to `true`, an accessed JSP file is not compiled. Its precompiled servlet class is used instead.
 
 It is assumed that JSP files have been precompiled, and their corresponding servlet classes have been bundled in the web application's `WEB-INF/lib` or `WEB-INF/classes` directory.
 
@@ -3817,9 +4193,13 @@ The following table describes attributes for the `key-field` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies the input parameter name.
+a|`name`
+|none
+|Specifies the input parameter name.
 
-|`scope` |`request.parameter` |(optional) Specifies the scope from which the input parameter is retrieved. Allowed values are `context.attribute`, `request.header`, `request.parameter`, `request.cookie`, `session.id`, and `session.attribute`.
+a|`scope`
+a|`request.parameter`
+a|(optional) Specifies the scope from which the input parameter is retrieved. Allowed values are `context.attribute`, `request.header`, `request.parameter`, `request.cookie`, `session.id`, and `session.attribute`.
 
 |===
 
@@ -3910,9 +4290,13 @@ The following table describes attributes for the `log-service` element.
 |===
 |Attribute |Default |Description
 
-|`log-file` |`your-ACC-dir/logs/client.log` |(optional) Specifies the file where the application client container logging information is stored.
+a|`log-file`
+a|`your-ACC-dir/logs/client.log`
+|(optional) Specifies the file where the application client container logging information is stored.
 
-|`level` |`SEVERE` |(optional) Sets the base level of severity. Messages at or above this setting get logged to the log file.
+a|`level`
+a|`SEVERE`
+|(optional) Sets the base level of severity. Messages at or above this setting get logged to the log file.
 
 |===
 
@@ -3986,41 +4370,63 @@ The following table describes attributes for the `mail-resource` element.
 |===
 |Attribute |Default |Description
 
-|`jndi-name` |none |Specifies the JNDI name for the resource.
+a|`jndi-name`
+|none
+|Specifies the JNDI name for the resource.
 
-|`store-protocol` |`imap` |(optional) Specifies the storage protocol service, which connects to a mail server, retrieves messages, and saves messages in folder(s). Allowed values are `imap`, `pop3`, `imaps`, and `pop3s` .
+a|`store-protocol`
+a|`imap`
+a|(optional) Specifies the storage protocol service, which connects to a mail server, retrieves messages, and saves messages in folder(s). Allowed values are `imap`, `pop3`, `imaps`, and `pop3s` .
 
-|`store-protocol- class` |`org.eclipse.angus.mail.imap.IMAPStore` a| (optional) Specifies the service provider implementation class for storage. Allowed values are:
+a|`store-protocol- class`
+a|`org.eclipse.angus.mail.imap.IMAPStore`
+a| (optional) Specifies the service provider implementation class for storage. Allowed values are:
 
 * `org.eclipse.angus.mail.imap.IMAPStore`
 * `org.eclipse.angus.mail.pop3.POP3Store`
 * `org.eclipse.angus.mail.imap.IMAPSSLStore`
 * `org.eclipse.angus.mail.pop3.POP3SSLStore`
 
-|`transport-protocol` |`smtp` |(optional) Specifies the transport protocol service, which sends messages. Allowed values are `smtp` and `smtps`.
+a|`transport-protocol`
+a|`smtp`
+a|(optional) Specifies the transport protocol service, which sends messages. Allowed values are `smtp` and `smtps`.
 
-|`transport-protocol-class` |`org.eclipse.angus.mail.smtp.SMTPTransport` a| (optional) Specifies the service provider implementation class for transport. Allowed values are:
+a|`transport-protocol-class`
+a|`org.eclipse.angus.mail.smtp.SMTPTransport`
+a| (optional) Specifies the service provider implementation class for transport. Allowed values are:
 
 `org.eclipse.angus.mail.smtp.SMTPTransport`
 
 `org.eclipse.angus.mail.smtp.SMTPSSLTransport`
 
-|`host` |none |The mail server host name.
+a|`host`
+|none
+|The mail server host name.
 
-|`user` |none |The mail server username.
+a|`user`
+|none
+|The mail server username.
 
-|`from` |none |The email address the mail server uses to indicate the message sender.
+a|`from`
+|none
+|The email address the mail server uses to indicate the message sender.
 
-|`debug` |`false` |(optional) Determines whether debugging for this resource is enabled.
+a|`debug`
+a|`false`
+|(optional) Determines whether debugging for this resource is enabled.
 
-|`object-type` |`user` a| (optional) Defines the type of the resource. Allowed values are:
+a|`object-type`
+a|`user`
+a| (optional) Defines the type of the resource. Allowed values are:
 
 * `system-all` - A system resource for all server instances and the domain application server.
 * `system-admin` - A system resource only for the domain application server.
 * `system-instance` - A system resource for all server instances only.
 * `user` - A user resource.
 
-|`enabled` |`true` |(optional) Determines whether this resource is enabled at runtime.
+a|`enabled`
+a|`true`
+|(optional) Determines whether this resource is enabled at runtime.
 
 |===
 
@@ -4096,18 +4502,14 @@ The following table describes properties for the `manager-properties` element.
 |`reapIntervalSeconds` |`60` a| Specifies the number of seconds between checks for expired sessions.
 This is also the interval at which sessions are passivated if `maxSessions` is exceeded. +
 
-If `persistenceFrequency` is set to `time-based`, active sessions are stored at this interval. +
-
-To prevent data inconsistency, set this value lower than the frequency at which session data changes.
-For example, this value should be as low as possible (`1` second) for a hit counter servlet on a frequently accessed website, or the last few hits might be lost each time the server is restarted. +
-
-Applicable only if the `persistence-type` attribute of the parent xref:elements-of-deployment-descriptors.adoc#session-manager[`session-manager`] element is `file`.
-
-|`maxSessions` |`-1` a| Specifies the maximum number of sessions that are permitted in the cache, or `-1` for no limit. After this, an attempt to create a new session causes an `IllegalStateException` to be thrown. +
+a|`maxSessions`
+a|`-1`
+a| Specifies the maximum number of sessions that are permitted in the cache, or `-1` for no limit. After this, an attempt to create a new session causes an `IllegalStateException` to be thrown. +
 
 If the `persistence-type` attribute of the parent xref:elements-of-deployment-descriptors.adoc#session-manager[`session-manager`] element is `file`, the session manager passivates sessions to the persistent store when this maximum is reached.
-
-|`sessionFilename` |empty string a| Specifies the absolute or relative path to the directory in which the session state is preserved between application restarts, if preserving the state is possible.
+a|`sessionFilename`
+|empty string
+a| Specifies the absolute or relative path to the directory in which the session state is preserved between application restarts, if preserving the state is possible.
 A relative path is relative to the temporary directory for this web module, one of the following:
 
 `domain-dir/generated/jsp/module-name`
@@ -4119,7 +4521,9 @@ By default, this property's value is set to an empty string, which disables this
 Applicable only if the `persistence-type` attribute of the parent
 xref:elements-of-deployment-descriptors.adoc#session-manager[`session-manager`] element is `memory`.
 
-|`persistenceFrequency` |`web-method` a| Specifies how often the session state is stored. Allowed values are as follows:
+a|`persistenceFrequency`
+a|`web-method`
+a| Specifies how often the session state is stored. Allowed values are as follows:
 
 * `web-method` - The session state is stored at the end of each web request prior to sending a response back to the client.
 This mode provides the best guarantee that the session state is fully updated in case of failure.
@@ -4192,7 +4596,7 @@ The following table describes subelements for the `mdb-connection-factory` eleme
 
 a| xref:elements-of-deployment-descriptors.adoc#jndi-name[`jndi-name`]
 |only one
-|Specifies the absolute `jndi-name`.
+a|Specifies the absolute `jndi-name`.
 
 a| xref:elements-of-deployment-descriptors.adoc#default-resource-principal[`default-resource-principal`]
 |zero or one
@@ -4290,7 +4694,7 @@ a |xref:elements-of-deployment-descriptors.adoc#message-destination-name[`messag
 
 a| xref:elements-of-deployment-descriptors.adoc#jndi-name[`jndi-name`]
 |only one
-|Specifies the `jndi-name` of the associated entity.
+a|Specifies the `jndi-name` of the associated entity.
 
 |===
 
@@ -4338,7 +4742,7 @@ a| xref:elements-of-deployment-descriptors.adoc#message-destination-ref-name[`me
 
 a| xref:elements-of-deployment-descriptors.adoc#jndi-name[`jndi-name`]
 |only one
-|Specifies the `jndi-name` of the associated entity.
+a|Specifies the `jndi-name` of the associated entity.
 
 |===
 
@@ -4433,9 +4837,13 @@ The following table describes attributes for the `message-security-binding` elem
 |===
 |Attribute |Default |Description
 
-|`auth-layer` |none |Specifies the message layer at which authentication is performed. The value must be `SOAP`.
+a|`auth-layer`
+|none
+a|Specifies the message layer at which authentication is performed. The value must be `SOAP`.
 
-|`provider-id` |none a| (optional) Specifies the authentication provider used to satisfy application-specific message security requirements. +
+a|`provider-id`
+|none
+a| (optional) Specifies the authentication provider used to satisfy application-specific message security requirements. +
 
 If this attribute is not specified, a default provider is used, if it is defined for the message layer. +
 
@@ -4479,11 +4887,17 @@ The following table describes attributes for the `message-security-config` eleme
 |===
 |Attribute |Default |Description
 
-|`auth-layer` |none |Specifies the message layer at which authentication is performed. The value must be `SOAP`.
+a|`auth-layer`
+|none
+a|Specifies the message layer at which authentication is performed. The value must be `SOAP`.
 
-|`default-provider` |none |(optional) Specifies the server provider that is invoked for any application not bound to a specific server provider.
+a|`default-provider`
+|none
+|(optional) Specifies the server provider that is invoked for any application not bound to a specific server provider.
 
-|`default-client-provider` |none |(optional) Specifies the client provider that is invoked for any application not bound to a specific client provider.
+a|`default-client-provider`
+|none
+|(optional) Specifies the client provider that is invoked for any application not bound to a specific client provider.
 
 |===
 
@@ -4514,7 +4928,7 @@ a| xref:elements-of-deployment-descriptors.adoc#description[`description`]
 
 a| xref:elements-of-deployment-descriptors.adoc#ejb-name[`ejb-name`]
 |zero or one
-|Matches the `ejb-name` in the corresponding `ejb-jar.xml` file.
+a|Matches the `ejb-name` in the corresponding `ejb-jar.xml` file.
 
 a| xref:elements-of-deployment-descriptors.adoc#method-name[`method-name`]
 |only one
@@ -4683,9 +5097,13 @@ The following table describes attributes for the `parameter-encoding` element.
 |===
 |Attribute |Default |Description
 
-|`form-hint-field` |none |(optional) The name of the hidden field in the form. This field specifies the character encoding the web container uses for `request.getParameter` and `request.getReader` calls when the charset is not set in the request's `content-type` header.
+a|`form-hint-field`
+|none
+a|(optional) The name of the hidden field in the form. This field specifies the character encoding the web container uses for `request.getParameter` and `request.getReader` calls when the charset is not set in the request's `content-type` header.
 
-|`default-charset` |`ISO-8859-1` |(optional) The default request character encoding.
+a|`default-charset`
+a|`ISO-8859-1`
+|(optional) The default request character encoding.
 
 |===
 
@@ -4819,7 +5237,7 @@ The following table describes subelements for the `port-info` element.
 
 a| xref:elements-of-deployment-descriptors.adoc#service-endpoint-interface[`service-endpoint-interface`]
 |zero or one
-|Specifies the web service reference name relative to `java:comp/env`.
+a|Specifies the web service reference name relative to `java:comp/env`.
 
 a| xref:elements-of-deployment-descriptors.adoc#wsdl-port[`wsdl-port`]
 |zero or one
@@ -4827,11 +5245,11 @@ a| xref:elements-of-deployment-descriptors.adoc#wsdl-port[`wsdl-port`]
 
 a| xref:elements-of-deployment-descriptors.adoc#stub-property[`stub-property`]
 |zero or more
-|Specifies JAX-RPC property values that are set on a `javax.xml.rpc.Stub` object before it is returned to the web service client.
+a|Specifies JAX-RPC property values that are set on a `javax.xml.rpc.Stub` object before it is returned to the web service client.
 
 a| xref:elements-of-deployment-descriptors.adoc#call-property[`call-property`]
 |zero or more
-|Specifies JAX-RPC property values that are set on a `javax.xml.rpc.Call` object before it is returned to the web service client.
+a|Specifies JAX-RPC property values that are set on a `javax.xml.rpc.Call` object before it is returned to the web service client.
 
 a| xref:elements-of-deployment-descriptors.adoc#message-security-binding[`message-security-binding`]
 |zero or one
@@ -4891,9 +5309,13 @@ The following table describes attributes for the `principal-map` element.
 |===
 |Attribute |Default |Description
 
-|`eis-principal` |none |Specifies an EIS principal.
+a|`eis-principal`
+|none
+|Specifies an EIS principal.
 
-|`mapped-principal` |none |Specifies a principal defined in the Payara Server domain.
+a|`mapped-principal`
+|none
+|Specifies a principal defined in the Payara Server domain.
 
 |===
 
@@ -4924,7 +5346,9 @@ The following table describes attributes for the `principal-name` element.
 |===
 |Attribute |Default |Description
 
-|`class-name` |`com.sun.enterprise.deployment.PrincipalImpl` |(optional) Specifies the custom principal implementation class corresponding to the named principal.
+a|`class-name`
+a|`com.sun.enterprise.deployment.PrincipalImpl`
+|(optional) Specifies the custom principal implementation class corresponding to the named principal.
 
 |===
 
@@ -4984,9 +5408,13 @@ The following table describes attributes for the `property` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies the name of the property.
+a|`name`
+|none
+|Specifies the name of the property.
 
-|`value` |none |Specifies the value of the property.
+a|`value`
+|none
+|Specifies the value of the property.
 
 |===
 
@@ -5092,11 +5520,17 @@ The following table describes attributes for the `provider-config` element.
 |===
 |Attribute |Default |Description
 
-|`provider-id` |none |Specifies the provider ID.
+a|`provider-id`
+|none
+|Specifies the provider ID.
 
-|`provider-type` |none |Specifies whether the provider is a `client`, `server`, or `client-server` authentication provider.
+a|`provider-type`
+|none
+a|Specifies whether the provider is a `client`, `server`, or `client-server` authentication provider.
 
-|`class-name` |none |Specifies the Jakarta implementation class of the provider. Client authentication providers must implement the com.sun.enterprise.security.jauth.ClientAuthModule interface.
+a|`class-name`
+|none
+a|Specifies the Jakarta implementation class of the provider. Client authentication providers must implement the com.sun.enterprise.security.jauth.ClientAuthModule interface.
 Server authentication providers must implement the com.sun.enterprise.security.jauth.ServerAuthModule interface. Client-server providers must implement both interfaces.
 
 |===
@@ -5143,9 +5577,13 @@ The following table describes attributes for the `refresh-field` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies the input parameter name.
+a|`name`
+|none
+|Specifies the input parameter name.
 
-|`scope` |`request.parameter` |(optional) Specifies the scope from which the input parameter is retrieved. Allowed values are
+a|`scope`
+a|`request.parameter`
+a|(optional) Specifies the scope from which the input parameter is retrieved. Allowed values are
 `context.attribute`, `request.header`, `request.parameter`, `request.cookie`, `session.id`, and `session.attribute`.
 
 |===
@@ -5247,9 +5685,13 @@ The following table describes attributes for the `request-policy` element.
 |===
 |Attribute |Default |Description
 
-|`auth-source` |none |Specifies the type of required authentication, either `sender` (user name and password) or `content` (digital signature).
+a|`auth-source`
+|none
+a|Specifies the type of required authentication, either `sender` (user name and password) or `content` (digital signature).
 
-|`auth-recipient` |none |Specifies whether recipient authentication occurs before or after content authentication. Allowed values are `before-content` and `after-content`.
+a|`auth-recipient`
+|none
+a|Specifies whether recipient authentication occurs before or after content authentication. Allowed values are `before-content` and `after-content`.
 
 |===
 
@@ -5279,9 +5721,13 @@ The following table describes attributes for the `request-protection` element.
 |===
 |Attribute |Default |Description
 
-|`auth-source` |none |Specifies the type of required authentication, either `sender` (user name and password) or `content` (digital signature).
+a|`auth-source`
+|none
+a|Specifies the type of required authentication, either `sender` (user name and password) or `content` (digital signature).
 
-|`auth-recipient` |none |Specifies whether recipient authentication occurs before or after content authentication. Allowed values are `before-content` and `after-content`.
+a|`auth-recipient`
+|none
+a|Specifies whether recipient authentication occurs before or after content authentication. Allowed values are `before-content` and `after-content`.
 
 |===
 
@@ -5390,18 +5836,26 @@ The following table describes attributes for the `resource-adapter-config` eleme
 |===
 |Attribute |Default |Description
 
-|`name` |none |(optional) Not used. See `resource-adapter-name`.
+a|`name`
+|none
+a|(optional) Not used. See `resource-adapter-name`.
 
-|`thread-pool-ids` |none |(optional) Specifies a comma-separated list of the names of thread pools.
+a|`thread-pool-ids`
+|none
+|(optional) Specifies a comma-separated list of the names of thread pools.
 
-|`object-type` |`user` a| (optional) Defines the type of the resource. Allowed values are:
+a|`object-type`
+a|`user`
+a| (optional) Defines the type of the resource. Allowed values are:
 
 * `system-all` - A system resource for all server instances and the domain application server.
 * `system-admin` - A system resource only for the domain application server.
 * `system-instance` - A system resource for all server instances only.
 * `user` - A user resource.
 
-|`resource-adapter-name` |none |Specifies the name of a deployed connector module or application. If the resource adapter is embedded in an application, then it is `app_name#rar_name`.
+a|`resource-adapter-name`
+|none
+a|Specifies the name of a deployed connector module or application. If the resource adapter is embedded in an application, then it is `app_name#rar_name`.
 
 |===
 
@@ -5450,11 +5904,11 @@ The following table describes subelements for the `resource-env-ref` element.
 
 a| xref:elements-of-deployment-descriptors.adoc#resource-env-ref-name[`resource-env-ref-name`]
 |only one
-|Specifies the `res-ref-name` in the corresponding Jakarta EE deployment descriptor file `resource-env-ref` entry.
+a|Specifies the `res-ref-name` in the corresponding Jakarta EE deployment descriptor file `resource-env-ref` entry.
 
 a| xref:elements-of-deployment-descriptors.adoc#jndi-name[`jndi-name`]
 |only one
-|Specifies the absolute `jndi-name` of a resource.
+a|Specifies the absolute `jndi-name` of a resource.
 
 |===
 
@@ -5513,11 +5967,11 @@ The following table describes subelements for the `resource-ref` element.
 
 a| xref:elements-of-deployment-descriptors.adoc#res-ref-name[`res-ref-name`]
 |only one
-|Specifies the `res-ref-name` in the corresponding Jakarta EE deployment descriptor file `resource-ref` entry.
+a|Specifies the `res-ref-name` in the corresponding Jakarta EE deployment descriptor file `resource-ref` entry.
 
 a| xref:elements-of-deployment-descriptors.adoc#jndi-name[`jndi-name`]
 |only one
-|Specifies the absolute `jndi-name` of a resource.
+a|Specifies the absolute `jndi-name` of a resource.
 
 a| xref:elements-of-deployment-descriptors.adoc#default-resource-principal[`default-resource-principal`]
 |zero or one
@@ -5632,9 +6086,13 @@ The following table describes attributes for the `response-policy` element.
 |===
 |Attribute |Default |Description
 
-|`auth-source` |none |Specifies the type of required authentication, either `sender` (user name and password) or `content` (digital signature).
+a|`auth-source`
+|none
+a|Specifies the type of required authentication, either `sender` (user name and password) or `content` (digital signature).
 
-|`auth-recipient` |none |Specifies whether recipient authentication occurs before or after content authentication. Allowed values are `before-content` and `after-content`.
+a|`auth-recipient`
+|none
+a|Specifies whether recipient authentication occurs before or after content authentication. Allowed values are `before-content` and `after-content`.
 
 |===
 
@@ -5663,9 +6121,13 @@ The following table describes attributes for the `response-protection` element.
 |===
 |Attribute |Default |Description
 
-|`auth-source` |none |Specifies the type of required authentication, either `sender` (user name and password) or `content` (digital signature).
+a|`auth-source`
+|none
+a|Specifies the type of required authentication, either `sender` (user name and password) or `content` (digital signature).
 
-|`auth-recipient` |none |Specifies whether recipient authentication occurs before or after content authentication. Allowed values are `before-content` and `after-content`.
+a|`auth-recipient`
+|none
+a|Specifies whether recipient authentication occurs before or after content authentication. Allowed values are `before-content` and `after-content`.
 
 |===
 
@@ -5816,7 +6278,9 @@ The following table describes attributes for the `security-map` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies a name for the security mapping.
+a|`name`
+|none
+|Specifies a name for the security mapping.
 
 |===
 
@@ -5849,14 +6313,14 @@ The following table describes subelements for the `security-role-mapping` elemen
 
 a| xref:elements-of-deployment-descriptors.adoc#role-name[`role-name`]
 |only one
-|Contains the `role-name` in the `security-role` element of the corresponding Jakarta EE deployment descriptor file.
+a|Contains the `role-name` in the `security-role` element of the corresponding Jakarta EE deployment descriptor file.
 
 a| xref:elements-of-deployment-descriptors.adoc#principal-name[`principal-name`]
-|one or more if no `group-name`, otherwise zero or more
+a|one or more if no `group-name`, otherwise zero or more
 |Contains a principal (user) name in the current realm. In an enterprise bean, the principal must have the run-as role specified.
 
 a| xref:elements-of-deployment-descriptors.adoc#group-name[`group-name`]
-|one or more if no `principal-name`, otherwise zero or more
+a|one or more if no `principal-name`, otherwise zero or more
 |Contains a group name in the current realm.
 
 |===
@@ -5950,7 +6414,7 @@ The following table describes subelements for the `service-ref` element.
 
 a| xref:elements-of-deployment-descriptors.adoc#service-ref-name[`service-ref-name`]
 |only one
-|Specifies the web service reference name relative to `java:comp/env`.
+a|Specifies the web service reference name relative to `java:comp/env`.
 
 a| xref:elements-of-deployment-descriptors.adoc#port-info[`port-info`]
 |zero or more
@@ -5958,7 +6422,7 @@ a| xref:elements-of-deployment-descriptors.adoc#port-info[`port-info`]
 
 a| xref:elements-of-deployment-descriptors.adoc#call-property[`call-property`]
 |zero or more
-|Specifies JAX-RPC property values that can be set on a `javax.xml.rpc.Call` object before it is returned to the web service client.
+a|Specifies JAX-RPC property values that can be set on a `javax.xml.rpc.Call` object before it is returned to the web service client.
 
 a| xref:elements-of-deployment-descriptors.adoc#wsdl-override[`wsdl-override`]
 |zero or one
@@ -6011,7 +6475,7 @@ The following table describes subelements for the `servlet` element.
 
 a| xref:elements-of-deployment-descriptors.adoc#servlet-name[`servlet-name`]
 |only one
-|Contains the name of a servlet, which is matched to a `servlet-name` in `web.xml`.
+a|Contains the name of a servlet, which is matched to a `servlet-name` in `web.xml`.
 
 a| xref:elements-of-deployment-descriptors.adoc#principal-name[`principal-name`]
 |zero or one
@@ -6128,7 +6592,9 @@ element.
 |===
 |Attribute |Default |Description
 
-|`persistence-type` |`memory` a| (optional) Specifies the session persistence mechanism. Allowed values are `memory`, `file`, and `hazelcast`.
+a|`persistence-type`
+a|`memory`
+a| (optional) Specifies the session persistence mechanism. Allowed values are `memory`, `file`, and `hazelcast`.
 
 |===
 
@@ -6168,16 +6634,22 @@ The following table describes properties for the `session-properties` element.
 |===
 |Property |Default |Description
 
-|`timeoutSeconds` |`1800` a| Specifies the default maximum inactive interval (in seconds) for all sessions created in this web module. If set to `0` or less, sessions in this web module never expire. +
+a|`timeoutSeconds`
+a|`1800`
+a| Specifies the default maximum inactive interval (in seconds) for all sessions created in this web module. If set to `0` or less, sessions in this web module never expire. +
 
 If a `session-timeout` element is specified in the `web.xml` file, the `session-timeout` value overrides any `timeoutSeconds` value.
 If neither `session-timeout` nor `timeoutSeconds` is specified, the `timeoutSeconds` default is used. +
 
 Note that the `session-timeout` element in `web.xml` is specified in minutes, not seconds.
 
-|`enableCookies` |`true` |Uses cookies for session tracking if set to `true`.
+a|`enableCookies`
+a|`true`
+a|Uses cookies for session tracking if set to `true`.
 
-|`enableURLRewriting` |`true` |Enables URL rewriting. This provides session tracking via URL rewriting when the browser does not accept cookies. You must also use an `encodeURL` or `encodeRedirectURL` call in the servlet or JSP.
+a|`enableURLRewriting`
+a|`true`
+a|Enables URL rewriting. This provides session tracking via URL rewriting when the browser does not accept cookies. You must also use an `encodeURL` or `encodeRedirectURL` call in the servlet or JSP.
 
 |===
 
@@ -6206,27 +6678,41 @@ The following table describes attributes for the `SSL` element.
 |===
 |Attribute |Default |Description
 
-|`cert-nickname` |`s1as` |(optional) The nickname of the server certificate in the certificate database or the PKCS#11 token.
+a|`cert-nickname`
+a|`s1as`
+a|(optional) The nickname of the server certificate in the certificate database or the PKCS#11 token.
 In the certificate, the name format is `tokenname:nickname`. Including the `tokenname:` part of the name in this attribute is optional.
 
-|`ssl2-enabled` |`false` |(optional) Determines whether SSL2 is enabled.
+a|`ssl2-enabled`
+a|`false`
+|(optional) Determines whether SSL2 is enabled.
 
-|`ssl2-ciphers` |none |(optional) A comma-separated list of the SSL2 ciphers to be used.
+a|`ssl2-ciphers`
+|none
+a|(optional) A comma-separated list of the SSL2 ciphers to be used.
 Ciphers not explicitly listed will be disabled for the target, even if those ciphers are available in the particular cipher suite you are using.
 If this option is not used, all supported ciphers are assumed to be enabled. Allowed values are `rc4`, `rc4export`, `rc2`, `rc2export`, `idea`, `des`, `desede3`.
 
-|`ssl3-enabled` |`true` |(optional) Determines whether SSL3 is enabled.
+a|`ssl3-enabled`
+a|`true`
+|(optional) Determines whether SSL3 is enabled.
 
-|`ssl3-tls-ciphers` |none |(optional) A comma-separated list of the SSL3 and/or TLS ciphers to be used.
+a|`ssl3-tls-ciphers`
+|none
+a|(optional) A comma-separated list of the SSL3 and/or TLS ciphers to be used.
 Ciphers not explicitly listed will be disabled for the target, even if those ciphers are available in the particular cipher suite you are using. If this option is not used, all supported ciphers are assumed to be enabled.
 Allowed values are `SSL_RSA_WITH_RC4_128_MD5`, `SSL_RSA_WITH_3DES_EDE_CBC_SHA`,
 `SSL_RSA_WITH_DES_CBC_SHA`, `SSL_RSA_EXPORT_WITH_RC4_40_MD5`,
 `SSL_RSA_WITH_NULL_MD5`, `SSL_RSA_WITH_RC4_128_SHA`,
 `SSL_RSA_WITH_NULL_SHA`. Values available in previous releases are supported for backward compatibility.
 
-|`tls-enabled` |`true` |(optional) Determines whether TLS is enabled.
+a|`tls-enabled`
+a|`true`
+|(optional) Determines whether TLS is enabled.
 
-|`tls-rollback-enabled` |`true` |(optional) Determines whether TLS rollback is enabled. Enable TLS rollback for Microsoft Internet Explorer 5.0 and 5.5.
+a|`tls-rollback-enabled`
+a|`true`
+|(optional) Determines whether TLS rollback is enabled. Enable TLS rollback for Microsoft Internet Explorer 5.0 and 5.5.
 
 |===
 
@@ -6281,12 +6767,16 @@ The following table describes properties for the `store-properties` element.
 |===
 |Property |Default |Description
 
-|`directory` |`domain-dir/generated/jsp/app-name/module-name_war` a| Specifies the absolute or relative pathname of the directory into which individual session files are written.
+a|`directory`
+a|`domain-dir/generated/jsp/app-name/module-name_war`
+a| Specifies the absolute or relative pathname of the directory into which individual session files are written.
 A relative path is relative to the temporary work directory for this web module. +
 
 Applicable only if the `persistence-type` attribute of the parent xref:elements-of-deployment-descriptors.adoc#session-manager[`session-manager`] element is `file`.
 
-|`persistenceScope` |`session` a| Specifies how much of the session state is stored. Allowed values are as follows:
+a|`persistenceScope`
+a|`session`
+a| Specifies how much of the session state is stored. Allowed values are as follows:
 
 * `session` - The entire session state is stored every time. This mode provides the best guarantee that your session data is correctly stored for any distributable web module.
 * `modified-session` - The entire session state is stored if it has been modified.
@@ -6348,7 +6838,9 @@ The following table describes properties for the `stub-property` element.
 |===
 |Property |Default |Description
 
-|`jbi-enabled` |`true` |Determines whether the visibility of this endpoint as a Java Business Integration service is enabled or disabled.
+a|`jbi-enabled`
+a|`true`
+|Determines whether the visibility of this endpoint as a Java Business Integration service is enabled or disabled.
 
 |===
 
@@ -6417,11 +6909,17 @@ The following table describes attributes for the `target-server` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies the name of the server instance accessed by the client container.
+a|`name`
+|none
+|Specifies the name of the server instance accessed by the client container.
 
-|`address` |none |Specifies the host name or IP address (resolvable by DNS) of the server to which this client attaches.
+a|`address`
+|none
+|Specifies the host name or IP address (resolvable by DNS) of the server to which this client attaches.
 
-|`port` |none a| Specifies the naming service port number of the server to which this client attaches. +
+a|`port`
+|none
+a| Specifies the naming service port number of the server to which this client attaches. +
 
 For a new server instance, assign a port number other than 3700. You can change the port number in the Administration Console. Click the Help button in the Administration Console for more information.
 
@@ -6468,9 +6966,13 @@ The following table describes attributes for the `timeout` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies the timeout input parameter, whose value is interpreted in seconds. The field's type must be `java.lang.Long` or `java.lang.Integer`.
+a|`name`
+|none
+a|Specifies the timeout input parameter, whose value is interpreted in seconds. The field's type must be `java.lang.Long` or `java.lang.Integer`.
 
-|`scope` |`request.attribute` |(optional) Specifies the scope from which the input parameter is retrieved.
+a|`scope`
+a|`request.attribute`
+a|(optional) Specifies the scope from which the input parameter is retrieved.
 Allowed values are `context.attribute`, `request.header`, `request.parameter`, `request.cookie`, `request.attribute`, and `session.attribute`.
 
 |===
@@ -6651,9 +7153,13 @@ The following table describes attributes for the `valve` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies a unique name for the valve.
+a|`name`
+|none
+|Specifies a unique name for the valve.
 
-|`class-name` |none |Specifies the fully qualified class name of the valve. The valve class must implement the `org.apache.catalina.Valve` interface from Tomcat or previous Payara Server releases, or the `org.glassfish.web.valve.GlassFishValve` interface from the current Payara Server release.
+a|`class-name`
+|none
+a|Specifies the fully qualified class name of the valve. The valve class must implement the `org.apache.catalina.Valve` interface from Tomcat or previous Payara Server releases, or the `org.glassfish.web.valve.GlassFishValve` interface from the current Payara Server release.
 
 |===
 
@@ -6986,7 +7492,7 @@ a| xref:elements-of-deployment-descriptors.adoc#message-security-binding[`messag
 
 a| xref:elements-of-deployment-descriptors.adoc#transport-guarantee[`transport-guarantee`]
 |zero or one
-|Specifies that the communication between client and server is `NONE`, `INTEGRAL`, or `CONFIDENTIAL`.
+a|Specifies that the communication between client and server is `NONE`, `INTEGRAL`, or `CONFIDENTIAL`.
 
 a| xref:elements-of-deployment-descriptors.adoc#service-qname[`service-qname`]
 |zero or one
@@ -7002,7 +7508,7 @@ a| xref:elements-of-deployment-descriptors.adoc#servlet-impl-class[`servlet-impl
 
 a| xref:elements-of-deployment-descriptors.adoc#debugging-enabled[`debugging-enabled`]
 |zero or one
-|Specifies whether the debugging servlet is enabled for this web service endpoint. Allowed values are `true` and `false` (the default).
+a|Specifies whether the debugging servlet is enabled for this web service endpoint. Allowed values are `true` and `false` (the default).
 
 a| xref:elements-of-deployment-descriptors.adoc#property-with-attributes[`property` (with attributes)] (`glassfish-web.xml` (deprecated) and `payara-web.xml`) xref:elements-of-deployment-descriptors.adoc#property-with-subelements[`property` (with subelements)] (`glassfish-ejb-jar.xml` (deprecated) and `payara-ejb-jar.xml`)
 |zero or more
@@ -7075,9 +7581,13 @@ The following table describes attributes for the `work-security-map` element.
 |===
 |Attribute |Default |Description
 
-|`name` |none |Specifies a unique name for the work security map.
+a|`name`
+|none
+|Specifies a unique name for the work security map.
 
-|`description` |none |Specifies a text description for this element.
+a|`description`
+|none
+|Specifies a text description for this element.
 
 |===
 

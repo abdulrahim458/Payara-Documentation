@@ -24,40 +24,40 @@ The following table lists the Payara Platform deployment descriptors and their D
 |===
 |Deployment Descriptor |DTD File |Description
 
-| `glassfish-application.xml` (deprecated)
+a| `glassfish-application.xml` (deprecated)
 
 `payara-application.xml`
-| `glassfish-application_6_0-1.dtd`
+a| `glassfish-application_6_0-1.dtd`
 
 `payara-application_11_0-0.dtd`
 | Configures an entire Jakarta EE application (EAR file).
 
-|
+a|
 `glassfish-web.xml` (deprecated)
 
 `payara-web.xml`
-| `glassfish-web-app_3_0-1.dtd`
+a| `glassfish-web-app_3_0-1.dtd`
 
 `payara-web-app_4.dtd`
 | Configures a web application (WAR file).
 
-| `glassfish-ejb-jar.xml` (deprecated)
+a| `glassfish-ejb-jar.xml` (deprecated)
 
 `payara-ejb-jar.xml`
-| `glassfish-ejb-jar_3_1-1.dtd`
+a| `glassfish-ejb-jar_3_1-1.dtd`
 
 `payara-ejb-jar_4_0-0.dtd`
 |Configures an enterprise bean (EJB JAR file).
 
-| `glassfish-application-client.xml` (deprecated)
+a| `glassfish-application-client.xml` (deprecated)
 
 `payara-application-client.xml`
-| `glassfish-application-client_6_0-1.dtd`
+a| `glassfish-application-client_6_0-1.dtd`
 
 `payara-application-client_11_0-0.dtd`
 | Configures an Application Client Container (ACC) client (JAR file).
 
-|
+a|
 `glassfish-resources.xml` (deprecated)
 
 `payara-resources.xml`
@@ -66,21 +66,22 @@ a|[.breakable]`glassfish-resources_1_5.dtd`
 `payara-resources_1_8.dtd`
 | Configures application-scoped resources.
 
-| `sun-acc.xml` (deprecated)
+a| `sun-acc.xml` (deprecated)
 
 `glassfish-acc.xml` (deprecated)
 
 `payara-acc.xml`
-| `sun-application-client-container_1_2.dtd`
+a| `sun-application-client-container_1_2.dtd`
 
 `glassfish-application-client-container_1_3.dtd`
 
 `payara-application-client-container_1_4.dtd`
-| Configures the Application Client Container.
+a| Configures the Application Client Container.
 
 This is more of a configuration file than a deployment descriptor. Payara Server provides a default file in the `domain-dir/config` directory.
 
 Specifying a different file is optional.
+
 |===
 
 IMPORTANT: Deployment descriptors whose names start with the `glassfish-` prefix are referred as "original" deployment descriptor files from Eclipse GlassFish, since these files names and DTDs were created while supporting Eclipse GlassFish and their support has been inherited by the Payara Platform.

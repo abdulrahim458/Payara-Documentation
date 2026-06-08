@@ -239,10 +239,19 @@ In some deployment-related `asadmin` commands, you can use an asterisk (`*`) as 
 [width="100%",cols="33%,67%",options="header",]
 |==============================================================
 |Version Expression |Selected Versions
-|`foo:*` |All versions of `foo`, including the untagged version
-|`foo:BETA*` |All `BETA` versions of `foo`
-|`foo:3.*` |All `3.`x versions of `foo`
-|`foo:patch*` |All `patch` versions of `foo`
+
+|`foo:*`
+|All versions of `foo`, including the untagged version
+
+|`foo:BETA*`
+|All `BETA` versions of `foo`
+
+|`foo:3.*`
+|All `3.`x versions of `foo`
+
+|`foo:patch*`
+|All `patch` versions of `foo`
+
 |==============================================================
 
 The following table summarizes which `asadmin` subcommands are identifier-aware or expression-aware. All expression-aware subcommands are also identifier-aware.
@@ -250,10 +259,19 @@ The following table summarizes which `asadmin` subcommands are identifier-aware 
 [width="100%",cols="50%,50%",options="header",]
 |======================================================================
 |Identifier-Aware Subcommands |Expression-Aware Subcommands
-|`deploy`, `redeploy` |`undeploy`
-|`enable` |`disable`
-|`list-sub-components` |`show-component-status`
-|`get-client-stubs` |`create-application-ref`, `delete-application-ref`
+
+|`deploy`, `redeploy`
+|`undeploy`
+
+|`enable`
+|`disable`
+
+|`list-sub-components`
+|`show-component-status`
+
+|`get-client-stubs`
+|`create-application-ref`, `delete-application-ref`
+
 |======================================================================
 
 The `create-application-ref` subcommand is expression-aware only if the `--enabled` option is set to `false`. Because the `--enabled` option is set to `true` by default, the create-application-ref` subcommand is identifier-aware by default.
@@ -345,7 +363,7 @@ asadmin help list-applications
 ----
 
 For additional information on the `asadmin` utility, see "xref:../general-administration/general-runtime-administration.adoc#using-the-asadmin-utility[Using the `asadmin` Utility]" in
-__Payara Server General Administration section__ and the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`(1M)] help page.
+__Payara Server General Administration section__ and the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`(1M)] help page.
 
 [#additional-information-on-application-deployment]
 == Additional Information on Application Deployment
