@@ -27,43 +27,44 @@ The Payara Server container can be configured via the `arquillian.xml` file usin
 |===
 | Name | Description | Default
 
-| `bindHttpPort`
+a| `bindHttpPort`
 | The port number of the http-listener for the embedded Payara Server.
-| `8181`
+a| `8181`
 
-| `bindHttpsPort`
+a| `bindHttpsPort`
 | The port number of the https-listener for the embedded Payara Server.
-| `8182`
+a| `8182`
 
-| `cleanup`
-| Specifies whether Arquillian should clean up on shutdown.
+a| `cleanup`
+a| Specifies whether Arquillian should clean up on shutdown.
 
 This recursively deletes files in the `instanceRoot` directory.
-| `true`
+a| `true`
 
-| `configurationReadOnly`
-| Specifies whether Payara Server should write back any changes to specified configuration file or `config/domain.xml` at the specified instance root.
-| `true`
+a| `configurationReadOnly`
+a| Specifies whether Payara Server should write back any changes to specified configuration file or `config/domain.xml` at the specified instance root.
+a| `true`
 
-| `configurationXml`
-| Set the location of configuration file i.e. `domain.xml` using which the Payara Server should run.
+a| `configurationXml`
+a| Set the location of configuration file i.e. `domain.xml` using which the Payara Server should run.
 |
 
-| `installRoot`
+a| `installRoot`
 | The installation root directory is the parent directory of a Payara Server instance directory and corresponds to the base directory for an installation of Payara Server.
 |
 
-| `instanceRoot`
+a| `instanceRoot`
 | The instance root directory is the domain directory and embedded Payara Server uses the server instance directory for domain configuration files.
 | The default domain directory
 
-| `resourcesXml`
-| A comma-separated list of Payara resources.xml files containing resources that will be added to the Payara instance using the `add-resources` command.
+a| `resourcesXml`
+a| A comma-separated list of Payara resources.xml files containing resources that will be added to the Payara instance using the `add-resources` command.
 |
 
-| `hazelcastConfigurationFile`
+a| `hazelcastConfigurationFile`
 | Full path to a hazelcast configuration file used to override the hazelcast bootstrap default configuration.
 |
+
 |===
 
 [#examples]

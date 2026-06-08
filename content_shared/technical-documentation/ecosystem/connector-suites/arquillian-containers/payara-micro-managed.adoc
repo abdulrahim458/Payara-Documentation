@@ -29,65 +29,66 @@ The following configuration options are available:
 |===
 | Container Option | Description | System Property | Environment Variable | Default
 
-| `microJar`
+a| `microJar`
 | Provides the location of the Payara Micro Jar.
-| `payara.microJar`
-| `MICRO_JAR`
+a| `payara.microJar`
+a| `MICRO_JAR`
 |
 
-| `startupTimeoutInSeconds`
+a| `startupTimeoutInSeconds`
 | Specifies the amount of time in seconds that the container will wait for Payara Micro to start.
-| `payara.startupTimeoutInSeconds`
-| `MICRO_STARTUP_TIMEOUT_IN_SECONDS`
-| `180`
+a| `payara.startupTimeoutInSeconds`
+a| `MICRO_STARTUP_TIMEOUT_IN_SECONDS`
+a| `180`
 
-| `randomHttpPort`
+a| `randomHttpPort`
 | Randomises the initial HTTP port of Payara Micro. This saves time by avoiding collisions with the default port.
-| `payara.randomHttpPort`
-| `MICRO_RANDOM_HTTP_PORT`
-| `true`
+a| `payara.randomHttpPort`
+a| `MICRO_RANDOM_HTTP_PORT`
+a| `true`
 
-| `autoBindHttp`
-| Enables the `--autoBindHttp` option for the Micro instance.
-| `payara.autoBindHttp`
-| `MICRO_AUTOBIND_HTTP`
-| `true`
+a| `autoBindHttp`
+a| Enables the `--autoBindHttp` option for the Micro instance.
+a| `payara.autoBindHttp`
+a| `MICRO_AUTOBIND_HTTP`
+a| `true`
 
-| `clusterEnabled`
+a| `clusterEnabled`
 | Enables clustering on the Micro instance.
-| `payara.clusterEnabled`
-| `MICRO_CLUSTER_ENABLED`
-| `false`
+a| `payara.clusterEnabled`
+a| `MICRO_CLUSTER_ENABLED`
+a| `false`
 
-| `consoleOutput`
+a| `consoleOutput`
 | Enables/disables console output on the Micro instance.
-| `payara.consoleOutput`
-| `MICRO_CONSOLE_OUTPUT`
-| `true`
+a| `payara.consoleOutput`
+a| `MICRO_CONSOLE_OUTPUT`
+a| `true`
 
-| `debug`
-| Enables debugging on the Payara Micro instance.
+a| `debug`
+a| Enables debugging on the Payara Micro instance.
 
 By default, Payara Micro will wait for the debugger on port `5005` before starting.
 
 Disables the startup timeout.
 
 To change this, provide java debug options to `cmdOptions`.
-| `payara.debug`
-| `MICRO_DEBUG`
-| `false`
+a| `payara.debug`
+a| `MICRO_DEBUG`
+a| `false`
 
-| `cmdOptions`
+a| `cmdOptions`
 | Provides JVM options to the Java process running the Micro instance.
-| `payara.cmdOptions`
-| `MICRO_CMD_OPTIONS`
+a| `payara.cmdOptions`
+a| `MICRO_CMD_OPTIONS`
 |
 
-| `extraMicroOptions`
+a| `extraMicroOptions`
 | Provides standard Payara Micro arguments for the server instance to launch with
-| `payara.extraMicroOptions`
-| `EXTRA_MICRO_OPTIONS`
+a| `payara.extraMicroOptions`
+a| `EXTRA_MICRO_OPTIONS`
 |
+
 |===
 
 [#examples]

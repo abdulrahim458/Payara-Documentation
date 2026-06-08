@@ -36,83 +36,83 @@ The following Arquillian Container configuration options are available:
 |===
 | Name | Description | Default
 
-| `adminHost`
+a| `adminHost`
 | The host to be used to access the Payara Server Admin interface.
-| `localhost`
+a| `localhost`
 
-| `adminHttps`
-| You can use it to specify whether the HTTP or HTTPS protocol shall be used to access the DAS. The property value can be `true` or `false`.
-| `false`
+a| `adminHttps`
+a| You can use it to specify whether the HTTP or HTTPS protocol shall be used to access the DAS. The property value can be `true` or `false`.
+a| `false`
 
-| `adminPort`
+a| `adminPort`
 | The port to be used to access the Payara Server Admin interface.
-| `4848`
+a| `4848`
 
-| `adminUser`
-| The name of the admin user of your DAS.
+a| `adminUser`
+a| The name of the admin user of your DAS.
 
 If omitted, no authentication will be used to access the DAS.
 
 In this case the `adminPassword` property should also be empty.
 |
 
-| `adminPassword`
-| The password of the admin user of your DAS.
+a| `adminPassword`
+a| The password of the admin user of your DAS.
 
 Cannot be omitted if you declare the admin user.
 
 If no authentication will be used to access the DAS you must have empty password for your admin user of your domain.
 |
 
-| `allowConnectingToRunningServer`
-| Allow Arquillian to use an already running Payara Server instance and skips `start-domain` command invocation.
-| `false`
+a| `allowConnectingToRunningServer`
+a| Allow Arquillian to use an already running Payara Server instance and skips `start-domain` command invocation.
+a| `false`
 
-| `authorisation`
-| If true, basic access authentication is enabled.
+a| `authorisation`
+a| If true, basic access authentication is enabled.
 
 It also indicates that remote server requires an `adminUser` and `adminPassword` configuration properties.
-| `false`
+a| `false`
 
-| `debug`
+a| `debug`
 | Starts the server in debug mode using standard Payara Server debug port.
-| `false`
+a| `false`
 
-| `domain`
+a| `domain`
 | The Payara Server domain to use or the default domain if not specified.
-| `domain1`
+a| `domain1`
 
-| `enableH2`
+a| `enableH2`
 | Starts/Stops the registered H2 database server using the standard H2 port.
-| `false`
+a| `false`
 
-| `ignoreCertificates`
-| If set to `true`, SSL certificate correctness is ignored.
+a| `ignoreCertificates`
+a| If set to `true`, SSL certificate correctness is ignored.
 
 This is useful for Docker images / Testcontainers when certificates are not easily matched to internally generated ones and host names are also very hard to match.
-| `false`
+a| `false`
 
-| `libraries`
-| A comma-separated list of library JAR files. Specify the library JAR files by their relative or absolute paths.
+a| `libraries`
+a| A comma-separated list of library JAR files. Specify the library JAR files by their relative or absolute paths.
 
 Specify relative paths relative to `domain-dir/lib/applibs`. The libraries are made available to the application in the order specified.
 |
 
-| `outputToConsole`
+a| `outputToConsole`
 | Show the output of the admin commands on the console.
-| `true`
+a| `true`
 
-| `payaraHome`
+a| `payaraHome`
 | The local Payara Server installation directory. Mandatory
-| Value of the `payara.home` system property.
+a| Value of the `payara.home` system property.
 
-| `properties`
-| Optional keyword-value pair that specify additional properties for the deployment.
+a| `properties`
+a| Optional keyword-value pair that specify additional properties for the deployment.
 
 The available properties are determined by the implementation of the component that is being deployed.
 |
 
-| `target`
+a| `target`
 a| The deployment target of the applications involved in the test.
 
 Valid values of the target are:
@@ -130,14 +130,14 @@ The domain name as a target is not a reasonable deployment scenario in case of t
 The HOST address and port numbers of the test server instance used by Arquillian (determined by the target property) will be automatically retrieved from the DAS server.
 
 TIP: You have to make them accessible for your test environment (consider any firewall or proxy configuration).
+a| `server`
 
-| `server`
-
-| `type`
-| If set to `osgi`, the component is packaged as an OSGi bundle.
+a| `type`
+a| If set to `osgi`, the component is packaged as an OSGi bundle.
 
 If the component is packaged as a regular archive, do not set this option.
 |
+
 |===
 
 The context root that will be used to run the tests is also retrieved automatically from the DAS server. If the deployed application does have a `sun-web.xml`, `glassfish-web.xml` or `payara-web.xml` deployment descriptor, the container will use the name of your deployment without the extension as context root. +
