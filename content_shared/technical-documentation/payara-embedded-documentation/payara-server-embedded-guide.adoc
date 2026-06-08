@@ -118,6 +118,7 @@ The methods of the `BootstrapProperties` class for setting the server configurat
 [width="100%",cols="<29%,<33%,<38%",options="header",]
 |===
 |Purpose |Method |Default Value
+
 |References an existing xref:installation-root-directory[Installation Root Directory], also called `as-install`
 a|
 [source,java]
@@ -126,6 +127,7 @@ setInstallRoot(String as-install)
 ----
 
 |None.
+
 |===
 
 The methods of the `GlassFishProperties` class for setting the server configuration are listed in the following table. The default value of each configuration setting is also listed.
@@ -134,6 +136,7 @@ The methods of the `GlassFishProperties` class for setting the server configurat
 [width="100%",cols="<24%,<37%,<39%",options="header",]
 |===
 |Purpose |Method |Default Value
+
 |References an existing xref:instance-root-directory[Instance Root Directory], also called `domain-dir`
 a|
 [source,java]
@@ -148,12 +151,12 @@ In order of precedence:
 * `java.io.tmp` system property value
 * `as-install/domains/domain1` if a non-embedded installation is referenced
 
-|Creates a new configuration file or references an existing configuration file a|
+|Creates a new configuration file or references an existing configuration file
+a|
 [source,java]
 ----
 setConfigFileURI(String configFileURI)
 ----
-
 a|
 In order of precedence:
 
@@ -167,13 +170,13 @@ a|
 ----
 setConfigFileReadOnly(boolean readOnly)
 ----
-|`true`
+a|`true`
 
 |Sets the port on which Embedded Payara Server listens.
-|`setPort`(String networkListener, int port)
+a|`setPort`(String networkListener, int port)
 |None
-|===
 
+|===
 
 NOTE: Do not use `setPort` if you are using the `setInstanceRoot` or `setConfigFileURI` methods.
 
@@ -396,8 +399,8 @@ The methods of this class for setting the scattered archive configuration are li
 [width="100%",cols="<52%,<38%,<10%",options="header",]
 |===
 |Purpose |Method |Default Value
-|Creates and names a scattered archive
 
+|Creates and names a scattered archive
 a|
 [source,java]
 ----
@@ -405,7 +408,7 @@ ScatteredArchive(String name, ScatteredArchive.Type type)
 ----
 |None
 
-|Creates and names a scattered archive based on a top-level directory.
+a|Creates and names a scattered archive based on a top-level directory.
 If the entire module is organized under the topDir, this is the only
 method necessary. The `topDir` argument can be null if other methods specify the
 remaining parts of the module.
@@ -503,6 +506,7 @@ The methods of this class for setting the scattered enterprise archive configura
 [width="99%",cols="<42%,<48%,<10%",options="header",]
 |===
 |Purpose |Method |Default Value
+
 |Creates and names a scattered enterprise archive
 a|[source,java]
 [source,text]
@@ -566,6 +570,7 @@ a|[source,java]
 toURI()
 ----
 |None
+
 |===
 
 This example shows code for creating an EAR file and using the `addArchive` and `addMetadata` methods.
@@ -751,11 +756,11 @@ For example, the full name of the `installation.root` property is `org.glassfish
 |===
 |Property |Default |Description
 
-|`installation.root`
+a|`installation.root`
 |Payara Server installation location
 |The xref:installation-root-directory[Installation Root Directory].
 
-|`instance.root`
+a|`instance.root`
 a|In order of precedence:
 
 * `glassfish.embedded.tmpdir` property value specified in `GlassFishProperties` object
@@ -764,25 +769,26 @@ a|In order of precedence:
 * `as-install/domains/domain1` if a non-embedded installation is referenced
 |The xref:instance-root-directory[Instance Root Directory].
 
-|`configuration.file`
+a|`configuration.file`
 a|[.breakable]`domain-dir/config/domain.xml`
 |The server's configuration file.
 
-|`keep-temporary-files`
-|`false`
-|If `true`, keeps temporary files (exploded EAR file and configuration file) created by the embedded EJB container when Embedded Payara Server is stopped.
+a|`keep-temporary-files`
+a|`false`
+a|If `true`, keeps temporary files (exploded EAR file and configuration file) created by the embedded EJB container when Embedded Payara Server is stopped.
 
-|`web.http.port`
+a|`web.http.port`
 |None
 |Enables the web container if set. Needed for testing web services in a WAR file. The value is ignored and can be an empty string.
 
-|`instance.reuse`
-|`false`
-|If `true`, no changes are made to the existing configuration file, and a temporary server instance is not created for the embedded run. Instead, execution happens against the existing server instance. Do not use this option if the reused server instance could be in use by the running non-embedded Payara Server.
+a|`instance.reuse`
+a|`false`
+a|If `true`, no changes are made to the existing configuration file, and a temporary server instance is not created for the embedded run. Instead, execution happens against the existing server instance. Do not use this option if the reused server instance could be in use by the running non-embedded Payara Server.
 
-|`skip-client-modules`
-|`false`
-|If `true`, omits modules from the classpath if they are not specified using `EJBContainer.MODULES` and have a manifest file with a `Main-Class` attribute.
+a|`skip-client-modules`
+a|`false`
+a|If `true`, omits modules from the classpath if they are not specified using `EJBContainer.MODULES` and have a manifest file with a `Main-Class` attribute.
+
 |===
 
 [#changing-log-levels-in-payara-embedded]
