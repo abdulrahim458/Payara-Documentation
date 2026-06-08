@@ -82,14 +82,22 @@ mvn clean install -PBuildEmbedded
 mvn clean install -PQuickBuild
 ----
 
-[cols=",,,",options="header",]
-|=======================================================================
+[cols="1,1,1,1",options="header",]
+|===
 |Payara Version |clean install |-PBuildEmbedded |-PQuickBuild
+
 |Payara Server | ✓ | ✓ | ✓
+
 |Payara Server (Web Profile) | ✓ | ✓ |
+
 |Payara Server Multi Language | ✓ | ✓ |
+
 |Payara Server Multi Language (Web Profile) | ✓ | ✓ |
+
 |Payara Micro | ✓ | ✓ | ✓
+
 |Payara Embedded | | ✓ |
+
 |Payara Embedded (Web Profile) | | ✓ |
-|=======================================================================
+
+|===

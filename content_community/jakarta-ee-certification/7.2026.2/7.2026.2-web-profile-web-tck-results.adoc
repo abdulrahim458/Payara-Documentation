@@ -14,6 +14,7 @@ As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Tech
 {empty} +
 {empty} +
 https://www.payara.fish/downloads/payara-platform-community-edition[Payara Server 7.2026.2 (Web Profile)^]
+
 |===
 
 - Specification Name, Version and download URL:
