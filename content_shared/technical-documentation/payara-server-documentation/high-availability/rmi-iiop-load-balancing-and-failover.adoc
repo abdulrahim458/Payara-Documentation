@@ -102,13 +102,13 @@ For example, a developer who wants to experiment with a cluster and load balanci
 . Go to the `install_dir/bin` directory.
 . Run the `package-appclient` utility.
 +
-This utility produces an `appclient.jar` file. For more information on `package-appclient`, see xref:ROOT:technical-documentation/payara-server-documentation/command-reference/package-appclient.adoc#package-appclient[`package-appclient`].
+This utility produces an `appclient.jar` file. For more information on `package-appclient`, see xref:technical-documentation/payara-server-documentation/command-reference/package-appclient.adoc#package-appclient[`package-appclient`].
 . Copy the `appclient.jar` file to the machine where you want your client and extract it.
 . Edit the `asenv.conf` or `asenv.bat` path variables to refer to the correct directory values on that machine.
 +
 The file is at `appclient-install-dir/config/`.
 +
-For a list of the path variables to update, see xref:ROOT:technical-documentation/payara-server-documentation/command-reference/package-appclient.adoc[`package-appclient`].
+For a list of the path variables to update, see xref:technical-documentation/payara-server-documentation/command-reference/package-appclient.adoc[`package-appclient`].
 
 . If required, make the `appclient` script executable.
 +
@@ -193,6 +193,7 @@ In the following example, the load-balancing weights in a cluster of three insta
 |`i1` |100
 |`i2` |200
 |`i3` |300
+
 |====================================
 
 The sequence of commands to set these load balancing weights is as follows:

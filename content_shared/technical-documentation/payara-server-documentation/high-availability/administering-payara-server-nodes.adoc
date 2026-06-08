@@ -45,9 +45,9 @@ If the SSH user cannot use SSH to log in to the host, the validation fails.
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Run the `create-node-ssh` subcommand.
 +
-NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for configuring the node, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc[`create-node-ssh`] help page.
+NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for configuring the node, see the xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc[`create-node-ssh`] help page.
 +
-If you are using password authentication for the SSH user, you must specify a password file through the `--passwordfile` option of the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`] utility. For more information about SSH user authentication, see link:Technical Documentation/Payara Server Documentation/High Availability/ssh-setup.adoc#setting-up-ssh-user-authentication[Setting Up SSH User Authentication].
+If you are using password authentication for the SSH user, you must specify a password file through the `--passwordfile` option of the xref:technical-documentation/payara-server-documentation/command-reference/asadmin.adoc[`asadmin`] utility. For more information about SSH user authentication, see link:Technical Documentation/Payara Server Documentation/High Availability/ssh-setup.adoc#setting-up-ssh-user-authentication[Setting Up SSH User Authentication].
 +
 [source,shell]
 ----
@@ -80,7 +80,7 @@ The SSH session interprets any text message that is displayed during login as a 
 
 *See also*
 
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc[`create-node-ssh`]
+xref:technical-documentation/payara-server-documentation/command-reference/create-node-ssh.adoc[`create-node-ssh`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-node-ssh` at the command line.
 
@@ -96,10 +96,10 @@ After creating a node, you can create instances on the node as explained in the 
 
 Use the `list-nodes-ssh` subcommand in remote mode to obtain information about existing `SSH` nodes in a domain.
 
-NOTE: To obtain information about all existing nodes in a domain, use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc[`list-nodes`] subcommand.
+NOTE: To obtain information about all existing nodes in a domain, use the xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc[`list-nodes`] subcommand.
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
-. Run the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes-ssh.adoc[`list-nodes-ssh`] subcommand.
+. Run the xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-ssh.adoc[`list-nodes-ssh`] subcommand.
 +
 [source,shell]
 ----
@@ -130,8 +130,8 @@ Command list-nodes-ssh executed successfully.
 
 *See also*
 
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc[`list-nodes`]
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes-ssh.adoc[`list-nodes-ssh`]
+* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc[`list-nodes`]
+* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-ssh.adoc[`list-nodes-ssh`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 
@@ -150,7 +150,7 @@ Ensure that SSH is configured on the host where the DAS is running and on the ho
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Run the `ping-node-ssh` subcommand.
 +
-NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for testing the node, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/ping-node-ssh.adoc[`ping-node-ssh`] help page.
+NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for testing the node, see the xref:technical-documentation/payara-server-documentation/command-reference/ping-node-ssh.adoc[`ping-node-ssh`] help page.
 +
 [source,shell]
 ----
@@ -170,7 +170,7 @@ Command ping-node-ssh executed successfully.
 
 *See also*
 
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/ping-node-ssh.adoc[`ping-node-ssh`]
+xref:technical-documentation/payara-server-documentation/command-reference/ping-node-ssh.adoc[`ping-node-ssh`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help ping-node-ssh` at the command line.
 
@@ -195,7 +195,7 @@ Ensure that no Payara Server instances reside on the node that you are deleting.
 ----
 asadmin> list-nodes-ssh --long=true
 ----
-. Run the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc[`delete-node-ssh`] subcommand.
+. Run the xref:technical-documentation/payara-server-documentation/command-reference/delete-node-ssh.adoc[`delete-node-ssh`] subcommand.
 +
 [source,shell]
 ----
@@ -254,7 +254,7 @@ For more information, see xref:administering-payara-server-instances.adoc#to-cre
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Run the `create-node-config` subcommand.
 +
-NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for configuring the node, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc[`create-node-config`] help page.
+NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for configuring the node, see the xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc[`create-node-config`] help page.
 +
 [source,shell]
 ----
@@ -279,7 +279,7 @@ Command create-node-config executed successfully.
 
 *See also*
 
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc[`create-node-config`]
+xref:technical-documentation/payara-server-documentation/command-reference/create-node-config.adoc[`create-node-config`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-node-config` at the command line.
 
@@ -292,10 +292,10 @@ After creating a node, you can create instances on the node as explained in xref
 
 Use the `list-nodes-config` subcommand in remote mode to obtain information about existing `CONFIG` nodes in a domain.
 
-NOTE: To obtain information about all existing nodes in a domain, use the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc[`list-nodes`] subcommand.
+NOTE: To obtain information about all existing nodes in a domain, use the xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc[`list-nodes`] subcommand.
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
-. Run the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc[`list-nodes-config`] subcommand.
+. Run the xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc[`list-nodes-config`] subcommand.
 +
 [source,shell]
 ----
@@ -328,8 +328,8 @@ Command list-nodes-config executed successfully.
 
 *See also*
 
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc[`list-nodes`]
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc[`list-nodes-config`]
+* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes.adoc[`list-nodes`]
+* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc[`list-nodes-config`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 
@@ -355,7 +355,7 @@ Ensure that no Payara Server instances reside on the node that you are deleting.
 asadmin> list-nodes-config --long=true
 ----
 +
-. Run the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-node-config.adoc[`delete-node-config`] subcommand.
+. Run the xref:technical-documentation/payara-server-documentation/command-reference/delete-node-config.adoc[`delete-node-config`] subcommand.
 +
 [source,shell]
 ----
@@ -382,8 +382,8 @@ Command delete-node-config executed successfully.
 *See also*
 
 * xref:administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/delete-node-config.adoc[`delete-node-config`]
-* xref:ROOT:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc[`list-nodes-config`]
+* xref:technical-documentation/payara-server-documentation/command-reference/delete-node-config.adoc[`delete-node-config`]
+* xref:technical-documentation/payara-server-documentation/command-reference/list-nodes-config.adoc[`list-nodes-config`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 
@@ -543,7 +543,7 @@ asadmin> update-node-ssh options node-name
 ----
 +
 *options*:
-  Options of the `update-node-ssh` subcommand for changing the node's configuration data. For information about these options, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc[`update-node-ssh`] help page.
+  Options of the `update-node-ssh` subcommand for changing the node's configuration data. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc[`update-node-ssh`] help page.
 *node-name*:
   The name of the `SSH` node to update.
 
@@ -557,7 +557,7 @@ Command update-node-ssh executed successfully.
 
 *See also*
 
-xref:ROOT:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc[`update-node-ssh`]
+xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc[`update-node-ssh`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help update-node-ssh` at the command line.
 
@@ -580,7 +580,7 @@ Ensure that the node that you are updating exists.
 asadmin> update-node-config options node-name
 ----
 *options*:
-  Options of the `update-node-config` subcommand for changing the node's configuration data. For information about these options, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc[`update-node-config`] help page.
+  Options of the `update-node-config` subcommand for changing the node's configuration data. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc[`update-node-config`] help page.
 *node-name*:
   The name of the `CONFIG` node to update.
 
@@ -636,7 +636,7 @@ Execute the following steps:
 * To change the type of a node to `SSH`, run the `update-node-ssh` subcommand on the node.
 +
 *options*:
-  Options of the `update-node-ssh` subcommand for changing the node's configuration data. For information about these options, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc[`update-node-ssh`] help page.
+  Options of the `update-node-ssh` subcommand for changing the node's configuration data. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/update-node-ssh.adoc[`update-node-ssh`] help page.
 
 * To change the type of a node to `CONFIG`, run the `update-node-config` subcommand on the node.
 +
@@ -645,7 +645,7 @@ Execute the following steps:
 asadmin> update-node-config [options] ssh-node-name
 ----
 *options*:
-  Options of the `update-node-config` subcommand for changing the node's configuration data. For information about these options, see the xref:ROOT:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc[`update-node-config`] help page.
+  Options of the `update-node-config` subcommand for changing the node's configuration data. For information about these options, see the xref:technical-documentation/payara-server-documentation/command-reference/update-node-config.adoc[`update-node-config`] help page.
 *ssh-node-name*:
   The name of the `SSH` node to change.
 
