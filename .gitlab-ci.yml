@@ -140,7 +140,7 @@ deploy_to_test_server:
   stage: deploy
   resource_group: test_server-${DOCS_ID}
   <<: *docs_matrix
-  needs: [docs_html]
+  needs: [docs_html,docs_pdf]
   script:
     - |
       rm -rf ${TEST_DEPLOY_DIR_HTML}/
@@ -181,7 +181,7 @@ deploy_to_test_server:
 deploy_to_staging_server:
   stage: deploy
   <<: *docs_matrix
-  needs: [docs_html]
+  needs: [docs_html,docs_pdf]
   variables:
     GIT_STRATEGY: none
   script:
@@ -198,10 +198,11 @@ deploy_to_staging_server:
         ssh ${PROD_SERVER} mkdir -p ${STAGING_DIR}/pdfs/${VERSION}
         rsync -vahze ssh ${PDF_BUILD_DIR}/${VERSION}/* ${PROD_SERVER}:${STAGING_DIR}/pdfs/${VERSION}
       fi
+
 deploy_to_prod_server:
   stage: deploy
   <<: *docs_matrix
-  needs: [docs_html, deploy_to_staging_server]
+  needs: [docs_html,docs_pdf,deploy_to_staging_server]
   variables:
     GIT_STRATEGY: none
   script:
