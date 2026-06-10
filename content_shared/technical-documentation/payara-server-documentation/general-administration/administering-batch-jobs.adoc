@@ -295,12 +295,12 @@ However since the table constraint names already exist for the existing JBatch t
 For MySQL (5/8) database use, it is recommended the following additional property be set:
 
 [cols=",,",options="header",]
-|=====
+|===
 |Name |Value |Description
 |`zeroDateTimeBehavior` |`convertToNull` |
 Action for `DATETIME` values that are composed entirely of zeros (used by MySQL to represent invalid dates)
 
-|=====
+|===
 
 IMPORTANT: Depending on the version of MySQL you may also need to set the server property `sql_mode` to blank as JBatch uses `null` and zero dates.
 

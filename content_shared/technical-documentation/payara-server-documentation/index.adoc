@@ -22,7 +22,7 @@ The following conventions are applied through the pages in this section to impro
 The following table explains symbols that might be used in this section.
 
 [width="100%", cols="10%,25%,25%,40%",options="header",]
-|=======================================================================
+|===
 |Symbol |Description |Example |Meaning
 
 a|`[ ]`
@@ -56,7 +56,7 @@ a|File ->
 New -> Templates |From the _File_ menu, choose New. From the _New_ submenu,
 choose _Templates_.
 
-|=======================================================================
+|===
 
 [#default-paths-and-file-names]
 === Default Paths and File Names

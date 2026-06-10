@@ -1402,7 +1402,7 @@ To ensure that library files are resynchronized correctly, you must ensure that 
 library file as shown in the following table.
 +
 [cols="<53%,<47%",options="header",]
-|=======================================================================
+|===
 |Type of Library Files |Location
 
 |Common JAR archives and ZIP archives for all applications in a domain.
@@ -1424,7 +1424,7 @@ a|Optional packages for all applications that are deployed to a specific
 cluster or standalone instance.
 a|[.breakable]`domain-dir/config/<config-name>/lib/ext`
 
-|=======================================================================
+|===
 
 *domain-dir*:
   The directory in which the domain's configuration is stored.

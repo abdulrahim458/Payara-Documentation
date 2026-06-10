@@ -31,7 +31,7 @@ payara-micro.jar
 Here's a brief summary of the folders and files that belong to the structure shown earlier:
 
 [cols="2,3",options="header"]
-|====
+|===
 |File |Description
 
 a|`fish/payara`
@@ -61,7 +61,7 @@ a|`MICRO-INF/payara-boot.properties`
 a|`MICRO-INF/<command-files>.txt`
 a|**.txt** files containing asadmin commands to execute post boot can also be stored within MICRO-INF. This includes `pre-boot-commands`, `post-boot-commands`, and `post-deploy-commands`.
 
-|====
+|===
 
 == Nested JAR
 

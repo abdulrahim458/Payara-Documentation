@@ -18,7 +18,7 @@ Azul Payara is available in 2 editions:
 The following features are supported by Azul Payara but are not included in Azul Payara Community:
 
 [cols="<,<a,<,<",options="header",]
-|=======================================================
+|===
 |Feature |Enterprise Documentation References |Advantage |Business Benefit
 | Integrated SSL Certificate Management
 | link:{enterpriseDocsPageRootUrl}Technical%20Documentation/Payara%20Server%20Documentation/Security%20Guide/SSL%20Certificate%20Management.html[SSL Certificate Management]
@@ -30,7 +30,7 @@ a| link:{enterpriseDocsPageRootUrl}Technical%20Documentation/Payara%20Server%20D
 | Important for Operations to monitor how Payara Platform runtimes are doing
 | Automated Operations are possible using 3rd party tools
 
-|=======================================================
+|===
 
 === Are You Using the Payara Platform for Mission Critical Production Environments?
 

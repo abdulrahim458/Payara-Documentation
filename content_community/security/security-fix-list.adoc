@@ -3,7 +3,7 @@
 The following is a list of reported _**C**ommon **V**ulnerabilities and **E**xposures_ that have been analyzed and documented across releases:
 
 [cols="5%,5%,10%,30%,5%,10%a,35%a",options="header",]
-|=======================================================================
+|===
 |ID |link:https://nvd.nist.gov/vuln-metrics/cvss[CVSS Score^] |Status |Summary |Release |Pull Requests |Observations
 
 |https://nvd.nist.gov/vuln/detail/CVE-2026-24457[CVE-2026-24457^] | 9.1 | FIXED | An unsafe parsing of OpenMQ's configuration, allows a remote attacker to read arbitrary files from a MQ Broker's server. A full exploitation could read unauthorized files of the OpenMQ’s host OS. In some scenarios RCE could be achieved. | 7.2026.5 | https://github.com/payara/Payara/pull/8084[#8084^] | Fixed by patching OpenMQ.
@@ -131,7 +131,7 @@ NOTE: It is ALWAYS recommended to properly secure or disable any public facing O
 |http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5519[CVE-2016-5519^] | 8.8 | PENDING |Unspecified vulnerability on JSF implementation for Oracle Glassfish 3.0+ | | |Pending for assessment
 |http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-6816[CVE-2016-6816^] | 7.1 | N/A |Apache Tomcat HTTP request parsing vulnerability allow injection of data into response | | |Payara Server doesn't have included the Coyote components affected
 |https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-1000028[CVE-2017-1000028^] | 7.5 | FIXED | Oracle, GlassFish Server Open Source Edition 4.1 is vulnerable to both authenticated and unauthenticated Directory Traversal vulnerability, that can be exploited by issuing a specially crafted HTTP GET request. | 4.1.1.161 | https://github.com/payara/Payara/pull/632[#632^] | Fixed by patching Woodstock
-|=======================================================================
+|===
 
 [#non-cve-vulnerabilities]
 == Non-CVE Vulnerabilities
@@ -139,7 +139,7 @@ NOTE: It is ALWAYS recommended to properly secure or disable any public facing O
 Here is a collection of historic non-**CVE** vulnerabilities that may warrant attention:
 
 [cols="<,<,<,<,<,<",options="header",]
-|=======================================================================
+|===
 |Reference |Status |Summary | Release |Pull Requests |Observations
 
 |FISH-13363
@@ -184,4 +184,4 @@ Here is a collection of historic non-**CVE** vulnerabilities that may warrant at
 |https://github.com/payara/Payara/pull/2493[#2493^]
 |
 
-|=======================================================================
+|===

@@ -38,7 +38,7 @@ Centralized administration of instances simplifies the administration of the Dep
 How you administer instances and the nodes on which they reside varies depending on whether and how centralized administration is enabled. The following table provides cross-references to instructions for administering nodes and instances depending on the protocol that is used for enabling centralized administration, if any.
 
 [cols="<15%,<42%,<43%",options="header",]
-|=======================================================================
+|===
 |Protocol |Node Administration Instructions |Instance Administration Instructions
 
 |xref:administering-payara-server-instances.adoc#administering-payara-server-instances-centrally[Administering Payara Server Instances Centrally]
@@ -53,7 +53,7 @@ a|xref:administering-payara-server-nodes.adoc#creating-listing-and-deleting-conf
 |
 |
 
-|=======================================================================
+|===
 
 [#considerations-for-using-ssh-for-centralized-administration]
 === Considerations for Using SSH for Centralized Administration
@@ -289,12 +289,12 @@ A disadvantage of this approach is that the SSH home directory has spaces in its
 . Compare the pairs of settings for Windows and the MKS Toolkit that are listed in the following table.
 +
 [width="100%",cols="<50%,<50%",options="header",]
-|===============================================
+|===
 |Windows Environment Variable |MKS Toolkit Field
 |`HOMEPATH` |Home Directory
 |`HOMEDRIVE` |Home Directory Drive
 
-|===============================================
+|===
 
 .. In a Windows command window, determine the values of the `HOMEPATH` and `HOMEDRIVE` environment variables.
 .. In an MKS Toolkit shell, determine the current settings of the Home Directory and Home Directory Drive fields for the user.
@@ -543,7 +543,7 @@ If SSH is already deployed at your site, the authentication scheme to use might 
 The following table lists the authentication schemes that Payara Server supports. The table also lists the advantages and disadvantages of each authentication scheme.
 
 [width="100%",cols="<34%,<33%,<33%",options="header",]
-|=======================================================================
+|===
 |Authentication Scheme |Advantages |Disadvantages
 |Public key without encryption
 |Payara Server provides tools to simplify set up.
@@ -557,7 +557,7 @@ File access permissions for key files and the directory that contains the key fi
 |No SSH configuration is required to locate key files or to ensure that file access permissions are correct.
 |For each SSH user, Payara Server password aliases are required for the SSH password.
 
-|=======================================================================
+|===
 
 [#to-set-up-public-key-authentication-without-encryption]
 === To Set up Public Key Authentication without Encryption

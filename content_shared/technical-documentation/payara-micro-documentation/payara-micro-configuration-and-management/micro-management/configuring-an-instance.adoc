@@ -292,7 +292,7 @@ variables supported are the same as the system properties below just replace the
 Payara Micro supports the following system properties:
 
 [cols=",",options="header",]
-|==================================================
+|===
 |System Property|Equivalent Command Line Flag
 |*payaramicro.domainConfig*|`--domainConfig`
 |*payaramicro.hzConfigFile*|`--hzConfigFile`
@@ -329,7 +329,7 @@ Payara Micro supports the following system properties:
 |*payaramicro.instanceGroup*|`--instancegroup`
 |*payaramicro.initialJoinWait*|`--hzinitialjoinwait`
 
-|==================================================
+|===
 
 [#configuring-alternate-keystores-for-ssl]
 == Configuring Alternate Keystores for SSL

@@ -67,7 +67,7 @@ The following table describes the Payara Server default ports for the listeners 
 .Default Ports for Listeners
 
 [width="100%",cols="18%,13%,69%",options="header",]
-|=======================================================================
+|===
 |Listener |Default Port |Description
 
 |Administrative server
@@ -83,7 +83,7 @@ To access deployed web applications and services, clients connect to this port.
 a|`8181`
 |Web applications configured for secure communications listen on a separate port.
 
-|=======================================================================
+|===
 
 [#network-listeners-configuration]
 === Network Listeners Configuration

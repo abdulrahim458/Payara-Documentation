@@ -17,7 +17,7 @@ Breaking changes introduced in MicroProfile Health {mpHealthVersion} are listed 
 The MicroProfile HealthCheck API defines the following list of REST endpoints that are available from the root context at `/health/+${type}+` by default:
 
 [cols="1,1,3",options="header"]
-|====
+|===
 |Context |Type |Description
 
 a|`/health/live`
@@ -36,7 +36,7 @@ a|`/health`
 |Readiness + Liveness + Startup
 a|On invocation, all registered health checks annotated with `@Liveness`, `@Readiness`, or `@Startup` are performed and the results aggregated.
 
-|====
+|===
 
 TIP: On Payara Server, this root endpoint can be altered using the `set-microprofile-healthcheck-configuration` asadmin command to prevent collisions with other HTTP endpoints that might need to use the `health` context root.
 

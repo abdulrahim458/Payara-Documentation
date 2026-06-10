@@ -7,7 +7,7 @@ Payara Micro also provides additional methods to fire events and register listen
 These methods are used for firing CDI Events across running instances.
 
 [cols=",",options="header",]
-|=======================================================================
+|===
 |Method |Description
 
 a|[.breakable]`void addCDIEventListener(CDIEventListener listener)`
@@ -25,7 +25,7 @@ a|[.breakable]`void removeClusterListener(PayaraClusterListener listener)`
 a|[.breakable]`void publishCDIEvent(PayaraClusteredCDIEvent event)`
 |Publishes a CDI Event.
 
-|=======================================================================
+|===
 
 NOTE: This feature has been available in Payara Micro long before it was available in Payara Server.
 

@@ -74,7 +74,7 @@ IMPORTANT: The domain and server configuration files should be accessible only b
 .Securing the Payara Server Host Machine
 
 [width="100%",cols="30%,70%",options="header",]
-|=======================================================================
+|===
 |Security Action |Description
 
 a|Physically secure the hardware.
@@ -184,7 +184,7 @@ a|Refer to your official Java runtime version for a list of recommended security
 
 NOTE: In general, whenever possible it is recommended to upgrade the Java runtime to its latest security patch on its corresponding major version.
 
-|=======================================================================
+|===
 
 [#securing-payara-server]
 == Securing Payara Server
@@ -194,7 +194,7 @@ Payara Server provides a powerful and flexible set of software tools for securin
 .Securing Payara Server
 
 [width="100%",cols="30%,70%a",options="header",]
-|=======================================================================
+|===
 |Security Action |Description
 
 |Enable Secure Admin.
@@ -253,7 +253,7 @@ a|The default `admin` user is created when you install Payara Server or create a
 
 For production environments, create at least one other account in the `asadmin` group in case one account password is compromised. When creating asadmin users give them unique names that cannot be easily guessed.
 
-|=======================================================================
+|===
 
 [#securing-applications]
 == Securing Applications
@@ -266,7 +266,7 @@ For some security options, Payara Server enables you to determine whether the se
 
 .Securing Applications
 [width="100%",cols="30%,70%a",options="header",]
-|=======================================================================
+|===
 |Security Action |Description
 
 |Use JSP comment tags instead of HTML comment tags.
@@ -306,4 +306,4 @@ To remove this security vulnerability, before you return data that a user has su
 
 NOTE: Using third-party libraries that can sanitize the content of an HTML-formatted set of data is recommended in most cases.
 
-|=======================================================================
+|===

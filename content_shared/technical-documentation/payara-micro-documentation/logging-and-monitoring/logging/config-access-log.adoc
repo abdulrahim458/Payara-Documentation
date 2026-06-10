@@ -4,7 +4,7 @@
 Payara Micro supports a number of commands to help you configure access logging. It is easiest to configure access logging before it is bootstrapped, however you can edit `domain.xml` also, as Payara Micro can reload that dynamically.
 
 [cols="2,3,2",options="header",]
-|============================
+|===
 | Configuration Option | Description | Default Value
 
 a|[.breakable]`--accesslog <directory-path>`
@@ -27,7 +27,7 @@ a|[.breakable]`--accesslogprefix`
 |Sets user defined prefix for access log filenames
 |
 
-|============================
+|===
 
 All options available for configuring Payara Micro can be seen by running the JAR with the `--help` option, or by consulting xref:../../payara-micro-configuration-and-management/micro-management/command-line-options/command-line-options.adoc[Payara Micro Command Line Options]
 
@@ -35,7 +35,7 @@ All options available for configuring Payara Micro can be seen by running the JA
 == Usage Examples
 
 [cols="2,3,2",options="header",]
-|============================
+|===
 | Configuration Option | Usage | Result
 
 a|[.breakable]`--accesslog`
@@ -58,4 +58,4 @@ a|`--accesslogprefix`
 a|[.breakable]`java -jar payara-micro --accesslog ~/logs/accesslogs --accesslogprefix Production`
 | Production.2019-11-22.txt
 
-|============================
+|===

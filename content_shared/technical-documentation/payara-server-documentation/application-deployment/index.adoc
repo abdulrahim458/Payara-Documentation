@@ -237,7 +237,7 @@ A module or application without a version identifier is called the untagged vers
 In some deployment-related `asadmin` commands, you can use an asterisk (`*`) as a wildcard character to specify a version expression, which selects multiple version identifiers. Using the asterisk by itself after the colon selects all versions of a module or application, including the untagged version. The following table shows example version expressions and the versions they select.
 
 [width="100%",cols="33%,67%",options="header",]
-|==============================================================
+|===
 |Version Expression |Selected Versions
 
 a|`foo:*`
@@ -252,12 +252,12 @@ a|All `3.`x versions of `foo`
 a|`foo:patch*`
 a|All `patch` versions of `foo`
 
-|==============================================================
+|===
 
 The following table summarizes which `asadmin` subcommands are identifier-aware or expression-aware. All expression-aware subcommands are also identifier-aware.
 
 [width="100%",cols="50%,50%",options="header",]
-|======================================================================
+|===
 |Identifier-Aware Subcommands |Expression-Aware Subcommands
 
 a|`deploy`, `redeploy`
@@ -272,7 +272,7 @@ a|`show-component-status`
 a|`get-client-stubs`
 a|`create-application-ref`, `delete-application-ref`
 
-|======================================================================
+|===
 
 The `create-application-ref` subcommand is expression-aware only if the `--enabled` option is set to `false`. Because the `--enabled` option is set to `true` by default, the create-application-ref` subcommand is identifier-aware by default.
 

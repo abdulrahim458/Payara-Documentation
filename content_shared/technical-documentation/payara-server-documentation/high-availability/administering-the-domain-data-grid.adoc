@@ -292,7 +292,7 @@ Some Hazelcast configuration settings apply to the whole domain. Navigate to the
 The following configuration options are available here:
 
 [cols="4,6",options="header",]
-|====
+|===
 |Property |Description
 
 |Restart Data Grid
@@ -334,7 +334,7 @@ Using this option to point to a valid Hazelcast configuration file will cause al
 |Data Grid Discovery Mode
 | See xref:administering-the-domain-data-grid.adoc#domain-discovery-mode[Discovery Modes]
 
-|====
+|===
 
 [#configuring-config-specifc-hazelcast-with-the-admin-console]
 === Configuring Server Config Specific Hazelcast Settings with the Admin Console
@@ -346,7 +346,7 @@ Navigate to the _Data Grid_ page for the specific configuration.
 The following configuration options are available here:
 
 [cols="4,6",options="header",]
-|====
+|===
 |Property |Description
 
 |Enabled
@@ -378,7 +378,7 @@ The following configuration options are available here:
 
 | Queue Capacity of the Data Grid Scheduled Executor Service. Executions are queued until a thread is available
 
-|====
+|===
 
 Enter your required values, and click _Save_. Restarting the domain or instance/cluster is not necessary for any changes made to take effect, provided that _"Dynamic"_ remains set to `true`
 

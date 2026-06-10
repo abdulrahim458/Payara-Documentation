@@ -92,7 +92,7 @@ The following table shows which authentication methods are employed when secure 
 .Authentication Methods Employed
 
 [width="100%",cols="30%,30%,40%",options="header",]
-|=======================================================================
+|===
 |Access Method |Secure Admin is Disabled |Secure Admin is Enabled
 
 |Remote administration access to the DAS
@@ -112,7 +112,7 @@ No mutual authentication.
 |Cleartext messages. Locally-provisioned password mechanism is used.
 |SSL-encrypted messages. Locally-provisioned password mechanism is used.
 
-|=======================================================================
+|===
 
 [#understanding-how-certificate-authentication-is-performed]
 === Understanding How Certificate Authentication Is Performed
@@ -393,7 +393,7 @@ NOTE: When secure admin is disabled, Payara Server does allow remote monitoring 
 .Accepted and Rejected Operations if Secure Admin is Disabled
 
 [width="100%",cols="30%,25%,45%",options="header",]
-|=======================================================================
+|===
 |Operation |Run Locally |Run Remotely
 
 a|`start-local-instance`
@@ -411,7 +411,7 @@ a|Functions as
 expected but requires prior SSH configuration.
 |Functions as expected but requires prior SSH configuration.
 
-|=======================================================================
+|===
 
 [#running-secure-admin]
 == Running Secure Admin

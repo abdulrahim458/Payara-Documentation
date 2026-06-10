@@ -576,7 +576,7 @@ Gathered phone home data is sent via a `GET` request to http://www.payara.fish/p
 The following is the list of information attributes gathered by the Phone Home service:
 
 [cols=",",options="header",]
-|=======================================================================
+|===
 |Attribute |Example
 |Payara Server Version |{release-id} #badassfish
 |Java Virtual Machine Version |1.8.0_121
@@ -585,7 +585,7 @@ The following is the list of information attributes gathered by the Phone Home s
 |Number of instances in the domain |2
 |Randomly generated UUID
 |eaa6fe2c-2388-4aa7-fdcc-288c7b318ddfeaa6ef23-2388-4aa7-8dcc-288c7b318ddf
-|=======================================================================
+|===
 
 This is the only data which the phone home service gathers from your system.
 

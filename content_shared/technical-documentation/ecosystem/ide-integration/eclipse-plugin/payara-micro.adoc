@@ -1,6 +1,5 @@
 = Payara Micro Tools in Eclipse IDE
 :ordinal: 2
-=======
 
 Using the Payara Eclipse Tools, you can integrate Payara Server within the Eclipse IDE and perform the following tasks:
 

@@ -338,7 +338,7 @@ NOTE: If you want to execute the payara-micro plugin along with maven-toolchains
 
 .Configuration tags
 [cols="2,2,2,1,3",options="header"]
-|====
+|===
 |Element |System Property |Environment Variable |Default |Notes
 
 a|`processId`
@@ -371,7 +371,7 @@ a|`maxStopTimeoutMillis`
 |5000
 |Defines the maximum timeout in milliseconds to wait for the process of Payara Micro instance to stop.
 
-|====
+|===
 
 [#reload-goal]
 === `reload`

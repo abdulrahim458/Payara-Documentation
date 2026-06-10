@@ -523,7 +523,7 @@ The statistics available for the `httplistener` type are shown in the following 
 ==== Table 8-1 HTTP Listener Common Monitoring Statistics
 
 [width="100%",cols="17%,83%",options="header",]
-|====
+|===
 |Statistic
 |Description
 
@@ -539,7 +539,7 @@ a|`pt`
 a|`rc`
 |Request count. Cumulative number of requests processed so far
 
-|====
+|===
 
 
 [#jvm-common-statistics]
@@ -551,7 +551,7 @@ The statistics available for the `jvm` type are shown in the following table.
 ==== Table 8-2 JVM Common Monitoring Statistics
 
 [width="100%",cols="19%,81%",options="header",]
-|====
+|===
 |Statistic
 |Description
 
@@ -573,7 +573,7 @@ a|`min`
 a|`UpTime`
 |Number of milliseconds that the JVM machine has been running since it was last started
 
-|====
+|===
 
 
 [#web-module-common-statistics]
@@ -585,7 +585,7 @@ The statistics available for the `webmodule` type are shown in the following tab
 ==== Table 8-3 Web Module Common Monitoring Statistics
 
 [width="100%",cols="18%,82%",options="header",]
-|====
+|===
 |Statistic |Description
 
 a|`ajlc`
@@ -618,7 +618,7 @@ a|`tjlc`
 a|`tslc`
 |Total number of servlets that are loaded
 
-|====
+|===
 
 [#viewing-comprehensive-monitoring-data]
 == Viewing Comprehensive Monitoring Data
@@ -653,7 +653,7 @@ For example, the following table explains the output of the `list` and `get` sub
 ==== Table 8-4 Example Resources Level Dotted Names
 
 [width="100%",cols="23%,41%,36%",options="header",]
-|====
+|===
 |Subcommand |Dotted Name |Output
 
 a|`list --monitor`
@@ -668,7 +668,7 @@ a|`get --monitor`
 a|`server.resources.``connection-pool1.*`
 |List of attributes and values corresponding to connection pool attributes.
 
-|====
+|===
 
 For detailed information on dotted names, see the xref:../command-reference/dotted-names.adoc[`dotted-names`] help page.
 

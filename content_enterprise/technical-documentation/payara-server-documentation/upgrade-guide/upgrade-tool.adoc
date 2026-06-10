@@ -33,7 +33,7 @@ The command will also back up the old version and domains in the default locatio
 ==== Command Options
 
 [cols="2,1,4,1,1",options="header",]
-|=======================================================================
+|===
 |Option |Type |Description |Default |Mandatory
 
 a|`--username`
@@ -78,7 +78,7 @@ a|`--nodes`
 |All nodes in the cluster
 |No
 
-|=======================================================================
+|===
 
 [#upgrade-example]
 ==== Example
@@ -111,7 +111,7 @@ WARNING: This command is not supported on Windows OS, please use the `rollbackUp
 ==== Command Options
 
 [cols="1,1,4,1,1",options="header",]
-|=======================================================================
+|===
 |Option |Type |Description |Default |Mandatory
 
 a|`--domaindir`
@@ -126,7 +126,7 @@ a|`--nodes`
 |All nodes in the cluster
 | No
 
-|=======================================================================
+|===
 
 [#staged-upgrades]
 == Staged Upgrades
@@ -148,7 +148,7 @@ It will then upgrade the nodes of the domains in the default domain dir, or the 
 ==== Command Options
 
 [cols="1,1,4,1,1",options="header",]
-|=======================================================================
+|===
 |Option |Type |Description |Default |Mandatory
 
 a|`--domaindir`
@@ -163,7 +163,7 @@ a|`--nodes`
 |All nodes in the cluster
 | No
 
-|=======================================================================
+|===
 
 [#rollback-upgrade-script]
 === Rollback Upgrade Script
@@ -180,7 +180,7 @@ It will then rollback the nodes of the domains in the default domain dir, or the
 ==== Command Options
 
 [cols="1,1,4,1,1",options="header",]
-|=======================================================================
+|===
 |Option |Type |Description |Default |Mandatory
 
 a|`--domaindir`
@@ -195,7 +195,7 @@ a|`--nodes`
 |All nodes in the cluster
 | No
 
-|=======================================================================
+|===
 
 [#cleanup-upgrade]
 === Cleanup Upgrade Script
@@ -285,7 +285,7 @@ Below are the known combinations causing issues:
 === Known Upgrade Issues
 
 [cols="1,1,4",options="header",separator=¦]
-|=======================================================================
+|===
 ¦Existing ¦Upgrade ¦Result
 ¦7.0.0 ¦7.1.0 ¦No issues
-|=======================================================================
+|===

@@ -3,7 +3,7 @@
 All of the options listed below are case-insensitive starting from release `4.1.1.171`; prior versions need the option to be set with https://en.wikipedia.org/wiki/Camel_case[camelCase notation^]
 
 [cols="2,3,2",options="header",]
-|=======================================================================
+|===
 | Configuration Option | Description | Default Value
 
 a|[.breakable]`--accesslog <directory-path>`
@@ -307,4 +307,4 @@ a|`--warmup`
 |Exit the server immediately after configuration is done, applications are deployed and it's ready to serve requests.
 |
 
-|=======================================================================
+|===

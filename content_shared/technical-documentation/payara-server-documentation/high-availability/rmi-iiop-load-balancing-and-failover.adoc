@@ -188,13 +188,13 @@ appclient --client my_dir/myapp.jar
 In the following example, the load-balancing weights in a cluster of three instances are to be set as shown in the following table.
 
 [width="100%",cols="<44%,<56%",options="header",]
-|====================================
+|===
 |Instance Name |Load-Balancing Weight
 |`i1` |100
 |`i2` |200
 |`i3` |300
 
-|====================================
+|===
 
 The sequence of commands to set these load balancing weights is as follows:
 

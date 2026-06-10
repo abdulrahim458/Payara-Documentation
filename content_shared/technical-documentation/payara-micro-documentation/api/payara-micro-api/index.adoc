@@ -12,7 +12,7 @@ process, whereas `PayaraMicroRuntime.class` methods are used on running instance
 Configuration Methods of `PayaraMicro.class` are detailed here. 
 
 [cols="2,3,2,2,1,1",options="header",]
-|====
+|===
 |Configuration Operand |Description |Get Method |Set Method |Default Value |Command Line Equivalent
 
 |Alternate Domain XML
@@ -120,7 +120,7 @@ a|[.breakable]`PayaraMicro setAutoBindRange(int autoBindRange)`
 |5
 a|`--autoBindRange`
 
-|====
+|===
 
 [#operation-methods]
 == Operation Methods
@@ -147,7 +147,7 @@ instances.
 ==== `PayaraMicro.class` Methods
 
 [cols=",,",options="header"]
-|=======================================================================
+|===
 |Method |Description |Command Line Equivalent
 a|[.breakable]`PayaraMicro addDeployment(String pathToWar)`
 |Adds the file found at the location of the `pathToWar` parameter to the list of
@@ -159,13 +159,13 @@ a|Adds the file associated with the `file` parameter to the list of files to be
 deployed upon starting the instance.
 a|`--deploy`
 
-|=======================================================================
+|===
 
 [#payaramicroruntime.class-methods]
 ==== `PayaraMicroRuntime.class` Methods
 
 [cols=",",options="header",]
-|=======================================================================
+|===
 |Method |Description
 a|[.breakable]`boolean deploy(String name, InputStream is)`
 |Deploys an application from an `InputStream` with the name specified.
@@ -178,7 +178,7 @@ a|`boolean deploy(File war)`
 a|[.breakable]`boolean undeploy(String name)`
 |Un-deploys the specified application.
 
-|=======================================================================
+|===
 
 [#setup-and-shutdown-methods]
 === Setup and Shutdown Methods
@@ -189,7 +189,7 @@ These methods are required for setting up and cleaning Payara Micro instances.
 ==== `PayaraMicro.class` Methods
 
 [cols=",",options="header",]
-|=======================================================================
+|===
 |Method |Description
 a|[.breakable]`PayaraMicroRuntime bootStrap() throws BootstrapException`
 |Checks the supplied configuration parameters and starts a Payara Micro instance.
@@ -203,18 +203,18 @@ returns _null_.
 a|[.breakable]`void shutdown() throws BootstrapException`
 |Stops and shuts down the Payara Micro instance.
 
-|=======================================================================
+|===
 
 [#payaramicroruntime.class-methods-1]
 ==== `PayaraMicroRuntime.class` Methods
 
 [cols=",",options="header",]
-|=======================================================================
+|===
 |Method |Description
 a|[.breakable]`void shutdown() throws BootstrapException`
 |Stops and shuts down the Payara Micro instance.
 
-|=======================================================================
+|===
 
 [#cdi-methods]
 === CDI Methods
@@ -222,7 +222,7 @@ a|[.breakable]`void shutdown() throws BootstrapException`
 These methods are used for firing CDI Events across running instances.
 
 [cols=",",options="header",]
-|=======================================================================
+|===
 |Method |Description
 a|[.breakable]`void addCDIEventListener(CDIEventListener listener)`
 |Adds a CDI Event Listener.
@@ -235,7 +235,7 @@ a|[.breakable]`void removeClusterListener(PayaraClusterListener listener)`
 a|[.breakable]`void publishCDIEvent(PayaraClusteredCDIEvent event)`
 |Publishes a CDI Event.
 
-|=======================================================================
+|===
 
 [#run-methods]
 === Run Methods
@@ -244,7 +244,7 @@ These methods are used for running `asadmin` commands or `Callable`
 objects on bootstrapped instances.
 
 [cols=",",options="header",]
-|=======================================================================
+|===
 |Method |Description
 a|[.breakable]`Map<InstanceDescriptor, Future<ClusterCommandResult>> run (String command, String... args )`
 |Runs an asadmin command on all members of a Payara Micro Cluster.
@@ -255,7 +255,7 @@ a|[.breakable]`<T extends Serializable> Map<InstanceDescriptor, Future<T>> run (
 a|[.breakable]`<T extends Serializable> Map<InstanceDescriptor, Future<T>> run (Collection<InstanceDescriptor> members, Callable<T> callable)`
 |Runs a Callable object on specified members of a Payara Micro Cluster.
 
-|=======================================================================
+|===
 
 [#get-methods]
 === Get Methods
@@ -265,7 +265,7 @@ For information on the `Get` methods of a non-bootstrapped instance, see the
 <<Configuration Methods>> section.
 
 [cols=",",options="header",]
-|=======================================================================
+|===
 |Method |Description
 a|[.breakable]`Collection<InstanceDescriptor> getClusteredPayaras()`
 |Returns a collection of instance descriptors for all the Payara Micros instances
@@ -277,7 +277,7 @@ a|[.breakable]`Collection<String> getDeployedApplicationNames()`
 a|[.breakable]`InstanceDescriptor getLocalDescriptor()`
 |Returns the instance descriptor of the instance the method is run on.
 
-|=======================================================================
+|===
 
 [#library-methods]
 === Library Methods
@@ -286,10 +286,10 @@ These methods are used for configuring additional libraries to the instance's
 classpath.
 
 [cols=",",options="header",]
-|=======================================================================
+|===
 |Method |Description
 |`void addLibrary(File)`
 |Adds a new library source (a JAR file or a directory with multiple JAR files)
 to be considered for the instance's classpath
 
-|=======================================================================
+|===
