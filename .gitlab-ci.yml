@@ -35,6 +35,7 @@ variables:
         PDF_BUILD_DIR: build/pdf_enterprise
         TPL_BUILD_DIR: build/tpl_enterprise
         INDEX_GROUP_LABEL: "Azul Payara"
+        PDF_FILE_NAME: "azul-payara-documentation"
         SITE_URL: https://docs.azul.com/payara
         VERSION: 7
       - DOCS_ID: payara-community
@@ -43,6 +44,7 @@ variables:
         PDF_BUILD_DIR: build/pdf_community
         TPL_BUILD_DIR: build/tpl_community
         INDEX_GROUP_LABEL: "Azul Payara Community"
+        PDF_FILE_NAME: "azul-payara-community-documentation"
         SITE_URL: https://docs.azul.com/payara-community
         VERSION: 7
 
@@ -122,9 +124,10 @@ docs_pdf:
       ruby ${TEMPLATES_DIR}/build.rb \
         -d ${MERGED} \
         -f pdf \
-        -a ca \
-        -a pdf_file_name="${DOCS_ID}-${RELEASE_ID}" \
+        -a pdf_file_name="${PDF_FILE_NAME}-${RELEASE_ID}" \
         -a RELEASE_ID=${RELEASE_ID} \
+        -a version-label="Release " \
+        -a revnumber="${RELEASE_ID}" \
         -o ${PDF_BUILD_DIR}/${VERSION}
 
       rm -rf ${MERGED}
