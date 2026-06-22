@@ -5,10 +5,10 @@ Though it is always possible for new versions to be supported, this page details
 
 == Supported Java Virtual Machines
 
-The Payara Platform currently runs on the following Java Virtual Machines:
+Azul Payara currently runs on the following Java Virtual Machines:
 
-* Azul Zulu JDK (Azul Platform Core): 21 (21.30/21.0.1+)
-* Azul Zing JDK (Azul Platform Prime): 21 (21.30/21.0.1+)
+* Azul Zulu JDK (Azul Core): 21 (21.30/21.0.1+)
+* Azul Zing JDK (Azul Prime): 21 (21.30/21.0.1+)
 * Oracle JDK: 21 (21.0.1+)
 * Amazon Corretto: 21 (21.0.1+)
 * Adopt Open JDK: 21 (21.0.1+)
@@ -43,28 +43,30 @@ In general, any Payara Platform distribution runs on any system supported by at 
 Azul Payara integrates with various other services that complement
 your Java deployment experience on the platform.
 
-=== Azul Platform
+=== Azul
 
-Payara’s partnership with Azul brings Azul Platform Core and Azul Platform Prime to
+Payara’s partnership with Azul brings Azul Core and Azul Prime to
 your application deployment.
 
-==== Azul Platform Core
-Azul Platform Core is designed for enterprise, distribution (ISV), and embedded (OEM)
-use cases. It provides certified OpenJDK builds, Azul Zulu Builds of OpenJDK (Azul Zulu),
+==== Azul Core
+
+Azul Core is designed for enterprise, distribution (ISV), and embedded (OEM)
+use cases. Azul Core provides certified OpenJDK builds, Azul Zulu Builds of OpenJDK (Azul Zulu),
 with tight security and the cost efficiencies you need to run today’s business–critical,
 Java-based services. These builds are free to use and a drop-in replacement for any
 other OpenJDK distribution.
 
 Key advantages include:
 
-* *High Trust*: Chosen by leading global brands, Azul Platform Core offers engineering support and 100% open-source builds that are Java SE compliant and TCK verified.
-* *High Value*: Azul Platform Core is a one-to-one replacement for Oracle Java SE with the most architectures, package types, and configurations options compared to other OpenJDK providers.
-* *High Security*: Azul Platform Core delivers quarterly stabilized security updates for rapid deployment into production, backed by an industry-leading support SLA.
+* *High Trust*: Chosen by leading global brands, Azul Core offers engineering support and 100% open-source builds that are Java SE compliant and TCK verified.
+* *High Value*: Azul Core is a one-to-one replacement for Oracle Java SE with the most architectures, package types, and configurations options compared to other OpenJDK providers.
+* *High Security*: Azul Core delivers quarterly stabilized security updates for rapid deployment into production, backed by an industry-leading support SLA.
 
-Read more about Azul Platform Core and Azul Zulu JDK here: https://docs.azul.com/core/
+Read more about Azul Core and Azul Zulu JDK here: https://docs.azul.com/core/[Azul Core Documentation^]
 
-==== Azul Platform Prime
-Azul Platform Prime is a high-performance Java platform that delivers up to 37% faster
+==== Azul Prime
+
+Azul Prime is a high-performance Java platform that delivers up to 37% faster
 performance compared to other OpenJDK distributions. At its core is Azul Zing, an
 enhanced build of OpenJDK that serves as the actual JDK running your applications.
 The platform requires no code changes or recompilation, making integration
@@ -88,17 +90,17 @@ enables 2-5X more transaction processing without pauses, eliminating the
 application startup and time to peak performance by reusing profiling data,
 solving traditional Java warm-up issues and allowing applications to start fast
 and stay fast.
-* *Optimizer Hub*: This optional Azul Platform Prime component provides
+* *Optimizer Hub*: This optional Azul Prime component provides
 centralized JIT compilation and intelligent curation of optimization profiles,
 enabling fleet-wide collaboration where multiple Azul Zing JVMs share
 optimizations and learnings for improved cloud scale, elasticity, and cost
 efficiencies.
 
-Azul Platform Prime requires opt-in during contract negotiations with sales. Sales will
+Azul Prime requires opt-in during contract negotiations with sales. Sales will
 acquire a subscription based on vCPU cores, with annual billing directly from Azul.
 Customers receive an installation wizard with the JVM enabled. For post-installation
 enablement, contact sales - the service team will provide two commands to activate it
 on your existing installation.
 
-Read more about Azul Platform Prime and Azul Zing JDK here:
-https://docs.azul.com/prime/
+Read more about Azul Prime and Azul Zing JDK here:
+https://docs.azul.com/prime/[Azul Prime Documentation^]

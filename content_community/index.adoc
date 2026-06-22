@@ -32,7 +32,7 @@ a| link:{enterpriseDocsPageRootUrl}Technical%20Documentation/Payara%20Server%20D
 
 |===
 
-=== Are You Using the Payara Platform for Mission Critical Production Environments?
+=== Are You Using Azul Payara for Mission Critical Production Environments?
 
 Payara Server Enterprise is optimized for mission-critical production systems in any environment: on premise, in the cloud, or hybrid. Payara Server is aggressively compatible with the ecosystem components you’re already using, provides broad integration with cloud vendors, and support for Docker and Kubernetes. Development in collaboration with an industry-leading DevOps team and the global community ensures Payara Server Enterprise is the best option for production Jakarta EE applications today and for the future.
 
