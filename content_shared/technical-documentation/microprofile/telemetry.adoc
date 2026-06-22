@@ -1,10 +1,10 @@
 = Eclipse Microprofile Telemetry
 
-Payara Platform {release-id} provides MicroProfile Telemetry  {mpTelemetryVersion}.
+Azul Payara {release-id} provides MicroProfile Telemetry  {mpTelemetryVersion}.
 
 The aim of the spec is to adopt https://opentelemetry.io[OpenTelemetry^] into MicroProfile applications, so they can benefit from distributed tracing.
 
-OpenTelemetry thus becomes the primary observability API in Payara Platform.
+OpenTelemetry thus becomes the primary observability API in Azul Payara.
 
 OpenTelemetry defines more types of signals.
 As of version {release-id} and in line with MicroProfile spec, support is only provided for Tracing aspects for the API.

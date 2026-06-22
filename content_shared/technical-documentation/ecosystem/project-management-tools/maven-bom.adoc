@@ -1,10 +1,10 @@
 = Maven Bill of Materials Artifact
 :ordinal: 1
 
-The Payara Platform consists of many artifacts and it depends on lots of APIs as well as their implementations. Having matching versions of these dependencies will prevent classloading issues at runtime. To this effect, the Payara Platform's Bill Of Materials (BOM) artifact collects all of these versions for the following categories:
+Azul Payara consists of many artifacts and it depends on lots of APIs as well as their implementations. Having matching versions of these dependencies will prevent classloading issues at runtime. To this effect, Azul Payara's Bill Of Materials (BOM) artifact collects all of these versions for the following categories:
 
-* Payara Platform Distribution artifacts
-* Payara Platform Client libraries
+* Azul Payara Distribution artifacts
+* Azul Payara Client libraries
 * Jakarta EE, Eclipse Microprofile and OSGi APIs
 * Arquillian Container Adapters
 * Implementations and libraries included in Payara Server (see the list below)
@@ -56,7 +56,7 @@ An example application utilizing the BOM can be seen in repository https://githu
 The following is a summary of all dependencies included in the BOM, grouped by category.
 
 [#payara-distributions]
-=== Payara Platform Distributions
+=== Azul Payara Distributions
 
 Distribution artifacts do not define a Maven scope and are therefore imported in `compile` scope.
 
@@ -181,7 +181,7 @@ a| Also available are `org.cmpn`, `osgi.annotation`, `org.osgi.dto`, and `osgi.e
 [#test-and-other-tools]
 === Test Frameworks and Other Tools
 
-Arquillian is the recommended way to run integration tests written for Payara Server. Payara Platform provides multiple connectors fitting the deployment scenarios. These artifacts are declared in scope `test`.
+Arquillian is the recommended way to run integration tests written for Payara Server. Azul Payara provides multiple connectors fitting the deployment scenarios. These artifacts are declared in scope `test`.
 
 Payara Server includes the H2 database, so their matching versions are also declared, but in their default scope.
 

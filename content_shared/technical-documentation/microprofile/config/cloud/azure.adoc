@@ -45,7 +45,7 @@ image:microprofile/config/cloud/azure/API-permissions.png[alt="API Permissions",
 [#adding-credentials]
 == Adding Credentials
 
-Credentials allow your application to authenticate as itself. Azure supports two options as credentials: client secret (a string) and certificate (public key). Currently, Payara Platform only supports certificate as they provide a higher level of assurance than client secrets.
+Credentials allow your application to authenticate as itself. Azure supports two options as credentials: client secret (a string) and certificate (public key). Currently, Azul Payara only supports certificate as they provide a higher level of assurance than client secrets.
 
 You can upload your certificate for authentication using the following steps:
 

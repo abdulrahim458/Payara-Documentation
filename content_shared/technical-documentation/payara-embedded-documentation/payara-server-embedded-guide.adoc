@@ -726,7 +726,7 @@ See xref:setting-the-class-path[Setting the Class Path] and section 17.2 of the 
 
 . Configure any required resources.
 +
-TIP: The `jdbc/__default` H2 database is preconfigured in all distributions of the Payara Platform.
+TIP: The `jdbc/__default` H2 database is preconfigured in all distributions of Azul Payara.
 +
 If your embeddable EJB application uses Java Persistence, you do not need to specify a JDBC resource.
 +

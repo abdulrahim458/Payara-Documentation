@@ -1,6 +1,6 @@
 = Eclipse Microprofile Openapi API
 
-The Payara Platform {release-id} provides MicroProfile OpenAPI {mpOpenAPIVersion}
+Azul Payara {release-id} provides MicroProfile OpenAPI {mpOpenAPIVersion}
 
 [#background]
 == Background
@@ -106,7 +106,7 @@ mp.openapi.schema.java.util.Date = { \
 
 |===
 
-In addition to the standard properties, the following properties have been added as extensions within the Payara Platform:
+In addition to the standard properties, the following properties have been added as extensions within Azul Payara:
 
 [cols="2,3", options="header"]
 |===
@@ -225,7 +225,7 @@ components: {}
 
 When more than one application is deployed, a merge is done in the OpenAPI document. The resulting document will contain all application and path definitions present. To improve the its readability, an `endpoints` attribute which lists all deployed endpoints grouped by their application context roots has been added to the document.
 
-NOTE: The `endpoints` attribute is an proprietary Payara Platform extension and it's not portable.
+NOTE: The `endpoints` attribute is an proprietary Azul Payara extension and it's not portable.
 
 * *The following example shows an OpenAPI document generated when 2 different applications are deployed*:
 [source, yml]

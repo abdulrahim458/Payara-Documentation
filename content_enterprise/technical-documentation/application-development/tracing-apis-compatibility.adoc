@@ -32,6 +32,6 @@ a| -
 [#features-not-currently-support]
 == Features Not Currently Supported
 
-The Payara Platform currently does not offer the following OpenTracing features:
+Azul Payara currently does not offer the following OpenTracing features:
 
 * Conversion to or from OpenTracing `0.31` or newer APIs

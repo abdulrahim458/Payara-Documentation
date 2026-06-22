@@ -1,12 +1,12 @@
 = Building Payara Tools Netbeans IDE Plugin
 
-As Apache NetBeans IDE provides out-of-the-box support for Payara Platform, the source code for the Payara Platform tools is contained within the https://github.com/apache/netbeans[NetBeans Code Repository.^]
+As Apache NetBeans IDE provides out-of-the-box support for Azul Payara, the source code for the Azul Payara tools is contained within the https://github.com/apache/netbeans[NetBeans Code Repository.^]
 
 Full, up-to-date build instructions for the Apache NetBeans IDE can be read on the https://github.com/apache/netbeans/tree/master#apache-netbeans[README file in the Apache NetBeans IDE repository^]
 
 [#building-netbeans-extension-prequisites]
 == Prerequisites
-Before building the Apache NetBeans IDE and subsequently the Payara Platform Tools for Apache NetBeans IDE, you will need to configure your local environment. Subsequent builds will not require these steps.
+Before building the Apache NetBeans IDE and subsequently the Azul Payara Tools for Apache NetBeans IDE, you will need to configure your local environment. Subsequent builds will not require these steps.
 
 * *Clone the Apache NetBeans Repository*: You must first clone the repository where the plugin source code is stored. https://github.com/apache/netbeans[Apache NetBeans Code Repository^]
 * *Install Apache Ant*: Apache Ant is the build tool for the Apache NetBeans IDE and must be configured locally. https://ant.apache.org/manual/install.html[Install Apache Ant^]

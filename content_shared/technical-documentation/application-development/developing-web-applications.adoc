@@ -1,7 +1,7 @@
 = Developing Web Applications
 :ordinal: 7
 
-This chapter describes how web applications are supported in the Payara Platform.
+This chapter describes how web applications are supported in Azul Payara.
 
 For general information about web applications, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#the-web-tier[The Web Tier^]" in The Jakarta EE Tutorial.
 
@@ -10,7 +10,7 @@ For general information about web applications, see "https://eclipse-ee4j.github
 
 Both Payara Server and Payara Micro supports the Jakarta Servlet specification. For information about using the Jakarta Servlet API, see the specification at https://jakarta.ee/specifications/servlet/.
 
-This section describes how to create effective servlets to control application interactions running on Payara Server or Micro, including standard-based servlets. In addition, this section describes additional features introduced in the Payara Platform.
+This section describes how to create effective servlets to control application interactions running on Payara Server or Micro, including standard-based servlets. In addition, this section describes additional features introduced in Azul Payara.
 
 [#caching-servlet-results]
 === Caching Servlet Results
@@ -33,7 +33,7 @@ For information about JSP caching, see xref:#jsp-caching[JSP Caching].
 [#caching-features]
 ==== Caching Features
 
-The Payara Platform has the following web application response caching capabilities:
+Azul Payara has the following web application response caching capabilities:
 
 * Caching is configurable based on the servlet name or the URI.
 * When caching is based on the URI, this includes user specified parameters in the query string.
@@ -494,7 +494,7 @@ correctly rolled back or committed.
 
 A session manager automatically creates new session objects whenever a new session starts. In some circumstances, clients do not join the session, for example, if the session manager uses cookies and the client does not accept cookies.
 
-The Payara Platform offers these session management options, determined by the `session-manager` element's `persistence-type` attribute in the `glassfish-web.xml`/`payara-web.xml` file:
+Azul Payara offers these session management options, determined by the `session-manager` element's `persistence-type` attribute in the `glassfish-web.xml`/`payara-web.xml` file:
 
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
@@ -603,7 +603,7 @@ To accomplish this scenario, a Comet application establishes a long-lived HTTP c
 
 A limitation of the Comet technique is that you must use it with a web server that supports non-blocking connections to avoid poor performance. Non-blocking connections are those that do not need to allocate one thread for each request. If the web server were to use blocking connections then it might end up holding many thousands of threads, thereby hindering its scalability.
 
-The Payara Platform includes the Grizzly HTTP Engine, which enables asynchronous request processing (ARP) by avoiding blocking connections. Grizzly's ARP implementation accomplishes this by using the Java NIO API.
+Azul Payara includes the Grizzly HTTP Engine, which enables asynchronous request processing (ARP) by avoiding blocking connections. Grizzly's ARP implementation accomplishes this by using the Java NIO API.
 
 With Java NIO, Grizzly enables greater performance and scalability by avoiding the limitations experienced by traditional web servers that must run a thread for each request. Instead, Grizzly's ARP mechanism makes efficient use of a thread pool system and also keeps the state of requests so that it can keep requests alive without holding a single thread for each of them.
 
@@ -806,7 +806,7 @@ Select _Logger Settings_ under the relevant configuration, or select the _Instan
 [#catalina-specific-features]
 === Catalina Specific Features
 
-IMPORTANT: *Catalina* is the internal implementation of the Servlet implementation used in the Payara Platform, originated from Apache Tomcat's own implementation. +
+IMPORTANT: *Catalina* is the internal implementation of the Servlet implementation used in Azul Payara, originated from Apache Tomcat's own implementation. +
 Catalina will be replaced in future releases and as such the specifics documented here may change or be completely rewritten.
 
 [#configuring-valves-and-catalina-listeners]
@@ -866,7 +866,7 @@ To define a `context.xml` file for a specific web application, place the file in
 
 For more information about virtual server properties, see xref:#virtual-server-properties[Virtual Server Properties]. For more information about the `context.xml` file, see http://tomcat.apache.org/tomcat-5.5-doc/config/context.html[The Context Container^].
 
-NOTE: Not all context definitions are supported by the Payara Platform.
+NOTE: Not all context definitions are supported by Azul Payara.
 
 [#enabling-webdav]
 ==== Enabling Webdav

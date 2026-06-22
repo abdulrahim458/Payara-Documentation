@@ -1,6 +1,6 @@
 = Eclipse Microprofile Opentracing
 
-Payara Platform {release-id} provides MicroProfile OpenTracing {mpOpenTracingVersion}
+Azul Payara {release-id} provides MicroProfile OpenTracing {mpOpenTracingVersion}
 
 [#background]
 == Background
@@ -18,14 +18,14 @@ To achieve full compatibility in naming the spans with the spec a span conventio
 [#text-and-binary-carriers]
 == Text and Binary Carriers Support
 
-The Payara Platform implementation of the `io.opentracing.Tracer` interface supports the following carriers:
+The Azul Payara implementation of the `io.opentracing.Tracer` interface supports the following carriers:
 
 * `TextMap` carriers with `HTTP_HEADERS` and `TEXT_MAP` formats
 
 [#jax-ws-support]
 == JAX-WS Support
 
-The Payara Platform's MicroProfile implementation supports tracing of requests that are handled by SOAP Web Services implemented via the JAX-WS API. Since JAX-WS is only supported on Payara Server Full Profile, this support is not covered on Payara Micro.
+Azul Payara's MicroProfile implementation supports tracing of requests that are handled by SOAP Web Services implemented via the JAX-WS API. Since JAX-WS is only supported on Payara Server Full Profile, this support is not covered on Payara Micro.
 
 [#opentracing-configuration]
 == Opentracing Configuration
@@ -45,7 +45,7 @@ All valid values for the property are documented in xref:opentelemetry-and-opent
 [#alternative-implementation]
 == Using Alternate Opentracing Implementations
 
-Currently, it is not possible to use other OpenTracing implementations in the Payara Platform.
+Currently, it is not possible to use other OpenTracing implementations in Azul Payara.
 
 It is however possible to deploy and configure other OpenTelemetry exporters (i.e. Zipkin) into the server or ship them with application.
 

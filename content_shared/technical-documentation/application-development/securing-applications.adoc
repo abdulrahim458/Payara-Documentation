@@ -805,7 +805,7 @@ steps.
 
 As in the example discussed in xref:#using-a-signature-to-enable-message-protection-for-all-methods[Using a Signature to Enable Message Protection for All Methods], to enable message protection for a specific method, update the `message-security-binding` element for the EJB web service endpoint in the application's `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` file.
 
-Add the `request-protection` and `response-protection` elements, which are analogous to the `request-policy` and `response-policy` elements discussed in the Payara Platform Security Guide.
+Add the `request-protection` and `response-protection` elements, which are analogous to the `request-policy` and `response-policy` elements discussed in the Azul Payara Security Guide.
 
 The administration guide includes a table listing the set and order of security operations for different request and response policy configurations.
 
@@ -1028,7 +1028,7 @@ In addition to these authentication plugin SPIs, the Jakarta Security specificat
 The `SecurityContext` interface defines methods that allow an application to access security information about a caller, authenticate a caller, and authorize a caller. These methods include `getCallerPrincipal()`, `getPrincipalsByType()`, `isCallerInRole()`, `authenticate()`, and `hasAccessToWebResource()`.
 
 [#payara-and-jakarta-security]
-=== Payara Platform and Jakarta Security
+=== Azul Payara and Jakarta Security
 
 Payara Server and Micro implement Jakarta Security to provide built-in support for the following authentication mechanisms:
 
@@ -1185,7 +1185,7 @@ Payara Server allows to circumvent this restriction so that multiple authenticat
 
 IMPORTANT: In order to use this feature, there must not be any custom `HttpAuthenticationMechanism` implementations bundled in any of the modules hosted in the EAR artifact. If this is the case, the feature will not work as intended.
 
-NOTE: This behaviour is specific to the Payara Platform and not compatible with the Jakarta Security specification.
+NOTE: This behaviour is specific to Azul Payara and not compatible with the Jakarta Security specification.
 
 [#configure-multiple-httpauth-mechanisms]
 ==== How to Configure

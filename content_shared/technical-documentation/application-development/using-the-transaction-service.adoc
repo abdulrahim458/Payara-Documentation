@@ -1,7 +1,7 @@
 = Using the Transaction Service
 :ordinal: 17
 
-The Jakarta EE platform provides several abstractions that simplify development of dependable transaction processing for applications. This chapter discusses Jakarta EE transactions and transaction support in the Payara Platform.
+The Jakarta EE platform provides several abstractions that simplify development of dependable transaction processing for applications. This chapter discusses Jakarta EE transactions and transaction support in Azul Payara.
 
 For more information about the Jakarta Transactions API (JTA) and Java Transaction Service (JTS), see "xref:../payara-server-documentation/general-administration/administering-transactions.adoc#administering-transactions[Administering Transactions]" in Payara Server General Administration section and in the https://jakarta.ee/specifications/transactions[Jakarta Transactions specification^].
 
@@ -98,7 +98,7 @@ You can specify a non-transactional database connection in any of these ways:
 asadmin set domain1.resources.jdbc-connection-pool.H2Pool.non-transactional-connections=true
 ----
 
-* Use the Payara Platform's `DataSource` implementation, which provides a `getNonTxConnection` method. This method retrieves a JDBC connection that is not in the scope of any transaction. There are two variants:
+* Use Azul Payara's `DataSource` implementation, which provides a `getNonTxConnection` method. This method retrieves a JDBC connection that is not in the scope of any transaction. There are two variants:
 +
 [source,java]
 ----
@@ -153,11 +153,11 @@ There are three commit-time options:
 +
 In this case, the container does not have to synchronize the instance's state from the persistent storage at the beginning of the next transaction.
 +
-IMPORTANT: Commit option A is not supported in Payara Platform's EJB implementation.
+IMPORTANT: Commit option A is not supported in Azul Payara's EJB implementation.
 
 **Option B**: The container caches a ready instance between transactions, but the container does not ensure that the instance has exclusive access to the state of the object in persistent storage.
 +
-NOTE: This is the default commit option set in the Payara Platform.
+NOTE: This is the default commit option set in Azul Payara.
 +
 In this case, the container must synchronize the instance's state by invoking the `ejbLoad` lifecycle method from persistent storage at the beginning of the next transaction.
 
@@ -222,7 +222,7 @@ If possible, you should use the `jakarta.transaction.TransactionSynchronizationR
 For details, see the https://jakarta.ee/specifications/transactions/2.0/apidocs/jakarta/transaction/transactionsynchronizationregistry[`TransactionSynchronizationRegistryInterface`^] API documentation and the
 https://jakarta.ee/specifications/transactions[Jakarta Transactions specification^].
 
-If accessing the `jakarta.transaction.TransactionManager` implementation is absolutely necessary, you can look up the Payara Platform's implementation of this interface using the JNDI name `java:appserver/TransactionManager`.
+If accessing the `jakarta.transaction.TransactionManager` implementation is absolutely necessary, you can look up Azul Payara's implementation of this interface using the JNDI name `java:appserver/TransactionManager`.
 
 CAUTION: This lookup should not be used by application code under any circumstances.
 

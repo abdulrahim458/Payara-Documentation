@@ -154,7 +154,7 @@ A large portion of our work is prompted by the actions of the community. If you 
 
 If you find a bug within Payara, please post it as a GitHub issue. GitHub is our main repository for community found issues with Payara and our support team frequently monitor it for new issues. As with submitting issues, a concise title which clearly explains the issue combined with a comment explaining what the found issue is and either how it arose and a stack trace of the issue.
 
-Bug reports should always contain a simple to follow scenario how to reproduce the bug on the latest release of Payara Community Edition. A reproducer should follow the SSCCE rules: http://www.sscce.org/
+Bug reports should always contain a simple to follow scenario how to reproduce the bug on the latest release of Payara Community. A reproducer should follow the SSCCE rules: http://www.sscce.org/
 
 [#responses]
 === Responses

@@ -1,11 +1,11 @@
 = Supported Platforms
 :ordinal: 2
 
-Though it is always possible for new versions to be supported, this page details the JVMs currently supported by the Payara Platform (both Payara Server and Payara Micro).
+Though it is always possible for new versions to be supported, this page details the JVMs currently supported by Azul Payara (both Payara Server and Payara Micro).
 
 == Supported Java Virtual Machines
 
-The Payara Platform currently runs the following Java Virtual Machines:
+Azul Payara currently runs the following Java Virtual Machines:
 
 * Azul Zulu JDK (Azul Platform Core): 21 (21.30/21.0.1+)
 * Azul Zing JDK (Azul Platform Prime): 21 (21.30/21.0.1+)
@@ -15,11 +15,11 @@ The Payara Platform currently runs the following Java Virtual Machines:
 * Adopt Open JDK with Eclipse Open J9: 21 (21.0.1+)
 * Any other JVM based on OpenJDK 21.0.1+
 
-The Payara Platform runs on the `x64` and `arm64` variants of the above JVMs.
+Azul Payara runs on the `x64` and `arm64` variants of the above JVMs.
 
 == Supported Operating Systems
 
-The Payara Platform currently runs on the following Operating Systems in all the versions listed below and all their newer versions:
+Azul Payara currently runs on the following Operating Systems in all the versions listed below and all their newer versions:
 
 * Windows
 ** Windows 7+
@@ -36,7 +36,7 @@ The Payara Platform currently runs on the following Operating Systems in all the
 ** MacOS(OSX) 10.10.5 (Yosemite)+
 ** IBM AIX 7.1+
 
-In general, any Payara Platform distribution runs on any system supported by at least one of the JVMs it runs on.
+In general, any Azul Payara distribution runs on any system supported by at least one of the JVMs it runs on.
 
 Note (1): Payara will support Enterprise products when deployed in RHEL-compatible environments that are supported by SUSE through its Multi-Linux Support (MLS) offering
 

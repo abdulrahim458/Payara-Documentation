@@ -1,4 +1,4 @@
-= Metrics Configuration in Payara Platform
+= Metrics Configuration in Azul Payara
 
 On Payara Server, the MicroProfile Metrics service can be configured by using Admin Console or Asadmin commands.
 

@@ -31,16 +31,16 @@ The documentation of the Payara Server Embedded distribution, which can be used 
 
 === xref:technical-documentation/application-development/index.adoc[Application Development]
 
-Documentation on good practices and specific use cases of how to use the Jakarta EE APIs to develop applications that can run effectively on the Payara Platform.
+Documentation on good practices and specific use cases of how to use the Jakarta EE APIs to develop applications that can run effectively on Azul Payara.
 
 === xref:technical-documentation/public-api/index.adoc[Public API]
 
-Documentation on how to use proprietary software components from the Payara Platform Public API
+Documentation on how to use proprietary software components from the Azul Payara Public API
 
 === xref:technical-documentation/microprofile/index.adoc[MicroProfile]
 
-Documentation on specific details and proprietary features of the implementation of the Eclipse MicroProfile APIs on the Payara Platform.
+Documentation on specific details and proprietary features of the implementation of the Eclipse MicroProfile APIs on Azul Payara.
 
 === xref:technical-documentation/ecosystem/index.adoc[Ecosystem]
 
-Documentation on all Ecosystem tools and plugins available to the Payara Platform to simplify various aspects of application development, deployment and runtime management.
+Documentation on all Ecosystem tools and plugins available to Azul Payara to simplify various aspects of application development, deployment and runtime management.

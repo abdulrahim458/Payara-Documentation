@@ -1,7 +1,7 @@
 = Developing CDI Components
 :ordinal: 4
 
-This section lists additional available enhancements to the CDI implementation shipped in the Payara Platform.
+This section lists additional available enhancements to the CDI implementation shipped in Azul Payara.
 
 [#concurrent-cdi-bean-loading]
 == Concurrent CDI Bean Loading

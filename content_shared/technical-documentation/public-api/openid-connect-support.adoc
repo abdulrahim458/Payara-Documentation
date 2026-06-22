@@ -686,7 +686,7 @@ public class Auth0BearerIdentityStore extends BearerGroupsIdentityStore {
 }
 ----
 
-TIP: The Payara Platform also provides similar functionality by way of the MicroProfile JWT Authentication specification, which is limited only to securing JAX-RS resources. On the other hand, the OpenID Connect Bearer Authentication and Authorization feature is better aligned with the OpenID Connect support in Payara Platform and can also be used to secure other web resources like Jakarta Servlets, for example.
+TIP: Azul Payara also provides similar functionality by way of the MicroProfile JWT Authentication specification, which is limited only to securing JAX-RS resources. On the other hand, the OpenID Connect Bearer Authentication and Authorization feature is better aligned with the OpenID Connect support in Azul Payara and can also be used to secure other web resources like Jakarta Servlets, for example.
 
 [#specific-providers]
 == Integration with Specific Providers

@@ -1,6 +1,6 @@
 = Grpc
 
-WARNING: The gRPC extension has not yet been updated to support Payara Platform {pageSiteEditionCapitalised} {payaraVersionMajor}
+WARNING: The gRPC extension has not yet been updated to support Azul Payara {pageSiteEditionCapitalised} {payaraVersionMajor}
 
 [#what-is-grpc]
 == What Is Grpc?

@@ -1,6 +1,6 @@
 = Custom Vendor Metrics
 
-The Payara Platform supports exporting the JMX Beans and HealthCheck stats to the Vendor Metrics.
+Azul Payara supports exporting the JMX Beans and HealthCheck stats to the Vendor Metrics.
 
 [#JMX-MBeans]
 == JMX Mbeans

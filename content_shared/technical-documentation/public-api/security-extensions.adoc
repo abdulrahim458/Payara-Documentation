@@ -5,7 +5,7 @@ This section documents available extensions for custom authentication mechanisms
 [#custom-authentication-mechanisms]
 == Custom Authentication Mechanisms
 
-The Payara Platform Public API offers the following custom authentication mechanisms for use cases that aren't covered in the Jakarta EE Security API.
+The Azul Payara Public API offers the following custom authentication mechanisms for use cases that aren't covered in the Jakarta EE Security API.
 
 [#certificate-authentication-mechanism]
 === Client Certificate Authentication Mechanism
@@ -44,7 +44,7 @@ By default, the Jakarta EE Security API only instructs containers to implement i
 * LDAP directories through the `@LdapIdentityStoreDefinition` annotation.
 * Relational databases through the `@DatabaseIdentityStoreDefinition` annotation.
 
-The following annotations serve to provide additional identity store configurations, by allowing the mapping an existing Payara Platform security realm
+The following annotations serve to provide additional identity store configurations, by allowing the mapping an existing Azul Payara security realm
 
 [#realm-identity-stores]
 === Basic Realm Identity Store

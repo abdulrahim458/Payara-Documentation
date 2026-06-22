@@ -1,6 +1,6 @@
 = Payara Schemas
 
-Schemas for the Payara Platform.
+Schemas for Azul Payara.
 
 ** link:{payaraWebDtd}[DTD for payara-web.xml]
 ** link:{payaraResourcesDtd}[DTD for payara-resources.xml]

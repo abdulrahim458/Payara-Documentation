@@ -1,6 +1,6 @@
-= Payara Platform Documentation Repository
+= Azul Payara Documentation Repository
 
-Official technical documentation repository of the Payara Platform. All documentation material is written in AsciiDoc format.
+Official technical documentation repository of Azul Payara. All documentation material is written in AsciiDoc format.
 
 This repository is used to generate all the HTML pages that are published for the following sites:
 

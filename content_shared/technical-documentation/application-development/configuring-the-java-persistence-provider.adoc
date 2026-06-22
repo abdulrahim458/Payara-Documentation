@@ -3,12 +3,12 @@
 
 This chapter describes EclipseLink, the default persistence provider in Payara Server, and introduces how to use it.
 
-This chapter also tells how to set the default persistence provider in Payara Server and how to use persistence-related features specific to the Payara Platform such as automatic schema generation.
+This chapter also tells how to set the default persistence provider in Payara Server and how to use persistence-related features specific to Azul Payara such as automatic schema generation.
 
 [#eclipselink-overview]
 == Eclipselink Overview
 
-EclipseLink is the default persistence provider in the Payara Platform. It is a comprehensive standards-based object-persistence and object-transformation framework that provides APIs, schemas, and run-time services for the persistence layer of an application.
+EclipseLink is the default persistence provider in Azul Payara. It is a comprehensive standards-based object-persistence and object-transformation framework that provides APIs, schemas, and run-time services for the persistence layer of an application.
 
 EclipseLink implements the following specifications, plus value-added extensions:
 

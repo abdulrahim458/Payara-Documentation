@@ -1,10 +1,10 @@
 = Opentelemetry and Opentracing Support
 
-The Payara Platform natively supports OpenTelemetry APIs as well as export of traces over the OTLP protocol. Natively in this context means, that deployment of an OpenTelemetry Agent is not necessary and may lead to duplicate traces.
+Azul Payara natively supports OpenTelemetry APIs as well as export of traces over the OTLP protocol. Natively in this context means, that deployment of an OpenTelemetry Agent is not necessary and may lead to duplicate traces.
 
-All OpenTracing support in the Payara Platform is done by means of the https://opentelemetry.io/docs/migration/opentracing[OpenTracing Compatibility Layer^].
+All OpenTracing support in Azul Payara is done by means of the https://opentelemetry.io/docs/migration/opentracing[OpenTracing Compatibility Layer^].
 
-The Payara Platform satisfies requirements of both link:{mpOpenTracingSpecUrl}[MicroProfile OpenTracing {mpOpenTracingVersion}] and link:{mpTelemetrySpecUrl}[MicroProfile Telemetry Tracing {mpTelemetryVersion}] provided appropriate <<span-convention-settings>> are applied.
+Azul Payara satisfies requirements of both link:{mpOpenTracingSpecUrl}[MicroProfile OpenTracing {mpOpenTracingVersion}] and link:{mpTelemetrySpecUrl}[MicroProfile Telemetry Tracing {mpTelemetryVersion}] provided appropriate <<span-convention-settings>> are applied.
 
 IMPORTANT: OpenTelemetry implementation only covers the tracing aspect of OpenTelemetry, no metrics or logs are provided by default. +
 Manual instrumentation is needed to enable these.
@@ -115,9 +115,9 @@ To fine-tune spans and have better control about their boundaries you can use di
 [#tracing-dependencies]
 === Dependencies
 
-The appropriate versions of APIs are provided by xref:../ecosystem/project-management-tools/maven-bom.adoc[Payara BOM artifact] matching the version of the Payara Platform distribution you are using.
+The appropriate versions of APIs are provided by xref:../ecosystem/project-management-tools/maven-bom.adoc[Payara BOM artifact] matching the version of the Azul Payara distribution you are using.
 
-Payara Platform provides the following APIs, and it is advised to mark them as `provided` dependencies in your application and don't package them with it:
+Azul Payara provides the following APIs, and it is advised to mark them as `provided` dependencies in your application and don't package them with it:
 
 * `io.opentelemetry:opentelemetry-sdk-extension-autoconfigure`
 * `io.opentelemetry:opentelemetry-sdk`
@@ -194,7 +194,7 @@ public class TracedComponent {
 [#using-additional-components]
 == Using Additional Components
 
-If your application requires OpenTracing components that are not shipped with the Payara Platform, it is possible to either put them in common libraries, or ship them with an application. Extension components can be even coded directly in the application code.
+If your application requires OpenTracing components that are not shipped with Azul Payara, it is possible to either put them in common libraries, or ship them with an application. Extension components can be even coded directly in the application code.
 
 [#provider-components-in-lib-directory]
 === Provider Components in Library Directory

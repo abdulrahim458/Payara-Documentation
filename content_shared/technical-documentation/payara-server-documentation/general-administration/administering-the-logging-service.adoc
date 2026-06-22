@@ -1377,7 +1377,7 @@ asadmin set-log-attributes fish.payara.enterprise.server.logging.PayaraNotificat
 [#change-notification-logging-format]
 ==== Change the Logging Format
 
-The **Log File Logging Format** option can be used to change the notification log entries' format. There are 3 logging formats available: `ULF`, `ODL` and `JSON`, each one represented by a specific formatter class present in the Payara Platform API.
+The **Log File Logging Format** option can be used to change the notification log entries' format. There are 3 logging formats available: `ULF`, `ODL` and `JSON`, each one represented by a specific formatter class present in the Azul Payara API.
 
 [#change-notification-logging-format-via-admin-console]
 ===== Using the Admin Console

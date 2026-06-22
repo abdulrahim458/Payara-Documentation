@@ -569,7 +569,7 @@ Information and instructions on performing most of the administration tasks from
 [[phone-home]]
 == Phone Home
 
-All Payara Platform distributions report back a limited amount of information about their specific configuration at launch time. No sensitive data about your machine or specific usage of Payara Server is sent to 0s or any member of the Payara Services team.
+All Azul Payara distributions report back a limited amount of information about their specific configuration at launch time. No sensitive data about your machine or specific usage of Payara Server is sent to 0s or any member of the Payara Services team.
 
 Gathered phone home data is sent via a `GET` request to http://www.payara.fish/phonehome
 

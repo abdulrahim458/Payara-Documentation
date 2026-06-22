@@ -1,7 +1,7 @@
 = Using Jakarta Enterprise Beans Technology
 :ordinal: 9
 
-This chapter describes how Jakarta Enterprise Beans (EJB) technology is supported in the Payara Platform.
+This chapter describes how Jakarta Enterprise Beans (EJB) technology is supported in Azul Payara.
 
 For general information about enterprise beans, see "https://eclipse-ee4j.github.io/jakartaee-tutorial/#enterprise-beans[Enterprise Beans^]" in The Jakarta EE Tutorial.
 
@@ -59,14 +59,14 @@ NOTE: You can use the `--name` and `--forcename` deployment options to override 
 [#value-added-features]
 == Value Added Features
 
-The Payara Platform provides a number of value additions that relate to EJB development. References to more in-depth material are included.
+Azul Payara provides a number of value additions that relate to EJB development. References to more in-depth material are included.
 
 [#read-only-beans]
 === Read-Only Beans
 
 Another feature that Payara Server provides is the read-only bean, an EJB 2.1 entity bean that is never modified by an EJB client. Read-only beans avoid database updates completely.
 
-IMPORTANT: Read-only beans are specific to the Payara Platform and are not part of the Enterprise JavaBeans Specification, v2.1. Use of this feature for an EJB 2.1 bean results in a non-portable application. +
+IMPORTANT: Read-only beans are specific to Azul Payara and are not part of the Enterprise JavaBeans Specification, v2.1. Use of this feature for an EJB 2.1 bean results in a non-portable application. +
 To make an EJB 3.0 entity read-only, use `@Column` annotations to mark its columns `insertable=false` and `updatable=false`.
 
 A read-only bean can be used to cache a database entry that is frequently accessed but rarely updated (externally by other beans).
@@ -902,7 +902,7 @@ public class MainClass{
 
 Injection of an OpenTracing tracer is not supported on Java SE clients, so you must create an instance yourself and register it to a `GlobalTracer` instance.
 
-WARNING: Manual registration of a tracer instance is only required if using a third-party tracer such as ZipKin or Jaeger - if using the built-in Payara Platform Request Tracing service the registration will automatically happen during creation of the initial context.
+WARNING: Manual registration of a tracer instance is only required if using a third-party tracer such as ZipKin or Jaeger - if using the built-in Azul Payara Request Tracing service the registration will automatically happen during creation of the initial context.
 
 NOTE: The built-in Payara Request Tracing service does not support tracing of Java SE clients (though will still propagate the active span context to the server)
 

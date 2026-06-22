@@ -19,7 +19,7 @@ IMPORTANT: If you are using Maven or Gradle as the build tool in your project, t
 *image*: vscode-extension/install-marketplace.png[Visual Studio Marketplace]
 
 [#vscode-tools]
-== Payara Platform Tools
+== Azul Payara Tools
 
 * xref:payara-server.adoc[Payara Server] - The Payara VS Code extension enables developers to easily configure Payara Server and manage applications from Visual Studio Code.
 

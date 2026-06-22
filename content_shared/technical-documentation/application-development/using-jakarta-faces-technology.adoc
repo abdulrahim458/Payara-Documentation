@@ -38,7 +38,7 @@ This section documents specific configuration settings that are not available in
 [#parallel-initialization]
 === Parallel Initialization
 
-It is possible to specify a Payara Platform specific JSF context parameter in the `web.xml` deployment descriptor, named `fish.payara.faces.enableParallelInit` to provide parallel initialization benefits to the application in question.
+It is possible to specify an Azul Payara specific JSF context parameter in the `web.xml` deployment descriptor, named `fish.payara.faces.enableParallelInit` to provide parallel initialization benefits to the application in question.
 
 [#parallel-initialization-usage]
 ==== Usage
@@ -72,12 +72,12 @@ The `fish.payara.faces.enableParallelInit` context parameter can also be combine
 
 This is an existing Mojarra-specific parameter to also enable parallel initialisation, but in a slightly earlier stage of the initialisation process.
 
-IMPORTANT: As a Payara Platform specific implementation this will use the default Platform Concurrency executor if there is one, if not it will create a single use executor with 5 threads.
+IMPORTANT: As an Azul Payara specific implementation this will use the default Platform Concurrency executor if there is one, if not it will create a single use executor with 5 threads.
 
 [#use-bundled-jsf]
 == Using an Alternative Jakarta Faces Implementation
 
-As a special case of how the classloader hierarchy can be modified (see xref:class-loaders.adoc#configuring-delegation[configuring classloading delegation]), the Payara Platform allows the use of a Jakarta Faces implementation that is bundled on a web application.
+As a special case of how the classloader hierarchy can be modified (see xref:class-loaders.adoc#configuring-delegation[configuring classloading delegation]), Azul Payara allows the use of a Jakarta Faces implementation that is bundled on a web application.
 
 This feature may be useful to switch to a different implementation than the default one included with the server.
 

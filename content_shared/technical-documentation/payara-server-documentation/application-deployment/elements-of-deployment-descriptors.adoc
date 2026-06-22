@@ -1,7 +1,7 @@
-= Elements of the Payara Platform Deployment Descriptors
+= Elements of the Azul Payara Deployment Descriptors
 :ordinal: 4
 
-This appendix describes the elements of the Payara Platform deployment descriptors.
+This appendix describes the elements of the Azul Payara deployment descriptors.
 
 [#activation-config]
 == `activation-config`
@@ -3434,7 +3434,7 @@ a| xref:elements-of-deployment-descriptors.adoc#jnlp-doc[`jnlp-doc`]
 [#jaxrs-roles-allowed-enabled]
 == `jaxrs-roles-allowed-enabled`
 
-The Payara Platform both support using the `@RolesAllowed` annotation out of the box to secure JAX-RS resources. In some cases this may clash with existing code that interprets the same annotation using custom code.
+Azul Payara both support using the `@RolesAllowed` annotation out of the box to secure JAX-RS resources. In some cases this may clash with existing code that interprets the same annotation using custom code.
 
 The out-of-the-box support of `@RolesAllowed` for JAX-RS resources can be switched off by setting the `<jaxrs-roles-allowed-enabled>` element like this:
 

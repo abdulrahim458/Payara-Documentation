@@ -60,7 +60,7 @@ ${MPCONFIG=foo}
 ${MPCONFIG=bar:default}
 -----------------------
 
-MicroProfile Configuration variables must be declared in one of the Payara Platform xref:../../microprofile/config/index.adoc#config-sources[supported configuration sources].
+MicroProfile Configuration variables must be declared in one of the Azul Payara xref:../../microprofile/config/index.adoc#config-sources[supported configuration sources].
 
 NOTE: By adding a colon (:) after the property name, you may append a default value if the variable has not been set.
 

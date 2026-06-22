@@ -29,6 +29,6 @@ There is a maven plugin built specifically for use with Payara Micro. It has goa
 [#run-payara-micro-using-netbeans]
 == Run Payara Micro Using the Netbeans IDE
 
-There is a Payara Platform tools plugin built for the Apache NetBeans IDE, specifically designed for Payara Micro to create and manage application actions (e.g., run, reload, and debug).
+There is an Azul Payara tools plugin built for the Apache NetBeans IDE, specifically designed for Payara Micro to create and manage application actions (e.g., run, reload, and debug).
 
 This plugin is fully documented in the xref:../ecosystem/ide-integration/apache-netbeans-ide/payara-micro.adoc[Payara Micro Apache NetBeans IDE] integration.

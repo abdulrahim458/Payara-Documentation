@@ -1,6 +1,6 @@
 = Overview
 
-This section describes Payara's official policy for managing Payara Platform's security vulnerabilities.
+This section describes Payara's official policy for managing Azul Payara's security vulnerabilities.
 
 [#cve-program]
 == The CVE Program
@@ -11,22 +11,22 @@ Payara will publish authoritative cybersecurity vulnerability information about 
 
 NOTE: The CVE Program is sponsored by the Cybersecurity and Infrastructure Security Agency (CISA) of the U.S. Department of Homeland Security (DHS).
 
-Developers using Payara Platform products will benefit from the collaboration, as vulnerabilities will be part of the standardized and publicly disclosed CVE List. This will result in time and cost savings for those using Payara products, as security issues can be discussed, dealt with and prevented through the use of a trusted, standardized catalogue.
+Developers using Azul Payara products will benefit from the collaboration, as vulnerabilities will be part of the standardized and publicly disclosed CVE List. This will result in time and cost savings for those using Payara products, as security issues can be discussed, dealt with and prevented through the use of a trusted, standardized catalogue.
 
 In general, Payara follows the CVE Program's link:https://www.cve.org/ResourcesSupport/AllResources/CNARules[CNA Operational rules^] to make decisions on reported vulnerabilities and CVE record management.
 
 [#general-guidelines]
 == General Guidelines
 
-* Payara is committed to fixing any vulnerabilities and exploits identified in any Payara Platform products and distributions.
+* Payara is committed to fixing any vulnerabilities and exploits identified in any Azul Payara products and distributions.
 
 * Any reported vulnerabilities will be fixed with celerity as soon as they are reported and confirmed.
 
 * Security reports made on versions that are no longer supported will be accepted as long as they are verifiable.
 
-* Security vulnerabilities will have to be verified to affect a Payara Platform product before getting a CVE ID assigned.
+* Security vulnerabilities will have to be verified to affect an Azul Payara product before getting a CVE ID assigned.
 
-* Vulnerabilities not related to the Payara Platform will be ignored and not disclosed as CVE records. These include:
+* Vulnerabilities not related to Azul Payara will be ignored and not disclosed as CVE records. These include:
 +
 ** Operating system vulnerabilities
 ** JVM-specific vulnerabilities
@@ -40,7 +40,7 @@ In general, Payara follows the CVE Program's link:https://www.cve.org/ResourcesS
 [#third-party-components-vulnerabilities]
 === Vulnerabilities on Third-Party Components
 
-As the Payara Platform depends on third-party components of other software packages like Apache Guava, Jackson, Smack, etc. Vulnerabilities on specific versions of these components may be reported as well. Payara is committed to analysing any reported vulnerabilities and upgrading them to a patched version whether applicable.
+As Azul Payara depends on third-party components of other software packages like Apache Guava, Jackson, Smack, etc. Vulnerabilities on specific versions of these components may be reported as well. Payara is committed to analysing any reported vulnerabilities and upgrading them to a patched version whether applicable.
 
 In these cases, reports SHOULD if possible reference an existing CVE record that details the vulnerability in question.
 
@@ -49,13 +49,13 @@ In these cases, reports SHOULD if possible reference an existing CVE record that
 
 To report a vulnerability, send an email with the described flaws and vulnerabilities to mailto:security@payara.fish[security@payara.fish]. Please make sure to describe the vulnerability encountered in great detail, along with detailed steps on how to reproduce or exploit the vulnerability and environmental details like:
 
-* Payara Platform distribution (i.e, Server, Micro, Embedded, Docker Image) and version
+* Azul Payara distribution (i.e, Server, Micro, Embedded, Docker Image) and version
 * Operating System
 * JDK Version
 
 IMPORTANT: If the report is related to a <<third-party-components-vulnerabilities>>, please include the CVE ID of the vulnerability that affects the third-party component if you have access to it.
 
-TIP: To report any critical non-security bugs, raise a new issue in the official Community Edition repository issue tracker instead.
+TIP: To report any critical non-security bugs, raise a new issue in the official Azul Payara Community repository issue tracker instead.
 
 [#cve-assigment]
 === CVE ID Assignment
@@ -82,7 +82,7 @@ Once a security vulnerability is fixed and published in an official release of A
 [#cve-record-rejection]
 === CVE Record Rejection
 
-In some cases, the investigation of a vulnerability that has a CVE ID assigned may yield a result where the vulnerability in question does not warrant a fix (it cannot be reproduced, it doesn't affect the Payara Platform, is not considered as harmful as originally reported).
+In some cases, the investigation of a vulnerability that has a CVE ID assigned may yield a result where the vulnerability in question does not warrant a fix (it cannot be reproduced, it doesn't affect Azul Payara, is not considered as harmful as originally reported).
 
 In cases like this, the CVE record will be rejected along with a reason explaining why the vulnerability didn't require disclosure.
 
@@ -96,7 +96,7 @@ Payara will be open to negotiating any disputes and reconsider our position on p
 [#security-advisories]
 == Security Advisories
 
-All security reports, that correspond to either fixes to vulnerabilities that affect the Payara Platform directly or vulnerabilities to its third-party dependencies are catalogued under the xref:security-fix-list.adoc[Security Advisories] page.
+All security reports, that correspond to either fixes to vulnerabilities that affect Azul Payara directly or vulnerabilities to its third-party dependencies are catalogued under the xref:security-fix-list.adoc[Security Advisories] page.
 
 Each vulnerability entry will contain:
 

@@ -2,7 +2,7 @@
 
 There are three valid methods of fully upgrading to a newer release of Payara Enterprise. Any of the following methods would work in most circumstances:
 
-NOTE: If you are migrating from Payara Community edition to Payara Enterprise edition, you must use the backup and restore method.
+NOTE: If you are migrating from Azul Payara Community to Azul Payara, you must use the backup and restore method.
 
 . Backing up and restoring the existing configuration to a new installation.
 xref:backup-and-restore-method.adoc[Read Backup and Restore Method]

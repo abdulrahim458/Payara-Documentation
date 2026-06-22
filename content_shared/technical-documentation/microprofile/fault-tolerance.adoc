@@ -1,6 +1,6 @@
 = Eclipse Microprofile Fault Tolerance API
 
-The Payara Platform {release-id} provides MicroProfile Fault Tolerance {mpFaultToleranceVersion}
+Azul Payara {release-id} provides MicroProfile Fault Tolerance {mpFaultToleranceVersion}
 
 == Background
 
@@ -13,7 +13,7 @@ Breaking changes introduced in MicroProfile Fault Tolerance {mpFaultToleranceVer
 [#additions-to-spec]
 == Additions to the Fault Tolerance Spec
 
-In addition to the functionality https://github.com/eclipse/microprofile-fault-tolerance/blob/master/spec/src/main/asciidoc/microprofile-fault-tolerance-spec.asciidoc[detailed in the specification document^], Payara Platform has implemented additional features like:
+In addition to the functionality https://github.com/eclipse/microprofile-fault-tolerance/blob/master/spec/src/main/asciidoc/microprofile-fault-tolerance-spec.asciidoc[detailed in the specification document^], Azul Payara has implemented additional features like:
 
 [#configurable-executor-services]
 === Configurable Executor Services
@@ -25,7 +25,7 @@ The executor service is used to execute methods annotated with `@Asynchronous`, 
 [#alternative-asynchronous]
 === Alternative @Asynchronous Annotations
 
-The Payara Platform configuration property `MP_Fault_Tolerance_Alternative_Asynchronous_Annotations` can be used to specify a comma separated list of fully qualified class names of those annotations that should have the same effect as the `@Asynchronous` defined in the Fault Tolerance specification.
+The Azul Payara configuration property `MP_Fault_Tolerance_Alternative_Asynchronous_Annotations` can be used to specify a comma separated list of fully qualified class names of those annotations that should have the same effect as the `@Asynchronous` defined in the Fault Tolerance specification.
 
 These annotations do not have to be interceptor bindings.
 

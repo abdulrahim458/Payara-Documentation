@@ -10,14 +10,14 @@ The Azul Payara Edition project is released each month. Each release incorporate
 [#versioning-scheme]
 == Versioning Scheme
 
-The general format of a Payara Platform version number is:
+The general format of an Azul Payara version number is:
 
 [source,text]
 ----
 Major Version Number. Minor Version Number. Patch Version Number
 ----
 
-**Major Version** numbers start from **6** (the current major version of Payara Platform) and only increment by 1 when a new major version is released.  Fundamental changes will only be released in major Versions. There is currently no set cadence for this version change.
+**Major Version** numbers start from **6** (the current major version of Azul Payara) and only increment by 1 when a new major version is released.  Fundamental changes will only be released in major Versions. There is currently no set cadence for this version change.
 
 The change of a major version number is a product management and marketing decision.
 

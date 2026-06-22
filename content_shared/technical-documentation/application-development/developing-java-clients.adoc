@@ -19,7 +19,7 @@ NOTE: Compared to other Jakarta EE containers, the ACC is lightweight.
 
 For information about debugging application clients, see xref:debugging-applications.adoc#application-client-debugging[Application Client Debugging].
 
-IMPORTANT: Interoperability between application clients and Payara Servers running under different Payara Platform major versions is not supported. The same can be said if both server and client are running under different major Java versions.
+IMPORTANT: Interoperability between application clients and Payara Servers running under different Azul Payara major versions is not supported. The same can be said if both server and client are running under different major Java versions.
 
 [#acc-security]
 === ACC Security

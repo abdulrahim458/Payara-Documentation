@@ -1,6 +1,6 @@
 = Overview
 
-This chapter describes how to create and run Jakarta EE applications in compatible Payara Platform distributions. Topics for this guide include developer tools, security, debugging and specific features for Jakarta EE specification implementations. This document is intended for use by software developers who create, assemble, and deploy Jakarta EE applications using the Payara Platform.
+This chapter describes how to create and run Jakarta EE applications in compatible Azul Payara distributions. Topics for this guide include developer tools, security, debugging and specific features for Jakarta EE specification implementations. This document is intended for use by software developers who create, assemble, and deploy Jakarta EE applications using Azul Payara.
 
 [#related-documentation]
 == Related Documentation
@@ -11,7 +11,7 @@ The following tutorials explain how to develop Jakarta EE applications:
 
 * https://eclipse-ee4j.github.io/jakartaee-tutorial/[The Jakarta EE Tutorial^]. This comprehensive tutorial explains how to use Jakarta EE platform technologies and APIs to develop enterprise applications. This guide heavily references the contents of this tutorial to guide users in understanding the basic concepts of application development.
 
-IMPORTANT: The Jakarta EE tutorial uses Eclipse Glassfish as its Jakarta EE runtime. Most of the concepts and instructions used in the tutorial should be directly equivalent to the Payara Platform given its similarities to Eclipse Glassfish.
+IMPORTANT: The Jakarta EE tutorial uses Eclipse Glassfish as its Jakarta EE runtime. Most of the concepts and instructions used in the tutorial should be directly equivalent to Azul Payara given its similarities to Eclipse Glassfish.
 
 The Jakarta EE specifications Javadoc documentation is listed within its specification resources under each corresponding specification site at https://jakarta.ee/specifications/.
 

@@ -41,7 +41,7 @@ Instead, this classloader is designed to "trick" the server in handling delegati
 |Public API
 a|The Public API class loader makes available all classes specifically exported by the Payara Server runtime for use by deployed applications.
 
-This includes, but is not limited to, Jakarta EE API, Eclipse MicroProfile and the Payara Platform Public API.
+This includes, but is not limited to, Jakarta EE API, Eclipse MicroProfile and the Azul Payara Public API.
 
 Parents the Common class loader.
 
@@ -231,7 +231,7 @@ NOTE: For most applications, packaging the client JAR file with the calling EJB 
 [#enhanced-classloading]
 == Enhanced Classloading
 
-This sections below cover the enhanced class loading functionality provided by the Payara Platform.
+This sections below cover the enhanced class loading functionality provided by Azul Payara.
 
 [#default-class-and-library-loading]
 === Default Class and Library Loading
@@ -250,7 +250,7 @@ Unfortunately, due to the way the default class loading hierarchy works, this wi
 [#disable-classloading-delegation]
 === Disable Classloading Delegation
 
-As detailed in xref:#configuring-delegation[Configuring Delegation], it is possible to invert/disable the way that delegation works as per the requirements of the Jakarta Servlet specification. The Payara Platform introducers greater delegation disabling mechanisms, detailed in the following sections.
+As detailed in xref:#configuring-delegation[Configuring Delegation], it is possible to invert/disable the way that delegation works as per the requirements of the Jakarta Servlet specification. Azul Payara introducers greater delegation disabling mechanisms, detailed in the following sections.
 
 [#disable-classloading-delegation-globally]
 ==== Disable Classloading Delegation Globally

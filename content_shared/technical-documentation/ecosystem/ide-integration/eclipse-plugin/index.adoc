@@ -16,7 +16,7 @@ The Payara Tools plugin enables integration between Payara Server and Payara Mic
 6. Finally, you will need to restart Eclipse.
 
 [#eclipse-tools]
-== Payara Platform Tools
+== Azul Payara Tools
 
 * xref:payara-server.adoc[Payara Server] - The Payara Eclipse plugin enables developers to easily configure Payara Server and manage applications from the Eclipse IDE.
 

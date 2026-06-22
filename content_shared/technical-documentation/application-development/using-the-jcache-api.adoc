@@ -1,12 +1,12 @@
 = Using the Jcache API
 :ordinal: 22
 
-This chapter covers how to use the JCache functionality in the Payara Platform.
+This chapter covers how to use the JCache functionality in Azul Payara.
 
 NOTE: _JSR107 (JCache)_ is implemented in Payara Server by Hazelcast Community Edition.
 
 IMPORTANT: JCache is not an official specification of the Jakarta Platform and any of its variant profiles. +
-Its inclusion in the Payara Platform is a product choice to leverage the capabilities of a caching API as the Jakarta Platform lacks an official API.
+Its inclusion in Azul Payara is a product choice to leverage the capabilities of a caching API as the Jakarta Platform lacks an official API.
 
 [#accessing-the-caching-provider-and-cache-manager]
 == Accessing the Caching Provider and Cache Manager
@@ -125,7 +125,7 @@ public class Component{
 }
 ----
 
-IMPORTANT: This annotation is part of the xref:../public-api/index.adoc[Payara Platform Public API]
+IMPORTANT: This annotation is part of the xref:../public-api/index.adoc[Azul Payara Public API]
 
 If you only want to set the name of the cache but don't want to depend on the `@NamedCache`, you can use the `@CacheDefaults` annotation on the bean class instead:
 
@@ -150,7 +150,7 @@ TIP: Keep in mind that this solution only works if your bean has one injected ca
 [#using-jcache-annotations]
 == Using Jcache Annotations
 
-The Payara Platform supports cache definitions and operations on caches by using the standard set of annotations that are part of the JCache API:
+Azul Payara supports cache definitions and operations on caches by using the standard set of annotations that are part of the JCache API:
 
 *`@CachePut`*: Puts the specified key and value in the cache.
 *`@CacheRemove`*: Removes an element from the cache that corresponds to the supplied key.

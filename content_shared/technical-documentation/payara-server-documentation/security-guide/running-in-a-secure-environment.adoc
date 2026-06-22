@@ -60,7 +60,7 @@ See xref:managing-administrative-security.adoc#managing-administrative-security[
 [#run-on-the-web-profile-if-possible]
 == Run on the Web Profile If Possible
 
-If your applications can run without issues on Payara Server's Web Profile, use that instead of the Full Profile. As the web profile is a subset of the full feature set of the Payara Platform, it has fewer features that require extra considerations for security (like ORB listeners, Web Services, Message Queue Brokers) which reduces the overall risks of the server's installation.
+If your applications can run without issues on Payara Server's Web Profile, use that instead of the Full Profile. As the web profile is a subset of the full feature set of Azul Payara, it has fewer features that require extra considerations for security (like ORB listeners, Web Services, Message Queue Brokers) which reduces the overall risks of the server's installation.
 
 [#securing-the-payara-server-host]
 == Securing the Payara Server Host Machine

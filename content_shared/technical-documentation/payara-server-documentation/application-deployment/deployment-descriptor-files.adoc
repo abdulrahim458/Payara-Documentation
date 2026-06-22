@@ -1,10 +1,10 @@
-= Payara Platform Deployment Descriptor Files
+= Azul Payara Deployment Descriptor Files
 :ordinal: 3
 
-This appendix describes the element hierarchies in the Payara Platform deployment descriptors that are supported on top of the standard Jakarta EE deployment descriptors.
+This appendix describes the element hierarchies in the Azul Payara deployment descriptors that are supported on top of the standard Jakarta EE deployment descriptors.
 
 [#about-the-payara-platform-deployment-descriptors]
-== About the Payara Platform Deployment Descriptors
+== About the Azul Payara Deployment Descriptors
 
 Each deployment descriptor XML file has a corresponding Document Type Definition (DTD) file, which defines the elements, data, and attributes that the deployment descriptor file can contain.
 
@@ -16,9 +16,9 @@ For general information about DTD files and XML, see the XML specification at `h
 
 IMPORTANT: Do not edit the DTD files; their contents change only with new versions of Payara Server.
 
-The following table lists the Payara Platform deployment descriptors and their DTD files.
+The following table lists the Azul Payara deployment descriptors and their DTD files.
 
-.Payara Platform Deployment Descriptors and DTDs
+.Azul Payara Deployment Descriptors and DTDs
 
 [cols="3,3,4",options="header"]
 |===
@@ -84,7 +84,7 @@ Specifying a different file is optional.
 
 |===
 
-IMPORTANT: Deployment descriptors whose names start with the `glassfish-` prefix are referred as "original" deployment descriptor files from Eclipse GlassFish, since these files names and DTDs were created while supporting Eclipse GlassFish and their support has been inherited by the Payara Platform.
+IMPORTANT: Deployment descriptors whose names start with the `glassfish-` prefix are referred as "original" deployment descriptor files from Eclipse GlassFish, since these files names and DTDs were created while supporting Eclipse GlassFish and their support has been inherited by Azul Payara.
 
 [#the-payara-application.xml-file]
 == The Payara-application.xml File
@@ -183,7 +183,7 @@ Payara Application Server 7 Jakarta EE Application 11//EN"
 
 The `glassfish-web.xml` file configures a web application (WAR file). It is an original Eclipse GlassFish deployment descriptor.
 
-The `payara-web.xml` is a matching Payara Platform variant which is recommended to be used whenever possible.
+The `payara-web.xml` is a matching Azul Payara variant which is recommended to be used whenever possible.
 
 IMPORTANT: glassfish-web.xml is deprecated and support will be removed in a future release.
 It is recommended to use payara-web.xml instead.
@@ -648,7 +648,7 @@ It is recommended to use payara-resources.xml instead.
 
 The `glassfish-resources.xml` file configures application-scoped resources. It is an original Eclipse GlassFish deployment descriptor.
 
-The `payara-resources.xml` is a matching Payara Platform variant that supports additional elements.
+The `payara-resources.xml` is a matching Azul Payara variant that supports additional elements.
 
 Their element hierarchy is as follows:
 
@@ -764,5 +764,5 @@ When multiple vendor deployment descriptors are present in the same module (incl
 
 [source,text]
 ----
-Payara Platform > Eclipse GlassFish Server > Sun Application Server
+Azul Payara > Eclipse GlassFish Server > Sun Application Server
 ----

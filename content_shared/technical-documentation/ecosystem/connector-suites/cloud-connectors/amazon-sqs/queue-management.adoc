@@ -2,7 +2,7 @@
 
 Amazon SQS Queues (and other resources) can be managed through the use of the official Amazon SQS API, which allows programmatic control over them. In general, managing queues in Amazon SQS is crucial for effective message handling.
 
-To simplify the setup needed to use the SQS API from a standard Jakarta EE application and manage SQS resources, the Payara Platform SQS connector offers easy access to the `com.amazonaws.services.sqs.AmazonSQSConnectionFactory` class through the Java Connector Architecture (JCA) API.
+To simplify the setup needed to use the SQS API from a standard Jakarta EE application and manage SQS resources, the Azul Payara SQS connector offers easy access to the `com.amazonaws.services.sqs.AmazonSQSConnectionFactory` class through the Java Connector Architecture (JCA) API.
 
 This section will show how to access these facilities and focus on key operations like creating, listing, and deleting queues.
 

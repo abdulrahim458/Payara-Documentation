@@ -114,7 +114,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 
 [#Payara-Platform-Proprietary-JVM-Options]
-=== Payara Platform Proprietary JVM Options
+=== Azul Payara Proprietary JVM Options
 
 The following is a list of the proprietary JVM Options available for configuration:
 

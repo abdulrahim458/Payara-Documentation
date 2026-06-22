@@ -1,6 +1,6 @@
 = Directory Config Source
 
-This page details how to configure and use the *Directory* configuration source in the Payara Platform.
+This page details how to configure and use the *Directory* configuration source in Azul Payara.
 
 [#configuration]
 == Configuration
@@ -26,7 +26,7 @@ Use the following commands to configure and get the current settings of this con
 [#using-boot-scripts]
 === Using Pre-Boot And/or Postboot Scripts
 
-When running a Payara Platform distribution in a container, there is no way to restart a running instance after configuring via an `asadmin` command without losing the changes to the domain configuration.
+When running an Azul Payara distribution in a container, there is no way to restart a running instance after configuring via an `asadmin` command without losing the changes to the domain configuration.
 
 Thus, you should add the corresponding command to a boot script as described at xref:../../payara-micro-documentation/payara-micro-configuration-and-management/micro-management/asadmin-commands/pre-and-post-boot-commands.adoc[Pre- and Postboot scripts].
 

@@ -1,7 +1,7 @@
 = Using Request Tracing in Applications
 :ordinal: 23
 
-Request Tracing in the Payara Platform is done either automatically, by using the MicroProfile OpenTracing `@Traced` annotation or by utilizing OpenTelemetry/OpenTracing APIs. This chapter covers manually decorating your applications to enable explicit Request Tracing.
+Request Tracing in Azul Payara is done either automatically, by using the MicroProfile OpenTracing `@Traced` annotation or by utilizing OpenTelemetry/OpenTracing APIs. This chapter covers manually decorating your applications to enable explicit Request Tracing.
 
 [#terminology]
 == Terminology
@@ -11,7 +11,7 @@ Request Tracing in the Payara Platform is done either automatically, by using th
 
 A Span is a named, timed operation that represents an individual unit of work, such as the execution of a JAX-RS method. Since a Span is a unit of work, they typically contain references to other Spans to represent the work in its entirety.
 
-A Trace is the term used to describe the collection of Spans that make up an entire request’s lifecycle from the viewpoint of the Payara Platform: from the request hitting the server to it leaving. A Trace can be made up of simply one Span.
+A Trace is the term used to describe the collection of Spans that make up an entire request’s lifecycle from the viewpoint of Azul Payara: from the request hitting the server to it leaving. A Trace can be made up of simply one Span.
 
 [#references]
 === References
@@ -115,7 +115,7 @@ public class TracedComponent{
 }
 ----
 
-CAUTION: You can only inject a Tracer when your application is running inside a Payara Platform runtime you cannot do so from a Java SE client. From a Java SE client you must use the OpenTracing.io `GlobalTracer` class, see xref:using-jakarta-enterprise-beans-technology.adoc#getting-a-tracer[here] for more details.
+CAUTION: You can only inject a Tracer when your application is running inside an Azul Payara runtime you cannot do so from a Java SE client. From a Java SE client you must use the OpenTracing.io `GlobalTracer` class, see xref:using-jakarta-enterprise-beans-technology.adoc#getting-a-tracer[here] for more details.
 
 Starting a Span, marking it as the active Span (the one from which any children will spawn), and ending it is done like so with a _try-with-resources_ block:
 

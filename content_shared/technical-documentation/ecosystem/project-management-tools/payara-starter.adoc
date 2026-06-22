@@ -16,7 +16,7 @@ Payara Starter is a web application and command line tool designed to accelerate
 * Customizable Project Details: Define crucial project specifics upfront, aligning with organizational naming conventions.
 * Java and Jakarta EE Version Control: Allows the selection of specific versions to ensure compatibility and leverage the latest features.
 * MicroProfile Integration: Includes options to integrate MicroProfile APIs for building resilient, scalable services.
-* Payara Platform Compatibility: Effortlessly works with the Payara Platform, ensuring readiness for deployment.
+* Azul Payara Compatibility: Effortlessly works with Azul Payara, ensuring readiness for deployment.
 * Docker Support: Facilitates Docker compatibility, streamlining containerization for agile deployment.
 * Unit Test Templates: Optionally includes test templates, encouraging best testing practices from project initiation.
 * Advanced Security Configuration: Optional advanced security setup for robust authentication via Jakarta Security, facilitating secure application development from the start.
@@ -89,7 +89,7 @@ Available options:
 * 17
 * 21
 
-WARNING: Keep in mind that versions older than `11` are not supported in Payara Platform {release-id}
+WARNING: Keep in mind that versions older than `11` are not supported in Azul Payara {release-id}
 
 a| `jakartaEEVersion`
 a| `10`
@@ -102,7 +102,7 @@ Valid options:
 * 9.1
 * 10
 
-WARNING: For compatibility with the Payara Platform {release-id}, versions older than `10` are not supported.
+WARNING: For compatibility with Azul Payara {release-id}, versions older than `10` are not supported.
 
 a| `profile`
 a| `full`
@@ -232,10 +232,10 @@ You can customize these based on your project requirements:
 *image*: payara-starter/jakartaee.png[Jakarta EE version, width=50%]
 
 . Configure any *Additional Options*:
-* The web application allows you to configure additional options such as MicroProfile integration, Payara Platform version, and more.
+* The web application allows you to configure additional options such as MicroProfile integration, Azul Payara version, and more.
 * Customize these options based on your project needs.
 +
-*image*: payara-starter/payara-platform.png[Payara Platform, width=50%]
+*image*: payara-starter/payara-platform.png[Azul Payara, width=50%]
 
 . Review and Generate:
 * Review the summary of your selected options to ensure they match your project requirements.

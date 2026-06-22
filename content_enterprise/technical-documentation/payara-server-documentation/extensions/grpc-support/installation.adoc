@@ -1,6 +1,6 @@
 = Installing Grpc Server Support Module
 
-WARNING: The gRPC extension has not yet been updated to support Payara Platform {pageSiteEditionCapitalised} {payaraVersionMajor}
+WARNING: The gRPC extension has not yet been updated to support Azul Payara {pageSiteEditionCapitalised} {payaraVersionMajor}
 
 You need to download the following artifact from enterprise nexus repository: https://nexus.payara.fish/repository/payara-enterprise .
 
