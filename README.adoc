@@ -6,3 +6,7 @@ This repository is used to generate all the HTML pages that are published for th
 
 * link:https://docs.azul.com/payara/[Azul Payara Documentation]
 * link:https://docs.azul.com/payara-community/[Azul Payara Community Documentation]
+
+Previews of branches are available on:
+
+http://doc-builder.azulsystems.com:8081/optimizer-hub/{BRANCHNAME}

@@ -227,7 +227,7 @@ deploy_to_prod_server:
       - "curl -X POST -F token=${CICD_TRIGGER_TOKEN_PURGE} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2016/trigger/pipeline"
   when: manual
   only:
-    - main
+    - main-7
 
 push_docs_to_nexus:
   stage: deploy
@@ -257,7 +257,7 @@ push_docs_to_nexus:
       echo "Uploading the ZIP to Nexus"
       curl --fail --show-error --retry 3 --retry-all-errors -u "${CM_NEXUS_USER}:${CM_NEXUS_PASS}" --upload-file ${ZIP_FILE} ${CM_NEXUS_PATH}/repository/docs/${DOCS_ID}/${ZIP_FILE}
   only:
-    - main
+    - main-7
   artifacts:
     paths:
       - ${ZIP_NEXUS_BUILD_DIR}/*.zip
