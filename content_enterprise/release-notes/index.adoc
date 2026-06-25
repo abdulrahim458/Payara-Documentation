@@ -5,7 +5,10 @@ Detailed information about features and fixes in every release.
 [#all-release-notes]
 == All Release Notes
 
-*2026*
+[cols="1,2", options="header"]
+|===
+| Month | Release
 
-* 2026 May - xref:release-notes-7.0.0.adoc[Release Notes 7.0.0]
-
+2+h| 2026
+| May | xref:release-notes-7.0.0.adoc[Release Notes 7.0.0]
+|===
