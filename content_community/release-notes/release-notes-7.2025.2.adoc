@@ -1,5 +1,7 @@
 = Release Notes - Payara Platform Community 7.2025.2
 
+link_to_pdf:/payara-community/pdfs/7/Payara-Community-7.2025.2-documentation.pdf[Full Documentation PDF]
+
 == Supported Apis and Applications
 
 * Jakarta EE 11
