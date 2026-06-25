@@ -7,13 +7,18 @@ Though it is always possible for new versions to be supported, this page details
 
 Azul Payara currently runs the following Java Virtual Machines:
 
-* Azul Zulu JDK (Azul Platform Core): 21 (21.30/21.0.1+)
-* Azul Zing JDK (Azul Platform Prime): 21 (21.30/21.0.1+)
-* Oracle JDK: 21 (21.0.1+)
-* Amazon Corretto: 21 (21.0.1+)
-* Adopt Open JDK: 21 (21.0.1+)
-* Adopt Open JDK with Eclipse Open J9: 21 (21.0.1+)
-* Any other JVM based on OpenJDK 21.0.1+
+[cols="2,1", options="header"]
+|===
+| Java Virtual Machine | Supported Version(s)
+
+| Azul Zulu JDK (Azul Platform Core) | 21 (21.30/21.0.1+)
+| Azul Zing JDK (Azul Platform Prime) | 21 (21.30/21.0.1+)
+| Oracle JDK | 21 (21.0.1+)
+| Amazon Corretto | 21 (21.0.1+)
+| Adopt Open JDK | 21 (21.0.1+)
+| Adopt Open JDK with Eclipse Open J9 | 21 (21.0.1+)
+| Any other JVM based on OpenJDK | 21.0.1+
+|===
 
 Azul Payara runs on the `x64` and `arm64` variants of the above JVMs.
 
@@ -21,20 +26,27 @@ Azul Payara runs on the `x64` and `arm64` variants of the above JVMs.
 
 Azul Payara currently runs on the following Operating Systems in all the versions listed below and all their newer versions:
 
-* Windows
-** Windows 7+
-** Windows Server 2008+
-* Linux
-** Ubuntu 14.04 (Trusty Tahr) LTS+
-** Debian 7 (Wheezy)+
-** CentOS 6+
-** RHEL 5+
-** OpenSUSE 42.2+
-** SUSE 11, 12, 15, 16 (See Note 1)
-** Amazon Linux (all versions)
-* Other
-** MacOS(OSX) 10.10.5 (Yosemite)+
-** IBM AIX 7.1+
+[cols="1,2,2", options="header"]
+|===
+| Family | Operating System | Minimum Version
+
+.2+| Windows
+| Windows | 7+
+| Windows Server | 2008+
+
+.7+| Linux
+| Ubuntu (Trusty Tahr) | 14.04 LTS+
+| Debian (Wheezy) | 7+
+| CentOS | 6+
+| RHEL | 5+
+| OpenSUSE | 42.2+
+| SUSE | 11, 12, 15, 16 (See Note 1)
+| Amazon Linux | All versions
+
+.2+| Other
+| MacOS (OSX) (Yosemite) | 10.10.5+
+| IBM AIX | 7.1+
+|===
 
 In general, any Azul Payara distribution runs on any system supported by at least one of the JVMs it runs on.
 
