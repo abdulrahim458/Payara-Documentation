@@ -726,11 +726,17 @@ sections:
     - title: Overview
       file: release-notes/index
       sections:
+        - file: release-notes/release-notes-7.1.0
         - file: release-notes/release-notes-7.0.0
   - title: Jakarta EE Certification
     sections:
     - title: Overview
       file: jakarta-ee-certification/index
+    - title: 7.1.0
+      sections:
+      - file: jakarta-ee-certification/7.1.0/7.1.0-platform-tck-results
+      - title: 7.1.0 Web TCK Results
+        file: jakarta-ee-certification/7.1.0/7.1.0-web-profile-web-tck-results
     - title: 7.0.0
       sections:
       - file: jakarta-ee-certification/7.0.0/7.0.0-platform-tck-results

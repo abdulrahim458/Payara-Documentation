@@ -10,5 +10,6 @@ Detailed information about features and fixes in every release.
 | Month | Release
 
 2+h| 2026
+| June | xref:release-notes-7.1.0.adoc[Release Notes 7.1.0]
 | May | xref:release-notes-7.0.0.adoc[Release Notes 7.0.0]
 |===

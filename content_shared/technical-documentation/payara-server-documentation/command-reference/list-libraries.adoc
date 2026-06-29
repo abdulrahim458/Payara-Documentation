@@ -35,7 +35,9 @@ This subcommand is supported in remote mode only.
   `ext`;;
     Lists the library files for the Java optional package directory, `domain-dir/lib/ext`.
   `app`;;
-    Lists the library files for the application-specific class loader directory, `domain-dir/lib/applibs`. +
+    Lists the library files for the application-specific class loader directory, `domain-dir/lib/applibs`.
+  `war`;;
+    Lists the library files for the war-packaged class loader directory, `domain-dir/lib/warlibs` +
   For more information about these directories, see xref:../../application-development/class-loaders.adoc#classloading[Class Loaders] in the Payara Server Application section.
 
 [#examples]

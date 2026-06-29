@@ -43,7 +43,9 @@ This subcommand is supported in remote mode only.
   `ext`;;
     Removes the library files from the Java optional package directory, domain-dir`/lib/ext`.
   `app`;;
-    Removes the library files from the application-specific class loader directory, `domain-dir/lib/applibs`. +
+    Removes the library files from the application-specific class loader directory, `domain-dir/lib/applibs`.
+  `war`;;
+    Removes the library files from the war-packaged class loader directory, `domain-dir/lib/warlibs`. +
   For more information about these directories, see xref:../../application-development/class-loaders.adoc#classloading[Class Loaders] in the Payara Server Application Development section.
 
 [#operands]

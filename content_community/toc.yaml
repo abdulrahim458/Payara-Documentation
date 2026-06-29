@@ -681,6 +681,7 @@ sections:
     sections:
     - title: Overview
       file: release-notes/index
+    - file: release-notes/release-notes-7.2026.6
     - file: release-notes/release-notes-7.2026.5
     - file: release-notes/release-notes-7.2026.4
     - file: release-notes/release-notes-7.2026.3
@@ -692,6 +693,11 @@ sections:
     sections:
     - title: Overview
       file: jakarta-ee-certification/index
+    - title: 7.2026.6
+      sections:
+      - file: jakarta-ee-certification/7.2026.6/7.2026.6-platform-tck-results
+      - title: 7.2026.6 Web TCK Results
+        file: jakarta-ee-certification/7.2026.6/7.2026.6-web-profile-web-tck-results
     - title: 7.2026.5
       sections:
       - file: jakarta-ee-certification/7.2026.5/7.2026.5-platform-tck-results
