@@ -1,6 +1,6 @@
-= Release Notes - Payara Platform Enterprise 7.1.0
+= Release Notes - Azul Payara 7.1.0
 
-link_to_pdf:/payara/pdfs/7/Payara-Enterprise-7.1.0-documentation.pdf[Full Documentation PDF]
+link_to_pdf:/payara/pdfs/7/azul-payara-documentation-7.1.0.pdf[Full Documentation PDF]
 
 == Supported Apis and Applications
 

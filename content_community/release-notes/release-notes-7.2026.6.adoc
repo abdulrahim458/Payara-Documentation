@@ -1,6 +1,6 @@
-= Release Notes - Payara Platform Community 7.2026.6
+= Release Notes - Azul Payara Community 7.2026.6
 
-link_to_pdf:/payara-community/pdfs/7/Payara-Community-7.2026.6-documentation.pdf[Full Documentation PDF]
+link_to_pdf:/payara-community/pdfs/7/azul-payara-community-documentation-7.2026.6.pdf[Full Documentation PDF]
 
 == Supported Apis and Applications
 
