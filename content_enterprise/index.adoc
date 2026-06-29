@@ -8,7 +8,7 @@ image::payara-bg.png[alt="Payara Logo",width=400px]
 
 == Download
 
-The Enterprise Edition downloads can be found in the _Payara Enterprise_ repository of our https://nexus.payara.fish[Nexus Server^]. More information can be found in the https://support.payara.fish/hc/en-gb/articles/203619992-Payara-Enterprise-Download-Guide[Payara Enterprise Download guide^] (only accessible for Enterprise Customers).
+The Azul Payara downloads can be found in the _Payara_ repository of our https://nexus.payara.fish[Nexus Server^]. More information can be found in the https://support.payara.fish/hc/en-gb/articles/203619992-Payara-Enterprise-Download-Guide[Payara Enterprise Download guide^] (only accessible for Enterprise Customers).
 
 == History
 
