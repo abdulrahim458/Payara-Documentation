@@ -14,7 +14,8 @@ mkdir -p ${PDF_BUILD_DIR}
 
 if [ ! -d "${TEMPLATES_DIR}" ]; then
   echo "Pulling docs-templates"
-  git clone --branch feature/payara --depth 1 https://gitlab.azulsystems.com/docs/docs-templates.git
+  #git clone --branch feature/payara --depth 1 https://gitlab.azulsystems.com/docs/docs-templates.git
+  git clone --depth 1 https://gitlab.azulsystems.com/docs/docs-templates.git
 fi
 
 build_pdf() {

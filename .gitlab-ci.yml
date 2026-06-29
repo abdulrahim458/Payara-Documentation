@@ -67,8 +67,8 @@ get_templates:
   stage: prepare
   script:
     - rm -rf ${TEMPLATES_DIR}
-    #- git clone --depth 1 https://gitlab.azulsystems.com/docs/docs-templates ${TEMPLATES_DIR}
-    - git clone --branch feature/payara --depth 1 https://gitlab.azulsystems.com/docs/docs-templates ${TEMPLATES_DIR}/
+    - git clone --depth 1 https://gitlab.azulsystems.com/docs/docs-templates ${TEMPLATES_DIR}
+    #- git clone --branch feature/payara --depth 1 https://gitlab.azulsystems.com/docs/docs-templates ${TEMPLATES_DIR}/
     - ls -lR ${TEMPLATES_DIR}
   cache:
     paths:
