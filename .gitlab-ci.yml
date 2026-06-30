@@ -224,7 +224,7 @@ deploy_to_prod_server:
       fi
       
       # Start the purge CDN cache pipeline
-      - "curl -X POST -F token=${CICD_TRIGGER_TOKEN_PURGE} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2016/trigger/pipeline"
+      curl -X POST -F token=${CICD_TRIGGER_TOKEN_PURGE} -F ref=main https://gitlab.azulsystems.com/api/v4/projects/2016/trigger/pipeline
   when: manual
   only:
     - main-7
