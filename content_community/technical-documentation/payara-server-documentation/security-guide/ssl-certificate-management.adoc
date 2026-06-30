@@ -18,7 +18,7 @@ To add your SSL Certificate to the Payara Server configuration files, you need:
 - The private key associated with your certificate.
 - The Certificate you received from the Certificate Authority based on your Certificate Signing Request (CSR).
 
-You can find detailed steps of adding a self-signed certificate https://blog.payara.fish/securing-payara-server-with-custom-ssl-certificate[here^].
+You can find detailed steps of adding a self-signed certificate https://www.azul.com/blog/securing-payara-server-with-custom-ssl-certificate/[here^].
 
 The private key can be stored in various formats. We assume that the key is in a format which can be read by the Java key tool program, such as PKCS12.
 
