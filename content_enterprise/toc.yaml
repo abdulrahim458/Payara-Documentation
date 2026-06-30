@@ -735,12 +735,12 @@ sections:
     - title: 7.1.0
       sections:
       - file: jakarta-ee-certification/7.1.0/7.1.0-platform-tck-results
-      - title: 7.1.0 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.1.0/7.1.0-web-profile-web-tck-results
     - title: 7.0.0
       sections:
       - file: jakarta-ee-certification/7.0.0/7.0.0-platform-tck-results
-      - title: 7.0.0 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.0.0/7.0.0-web-profile-web-tck-results
   - title: Eclipse MicroProfile Certification
     sections:

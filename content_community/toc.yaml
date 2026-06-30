@@ -696,47 +696,47 @@ sections:
     - title: 7.2026.6
       sections:
       - file: jakarta-ee-certification/7.2026.6/7.2026.6-platform-tck-results
-      - title: 7.2026.6 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.2026.6/7.2026.6-web-profile-web-tck-results
     - title: 7.2026.5
       sections:
       - file: jakarta-ee-certification/7.2026.5/7.2026.5-platform-tck-results
-      - title: 7.2026.5 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.2026.5/7.2026.5-web-profile-web-tck-results
     - title: 7.2026.4
       sections:
       - file: jakarta-ee-certification/7.2026.4/7.2026.4-platform-tck-results
-      - title: 7.2026.4 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.2026.4/7.2026.4-web-profile-web-tck-results
     - title: 7.2026.3
       sections:
       - file: jakarta-ee-certification/7.2026.3/7.2026.3-platform-tck-results
-      - title: 7.2026.3 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.2026.3/7.2026.3-web-profile-web-tck-results
     - title: 7.2026.2
       sections:
       - file: jakarta-ee-certification/7.2026.2/7.2026.2-platform-tck-results
-      - title: 7.2026.2 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.2026.2/7.2026.2-web-profile-web-tck-results
     - title: 7.2026.1
       sections:
       - file: jakarta-ee-certification/7.2026.1/7.2026.1-platform-tck-results
-      - title: 7.2026.1 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.2026.1/7.2026.1-web-profile-web-tck-results
     - title: 7.2025.2
       sections:
       - file: jakarta-ee-certification/7.2025.2/7.2025.2-platform-tck-results
-      - title: 7.2025.2 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.2025.2/7.2025.2-web-profile-web-tck-results
     - title: 7.2025.1
       sections:
       - file: jakarta-ee-certification/7.2025.1/7.2025.1-platform-tck-results
-      - title: 7.2025.1 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.2025.1/7.2025.1-web-profile-web-tck-results
     - title: 7.2025.1.Beta1
       sections:
       - file: jakarta-ee-certification/7.2025.1.beta1/7.2025.1.beta1-platform-tck-results
-      - title: 7.2025.1.Beta1 Web TCK Results
+      - title: Web TCK Results
         file: jakarta-ee-certification/7.2025.1.beta1/7.2025.1.beta1-web-profile-web-tck-results
     - title: 7.2024.1.Alpha3
       sections:
