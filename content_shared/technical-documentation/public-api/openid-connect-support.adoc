@@ -297,7 +297,7 @@ By default, the same configuration of the OpenID connector is applied for the wh
 
 This is useful in a multi-tenant scenario to define a different configuration for each tenant. It's also useful if the user should be able to select which provider they want to use to authenticate.
 
-To enable re-evaluation of the configuration for each user session, set the MicroProfile Configuration property `payara.security.openid.sessionScopedConfiguration` to `true`. To specify it directly in the application, you can place it in the link:https://download.eclipse.org/microprofile/microprofile-config-1.4/microprofile-config-spec.html#default_configsources[microprofile-config.properties^] file in the `META-INF` directory on the classpath (in a WAR application it could be in `WEB-INF/classes/META-INF`).
+To enable re-evaluation of the configuration for each user session, set the MicroProfile Configuration property `payara.security.openid.sessionScopedConfiguration` to `true`. To specify it directly in the application, you can place it in the https://download.eclipse.org/microprofile/microprofile-config-1.4/microprofile-config-spec.html#default_configsources[microprofile-config.properties^] file in the `META-INF` directory on the classpath (in a WAR application it could be in `WEB-INF/classes/META-INF`).
 
 With this enabled, it's possible to use EL expressions to dynamically adjust the configuration before each authentication attempt, e.g. based on any information in the incoming HTTP request. The information about the HTTP request can be retrieved from a `HttpServletRequest` object injected using `@Inject`.
 

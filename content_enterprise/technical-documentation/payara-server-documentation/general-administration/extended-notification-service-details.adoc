@@ -46,8 +46,8 @@ The following notifiers are available in Payara Server Enterprise:
 
 Payara Server is able to direct notifications to a single given email address. The notifier modules are available in these locations:
 
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-core/2.0-enterprise/email-notifier-core-2.0-enterprise.jar[Email Notifier Core 2.0-enterprise^]
-* link:https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-console-plugin/2.0-enterprise/email-notifier-console-plugin-2.0-enterprise.jar[Email Notifier Console Plugin 2.0-enterprise^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-core/2.0-enterprise/email-notifier-core-2.0-enterprise.jar[Email Notifier Core 2.0-enterprise^]
+* https://nexus.payara.fish/repository/payara-enterprise-downloadable-artifacts/fish/payara/extensions/notifiers/email-notifier-console-plugin/2.0-enterprise/email-notifier-console-plugin-2.0-enterprise.jar[Email Notifier Console Plugin 2.0-enterprise^]
 
 To use this notifier the following requirements have to be met:
 

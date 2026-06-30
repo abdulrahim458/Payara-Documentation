@@ -13,7 +13,7 @@ NOTE: The CVE Program is sponsored by the Cybersecurity and Infrastructure Secur
 
 Developers using Azul Payara products will benefit from the collaboration, as vulnerabilities will be part of the standardized and publicly disclosed CVE List. This will result in time and cost savings for those using Payara products, as security issues can be discussed, dealt with and prevented through the use of a trusted, standardized catalogue.
 
-In general, Payara follows the CVE Program's link:https://www.cve.org/ResourcesSupport/AllResources/CNARules[CNA Operational rules^] to make decisions on reported vulnerabilities and CVE record management.
+In general, Payara follows the CVE Program's https://www.cve.org/ResourcesSupport/AllResources/CNARules[CNA Operational rules^] to make decisions on reported vulnerabilities and CVE record management.
 
 [#general-guidelines]
 == General Guidelines

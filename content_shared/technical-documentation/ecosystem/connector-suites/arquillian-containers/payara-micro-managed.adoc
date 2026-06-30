@@ -6,7 +6,7 @@ When using this adapter, the Payara Micro container lifecycle is managed by Arqu
 [#usage]
 == Usage
 
-The Payara Micro Managed Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-micro-managed[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
+The Payara Micro Managed Arquillian container adapter can be found on https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-micro-managed[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
 
 [source,XML]
 ----

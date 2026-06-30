@@ -133,4 +133,4 @@ The client secret can be input directly, or for added security it can be aliased
 [#see-also]
 == See Also
 
-* link:https://oauth.net/2/[OAuth v2 Official site^]
+* https://oauth.net/2/[OAuth v2 Official site^]

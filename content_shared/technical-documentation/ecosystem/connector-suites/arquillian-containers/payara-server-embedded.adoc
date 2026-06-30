@@ -6,7 +6,7 @@ When using this adapter, the Payara Server container lifecycle is managed by Arq
 [#usage]
 == Usage
 
-The Payara Server Embedded Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-embedded[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
+The Payara Server Embedded Arquillian container adapter can be found on https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-embedded[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
 
 [source, xml]
 ----

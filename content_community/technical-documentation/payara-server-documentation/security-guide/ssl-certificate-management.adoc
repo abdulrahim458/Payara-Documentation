@@ -8,7 +8,7 @@ As a reminder, Payara Server uses the following PKCS12 keystore files to manage 
 
 These keystores are protected with the Master Password of your domain.
 
-TIP: Azul Payara provides the link:{enterpriseDocsPageRootUrl}/Technical Documentation/Payara Server Documentation/Server Configuration And Management/Configuration Options/certificate-management.html[Integrated Certificate Management] feature. This allows creating, installing and managing SSL/TLS certificates without external tools like keytool or OpenSSL, just using **asadmin** commands or **Admin Console**. This simplifies the processes documented below and makes it much less risky to perform tasks like renewing certificates, deleting expired certificates, etc.
+TIP: Azul Payara provides the {enterpriseDocsPageRootUrl}technical-documentation/payara-server-documentation/server-configuration-and-management/configuration-options/certificate-management.html[Integrated Certificate Management] feature. This allows creating, installing and managing SSL/TLS certificates without external tools like keytool or OpenSSL, just using **asadmin** commands or **Admin Console**. This simplifies the processes documented below and makes it much less risky to perform tasks like renewing certificates, deleting expired certificates, etc.
 
 [#add-certificate]
 == Adding a New SSL Certificate
@@ -18,7 +18,7 @@ To add your SSL Certificate to the Payara Server configuration files, you need:
 - The private key associated with your certificate.
 - The Certificate you received from the Certificate Authority based on your Certificate Signing Request (CSR).
 
-You can find detailed steps of adding a self-signed certificate  link:https://blog.payara.fish/securing-payara-server-with-custom-ssl-certificate[here^].
+You can find detailed steps of adding a self-signed certificate https://blog.payara.fish/securing-payara-server-with-custom-ssl-certificate[here^].
 
 The private key can be stored in various formats. We assume that the key is in a format which can be read by the Java key tool program, such as PKCS12.
 

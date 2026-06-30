@@ -5,9 +5,9 @@
 
 Payara Starter is a web application and command line tool designed to accelerate Jakarta EE development by simplifying the creation of new application projects. It supports the creation of both Maven and Gradle projects, allowing developers to focus on coding their application components in a faster way as they don't have to deal with the complexities of setting up their projects.
 
-* link:https://start.payara.fish[Website^]
-* link:https://github.com/payara/ecosystem-starter[GitHub Repository^]
-* link:https://mvnrepository.com/artifact/fish.payara.starter/payara-starter-archetype[Maven Central Repository for Payara Starter Archetype^]
+* https://start.payara.fish[Website^]
+* https://github.com/payara/ecosystem-starter[GitHub Repository^]
+* https://mvnrepository.com/artifact/fish.payara.starter/payara-starter-archetype[Maven Central Repository for Payara Starter Archetype^]
 
 [#key-features-of-payara-starter]
 == Key Features of Payara Starter

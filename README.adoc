@@ -4,8 +4,8 @@ Official technical documentation repository of Azul Payara. All documentation ma
 
 This repository is used to generate all the HTML pages that are published for the following sites:
 
-* link:https://docs.azul.com/payara/[Azul Payara Documentation]
-* link:https://docs.azul.com/payara-community/[Azul Payara Community Documentation]
+* https://docs.azul.com/payara/[Azul Payara Documentation^]
+* https://docs.azul.com/payara-community/[Azul Payara Community Documentation^]
 
 Previews of branches are available on:
 

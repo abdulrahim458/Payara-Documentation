@@ -8,7 +8,7 @@ This gives you the flexibility to use any possible deployment scenarios having y
 [#usage]
 == Usage
 
-The Payara Server Remote Arquillian container adapter can be found on link:https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-remote[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
+The Payara Server Remote Arquillian container adapter can be found on https://central.sonatype.com/artifact/fish.payara.arquillian/arquillian-payara-server-remote[Maven Central^], and can be included in your project using the following Maven GAV coordinates:
 
 [source, xml]
 ----

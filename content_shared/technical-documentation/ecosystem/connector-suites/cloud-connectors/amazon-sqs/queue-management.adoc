@@ -230,4 +230,4 @@ Effectively managing Amazon SQS queues using the JCA API empowers developers to 
 [#see-also]
 == See Also
 
-For more detailed information on the Amazon SQS Java SDK, including additional features and advanced usage, refer to the link:https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sqs/SqsClient.html[official Javadocs^].
+For more detailed information on the Amazon SQS Java SDK, including additional features and advanced usage, refer to the https://sdk.amazonaws.com/java/api/latest/software/amazon/awssdk/services/sqs/SqsClient.html[official Javadocs^].

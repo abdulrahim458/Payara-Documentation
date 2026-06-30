@@ -13,7 +13,7 @@ NOTE: The CVE Program is sponsored by the Cybersecurity and Infrastructure Secur
 
 Developers using Azul Payara products will benefit from the collaboration, as vulnerabilities will be part of the standardized and publicly disclosed CVE List. This will result in time and cost savings for those using Payara products, as security issues can be discussed, dealt with and prevented through the use of a trusted, standardized catalogue.
 
-In general, Payara follows the CVE Program's link:https://www.cve.org/ResourcesSupport/AllResources/CNARules[CNA Operational rules^] to make decisions on reported vulnerabilities and CVE record management.
+In general, Payara follows the CVE Program's https://www.cve.org/ResourcesSupport/AllResources/CNARules[CNA Operational rules^] to make decisions on reported vulnerabilities and CVE record management.
 
 [#general-guidelines]
 == General Guidelines
@@ -89,7 +89,7 @@ In cases like this, the CVE record will be rejected along with a reason explaini
 [#cve-dispute]
 === CVE Disputes
 
-If as a reporter, you do not agree with the assessment that Payara has made on a reported vulnerability when a CVE has not been assigned or an assigned CVE has been rejected, you may file a formal dispute by following the link:https://www.cve.org/Resources/General/Policies/CVE-Record-Dispute-Policy.pdf[CVE Program Policy and Procedure for Disputing a CVE Record^].
+If as a reporter, you do not agree with the assessment that Payara has made on a reported vulnerability when a CVE has not been assigned or an assigned CVE has been rejected, you may file a formal dispute by following the https://www.cve.org/Resources/General/Policies/CVE-Record-Dispute-Policy.pdf[CVE Program Policy and Procedure for Disputing a CVE Record^].
 
 Payara will be open to negotiating any disputes and reconsider our position on previous assessments if enough evidence and information is provided by the reported.
 
@@ -101,7 +101,7 @@ All security reports, that correspond to either fixes to vulnerabilities that af
 Each vulnerability entry will contain:
 
 * Its CVE ID
-* The CVE record's link:https://nvd.nist.gov/vuln-metrics/cvss[CVSS Score^]
+* The CVE record's https://nvd.nist.gov/vuln-metrics/cvss[CVSS Score^]
 * The status of the vulnerability (`FIXED`, `REJECTED`, `N/A`)
 * The summary of the exploit
 * The release where a fix was published (if applicable)
