@@ -24,7 +24,7 @@ asadmin generate-self-signed-certificate --dn "CN=test.payara.fish,IP=127.0.0.1"
 ----
 
 **Alternatively**:
-You can find the detailed steps of adding a self-signed certificate into Payara Server for testing purposes using `keytool` and `openssl` https://blog.payara.fish/securing-payara-server-with-custom-ssl-certificate[here^].
+You can find the detailed steps of adding a self-signed certificate into Payara Server for testing purposes using `keytool` and `openssl` https://www.azul.com/blog/securing-payara-server-with-custom-ssl-certificate/[here^].
 
 The private key can be stored in various formats. We assume that the key is in a format which can be read by the Java key tool program, such as PKCS12.
 
