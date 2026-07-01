@@ -30,7 +30,7 @@ https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.1.z
 
 - Public URL of TCK Results Summary:
 +
-https://docs.payara.fish/community/docs/7.2025.1/Jakarta%20EE%20Certification/7.2025.1/7.2025.1%20Platform%20TCK%20Results.html[7.2025.1 Platform TCK Results^]
+https://docs.azul.com/payara-community/jakarta-ee-certification/7.2025.1/7.2025.1-platform-tck-results[7.2025.1 Platform TCK Results^]
 
 ** Jakarta Activation 2.1.2
 +

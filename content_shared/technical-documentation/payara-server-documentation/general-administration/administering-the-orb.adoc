@@ -30,7 +30,7 @@ An IIOP listener is a listen socket that accepts incoming connections from the r
 Use the `create-iiop-listener` subcommand in remote mode to create an IIOP listener.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Create an IIOP listener by using the xref:technical-documentation/payara-server-documentation/command-reference/create-iiop-listener.adoc[`create-iiop-listener`] subcommand. Information about the properties for the subcommand is included in this help page.
+. Create an IIOP listener by using the xref:../command-reference/create-iiop-listener.adoc[`create-iiop-listener`] subcommand. Information about the properties for the subcommand is included in this help page.
 . To apply your changes, restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 ==== Example 15-1 Creating an IIOP Listener
@@ -48,7 +48,7 @@ This example creates an IIOP listener named `sample_iiop_listener`.
 Use the `list-iiop-listeners` subcommand in remote mode to list the existing IIOP listeners.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the IIOP listeners by using the xref:technical-documentation/payara-server-documentation/command-reference/list-iiop-listeners.adoc[`list-iiop-listeners`] subcommand.
+. List the IIOP listeners by using the xref:../command-reference/list-iiop-listeners.adoc[`list-iiop-listeners`] subcommand.
 
 ==== Example 15-2 Listing IIOP Listeners
 [source,shell]
@@ -65,8 +65,8 @@ This example lists all the IIOP listeners for the server instance.
 [#to-update-an-iiop-listener]
 === To Update an IIOP Listener
 
-. List the IIOP listeners by using the xref:technical-documentation/payara-server-documentation/command-reference/list-iiop-listeners.adoc[`list-iiop-listeners`] subcommand.
-. Modify the values for the specified IIOP listener by using the  xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand. The listener is identified by its dotted name.
+. List the IIOP listeners by using the xref:../command-reference/list-iiop-listeners.adoc[`list-iiop-listeners`] subcommand.
+. Modify the values for the specified IIOP listener by using the  xref:../command-reference/set.adoc[`set`] subcommand. The listener is identified by its dotted name.
 
 ==== Example 15-3 Updating an IIOP Listener
 [source,shell]
@@ -83,8 +83,8 @@ This example changes SSL from enabled to disabled.
 Use the `delete-iiop-listener` subcommand in remote mode to delete an IIOP listener.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the IIOP listeners by using the xref:technical-documentation/payara-server-documentation/command-reference/list-iiop-listeners.adoc[`list-iiop-listeners`] subcommand.
-. Delete an IIOP listener by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-iiop-listener.adoc[`delete-iiop-listener`] subcommand.
+. List the IIOP listeners by using the xref:../command-reference/list-iiop-listeners.adoc[`list-iiop-listeners`] subcommand.
+. Delete an IIOP listener by using the xref:../command-reference/delete-iiop-listener.adoc[`delete-iiop-listener`] subcommand.
 . To apply your changes, restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 ==== Example 15-4 Deleting an IIOP Listener

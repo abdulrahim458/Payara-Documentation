@@ -156,7 +156,7 @@ Before creating the connection pool, you must first install and integrate the da
 . Ensure that the server is running. +
 Remote subcommands require a running server.
 . Create the JDBC connection pool by using the
-xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`] subcommand.
+xref:../command-reference/create-jdbc-connection-pool.adoc#create-jdbc-connection-pool[`create-jdbc-connection-pool`] subcommand.
 . If needed, restart the server. Some parameters require server restart. See
 xref:../../../index.adoc#configuration-changes-that-require-restart[Configuration Changes That Require Restart].
 
@@ -244,7 +244,7 @@ To test the connection attributes, go back to the _General_ tab and click the _P
 Use the `list-jdbc-connection-pools` subcommand in remote mode to list all existing JDBC connection pools.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the JDBC connection pools by using the xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-connection-pools.adoc[`list-jdbc-connection-pools`] subcommand.
+. List the JDBC connection pools by using the xref:../command-reference/list-jdbc-connection-pools.adoc[`list-jdbc-connection-pools`] subcommand.
 
 [#example-to-list-jdbc-connection-pools]
 ==== Example 11-4 to List a JDBC Connection Pool
@@ -276,7 +276,7 @@ TIP: Running a ping will force the creation of the pool if it hasn't already bee
 Before you can contact a connection pool, the connection pool must be created with authentication, and the server or database must be running.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Ping a connection pool by using the xref:technical-documentation/payara-server-documentation/command-reference/ping-connection-pool.adoc[`ping-connection-pool`] subcommand.
+. Ping a connection pool by using the xref:../command-reference/ping-connection-pool.adoc[`ping-connection-pool`] subcommand.
 
 [#example-to-contact-ping-a-connection-pool]
 ==== Example 11-5 to Contact (Ping) a Connection Pool
@@ -322,7 +322,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 You can change all settings for an existing pool except its name. Use the `get` and `set` subcommands to view and change the values of the JDBC connection pool properties.
 
 . List the JDBC connection pools by using the
-xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-connection-pools.adoc[`list-jdbc-connection-pools`] subcommand.
+xref:../command-reference/list-jdbc-connection-pools.adoc[`list-jdbc-connection-pools`] subcommand.
 . View the attributes of the JDBC connection pool by using the get subcommand.
 +
 For example: `asadmin get resources.jdbc-connection-pool.H2Pool.property`
@@ -761,7 +761,7 @@ Before creating a JDBC resource, you must first create a JDBC connection pool. F
 
 . Ensure that the server is running. Remote subcommands require a running server.
 . Create a JDBC resource by using the
-xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-resource.adoc[`create-jdbc-resource`] subcommand.
+xref:../command-reference/create-jdbc-resource.adoc[`create-jdbc-resource`] subcommand.
 +
 Information about properties for the subcommand is included in this help page.
 . If necessary, notify users that the new resource has been created.
@@ -785,7 +785,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Use the `list-jdbc-resources` subcommand in remote mode to list the existing JDBC resources.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List JDBC resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-resources.adoc[`list-jdbc-resources`] subcommand.
+. List JDBC resources by using the xref:../command-reference/list-jdbc-resources.adoc[`list-jdbc-resources`] subcommand.
 
 [#example-to-list-jdbc-resources]
 ==== Example 11-9 to List a JDBC Resource
@@ -809,8 +809,8 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 
 You can enable or disable a JDBC resource by using the `set` subcommand. The JDBC resource is identified by its dotted name.
 
-. List JDBC resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-resources.adoc[`list-jdbc-resources`] subcommand.
-. Modify the values for the specified JDBC resource by using the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand.
+. List JDBC resources by using the xref:../command-reference/list-jdbc-resources.adoc[`list-jdbc-resources`] subcommand.
+. Modify the values for the specified JDBC resource by using the xref:../command-reference/set.adoc[`set`] subcommand.
 
 For example:
 
@@ -834,9 +834,9 @@ Use the `delete-jdbc-resource` subcommand in remote mode to delete an existing J
 Before deleting a JDBC resource, all associations with this resource must be removed.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List JDBC resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-jdbc-resources.adoc[`list-jdbc-resources`] subcommand.
+. List JDBC resources by using the xref:../command-reference/list-jdbc-resources.adoc[`list-jdbc-resources`] subcommand.
 . If necessary, notify users that the JDBC resource is being deleted.
-. Delete a JDBC resource by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-jdbc-resource.adoc[`delete-jdbc-resource`] subcommand.
+. Delete a JDBC resource by using the xref:../command-reference/delete-jdbc-resource.adoc[`delete-jdbc-resource`] subcommand.
 
 [#example-to-delete-a-jdbc-resource]
 ==== Example 11-11 to Delete a JDBC Resource

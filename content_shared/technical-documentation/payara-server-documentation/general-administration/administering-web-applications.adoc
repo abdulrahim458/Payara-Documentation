@@ -140,7 +140,7 @@ xref:administering-web-applications.adoc#example-6-5[Example 6-5] provide exampl
 . Start Apache HTTP Server (`httpd`).
 . Start Payara Server with at least one web application deployed. +
 In order for the `mod_jk`-enabled network listener to start listening for requests, the web container must be started. Normally, this is achieved by deploying a web application.
-. Create a jk-enabled network listener by using the xref:technical-documentation/payara-server-documentation/command-reference/create-network-listener.adoc[`create-network-listener`] subcommand.
+. Create a jk-enabled network listener by using the xref:../command-reference/create-network-listener.adoc[`create-network-listener`] subcommand.
 +
 [source,shell]
 ----
@@ -217,7 +217,7 @@ In order to support stickiness, the Apache `mod_jk` load balancer relies on a `j
 .  On each of the instances, perform the steps in  xref:administering-web-applications.adoc#to-enable-mod_jk[To Enable `mod_jk`]. +
 If your instances run on the same machine, you must choose different JK ports. The ports must match `worker.worker*.port` in your `workers.properties` file. See the properties file in xref:administering-web-applications.adoc#example-6-5[Example 6-5].
 
-. On each of the instances, create the `jvmRoute` system property of Payara Server by using the xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc[`create-jvm-options`] subcommand. +
+. On each of the instances, create the `jvmRoute` system property of Payara Server by using the xref:../command-reference/create-jvm-options.adoc[`create-jvm-options`] subcommand. +
 Use the following format:
 +
 [source,shell]

@@ -90,4 +90,4 @@ image::hot-auto-deploy/eclipse-micro-hot-auto-deploy.png[Configuration name]
 
 [[see-also]]
 == See Also
-xref:technical-documentation/ecosystem/ide-integration/hot-deploy-and-auto-deploy.adoc[Hot Deploy and Auto Deploy]
+xref:../hot-deploy-and-auto-deploy.adoc[Hot Deploy and Auto Deploy]

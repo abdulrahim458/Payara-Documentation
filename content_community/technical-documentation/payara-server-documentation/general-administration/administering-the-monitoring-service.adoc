@@ -341,7 +341,7 @@ By default, the monitoring service is enabled for Payara Server, but monitoring 
 
 Use the `enable-monitoring` subcommand to enable the monitoring service itself, or to enable monitoring for individual modules. Monitoring is immediately activated, without restarting Payara Server.
 
-You can also use the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc#set[`set`] subcommand to enable monitoring for a module. Using the `set` command is not a dynamic procedure, so you need to restart Payara Server for your changes to take effect.
+You can also use the xref:../command-reference/set.adoc#set[`set`] subcommand to enable monitoring for a module. Using the `set` command is not a dynamic procedure, so you need to restart Payara Server for your changes to take effect.
 
 *  Determine which services and components are currently enabled for monitoring.
 +
@@ -358,7 +358,7 @@ configs.config.server-config.monitoring-service.module-monitoring-levels.web-con
        configs.config.server-config.monitoring-service.module-monitoring-levels.http-service=OFF
            configs.config.server-config.monitoring-service.module-monitoring-levels.jvm=HIGH
 ----
-*  Enable monitoring by using the xref:technical-documentation/payara-server-documentation/command-reference/enable-monitoring.adoc[`enable-monitoring`] subcommand. Server restart is not required.
+*  Enable monitoring by using the xref:../command-reference/enable-monitoring.adoc[`enable-monitoring`] subcommand. Server restart is not required.
 
 [#example-to-enable-monitoring]
 ==== Example - Enable Monitoring
@@ -448,7 +448,7 @@ Command get-monitoring-level executed successfully.
 ----
 +
 As the io
-*  Disable monitoring for a service or module by using the xref:technical-documentation/payara-server-documentation/command-reference/disable-monitoring.adoc[`disable-monitoring`] subcommand. +
+*  Disable monitoring for a service or module by using the xref:../command-reference/disable-monitoring.adoc[`disable-monitoring`] subcommand. +
 Server restart is not required.
 
 [#example-to-disable-monitoring]
@@ -491,7 +491,7 @@ A monitorable object must be configured for monitoring before you can display da
 
 . Determine which type of monitorable object you want to monitor. +
 Your choices for 5.0 are `jvm`, `httplistener`, and `webmodule`.
-. Request the monitoring data by using the xref:technical-documentation/payara-server-documentation/command-reference/monitor.adoc[`monitor`] subcommand.
+. Request the monitoring data by using the xref:../command-reference/monitor.adoc[`monitor`] subcommand.
 
 [#example-to-view-common-monitoring-data]
 ==== Example 8-6 View Common Monitoring Data
@@ -683,7 +683,7 @@ Although the `monitor` subcommand is useful in many situations, it does not offe
 
 A monitorable object must be configured for monitoring before you can display information about the object. See xref:administering-the-monitoring-service.adoc#to-enable-monitoring[To Enable Monitoring] if needed.
 
-*  List the objects that are enabled for monitoring by using the xref:technical-documentation/payara-server-documentation/command-reference/list.adoc[`list`] subcommand. +
+*  List the objects that are enabled for monitoring by using the xref:../command-reference/list.adoc[`list`] subcommand. +
 For example, the following subcommand lists all components and services that have monitoring enabled for instance `server`.
 +
 [source,shell]
@@ -697,7 +697,7 @@ server.applications
 server.http-service
 server.thread-pools
 ----
-*  Get data for a monitored component or service by using the xref:technical-documentation/payara-server-documentation/command-reference/get.adoc[`get`] subcommand.
+*  Get data for a monitored component or service by using the xref:../command-reference/get.adoc[`get`] subcommand.
 
 [#example-to-view-comprehensive-monitoring-data]
 ==== Example 8-7 Viewing Attributes for a Specific Type

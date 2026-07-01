@@ -87,7 +87,7 @@ hello <web>
 Command list-applications executed successfully.
 ----
 
-This example runs the xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc[`list-applications`] subcommand in single mode.
+This example runs the xref:../command-reference/list-applications.adoc[`list-applications`] subcommand in single mode.
 In this example, the default values for all options are used.
 
 The example shows that the application `hello` is deployed on the local host.
@@ -166,7 +166,7 @@ NOTE: Starting a multimode session does not require a running DAS.
 . Do one of the following:
 +
 * Run the `asadmin` utility without a subcommand.
-* Use the xref:technical-documentation/payara-server-documentation/command-reference/multimode.adoc[`multimode`] subcommand.
+* Use the xref:../command-reference/multimode.adoc[`multimode`] subcommand.
 
 . If necessary, also specify any `asadmin` utility options that will apply throughout the multimode session.
 . In a multimode session, the `asadmin>` prompt is displayed on the command line. You can now type `asadmin` subcommands at this prompt to administer Payara Server.
@@ -408,7 +408,7 @@ Shared server instances will often need to override attributes defined in their 
 Use the `create-system-properties` subcommand in remote mode to create or update one or more system properties of the domain or configuration. Any configuration attribute can be overwritten through a system property of the corresponding name.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Create system properties by using the xref:technical-documentation/payara-server-documentation/command-reference/create-system-properties.adoc[`create-system-properties`] subcommand.
+. Create system properties by using the xref:../command-reference/create-system-properties.adoc[`create-system-properties`] subcommand.
 
 ==== Example 2-15 Creating a System Property
 
@@ -425,7 +425,7 @@ This example creates a system property associated with `http-listener-port=1088`
 Use the `list-system-properties` subcommand in remote mode to list the system properties that apply to a domain, cluster, or server instance or configuration.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List system properties by using the xref:technical-documentation/payara-server-documentation/command-reference/list-system-properties.adoc[`list-system-properties`] subcommand.
+. List system properties by using the xref:../command-reference/list-system-properties.adoc[`list-system-properties`] subcommand.
 
 The existing system properties are displayed, including predefined properties such as `HTTP_LISTENER_PORT` and `HTTP_SSL_LISTENER_PORT`.
 
@@ -445,8 +445,8 @@ This example lists the system properties on host `localhost`.
 Use the `delete-system-property` subcommand in remote mode to delete system properties.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the existing system properties by using the xref:technical-documentation/payara-server-documentation/command-reference/list-system-properties.adoc[`list-system-properties`] subcommand.
-. Delete the system property by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-system-property.adoc[`delete-system-property`] subcommand.
+. List the existing system properties by using the xref:../command-reference/list-system-properties.adoc[`list-system-properties`] subcommand.
+. Delete the system property by using the xref:../command-reference/delete-system-property.adoc[`delete-system-property`] subcommand.
 . If necessary, notify users that the system property has been deleted.
 
 ==== Example 2-17 Deleting a System Property
@@ -643,7 +643,7 @@ Module configuration elements are stored in `domain.xml` only when the default c
 Use the `create-module-config` subcommand to add the default configuration of a module to `domain.xml`.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Add the default configuration of a module to `domain.xml` by using xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-resource.adoc[`create-module-config`] subcommand.
+. Add the default configuration of a module to `domain.xml` by using xref:../command-reference/create-jdbc-resource.adoc[`create-module-config`] subcommand.
 
 ==== Example 2-18 Adding Module Configuration to `domain.xml`
 
@@ -662,7 +662,7 @@ Use the `delete-module-config` subcommand to remove the configuration of a modul
 use the default configuration included in the module.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Remove the configuration of a module from `domain.xml` by using the xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-resource.adoc[`delete-module-config`] subcommand.
+. Remove the configuration of a module from `domain.xml` by using the xref:../command-reference/create-jdbc-resource.adoc[`delete-module-config`] subcommand.
 
 ==== Example 2-19 Removing Module Configuration from `domain.xml`
 
@@ -679,7 +679,7 @@ This example deletes the configuration of the web container module from `domain1
 Use the `get-active-module-config` subcommand to display the current active configuration of a module.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Display the current active configuration of a module by using the xref:technical-documentation/payara-server-documentation/command-reference/create-jdbc-resource.adoc[`get-active-module-config`] subcommand.
+. Display the current active configuration of a module by using the xref:../command-reference/create-jdbc-resource.adoc[`get-active-module-config`] subcommand.
 
 ==== Example 2-20 Displaying the Current Active Configuration of a Module
 
@@ -708,7 +708,7 @@ The following resources are supported: JDBC connection pool and resource, JMS, J
 The XML file must reside in the `domain-dir/config` directory. If you specify a relative path or simply provide the name of the XML file, this subcommand will prepend `domain-dir/config` to this operand.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Add resources from an XML file by using the xref:technical-documentation/payara-server-documentation/command-reference/add-resources.adoc[`add-resources`] subcommand. Information about properties for the subcommand is included in this help page.
+. Add resources from an XML file by using the xref:../command-reference/add-resources.adoc[`add-resources`] subcommand. Information about properties for the subcommand is included in this help page.
 . Restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 ==== Example 2-21 Adding Resources
@@ -732,7 +732,7 @@ Use the `version` subcommand in remote mode to display information about the Pay
 then the local version is displayed along with a warning message.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Display the version by using the xref:technical-documentation/payara-server-documentation/command-reference/version.adoc[`version`] subcommand.
+. Display the version by using the xref:../command-reference/version.adoc[`version`] subcommand.
 
 ==== Example 2-22 Displaying Version Information
 
@@ -751,7 +751,7 @@ This example displays the version of Payara Server on the local host.
 Use the `list-applications` subcommand in remote mode to list the deployed applications. If the `--type` option is not specified, all applications are listed.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List applications by using the xref:technical-documentation/payara-server-documentation/command-reference/list-applications.adoc[`list-applications`] subcommand.
+. List applications by using the xref:../command-reference/list-applications.adoc[`list-applications`] subcommand.
 
 ==== Example 2-23 Listing Applications
 
@@ -769,7 +769,7 @@ This example lists the web applications on `localhost`.
 Use the `list-containers` subcommand in remote mode to list application containers.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List containers by using the xref:technical-documentation/payara-server-documentation/command-reference/list-containers.adoc[`list-containers`] subcommand.
+. List containers by using the xref:../command-reference/list-containers.adoc[`list-containers`] subcommand.
 
 ==== Example 2-24 Listing Containers
 
@@ -812,7 +812,7 @@ Use the `list-modules` subcommand in remote mode to list the modules that are ac
 The status of each module is included. Possible statuses include NEW and READY.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List modules by using the xref:technical-documentation/payara-server-documentation/command-reference/list-modules.adoc[`list-modules`] subcommand.
+. List modules by using the xref:../command-reference/list-modules.adoc[`list-modules`] subcommand.
 
 ==== Example 2-25 Listing Modules
 
@@ -948,7 +948,7 @@ You can specify that only remote subcommands or only local subcommands are liste
 by a list of remote subcommands.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List subcommands by using the xref:technical-documentation/payara-server-documentation/command-reference/list-commands.adoc[`list-commands`] subcommand.
+. List subcommands by using the xref:../command-reference/list-commands.adoc[`list-commands`] subcommand.
 
 ==== Example 2-26 Listing Subcommands
 
@@ -981,7 +981,7 @@ service are not destroyed when the server is shut down or restarted.
 Use the `list-timers` subcommand in remote mode to list the persistent timers owned by a specific server instance. You can use this information to decide whether to do a timer migration, or to verify that a migration has been completed successfully.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List timers by using the xref:technical-documentation/payara-server-documentation/command-reference/list-timers.adoc[`list-timers`] subcommand.
+. List timers by using the xref:../command-reference/list-timers.adoc[`list-timers`] subcommand.
 
 ==== Example 2-27 Listing Timers
 
@@ -999,7 +999,7 @@ This example lists the timers in a particular standalone server instance. There 
 Use the `show-component-status` subcommand in remote mode to get the status (either enabled or disabled) of the specified deployed component.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Show component status by using the xref:technical-documentation/payara-server-documentation/command-reference/show-component-status.adoc[`show-component-status`] subcommand.
+. Show component status by using the xref:../command-reference/show-component-status.adoc[`show-component-status`] subcommand.
 
 ==== Example 2-28 Showing Status of a Component
 

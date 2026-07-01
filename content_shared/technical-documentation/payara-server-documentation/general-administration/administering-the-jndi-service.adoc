@@ -95,7 +95,7 @@ A custom resource specifies a custom server-wide resource object factory that im
 Use the `create-custom-resource` subcommand in remote mode to create a custom resource.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Create a custom resource by using the xref:technical-documentation/payara-server-documentation/command-reference/create-custom-resource.adoc[`create-custom-resource`] subcommand. +
+. Create a custom resource by using the xref:../command-reference/create-custom-resource.adoc[`create-custom-resource`] subcommand. +
 Information on properties for the subcommand is contained in this help page. Restart Payara Server. See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
 
 .Example 18-1 Creating a Custom Resource
@@ -113,7 +113,7 @@ This example creates a custom resource named `sample-custom-resource`.
 Use the `list-custom-resources` subcommand in remote mode to list the existing custom resources.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the custom resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-custom-resources.adoc[`list-custom-resources`] subcommand.
+. List the custom resources by using the xref:../command-reference/list-custom-resources.adoc[`list-custom-resources`] subcommand.
 
 .Example 18-2 Listing Custom Resources
 [source,shell]
@@ -128,8 +128,8 @@ This example lists the existing custom resources.
 [#to-update-a-custom-jndi-resource]
 ==== To Update a Custom JNDI Resource
 
-. List the custom resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-custom-resources.adoc[`list-custom-resources`] subcommand.
-. Use the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand to modify a custom JNDI resource.
+. List the custom resources by using the xref:../command-reference/list-custom-resources.adoc[`list-custom-resources`] subcommand.
+. Use the xref:../command-reference/set.adoc[`set`] subcommand to modify a custom JNDI resource.
 
 .Example 18-3 Updating a Custom JNDI Resource
 [source,shell]
@@ -146,8 +146,8 @@ This example modifies a custom resource.
 Use the `delete-custom-resource` subcommand in remote mode to delete a custom resource.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the custom resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-custom-resources.adoc[`list-custom-resources`] subcommand.
-. Delete a custom resource by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-custom-resource.adoc[`delete-custom-resource`] subcommand.
+. List the custom resources by using the xref:../command-reference/list-custom-resources.adoc[`list-custom-resources`] subcommand.
+. Delete a custom resource by using the xref:../command-reference/delete-custom-resource.adoc[`delete-custom-resource`] subcommand.
 
 .Example 18-4 Deleting a Custom Resource
 [source,shell]
@@ -172,7 +172,7 @@ Use the `create-jndi-resource` subcommand in remote mode to register an external
 The external JNDI factory must implement the `javax.naming.spi.InitialContextFactory` interface.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Register an external JNDI resource by using the xref:technical-documentation/payara-server-documentation/command-reference/create-jndi-resource.adoc[`create-jndi-resource`] subcommand. +
+. Register an external JNDI resource by using the xref:../command-reference/create-jndi-resource.adoc[`create-jndi-resource`] subcommand. +
 Information on properties for the subcommand is contained in this help page.
 . Restart Payara Server. +
 See xref:administering-domains.adoc#to-restart-a-domain[To Restart a Domain].
@@ -193,7 +193,7 @@ In This example `sample_jndi_resource` is registered.
 Use the `list-jndi-resources` subcommand in remote mode to list all existing JNDI resources.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the existing JNDI resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-jndi-resources.adoc#list-jndi-resources[`list-jndi-resources`] subcommand.
+. List the existing JNDI resources by using the xref:../command-reference/list-jndi-resources.adoc#list-jndi-resources[`list-jndi-resources`] subcommand.
 
 .Example 18-6 Listing JNDI Resources
 [source,shell]
@@ -213,7 +213,7 @@ Use the `list-jndi-entries` subcommand in remote mode to browse and list the ent
 the JNDI context or subcontext to list specific entries.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. List the JNDI entries for a configuration by using the xref:technical-documentation/payara-server-documentation/command-reference/list-jndi-entries.adoc[`list-jndi-entries`] subcommand.
+. List the JNDI entries for a configuration by using the xref:../command-reference/list-jndi-entries.adoc[`list-jndi-entries`] subcommand.
 
 .Example 18-7 Listing JNDI Entries
 [source,shell]
@@ -229,8 +229,8 @@ This example lists all the JNDI entries for the naming service.
 [#to-update-an-external-jndi-resource]
 ==== To Update an External JNDI Resource
 
-. List the existing JNDI resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-jndi-resources.adoc#list-jndi-resources[`list-jndi-resources`] subcommand.
-. Use the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`] subcommand to modify an external JNDI resource.
+. List the existing JNDI resources by using the xref:../command-reference/list-jndi-resources.adoc#list-jndi-resources[`list-jndi-resources`] subcommand.
+. Use the xref:../command-reference/set.adoc[`set`] subcommand to modify an external JNDI resource.
 
 .Example 18-8 Updating an External JNDI Resource
 [source,shell]
@@ -246,7 +246,7 @@ This example modifies an external resource.
 Use the `delete-jndi-resource` subcommand in remote mode to remove a JNDI resource.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Remove an external JNDI entry by using the xref:technical-documentation/payara-server-documentation/command-reference/delete-jndi-resource.adoc[`delete-jndi-resource`] subcommand.
+. Remove an external JNDI entry by using the xref:../command-reference/delete-jndi-resource.adoc[`delete-jndi-resource`] subcommand.
 
 .Example 18-9 Deleting an External JNDI Resource
 [source,shell]

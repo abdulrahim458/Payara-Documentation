@@ -559,12 +559,12 @@ gogo$
 
 Java SE provides tools to connect to an MBean server and view the MBeans that are registered with the server. JConsole is one such popular JMX Connector Client and is available as part of the standard Java SE distribution.
 
-For instructions on integrating JConsole in the Payara Server environment, see xref:technical-documentation/payara-server-documentation/general-administration/administering-the-monitoring-service.adoc#configuring-jconsole-to-view-payara-server-monitoring-data[Configuring JConsole to View Payara Server Monitoring Data].
+For instructions on integrating JConsole in the Payara Server environment, see xref:administering-the-monitoring-service.adoc#configuring-jconsole-to-view-payara-server-monitoring-data[Configuring JConsole to View Payara Server Monitoring Data].
 
 [[instructions-for-administering-payara-server]]
 == Instructions for Administering Payara Server
 
-Information and instructions on performing most of the administration tasks from the command line are provided in this document and in the `asadmin` utility help pages. For instructions on accessing `asadmin` online help, see xref:technical-documentation/payara-server-documentation/general-administration/general-runtime-administration.adoc#to-display-help-information-for-the-asadmin-utility-or-a-subcommand[To Display Help Information for the `asadmin` Utility or a Subcommand].
+Information and instructions on performing most of the administration tasks from the command line are provided in this document and in the `asadmin` utility help pages. For instructions on accessing `asadmin` online help, see xref:general-runtime-administration.adoc#to-display-help-information-for-the-asadmin-utility-or-a-subcommand[To Display Help Information for the `asadmin` Utility or a Subcommand].
 
 [[phone-home]]
 == Phone Home
@@ -612,7 +612,7 @@ The phone home service is enabled by default when starting a Payara Server. The 
 asadmin> enable-phone-home
 [source,text]
 ----
-See xref:technical-documentation/payara-server-documentation/command-reference/enable-phone-home.adoc#enable-phone-home[`enable-phone-home`]
+See xref:../command-reference/enable-phone-home.adoc#enable-phone-home[`enable-phone-home`]
 
 
 [[disable-phone-home]]
@@ -628,7 +628,7 @@ Run this asadmin command and then restart the server to disable PhoneHome
 asadmin> disable-phone-home
 [source,text]
 ----
-See  xref:technical-documentation/payara-server-documentation/command-reference/disable-phone-home.adoc#disable-phone-home[`disable-phone-home`]
+See  xref:../command-reference/disable-phone-home.adoc#disable-phone-home[`disable-phone-home`]
 
 [[removing-the-service-module]]
 ==== Disable by Removing The Service Module
@@ -644,11 +644,11 @@ See  xref:technical-documentation/payara-server-documentation/command-reference/
 asadmin> list-phone-home
 [source,text]
 ----
-See xref:technical-documentation/payara-server-documentation/command-reference/list-phone-home.adoc#list-phone-home[`list-phone-home`]
+See xref:../command-reference/list-phone-home.adoc#list-phone-home[`list-phone-home`]
 
 
 === See Also
 
-* xref:technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/command-line-options/disable-phone-home.adoc[Disable PhoneHome in Payara Micro]
+* xref:../../payara-micro-documentation/payara-micro-configuration-and-management/micro-management/command-line-options/disable-phone-home.adoc[Disable PhoneHome in Payara Micro]
 * https://github.com/payara/Payara/blob/master/nucleus/payara-modules/phonehome-bootstrap/src/main/java/fish/payara/nucleus/phonehome/PhoneHomeTask.java[Phone Home Source Code^]
 

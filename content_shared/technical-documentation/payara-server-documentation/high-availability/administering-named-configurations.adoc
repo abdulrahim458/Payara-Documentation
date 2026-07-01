@@ -85,7 +85,7 @@ If no configuration is specified, Payara Server creates a copy of the default co
 . Run the `copy-config` subcommand.
 +
 NOTE: Only the options that are required to complete this task are provided in this step.
-For information about all the options for configuring the named configuration, see the xref:technical-documentation/payara-server-documentation/command-reference/copy-config.adoc#copy-config[`copy-config`] help page.
+For information about all the options for configuring the named configuration, see the xref:../command-reference/copy-config.adoc#copy-config[`copy-config`] help page.
 +
 [source,shell]
 ----
@@ -110,7 +110,7 @@ Command copy-config executed successfully.
 * xref:administering-payara-server-clusters.adoc#to-create-a-cluster[To Create a Cluster]
 * xref:administering-payara-server-instances.adoc#to-create-an-instance-centrally[To Create an Instance Centrally]
 * xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
-* xref:technical-documentation/payara-server-documentation/command-reference/copy-config.adoc#copy-config[`copy-config`]
+* xref:../command-reference/copy-config.adoc#copy-config[`copy-config`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help copy-config` at the command line.
 
@@ -120,7 +120,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Use the `list-configs` subcommand in remote mode to list existing named configurations in a domain.
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/list-configs.adoc[`list-configs`] subcommand.
+. Run the xref:../command-reference/list-configs.adoc[`list-configs`] subcommand.
 +
 [source,shell]
 ----
@@ -140,7 +140,7 @@ Command list-configs executed successfully.
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/list-configs.adoc[`list-configs`]
+xref:../command-reference/list-configs.adoc[`list-configs`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-configs` at the command line.
 
@@ -187,8 +187,8 @@ Command list-instances executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/list-clusters.adoc[`list-clusters`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc[`list-instances`]
+* xref:../command-reference/list-clusters.adoc[`list-clusters`]
+* xref:../command-reference/list-instances.adoc[`list-instances`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 
@@ -229,7 +229,7 @@ asadmin> list-instances config-name
 *config-name*:
   The name of the configuration that you are deleting.
 
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/delete-config.adoc[`delete-config`] subcommand.
+. Run the xref:../command-reference/delete-config.adoc[`delete-config`] subcommand.
 +
 [source,shell]
 ----
@@ -259,9 +259,9 @@ Command delete-config executed successfully.
 * xref:administering-payara-server-instances.adoc#to-delete-an-instance-centrally[To Delete an Instance Centrally]
 * xref:administering-payara-server-instances.adoc#to-delete-an-instance-locally[To Delete an Instance Locally]
 * xref:administering-payara-server-clusters.adoc#to-delete-a-cluster[To Delete a Cluster]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-config.adoc#delete-config[`delete-config`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-clusters.adoc#list-clusters[`list-clusters`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc#list-instances[`list-instances`]
+* xref:../command-reference/delete-config.adoc#delete-config[`delete-config`]
+* xref:../command-reference/list-clusters.adoc#list-clusters[`list-clusters`]
+* xref:../command-reference/list-instances.adoc#list-instances[`list-instances`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 
@@ -281,7 +281,7 @@ CAUTION: To avoid port conflicts, edit the properties of named configurations an
 
 The default configuration `default-config` contains properties that define the initial values of port numbers in a configuration that is copied from `default-config`. When an instance or a cluster that references the configuration is created, these properties are set for the instance.
 
-You can create additional system properties for a configuration either by specifying the `--systemproperties` option of the xref:technical-documentation/payara-server-documentation/command-reference/copy-config.adoc[`copy-config`] subcommand or by using the xref:technical-documentation/payara-server-documentation/command-reference/create-system-properties.adoc[`create-system-properties`] subcommand.
+You can create additional system properties for a configuration either by specifying the `--systemproperties` option of the xref:../command-reference/copy-config.adoc[`copy-config`] subcommand or by using the xref:../command-reference/create-system-properties.adoc[`create-system-properties`] subcommand.
 
 To reference a system property from the configuration, use the `$\{property-name\}` notation, where prop-name is the name of the system property.
 
@@ -372,8 +372,8 @@ Command set executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/get.adoc[`get` command]
-* xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set` command]
+* xref:../command-reference/get.adoc[`get` command]
+* xref:../command-reference/set.adoc[`set` command]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 
@@ -436,8 +436,8 @@ Command set executed successfully.
 
 *See Also*
 
-* xref:technical-documentation/payara-server-documentation/command-reference/get.adoc[`get` command]
-* xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set` command]
+* xref:../command-reference/get.adoc[`get` command]
+* xref:../command-reference/set.adoc[`set` command]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 

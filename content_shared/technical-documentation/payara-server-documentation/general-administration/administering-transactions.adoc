@@ -108,7 +108,7 @@ You can configure the transaction service in the Payara Server in the following 
 * To configure the transaction service using the Administration Console, open the Transaction Service component under the relevant configuration.
 For details, click the Help button in the Administration Console.
 
-* To configure the transaction service, use the xref:technical-documentation/payara-server-documentation/command-reference/set.adoc[`set`]
+* To configure the transaction service, use the xref:../command-reference/set.adoc[`set`]
 subcommand to set the following attributes. +
 The following examples show the `server-config` configuration, but values for any configuration can be set. For example, if you create a cluster named
 `cluster1` and a configuration named `cluster1-config` is automatically created for it, you can use `cluster1-config` in the `set` subcommand to get the transaction service
@@ -158,7 +158,7 @@ Default property values are shown where they exist. For `db-logging-resource` an
 
 ** The `recover-txn-delay` default of `-1` means that recovery will be attempted upon start of the server if `automatic-recovery` is enabled. Use this property to delay the initial execution of the recovery thread. The delay value is expressed in seconds.
 
-You can use the xref:technical-documentation/payara-server-documentation/command-reference/get.adoc[`get`] subcommand to list all the transaction service attributes and the properties that have been set. +
+You can use the xref:../command-reference/get.adoc[`get`] subcommand to list all the transaction service attributes and the properties that have been set. +
 Changing `keypoint-interval`, `retry-timeout-in-seconds`, or `timeout-in-seconds` does not require a server restart. Changing other attributes or properties requires a
 server restart.
 * You can also set the following system properties:
@@ -191,7 +191,7 @@ Running this subcommand on a stopped transaction subsystem has no effect. The tr
 the `unfreeze-transaction-service` subcommand.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Stop the transaction service by using the xref:technical-documentation/payara-server-documentation/command-reference/freeze-transaction-service.adoc[`freeze-transaction-service`] subcommand.
+. Stop the transaction service by using the xref:../command-reference/freeze-transaction-service.adoc[`freeze-transaction-service`] subcommand.
 
 ==== Example 19-1 Stopping the Transaction Service
 
@@ -226,7 +226,7 @@ See xref:administering-the-monitoring-service.adoc#transaction-service-statistic
 ----
 asadmin> get --monitor instance1.server.transaction-service.activeids-current
 ----
-. Roll back the transaction by using the xref:technical-documentation/payara-server-documentation/command-reference/rollback-transaction.adoc[`rollback-transaction`] subcommand. +
+. Roll back the transaction by using the xref:../command-reference/rollback-transaction.adoc[`rollback-transaction`] subcommand. +
 The transaction is not rolled back at the time of this command's execution, but only marked for rollback. The transaction is rolled back when it is completed.
 
 ==== Example 19-2 Rolling Back a Transaction
@@ -246,7 +246,7 @@ Use the `unfreeze-transaction-service` subcommand in remote mote to resume all t
 transaction service after it has been frozen.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Restart the suspended transaction service by using the xref:technical-documentation/payara-server-documentation/command-reference/unfreeze-transaction-service.adoc[`unfreeze-transaction-service`] subcommand.
+. Restart the suspended transaction service by using the xref:../command-reference/unfreeze-transaction-service.adoc[`unfreeze-transaction-service`] subcommand.
 
 ==== Example 19-3 Restarting the Transaction Service
 
@@ -268,7 +268,7 @@ To determine the exact behavior for your database, refer to the documentation fr
 
 To explicitly specify whether Payara Server commits or rolls back
 non-XA transactions at server shutdown, set the `com.sun.enterprise.in-progress-local-transaction.completion-mode` JVM option to either `commit` or `rollback`
-using the xref:technical-documentation/payara-server-documentation/command-reference/create-jvm-options.adoc[`create-jvm-options`] subcommand. For example: +
+using the xref:../command-reference/create-jvm-options.adoc[`create-jvm-options`] subcommand. For example: +
 
 [source,shell]
 ----
@@ -320,7 +320,7 @@ NOTE: A JMS resource crash is handled the same way as any other resource. +
 You can list in-doubt Open Message Queue transactions using the `imqcmd list txn` subcommand.
 
 . Ensure that the server is running. Remote subcommands require a running server.
-. Manually recover transactions by using the xref:technical-documentation/payara-server-documentation/command-reference/recover-transactions.adoc[`recover-transactions`] subcommand.
+. Manually recover transactions by using the xref:../command-reference/recover-transactions.adoc[`recover-transactions`] subcommand.
 
 ==== Example 19-4 Manually Recovering Transactions
 

@@ -91,7 +91,7 @@ This example lists the Jakarta Mail resources on `localhost`.
 [#to-update-a-javamail-resource]
 === To Update a Jakarta Mail Resource
 
-. List the Jakarta Mail resources by using the xref:technical-documentation/payara-server-documentation/command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommand.
+. List the Jakarta Mail resources by using the xref:../command-reference/list-javamail-resources.adoc[`list-javamail-resources`] subcommand.
 . Modify the values for the specified Jakarta Mail source by using the xref:../command-reference/set.adoc[`set`] subcommand. The resource is identified by its dotted name.
 
 ==== Example - Updating a Jakarta Mail Resource

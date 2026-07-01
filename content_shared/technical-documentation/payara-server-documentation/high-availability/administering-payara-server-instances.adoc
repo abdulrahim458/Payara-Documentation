@@ -79,7 +79,7 @@ In this situation, ensure that you have the Internet Protocol (IP) address of th
 . Ensure that the DAS is running. Remote subcommands require a running server.
 . Run the `create-instance` subcommand.
 
-NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for configuring the instance, see the xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc[`create-instance`] help page.
+NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for configuring the instance, see the xref:../command-reference/create-instance.adoc[`create-instance`] help page.
 
 * If you are creating a standalone instance, do not specify a cluster.
 +
@@ -153,7 +153,7 @@ Command create-instance executed successfully.
 
 * xref:administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
 * xref:administering-payara-server-instances.adoc#to-create-an-instance-locally[To Create an Instance Locally]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-instance.adoc#create-instance[`create-instance`]
+* xref:../command-reference/create-instance.adoc#create-instance[`create-instance`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-instance` at the command line.
 
@@ -163,7 +163,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Use the `list-instances` subcommand in remote mode to obtain information about existing instances in a domain.
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc[`list-instances`] subcommand.
+. Run the xref:../command-reference/list-instances.adoc[`list-instances`] subcommand.
 +
 [source,shell]
 ----
@@ -200,7 +200,7 @@ Command list-instances executed successfully.
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc[`list-instances`]
+xref:../command-reference/list-instances.adoc[`list-instances`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help list-instances` at the command line.
 
@@ -210,7 +210,7 @@ You can also view the full syntax and options of the subcommand by typing `asadm
 Use the `delete-instance` subcommand in remote mode to delete a Payara Server instance centrally.
 
 WARNING: If you are using a Java Message Service (JMS) cluster with a master broker, do not delete the instance that is associated with the master broker. +
-If this instance must be deleted, use the xref:technical-documentation/payara-server-documentation/command-reference/change-master-broker.adoc[`change-master-broker`] subcommand first to assign the master broker to a different instance.
+If this instance must be deleted, use the xref:../command-reference/change-master-broker.adoc[`change-master-broker`] subcommand first to assign the master broker to a different instance.
 
 Deleting an instance involves the following:
 
@@ -233,7 +233,7 @@ asadmin> list-instances instance-name
 *instance-name*:
   The name of the instance that you are deleting.
 
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/delete-instance.adoc[`delete-instance`] subcommand.
+. Run the xref:../command-reference/delete-instance.adoc[`delete-instance`] subcommand.
 +
 [source,shell]
 ----
@@ -282,7 +282,7 @@ Ensure that following prerequisites are met:
 If any of these prerequisites is not met, start the cluster by starting each instance locally as explained in xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-locally[To Start an Individual Instance Locally].
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/start-cluster.adoc[`start-cluster`] subcommand.
+. Run the xref:../command-reference/start-cluster.adoc[`start-cluster`] subcommand.
 +
 [source,shell]
 ----
@@ -303,7 +303,7 @@ Command start-cluster executed successfully.
 *See Also*
 
 * xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-locally[To Start an Individual Instance Locally]
-* xref:technical-documentation/payara-server-documentation/command-reference/start-cluster.adoc[`start-cluster`]
+* xref:../command-reference/start-cluster.adoc[`start-cluster`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help start-cluster` at the command line.
 
@@ -315,7 +315,7 @@ Use the `stop-cluster` subcommand in remote mode to stop a cluster.
 Stopping a cluster stops all running instances in the cluster.
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/stop-cluster.adoc[`stop-cluster`] subcommand.
+. Run the xref:../command-reference/stop-cluster.adoc[`stop-cluster`] subcommand.
 +
 [source,shell]
 ----
@@ -335,7 +335,7 @@ Command stop-cluster executed successfully.
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/stop-cluster.adoc[`stop-cluster`]
+xref:../command-reference/stop-cluster.adoc[`stop-cluster`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help stop-cluster` at the command line.
 
@@ -364,7 +364,7 @@ If any of these prerequisites is not met, start the instance locally as explaine
 asadmin> start-instance instance-name
 ----
 
-NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for controlling the behavior of the instance, see the xref:technical-documentation/payara-server-documentation/command-reference/start-instance.adoc[`start-instance`] help page.
+NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for controlling the behavior of the instance, see the xref:../command-reference/start-instance.adoc[`start-instance`] help page.
 
 *instance-name*:
   The name of the instance that you are starting.
@@ -389,7 +389,7 @@ Command start-instance executed successfully.
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/start-instance.adoc[`start-instance`]
+xref:../command-reference/start-instance.adoc[`start-instance`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help start-instance` at the command line.
 
@@ -401,7 +401,7 @@ Use the `stop-instance` subcommand in remote mode to stop an individual instance
 When an instance is stopped, the instance stops accepting new requests and waits for all outstanding requests to be completed.
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc[`stop-instance`] subcommand.
+. Run the xref:../command-reference/stop-instance.adoc[`stop-instance`] subcommand.
 
 The following example stops the instance `pmd-i2`.
 
@@ -414,7 +414,7 @@ Command stop-instance executed successfully.
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc[`stop-instance`]
+xref:../command-reference/stop-instance.adoc[`stop-instance`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help stop-instance` at the command line.
 
@@ -434,7 +434,7 @@ If you require different synchronization behavior, stop and start the
 instance as explained in xref:administering-payara-server-instances.adoc#to-resynchronize-an-instance-and-the-das-online[To Resynchronize an Instance and the DAS Online].
 
 . Ensure that the DAS is running. Remote subcommands require a running server.
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/restart-instance.adoc[`restart-instance`] subcommand.
+. Run the xref:../command-reference/restart-instance.adoc[`restart-instance`] subcommand.
 +
 [source,shell]
 ----
@@ -457,7 +457,7 @@ Command restart-instance executed successfully.
 
 * xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
 * xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Start an Individual Instance Centrally]
-* xref:technical-documentation/payara-server-documentation/command-reference/restart-instance.adoc#restart-instance[`restart-instance`(1)]
+* xref:../command-reference/restart-instance.adoc#restart-instance[`restart-instance`(1)]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help restart-instance` at the command line.
 
@@ -647,7 +647,7 @@ Command create-local-instance executed successfully.
 
 * xref:administering-payara-server-nodes.adoc#to-create-an-ssh-node[To Create an `SSH` Node]
 * xref:administering-payara-server-nodes.adoc#to-create-a-config-node[To Create a `CONFIG` Node]
-* xref:technical-documentation/payara-server-documentation/command-reference/create-local-instance.adoc[`create-local-instance`]
+* xref:../command-reference/create-local-instance.adoc[`create-local-instance`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help create-local-instance` at the command line.
 
@@ -664,7 +664,7 @@ After creating an instance, you can start the instance as explained in the follo
 Use the `delete-local-instance` subcommand in remote mode to delete a Payara Server instance locally.
 
 CAUTION: If you are using a Java Message Service (JMS) cluster with a master broker, do not delete the instance that is associated with the master broker. +
-If this instance must be deleted, use the xref:technical-documentation/payara-server-documentation/command-reference/change-master-broker.adoc[`change-master-broker`] subcommand to assign the master broker to a different instance first.
+If this instance must be deleted, use the xref:../command-reference/change-master-broker.adoc[`change-master-broker`] subcommand to assign the master broker to a different instance first.
 
 Deleting an instance involves the following:
 
@@ -693,7 +693,7 @@ The name of the host where the DAS is running.
 The HTTP or HTTPS port on which the DAS listens for administration requests. If the DAS listens on the default port for administration requests, you may omit this option.
 *instance-name*:
 The name of the instance that you are deleting.
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc[`delete-local-instance`] subcommand.
+. Run the xref:../command-reference/delete-local-instance.adoc[`delete-local-instance`] subcommand.
 +
 [source,shell]
 ----
@@ -723,9 +723,9 @@ Command delete-local-instance executed successfully.
 
 * xref:administering-payara-server-instances.adoc#to-start-an-individual-instance-centrally[To Stop an Individual Instance Centrally]
 * xref:administering-payara-server-instances.adoc#to-stop-an-individual-instance-locally[To Stop an Individual Instance Locally]
-* xref:technical-documentation/payara-server-documentation/command-reference/change-master-broker.adoc[`change-master-broker`]
-* xref:technical-documentation/payara-server-documentation/command-reference/delete-local-instance.adoc[`delete-local-instance`]
-* xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc[`list-instances`]
+* xref:../command-reference/change-master-broker.adoc[`change-master-broker`]
+* xref:../command-reference/delete-local-instance.adoc[`delete-local-instance`]
+* xref:../command-reference/list-instances.adoc[`list-instances`]
 
 You can also view the full syntax and options of the subcommands by typing the following commands at the command line:
 
@@ -746,7 +746,7 @@ $ asadmin start-local-instance [--node node-name] instance-name
 ----
 
 NOTE: Only the options that are required to complete this task are provided in this step. +
-For information about all the options for controlling the behavior of the instance, see the xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc[`start-local-instance`] help page.
+For information about all the options for controlling the behavior of the instance, see the xref:../command-reference/start-local-instance.adoc[`start-local-instance`] help page.
 
 *node-name*:
 The node on which the instance resides. If only one node is defined for the Payara Server installation that you are running on the node's host, you may omit this option.
@@ -768,7 +768,7 @@ Command start-local-instance executed successfully.
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/start-local-instance.adoc[`start-local-instance`]
+xref:../command-reference/start-local-instance.adoc[`start-local-instance`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help start-local-instance` at the command line.
 
@@ -784,7 +784,7 @@ Use the `stop-local-instance` subcommand in local mode to stop an individual ins
 When an instance is stopped, the instance stops accepting new requests and waits for all outstanding requests to be completed.
 
 . Log in to the host that is represented by the node where the instance resides.
-. Run the xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc[`stop-local-instance`] subcommand.
+. Run the xref:../command-reference/stop-local-instance.adoc[`stop-local-instance`] subcommand.
 +
 [source,shell]
 ----
@@ -806,7 +806,7 @@ Command stop-local-instance executed successfully.
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/stop-local-instance.adoc[`stop-local-instance`]
+xref:../command-reference/stop-local-instance.adoc[`stop-local-instance`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help stop-local-instance` at the command line.
 
@@ -847,7 +847,7 @@ Command restart-local-instance executed successfully.
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/restart-local-instance.adoc[`restart-local-instance`]
+xref:../command-reference/restart-local-instance.adoc[`restart-local-instance`]
 
 You can also view the full syntax and options of the subcommand by typing `asadmin help restart-local-instance` at the command line.
 
@@ -1282,7 +1282,7 @@ This directory is the HTTP document root directory. By default, all instances in
 +
 To enable instances to use a different document root directory, a virtual server must be created in which the `docroot` property is set.
 +
-For more information, see the xref:technical-documentation/payara-server-documentation/command-reference/create-virtual-server.adoc[`create-virtual-server`] help
+For more information, see the xref:../command-reference/create-virtual-server.adoc[`create-virtual-server`] help
   page.
 +
 The `docroot` directory might be very large. Therefore, by default, only a change to a file or a subdirectory in the top level of the `docroot` directory causes the DAS to resynchronize the `docroot` directory. The DAS checks files in the top level of the `docroot` directory to ensure that changes to the `index.html` file are detected.
@@ -1444,7 +1444,7 @@ For other types of library file, the full path is required.
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`]
+xref:../command-reference/deploy.adoc[`deploy`]
 
 You can also view the full syntax and options of the subcommands by typing the command `asadmin help deploy` at the command line.
 
@@ -1594,7 +1594,7 @@ Follow these steps:
 . Ensure that the DAS is running.
 . Export the configuration data that you are resynchronizing to an archive file.
 +
-NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for exporting the configuration data, see the xref:technical-documentation/payara-server-documentation/command-reference/export-sync-bundle.adoc[`export-sync-bundle`] help page.
+NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for exporting the configuration data, see the xref:../command-reference/export-sync-bundle.adoc[`export-sync-bundle`] help page.
 +
 How to export the data depends on the host from where you run the `export-sync-bundle` subcommand.
 +
@@ -1633,7 +1633,7 @@ NOTE: To create the archive file on the host where the instance resides, set the
 
 . From the host where the instance resides, import the instance's configuration data from the archive file that you created in *Step 2*.
 +
-NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for importing the configuration data, see the xref:technical-documentation/payara-server-documentation/command-reference/import-sync-bundle.adoc[`import-sync-bundle`] help page.
+NOTE: Only the options that are required to complete this task are provided in this step. For information about all the options for importing the configuration data, see the xref:../command-reference/import-sync-bundle.adoc[`import-sync-bundle`] help page.
 +
 [source,shell]
 ----
@@ -1774,7 +1774,7 @@ asadmin> migrate-timers --target soccer football
 
 *See Also*
 
-xref:technical-documentation/payara-server-documentation/command-reference/list-timers.adoc[`list-timers`],
-xref:technical-documentation/payara-server-documentation/command-reference/migrate-timers.adoc[`migrate-timers`],
-xref:technical-documentation/payara-server-documentation/command-reference/list-instances.adoc[`list-instances`],
-xref:technical-documentation/payara-server-documentation/command-reference/stop-instance.adoc[`stop-instance`]
+xref:../command-reference/list-timers.adoc[`list-timers`],
+xref:../command-reference/migrate-timers.adoc[`migrate-timers`],
+xref:../command-reference/list-instances.adoc[`list-instances`],
+xref:../command-reference/stop-instance.adoc[`stop-instance`]

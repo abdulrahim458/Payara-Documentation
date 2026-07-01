@@ -582,7 +582,7 @@ Log formats for all server instances in a cluster will be the same. For informat
 NOTE: Changing the log format forces log rotation to avoid mixed format in the same file.
 
 . Ensure that the target server or cluster is running. Remote commands require a running server.
-. Set the formatter by using the xref:technical-documentation/payara-server-documentation/command-reference/set-log-file-format.adoc[`set-log-file-format`] subcommand.
+. Set the formatter by using the xref:../command-reference/set-log-file-format.adoc[`set-log-file-format`] subcommand.
 . To apply your change, restart Payara Server.
 
 [#example-to-set-the-log-file-format]
@@ -858,7 +858,7 @@ You can view the full syntax and options of the subcommand by typing `asadmin he
 Use the `set-log-attributes` subcommand in remote mode to change the limit on the number of log files that the server creates to store old log messages. The default target of this subcommand is the DAS.Optionally, you can target a configuration, server, instance, or cluster. The default limit value is `0`, which results in no limit placed on the number of rotated log files that are retained.
 
 . Ensure that the target server or cluster is running.
-. Change the limit number of retained log files by using the xref:technical-documentation/payara-server-documentation/command-reference/set-log-attributes.adoc[`set-log-attributes`] subcommand, specifying the following attribute and the desired file limit number: `com.sun.enterprise.server.logging.GFFileHandler.maxHistoryFiles=minutes`
+. Change the limit number of retained log files by using the xref:../command-reference/set-log-attributes.adoc[`set-log-attributes`] subcommand, specifying the following attribute and the desired file limit number: `com.sun.enterprise.server.logging.GFFileHandler.maxHistoryFiles=minutes`
 
 The behavior of the `com.sun.enterprise.server.logging.GFFileHandler.maxHistoryFiles` attribute is as follows:
 
@@ -915,7 +915,7 @@ You can rotate log files manually by using the `rotate-log` subcommand in remote
 Because log rotation is a dynamic operation, you do not need to restart Payara Server for changes to take effect.
 
 . Ensure that the target server or cluster is running.
-. Rotate log files by using the xref:technical-documentation/payara-server-documentation/command-reference/rotate-log.adoc[`rotate-log`] subcommand.
+. Rotate log files by using the xref:../command-reference/rotate-log.adoc[`rotate-log`] subcommand.
 
 [#example-to-rotate-log-files-manually]
 ==== Example - to Rotate Log Files Manually

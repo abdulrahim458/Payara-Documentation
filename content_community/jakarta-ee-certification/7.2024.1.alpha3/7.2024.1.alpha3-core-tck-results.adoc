@@ -27,7 +27,7 @@ https://download.eclipse.org/ee4j/jakartaee-tck/jakartaee11/staged/eftl/jakarta-
 
 - Public URL of TCK Results Summary:
 +
-https://docs.payara.fish/community/docs/7.2024.1.Alpha3/Jakarta%20EE%20Certification/7.2024.1.Alpha3/7.2024.1.Alpha3%20Core%20TCK%20Results.html[7.2024.1.Alpha3 Core TCK Results^]
+https://docs.azul.com/payara-community/jakarta-ee-certification/7.2024.1.alpha3/7.2024.1.alpha3-core-tck-results[7.2024.1.Alpha3 Core TCK Results^]
 
 - Any Additional Specification Certification Requirements:
 

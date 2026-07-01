@@ -31,7 +31,7 @@ If server instances in a cluster are located on different hosts, ensure that the
 
 * Each server instance has the same distributable web application deployed to it. The `web-app` element of the `web.xml` deployment descriptor file must contain the `distributable` element.
 * The web application uses high-availability session persistence. If a non-distributable web application is configured to use high-availability session persistence, the server writes an error to the log file.
-* The web application must be deployed using the `deploy` subcommand with the `--availabilityenabled` option set to `true`. For more information on these subcommands, see xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc#deploy[`deploy`].
+* The web application must be deployed using the `deploy` subcommand with the `--availabilityenabled` option set to `true`. For more information on these subcommands, see xref:../command-reference/deploy.adoc#deploy[`deploy`].
 
 [#restrictions]
 === Restrictions
@@ -355,7 +355,7 @@ You can enable SFSB availability for an individual application or EJB module dur
 * If you are deploying with the Administration Console, check the _Availability Enabled_ checkbox.
 * If you are deploying using use the `asadmin deploy` commands, set the `--availabilityenabled` option to `true`.
 +
-For more information, see xref:technical-documentation/payara-server-documentation/command-reference/deploy.adoc[`deploy`].
+For more information, see xref:../command-reference/deploy.adoc[`deploy`].
 
 [#configuring-availability-for-an-individual-bean]
 === Configuring Availability for an Individual Bean
