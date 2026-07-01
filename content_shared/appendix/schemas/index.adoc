@@ -7,4 +7,3 @@ Schemas for Azul Payara.
 ** link:{payaraEjbJarDtd}[DTD for payara-ejb-jar.xml^]
 ** link:{payaraApplicationDtd}[DTD for payara-application.xml^]
 ** link:{payaraApplicationClientDtd}[DTD for payara-application-client.xml^]
-** link:{payaraAccDtd}[DTD for payara-acc.xml^]
