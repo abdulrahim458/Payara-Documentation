@@ -721,6 +721,12 @@ sections:
           - title: Miscellaneous
             sections:
               - file: technical-documentation/ecosystem/miscellaneous/jax-rs-extension
+      - title: Dependencies
+        sections:
+            - file: technical-documentation/dependencies/index
+            - file: technical-documentation/dependencies/jakarta-ee
+            - file: technical-documentation/dependencies/eclipse-microprofile
+            - file: technical-documentation/dependencies/internal-dependencies
   - title: Release Notes
     sections:
     - title: Overview
