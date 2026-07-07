@@ -1,4 +1,5 @@
 = Using Jakarta Enterprise Beans Technology
+:page-description: Use Jakarta Enterprise Beans in Azul Payara — develop stateless, stateful, singleton, and message-driven beans with Payara-specific timer, interceptor, and clustering features.
 :ordinal: 9
 
 This chapter describes how Jakarta Enterprise Beans (EJB) technology is supported in Azul Payara.

@@ -1,4 +1,5 @@
 = Security Advisories
+:page-description: Security advisories for Azul Payara Community — list of CVEs and security vulnerabilities fixed across Payara Community quarterly releases.
 
 The following is a list of reported _**C**ommon **V**ulnerabilities and **E**xposures_ that have been analyzed and documented across releases:
 

@@ -1,4 +1,5 @@
 = Persistent EJB Timers
+:page-description: Persistent EJB timers in Payara Micro — configure database-backed persistent EJB timers in Payara Micro for reliable scheduled task execution across restarts.
 
 Payara Micro supports persistent EJB timers which are stored across Payara Micro instances within the cluster, backed by distributed Hazelcast cache.
 

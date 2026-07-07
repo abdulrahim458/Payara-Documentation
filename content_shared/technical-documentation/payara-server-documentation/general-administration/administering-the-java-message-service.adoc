@@ -1,4 +1,5 @@
 = Administering the Java Message Service (JMS)
+:page-description: Administer JMS in Azul Payara Server — configure Jakarta Messaging connection factories, destinations, and the embedded OpenMQ broker for messaging applications.
 :ordinal: 20
 
 The Java Message Service (JMS) API is a messaging standard that allows Jakarta EE applications and components, including message-driven beans (MDBs), to create, send, receive, and read messages. It enables distributed communication that is loosely coupled, reliable, and asynchronous.

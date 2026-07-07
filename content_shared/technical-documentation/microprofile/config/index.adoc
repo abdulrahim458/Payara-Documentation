@@ -1,4 +1,5 @@
 = Eclipse Microprofile Config API
+:page-description: MicroProfile Config in Azul Payara — configure applications using config sources including system properties, environment variables, JDBC, LDAP, TOML, and cloud providers.
 
 Azul Payara {release-id} provides MicroProfile Configuration {mpConfigVersion}
 

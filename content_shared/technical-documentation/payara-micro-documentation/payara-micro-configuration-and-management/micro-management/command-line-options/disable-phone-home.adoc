@@ -1,4 +1,5 @@
 = Disable Phone Home in Payara Micro
+:page-description: Disable Phone Home in Payara Micro — turn off the anonymous usage reporting feature in Payara Micro using command-line flags or system properties.
 
 Payara Micro, like Payara Server, has the Phone Home functionality enabled by default. It can be easily disabled in Payara Micro.
 

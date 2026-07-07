@@ -1,4 +1,5 @@
 = Payara Starter Documentation
+:page-description: Payara Starter — web-based Jakarta EE project generator for Azul Payara. Create and download Maven projects configured for Payara Server or Payara Micro.
 
 [#introduction]
 == Introduction

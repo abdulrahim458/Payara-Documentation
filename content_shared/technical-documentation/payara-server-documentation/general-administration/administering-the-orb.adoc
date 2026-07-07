@@ -1,4 +1,5 @@
 = Administering the Object Request Broker (ORB)
+:page-description: Administer the Object Request Broker (ORB) in Azul Payara Server — configure IIOP listeners, thread pools, and RMI-IIOP settings for remote EJB communication.
 :ordinal: 18
 
 Payara Server supports a standard set of protocols and formats that ensure interoperability. Among these protocols are those defined by CORBA. The Object Request Broker (ORB) is the central component of CORBA. The ORB provides the required infrastructure to identify and locate objects, handle connection management, deliver data, and request communication. This chapter describes how to configure the ORB and the IIOP listeners.

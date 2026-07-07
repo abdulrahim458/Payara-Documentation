@@ -1,4 +1,5 @@
 = Administering Deployment Groups
+:page-description: Administer deployment groups in Azul Payara Server — group server instances for targeted application deployments without full clustering configuration.
 :ordinal: 4
 
 Deployment Groups were introduced in Azul Payara 5 as an effective replacement for xref:administering-payara-server-clusters.adoc[clusters]. Deployment groups are a complement to the xref:administering-the-domain-data-grid.adoc[Data Grid] whereas the grid is responsible to managing distributed application data across multiple instances, deployment groups manage how application deployment is targeted in general.

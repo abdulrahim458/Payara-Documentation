@@ -1,4 +1,5 @@
 = Using the Jcache API
+:page-description: Use the JCache API in Azul Payara applications — store and retrieve data from the Payara Domain Data Grid using the JCache (JSR 107) API and CDI injection.
 :ordinal: 22
 
 This chapter covers how to use the JCache functionality in Azul Payara.

@@ -1,4 +1,5 @@
 = Eclipse Microprofile Telemetry
+:page-description: MicroProfile Telemetry in Azul Payara — export traces, metrics, and logs via OpenTelemetry Protocol (OTLP) from Payara Server and Payara Micro applications.
 
 Azul Payara {release-id} provides MicroProfile Telemetry  {mpTelemetryVersion}.
 

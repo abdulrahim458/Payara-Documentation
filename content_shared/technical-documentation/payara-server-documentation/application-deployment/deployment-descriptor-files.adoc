@@ -1,4 +1,5 @@
 = Azul Payara Deployment Descriptor Files
+:page-description: Payara deployment descriptor files — reference for payara-web.xml, payara-ejb-jar.xml, payara-application.xml, and other Payara-specific deployment descriptors.
 :ordinal: 3
 
 This appendix describes the element hierarchies in the Azul Payara deployment descriptors that are supported on top of the standard Jakarta EE deployment descriptors.

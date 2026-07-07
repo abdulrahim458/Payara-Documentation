@@ -1,4 +1,5 @@
 = Payara Micro Tools in Intellij IDEA
+:page-description: Payara Micro tools in IntelliJ IDEA — create and run Payara Micro run configurations with hot deploy and MicroProfile project support in IntelliJ IDEA.
 :ordinal: 2
 
 [#run-micro-project]

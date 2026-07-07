@@ -1,5 +1,6 @@
 [[microprofile]]
 = MicroProfile Specification Dependencies Mapping
+:page-description: MicroProfile specification dependencies in Azul Payara — mapping of implemented Eclipse MicroProfile API versions to Payara Server and Payara Micro release versions.
 :ordinal: 2
 
 This section details all dependencies related to Eclipse MicroProfile.

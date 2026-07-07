@@ -1,4 +1,5 @@
 = Running Callable Objects on Bootstrapped Instances
+:page-description: Run callable objects on bootstrapped Payara Micro instances — execute custom code during or after Payara Micro startup using the BootstrapAdmin API.
 
 Like with running asadmin commands, there are two methods available for running
 `Callable` objects, both also named `run`.

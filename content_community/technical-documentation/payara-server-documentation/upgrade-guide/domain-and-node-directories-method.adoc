@@ -1,4 +1,5 @@
 = Domain and Node Directories Upgrade Method
+:page-description: Upgrade Payara Community Server by copying domain and node directories — direct migration for moving existing domain configuration to a new Payara Community installation.
 :ordinal: 2
 
 An alternative to backing up and restoring the domain, then recreating the instances, would be to create the domain and node directories in a location that is separate from the installation. For example, if you downloaded _Payara Server 7.2025.1_, created a domain, and then wanted to use _Payara Server 7.2025.2_, you would use the following process:

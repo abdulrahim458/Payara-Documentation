@@ -1,4 +1,5 @@
 = Hot Deploy and Auto Deploy
+:page-description: Hot Deploy and Auto Deploy in Azul Payara — apply code changes to running Payara Server and Payara Micro instances without redeployment using IDE plugin integrations.
 
 IMPORTANT: To enable these features, the relevant ecosystem plugin to your IDE of choice must be installed.
 

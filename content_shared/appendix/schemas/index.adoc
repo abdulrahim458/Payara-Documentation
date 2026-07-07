@@ -1,4 +1,5 @@
 = Payara Schemas
+:page-description: Azul Payara XML schema appendix — XML Schema Definition (XSD) and DTD references for Payara deployment descriptors and resource configuration files.
 
 Schemas for Azul Payara.
 

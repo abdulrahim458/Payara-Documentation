@@ -1,4 +1,5 @@
 = Grpc
+:page-description: gRPC support in Azul Payara Server — overview of the gRPC server extension enabling gRPC service endpoints alongside standard Jakarta EE endpoints in Payara Server.
 
 WARNING: The gRPC extension has not yet been updated to support Azul Payara {pageSiteEditionCapitalised} {payaraVersionMajor}
 

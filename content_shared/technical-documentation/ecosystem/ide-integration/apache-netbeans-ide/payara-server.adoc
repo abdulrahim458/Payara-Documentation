@@ -1,4 +1,5 @@
 = Payara Server Apache Netbeans IDE Support
+:page-description: Payara Server tools in Apache NetBeans IDE — configure and manage a Payara Server instance, deploy Jakarta EE applications, and use hot deploy from NetBeans.
 :ordinal: 1
 
 The Apache NetBeans IDE has built-in integration with Payara Server and allows you to easily perform the following tasks:

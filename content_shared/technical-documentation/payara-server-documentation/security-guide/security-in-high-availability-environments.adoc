@@ -1,4 +1,5 @@
 = Administering Security in a High-Availability Environment
+:page-description: Security in high-availability environments for Azul Payara Server — configure SSL/TLS between clustered instances, secure JMS replication, and HA-specific security settings.
 :ordinal: 4
 
 This chapter describes important information about administering security in a high availability environment (using traditional clusters or deployment groups).

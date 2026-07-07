@@ -1,4 +1,5 @@
 = Developing Web Applications
+:page-description: Develop web applications in Azul Payara — build Jakarta Servlet, Jakarta Faces, and Jakarta REST applications with Payara-specific configuration and extensions.
 :ordinal: 7
 
 This chapter describes how web applications are supported in Azul Payara.

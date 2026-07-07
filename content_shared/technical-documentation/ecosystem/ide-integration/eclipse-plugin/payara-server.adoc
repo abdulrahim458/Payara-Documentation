@@ -1,4 +1,5 @@
 = Payara Server Tools in Eclipse IDE
+:page-description: Payara Server tools in Eclipse IDE — configure a Payara Server runtime, deploy Jakarta EE applications, manage domains, and use hot deploy from the Eclipse IDE.
 :ordinal: 1
 
 Using the Payara Tools Eclipse plugin, you can integrate Payara Server within the Eclipse IDE and perform the following tasks:

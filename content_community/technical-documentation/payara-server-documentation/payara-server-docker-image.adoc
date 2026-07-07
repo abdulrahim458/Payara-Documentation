@@ -1,4 +1,5 @@
 = Payara Server Docker Image Overview
+:page-description: Azul Payara Server Community Docker image overview — official Docker images, supported tags, environment variables, and volume configuration for containerized Payara Server.
 :ordinal: 10
 
 Overview of the usage and details of the official Payara Server Community Docker image.

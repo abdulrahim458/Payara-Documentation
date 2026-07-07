@@ -1,4 +1,5 @@
 = Building Payara Tools Eclipse IDE Plugin
+:page-description: Build the Payara Eclipse IDE plugin from source — steps for cloning, building, and installing the Payara Tools Eclipse plugin for local development or customization.
 
 The Payara Tools Eclipse IDE Plugin source code is available in the https://github.com/payara/ecosystem-eclipse-plugin[Eclipse Plugin repository^].
 

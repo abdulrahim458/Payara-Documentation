@@ -1,4 +1,5 @@
 = Securing Applications
+:page-description: Secure Jakarta EE applications on Azul Payara — configure realms, roles, security constraints, and Jakarta Security for authentication and authorization.
 :ordinal: 3
 
 This chapter describes how to write secure Jakarta EE applications, which contain components that perform user authentication and access authorization for the business logic of Jakarta EE components.

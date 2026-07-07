@@ -1,4 +1,5 @@
 = Eclipse Microprofile
+:page-description: Eclipse MicroProfile in Azul Payara — supported MicroProfile specifications including Config, Fault Tolerance, Health, JWT, Metrics, OpenAPI, OpenTelemetry, and REST Client.
 
 [#what-is]
 == What Is Eclipse Microprofile?

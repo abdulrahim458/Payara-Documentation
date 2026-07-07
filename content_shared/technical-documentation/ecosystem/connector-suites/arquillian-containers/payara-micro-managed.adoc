@@ -1,5 +1,6 @@
 :ordinal: 4
 = Payara Micro Managed Arquillian Container Adapter
+:page-description: Payara Micro Managed Arquillian container adapter — run Jakarta EE integration tests with Arquillian by launching and managing a Payara Micro instance per test suite.
 
 When using this adapter, the Payara Micro container lifecycle is managed by Arquillian by starting a separate JVM process to launch and stop a Payara Micro instance locally.
 

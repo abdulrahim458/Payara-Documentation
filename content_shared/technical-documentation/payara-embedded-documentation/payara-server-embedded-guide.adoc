@@ -1,4 +1,5 @@
 = Payara Server Embedded Server Guide
+:page-description: Payara Server Embedded guide — embed a Payara Server instance in a Java application, deploy archives programmatically, and run Jakarta EE tests without an external server.
 
 This document explains how to run applications in embedded Payara Server and to develop applications in which Payara Server is embedded.
 

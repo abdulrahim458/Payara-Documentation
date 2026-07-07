@@ -1,4 +1,5 @@
 = Transform Maven Projects or Files from Java EE 8 to Jakarta EE 10
+:page-description: Transform Maven projects from Java EE 8 to Jakarta EE 10 in Eclipse — use the Payara Eclipse plugin to migrate namespace and API dependencies automatically.
 
 Using the `Payara Tools plugin`, you can transform whole projects or single files from Java EE 8 to Jakarta EE 10.
 

@@ -1,4 +1,5 @@
 = Using Request Tracing in Applications
+:page-description: Use Request Tracing in applications on Azul Payara — instrument Jakarta EE application code with the Request Tracing API to capture and trace application requests.
 :ordinal: 23
 
 Request Tracing in Azul Payara is done either automatically, by using the MicroProfile OpenTracing `@Traced` annotation or by utilizing OpenTelemetry/OpenTracing APIs. This chapter covers manually decorating your applications to enable explicit Request Tracing.

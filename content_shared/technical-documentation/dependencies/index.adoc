@@ -1,4 +1,5 @@
 = Payara Platform Dependencies
+:page-description: Azul Payara Platform dependencies — Jakarta EE and MicroProfile specification versions, bundled libraries, and internal component dependencies for each Payara release.
 
 This page contains a detailed list of the dependencies used by the Payara Platform, along with the Maven GAV coordinates of each dependency.
 

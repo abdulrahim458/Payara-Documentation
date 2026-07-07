@@ -1,4 +1,5 @@
 = Product Concepts
+:page-description: Azul Payara Server product concepts — domains, clusters, instances, deployment groups, nodes, and the administration model for Payara Server environments.
 :ordinal: 1
 
 Payara Server provides a robust platform for the development, deployment, and management of Jakarta EE applications. Key features include scalable transaction management, web services performance, clustering, security, and integration capabilities.

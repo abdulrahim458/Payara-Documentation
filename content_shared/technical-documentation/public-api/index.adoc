@@ -1,4 +1,5 @@
 = Public API
+:page-description: Azul Payara Public API — proprietary APIs for CDI remote events, clustered singletons, OpenID Connect, OAuth2, and security extensions in Payara Server and Micro.
 
 This page contains information on using the Public API integrated within Payara Server and Payara Micro.
 

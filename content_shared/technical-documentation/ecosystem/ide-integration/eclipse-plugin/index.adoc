@@ -1,4 +1,5 @@
 = Payara Eclipse IDE Plugin
+:page-description: Payara Eclipse IDE Plugin — manage Payara Server and Payara Micro from Eclipse. Deploy Jakarta EE applications, use hot deploy, and run MicroProfile projects in your IDE.
 
 The Payara Tools plugin enables integration between Payara Server and Payara Micro into the Eclipse IDE. The Payara Tools plugin is available from the https://marketplace.eclipse.org/content/payara-tools[Eclipse Marketplace^].
 

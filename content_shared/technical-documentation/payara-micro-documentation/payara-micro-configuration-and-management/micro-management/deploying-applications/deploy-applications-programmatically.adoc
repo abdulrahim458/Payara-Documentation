@@ -1,4 +1,5 @@
 = Deploying Applications on Micro Programmatically
+:page-description: Deploy applications programmatically to Payara Micro — use the PayaraMicro Java API to boot an instance, deploy archives, and manage application lifecycle in code.
 :ordinal: 2
 
 You can deploy applications onto Payara Micro programmatically via its API.

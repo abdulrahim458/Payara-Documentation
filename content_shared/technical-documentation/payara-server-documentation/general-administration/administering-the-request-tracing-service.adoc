@@ -1,4 +1,5 @@
 = Administering the Request Tracing Service
+:page-description: Administer the Request Tracing Service in Azul Payara Server — configure tracing of slow requests, configure thresholds, and integrate with OpenTelemetry exporters.
 :ordinal: 10
 
 The Request Tracing Service provides tracing facilities for multiple protocols and process communications done by the components of deployed applications.

@@ -1,4 +1,5 @@
 = Payara Micro Tools in VS Code
+:page-description: Payara Micro tools in VS Code — create, run, and debug Payara Micro projects with hot deploy and MicroProfile support from Visual Studio Code.
 :ordinal: 2
 
 Using the Payara Tools VS Code extension, you can integrate Payara Micro within the VS Code IDE to create new Payara Micro Maven applications, start, stop and deploy applications to Payara Micro.

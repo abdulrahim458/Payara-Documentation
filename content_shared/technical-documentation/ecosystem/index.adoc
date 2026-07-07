@@ -1,4 +1,5 @@
 = Azul Payara Ecosystem
+:page-description: Azul Payara ecosystem — IDE plugins, Maven and Gradle tools, Arquillian adapters, cloud connectors, and Jakarta EE upgrade utilities for Payara development.
 
 Azul Payara not only provides application servers in the form of Payara Server and Payara Micro; there are also satellite projects
 which complement and enhance the developer experience.

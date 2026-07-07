@@ -1,4 +1,5 @@
 = Sending Asadmin Commands to Payara Micro from a Domain Administration Server
+:page-description: Send asadmin commands to Payara Micro from a Domain Administration Server — manage running Payara Micro instances from a DAS using remote asadmin commands.
 
 Asadmin commands can be sent from the Domain Administration Server (DAS) to Payara Micro instances that are running within the same data grid as the DAS.
 

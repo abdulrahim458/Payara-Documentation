@@ -1,4 +1,5 @@
 = Overview
+:page-description: Azul Payara Community security advisories — CVE fixes and security patches included in each Payara Community quarterly release.
 
 This section describes Payara's official policy for managing Azul Payara's security vulnerabilities.
 

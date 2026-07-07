@@ -1,4 +1,5 @@
 = Payara Server Tools in VS Code
+:page-description: Payara Server tools in VS Code — configure a Payara Server connection, deploy applications, manage deployments, and use hot deploy from Visual Studio Code.
 :ordinal: 1
 
 [#adding-server]

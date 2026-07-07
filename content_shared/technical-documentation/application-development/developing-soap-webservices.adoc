@@ -1,4 +1,5 @@
 = Developing SOAP Web Services
+:page-description: Develop SOAP web services in Azul Payara — implement Jakarta XML Web Services (JAXWS) services and clients, configure WSDL endpoints, and apply WS-Security.
 :ordinal: 5
 
 This chapter describes Payara Server's support for SOAP-compatible web services. "https://eclipse-ee4j.github.io/jakartaee-tutorial/#building-web-services-with-jakarta-xml-web-services[Building with Jakarta XML Web Services^]" in The Jakarta EE Tutorial shows more details on creating dedicated SOAP Web Services for any Jakarta EE runtime.

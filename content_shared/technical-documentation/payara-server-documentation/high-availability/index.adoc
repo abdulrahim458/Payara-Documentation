@@ -1,4 +1,5 @@
 = High Availability in Payara Server
+:page-description: High availability in Azul Payara Server — clustering, session failover, deployment groups, load balancing, and the domain data grid for resilient Jakarta EE deployments.
 
 This chapter describes the high availability features in Payara Server.
 

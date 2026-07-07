@@ -1,3 +1,4 @@
 = Jcache in Payara Micro
+:page-description: JCache in Payara Micro — use the JCache (JSR 107) API in Payara Micro applications to interact with the embedded Hazelcast data grid for distributed caching.
 
 Payara Micro provides JCache functionality and the documentation for using xref:../../application-development/using-the-jcache-api.adoc[JCache in Payara Server] also applies to it.

@@ -1,5 +1,6 @@
 [[internals]]
 = Payara Platform Internal Dependencies
+:page-description: Azul Payara internal dependencies — bundled third-party libraries, version numbers, and licenses included in the Payara Server and Payara Micro distributions.
 :ordinal: 3
 
 This section details all dependencies related to internal modules, extensions, plugins and other extras.

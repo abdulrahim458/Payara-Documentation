@@ -1,4 +1,5 @@
 = Dynamodb Config Source
+:page-description: DynamoDB Config Source for MicroProfile Config in Azul Payara — read application configuration from an Amazon DynamoDB table as a MicroProfile Config source.
 
 The DynamoDB config source reads configuration properties from a DynamoDB database table. DynamoDB is a managed *NoSQL* database service provided by Amazon.
 

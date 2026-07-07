@@ -1,4 +1,5 @@
 = Debugging Applications
+:page-description: Debug Jakarta EE applications on Azul Payara — enable JPDA remote debugging, configure debug ports, and attach debuggers to Payara Server and Payara Micro.
 :ordinal: 2
 
 This chapter gives guidelines for debugging applications deployed in Payara Server or Payara Micro.

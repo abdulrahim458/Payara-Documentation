@@ -1,4 +1,5 @@
 = Configuring the Access Log
+:page-description: Configure the access log in Payara Micro — enable and customize HTTP access logging to record request details, response codes, and timing information.
 :ordinal: 2
 
 Payara Micro supports a number of commands to help you configure access logging. It is easiest to configure access logging before it is bootstrapped, however you can edit `domain.xml` also, as Payara Micro can reload that dynamically.

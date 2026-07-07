@@ -1,4 +1,5 @@
 = Upgrading Payara Server
+:page-description: Upgrade Azul Payara Community Server — guides for upgrading between community releases using the Upgrade Tool, backup and restore, or directory migration.
 
 There are two valid methods of fully upgrading to a new release of Payara Server. Either of the following two methods would work in most circumstances:
 

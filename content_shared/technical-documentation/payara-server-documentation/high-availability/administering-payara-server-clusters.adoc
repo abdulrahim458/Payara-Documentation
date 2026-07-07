@@ -1,4 +1,5 @@
 = Administering Payara Server Clusters
+:page-description: Administer clusters in Azul Payara Server — create, configure, and manage Payara Server clusters for session replication, load balancing, and high availability.
 :ordinal: 3
 
 IMPORTANT: Clusters have been deprecated and officially replaced with Deployment Groups. +

@@ -1,4 +1,5 @@
 = Opentelemetry and Opentracing Support
+:page-description: OpenTelemetry and OpenTracing in Azul Payara — configure distributed tracing exporters and instrument Jakarta EE applications for observability with OpenTelemetry.
 
 Azul Payara natively supports OpenTelemetry APIs as well as export of traces over the OTLP protocol. Natively in this context means, that deployment of an OpenTelemetry Agent is not necessary and may lead to duplicate traces.
 

@@ -1,4 +1,5 @@
 = Metrics Configuration in Azul Payara
+:page-description: MicroProfile Metrics configuration in Azul Payara — enable, configure, and expose application and server metrics via the MicroProfile Metrics REST endpoint.
 
 On Payara Server, the MicroProfile Metrics service can be configured by using Admin Console or Asadmin commands.
 

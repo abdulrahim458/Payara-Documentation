@@ -1,4 +1,5 @@
 = REST Endpoint
+:page-description: MicroProfile Metrics REST endpoint in Azul Payara — access application, base, and vendor metrics in JSON or OpenMetrics format from the /metrics endpoint.
 
 MicroProfile Metrics specifies that all metrics are published at the endpoint `/metrics`. For both Payara Server and Payara Micro, this means that the endpoint can be found on the HTTP port (default `8080`). By visiting these endpoints in a browser, the Prometheus text format can be viewed directly.
 

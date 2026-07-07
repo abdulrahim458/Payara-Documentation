@@ -1,4 +1,5 @@
 = General Runtime Administration
+:page-description: General runtime administration of Azul Payara Server — starting, stopping, and restarting the server, managing the DAS, and common runtime configuration tasks.
 :ordinal: 1
 
 This chapter provides instructions for performing general administration tasks in the Payara Server environment by using the `asadmin` command-line utility.

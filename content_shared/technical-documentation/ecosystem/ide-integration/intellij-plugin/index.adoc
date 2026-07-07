@@ -1,4 +1,5 @@
 = Payara Intellij Tools
+:page-description: Payara IntelliJ IDEA Tools — manage Payara Server and Payara Micro from IntelliJ IDEA. Deploy Jakarta EE applications, run Payara Micro, and use hot deploy.
 
 The Payara IntelliJ Ultimate Tools enables Payara Server, Payara Micro and Payara Cloud integration with IntelliJ IDEA Ultimate Edition. The Payara IntelliJ Ultimate Tools plugin is available in the https://plugins.jetbrains.com/plugin/15114-payara-platform-tools[JetBrains Plugins Marketplace^].
 

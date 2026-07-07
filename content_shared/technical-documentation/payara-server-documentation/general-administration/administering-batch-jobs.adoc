@@ -1,4 +1,5 @@
 = Administering Batch Jobs
+:page-description: Administer batch jobs in Azul Payara Server — manage Jakarta Batch job executions, monitor job status, and configure the batch runtime using asadmin commands.
 :ordinal: 13
 
 This chapter provides procedures for administering batch jobs in the Payara Server environment by using the `asadmin` command-line utility.

@@ -1,4 +1,5 @@
 = Administering Message Security
+:page-description: Administer message security in Azul Payara Server — configure SOAP message security, WS-Security providers, and message-level authentication for web services.
 :ordinal: 3
 
 This chapter provides information and procedures on configuring the message layer security for SOAP web services in a Payara Server environment.

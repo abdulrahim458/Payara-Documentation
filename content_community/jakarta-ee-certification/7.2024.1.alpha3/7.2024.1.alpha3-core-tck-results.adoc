@@ -1,4 +1,5 @@
 = Core TCK Results
+:page-description: Jakarta EE Core TCK results for Azul Payara Community 7.2024.1.Alpha3 — official certification test results for the Jakarta EE Core Profile.
 
 As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License^], following is a summary of the TCK results for Payara Server releases for Jakarta EE Core Profile 11.
 

@@ -1,4 +1,5 @@
 = Using Jakarta Mail
+:page-description: Use Jakarta Mail in Azul Payara — inject mail sessions, send email from Jakarta EE applications, and configure SMTP, IMAP, and POP3 mail resources in Payara.
 :ordinal: 20
 
 This chapter describes how to use the Jakarta Mail API, which provides a set of abstract classes defining objects that comprise a mail system.

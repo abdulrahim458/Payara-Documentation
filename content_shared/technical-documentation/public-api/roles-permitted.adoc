@@ -1,4 +1,5 @@
 = Rolespermitted Support
+:page-description: @RolesPermitted support in Azul Payara — role-based authorization annotation from the Payara Public API for securing Jakarta EE beans and REST endpoints.
 
 The Payara Public API provides a `@RolesPermitted` annotation that creates an authorisation interceptor for usage with CDI beans. This largely works in the same way as the `@RolesAllowed` common annotation, which in Java EE/Jakarta EE is primarily used by the EJB specification.
 

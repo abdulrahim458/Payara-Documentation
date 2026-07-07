@@ -1,3 +1,4 @@
 = Overview
+:page-description: Azul Payara Server Embedded — overview of running Payara Server in embedded mode for integration testing, batch processing, and in-process Jakarta EE application hosting.
 
 This guide explains how to run applications in embedded Payara Server and to develop applications in which Payara Server is embedded.

@@ -1,5 +1,6 @@
 :ordinal: 1
 = Payara Server Embedded Arquillian Container Adapter
+:page-description: Payara Server Embedded Arquillian container adapter — run Jakarta EE integration tests in-process using an embedded Payara Server instance with Arquillian.
 
 When using this adapter, the Payara Server container lifecycle is managed by Arquillian and resides in the same JVM where tests are executed using a local communication protocol.
 

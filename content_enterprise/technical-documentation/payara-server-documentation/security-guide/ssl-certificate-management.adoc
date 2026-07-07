@@ -1,4 +1,5 @@
 = SSL Certificate Management
+:page-description: SSL certificate management in Azul Payara Server — generate self-signed certificates, add CA certificates, configure keystores and truststores using asadmin commands.
 :ordinal: 9
 
 As a reminder, Payara Server uses the following PKCS12 keystore files to manage SSL/TLS certificates required for secure communications:

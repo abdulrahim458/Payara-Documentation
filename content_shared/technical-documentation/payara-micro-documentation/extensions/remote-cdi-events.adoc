@@ -1,4 +1,5 @@
 = Remote CDI Events in Payara Micro
+:page-description: Remote CDI events in Payara Micro — fire and observe CDI events across Payara Micro cluster nodes using the Payara CDI Remote Events API and Hazelcast data grid.
 
 Payara Micro can listen to and fire CDI events across the cluster of Payara Micro instances, and also across Payara Server instances within the same cluster. Payara Micro supports the same functionality for xref:remote-cdi-events.adoc[remote CDI events] as provided by Payara Server.
 

@@ -1,4 +1,5 @@
 = Deployment Checklist
+:page-description: Deployment checklist for Azul Payara Server — pre-deployment verification steps covering security hardening, JDBC configuration, clustering, and performance settings.
 :ordinal: 3
 
 This appendix provides a checklist to get started on evaluation and production using Payara Server.

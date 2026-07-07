@@ -1,4 +1,5 @@
 = Eclipse Microprofile Opentracing
+:page-description: MicroProfile OpenTracing in Azul Payara — instrument Jakarta EE applications for distributed request tracing and integrate with OpenTracing-compatible backends.
 
 Azul Payara {release-id} provides MicroProfile OpenTracing {mpOpenTracingVersion}
 

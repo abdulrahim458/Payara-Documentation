@@ -1,4 +1,5 @@
 = Getting Started
+:page-description: Get started with Azul Payara Community — download, install, and run your first Jakarta EE application on Payara Server or Payara Micro with the community distribution.
 :ordinal: 1
 
 This page covers how to download Payara Server, start Payara Server, access the Administration Console, deploy an application and how to access the deployed application.

@@ -1,4 +1,5 @@
 = Managing Administrative Security
+:page-description: Manage administrative security in Azul Payara Server — enable secure admin, configure admin passwords, certificates, and HTTPS for the Administration Console.
 :ordinal: 5
 
 This chapter describes how to manage administrative security by using Payara Server's secure administration feature.

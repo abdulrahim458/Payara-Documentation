@@ -1,4 +1,5 @@
 = Administering the Jakarta Mail Service
+:page-description: Administer Jakarta Mail in Azul Payara Server — configure mail session resources with SMTP, IMAP, and POP3 settings for use in Jakarta EE applications.
 :ordinal: 19
 
 Payara Server includes the Jakarta Mail API along with Jakarta Mail service providers that allow an application component to send email notifications over the Internet and to read email from IMAP and POP3 mail servers.

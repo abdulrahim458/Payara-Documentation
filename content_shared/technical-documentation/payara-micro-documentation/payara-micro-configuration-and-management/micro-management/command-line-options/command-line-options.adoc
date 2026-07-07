@@ -1,4 +1,5 @@
 = Payara Micro Command Line Options
+:page-description: Payara Micro command-line options — complete reference for all flags and options available when starting Payara Micro from the command line.
 
 All of the options listed below are case-insensitive starting from release `4.1.1.171`; prior versions need the option to be set with https://en.wikipedia.org/wiki/Camel_case[camelCase notation^]
 

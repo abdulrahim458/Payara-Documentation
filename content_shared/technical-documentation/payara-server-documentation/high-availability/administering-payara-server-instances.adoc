@@ -1,4 +1,5 @@
 = Administering Payara Server Instances
+:page-description: Administer Payara Server instances — create, start, stop, and manage standalone and clustered server instances within a Payara Server domain.
 :ordinal: 6
 
 A Payara Server instance is a single Virtual Machine for the Java platform (Java Virtual Machine or JVM machine) on a single node in which Payara Server is running. A node defines the host where the Payara Server instance resides.

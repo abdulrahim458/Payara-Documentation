@@ -1,4 +1,5 @@
 = Using the Transaction Service
+:page-description: Use the Transaction Service in Azul Payara — manage Jakarta Transactions (JTA), configure XA data sources, and handle distributed transactions in Payara applications.
 :ordinal: 17
 
 The Jakarta EE platform provides several abstractions that simplify development of dependable transaction processing for applications. This chapter discusses Jakarta EE transactions and transaction support in Azul Payara.

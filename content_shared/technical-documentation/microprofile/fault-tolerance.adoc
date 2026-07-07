@@ -1,4 +1,5 @@
 = Eclipse Microprofile Fault Tolerance API
+:page-description: MicroProfile Fault Tolerance in Azul Payara — implement Retry, Timeout, CircuitBreaker, Bulkhead, and Fallback patterns in Jakarta EE microservices.
 
 Azul Payara {release-id} provides MicroProfile Fault Tolerance {mpFaultToleranceVersion}
 

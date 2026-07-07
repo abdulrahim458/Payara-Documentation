@@ -1,4 +1,5 @@
 = Using Jakarta MVC
+:page-description: Use Jakarta MVC in Azul Payara — build server-side MVC web applications using the Jakarta MVC specification with Payara Server and Payara Micro.
 :ordinal: 25
 
 This chapter describes how to use the Jakarta MVC API, an action-based framework for building web applications using the model view controller architecture pattern.

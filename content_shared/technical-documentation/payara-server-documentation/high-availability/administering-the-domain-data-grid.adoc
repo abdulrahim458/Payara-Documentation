@@ -1,4 +1,5 @@
 = Administering the Domain Data Grid
+:page-description: Administer the Domain Data Grid in Azul Payara Server — configure the Hazelcast-based in-memory data grid for session replication, JCache, and clustered singletons.
 :ordinal: 5
 
 The Domain Data Grid uses https://hazelcast.com/[Hazelcast^] as its clustering technology to provide an in-memory data structure that is distributed amongst all the Payara Server instances within a Payara Domain.

@@ -1,4 +1,5 @@
 = RMI-IIOP Load Balancing and Failover
+:page-description: RMI-IIOP load balancing and failover in Azul Payara Server — configure IIOP request distribution and failover for remote EJB clients across clustered Payara instances.
 :ordinal: 11
 
 This chapter describes using high-availability features for remote EJB references and JNDI objects over RMI-IIOP in Payara Server.

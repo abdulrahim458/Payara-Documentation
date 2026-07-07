@@ -1,4 +1,5 @@
 = Maven Support
+:page-description: Maven support for Payara Micro — use the Payara Micro Maven Plugin to build, run, bundle, and deploy Jakarta EE applications with Payara Micro from Maven.
 :ordinal: 1
 
 This section describes Apache Maven support for Payara Micro.

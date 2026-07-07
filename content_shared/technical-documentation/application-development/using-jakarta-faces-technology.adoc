@@ -1,4 +1,5 @@
 = Using Jakarta Faces Technology
+:page-description: Use Jakarta Faces in Azul Payara — develop component-based UI web applications with Jakarta Faces (formerly JSF) on Payara Server with Payara-specific configuration.
 :ordinal: 8
 
 This chapter describes how to use the Jakarta Faces (JSF) API.

@@ -1,4 +1,5 @@
 = Developing Java Clients
+:page-description: Develop Java clients for Azul Payara — create standalone Java applications accessing EJBs, JMS, and other Jakarta EE resources from outside the Payara container.
 :ordinal: 12
 
 This chapter describes how to develop, assemble, and deploy remote Java clients.

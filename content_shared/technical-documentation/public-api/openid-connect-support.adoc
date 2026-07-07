@@ -1,4 +1,5 @@
 = Openid Connect Support
+:page-description: OpenID Connect support in Azul Payara — configure OIDC-based authentication with identity providers using the Payara OpenID Connect security connector and annotations.
 
 The Payara API provides a `@OpenIdAuthenticationDefinition` annotation that creates an authorization mechanism for OpenID Connect support. This works in the same way as other authorization mechanisms in the Java EE Security API.
 

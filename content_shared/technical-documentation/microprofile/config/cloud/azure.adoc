@@ -1,4 +1,5 @@
 = Azure Cloud Config Source
+:page-description: Azure Cloud Config Source for MicroProfile Config in Azul Payara — read configuration values from Azure Key Vault secrets and configuration entries.
 
 The Azure cloud config source takes configuration properties from Azure Key Vault Secrets.
 

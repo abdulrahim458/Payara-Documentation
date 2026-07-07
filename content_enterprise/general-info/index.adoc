@@ -1,4 +1,5 @@
 = Documentation Overview
+:page-description: Azul Payara documentation overview — getting started with Payara Server and Payara Micro, release notes, supported platforms, and Jakarta EE certification results.
 
 This page provides some general information about the Azul Payara Edition.
 

@@ -1,4 +1,5 @@
 = The `asadmin` Deployment Subcommands
+:page-description: asadmin deployment subcommands for Azul Payara Server — deploy, undeploy, redeploy, enable, disable, and list-applications command reference with options.
 :ordinal: 2
 
 This appendix lists the `asadmin` deployment subcommands that are included with this release of the Payara Server software.

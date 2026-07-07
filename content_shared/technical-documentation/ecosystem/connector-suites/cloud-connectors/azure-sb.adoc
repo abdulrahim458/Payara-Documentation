@@ -1,4 +1,5 @@
 = Azure Service Bus Cloud Connector
+:page-description: Azure Service Bus Cloud Connector for Azul Payara — JCA resource adapter for sending and receiving messages via Azure Service Bus queues and topics in Jakarta EE apps.
 
 The Microsoft Azure Service Bus allows code that runs both outside and inside
 Azure to communicate with Azure.

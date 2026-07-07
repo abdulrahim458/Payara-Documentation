@@ -1,4 +1,5 @@
 = Eclipse Microprofile Health Check API
+:page-description: MicroProfile Health in Azul Payara — expose liveness and readiness health check endpoints for Payara Server and Payara Micro applications in cloud-native environments.
 
 Azul Payara {release-id} provides MicroProfile HealthCheck {mpHealthVersion}
 

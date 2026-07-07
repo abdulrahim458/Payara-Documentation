@@ -1,4 +1,5 @@
 = Logging to a File
+:page-description: Log to a file in Payara Micro — configure Payara Micro to write server logs to a file instead of (or in addition to) standard output for production deployments.
 :ordinal: 1
 
 This section describes how to print all the Payara Micro log messages into a file.

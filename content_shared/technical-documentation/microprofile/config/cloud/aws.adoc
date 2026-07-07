@@ -1,4 +1,5 @@
 = AWS Cloud Config Source
+:page-description: AWS Cloud Config Source for MicroProfile Config in Azul Payara — read configuration values from AWS Systems Manager Parameter Store or Secrets Manager.
 
 The AWS cloud config source takes configuration properties from AWS Secrets Manager.
 

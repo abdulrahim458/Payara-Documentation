@@ -1,4 +1,5 @@
 = Administering Web Applications
+:page-description: Administer web applications in Azul Payara Server — configure session management, cookie settings, virtual servers, and default web module behavior.
 :ordinal: 22
 
 This chapter explains how to administer web applications in the Payara Server environment.

@@ -1,4 +1,5 @@
 = Developing Osgi-Enabled Jakarta EE Applications
+:page-description: Develop OSGi-enabled Jakarta EE applications on Azul Payara — combine OSGi modularity with Jakarta EE component model using Payara's integrated OSGi container.
 :ordinal: 15
 
 This chapter describes the features and interfaces that Payara Server provides to develop OSGi-enabled Enterprise applications.

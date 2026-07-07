@@ -1,4 +1,5 @@
 = Administering the Healthcheck Service
+:page-description: Administer the Healthcheck Service in Azul Payara Server — configure health checks for CPU, heap memory, thread count, and JDBC connection pool status with threshold alerts.
 :ordinal: 9
 
 Payara Server includes a HealthCheck Service that is disabled by default. When enabled it can periodically check the following performance metrics:

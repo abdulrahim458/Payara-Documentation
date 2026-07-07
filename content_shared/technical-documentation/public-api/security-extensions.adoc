@@ -1,4 +1,5 @@
 = Jakarta EE Security Extensions
+:page-description: Jakarta EE Security extensions in Azul Payara — proprietary annotations and interceptors from the Payara Public API extending Jakarta Security for fine-grained access control.
 
 This section documents available extensions for custom authentication mechanisms and identity store configurations that can be used in any Jakarta EE application.
 

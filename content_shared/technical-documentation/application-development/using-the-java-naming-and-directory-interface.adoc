@@ -1,4 +1,5 @@
 = Using the Java Naming and Directory Interface
+:page-description: Use JNDI in Azul Payara applications — look up Jakarta EE resources, EJBs, and custom objects using the Java Naming and Directory Interface in Payara.
 :ordinal: 18
 
 A naming service maintains a set of bindings, which relate names to objects. Azul Payara's naming service is based on the Java Naming and Directory Interface (JNDI) API.

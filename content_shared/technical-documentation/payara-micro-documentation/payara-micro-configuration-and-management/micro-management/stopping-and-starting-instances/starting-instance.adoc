@@ -1,4 +1,5 @@
 = Starting an Instance
+:page-description: Start a Payara Micro instance — launch Payara Micro from the command line with configuration options, deploy applications, and configure the embedded server at startup.
 
 This section details the very basics of starting a Payara Micro instance.
 

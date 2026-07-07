@@ -1,4 +1,5 @@
 = Adding Third-Party Jars to a Micro Instance
+:page-description: Add third-party JARs to a Payara Micro instance — include additional libraries in the Payara Micro classpath using command-line options or by bundling them in the uber-JAR.
 :ordinal: 2
 
 There are multiple scenarios when it's needed to add a third-party library to the  class path of a Payara Micro instance:

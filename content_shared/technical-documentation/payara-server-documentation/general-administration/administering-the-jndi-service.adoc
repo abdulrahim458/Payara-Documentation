@@ -1,4 +1,5 @@
 = Administering the Java Naming and Directory Interface (JNDI) Service
+:page-description: Administer JNDI in Azul Payara Server — configure the Java Naming and Directory Interface service, custom resources, and JNDI bindings for Jakarta EE applications.
 :ordinal: 21
 
 The Java Naming and Directory Interface (JNDI) API is used for accessing different kinds of naming and directory services. Jakarta EE components locate objects by invoking the JNDI lookup method.

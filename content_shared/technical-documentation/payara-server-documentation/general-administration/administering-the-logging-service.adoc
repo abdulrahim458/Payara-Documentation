@@ -1,4 +1,5 @@
 = Administering the Logging Service
+:page-description: Administer the logging service in Azul Payara Server — configure log levels, handlers, log format, log rotation, and per-module logging for server and applications.
 :ordinal: 7
 
 This chapter provides instructions on how to configure logging and how to view log information in the Payara Server environment.

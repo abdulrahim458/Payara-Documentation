@@ -1,4 +1,5 @@
 = Clustering
+:page-description: Clustering Payara Micro instances — configure Hazelcast-based data grid clustering for session replication, distributed caching, and CDI remote events across Micro nodes.
 :ordinal: 5
 
 A Payara Micro cluster is based on Hazelcast, similarly to how Hazelcast clustering works in Payara Server. Each node in a Payara Micro cluster is effectively a Hazelcast node.

@@ -1,5 +1,6 @@
 :ordinal: 3
 = Payara Server Remote Arquillian Container Adapter
+:page-description: Payara Server Remote Arquillian container adapter — run Jakarta EE integration tests against an already-running Payara Server instance using the Arquillian framework.
 
 When using this adapter, the Payara Server container lifecycle is NOT managed by Arquillian. Instead, the adapter will connect to an already running Payara Server instance via a remote communication protocol by talking to the server's DAS process directly. In this scenario, the integration test setup will have to bootstrap the server's domain startup and shutdown on its own.
 

@@ -1,4 +1,5 @@
 = JCA Support in Payara Micro
+:page-description: JCA support in Payara Micro — deploy and use Jakarta Connectors (JCA) resource adapters in Payara Micro for connecting to external enterprise systems.
 
 Payara Micro supports the deployment of Java EE Connector Architecture (JCA) adapters which can enable communication with external services not natively supported by Payara Micro.
 

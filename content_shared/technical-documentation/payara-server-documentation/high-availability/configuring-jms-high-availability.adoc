@@ -1,4 +1,5 @@
 = Configuring Java Message Service High Availability
+:page-description: Configure JMS high availability in Azul Payara Server — set up OpenMQ broker clusters for Jakarta Messaging failover and message persistence across cluster nodes.
 :ordinal: 10
 
 This chapter describes how to configure the high availability features of the Java Message Service (JMS). It covers how to configure Message Queue broker clusters and how to use them to provide connection failover and load balancing.

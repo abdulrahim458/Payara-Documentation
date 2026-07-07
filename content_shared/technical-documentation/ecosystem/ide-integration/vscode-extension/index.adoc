@@ -1,4 +1,5 @@
 = Payara VS Code Extension
+:page-description: Payara VS Code Extension — manage Payara Server and Payara Micro from Visual Studio Code. Deploy Jakarta EE applications, hot deploy, and run MicroProfile projects.
 
 The Payara VS Code extension enables Payara Server and Payara Micro integration with Visual Studio Code. The Payara Tools extension is available in the https://marketplace.visualstudio.com/items?itemName=Payara.payara-vscode[Visual Studio Marketplace^].
 

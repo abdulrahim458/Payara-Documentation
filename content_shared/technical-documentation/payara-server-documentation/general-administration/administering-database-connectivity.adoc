@@ -1,4 +1,5 @@
 = Administering Database Connectivity
+:page-description: Administer database connectivity in Azul Payara Server — create and configure JDBC connection pools, data sources, and database resources for Jakarta Persistence.
 :ordinal: 14
 
 This chapter provides procedures for performing database connectivity tasks in the Payara Server environment.

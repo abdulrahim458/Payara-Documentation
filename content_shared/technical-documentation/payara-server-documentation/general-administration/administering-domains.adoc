@@ -1,4 +1,5 @@
 = Administering Domains
+:page-description: Administer domains in Azul Payara Server — create, delete, start, stop, and configure Payara Server domains and the Domain Administration Server (DAS).
 :ordinal: 2
 
 This chapter provides procedures for administering domains in the Payara Server environment by using the `asadmin`command-line utility.

@@ -1,4 +1,5 @@
 = Building Payara Intellij Tools
+:page-description: Build the Payara IntelliJ Tools plugin from source — steps for cloning, building, and installing the Payara Tools IntelliJ plugin for local development or contribution.
 
 The process of building and testing the IntelliJ IDEA IDE Plugin, is the same for both the Ultimate and Community versions of the plugin. After cloning the appropriate repository, the following steps can be applied to either plugin.
 

@@ -1,4 +1,5 @@
 = Configuring an Instance
+:page-description: Configure a Payara Micro instance — set command-line options, load a pre-configured domain.xml, apply asadmin post-boot scripts, and tune JVM and network settings.
 :ordinal: 2
 
 This section details how to configure a Payara Micro instance.

@@ -1,4 +1,5 @@
 = Enabling Centralized Administration of Payara Server Instances
+:page-description: Enable centralized administration of Payara Server instances — configure the DAS to manage remote server instances over SSH or the config node for central control.
 :ordinal: 1
 
 [IMPORTANT]

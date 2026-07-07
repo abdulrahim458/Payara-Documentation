@@ -1,4 +1,5 @@
 = Logging JDBC Calls in Payara Micro
+:page-description: Log JDBC calls in Payara Micro — enable JDBC call logging to capture all SQL statements executed by Jakarta EE applications running on Payara Micro for debugging.
 
 Payara Micro supports SQL Tracing which brings powerful operational
 diagnostics to your microservices platform.

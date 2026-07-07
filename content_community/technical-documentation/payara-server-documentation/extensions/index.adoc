@@ -1,4 +1,5 @@
 = Server Extensions
+:page-description: Azul Payara Community Server extensions — add-on modules including gRPC support and extended notification service available in Payara Community.
 
 Payara Server Community allows plugin extensions to expand the features of the server's runtime. This is a way of keeping Azul Payara Community more compact, and allowing these extensions to be developed and released quickly without being forced into the Community release cycle. This also makes it much easier to extend the server functionality and provide additional features.
 

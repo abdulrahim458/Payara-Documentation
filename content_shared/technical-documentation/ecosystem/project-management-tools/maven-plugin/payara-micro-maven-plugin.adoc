@@ -1,4 +1,5 @@
 = Payara Micro Maven Plugin
+:page-description: Payara Micro Maven Plugin — start, stop, deploy, and bundle Payara Micro instances from Maven builds for local development, testing, and CI/CD pipelines.
 :ordinal: 2
 
 Payara Micro has a Maven plugin which can start and stop Payara Micro and create an Uber JAR bundle of the application and Payara Micro.

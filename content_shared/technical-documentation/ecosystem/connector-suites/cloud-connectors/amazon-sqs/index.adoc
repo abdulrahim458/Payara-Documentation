@@ -1,4 +1,5 @@
 = Amazon SQS Cloud Connector
+:page-description: Amazon SQS Cloud Connector for Azul Payara — JCA resource adapter for sending and receiving messages from Amazon Simple Queue Service in Jakarta EE applications.
 
 Amazon SQS (Simple Queue Service) is a hosted and highly scalable distributed message queue service.
 

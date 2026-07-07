@@ -1,5 +1,6 @@
 :ordinal: 2
 = Payara Server Managed Arquillian Container Adapter
+:page-description: Payara Server Managed Arquillian container adapter — run Jakarta EE integration tests with Arquillian by controlling a full Payara Server instance lifecycle.
 
 When using this adapter, the Payara Server container lifecycle is managed by Arquillian by starting a separate JVM process to run Payara Server locally.
 

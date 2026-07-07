@@ -1,4 +1,5 @@
 = Clustered Singleton
+:page-description: Clustered Singleton in Azul Payara — create EJB singleton beans that maintain a single instance across all nodes in a Payara Server cluster or Payara Micro data grid.
 
 The Payara API provides a `@Clustered` annotation that makes `@ApplicationScoped` CDI beans or `@Singleton` EJB beans cluster-wide. This allows a single bean to be shared across an entire cluster.
 

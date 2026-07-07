@@ -1,4 +1,5 @@
 = Platform TCK Results
+:page-description: Jakarta EE 11 Platform TCK results for Azul Payara 7.1.0 — official certification test results confirming full Jakarta EE Platform compliance.
 
 As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License^], following is a summary of the TCK results for Payara Server releases for Jakarta EE Platform 11.
 

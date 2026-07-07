@@ -1,4 +1,5 @@
 = Transform Maven Projects or Files from Java EE 8 to Jakarta EE 10
+:page-description: Transform Maven projects from Java EE 8 to Jakarta EE 10 in IntelliJ IDEA — use the Payara IntelliJ plugin to migrate namespace and API dependencies automatically.
 
 Using the `Payara IntelliJ Ultimate Tools` and `Payara IntelliJ Community Tools` plugins, you can transform whole projects or just a file from Java EE 8 to Jakarta EE 10.
 

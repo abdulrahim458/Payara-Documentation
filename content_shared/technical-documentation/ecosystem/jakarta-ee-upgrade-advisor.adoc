@@ -1,4 +1,5 @@
 = Upgrade Advisor Tool
+:page-description: Jakarta EE Upgrade Advisor for Azul Payara — tool for analyzing Java EE 8 applications and recommending changes needed to migrate to Jakarta EE 10 namespace and APIs.
 :ordinal: 4
 
 The Upgrade Advisor is a special Maven Plugin utility tool that offers developer advice about specific changes introduced in Jakarta EE 10 that affect Jakarta EE 8 applications and are necessary for these applications to be upgraded successfully.

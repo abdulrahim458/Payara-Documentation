@@ -1,4 +1,5 @@
 = Using REST Interfaces to Administer Payara Server
+:page-description: REST management interface for Azul Payara Server — administer server configuration, deployments, and resources via the Payara REST management API.
 :ordinal: 1
 
 Payara Server provides representational state transfer (REST) interfaces to enable you to access monitoring and configuration data for Payara Server, including data that is provided by newly installed add-on components.

@@ -1,4 +1,5 @@
 = Backup and Restore Upgrade Method
+:page-description: Upgrade Payara Community Server using the backup and restore method — migrate domains by backing up configuration, installing the new release, and restoring.
 :ordinal: 1
 
 You will need to download the version of Payara Community you are planning to upgrade to before beginning the backup and restore method of upgrading Payara. The latest version of Payara Community is recommended.

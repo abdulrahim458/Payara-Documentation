@@ -1,4 +1,5 @@
 = Security Connectors
+:page-description: Security Connectors for Azul Payara — pre-built Jakarta Security authentication mechanisms including OAuth2, OpenID Connect, and enterprise identity provider integrations.
 
 Security Connectors are a collection of Jakarta EE Security adapters that implements
 industry-standard security protocols, specifications and integrates with third-party

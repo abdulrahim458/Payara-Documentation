@@ -1,4 +1,5 @@
 = Overview
+:page-description: Azul Payara security advisories — CVE fixes, security patches, and vulnerability disclosures for Payara Server and Payara Micro enterprise distributions.
 
 This section describes Payara's official policy for managing Azul Payara's security vulnerabilities.
 

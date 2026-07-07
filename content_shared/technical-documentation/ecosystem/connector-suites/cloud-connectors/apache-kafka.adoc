@@ -1,4 +1,5 @@
 = Apache Kafka Cloud Connector
+:page-description: Apache Kafka Cloud Connector for Azul Payara — JCA resource adapter for producing and consuming Kafka messages from Payara Server and Payara Micro Jakarta EE applications.
 
 Apache Kafka is an open-source stream processing platform. It is based on a massively scalable publish/subscribe message queue architected as a distributed transaction log.
 

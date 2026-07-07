@@ -1,4 +1,5 @@
 = Installing Grpc Server Support Module
+:page-description: Install gRPC Server Support for Azul Payara Community Server — steps to add and activate the gRPC server module in a Payara Community Server domain.
 
 WARNING: The gRPC extension has not yet been updated to support Azul Payara {pageSiteEditionCapitalised} {payaraVersionMajor}
 

@@ -1,4 +1,5 @@
 = Payara Micro Gradle Plugin
+:page-description: Payara Micro Gradle Plugin — build, run, and bundle Payara Micro instances from Gradle. Supports hot deploy, exploded WAR mode, and artifact bundling for Jakarta EE apps.
 :ordinal: 4
 
 Payara Micro has a Gradle plugin which can start and stop Payara Micro and create an Uber JAR bundle of the application and Payara Micro .

@@ -1,5 +1,6 @@
 :ordinal: 1
 = Amazon SQS Versioning
+:page-description: Amazon SQS Cloud Connector versioning for Azul Payara — version compatibility matrix between Payara Server releases and the SQS JCA connector artifact versions.
 
 The SQS connector's behavior and features are affected by the exact version of the Amazon Web Services Java SDK version being planned to use. For each version, there are separate versions of the connector's JCA adapter and its API.
 

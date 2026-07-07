@@ -1,4 +1,5 @@
 = Administering HTTP Connectivity
+:page-description: Administer HTTP connectivity in Azul Payara Server — configure HTTP listeners, virtual servers, network protocols, thread pools, and SSL/TLS settings.
 :ordinal: 16
 
 This chapter provides procedures for performing HTTP connectivity tasks in the Payara Server environment by using the `asadmin` command-line utility.

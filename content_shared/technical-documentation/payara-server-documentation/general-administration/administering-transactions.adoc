@@ -1,4 +1,5 @@
 = Administering Transactions
+:page-description: Administer transactions in Azul Payara Server — configure the Jakarta Transactions service, recovery settings, and transaction timeouts for Jakarta EE applications.
 :ordinal: 22
 
 This chapter discusses how to manage the transaction service for the Payara Server environment by using the `asadmin` command-line utility.

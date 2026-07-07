@@ -1,4 +1,5 @@
 = Administering Named Configurations
+:page-description: Administer named configurations in Azul Payara Server — manage shared configurations applied to server instances and clusters for consistent settings across a domain.
 :ordinal: 7
 
 A named configuration is a set of configuration information for Payara Server instances and clusters. A configuration sets port numbers for listeners that an instance or a cluster uses and defines settings for items such as the EJB container, security, logging, and monitoring. Applications and resources are not defined in named configurations.

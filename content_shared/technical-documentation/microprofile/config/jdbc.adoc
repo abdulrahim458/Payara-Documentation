@@ -1,4 +1,5 @@
 = JDBC Config Source
+:page-description: JDBC Config Source for MicroProfile Config in Azul Payara — store and retrieve application configuration values from a relational database via a JDBC connection pool.
 
 The JDBC config source reads configuration properties from a database table.
 

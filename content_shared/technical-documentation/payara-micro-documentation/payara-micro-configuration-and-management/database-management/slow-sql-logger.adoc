@@ -1,4 +1,5 @@
 = Slow SQL Logging in Payara Micro
+:page-description: Slow SQL logging in Payara Micro — configure threshold-based logging to capture SQL statements that exceed a specified execution time for performance tuning.
 
 Payara Micro supports slow logging of SQL queries which brings powerful operational
 diagnostics to your microservices platform.

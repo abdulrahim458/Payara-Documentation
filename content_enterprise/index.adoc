@@ -1,4 +1,5 @@
 = Azul Payara
+:page-description: Azul Payara documentation — enterprise Jakarta EE application server and Payara Micro, built on OpenJDK with C4 GC, extended lifecycle support, and Jakarta EE 10 certification.
 
 This is the documentation for Azul Payara, designed to increase stability and security in production environments and provide customers with access to production-oriented features, tools, and capabilities.
 

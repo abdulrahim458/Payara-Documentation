@@ -1,4 +1,5 @@
 = Payara Server Documentation
+:page-description: Azul Payara Server technical documentation — administration, deployment, security, high availability, MicroProfile, and application development guides for Payara Server.
 
 Comprehensive documentation of how to operate and manage a Payara Server installation composed of the following subsections:
 

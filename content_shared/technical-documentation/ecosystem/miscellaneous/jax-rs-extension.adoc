@@ -1,4 +1,5 @@
 = JAX-RS Extension
+:page-description: JAX-RS extension for Azul Payara — additional MVC and REST capabilities beyond the standard Jakarta RESTful Web Services API in Payara Server and Payara Micro.
 
 The JAX-RS Extension is an application specific extension that can assist you in improving the coding of certain aspects of any application that uses the standard JAX-RS Client API. At the moment the following features are supported:
 

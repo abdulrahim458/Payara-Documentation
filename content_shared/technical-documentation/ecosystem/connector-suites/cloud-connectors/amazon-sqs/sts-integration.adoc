@@ -1,6 +1,7 @@
 :ordinal: 3
 [#sts-integration]
 = Amazon Web Services STS Integration
+:page-description: AWS STS integration with the Amazon SQS Cloud Connector for Azul Payara — use AWS Security Token Service to assume roles for temporary SQS access credentials.
 
 To enhance security and provide temporary, limited-access credentials for your Jakarta EE application using Payara Cloud Connector for AWS SQS, you can integrate with AWS Security Token Service (STS) through Identity and Access Management (IAM). Follow the steps below to set up STS integration:
 

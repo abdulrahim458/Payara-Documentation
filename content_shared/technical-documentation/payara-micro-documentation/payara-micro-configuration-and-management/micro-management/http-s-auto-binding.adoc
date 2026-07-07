@@ -1,4 +1,5 @@
 = HTTP and HTTPS Auto-Binding
+:page-description: HTTP and HTTPS auto-binding in Payara Micro — configure automatic port selection and bind Payara Micro's HTTP/HTTPS listeners to available ports at startup.
 :ordinal: 6
 
 Payara Micro supports an auto-binding feature for its HTTP and HTTPS port, allowing Payara Micro to dynamically find a free HTTP or HTTPS port as required during startup.

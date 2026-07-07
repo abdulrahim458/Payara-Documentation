@@ -1,4 +1,5 @@
 = Mbeans Inventory
+:page-description: MBeans inventory for Azul Payara Server — reference listing of all JMX MBeans exposed by Payara Server for monitoring via JConsole or management tools.
 :ordinal: 25
 
 Below is a non-exhaustive list of MBeans which are useful to monitor in any Payara Server environment.

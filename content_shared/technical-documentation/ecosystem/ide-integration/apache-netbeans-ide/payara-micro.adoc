@@ -1,4 +1,5 @@
 = Payara Micro Apache Netbeans IDE Support
+:page-description: Payara Micro tools in Apache NetBeans IDE — create and run Payara Micro projects with MicroProfile support and hot deploy from Apache NetBeans.
 :ordinal: 2
 
 Apache NetBeans has Payara Micro support built into the IDE, so there is no need to install a plugin to integrate and control Payara Micro from Apache NetBeans.

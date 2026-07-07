@@ -1,6 +1,7 @@
 :ordinal: 2
 [#aws-sso-integration]
 = Amazon Web Services SSO Integration
+:page-description: AWS SSO integration with the Amazon SQS Cloud Connector for Azul Payara — authenticate using AWS Single Sign-On credentials for SQS message operations.
 
 If you are using version 2 of the Amazon Web Services Java SDK, then it is possible to configure the SQS connector use Amazon SSO authentication instead of a `secretKey` and `keyID` set of credentials.
 

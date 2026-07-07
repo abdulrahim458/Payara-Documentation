@@ -1,4 +1,5 @@
 = Administering the Notification Service
+:page-description: Administer the Notification Service in Azul Payara Server — configure notifiers (Slack, email, SNMP, JMX) to receive alerts for JVM, GC, and application health events.
 :ordinal: 11
 
 Payara Server comes with a general Notification service that can be used to log events which come from other services, such as the xref:administering-the-monitoring-service.adoc[Monitoring Service], the xref:administering-the-healthcheck-service.adoc[HealthCheck service] or the xref:administering-the-request-tracing-service.adoc[Request Tracing Service].

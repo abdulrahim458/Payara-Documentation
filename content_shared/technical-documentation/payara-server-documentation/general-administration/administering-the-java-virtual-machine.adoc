@@ -1,4 +1,5 @@
 = Administering the Virtual Machine for the Java Platform
+:page-description: Administer the JVM in Azul Payara Server — configure JVM options, heap size, GC settings, JVM flags, and profiler settings for Payara Server processes.
 :ordinal: 3
 
 The Java Virtual Machine is an interpretive computing engine responsible for running the byte codes in a compiled Java program. The virtual machine translates the

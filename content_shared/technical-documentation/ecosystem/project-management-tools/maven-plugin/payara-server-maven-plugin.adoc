@@ -1,4 +1,5 @@
 = Payara Server Maven Plugin
+:page-description: Payara Server Maven Plugin — deploy, undeploy, and manage Jakarta EE applications on Payara Server from Maven builds with hot-deploy and administration support.
 :ordinal: 2
 
 Payara Server provides a Maven plugin that can start and stop the server and deploy Jakarta EE applications.

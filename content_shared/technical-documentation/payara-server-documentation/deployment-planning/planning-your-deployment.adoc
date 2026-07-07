@@ -1,4 +1,5 @@
 = Planning Your Deployment
+:page-description: Plan your Azul Payara Server deployment — hardware sizing, JVM configuration, network topology, and environment considerations for production Jakarta EE workloads.
 :ordinal: 2
 
 Before deploying Payara Server, first determine the performance and availability goals, and then make decisions about the hardware, network, and storage requirements accordingly.

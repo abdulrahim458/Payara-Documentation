@@ -1,4 +1,5 @@
 = Custom Vendor Metrics
+:page-description: Custom vendor metrics in Azul Payara — Payara-specific MicroProfile Metrics exposing JVM, thread pool, request tracing, and data grid statistics.
 
 Azul Payara supports exporting the JMX Beans and HealthCheck stats to the Vendor Metrics.
 

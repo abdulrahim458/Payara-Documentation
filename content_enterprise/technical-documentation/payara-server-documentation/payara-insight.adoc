@@ -1,4 +1,5 @@
 = Payara Insight
+:page-description: Payara Insight — enterprise observability and monitoring dashboard for Azul Payara Server providing real-time metrics, request tracing, and application performance data.
 :ordinal: 11
 
 Payara InSight allows real-time visualization and alerting for server and web application metrics.

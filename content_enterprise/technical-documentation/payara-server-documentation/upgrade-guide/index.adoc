@@ -1,4 +1,5 @@
 = Upgrading Payara Server
+:page-description: Upgrade Azul Payara Server — guides for upgrading between Payara Server versions using the Upgrade Tool, backup and restore method, or directory migration.
 
 There are three valid methods of fully upgrading to a newer release of Payara Enterprise. Any of the following methods would work in most circumstances:
 

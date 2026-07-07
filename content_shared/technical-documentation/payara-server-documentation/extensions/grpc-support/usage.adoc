@@ -1,4 +1,5 @@
 = Using Grpc Support Module
+:page-description: Use gRPC in Azul Payara Server — configure and implement gRPC services, define Protocol Buffer schemas, and expose gRPC endpoints from Payara Server applications.
 
 WARNING: The gRPC extension has not yet been updated to support Azul Payara {pageSiteEditionCapitalised} {payaraVersionMajor}
 

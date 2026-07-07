@@ -1,4 +1,5 @@
 = Class Loaders
+:page-description: Class loaders in Azul Payara — understand the class loader hierarchy, delegation model, and configuration for Jakarta EE applications deployed to Payara Server.
 :ordinal: 1
 
 NOTE: This section strictly applies to Payara Server.

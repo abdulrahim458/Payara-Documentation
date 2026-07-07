@@ -1,4 +1,5 @@
 = Overview of Payara Server Administration
+:page-description: Overview of Azul Payara Server administration — asadmin CLI, Admin Console, REST management interface, and common server configuration and monitoring tasks.
 
 Payara Server provides a runtime for developing and deploying Jakarta EE Platform and Eclipse MicroProfile applications.
 

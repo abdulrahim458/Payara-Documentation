@@ -1,4 +1,5 @@
 = Domain and Node Directories Upgrade Method
+:page-description: Upgrade Payara Server by copying domain and node directories — direct migration approach for moving existing domain configuration to a new Payara Server installation.
 :ordinal: 3
 
 You can also upgrade Payara Enterprise by creating the domain and node directories in a directory that is separate from the installation. For example, if you downloaded _Payara Server 5.35.0_, created a domain, and then wanted to use _Payara Server 5.40.0_, you would use the following process:

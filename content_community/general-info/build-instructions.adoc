@@ -1,4 +1,5 @@
 = Build Instructions
+:page-description: Build instructions for Azul Payara Community — clone the source repository, set up the build environment, and compile Payara Server and Payara Micro from source.
 :ordinal: 3
 
 This page provides instructions on how to build the Payara Server's source code.

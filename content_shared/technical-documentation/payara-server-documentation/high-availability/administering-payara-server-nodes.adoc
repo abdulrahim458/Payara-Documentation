@@ -1,4 +1,5 @@
 = Administering Payara Server Nodes
+:page-description: Administer Payara Server nodes — create and configure SSH or config nodes for deploying server instances across remote hosts in a Payara domain.
 :ordinal: 2
 
 A node represents a host on which the Payara Server software is installed. A node must exist for every host on which Payara Server instances reside.

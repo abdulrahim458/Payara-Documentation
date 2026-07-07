@@ -1,4 +1,5 @@
 = Administration Console Features
+:page-description: Azul Payara Server Administration Console — web-based GUI for managing domains, clusters, deployed applications, JDBC resources, and server configuration.
 :ordinal: 4
 
 This page documents features specific to the administration console, focusing on Payara Server enhancements.

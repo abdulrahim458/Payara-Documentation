@@ -1,4 +1,5 @@
 = Administering the Monitoring Service
+:page-description: Administer the Monitoring Service in Azul Payara Server — configure JMX monitoring, MBean statistics, and monitoring levels for server components and deployed applications.
 :ordinal: 8
 
 This chapter explains how to monitor the Payara Server components and services by using the `asadmin` command-line utility. Instructions for configuring JConsole to monitor Payara Server resources are also provided.

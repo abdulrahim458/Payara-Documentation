@@ -1,4 +1,5 @@
 = Eclipse Microprofile JWT Authentication API
+:page-description: MicroProfile JWT Authentication in Azul Payara — propagate security identity using signed JWT tokens for stateless, caller-propagated authentication in microservices.
 
 Azul Payara {release-id} provides MicroProfile JWT Authentication {mpJWTVersion}.
 

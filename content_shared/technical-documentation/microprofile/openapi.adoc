@@ -1,4 +1,5 @@
 = Eclipse Microprofile Openapi API
+:page-description: MicroProfile OpenAPI in Azul Payara — automatically generate and serve OpenAPI 3.0 documentation from Jakarta RESTful Web Services endpoints.
 
 Azul Payara {release-id} provides MicroProfile OpenAPI {mpOpenAPIVersion}
 

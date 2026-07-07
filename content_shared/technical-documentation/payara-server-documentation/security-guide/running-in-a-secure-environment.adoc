@@ -1,4 +1,5 @@
 = Running in a Secure Environment
+:page-description: Run Azul Payara Server in a secure environment — best practices for hardening Payara Server including network restrictions, minimal permissions, and OS-level security.
 :ordinal: 6
 
 This chapter describes important information about running Payara Server in a secure environment.

@@ -1,4 +1,5 @@
 = Server Extensions
+:page-description: Azul Payara Server extensions — enterprise add-on modules including gRPC support, extended notification service, and monitoring enhancements beyond the standard distribution.
 
 Payara Server Enterprise Edition allows plugin extensions to expand the features of the server's runtime. These extensions are not included in the default server's runtime and they must be installed before considering their usage.
 

@@ -1,4 +1,5 @@
 = Firing and Listening for Remote CDI Events
+:page-description: Remote CDI events in Azul Payara — fire and observe CDI events across clustered Payara Server and Payara Micro instances using the Payara Public API.
 
 Payara Server is able to listen to and fire CDI events across the Hazelcast cluster. The CDI events can be fired and listened to by applications on Payara Server instances as well as Payara Micro instances provided that they are connected to the same cluster.
 

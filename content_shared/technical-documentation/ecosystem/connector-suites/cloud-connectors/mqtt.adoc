@@ -1,4 +1,5 @@
 = MQTT Cloud Connector
+:page-description: MQTT Cloud Connector for Azul Payara — JCA resource adapter for publishing and subscribing to MQTT topics from Payara Server and Payara Micro applications.
 
 MQTT (Message Queue Telemetry Transport) is a lightweight publish-subscribe messaging protocol.
 

@@ -1,4 +1,5 @@
 = Payara Micro API
+:page-description: Payara Micro API — programmatic API for bootstrapping and configuring Payara Micro instances, deploying applications, and interacting with the embedded server.
 
 This section details documentation on the Payara Micro API. The Javadoc for the most recent version of the Payara Micro API can be
 found https://javadoc.io/doc/fish.payara.extras/payara-micro[here^].

@@ -1,4 +1,5 @@
 = Elements of the Azul Payara Deployment Descriptors
+:page-description: Elements of Azul Payara deployment descriptors — complete reference for all XML elements supported in Payara-specific deployment descriptor files.
 :ordinal: 4
 
 This appendix describes the elements of the Azul Payara deployment descriptors.

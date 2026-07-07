@@ -1,4 +1,5 @@
 = Using the Data Grid in Your Applications
+:page-description: Use the Domain Data Grid in Jakarta EE applications on Azul Payara — access the Hazelcast data grid, use JCache, and share distributed data across Payara cluster nodes.
 :ordinal: 21
 
 This section details how to use the underlying Data Grid Hazelcast instance in Payara Server within application code.

@@ -1,4 +1,5 @@
 = TOML Config Source
+:page-description: TOML Config Source for MicroProfile Config in Azul Payara — read application configuration from TOML files as a MicroProfile Config source.
 
 The TOML Config Source takes configuration properties from a TOML configuration file.
 

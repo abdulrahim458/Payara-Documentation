@@ -1,4 +1,5 @@
 = Cloud Connectors
+:page-description: Cloud Connectors for Azul Payara — JCA-based connectors for integrating Payara Server and Payara Micro with Amazon SQS, Azure Service Bus, Apache Kafka, and MQTT.
 
 The Payara Cloud Connectors are a collection of JCA adapters for use with various popular cloud messaging providers. These connectors can be deployed to either Payara Server or Payara Micro.
 

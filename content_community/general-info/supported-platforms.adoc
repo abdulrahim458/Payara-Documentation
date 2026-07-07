@@ -1,4 +1,5 @@
 = Supported Platforms
+:page-description: Supported platforms for Azul Payara Community — certified operating systems, JDK versions, container environments, and hardware architectures for the community distribution.
 :ordinal: 2
 
 Though it is always possible for new versions to be supported, this page details the JVMs currently supported by Azul Payara (both Payara Server and Payara Micro).

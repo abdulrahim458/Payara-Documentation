@@ -1,4 +1,5 @@
 = Payara Server Tools in Intellij IDEA
+:page-description: Payara Server tools in IntelliJ IDEA — configure a Payara Server run configuration, deploy applications, and manage server instances from IntelliJ IDEA.
 :ordinal: 1
 
 IMPORTANT: This is only available in the `Payara IntelliJ Ultimate Tools` plugin which is exclusive to IntelliJ IDEA Ultimate

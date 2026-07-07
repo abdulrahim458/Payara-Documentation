@@ -1,4 +1,5 @@
 = Eclipse Microprofile Rest Client API
+:page-description: MicroProfile REST Client in Azul Payara — create type-safe HTTP clients from Jakarta RESTful Web Services interfaces for microservice-to-microservice communication.
 
 Azul Payara {release-id} provides MicroProfile Rest Client {mpRestClientVersion}
 

@@ -1,4 +1,5 @@
 = Using Jakarta Data
+:page-description: Use Jakarta Data in Azul Payara — define repository interfaces for data access using the Jakarta Data API with Payara's integrated Jakarta Persistence provider.
 :ordinal: 26
 
 This chapter describes how to use the Jakarta Data API, which provides an API for easier data access.

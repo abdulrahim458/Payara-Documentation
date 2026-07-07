@@ -1,4 +1,5 @@
 = Jakarta EE Certification Summary
+:page-description: Azul Payara Jakarta EE certification results — official TCK test results for Payara Server and Payara Micro across Jakarta EE Platform and Web Profile specifications.
 
 Payara Server is a certified https://jakarta.ee/[Jakarta EE^] implementation. The following specifications are fully certified:
 

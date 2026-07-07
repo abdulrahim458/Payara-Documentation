@@ -1,4 +1,5 @@
 = Deploying Applications
+:page-description: Deploy applications to Payara Micro — deploy WAR archives using the command line, asadmin commands, Maven plugin, or programmatically via the Payara Micro API.
 :ordinal: 1
 
 [#deploying-an-application]

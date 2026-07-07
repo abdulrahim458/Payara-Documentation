@@ -1,4 +1,5 @@
 = Programmatic SQS Queue Management
+:page-description: Programmatic SQS queue management in Azul Payara — create, delete, and configure Amazon SQS queues from Jakarta EE applications using the Payara SQS Cloud Connector API.
 
 Amazon SQS Queues (and other resources) can be managed through the use of the official Amazon SQS API, which allows programmatic control over them. In general, managing queues in Amazon SQS is crucial for effective message handling.
 

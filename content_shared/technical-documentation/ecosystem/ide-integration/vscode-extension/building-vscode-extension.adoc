@@ -1,4 +1,5 @@
 = Building Payara Tools VS Code IDE Plugin
+:page-description: Build the Payara VS Code extension from source — steps for cloning, building, and installing the Payara Tools VS Code extension for local development or contribution.
 
 The Payara Tools VS Code IDE Extension source code is available in the https://github.com/payara/ecosystem-vscode-plugin[VS Code Extension repository^].
 

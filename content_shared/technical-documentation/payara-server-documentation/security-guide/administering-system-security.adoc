@@ -1,4 +1,5 @@
 = Administering System Security
+:page-description: Administer system security in Azul Payara Server — configure certificates, keystores, SSL/TLS settings, and harden Payara Server for production environments.
 :ordinal: 1
 
 This chapter describes general information about administering system security.

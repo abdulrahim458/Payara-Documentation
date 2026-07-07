@@ -1,4 +1,5 @@
 = Payara Micro JAR Structure
+:page-description: Payara Micro JAR structure — understand how the Payara Micro uber-JAR is organized, what it contains, and how to customize it for deployment.
 :ordinal: 1
 
 This page details the structure of the currents Payara Micro JAR file.

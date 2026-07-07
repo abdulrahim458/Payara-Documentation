@@ -1,4 +1,5 @@
 = LDAP Config Source
+:page-description: LDAP Config Source for MicroProfile Config in Azul Payara — read MicroProfile configuration values from an LDAP directory server for centralized config management.
 
 The LDAP configuration source reads properties from a predefined LDAP directory.
 

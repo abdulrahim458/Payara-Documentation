@@ -1,4 +1,5 @@
 = Overview
+:page-description: Application development with Azul Payara — guides for building Jakarta EE applications including CDI, EJB, JPA, JMS, web services, security, and OSGi on Payara.
 
 This chapter describes how to create and run Jakarta EE applications in compatible Azul Payara distributions. Topics for this guide include developer tools, security, debugging and specific features for Jakarta EE specification implementations. This document is intended for use by software developers who create, assemble, and deploy Jakarta EE applications using Azul Payara.
 

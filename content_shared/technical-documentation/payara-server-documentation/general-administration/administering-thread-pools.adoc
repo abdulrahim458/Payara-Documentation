@@ -1,4 +1,5 @@
 = Administering Thread Pools
+:page-description: Administer thread pools in Azul Payara Server — create, configure, and tune request processing thread pools for HTTP and IIOP traffic handling.
 :ordinal: 5
 
 This chapter provides procedures for administering thread pools in the Payara Server environment by using the `asadmin` command-line utility.

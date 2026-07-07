@@ -1,4 +1,5 @@
 = GCP Cloud Config Source
+:page-description: GCP Cloud Config Source for MicroProfile Config in Azul Payara — read configuration values from Google Cloud Platform Secret Manager.
 
 The GCP (Google Cloud Platform) Cloud config source takes configuration properties from the GCP Secret Manager.
 

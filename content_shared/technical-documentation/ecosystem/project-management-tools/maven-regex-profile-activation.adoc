@@ -1,4 +1,5 @@
 = Maven Regex Profile Activation Extension
+:page-description: Maven regex profile activation extension for Azul Payara — activate Maven build profiles using regular expression matching on system properties and environment variables.
 :ordinal: 5
 
 The Maven Regex Profile Activation extension allows activating profiles by checking that a property matches a given regular expression, rather than an exact value.

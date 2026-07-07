@@ -1,4 +1,5 @@
 = Building Payara Tools Netbeans IDE Plugin
+:page-description: Build the Payara Apache NetBeans plugin from source — steps for cloning, building, and installing the Payara Tools NetBeans plugin for local development or contribution.
 
 As Apache NetBeans IDE provides out-of-the-box support for Azul Payara, the source code for the Azul Payara tools is contained within the https://github.com/apache/netbeans[NetBeans Code Repository.^]
 

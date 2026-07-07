@@ -1,4 +1,5 @@
 = Cloud Configuration Sources
+:page-description: Cloud Configuration Sources for MicroProfile Config in Azul Payara — read config values from AWS Parameter Store, Azure Key Vault, GCP Secret Manager, HashiCorp Vault, and DynamoDB.
 
 The *Cloud Configuration Sources* can be used to extract configuration properties from a secret store or a database of several different cloud providers.
 

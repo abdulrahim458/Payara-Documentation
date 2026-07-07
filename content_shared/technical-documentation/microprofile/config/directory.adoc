@@ -1,4 +1,5 @@
 = Directory Config Source
+:page-description: Directory Config Source for MicroProfile Config in Azul Payara — read configuration values from files in a directory, where each file name is a config key.
 
 This page details how to configure and use the *Directory* configuration source in Azul Payara.
 

@@ -1,4 +1,5 @@
 = Configuring HTTP Load Balancing
+:page-description: Configure HTTP load balancing for Azul Payara Server — set up the Payara load balancer plugin or front-end proxy for distributing requests across clustered instances.
 :ordinal: 8
 
 This chapter describes how to configure HTTP load balancing on Payara Server.

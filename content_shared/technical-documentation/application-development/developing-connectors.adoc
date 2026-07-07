@@ -1,4 +1,5 @@
 = Developing Connectors
+:page-description: Develop JCA connectors for Azul Payara — implement Jakarta Connectors Architecture (JCA) resource adapters for integrating external enterprise systems.
 :ordinal: 13
 
 NOTE: This section strictly applies to Payara Server Full Profile.

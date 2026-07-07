@@ -1,4 +1,5 @@
 = Tracing Apis Compatibility Matrix
+:page-description: Tracing API compatibility matrix for Azul Payara Community — maps MicroProfile OpenTracing, OpenTelemetry, and OpenTracing APIs across Payara Community releases.
 :ordinal: 24
 
 The following is an up-to-date compatibility matrix that list the compatible versions of OpenTelemetry and OpenTracing in Azul Payara:

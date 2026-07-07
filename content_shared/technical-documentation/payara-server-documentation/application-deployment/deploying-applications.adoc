@@ -1,4 +1,5 @@
 = Deploying Applications
+:page-description: Deploy applications to Azul Payara Server — deploy WAR, EAR, and JAR archives using the Admin Console, asadmin CLI, Maven plugin, or REST management interface.
 :ordinal: 1
 
 This chapter provides procedures and guidelines for deploying applications and modules in the Payara Server environment by using the `asadmin`command-line utility.

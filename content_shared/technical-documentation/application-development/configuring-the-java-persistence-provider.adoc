@@ -1,4 +1,5 @@
 = Configuring the Java Persistence Provider
+:page-description: Configure the Java Persistence Provider in Azul Payara — set up EclipseLink or other JPA providers, define persistence units, and tune JPA behavior for Payara.
 :ordinal: 6
 
 This chapter describes EclipseLink, the default persistence provider in Payara Server, and introduces how to use it.

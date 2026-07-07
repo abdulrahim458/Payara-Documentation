@@ -1,4 +1,5 @@
 = Printing Certificate Data
+:page-description: Print certificate data in Azul Payara Server — use asadmin commands to display certificate details from keystores and truststores for auditing and troubleshooting.
 :ordinal: 10
 
 The `print-certificate` asadmin subcommand is useful to print legible and detailed information of one or multiple SSL certificate and key entries.

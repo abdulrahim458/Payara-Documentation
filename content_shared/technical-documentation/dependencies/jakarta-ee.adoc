@@ -1,5 +1,6 @@
 [[jakarta-ee]]
 = Jakarta EE Specification Dependencies Mapping
+:page-description: Jakarta EE specification dependencies in Azul Payara — mapping of implemented Jakarta EE API versions to Payara Server and Payara Micro release versions.
 :ordinal: 1
 
 This section details all dependencies linked to Jakarta EE specifications.

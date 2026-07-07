@@ -1,4 +1,5 @@
 = Hashicorp Secrets Config Source
+:page-description: HashiCorp Vault Config Source for MicroProfile Config in Azul Payara — read application configuration from HashiCorp Vault secrets.
 
 The HashiCorp Secrets Config Source takes configuration properties from HashiCorp Vault. You can learn more about HashiCorp on: https://www.vaultproject.io/
 

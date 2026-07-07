@@ -1,4 +1,5 @@
 = Administering Concurrent Resources
+:page-description: Administer concurrent resources in Azul Payara Server — configure ManagedExecutorService, ManagedScheduledExecutorService, and ContextService for Jakarta Concurrency.
 :ordinal: 17
 
 This chapter provides procedures for administering concurrent resources in the Payara Server environment by using the `asadmin` command-line utility.

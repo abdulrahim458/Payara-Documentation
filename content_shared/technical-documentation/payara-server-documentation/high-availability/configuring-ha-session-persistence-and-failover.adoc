@@ -1,4 +1,5 @@
 =  Configuring High Availability Session Persistence and Failover
+:page-description: Configure HA session persistence and failover in Azul Payara Server — replicate HTTP sessions, stateful EJB state, and SFSB data across cluster nodes.
 :ordinal: 9
 
 This chapter explains how to enable and configure high availability session persistence.

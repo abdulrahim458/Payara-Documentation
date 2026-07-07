@@ -1,4 +1,5 @@
 = Extended Notification Service Details
+:page-description: Extended Notification Service in Azul Payara Server — configure Datadog, Slack, Discord, email, Teams, and SNMP notifiers for JVM and application health alerts.
 :ordinal: 11
 
 Payara Enterprise has additional notifiers built in and ready for use with your server environment that do not require further installation. These additional notifiers are pre-installed as *extensions* in the server module layout.

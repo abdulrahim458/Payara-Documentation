@@ -1,4 +1,5 @@
 = Diagnostics Tool
+:page-description: Payara Server Diagnostics Tool — collect server configuration, thread dumps, log files, and JVM metrics into a diagnostic bundle for troubleshooting Azul Payara issues.
 
 Payara Server has a diagnostic tool that on demand collects the following information from the server runtime.
 

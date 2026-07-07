@@ -1,3 +1,4 @@
 = Overview of Payara Server Deployment Planning
+:page-description: Deployment planning overview for Azul Payara Server — capacity planning, product concepts, environment setup, and pre-deployment checklists for production deployments.
 
 This section explains how to build a production deployment of Payara Server.

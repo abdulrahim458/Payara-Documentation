@@ -1,4 +1,5 @@
 = Using Jakarta Messaging
+:page-description: Use Jakarta Messaging (JMS) in Azul Payara — send and receive messages with the embedded OpenMQ broker, configure connection factories, and develop MDB-based consumers.
 :ordinal: 19
 
 This chapter describes how to use the Jakarta Messaging (JMS) API. Payara Server has a fully integrated JMS provider: the *Open Message Queue* software.

@@ -1,4 +1,5 @@
 = Using the JDBC API for Database Access
+:page-description: Use the JDBC API for database access in Azul Payara — configure data sources, inject JDBC connections, and perform database operations from Jakarta EE applications.
 :ordinal: 16
 
 This chapter describes how to use the Java Database Connectivity (JDBC) API for database access with Payara Server.

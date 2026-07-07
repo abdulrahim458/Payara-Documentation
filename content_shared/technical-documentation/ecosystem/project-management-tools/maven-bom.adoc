@@ -1,4 +1,5 @@
 = Maven Bill of Materials Artifact
+:page-description: Payara Platform Maven BOM — Bill of Materials artifact for consistent dependency version management across Payara Server and Payara Micro Jakarta EE projects.
 :ordinal: 1
 
 Azul Payara consists of many artifacts and it depends on lots of APIs as well as their implementations. Having matching versions of these dependencies will prevent classloading issues at runtime. To this effect, Azul Payara's Bill Of Materials (BOM) artifact collects all of these versions for the following categories:

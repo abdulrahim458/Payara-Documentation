@@ -1,4 +1,5 @@
 = Configuration Variables Reference
+:page-description: Configuration variables reference for Azul Payara Server — system properties, environment variables, and micro-profile config sources available for runtime configuration.
 :ordinal: 23
 
 This section outlines how to reference different variable type sources in the configuration of a Payara Server domain.

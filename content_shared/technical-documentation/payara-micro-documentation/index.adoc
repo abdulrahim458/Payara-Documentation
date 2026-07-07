@@ -1,6 +1,7 @@
 :Ordinal: 900
 [#payara-micro-documentation]
 = Payara Micro Documentation
+:page-description: Azul Payara Micro documentation — configure, deploy, and manage Payara Micro instances: command-line options, clustering, database management, and Maven integration.
 
 This section covers how to use Payara Micro.
 

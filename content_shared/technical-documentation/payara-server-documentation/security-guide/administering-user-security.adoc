@@ -1,4 +1,5 @@
 = Administering User Security
+:page-description: Administer user security in Azul Payara Server — manage authentication realms, users, groups, and configure JAAS login modules and Jakarta Security.
 :ordinal: 2
 
 This chapter provides instructions for administering user security in the Payara Server environment by using the `asadmin` command-line utility. Payara Server enforces its authentication and authorization policies upon realms, users, and groups. This chapter assumes that you are familiar with security features such as authentication, authorization, and certificates. If you are not, see xref:administering-system-security.adoc#administering-system-security[Administering System Security].

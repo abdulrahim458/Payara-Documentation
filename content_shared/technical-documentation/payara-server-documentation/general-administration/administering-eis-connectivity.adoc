@@ -1,4 +1,5 @@
 = Administering EIS Connectivity
+:page-description: Administer EIS connectivity in Azul Payara Server — deploy and configure JCA resource adapters for connecting to enterprise information systems (EIS).
 :ordinal: 15
 
 This chapter provides information and procedures for administering connections to enterprise information system (EIS) data in the Payara Server environment by using the `asadmin` command-line utility.
