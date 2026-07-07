@@ -38,7 +38,7 @@ After the Payara Tools plugin has been built, you can install it in IntelliJ IDE
 . Click the ⚙️ cog icon and select `Install Plugin from Disk`
 . Select the compiled ZIP file from the `/build/distributions` directory
 
-*image*: intellij-plugin/building-plugin/install-compiled-plugin.png[Install Compiled Plugin]
+image::intellij-plugin/building-plugin/install-compiled-plugin.png[Install Compiled Plugin]
 
 [#remove-compiled-intellij-plugin]
 === Removing Payara Tools from Intellij IDEA
@@ -49,7 +49,7 @@ To uninstall the plugin:
 . Right-click the **Payara Tools** plugin
 . Click **Uninstall**
 
-*image*: intellij-plugin/building-plugin/remove-compiled-plugin.png[Remove Complied Plugin]
+image::intellij-plugin/building-plugin/remove-compiled-plugin.png[Remove Complied Plugin]
 
 [#testing-intellij-plugin]
 == Test Payara Tools

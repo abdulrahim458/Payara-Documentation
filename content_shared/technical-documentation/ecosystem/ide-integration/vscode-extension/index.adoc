@@ -17,7 +17,7 @@ IMPORTANT: If you are using Maven or Gradle as the build tool in your project, t
 . Search for the *Payara Tools* extension.
 . Click the *Install* button.
 
-*image*: vscode-extension/install-marketplace.png[Visual Studio Marketplace]
+image::vscode-extension/install-marketplace.png[Visual Studio Marketplace]
 
 [#vscode-tools]
 == Azul Payara Tools

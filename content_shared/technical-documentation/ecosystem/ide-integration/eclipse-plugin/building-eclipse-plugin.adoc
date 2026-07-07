@@ -35,7 +35,7 @@ After Payara Tools for Eclipse has been compiled successfully, you need to add i
 . Select Install Anyway
 . Restart Eclipse when prompted
 
-*image*: eclipse-plugin/Install Payara Tools.gif[Installing Payara Tools]
+image::eclipse-plugin/Install Payara Tools.gif[Installing Payara Tools]
 
 [#remove-compiled-eclipse-plugin]
 === Removing Payara Tools from Eclipse

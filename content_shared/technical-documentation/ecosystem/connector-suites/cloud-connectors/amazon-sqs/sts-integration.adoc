@@ -72,7 +72,7 @@ To resolve potential authorization issues related to role assumption, ensure tha
 }
 ----
 
-*image*: cloud-connectors/sqs-connector/sqs-role-policy.png[Amazon IAM Role Policy - Trust Relationship]
+image::cloud-connectors/sqs-connector/sqs-role-policy.png[Amazon IAM Role Policy - Trust Relationship]
 
 Make sure to replace the values with your specific IAM user ARN and role ARN.
 

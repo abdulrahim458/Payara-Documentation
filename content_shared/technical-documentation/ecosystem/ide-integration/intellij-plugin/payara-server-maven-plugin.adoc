@@ -12,10 +12,10 @@ Using the Payara Tools and Payara Server Maven Plugin, you can integrate Payara 
 [#managing-payara-server-from-intellij]
 == Managing Payara Server Using Maven Plugin from Intellij IDEA
 . To manage Payara Server using the Maven plugin from IntelliJ IDEA, first create the new *Payara Server configuration* by selecting the *Edit Configuration* option:
-*image*: intellij-plugin/payara-server-maven-plugin/create-configuration.png[Create Configuration]
+image::intellij-plugin/payara-server-maven-plugin/create-configuration.png[Create Configuration]
 
 . In the *Run/Debug Configurations* dialog, click *+*, select the *Payara Server*:
-*image*: intellij-plugin/payara-server-maven-plugin/create-server-configuration.png[Create Server configuration]
+image::intellij-plugin/payara-server-maven-plugin/create-server-configuration.png[Create Server configuration]
 
 
 . In the newly created configuration:
@@ -23,24 +23,24 @@ Using the Payara Tools and Payara Server Maven Plugin, you can integrate Payara 
 .. Specify the JDK or JRE path that Payara Server should use.
 
 . Optionally, configure the application’s context path or deployment format (e.g., exploded).
-*image*: intellij-plugin/payara-server-maven-plugin/app-configuration.png[App configuration]
+image::intellij-plugin/payara-server-maven-plugin/app-configuration.png[App configuration]
 
 . To add the Payara Server to the configuration, click the *Payara Server Settings > Payara Home* and set it to the Payara Server's installation path you would like to add to the IDE.
-*image*: intellij-plugin/payara-server-maven-plugin/payara-configuration.png[Payara configuration]
+image::intellij-plugin/payara-server-maven-plugin/payara-configuration.png[Payara configuration]
 
 . Configure environment variables and system properties required by the server and Maven plugin.
-*image*: intellij-plugin/payara-server-maven-plugin/env-server-properties.png[Env and Server properties]
+image::intellij-plugin/payara-server-maven-plugin/env-server-properties.png[Env and Server properties]
 
 . Define additional Maven properties used by the Payara Server Maven Plugin during the build and deployment process.
-*image*: intellij-plugin/payara-server-maven-plugin/maven-properties.png[Maven properties]
+image::intellij-plugin/payara-server-maven-plugin/maven-properties.png[Maven properties]
 
 . Specify Maven tasks to run before launching the server.
-*image*: intellij-plugin/payara-server-maven-plugin/before-launch-task.png[Before Launch Task]
+image::intellij-plugin/payara-server-maven-plugin/before-launch-task.png[Before Launch Task]
 
 . Click the *Run or Debug* button from top-right panel to start Payara Server, or start Payara Server in debug mode, which would allow you to debug deployed applications
-*image*: intellij-plugin/payara-server-maven-plugin/run-server.png[Start the Payara Server]
+image::intellij-plugin/payara-server-maven-plugin/run-server.png[Start the Payara Server]
 
 . You can see the server log in the *application build console* window.
-*image*: intellij-plugin/payara-server-maven-plugin/server-log.png[Payara Server log]
+image::intellij-plugin/payara-server-maven-plugin/server-log.png[Payara Server log]
 
 . After application deployed to the Payara Server, IntelliJ starts a web browser and opens the application context root in the web browser.

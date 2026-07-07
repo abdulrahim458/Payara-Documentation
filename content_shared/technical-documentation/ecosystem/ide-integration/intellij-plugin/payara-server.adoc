@@ -14,11 +14,11 @@ Using the Payara IntelliJ Ultimate Tools plugin, you can integrate Payara Server
 == Managing Payara Server from the Intellij IDE
 To manage Payara Server from the IntelliJ idea, first create the new *Payara Server configuration* by selecting the *Edit Configuration* option:
 
-*image*: intellij-plugin/payara-server/create-configuration.png[Create Configuration]
+image::intellij-plugin/payara-server/create-configuration.png[Create Configuration]
 
 In the *Run/Debug Configurations* dialog, click *+*, expand the *Payara Server* node, and select *Local*:
 
-*image*: intellij-plugin/payara-server/create-local-server-configuration.png[Create Local Server configuration]
+image::intellij-plugin/payara-server/create-local-server-configuration.png[Create Local Server configuration]
 
 To add the Payara Server to the configuration, click the *Configure...* button and set it to the Payara Server's installation path you would like to add to the IDE.
 
@@ -26,19 +26,19 @@ Specify the path to the JRE or JDK version you would like Payara Server to run o
 
 Finally, fix the debugger related warning by pressing the *Fix* button, which updates the debugger settings in the domains.xml of the selected Payara Server's domain.
 
-*image*: intellij-plugin/payara-server/complete-run-configuration.png[Complete run configuration]
+image::intellij-plugin/payara-server/complete-run-configuration.png[Complete run configuration]
 
 For now, ignore the `No artifacts marked for deployment` warning and click *OK* to save the configuration
 
 Click the *Run or Debug* button from top-right panel to start Payara Server, or start Payara Server in debug mode, which would allow you to debug deployed applications
 
-*image*: intellij-plugin/payara-server/run-server.png[Start the Payara Server]
+image::intellij-plugin/payara-server/run-server.png[Start the Payara Server]
 
 You can see the server log in the *Run > Payara Log* window.
 
 TIP: You can filter logs by level with the dropdown menu on the right of the `Payara Log`
 
-*image*: intellij-plugin/payara-server/server-log.png[Payara Server log]
+image::intellij-plugin/payara-server/server-log.png[Payara Server log]
 
 [#deploying-application-payara-server-from-intellij]
 == Deploying an Application to Payara Server from Intellij
@@ -51,7 +51,7 @@ To deploy an application to Payara Server you must further edit the run configur
 . Select *Artifact...* then choose the non-exploded format of your application's name.
 . Click *OK*
 
-*image*: intellij-plugin/payara-server/add-artifact.png[Add artifact]
+image::intellij-plugin/payara-server/add-artifact.png[Add artifact]
 
 After application deployed to the Payara Server, IntelliJ starts a web browser and opens the application context root in the web browser.
 

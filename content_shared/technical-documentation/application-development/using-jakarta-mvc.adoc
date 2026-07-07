@@ -171,7 +171,7 @@ For instance the `#\{greet\}` will return "Hello, World! Jakarta MVC", as was pu
 
 Accessing `http://localhost:8080/jakarta-mvc/mvc/app/` gives us the response shown below.
 
-*image*: mvc/mvc-1.png[Hello world example]
+image::mvc/mvc-1.png[Hello world example]
 
 [#models]
 == Models
@@ -295,7 +295,7 @@ This time around it calls the getter methods of the various fields.
 The salutation instance is what is CDI makes available automatically.
 This way, the view has access to the model without explicitly using the `Models` map. The `salute` method is hosted at `http://localhost:8080/jakarta-mvc/mvc/app/salute`, which returns the following.
 
-*image*: mvc/mvc-2.png[Hello world example 2]
+image::mvc/mvc-2.png[Hello world example 2]
 
 [#see-also]
 == See Also

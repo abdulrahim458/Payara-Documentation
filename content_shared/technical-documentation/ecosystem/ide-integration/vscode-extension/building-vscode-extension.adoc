@@ -31,7 +31,7 @@ After Payara Tools for VS Code has been compiled and packaged successfully, you 
 
 Installing a vsix file in VS Code is as simple as right clicking the file in the explorer, and selecting `Install Extension VSIX`
 
-*image*: vscode-extension/building-extension/install-vsix.png[Install VSIX File]
+image::vscode-extension/building-extension/install-vsix.png[Install VSIX File]
 
 [#remove-compiled-vscode-extension]
 === Removing Payara Tools from VS Code
@@ -41,4 +41,4 @@ Removing Payara Tools from VS Code after installing using the method above is th
 . Navigate to Extensions (Ctrl + Shift + X)
 . Right click `Payara Tools` and click Uninstall
 
-*image*: vscode-extension/building-extension/uninstall-extension.png[Uninstall VS Code Extension]
+image::vscode-extension/building-extension/uninstall-extension.png[Uninstall VS Code Extension]
