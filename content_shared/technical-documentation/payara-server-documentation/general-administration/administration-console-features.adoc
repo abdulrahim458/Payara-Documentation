@@ -100,7 +100,7 @@ This service can be configured from the admin console and from the command line.
 
 The auditing service configuration can be found in the web console under `Configurations` -> `<configuration-name>` -> `Security` -> `Admin Audit`:
 
-image:admin-console/admin-audit-menu.png[alt="Admin Audit Service in Web Console",width=250px]
+image:admin-console/admin-audit-menu.png[alt="Admin Audit Service in Web Console",width=600px]
 
 Once enabled, actions in the admin console that have a corresponding `asadmin` command will be sent to the xref:administering-the-notification-service.adoc[Notification service].
 

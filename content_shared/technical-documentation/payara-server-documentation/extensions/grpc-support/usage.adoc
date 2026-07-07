@@ -167,7 +167,7 @@ ${webapp root folder} > mvn clean install
 
 The stubs should be generated with similar structure like the following:
 
-image::grpc/grpc-stubs-folders.png[Stubs folders]
+image::grpc/grpc-stubs-folders.png[Stubs folders,width=600px]
 
 *target/generated-sources/protobuf/grpc-java/fish.payara.samples.grpc*: Here you can see the service class
 *target/generated-sources/protobuf/java/fish.payara.samples.grpc*: Here you can see the types associated to the service
@@ -215,7 +215,7 @@ After doing the previous steps, you need to rebuild the project to include the s
 
 The final step is to deploy the application in a Payara Server domain. We can do this by using the Admin Console or the Asadmin CLI:
 
-image::grpc/deploy-gui-tool.png[Admin Console]
+image::grpc/deploy-gui-tool.png[Admin Console,width=100%]
 
 Here's an example running the Asadmin CLI equivalent from the command line:
 

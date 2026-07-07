@@ -195,11 +195,11 @@ From the Admin Console homepage:
 
 . Select Data Grid under the instance's configuration from the page tree:
 +
-image::hazelcast/hazelcast-admin-console-select-instance-config.png[Admin Console Data Grid Config]
+image::hazelcast/hazelcast-admin-console-select-instance-config.png[Admin Console Data Grid Config,width=600px]
 
 . Un-check the **Enabled** option (and optionally check the **Dynamic** option to apply the configuration without the need for a restart) and save.
 +
-image::hazelcast/hazelcast-admin-console-enable-hazelcast.png[Admin Console Data Grid Enabling]
+image::hazelcast/hazelcast-admin-console-enable-hazelcast.png[Admin Console Data Grid Enabling,width=100%]
 
 CAUTION: Disabling the Data Grid in a configuration object will disable the Data Grid for all instances using that same configuration. If this change is applied dynamically and multiple instances are restarted, there is big risk in incurring on data loss. +
 If this is a problem, ensure not to select the dynamic option and restart each affected instance manually in turn.
@@ -268,7 +268,7 @@ To set the Hazelcast configuration from a Hazelcast Configuration file:
 
 . On the _Hazelcast Configuration_ page, add the path to your Hazelcast configuration file and click "Save". This path is relative to your domain configuration directory:
 +
-image::hazelcast/hazelcast-admin-console-set-configuration-file.png[Hazelcast Set Configuration File]
+image::hazelcast/hazelcast-admin-console-set-configuration-file.png[Hazelcast Set Configuration File,width=100%]
 
 [#setting-hazelcast-configuration-file-asadmin]
 ==== Setting a Hazelcast Configuration File Using Asadmin
@@ -288,7 +288,7 @@ As with the admin console, this path is relative to your domain configuration di
 
 Some Hazelcast configuration settings apply to the whole domain. Navigate to the _Data Grid_ page for the domain wide settings:
 
-image::hazelcast/hazelcast-admin-console-domain-hazelcast-options.png[Data Grid Domain Wide Options]
+image::hazelcast/hazelcast-admin-console-domain-hazelcast-options.png[Data Grid Domain Wide Options,width=100%]
 
 The following configuration options are available here:
 
@@ -342,7 +342,7 @@ Using this option to point to a valid Hazelcast configuration file will cause al
 
 Navigate to the _Data Grid_ page for the specific configuration.
 
-image::hazelcast/hazelcast-admin-console-config-hazelcast-options.png[Data Grid Domain Wide Options]
+image::hazelcast/hazelcast-admin-console-config-hazelcast-options.png[Data Grid Domain Wide Options,width=600px]
 
 The following configuration options are available here:
 
@@ -413,7 +413,7 @@ You can configure the start port used by an instance after its creation by eithe
 . Select the Configuration from the page tree, click on the relevant instance and finally click on the Data Grid.
 . On the Configuration Specific Data Grid Configuration, set the **Data Grid Start Port** and click **Save**.
 
-image::hazelcast/hazelcast-admin-console-config-data-grid-start-port.png[Data Grid Start Port Option]
+image::hazelcast/hazelcast-admin-console-config-data-grid-start-port.png[Data Grid Start Port Option,width=100%]
 
 [#setting-data-grid-start-port-with-the-asadmin-cli]
 ===== Setting Data Grid Start Port Using Asadmin CLI

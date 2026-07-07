@@ -14,27 +14,27 @@ Using the Payara Eclipse Tools, you can integrate Payara Server within the Eclip
 
 . Simply start up Eclipse IDE and then Choose *File > New > Project* from the main menu or press Ctrl+N to get the list of available projects:
 +
-image::eclipse-plugin/payara-micro/create-new-project.png[Generate Payara Micro Application]
+image::eclipse-plugin/payara-micro/create-new-project.png[Generate Payara Micro Application,width=100%]
 
 . Now, select the Payara Micro Project type to create the application:
 +
-image::eclipse-plugin/payara-micro/payara-micro-project.png[Payara Micro Project]
+image::eclipse-plugin/payara-micro/payara-micro-project.png[Payara Micro Project,width=600px]
 
 . Select the destination folder, where the project will be generated. You may also use the default workspace location:
 +
-image::eclipse-plugin/payara-micro/project-location.png[Project location]
+image::eclipse-plugin/payara-micro/project-location.png[Project location,width=600px]
 
 . Enter the groupId, artifactId, etc to set up the project, and then click *Next*:
 +
-image::eclipse-plugin/payara-micro/project-gav-details.png[Enter GAV]
+image::eclipse-plugin/payara-micro/project-gav-details.png[Enter GAV,width=600px]
 
 . Enter the Payara Micro application settings e.g context path of the application and Payara Micro version and click the *Finish* button:
 +
-image::eclipse-plugin/payara-micro/micro-settings.png[Micro settings]
+image::eclipse-plugin/payara-micro/micro-settings.png[Micro settings,width=600px]
 
 . The IDE creates the Payara Micro application using the Payara Micro maven archetype. As you can see, the project has a basic structure with `src\main\java` and `src\main\webapp` folders:
 +
-image::eclipse-plugin/payara-micro/project-pom.png[Micro project generated]
+image::eclipse-plugin/payara-micro/project-pom.png[Micro project generated,width=100%]
 
 [[run-micro-application]]
 == Running The Payara Micro Application
@@ -43,7 +43,7 @@ Eclipse IDE needs a run configuration to build the artifacts and run/debug the P
 
 . To create the Payara Micro Run configuration, select the *Run > Run Configurations...* from the main menu or toolbar:
 +
-image::eclipse-plugin/payara-micro/micro-run-config-1.png[Micro run configuration]
+image::eclipse-plugin/payara-micro/micro-run-config-1.png[Micro run configuration,width=100%]
 
 . The Payara Micro Run configuration dialog allows you to specify Payara Micro settings and environment variables.
 +
@@ -51,34 +51,34 @@ NOTE: Payara Micro setting specified by *payara-micro-maven-plugin* in the *pom.
 
 . Select Payara Micro and double click it or click on the *New configuration* button to create a new configuration :
 +
-image::eclipse-plugin/payara-micro/micro-run-config-2.png[New run configuration]
+image::eclipse-plugin/payara-micro/micro-run-config-2.png[New run configuration,width=100%]
 
 . Associate the workspace project with the run configuration:
 +
-image::eclipse-plugin/payara-micro/micro-run-config-3.png[Associate project]
+image::eclipse-plugin/payara-micro/micro-run-config-3.png[Associate project,width=100%]
 
 . Click the browse button and select the project from the *Project Selection* dialog:
 +
-image::eclipse-plugin/payara-micro/micro-run-config-4.png[Select the project]
+image::eclipse-plugin/payara-micro/micro-run-config-4.png[Select the project,width=600px]
 
 . Enter the configuration name and choose the *Build Artifact* type
 +
-image::eclipse-plugin/payara-micro/micro-run-config-5.png[Add the Run and Debug configuration]
+image::eclipse-plugin/payara-micro/micro-run-config-5.png[Add the Run and Debug configuration,width=600px]
 +
 
 . Add the configuration to *Run and Debug* menu and press the *Apply* button to save the configuration:
 +
-image::eclipse-plugin/payara-micro/micro-run-config-6.png[Add the Run and Debug configuration]
+image::eclipse-plugin/payara-micro/micro-run-config-6.png[Add the Run and Debug configuration,width=100%]
 
 . To start the Payara Micro instance, run the *Payara Micro Sample* configuration from the toolbar or main menu:
 +
-image::eclipse-plugin/payara-micro/micro-run-config-7.png[Invoke run configuration]
+image::eclipse-plugin/payara-micro/micro-run-config-7.png[Invoke run configuration,width=100%]
 
 . After running the Micro application, you may see the log in the OUTPUT window:
 +
-image::eclipse-plugin/payara-micro/micro-run-1.png[Payara Micro log]
+image::eclipse-plugin/payara-micro/micro-run-1.png[Payara Micro log,width=100%]
 +
-image::eclipse-plugin/payara-micro/micro-run-2.png[Payara Micro log]
+image::eclipse-plugin/payara-micro/micro-run-2.png[Payara Micro log,width=100%]
 
 Similarly, to debug the Payara Micro application and attach the debugger to the application, instead of pressing the Run button, you can instead click *Debug* from similar locations and select the Payara Micro Sample configuration.
 
@@ -87,7 +87,7 @@ Similarly, to debug the Payara Micro application and attach the debugger to the 
 
 To enable the *Auto Deploy* or *Hot Deploy* features for Payara Micro on the Eclipse IDE, modify your run configurations *Reload Artifact* action from the drop-down list:
 
-image::hot-auto-deploy/eclipse-micro-hot-auto-deploy.png[Configuration name]
+image::hot-auto-deploy/eclipse-micro-hot-auto-deploy.png[Configuration name,width=100%]
 
 [[see-also]]
 == See Also

@@ -10,7 +10,7 @@ The Payara Tools plugin enables integration between Payara Server and Payara Mic
 2. On the Marketplace window, type *"Payara"* and click the *Go* button on the right side.
 3. Click the *Install* button.
 +
-image::eclipse-plugin/install-marketplace.png[Eclipse Marketplace]
+image::eclipse-plugin/install-marketplace.png[Eclipse Marketplace,width=100%]
 +
 4. Read and accept the license agreement.
 5. You will see a *Security Warning*, click *Install Anyway*.

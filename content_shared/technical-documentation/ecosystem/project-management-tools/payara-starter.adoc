@@ -224,19 +224,19 @@ Follow these steps to use the web application:
 +
 You can customize these based on your project requirements:
 +
-image::payara-starter/project-details.png[Project Details, width=50%]
+image::payara-starter/project-details.png[Project Details,width=600px]
 
 . Choose the *Build System* and *Jakarta EE Version*:
 * Select your preferred build system (Maven or Gradle) from the provided options.
 * Choose the desired Jakarta EE version that aligns with your project's compatibility requirements.
 +
-image::payara-starter/jakartaee.png[Jakarta EE version, width=50%]
+image::payara-starter/jakartaee.png[Jakarta EE version,width=600px]
 
 . Configure any *Additional Options*:
 * The web application allows you to configure additional options such as MicroProfile integration, Azul Payara version, and more.
 * Customize these options based on your project needs.
 +
-image::payara-starter/payara-platform.png[Azul Payara, width=50%]
+image::payara-starter/payara-platform.png[Azul Payara,width=600px]
 
 . Review and Generate:
 * Review the summary of your selected options to ensure they match your project requirements.
@@ -285,7 +285,7 @@ Feel free to adjust archetype parameters to tailor the generated application to 
 
 Payara Starter https://start.payara.fish[start.payara.fish^] enables developers to streamline the creation of full-stack applications by leveraging Entity-Relationship (ER) diagrams. Generative AI enhances this process by automating the generation and customization of diagrams based on inputs and requirements. Developers can visualize, interact, and modify these diagrams in real time, making Payara Starter a more powerful tool for application design and development.
 
-image::payara-starter/er-diagram.png[ER Diagram, width=50%]
+image::payara-starter/er-diagram.png[ER Diagram,width=600px]
 
 [#features-of-er-diagram-integration]
 === Features of ER Diagram Designer
@@ -294,7 +294,7 @@ image::payara-starter/er-diagram.png[ER Diagram, width=50%]
 
 The Payara Starter website includes default ER diagrams, stored in https://mermaid.js.org/syntax/entityRelationshipDiagram.html[Mermaid format^], which users can modify as a starting point for their own designs.
 
-image::payara-starter/existing-er-diagram.png[Existing ER Diagram, width=50%]
+image::payara-starter/existing-er-diagram.png[Existing ER Diagram,width=600px]
 
 ==== Automated ER Diagram Generation
 
@@ -314,31 +314,31 @@ To get the best results, users should provide clear, concise commands. Below are
 
 Starting from this default diagram:
 
-image::payara-starter/free-text-support-0.png[Default ER Diagram]
+image::payara-starter/free-text-support-0.png[Default ER Diagram,width=100%]
 
 . **Adding a new Field**: The following command prompts the AI to include a new attribute named `expiryDate` in the existing `PRODUCT` entity.
 +
 *Command:* _Add an Expiry Date field to the `PRODUCT` entity_.
 +
-image::payara-starter/free-text-support-1.png[Add a Field]
+image::payara-starter/free-text-support-1.png[Add a Field,width=100%]
 
 . **Change an Entity Name**: The following command directs the AI to change the name of the `PRODUCT` entity, allowing for a new designation that may better reflect its purpose or context within the application.
 +
 *Command*: _Rename the `PRODUCT` entity to other alternate name._
 +
-image::payara-starter/free-text-support-2.png[Change Entity Name]
+image::payara-starter/free-text-support-2.png[Change Entity Name,width=100%]
 
 . **Modify a Field**: The following command results in the AI updating the names of all fields that begin with `product`, replacing that prefix with `item`, thus standardizing or rebranding the fields for consistency.
 +
 *Command:* _Rename all the fields with `product` prefix to `item`_.
 +
-image::payara-starter/free-text-support-3.png[Modify Field]
+image::payara-starter/free-text-support-3.png[Modify Field,width=100%]
 
 . **Enhance the diagram by adding more entities and relationship**: The following command instructs the AI to enrich the diagram by introducing new entities (`Company`, `Brand`, `Customer`, `Purchase`) and defining relationships between them, thus expanding the data model to cover more aspects of the application domain.
 +
 *Command:* _Add `Company`, `Brand` details of product and also add `Customer`, `Purchase` info_.
 +
-image::payara-starter/free-text-support-4.png[Enhance diagram by adding more entities and relationship]
+image::payara-starter/free-text-support-4.png[Enhance diagram by adding more entities and relationship,width=100%]
 
 IMPORTANT: Users should review and modify the diagram after the AI-assisted prototype is generated. +
 For more complex designs or detailed customizations, manual changes may be necessary to ensure the final entity relationship model meets all requirements. +
@@ -372,7 +372,7 @@ Once finalized, Payara Starter uses the ER diagram to automatically generate cor
 
 Open the ER Diagram panel within the Payara Starter application interface. Select from the default diagrams or start a new diagram by pressing the **Diagram Builder & Live Preview** button and entering a description.
 
-image::payara-starter/create-er-diagram.png[Create ER Diagram]
+image::payara-starter/create-er-diagram.png[Create ER Diagram,width=100%]
 
 ==== Enhance the Diagrams
 
@@ -380,7 +380,7 @@ Use the Real-time Diagram Design via Free-text support to interact with OpenAI. 
 
 In autopilot mode, use the (`+`/`-`) buttons to quickly enlarge or shrink the diagram.
 
-image::payara-starter/update-er-diagram.png[Update ER Diagram]
+image::payara-starter/update-er-diagram.png[Update ER Diagram,width=100%]
 
 ==== Generate the Full-Stack Application
 
@@ -400,5 +400,5 @@ During the generation process, you can customize the output to include or exclud
 
 This flexibility allows developers to tailor the generated application to meet their specific project needs while ensuring structural coherence.
 
-image::payara-starter/generate-application.png[Generate Application, width=50%]
-image::payara-starter/final-application.png[Final Application, width=50%]
+image::payara-starter/generate-application.png[Generate Application,width=600px]
+image::payara-starter/final-application.png[Final Application,width=600px]
