@@ -760,3 +760,5 @@ sections:
     - title: Schemas
       sections:
       - file: appendix/schemas/index
+  - title: Azul Payara Documentation
+    url: /payara

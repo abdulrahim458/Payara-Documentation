@@ -761,3 +761,5 @@ sections:
     - title: Schemas
       sections:
       - file: appendix/schemas/index
+  - title: Payara Community Documentation
+    url: /payara-community

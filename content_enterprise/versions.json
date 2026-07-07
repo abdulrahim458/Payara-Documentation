@@ -1,6 +1,7 @@
 {
   "config": {
-    "directory": "version"
+    "directory": "version",
+    "showLatest": false
   },
   "versions": [
     {
