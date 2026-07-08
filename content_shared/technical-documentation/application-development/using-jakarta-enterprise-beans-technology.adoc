@@ -350,7 +350,7 @@ The following is a sample `glassfish-ejb-jar.xml`/`payara-ejb-jar.xml` deploymen
 [source, xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE payara-ejb-jar PUBLIC "-//Payara.fish//DTD Payara Application Server 7 EJB 4.0//EN" "https://raw.githubusercontent.com/payara/Payara-Documentation/main-7/docs/modules/ROOT/pages/Appendix/Schemas/payara-ejb-jar_4_0-0.dtd">
+<!DOCTYPE payara-ejb-jar PUBLIC "-//Payara.fish//DTD Payara Application Server 7 EJB 4.0 Revision 1//EN" "https://gitlab.azulsystems.com/docs/payara/-/raw/main-7/content_shared/appendix/schemas/payara7-ejb-jar_4_0-1.dtd">
 <payara-ejb-jar>
   <enterprise-beans>
     <ejb>
