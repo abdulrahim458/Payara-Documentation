@@ -587,8 +587,6 @@ sections:
                   - file: technical-documentation/microprofile/config/cloud/dynamodb
                   - file: technical-documentation/microprofile/config/cloud/gcp
                   - file: technical-documentation/microprofile/config/cloud/hashicorp
-                  - file: technical-documentation/ecosystem/project-management-tools/maven-plugin/payara-server-maven-plugin
-                  - file: technical-documentation/ecosystem/project-management-tools/maven-plugin/payara-micro-maven-plugin
               - file: technical-documentation/microprofile/config/directory
               - file: technical-documentation/microprofile/config/jdbc
               - file: technical-documentation/microprofile/config/ldap
@@ -613,7 +611,10 @@ sections:
             sections:
               - file: technical-documentation/ecosystem/project-management-tools/maven-bom
               - title: Maven Plugin
-                file: technical-documentation/ecosystem/project-management-tools/maven-plugin/index
+                sections:
+                  - file: technical-documentation/ecosystem/project-management-tools/maven-plugin/index
+                  - file: technical-documentation/ecosystem/project-management-tools/maven-plugin/payara-server-maven-plugin
+                  - file: technical-documentation/ecosystem/project-management-tools/maven-plugin/payara-micro-maven-plugin
               - file: technical-documentation/ecosystem/project-management-tools/maven-archetype
               - file: technical-documentation/ecosystem/project-management-tools/gradle-plugin
               - file: technical-documentation/ecosystem/project-management-tools/maven-regex-profile-activation
