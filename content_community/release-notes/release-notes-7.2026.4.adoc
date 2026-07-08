@@ -1,4 +1,4 @@
- Release notes - Payara Platform Community 7.2026.4
+= Release notes - Payara Platform Community 7.2026.4
 
 == Supported Apis and Applications
 
