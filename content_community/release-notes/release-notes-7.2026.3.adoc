@@ -2,7 +2,7 @@
 
 link_to_pdf:/payara-community/pdfs/7/Payara-Community-7.2026.3-documentation.pdf[Full Documentation PDF]
 
-== Supported Apis and Applications
+== Supported APIs and Applications
 
 * Jakarta EE 11
 * Jakarta EE 11 Applications

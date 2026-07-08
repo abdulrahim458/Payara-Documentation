@@ -4,7 +4,7 @@ link_to_pdf:/payara/pdfs/7/Payara-Enterprise-7.0.0-documentation.pdf[Full Docume
 
 NOTE: Payara Platform Enterprise 7.0.0 is the first Enterprise release supporting Jakarta EE 11. The minimum required Java version is JDK 21.
 
-== Supported Apis and Applications
+== Supported APIs and Applications
 
 * Jakarta EE 11
 * Jakarta EE 11 Applications

@@ -2,7 +2,7 @@
 
 link_to_pdf:/payara/pdfs/7/azul-payara-documentation-7.1.0.pdf[Full Documentation PDF]
 
-== Supported Apis and Applications
+== Supported APIs and Applications
 
 * Jakarta EE 11
 * Jakarta EE 11 Applications

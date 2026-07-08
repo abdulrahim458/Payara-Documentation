@@ -1,6 +1,6 @@
 = Release notes - Payara Platform Community 7.2026.4
 
-== Supported Apis and Applications
+== Supported APIs and Applications
 
 * Jakarta EE 11
 * Jakarta EE 11 Applications
