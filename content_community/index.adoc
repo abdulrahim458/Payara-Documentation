@@ -1,5 +1,5 @@
-= Azul Payara Community
-:page-description: Azul Payara Community documentation — open-source Jakarta EE application server and Payara Micro with quarterly community releases, Jakarta EE 11 certification, and MicroProfile support.
+= Azul Payara Community Documentation
+:page-description: Azul Payara Community documentation. Open-source Jakarta EE application server and Payara Micro with quarterly community releases, Jakarta EE 11 certification, and MicroProfile support.
 
 This is the documentation for Azul Payara Community, consisting of Azul Payara Server Community and Azul Payara Micro Community. Azul Payara Community is targeted for developers looking to play with the latest features and APIs during development before potentially moving to Azul Payara in production.
 
