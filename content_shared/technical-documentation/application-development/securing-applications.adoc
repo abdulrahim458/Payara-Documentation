@@ -1657,7 +1657,7 @@ For example, if user roles were mapped like this in the `payara-web.xml` deploym
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1 Revision 1//EN" "https://gitlab.azulsystems.com/docs/payara/-/raw/main-7/content_shared/appendix/schemas/payara7-web-app_6_1-1.dtd">
+<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1 Revision 1//EN" "https://raw.githubusercontent.com/payara/Payara/refs/heads/main/appserver/deployment/dtds/src/main/resources/glassfish/lib/dtds/payara7-web-app_6_1-1.dtd">
 <payara-web-app error-url="">
   <context-root>/health-services</context-root>
   <security-role-mapping>
@@ -1680,7 +1680,7 @@ Then the role mapping can be based on organizational unit in this case. But you 
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1 Revision 1//EN" "https://gitlab.azulsystems.com/docs/payara/-/raw/main-7/content_shared/appendix/schemas/payara7-web-app_6_1-1.dtd">
+<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1 Revision 1//EN" "https://raw.githubusercontent.com/payara/Payara/refs/heads/main/appserver/deployment/dtds/src/main/resources/glassfish/lib/dtds/payara7-web-app_6_1-1.dtd">
 <payara-web-app error-url="">
   <context-root>/health-services</context-root>
   <security-role-mapping>
@@ -1740,7 +1740,7 @@ For example, if user authorization roles were mapped like this in the `payara-we
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1 Revision 1//EN" "https://gitlab.azulsystems.com/docs/payara/-/raw/main-7/content_shared/appendix/schemas/payara7-web-app_6_1-1.dtd">
+<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1 Revision 1//EN" "https://raw.githubusercontent.com/payara/Payara/refs/heads/main/appserver/deployment/dtds/src/main/resources/glassfish/lib/dtds/payara7-web-app_6_1-1.dtd">
 <payara-web-app error-url="">
   <context-root>/health-services</context-root>
   <security-role-mapping>
@@ -1755,7 +1755,7 @@ Then the `principal-name` can be simplified by using only the common name like t
 [source,xml]
 ----
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1 Revision 1//EN" "https://gitlab.azulsystems.com/docs/payara/-/raw/main-7/content_shared/appendix/schemas/payara7-web-app_6_1-1.dtd">
+<!DOCTYPE payara-web-app PUBLIC "-//Payara.fish//DTD Payara Server 7 Servlet 6.1 Revision 1//EN" "https://raw.githubusercontent.com/payara/Payara/refs/heads/main/appserver/deployment/dtds/src/main/resources/glassfish/lib/dtds/payara7-web-app_6_1-1.dtd">
 <payara-web-app error-url="">
   <context-root>/health-services</context-root>
   <security-role-mapping>
