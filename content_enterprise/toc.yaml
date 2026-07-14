@@ -551,6 +551,7 @@ sections:
                     sections:
                       - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/asadmin-commands/pre-and-post-boot-commands
                       - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/asadmin-commands/send-asadmin-commands-from-admin-console
+                  - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/micro-management/crac/crac-support
               - title: Database Management
                 sections:
                   - file: technical-documentation/payara-micro-documentation/payara-micro-configuration-and-management/database-management/log-jdbc-calls
