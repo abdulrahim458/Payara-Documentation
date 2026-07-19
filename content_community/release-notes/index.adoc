@@ -10,6 +10,7 @@ Detailed information about features and fixes in every release.
 | Month | Release
 
 2+h| 2026
+| July | xref:release-notes-7.2026.7.adoc[Release Notes 7.2026.7]
 | June | xref:release-notes-7.2026.6.adoc[Release Notes 7.2026.6]
 | May | xref:release-notes-7.2026.5.adoc[Release Notes 7.2026.5]
 | April | xref:release-notes-7.2026.4.adoc[Release Notes 7.2026.4]
