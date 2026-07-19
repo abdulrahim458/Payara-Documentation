@@ -732,6 +732,7 @@ sections:
     - title: Overview
       file: release-notes/index
       sections:
+        - file: release-notes/release-notes-7.2.0
         - file: release-notes/release-notes-7.1.0
         - file: release-notes/release-notes-7.0.0
   - title: Jakarta EE Certification

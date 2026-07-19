@@ -1,0 +1,33 @@
+= Release Notes - Azul Payara 7.2.0
+
+link_to_pdf:/payara/pdfs/7/azul-payara-documentation-7.2.0.pdf[Full Documentation PDF]
+
+== Supported APIs and Applications
+
+* Jakarta EE 11
+* Jakarta EE 11 Applications
+* MicroProfile 6.1
+
+== Security Fixes
+* [FISH-13687] Brute Force Attack Prevention
+
+== Bug Fixes
+* [FISH-12353] Fix IBM MQ Resource Adapter Failing to Deploy When Using a Custom `metrics.xml` File
+* [FISH-13041] [Community Contribution - https://github.com/lprimak[lprimak]] Prevent Stack Trace Caching by JVM Thread Stats Provider
+* [FISH-13207] Fix `restart-deployment-group` Command Not Showing Progress
+* [FISH-13878] Fix Attributes Removed from `org.glassfish.grizzly.config.dom.Http` Remaining in `httpAttr.inc`
+
+== Improvements
+* [FISH-13490] Add Backwards Compatibility for Defining Implicit CDI via `glassfish-application.xml`
+* [FISH-13982] Add Payara Major Versioned Deployment Descriptors
+
+== Component Upgrades
+* [FISH-13426] Upgrade Grizzly to 5.0.2
+* [FISH-13780] Upgrade `com.fasterxml.woodstox:woodstox-core` from 7.2.0 to 7.2.1
+* [FISH-13786] Upgrade `jakarta.mvc:jakarta.mvc-api` from 3.0.0 to 3.0.1
+* [FISH-13812] Upgrade `net.java.dev.jna:jna` from 5.18.1 to 5.19.1
+* [FISH-13819] Upgrade `io.projectreactor:reactor-core` from 3.8.5 to 3.8.6
+* [FISH-13821] Upgrade `smallrye-common.version` from 2.18.1 to 2.19.0
+* [FISH-13884] Upgrade `jline.version` from 3.30.13 to 3.30.15
+* [FISH-13965] Upgrade `smallrye-config.version` from 3.17.2 to 3.18.0
+* [FISH-13987] Upgrade `com.fasterxml.jackson:jackson-bom` from 2.22.0 to 2.22.1
