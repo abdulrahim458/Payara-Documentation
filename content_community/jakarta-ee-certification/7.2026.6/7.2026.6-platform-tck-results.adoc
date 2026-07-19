@@ -38,42 +38,42 @@ https://docs.azul.com/payara-community/jakarta-ee-certification/7.2026.6/7.2026.
 See test results in section `activation`. +
 Download URL & SHA-256:
 https://download.eclipse.org/jakartaee/activation/2.1/jakarta-activation-tck-2.1.2.zip[activation-tck-2.1.2.zip^],
-SHA-256:  `6c4aad27e45761dd9f3e0f8506f37edea41f42401465db750689145718b27a0b`
+SHA-256:  `fdfbb2f8979e8b27114364fca0848a4a104be33ab0b0f70bdf435e714a2ba742`
 
 ** Jakarta Authentication 3.1.0
 +
 See test results in section `authentication`. +
 Download URL & SHA-256:
 https://download.eclipse.org/jakartaee/authentication/3.1/jakarta-authentication-tck-3.1.0.zip[jakarta-authentication-tck-3.1.0.zip^],
-SHA-256:  `8b916f1b4aed828337bd88b34bb39b133f04611c2dfe71541c2ec5d2dd22cd54`
+SHA-256:  `6ab2e52127de2beabb396879d9d57a8e34bfd23114369b8960d87dd9afec296b`
 
 ** Jakarta Annotations 3.0.0
 +
 See test results in section `annotations`. +
 Download URL & SHA-256:
-https://download.eclipse.org/jakartaee/annotations/3.0/jakarta-annotation-tck-3.0.0.zip[jakarta-annotations-tck-3.0.0.zip^],
-SHA-256:  `8b916f1b4aed828337bd88b34bb39b133f04611c2dfe71541c2ec5d2dd22cd54`
+https://download.eclipse.org/jakartaee/annotations/3.0/jakarta-annotations-tck-3.0.0.zip[jakarta-annotations-tck-3.0.0.zip^],
+SHA-256:  `9421c6ca66274d32dfb408848f75a42d57f120599fe0d8403c5c5c1141d5ac4d`
 
 ** Jakarta Batch 2.1.5 TCK
 +
 See test results in section `batch`. +
 Download URL & SHA-256:
 https://download.eclipse.org/jakartaee/batch/2.1/jakarta.batch.official.tck-2.1.5.zip[jakarta.batch.official.tck-2.1.5.zip^],
-SHA-256: `0dd8ca0f35cc696ea86d0dffaa1301cf2786806832ea1b2a491d528eaa57b3b7`
+SHA-256: `4bba9ce92f01d3055954c09333cd3c69bb0a878a6abe5fae6547134003db93d5`
 
 ** Jakarta Concurrency 3.1.1 TCK
 +
 See test results in section `concurrency`. +
 Download URL & SHA-256:
 https://download.eclipse.org/jakartaee/concurrency/3.1/concurrency-tck-3.1.1.zip[concurrency-tck-3.1.1.zip^],
-SHA-256:  `22728d729f620d6a85ae903e7d1184e0a7508a4328491b785f1b4f3d7215ca93`
+SHA-256:  `b064e189e23d755bb0eff14cc3908413776608894353254e599f0724988671fd`
 
 ** Jakarta Contexts and Dependency Injection 4.1.0 TCK
 +
 See test results in sections `cdi` and `cdi-lang-model`. +
 Download URL & SHA-256:
-https://download.eclipse.org/ee4j/cdi/4.0/cdi-tck-4.1.0-dist.zip[cdi-tck-4.1.0-dist.zip^],
-SHA-256:  `566c547e1a9c66792eefcc6feafea87ab0c0f2e3f71385bf96865359a685df00`
+https://download.eclipse.org/ee4j/cdi/4.1/cdi-tck-4.1.0-dist.zip[cdi-tck-4.1.0-dist.zip^],
+SHA-256:  `446029ee1ce694d2a9ae8893d16be7afd7e1c0ed8705064b7095af174cf97ea0`
 
 ** Jakarta Debugging Support for Other Languages 2.0.0 TCK
 +
@@ -108,7 +108,7 @@ SHA-256: `949f203de84deffa8c7892b555918e42f1dd220ccb7b6800741ea58af62737c1`
 See test results in section `jsf`. +
 Download URL & SHA-256:
 https://download.eclipse.org/jakartaee/faces/4.1/jakarta-faces-tck-4.1.1.zip[jakarta-faces-tck-4.1.1.zip^],
-SHA-256: `153184ad38e522c45e74e5da7dd01b1f3be485f56e241a72728caa43479b07ec`
+SHA-256: `e2024aabb0c784d23c076165a4f16e03892cc68c06f67517eec5ba66b9fb17f0`
 
 ** Jakarta Mail 2.1.0 TCK
 +
@@ -135,7 +135,7 @@ SHA-256: `e21a3d8251bf954c99a3f9a5f71911696509a1ed40c23673760785a3b88e4172`
 +
 See test results in section `authorization`. +
 Download URL & SHA-256:
-https://download.eclipse.org/jakartaee/authorization/4.0/jakarta-authorization-tck-3.0.0.zip[jakarta-authorization-tck-3.0.0.zip^],
+https://download.eclipse.org/jakartaee/authorization/3.0/jakarta-authorization-tck-3.0.0.zip[jakarta-authorization-tck-3.0.0.zip^],
 SHA-256: `70f2e15334cfc525fa3b2ab575a96bd06cde942302d45d12da040242ff969fe8`
 
 ** Jakarta Tags 3.0.1 TCK
