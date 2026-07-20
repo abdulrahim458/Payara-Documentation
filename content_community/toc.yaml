@@ -699,6 +699,11 @@ sections:
     sections:
     - title: Overview
       file: jakarta-ee-certification/index
+    - title: 7.2026.7
+      sections:
+      - file: jakarta-ee-certification/7.2026.7/7.2026.7-platform-tck-results
+      - title: Web TCK Results
+        file: jakarta-ee-certification/7.2026.7/7.2026.7-web-profile-web-tck-results
     - title: 7.2026.6
       sections:
       - file: jakarta-ee-certification/7.2026.6/7.2026.6-platform-tck-results
