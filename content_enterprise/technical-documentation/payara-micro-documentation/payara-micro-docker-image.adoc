@@ -90,6 +90,68 @@ FROM nexus.payara.fish:5000/payara/micro:{release-id}
 COPY myapplication.war $DEPLOY_DIR
 ----
 
+[#custom-crac-image]
+=== Create Docker Images Utilising CRaC ===
+
+CAUTION: This feature is in Tech Preview, and not recommended for use in production environments.
+
+Below is an example of creating a custom image to use Payara Micro with a CRaC JDK.
+This dockerfile makes use of your own Payara Micro installation and will create the checkpoint as part of the image.
+Containers created from the image will restore the application from the checkpoint.
+
+[source, docker, subs=attributes+]
+----
+FROM azul/zulu-openjdk:21-jdk-crac-latest
+
+EXPOSE 6900 8080
+
+ENV HOME_DIR=/opt/payara
+ENV PAYARA_DIR=${HOME_DIR}/micro \
+    DEPLOY_DIR=${HOME_DIR}/deployments \
+    CHECKPOINT_DIR=${HOME_DIR}/checkpoint
+ENV JVM_ARGS="-Djdk.util.zip.disableZip64ExtraFieldValidation=true \
+    -XX:+UseContainerSupport \
+    -XX:MaxRAMPercentage=70.0 \
+    -Xss512k \
+    -XX:CRaCCheckpointTo=${CHECKPOINT_DIR} \
+    -XX:CRaCEngine=warp"
+
+RUN true \
+    && mkdir -p "${HOME_DIR}" \
+    && addgroup --gid 1000 payara \
+    && adduser --system --uid 1000 --no-create-home --shell /bin/bash --home "${HOME_DIR}" --gecos "" --ingroup payara payara \
+    && echo payara:payara | chpasswd \
+    && mkdir -p "${PAYARA_DIR}" \
+    && mkdir -p "${DEPLOY_DIR}" \
+    && mkdir -p "${CHECKPOINT_DIR}" \
+    && chown -R payara:payara ${HOME_DIR} \
+    && true
+
+USER payara
+WORKDIR ${HOME_DIR}
+
+COPY --chown=payara:payara payara-micro.jar .
+COPY --chown=payara:payara myapplication.war $DEPLOY_DIR
+
+RUN java \
+    ${JVM_ARGS} \
+    -Dfish.payara.crac.checkpointAfterDeployment=true \
+    -jar payara-micro.jar \
+    --deploydir $DEPLOY_DIR \
+    --rootdir $PAYARA_DIR \
+    --warmup || true
+
+SHELL ["/bin/bash", "-c"]
+ENTRYPOINT java -XX:CRaCEngine=warp -XX:CRaCRestoreFrom=${CHECKPOINT_DIR}
+----
+
+To build and run this docker image, the following commands can be used.
+[source]
+----
+docker build . -t payara-enterprise-micro-crac-example
+docker run -d -p 8080:8080 -p 6900:6900 --name payara-enterprise-micro-crac-example-1 payara-enterprise-micro-crac-example
+----
+
 [#deploy-from-maven-repo]
 === Deploy Applications from a Maven Repository
 
