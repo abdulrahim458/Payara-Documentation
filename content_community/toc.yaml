@@ -687,6 +687,7 @@ sections:
     sections:
     - title: Overview
       file: release-notes/index
+    - file: release-notes/release-notes-7.2026.7
     - file: release-notes/release-notes-7.2026.6
     - file: release-notes/release-notes-7.2026.5
     - file: release-notes/release-notes-7.2026.4

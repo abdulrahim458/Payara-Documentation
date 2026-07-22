@@ -1,0 +1,37 @@
+= Release Notes - Azul Payara Community 7.2026.7
+
+link_to_pdf:/payara-community/pdfs/7/azul-payara-community-documentation-7.2026.7.pdf[Full Documentation PDF]
+
+== Supported APIs and Applications
+
+* Jakarta EE 11
+* Jakarta EE 11 Applications
+* MicroProfile 6.1
+
+== Security Fixes
+* [https://github.com/payara/Payara/pull/8259[FISH-13687^]] Brute Force Attack Prevention
+
+== Bug Fixes
+* [https://github.com/payara/Payara/pull/8263[FISH-12353^]] Fix IBM MQ Resource Adapter Failing to Deploy When Using a Custom `metrics.xml` File
+* [https://github.com/payara/Payara/pull/7958[FISH-13041^]] [Community Contribution - https://github.com/lprimak[lprimak^]] Prevent Stack Trace Caching by JVM Thread Stats Provider
+* [https://github.com/payara/Payara/pull/8243[FISH-13207^]] Fix `restart-deployment-group` Command Not Showing Progress
+* [https://github.com/payara/Payara/pull/8256[FISH-13878^]] Fix Attributes Removed from `org.glassfish.grizzly.config.dom.Http` Remaining in `httpAttr.inc`
+* [https://github.com/payara/Payara/pull/8251[FISH-13896^]] Fix SLF4J NOP Instantiation Errors
+
+== Improvements
+* [https://github.com/payara/Payara/pull/8248[FISH-13490^]] Add Backwards Compatibility for Defining Implicit CDI via `glassfish-application.xml`
+* [https://github.com/payara/Payara/pull/8251[FISH-13913^]] SSH Nodes No Longer Require Elevated Permissions
+* [https://github.com/payara/Payara/pull/8278[FISH-13982^]] Add Payara Major Versioned Deployment Descriptors
+* [https://github.com/payara/Payara/pull/8262[FISH-13989^]] Remove EclipseLink Moxy
+
+== Component Upgrades
+* [https://github.com/payara/Payara/pull/8208[FISH-13426^]] Upgrade Grizzly to 5.0.2
+* [https://github.com/payara/Payara/pull/8228[FISH-13780^]] Upgrade `com.fasterxml.woodstox:woodstox-core` from 7.2.0 to 7.2.1
+* [https://github.com/payara/Payara/pull/8225[FISH-13786^]] Upgrade `jakarta.mvc:jakarta.mvc-api` from 3.0.0 to 3.0.1
+* [https://github.com/payara/Payara/pull/8233[FISH-13812^]] Upgrade `net.java.dev.jna:jna` from 5.18.1 to 5.19.1
+* [https://github.com/payara/Payara/pull/8237[FISH-13819^]] Upgrade `io.projectreactor:reactor-core` from 3.8.5 to 3.8.6
+* [https://github.com/payara/Payara/pull/8235[FISH-13821^]] Upgrade `smallrye-common.version` from 2.18.1 to 2.19.0
+* [https://github.com/payara/Payara/pull/8234[FISH-13822^]] Upgrade `apache.sshd.version` from 2.17.1 to 2.18.0
+* [https://github.com/payara/Payara/pull/8257[FISH-13884^]] Upgrade `jline.version` from 3.30.13 to 3.30.15
+* [https://github.com/payara/Payara/pull/8276[FISH-13965^]] Upgrade `smallrye-config.version` from 3.17.2 to 3.18.0
+* [https://github.com/payara/Payara/pull/8280[FISH-13987^]] Upgrade `com.fasterxml.jackson:jackson-bom` from 2.22.0 to 2.22.1
