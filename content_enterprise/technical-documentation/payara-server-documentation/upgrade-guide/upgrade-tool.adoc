@@ -288,5 +288,5 @@ Below are the known combinations causing issues:
 [cols="1,1,4",options="header",separator=¦]
 |===
 ¦Existing ¦Upgrade ¦Result
-¦7.0.0 ¦7.1.0 ¦No issues
+¦7.0.0 ¦7.2.0 ¦No issues
 |===
