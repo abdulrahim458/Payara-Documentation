@@ -739,6 +739,11 @@ sections:
     sections:
     - title: Overview
       file: jakarta-ee-certification/index
+    - title: 7.2.0
+      sections:
+      - file: jakarta-ee-certification/7.2.0/7.2.0-platform-tck-results
+      - title: Web TCK Results
+        file: jakarta-ee-certification/7.2.0/7.2.0-web-profile-web-tck-results
     - title: 7.1.0
       sections:
       - file: jakarta-ee-certification/7.1.0/7.1.0-platform-tck-results
