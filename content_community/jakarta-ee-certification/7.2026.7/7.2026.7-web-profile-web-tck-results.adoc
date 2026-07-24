@@ -1,10 +1,10 @@
 = Web TCK Results
-:page-description: Jakarta EE 11 Web Profile TCK results for Azul Payara 7.1.0 — official certification test results confirming Jakarta EE Web Profile compliance.
+:page-description: Jakarta EE Web Profile TCK results for Azul Payara Community 7.2026.7 — official certification test results confirming Jakarta EE Web Profile compliance.
 
 As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Technology Compatibility Kit License^], following is a summary of the TCK results for Payara Server releases for Jakarta EE Web Profile 11.
 
 [#payara-server-web-results]
-== Payara Server 7.1.0 (Web Profile) Jakarta EE 11 Web Profile Certification Summary
+== Payara Server 7.2026.7 (Web Profile) Jakarta EE 11 Web Profile Certification Summary
 
 - Product Name, Version and download URL (if applicable):
 +
@@ -14,7 +14,7 @@ As required by the https://www.eclipse.org/legal/tck.php[Eclipse Foundation Tech
 |
 {empty} +
 {empty} +
-https://www.payara.fish/downloads/payara-platform-enterprise-edition[Payara Server 7.1.0 (Web Profile)^]
+https://www.payara.fish/downloads/payara-platform-community-edition[Payara Server 7.2026.7 (Web Profile)^]
 
 |===
 
@@ -28,7 +28,7 @@ https://download.eclipse.org/jakartaee/platform/11/jakarta-jakartaeetck-11.0.1.z
 
 - Public URL of TCK Results Summary:
 +
-https://docs.azul.com/payara/version/7/jakarta-ee-certification/7.1.0/7.1.0-web-profile-web-tck-results[7.1.0 Web TCK Results^]
+https://docs.azul.com/payara-community/jakarta-ee-certification/7.2026.7/7.2026.7-web-profile-web-tck-results[7.2026.7 Web TCK Results^]
 
 - Any Additional Specification Certification Requirements:
 
@@ -65,7 +65,7 @@ SHA-256:  `446029ee1ce694d2a9ae8893d16be7afd7e1c0ed8705064b7095af174cf97ea0`
 +
 See test results in section `di`. +
 Download URL & SHA-256:
-https://download.eclipse.org/ee4j/cdi/inject/2.0/jakarta.inject-tck-2.0.2-bin.zip[jakarta.inject-tck-2.0.2-bin.zip^],
+https://download.eclipse.org/jakartaee/dependency-injection/2.0/jakarta.inject-tck-2.0.2-bin.zip[jakarta.inject-tck-2.0.2-bin.zip^],
 SHA-256: `23bce4317ca061c3de648566cdf65c74b57e1264d6891f366567955d6b834972`
 
 ** Jakarta Faces 4.1.1 TCK
@@ -166,6 +166,7 @@ SHA-256: `92babb604b4e346f8d19929979c1d6aaf013fdf990b5e97bdd95502ad7db5b4c`
 - Summary of the information for the certification environment:
 +
 Apache Derby, Linux, Ubuntu 20.04 LTS +
+
 
 
 == Test Results
