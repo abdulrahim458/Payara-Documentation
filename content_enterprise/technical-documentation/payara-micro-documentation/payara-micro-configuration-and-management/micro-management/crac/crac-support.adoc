@@ -51,7 +51,7 @@ You may only create a checkpoint at one of these timings, not both.
 
 NOTE: While checkpointing after application deployment will speed up the "ready time" of the instance upon restoration,
 the nature and content of any deployed applications may lead to checkpoint or restoration errors if resources not managed by Payara {pageSiteEditionCapitalised} Micro
-lack link:https://docs.azul.com/crac/usage/guidelines#using-crac-in-your-application[CRaC instrumentation^].
+lack link:https://docs.azul.com/crac/usage/integrating-crac#implementing-crac[CRaC implementation^].
 
 [#micro-crac-docker]
 === Docker

@@ -55,8 +55,11 @@ java -XX:DumpLoadedClassList=classes.lst -jar rootidr/launch-micro.jar  --warmup
 java -Xshareclasses:name=payara-micro -jar payara-micro.jar --warmup
 ----
 
+//Conditional block, only rendered for the Enterprise Edition
+ifeval::["{page-site-edition}" == "enterprise"]
 CAUTION: If using a CRaC JDK, the warmup option is instead used to activate creating a checkpoint during the bootstrap of Payara Micro.
 See xref:crac/crac-support.adoc[Payara Micro CRaC Support] for details.
+endif::[]
 
 [#read-configuration-from-a-file]
 === Read Configuration from a File
