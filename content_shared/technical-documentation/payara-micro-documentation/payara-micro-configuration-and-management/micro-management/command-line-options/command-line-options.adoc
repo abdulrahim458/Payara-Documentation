@@ -305,7 +305,12 @@ a|`--version`
 |
 
 a|`--warmup`
-|Exit the server immediately after configuration is done, applications are deployed and it's ready to serve requests. If using a CRaC JDK, this option is instead used to activate creating a checkpoint during the bootstrap of Payara Micro. See xref:../crac/crac-support.adoc[Payara Micro CRaC Support] for details.
+|Exit the server immediately after configuration is done, applications are deployed and it's ready to serve requests. If using a CRaC JDK, this option is instead used to activate creating a checkpoint during the bootstrap of Payara Micro.
+
+ifeval::["{page-site-edition}" == "enterprise"]
+See xref:../crac/crac-support.adoc[Payara Micro CRaC Support] for details.
+endif::[]
+
 |
 
 |===
