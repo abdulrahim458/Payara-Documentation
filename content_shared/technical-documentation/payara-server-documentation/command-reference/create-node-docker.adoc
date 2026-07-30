@@ -7,7 +7,7 @@ Creates a node that hosts server instances on a Docker containers.
 
 [source,shell]
 ----
-asadmin [asadmin-options] create-node-ssh [--help]
+asadmin [asadmin-options] create-node-docker [--help]
 [--nodehost node-host]
 [--installdir as-install-parent]
 [--nodedir node-dir]
@@ -93,7 +93,7 @@ This example creates the node `docker-node-1` by contacting the Docker REST API 
 ----
 asadmin create-node-docker --nodehost localhost --dockerPasswordFile /opt/passwordfile.txt --dockerport 2376 docker-node-1
 
-Command create-node-ssh executed successfully.
+Command create-node-docker executed successfully.
 ----
 
 [#exit-status]
