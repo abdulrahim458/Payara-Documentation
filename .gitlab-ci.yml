@@ -70,6 +70,10 @@ stages:
 
 get_templates:
   stage: prepare
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+      when: never
+    - when: always
   script:
     - rm -rf ${TEMPLATES_DIR}
     - git clone --depth 1 https://gitlab.azulsystems.com/docs/docs-templates ${TEMPLATES_DIR}
