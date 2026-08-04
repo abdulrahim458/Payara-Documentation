@@ -1,0 +1,304 @@
+# GitHub release creation pipeline — replaces Jenkins job:
+#   Release-Tools/Release-Create-Github-Releases
+#
+# Prerequisites (GitLab project Settings → CI/CD → Variables, masked+protected):
+#   GITHUB_TOKEN  — GitHub PAT with repo scope (payara-devops-github-personal-access-token)
+#   GITHUB_USER   — GitHub username for the PAT
+#
+# How to run:
+#   1. CI/CD → Pipelines → Run pipeline
+#   2. Select the branch matching the release variant:
+#        main-7  →  Enterprise-7 or Community-7
+#        main-6  →  Enterprise-6
+#        main-5  →  Enterprise-5
+#        main-4  →  Enterprise-4
+#   3. Set the relevant version variable (e.g. ENTERPRISE_7_RELEASE_VERSION=7.2.0)
+#   4. Create the pipeline, then click the play button on the job
+
+variables:
+  ENTERPRISE_7_RELEASE_VERSION: ""
+  ENTERPRISE_6_RELEASE_VERSION: ""
+  ENTERPRISE_5_RELEASE_VERSION: ""
+  ENTERPRISE_4_RELEASE_VERSION: ""
+  COMMUNITY_7_RELEASE_VERSION: ""
+
+.github-release-tools:
+  image: ubuntu:22.04
+  before_script:
+    - apt-get update -y
+    - apt-get install -y asciidoc pandoc curl git
+    - curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+    - chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+    - echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+    - apt-get update && apt-get install -y gh
+
+# ----------------------------------------------------------------------------
+# Enterprise-7
+# Branch: main-7  |  GH repo: payara/Payara-Enterprise
+# Tag: payara-enterprise-<version>
+# ----------------------------------------------------------------------------
+release:create-enterprise-7:
+  extends: .github-release-tools
+  stage: release
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main-7"
+      when: manual
+  script:
+    - |
+      set -euo pipefail
+      VERSION="${ENTERPRISE_7_RELEASE_VERSION}"
+      if [ -z "${VERSION}" ]; then
+        echo "ERROR: Set ENTERPRISE_7_RELEASE_VERSION when triggering the pipeline (e.g. 7.2.0)"
+        exit 1
+      fi
+
+      TAG="payara-enterprise-${VERSION}"
+      RELEASE_BRANCH="Payara-Enterprise-${VERSION}-Release"
+      GITHUB_REPO="payara/Payara-Enterprise"
+      NOTES_FILE="${CI_PROJECT_DIR}/content_enterprise/release-notes/release-notes-${VERSION}.adoc"
+
+      echo "==> Releasing Enterprise-7 ${VERSION} (tag: ${TAG})"
+
+      if [ ! -f "${NOTES_FILE}" ]; then
+        echo "ERROR: Release notes not found: ${NOTES_FILE}"
+        exit 1
+      fi
+
+      TAG_COUNT=$(git ls-remote --tags "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" "${TAG}" | wc -l)
+      if [ "${TAG_COUNT}" -gt 0 ]; then
+        echo "ERROR: Tag ${TAG} already exists in ${GITHUB_REPO}"
+        exit 1
+      fi
+
+      asciidoc -b docbook "${NOTES_FILE}"
+      NOTES_XML="${NOTES_FILE%.adoc}.xml"
+      NOTES_MD="${NOTES_FILE%.adoc}.md"
+      iconv -t utf-8 "${NOTES_XML}" | pandoc -f docbook -t markdown_strict --wrap=none | iconv -f utf-8 > "${NOTES_MD}"
+
+      gh release create "${TAG}" \
+        --repo "${GITHUB_REPO}" \
+        --title "Azul Payara ${VERSION}" \
+        --target "${RELEASE_BRANCH}" \
+        --notes-file "${NOTES_MD}" \
+        --draft=false
+      echo "==> Successfully created GitHub release ${TAG}"
+
+      git push "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --delete "${RELEASE_BRANCH}"
+      echo "==> Successfully deleted release branch ${RELEASE_BRANCH}"
+
+# ----------------------------------------------------------------------------
+# Enterprise-6
+# Branch: main-6  |  GH repo: payara/Payara-Enterprise
+# Tag: payara-enterprise-<version>
+# ----------------------------------------------------------------------------
+release:create-enterprise-6:
+  extends: .github-release-tools
+  stage: release
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main-6"
+      when: manual
+  script:
+    - |
+      set -euo pipefail
+      VERSION="${ENTERPRISE_6_RELEASE_VERSION}"
+      if [ -z "${VERSION}" ]; then
+        echo "ERROR: Set ENTERPRISE_6_RELEASE_VERSION when triggering the pipeline (e.g. 6.40.0)"
+        exit 1
+      fi
+
+      TAG="payara-enterprise-${VERSION}"
+      RELEASE_BRANCH="Payara-Enterprise-${VERSION}-Release"
+      GITHUB_REPO="payara/Payara-Enterprise"
+      NOTES_FILE="${CI_PROJECT_DIR}/content_enterprise/release-notes/release-notes-${VERSION}.adoc"
+
+      echo "==> Releasing Enterprise-6 ${VERSION} (tag: ${TAG})"
+
+      if [ ! -f "${NOTES_FILE}" ]; then
+        echo "ERROR: Release notes not found: ${NOTES_FILE}"
+        exit 1
+      fi
+
+      TAG_COUNT=$(git ls-remote --tags "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" "${TAG}" | wc -l)
+      if [ "${TAG_COUNT}" -gt 0 ]; then
+        echo "ERROR: Tag ${TAG} already exists in ${GITHUB_REPO}"
+        exit 1
+      fi
+
+      asciidoc -b docbook "${NOTES_FILE}"
+      NOTES_XML="${NOTES_FILE%.adoc}.xml"
+      NOTES_MD="${NOTES_FILE%.adoc}.md"
+      iconv -t utf-8 "${NOTES_XML}" | pandoc -f docbook -t markdown_strict --wrap=none | iconv -f utf-8 > "${NOTES_MD}"
+
+      gh release create "${TAG}" \
+        --repo "${GITHUB_REPO}" \
+        --title "Azul Payara ${VERSION}" \
+        --target "${RELEASE_BRANCH}" \
+        --notes-file "${NOTES_MD}" \
+        --draft=false
+      echo "==> Successfully created GitHub release ${TAG}"
+
+      git push "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --delete "${RELEASE_BRANCH}"
+      echo "==> Successfully deleted release branch ${RELEASE_BRANCH}"
+
+# ----------------------------------------------------------------------------
+# Enterprise-5
+# Branch: main-5  |  GH repo: payara/Payara-Enterprise
+# Tag: payara-enterprise-<version>
+# ----------------------------------------------------------------------------
+release:create-enterprise-5:
+  extends: .github-release-tools
+  stage: release
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main-5"
+      when: manual
+  script:
+    - |
+      set -euo pipefail
+      VERSION="${ENTERPRISE_5_RELEASE_VERSION}"
+      if [ -z "${VERSION}" ]; then
+        echo "ERROR: Set ENTERPRISE_5_RELEASE_VERSION when triggering the pipeline (e.g. 5.89.0)"
+        exit 1
+      fi
+
+      TAG="payara-enterprise-${VERSION}"
+      RELEASE_BRANCH="Payara-Enterprise-${VERSION}-Release"
+      GITHUB_REPO="payara/Payara-Enterprise"
+      NOTES_FILE="${CI_PROJECT_DIR}/content_enterprise/release-notes/release-notes-${VERSION}.adoc"
+
+      echo "==> Releasing Enterprise-5 ${VERSION} (tag: ${TAG})"
+
+      if [ ! -f "${NOTES_FILE}" ]; then
+        echo "ERROR: Release notes not found: ${NOTES_FILE}"
+        exit 1
+      fi
+
+      TAG_COUNT=$(git ls-remote --tags "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" "${TAG}" | wc -l)
+      if [ "${TAG_COUNT}" -gt 0 ]; then
+        echo "ERROR: Tag ${TAG} already exists in ${GITHUB_REPO}"
+        exit 1
+      fi
+
+      asciidoc -b docbook "${NOTES_FILE}"
+      NOTES_XML="${NOTES_FILE%.adoc}.xml"
+      NOTES_MD="${NOTES_FILE%.adoc}.md"
+      iconv -t utf-8 "${NOTES_XML}" | pandoc -f docbook -t markdown_strict --wrap=none | iconv -f utf-8 > "${NOTES_MD}"
+
+      gh release create "${TAG}" \
+        --repo "${GITHUB_REPO}" \
+        --title "Azul Payara ${VERSION}" \
+        --target "${RELEASE_BRANCH}" \
+        --notes-file "${NOTES_MD}" \
+        --draft=false
+      echo "==> Successfully created GitHub release ${TAG}"
+
+      git push "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --delete "${RELEASE_BRANCH}"
+      echo "==> Successfully deleted release branch ${RELEASE_BRANCH}"
+
+# ----------------------------------------------------------------------------
+# Enterprise-4
+# Branch: main-4  |  GH repo: payara/Payara-Enterprise
+# Tag: payara-enterprise-<version>
+# Note: release branch format differs from E5/6/7 (no "Enterprise" prefix)
+# ----------------------------------------------------------------------------
+release:create-enterprise-4:
+  extends: .github-release-tools
+  stage: release
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main-4"
+      when: manual
+  script:
+    - |
+      set -euo pipefail
+      VERSION="${ENTERPRISE_4_RELEASE_VERSION}"
+      if [ -z "${VERSION}" ]; then
+        echo "ERROR: Set ENTERPRISE_4_RELEASE_VERSION when triggering the pipeline (e.g. 4.1.2.191.57)"
+        exit 1
+      fi
+
+      TAG="payara-enterprise-${VERSION}"
+      RELEASE_BRANCH="Payara-${VERSION}-Release"
+      GITHUB_REPO="payara/Payara-Enterprise"
+      NOTES_FILE="${CI_PROJECT_DIR}/content_enterprise/release-notes/release-notes-${VERSION}.adoc"
+
+      echo "==> Releasing Enterprise-4 ${VERSION} (tag: ${TAG})"
+
+      if [ ! -f "${NOTES_FILE}" ]; then
+        echo "ERROR: Release notes not found: ${NOTES_FILE}"
+        exit 1
+      fi
+
+      TAG_COUNT=$(git ls-remote --tags "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" "${TAG}" | wc -l)
+      if [ "${TAG_COUNT}" -gt 0 ]; then
+        echo "ERROR: Tag ${TAG} already exists in ${GITHUB_REPO}"
+        exit 1
+      fi
+
+      asciidoc -b docbook "${NOTES_FILE}"
+      NOTES_XML="${NOTES_FILE%.adoc}.xml"
+      NOTES_MD="${NOTES_FILE%.adoc}.md"
+      iconv -t utf-8 "${NOTES_XML}" | pandoc -f docbook -t markdown_strict --wrap=none | iconv -f utf-8 > "${NOTES_MD}"
+
+      gh release create "${TAG}" \
+        --repo "${GITHUB_REPO}" \
+        --title "Azul Payara ${VERSION}" \
+        --target "${RELEASE_BRANCH}" \
+        --notes-file "${NOTES_MD}" \
+        --draft=false
+      echo "==> Successfully created GitHub release ${TAG}"
+
+      git push "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --delete "${RELEASE_BRANCH}"
+      echo "==> Successfully deleted release branch ${RELEASE_BRANCH}"
+
+# ----------------------------------------------------------------------------
+# Community-7
+# Branch: main-7  |  GH repo: payara/Payara
+# Tag: payara-server-<version>
+# ----------------------------------------------------------------------------
+release:create-community-7:
+  extends: .github-release-tools
+  stage: release
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web" && $CI_COMMIT_BRANCH == "main-7"
+      when: manual
+  script:
+    - |
+      set -euo pipefail
+      VERSION="${COMMUNITY_7_RELEASE_VERSION}"
+      if [ -z "${VERSION}" ]; then
+        echo "ERROR: Set COMMUNITY_7_RELEASE_VERSION when triggering the pipeline (e.g. 7.2026.7)"
+        exit 1
+      fi
+
+      TAG="payara-server-${VERSION}"
+      RELEASE_BRANCH="Payara-${VERSION}-Release"
+      GITHUB_REPO="payara/Payara"
+      NOTES_FILE="${CI_PROJECT_DIR}/content_community/release-notes/release-notes-${VERSION}.adoc"
+
+      echo "==> Releasing Community-7 ${VERSION} (tag: ${TAG})"
+
+      if [ ! -f "${NOTES_FILE}" ]; then
+        echo "ERROR: Release notes not found: ${NOTES_FILE}"
+        exit 1
+      fi
+
+      TAG_COUNT=$(git ls-remote --tags "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" "${TAG}" | wc -l)
+      if [ "${TAG_COUNT}" -gt 0 ]; then
+        echo "ERROR: Tag ${TAG} already exists in ${GITHUB_REPO}"
+        exit 1
+      fi
+
+      asciidoc -b docbook "${NOTES_FILE}"
+      NOTES_XML="${NOTES_FILE%.adoc}.xml"
+      NOTES_MD="${NOTES_FILE%.adoc}.md"
+      iconv -t utf-8 "${NOTES_XML}" | pandoc -f docbook -t markdown_strict --wrap=none | iconv -f utf-8 > "${NOTES_MD}"
+
+      gh release create "${TAG}" \
+        --repo "${GITHUB_REPO}" \
+        --title "Azul Payara Community ${VERSION}" \
+        --target "${RELEASE_BRANCH}" \
+        --notes-file "${NOTES_MD}" \
+        --draft=false
+      echo "==> Successfully created GitHub release ${TAG}"
+
+      git push "https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPO}.git" --delete "${RELEASE_BRANCH}"
+      echo "==> Successfully deleted release branch ${RELEASE_BRANCH}"

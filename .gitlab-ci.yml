@@ -1,5 +1,9 @@
+include:
+  - local: .gitlab/ci/github-releases.yml
+
 workflow:
   rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
     - if: '$CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS'
       when: never
@@ -9,6 +13,7 @@ workflow:
         - content_community/**/*
         - content_shared/**/*
         - .gitlab-ci.yml
+        - .gitlab/ci/github-releases.yml
 
 variables:
   GIT_STRATEGY: clone
