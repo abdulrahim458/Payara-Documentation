@@ -87,6 +87,10 @@ get_templates:
 
 docs_html:
   stage: build
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+      when: never
+    - when: always
   # Serialize both matrix instances on the same runner: doc-builder.rb uses a
   # hardcoded /tmp/build_docs working directory, so parallel builds on a shell
   # executor race and destroy each other's cwd.
@@ -115,6 +119,10 @@ docs_html:
 
 docs_pdf:
   stage: build
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+      when: never
+    - when: always
   resource_group: docs_html_build
   <<: [*docs_matrix, *cache_configuration]
   script:
@@ -150,6 +158,10 @@ docs_pdf:
 
 deploy_to_test_server:
   stage: deploy
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+      when: never
+    - when: always
   resource_group: test_server-${DOCS_ID}
   <<: *docs_matrix
   needs: [docs_html,docs_pdf]
@@ -192,6 +204,10 @@ deploy_to_test_server:
 
 deploy_to_staging_server:
   stage: deploy
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "web"'
+      when: never
+    - when: always
   <<: *docs_matrix
   needs: [docs_html,docs_pdf]
   variables:
